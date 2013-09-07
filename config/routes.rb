@@ -2,7 +2,12 @@ Weblearn::Application.routes.draw do
     
   root to: 'users#home'
 
-  match '/users', to: 'users#home', via: 'get'
+  match '/about', to: 'users#about', via: 'get'
+  match '/blogs', to: 'users#blogs', via: 'get'
+  match '/contact', to: 'users#contact', via: 'get'
+  match '/home', to: 'users#home', via: 'get'
+  match '/news', to: 'users#industry_news', via: 'get'
+  match '/services', to: 'users#services', via: 'get'
   
   
   
