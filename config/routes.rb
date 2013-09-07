@@ -1,4 +1,20 @@
 Weblearn::Application.routes.draw do
+    
+  root to: 'users#home'
+
+  match '/users', to: 'users#home', via: 'get'
+  
+  
+  
+  
+  # get "users/home"
+  # get "users/industry_news"
+  # get "users/blogs"
+  # get "users/about"
+  # get "users/services"
+  # get "users/contact"
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
