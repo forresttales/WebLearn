@@ -1,15 +1,25 @@
 Weblearn::Application.routes.draw do
+   
     
   root to: 'users#home'
 
+  resources :contacts
+
   match '/about', to: 'users#about', via: 'get'
   match '/blogs', to: 'users#blogs', via: 'get'
-  match '/contact', to: 'users#contact', via: 'get'
+  match '/list', to: 'contacts#list', via: 'get'
   match '/home', to: 'users#home', via: 'get'
   match '/news', to: 'users#industry_news', via: 'get'
   match '/services', to: 'users#services', via: 'get'
   
   
+  #match ':controller(/:action(/:id(.:format)))'
+  
+  # resources :contacts do
+    # create do
+      # post 'contact'
+    # end
+  # end
   
   
   # get "users/home"

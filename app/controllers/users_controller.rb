@@ -14,6 +14,6 @@ class UsersController < ApplicationController
   def services
   end
 
-  def contact
-  end
+  # def contact
+  # end
 end
