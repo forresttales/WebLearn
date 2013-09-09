@@ -1,0 +1,51 @@
+<% provide(:title, 'Contact') %>
+
+<h1>Contact Us</h1>
+
+  <%= form_tag(:action => 'leave_message') do %>
+	<table summary="User's contact form fields">
+	  <tr>
+	    <th><%= label_tag(:name) %></th>
+	    <td><%= text_field_tag( :contact, :name) %></td>
+	  </tr>
+	  <tr>
+	    <th><%= label_tag(:email) %></th>
+	    <td><%= text_field_tag( :contact, :email) %></td>
+	  </tr>
+	  <tr>
+	    <th><%= label_tag(:subject) %></th>
+	    <td><%= text_field_tag( :contact, :subject) %></td>
+	  </tr>  
+	  <tr>
+	    <th><%= label_tag(:message) %></th>
+	    <td><%= text_area_tag( :contact, :message) %></td>
+	  </tr>
+	  <tr>
+	  	<td>
+	  		<%= submit_tag('Submit') %>  		
+	  	</td>
+	  </tr>
+	</table>
+  <% end %>
+
+
+<% if false %>
+<table summary="Contact user form fields">
+  <tr>
+    <th><%= f.label(:name) %></th>
+    <td><%= f.text_field(:name) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:email) %></th>
+    <td><%= f.text_field(:email) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:subject) %></th>
+    <td><%= f.text_field(:subject) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:message) %></th>
+    <td><%= f.text_area(:message) %></td>
+  </tr>
+</table>
+<% end %>

@@ -1,0 +1,20 @@
+<%#= error_messages_for(@contact) %>
+
+<table summary="Contact user form fields">
+  <tr>
+    <th><%= f.label(:name) %></th>
+    <td><%= f.text_field(:name) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:email) %></th>
+    <td><%= f.text_field(:email) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:subject) %></th>
+    <td><%= f.text_field(:subject) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:message) %></th>
+    <td><%= f.text_area(:message) %></td>
+  </tr>
+</table>

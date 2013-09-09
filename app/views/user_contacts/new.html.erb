@@ -1,0 +1,23 @@
+<% provide(:title, 'Contact') %>
+
+<h1>user_contacts new</h1>
+
+<h1>Contact us</h1>
+<p>Leave a message</p>
+
+<div class="row">
+  <div class="span6 offset3">
+
+
+  	<%= form_for(:user_contact, :url => {:action => 'create'}) do |f| %>
+
+    <%= render(:partial => 'form', :locals => {:f => f} ) %>
+
+    <div class="form-buttons">
+      <%= submit_tag('Submit') %>
+    </div>
+  
+  	<% end %>
+  	
+  </div>  
+</div>

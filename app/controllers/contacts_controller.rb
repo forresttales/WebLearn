@@ -1,5 +1,7 @@
 class ContactsController < ApplicationController
   
+  layout 'admin'
+  
   def list
     @contacts = Contact.all
   end
