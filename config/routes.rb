@@ -16,37 +16,22 @@ Weblearn::Application.routes.draw do
     end
   end
 
-
-  # resources :users do
-    # get 'contact'
-  # end
-
-  # resources :access do
-    # member do
-      # get 'logout'
-    # end
-  # end
-
-  #get "user_contacts/new"
-
   get "admin_users/index"
   get "admin_users/delete"
   get "admin_users/edit"
   get "admin_users/list"
   get "admin_users/new"
   get "admin_users/logout"
-  #get "access/login"
-  #get "access/logout", via: [:get, :post]  
-  #get "access/attempt_login", via: [:get, :post]
   get "logout/index"
-
-  #get "users/contact", via: 'get'
-
-  #get "user_contacts/create"
+  get "contacts/edit"
+  get "contacts/delete", via: :all
+  get "contacts/show"
+  get "contacts/view"
+  get "user_contacts/show"
+  get "user_contacts/edit", via: :all
+  get "user_contacts/update", via: :all
 
   resources :contacts
-  #resources :access
-  #resources :admin_users
 
   match '/about', to: 'users#about', via: 'get'
   match '/blogs', to: 'users#blogs', via: 'get'
@@ -54,27 +39,11 @@ Weblearn::Application.routes.draw do
   match '/home', to: 'users#home', via: 'get'
   match '/news', to: 'users#industry_news', via: 'get'
   match '/services', to: 'users#services', via: 'get'
-  #match '/users/contact', to: 'users#contact', :as => :user_contact, via: 'get'
   match '/user_contacts', to: 'user_contacts#new', via: 'get'
-  
-  #match 'access/login' => 'access#login', :as => :login, vi
-  
-  match '/access/login', to: 'access#login', :as => :login, via: ['get', 'post']
-  
-  #match 'login', :to => 'access#menu', via: :post
-
-  #match 'photos', to: 'photos#show', via: :all
+  match '/access/login', to: 'access#login', :as => :login, via: ['get', 'post']  
+  match "/user_contacts/:id" => "user_contacts#update", via: 'post'
   
   #match ':controller(/:action(/:id(.:format)))'
-  
-  
-  
-  # get "users/home"
-  # get "users/industry_news"
-  # get "users/blogs"
-  # get "users/about"
-  # get "users/services"
-  # get "users/contact"
   
   
   # The priority is based upon order of creation: first created -> highest priority.

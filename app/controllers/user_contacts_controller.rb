@@ -13,49 +13,37 @@ class UserContactsController < ApplicationController
   end
   
   def show
+    @user_contact = Contact.find_by_id(params[:saved_id])
   end
   
   def create
     @user_contact = Contact.new(params[:user_contact])
-# 
-    # if @contact.save
-      # #flash[:notice] = 'Message sent'
-#       
-      # #redirect_to(:action => 'list')
-    # else
-      # #flash[:notice] = 'Unable to send message'
-    # end
-    
-    # contact = Contact.new
-    # contact.name = "testname3"
-    # contact.email = "test@mail.com"
-    # contact.subject = "testsubject"
-    # contact.message = "test message"
-        
-    # u = User.new
-    # u.name = "clyde"
-    #render text: u.inspect
-    
-    #@contact = Contact.new(params[:contact])
-    
-    
 
     if @user_contact.save
-      #flash[:notice] = 'Message sent'
-      #redirect_to(:action => 'list')
-    render text: "Message sent"
-      
+      @saved_id = @user_contact.id
+      flash[:notice] = 'Message sent'
+      redirect_to(:action => 'show', :saved_id => @user_contact.id)
     else
-      #flash[:notice] = 'Unable to send message'
-      render text: "Save failed"      
+      flash[:notice] = 'Unable to send message'
     end
     
   end
   
   def edit
+    @user_contact = Contact.find_by_id(params[:id])    
   end
   
   def update
+    
+    @user_contact = Contact.find(params[:id])
+    
+    if @user_contact.update_attributes(params[:user_contact])
+      flash[:notice] = "Contact updated."
+      redirect_to(:action => 'show', :saved_id => @user_contact.id)
+    else
+      # @subject_count = Subject.count
+      # render('edit')
+    end    
   end
 
   def delete

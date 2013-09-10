@@ -1,4 +1,4 @@
-<% @page_title = "Contact List" %>
+<% @title = "contacts list" %>
 
 <%#= link_to("<< Back to Menu", {:controller => 'access', :action => 'menu'}, :class => 'back-link') %>
 
@@ -7,24 +7,31 @@
   
   <table class="listing" summary="Contacts list">
     <tr align="left">
-      <th width="220">Name</th>
-      <th width="300">Email</th>
-      <th width="300">Subject</th>
-      <th width="600">Message</th>
+      <th width="200">Name</th>
+      <th width="200">Email</th>
+      <th width="200">Subject</th>
     </tr>
     <% @contacts.each do |contact| %>
     <tr align="left" class="<%= cycle('odd', 'even') %>">
-      <td width="220"><%= contact.name %></td>
-      <td width="300"><%= contact.email %></td>
-      <td width="300"><%= contact.subject %></td>
-      <td width="600"><%= contact.message %></td>
+      <td width="20"><%= contact.name %></td>
+      <td width="200"><%= contact.email %></td>
+      <td width="200"><%= contact.subject %></td>
+      <td width="50"><%#= contact.message %></td>
       
       <td class="actions">
-        <%#= link_to('Edit', {:action => 'edit', :id => admin_user.id}, :class => 'action edit') %>
-        <%#= link_to('Delete', {:action => 'delete', :id => admin_user.id}, :class => 'action delete') %>
+        <%= link_to('View', {:action => 'view', :id => contact.id}, :class => 'action view') %>
       </td>
+      <td class="actions">
+        <%= link_to('Delete', {:action => 'delete', :id => contact.id}, :class => 'action delete') %>
+      </td>      
     </tr>
     <% end %>
   </table>
 
 </div>
+
+<%#= link_to("Show", {:action => 'show', :id => subject.id}, :class => 'action show') %>
+
+<%#= link_to("View Sections", {:controller => 'sections', :action => 'list', :page_id => page.id}, :class => 'action show') %>
+<%#= link_to("Edit", {:action => 'edit', :id => page.id, :subject_id => @subject.id}, :class => 'action edit') %>
+<%#= link_to("Delete", {:action => 'delete', :id => page.id, :subject_id => @subject.id}, :class => 'action delete') %>
