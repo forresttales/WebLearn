@@ -3,6 +3,33 @@
     <head>
     	
   		<title><%= full_title(yield(:title)) %></title> 
+
+  			<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  			<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
+  		
+  			<%#= stylesheet_link_tag "vendor/assets/yui/build/reset-fonts-grids/reset-fonts-grids.css" %>
+  			<%#= stylesheet_link_tag "vendor/assets/yui/build/menu/assets/skins/sam/menu.css" %>
+
+  			<%#= stylesheet_link_tag "reset-fonts-grids.css" %>
+  			<%#= stylesheet_link_tag "menu.css" %>
+
+  		
+  			<%#= javascript_include_tag "application" %>  		
+  			
+  			<%#= javascript_include_tag "yahoo-dom-event.js" %>
+  			<%#= javascript_include_tag "container_core.js" %>
+  			<%#= javascript_include_tag "menu.js" %>
+  			
+  			  		
+  			<%#= javascript_include_tag "../../../vendor/assets/yui/build/yahoo-dom-event/yahoo-dom-event.js" %>
+  			<%#= javascript_include_tag "../../../vendor/assets/yui/build/container/container_core.js" %>
+  			<%#= javascript_include_tag "../../../vendor/assets/yui/build/menu/menu.js" %>
+  		
+  			<%#= javascript_include_tag "yahoo-dom-event.js" %>
+  			<%#= javascript_include_tag "container_core.js" %>
+  			<%#= javascript_include_tag "menu.js" %>
+  		
   		
 	  <%= csrf_meta_tags %>
 	  <%= render 'layouts/shim' %>  
@@ -12,12 +39,19 @@
         <title>Example: Website Top Nav With Submenus Built From Markup (YUI Library)</title>
         
 
-        <link rel="stylesheet" type="text/css" href="http://developer.yahoo.com/yui/build/reset-fonts-grids/reset-fonts-grids.css">
-        <link rel="stylesheet" type="text/css" href="http://developer.yahoo.com/yui/build/menu/assets/skins/sam/menu.css">
-                                                         
-        <!-- <link rel="stylesheet" type="text/css" href="../../../vendor/yui/build/reset-fonts-grids/reset-fonts-grids.css">
-        <link rel="stylesheet" type="text/css" href="../../../vendor/yui/build/menu/assets/skins/sam/menu.css"> -->
-                                 
+        <!-- <link rel="stylesheet" type="text/css" href="http://developer.yahoo.com/yui/build/reset-fonts-grids/reset-fonts-grids.css"> -->
+        <!-- <link rel="stylesheet" type="text/css" href="http://developer.yahoo.com/yui/build/menu/assets/skins/sam/menu.css"> -->
+                                                                         
+        <!-- <link rel="stylesheet" type="text/css" href="../../../vendor/yui/build/reset-fonts-grids/reset-fonts-grids.css"> -->
+        <!-- <link rel="stylesheet" type="text/css" href="../../../vendor/yui/build/menu/assets/skins/sam/menu.css">         -->        
+
+
+        <!-- <script type="text/javascript" src="http://developer.yahoo.com/yui/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+        <script type="text/javascript" src="http://developer.yahoo.com/yui/build/container/container_core.js"></script>
+        <script type="text/javascript" src="http://developer.yahoo.com/yui/build/menu/menu.js"></script> -->
+        
+
+                                         
         <style type="text/css">
 
             div.yui-b p {
@@ -45,7 +79,7 @@
                 font-weight: bold;
                 margin: 0 0 1em 0;
                 padding: .25em .5em;
-                background-color: #ccc;
+                background-color: #8C7B68;
 
             }
 
@@ -58,47 +92,22 @@
         </style>
 
 
-        <!-- Dependency source files -->
 
-        <script type="text/javascript" src="http://developer.yahoo.com/yui/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+        <!-- <script type="text/javascript" src="http://developer.yahoo.com/yui/build/yahoo-dom-event/yahoo-dom-event.js"></script>
         <script type="text/javascript" src="http://developer.yahoo.com/yui/build/container/container_core.js"></script>
+        <script type="text/javascript" src="http://developer.yahoo.com/yui/build/menu/menu.js"></script> -->
 
-
-        <!-- Menu source file -->
-
-        <script type="text/javascript" src="http://developer.yahoo.com/yui/build/menu/menu.js"></script>
-
-
-        <!-- Page-specific script -->
 
         <script type="text/javascript">
 
-            /*
-                 Initialize and render the MenuBar when its elements are ready 
-                 to be scripted.
-            */
-
             YAHOO.util.Event.onContentReady("productsandservices", function () {
-
-                /*
-					Instantiate a MenuBar:  The first argument passed to the constructor
-					is the id for the Menu element to be created, the second is an 
-					object literal of configuration properties.
-                */
 
                 var oMenuBar = new YAHOO.widget.MenuBar("productsandservices", { 
                                                             autosubmenudisplay: true, 
                                                             hidedelay: 750, 
                                                             lazyload: true });
 
-                /*
-                     Call the "render" method with no arguments since the 
-                     markup for this MenuBar instance is already exists in 
-                     the page.
-                */
-
                 oMenuBar.render();
-
             });
 
         </script>
@@ -112,7 +121,7 @@
 
         <div id="doc" class="yui-t1" style="width:960px">
         	
-            <div style="color: #EEEEEE; background-color: #FFA500;" >
+            <div id="hd">
                     <h1>The Learning Councel</h1>
             </div>
             
