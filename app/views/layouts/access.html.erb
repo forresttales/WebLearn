@@ -1,5 +1,135 @@
 <!DOCTYPE html>
 <html>
+    <head>
+    	
+  		<title><%= full_title(yield(:title)) %></title> 
+  		
+	  <%= csrf_meta_tags %>
+	  <%= render 'layouts/shim' %>  
+  		
+    	
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Example: Website Top Nav With Submenus Built From Markup (YUI Library)</title>
+        
+
+        <link rel="stylesheet" type="text/css" href="http://developer.yahoo.com/yui/build/reset-fonts-grids/reset-fonts-grids.css">
+        <link rel="stylesheet" type="text/css" href="http://developer.yahoo.com/yui/build/menu/assets/skins/sam/menu.css">
+                                                         
+        <!-- <link rel="stylesheet" type="text/css" href="../../../vendor/yui/build/reset-fonts-grids/reset-fonts-grids.css">
+        <link rel="stylesheet" type="text/css" href="../../../vendor/yui/build/menu/assets/skins/sam/menu.css"> -->
+                                 
+        <style type="text/css">
+
+            div.yui-b p {
+            
+                margin: 0 0 .5em 0;
+                color: #999;
+            
+            }
+            
+            div.yui-b p strong {
+            
+                font-weight: bold;
+                color: #000;
+            
+            }
+            
+            div.yui-b p em {
+
+                color: #000;
+            
+            }            
+            
+            h1 {
+
+                font-weight: bold;
+                margin: 0 0 1em 0;
+                padding: .25em .5em;
+                background-color: #ccc;
+
+            }
+
+            #productsandservices {
+            
+                margin: 0 0 10px 0;
+            
+            }
+
+        </style>
+
+
+        <!-- Dependency source files -->
+
+        <script type="text/javascript" src="http://developer.yahoo.com/yui/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+        <script type="text/javascript" src="http://developer.yahoo.com/yui/build/container/container_core.js"></script>
+
+
+        <!-- Menu source file -->
+
+        <script type="text/javascript" src="http://developer.yahoo.com/yui/build/menu/menu.js"></script>
+
+
+        <!-- Page-specific script -->
+
+        <script type="text/javascript">
+
+            /*
+                 Initialize and render the MenuBar when its elements are ready 
+                 to be scripted.
+            */
+
+            YAHOO.util.Event.onContentReady("productsandservices", function () {
+
+                /*
+					Instantiate a MenuBar:  The first argument passed to the constructor
+					is the id for the Menu element to be created, the second is an 
+					object literal of configuration properties.
+                */
+
+                var oMenuBar = new YAHOO.widget.MenuBar("productsandservices", { 
+                                                            autosubmenudisplay: true, 
+                                                            hidedelay: 750, 
+                                                            lazyload: true });
+
+                /*
+                     Call the "render" method with no arguments since the 
+                     markup for this MenuBar instance is already exists in 
+                     the page.
+                */
+
+                oMenuBar.render();
+
+            });
+
+        </script>
+
+    </head>
+    <body class="yui-skin-sam" id="yahoo-com">
+
+        <div id="doc" class="yui-t1">
+        	
+            <div id="hd">
+                    <h1>The Learning Councel</h1>
+            </div>
+            
+            <%= render(:partial => "share/menu_bar") %> 
+    	        
+	  		<%= yield %>
+        
+      		<%= render(:partial => "share/footer") %>
+      
+        </div>
+
+    </body>
+</html>
+
+
+
+
+
+<% if false %>
+<!-- <!DOCTYPE html>
+<html>
 <head>
   <title><%= full_title(yield(:title)) %></title> 
   
@@ -26,4 +156,5 @@
   <%= debug(params) if Rails.env.development? %>
 
 </body>
-</html>
+</html> -->
+<% end %>

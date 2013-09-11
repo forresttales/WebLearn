@@ -31,6 +31,8 @@ Weblearn::Application.routes.draw do
   get "user_contacts/edit", via: :all
   get "user_contacts/update", via: :all
 
+  get "users/format_yui"
+  
   resources :contacts
 
   match '/about', to: 'users#about', via: 'get'

@@ -26,5 +26,8 @@ module Weblearn
     
     config.assets.initialize_on_precompile = false    
     
+    #config.sass.load_paths << File.expand_path('../../lib/assets/stylesheets/')
+    #config.sass.load_paths << File.expand_path('../../vendor/assets/stylesheets/')    
+    
   end
 end

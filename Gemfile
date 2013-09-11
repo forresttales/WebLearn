@@ -12,6 +12,7 @@ gem 'rails_12factor'
 
 gem 'protected_attributes'
 
+#gem "yui-rails", "~> 0.5.2"
 
 # Use SCSS for stylesheets
 gem 'sass-rails'
