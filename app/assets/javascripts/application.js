@@ -12,7 +12,4 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require ../../../vendor/assets/yui/build/yahoo-dom-event/yahoo-dom-event
-//= require ../../../vendor/assets/yui/build/container/container_core
-//= require ../../../vendor/assets/yui/build/menu/menu
 //= require_tree .
