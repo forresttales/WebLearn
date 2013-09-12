@@ -1,5 +1,6 @@
 class UserContactsController < ApplicationController
   
+  layout 'application'
   
   def list
     #@contacts = Contact.all

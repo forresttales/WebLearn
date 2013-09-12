@@ -41,6 +41,8 @@ Weblearn::Application.routes.draw do
   match '/home', to: 'users#home', via: 'get'
   match '/news', to: 'users#industry_news', via: 'get'
   match '/services', to: 'users#services', via: 'get'
+  match '/directory', to: 'users#directory', via: 'get'
+  match '/survey', to: 'users#survey', via: 'get'  
   match '/user_contacts', to: 'user_contacts#new', via: 'get'
   match '/access/login', to: 'access#login', :as => :login, via: ['get', 'post']  
   match "/user_contacts/:id" => "user_contacts#update", via: 'post'
