@@ -4,20 +4,21 @@
     	
   		<title><%= full_title(yield(:title)) %></title> 
   		
-	  <%= csrf_meta_tags %>
-	  <%= render 'layouts/shim' %>  
-  		
-    	
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <title>Example: Website Top Nav With Submenus Built From Markup (YUI Library)</title>
-        
-
+  		<script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script>
         <link rel="stylesheet" type="text/css" href="http://developer.yahoo.com/yui/build/reset-fonts-grids/reset-fonts-grids.css">
-        <link rel="stylesheet" type="text/css" href="http://developer.yahoo.com/yui/build/menu/assets/skins/sam/menu.css">
-                                                         
-        <!-- <link rel="stylesheet" type="text/css" href="../../../vendor/yui/build/reset-fonts-grids/reset-fonts-grids.css">
-        <link rel="stylesheet" type="text/css" href="../../../vendor/yui/build/menu/assets/skins/sam/menu.css"> -->
-                                 
+      	<link rel="stylesheet" type="text/css" href="http://developer.yahoo.com/yui/build/menu/assets/skins/sam/menu.css">
+    	<link rel="stylesheet" href="http://yui.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css">
+    	
+        <script type="text/javascript" src="http://developer.yahoo.com/yui/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+        <script type="text/javascript" src="http://developer.yahoo.com/yui/build/container/container_core.js"></script>
+        <script type="text/javascript" src="http://developer.yahoo.com/yui/build/menu/menu.js"></script>
+
+    	<!-- <link rel="stylesheet" href="/combo/css?main-min.css"> -->    	
+
+	  	<%= csrf_meta_tags %>
+	  	<%= render 'layouts/shim' %>  
+  		
+                
         <style type="text/css">
 
             div.yui-b p {
@@ -45,7 +46,7 @@
                 font-weight: bold;
                 margin: 0 0 1em 0;
                 padding: .25em .5em;
-                background-color: #ccc;
+                background-color: #8C7B68;
 
             }
 
@@ -57,48 +58,16 @@
 
         </style>
 
-
-        <!-- Dependency source files -->
-
-        <script type="text/javascript" src="http://developer.yahoo.com/yui/build/yahoo-dom-event/yahoo-dom-event.js"></script>
-        <script type="text/javascript" src="http://developer.yahoo.com/yui/build/container/container_core.js"></script>
-
-
-        <!-- Menu source file -->
-
-        <script type="text/javascript" src="http://developer.yahoo.com/yui/build/menu/menu.js"></script>
-
-
-        <!-- Page-specific script -->
-
         <script type="text/javascript">
 
-            /*
-                 Initialize and render the MenuBar when its elements are ready 
-                 to be scripted.
-            */
-
             YAHOO.util.Event.onContentReady("productsandservices", function () {
-
-                /*
-					Instantiate a MenuBar:  The first argument passed to the constructor
-					is the id for the Menu element to be created, the second is an 
-					object literal of configuration properties.
-                */
 
                 var oMenuBar = new YAHOO.widget.MenuBar("productsandservices", { 
                                                             autosubmenudisplay: true, 
                                                             hidedelay: 750, 
                                                             lazyload: true });
 
-                /*
-                     Call the "render" method with no arguments since the 
-                     markup for this MenuBar instance is already exists in 
-                     the page.
-                */
-
                 oMenuBar.render();
-
             });
 
         </script>
@@ -106,7 +75,7 @@
     </head>
     <body class="yui-skin-sam" id="yahoo-com">
 
-        <div id="doc" class="yui-t1">
+        <div id="doc" class="yui-t1" style="width:960px">
         	
             <div id="hd">
                     <h1>The Learning Councel</h1>
@@ -114,7 +83,7 @@
             
             <%= render(:partial => "share/menu_bar") %> 
     	        
-	  		<%= yield %>
+	  		<%= yield %> 
         
       		<%= render(:partial => "share/footer") %>
       
