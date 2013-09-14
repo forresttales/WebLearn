@@ -4,80 +4,17 @@
     	
   		<title><%= full_title(yield(:title)) %></title> 
   		
-  		<script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script>
-        <link rel="stylesheet" type="text/css" href="http://developer.yahoo.com/yui/build/reset-fonts-grids/reset-fonts-grids.css">
-      	<link rel="stylesheet" type="text/css" href="http://developer.yahoo.com/yui/build/menu/assets/skins/sam/menu.css">
-    	<link rel="stylesheet" href="http://yui.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css">
-    	
-        <script type="text/javascript" src="http://developer.yahoo.com/yui/build/yahoo-dom-event/yahoo-dom-event.js"></script>
-        <script type="text/javascript" src="http://developer.yahoo.com/yui/build/container/container_core.js"></script>
-        <script type="text/javascript" src="http://developer.yahoo.com/yui/build/menu/menu.js"></script>
-
-    	<!-- <link rel="stylesheet" href="/combo/css?main-min.css"> -->    	
 
 	  	<%= csrf_meta_tags %>
 	  	<%= render 'layouts/shim' %>  
   		
-                
-        <style type="text/css">
-
-            div.yui-b p {
-            
-                margin: 0 0 .5em 0;
-                color: #999;
-            
-            }
-            
-            div.yui-b p strong {
-            
-                font-weight: bold;
-                color: #000;
-            
-            }
-            
-            div.yui-b p em {
-
-                color: #000;
-            
-            }            
-            
-            h1 {
-
-                font-weight: bold;
-                margin: 0 0 1em 0;
-                padding: .25em .5em;
-                background-color: #8C7B68;
-
-            }
-
-            #productsandservices {
-            
-                margin: 0 0 10px 0;
-            
-            }
-
-        </style>
-
-        <script type="text/javascript">
-
-            YAHOO.util.Event.onContentReady("productsandservices", function () {
-
-                var oMenuBar = new YAHOO.widget.MenuBar("productsandservices", { 
-                                                            autosubmenudisplay: true, 
-                                                            hidedelay: 750, 
-                                                            lazyload: true });
-
-                oMenuBar.render();
-            });
-
-        </script>
 
     </head>
-    <body class="yui-skin-sam" id="yahoo-com">
+    <body>
 
-        <div id="doc" class="yui-t1" style="width:960px">
+        <div width="960px">
         	
-            <div id="hd">
+            <div>
                     <h1>The Learning Councel</h1>
             </div>
             

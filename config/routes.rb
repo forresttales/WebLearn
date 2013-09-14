@@ -31,6 +31,7 @@ Weblearn::Application.routes.draw do
   get "user_contacts/edit", via: :all
   get "user_contacts/update", via: :all
   #get "user_contacts/testnewcontact"
+  get "contacts/jqmenu"
 
   get "users/format_yui"
   

@@ -1,37 +1,50 @@
 <% @title = "contacts list" %>
 
-<%#= link_to("<< Back to Menu", {:controller => 'access', :action => 'menu'}, :class => 'back-link') %>
 
-<div class="contact list">
-  <h2><p>Contacts and Messages</p></h2>
-  
-  <table class="listing" summary="Contacts list">
-    <tr align="left">
-      <th width="200">Name</th>
-      <th width="200">Email</th>
-      <th width="200">Subject</th>
-    </tr>
-    <% @contacts.each do |contact| %>
-    <tr align="left" class="<%= cycle('odd', 'even') %>">
-      <td width="20"><%= contact.name %></td>
-      <td width="200"><%= contact.email %></td>
-      <td width="200"><%= contact.subject %></td>
-      <td width="50"><%#= contact.message %></td>
-      
-      <td class="actions">
-        <%= link_to('View', {:action => 'view', :id => contact.id}, :class => 'action view') %>
-      </td>
-      <td class="actions">
-        <%= link_to('Delete', {:action => 'delete', :id => contact.id}, :class => 'action delete') %>
-      </td>      
-    </tr>
-    <% end %>
-  </table>
+	<h2>Contacts</h2>
+	
+	<!-- ><div class="demo-info">
+		<div class="demo-tip icon-tip">&nbsp;</div>
+		<div>Click the row to select one or more records.</div>
+	</div> -->
 
-</div>
+	<div style="margin:10px 0">
+		<a href="#" class="easyui-linkbutton" onclick="getSelected()">Get Selected</a>
+		<a href="#" class="easyui-linkbutton" onclick="getSelections()">Get Selections</a>
+	</div>
+	
+    <table id="user_contacts" class="easyui-datagrid" style="width: 1000px; height: 300px;" title="Contacts" iconCls="icon-save" >    	    	
+	    <thead class="grid_header">
+		    <tr align="left">
+			    <th field="id" width = "40">ID</th>
+			    <th field="created_at" width = "180">Date</th>			    		    	
+			    <th field="name" width = "200">Name</th>
+			    <th field="email" width = "200">Email</th>
+			    <th field="subject" width = "200">Subject</th>
+			    <th field="view">View</th>
+			    <th field="delete">Delete</th>			    
+			</tr>
+		</thead>
+	    <tbody>
+    		<% @contacts.each do |contact| %>
+		    <tr align="left">
+			    <td><%= contact.id %></td>
+			    <td><%= contact.created_at %></td>		    	
+			    <td><%= contact.name %></td>
+			    <td><%= contact.email %></td>
+			    <td><%= contact.subject %></td>
+			    <td><a><%= link_to('View', {:action => 'view', :id => contact.id}, :class => 'action view') %></a></td>			    
+			    <td><a><%= link_to('Delete', {:action => 'delete', :id => contact.id}, :class => 'action delete') %></a></td>
+			</tr>
+    		<% end %>	    	
+	    </tbody>
+    </table>
+	<table>
+		<div id="view_message"></div>
+	</table>
 
-<%#= link_to("Show", {:action => 'show', :id => subject.id}, :class => 'action show') %>
+			    <!-- <td><a href="#" onclick="getView()">View</a></td> -->
 
-<%#= link_to("View Sections", {:controller => 'sections', :action => 'list', :page_id => page.id}, :class => 'action show') %>
-<%#= link_to("Edit", {:action => 'edit', :id => page.id, :subject_id => @subject.id}, :class => 'action edit') %>
-<%#= link_to("Delete", {:action => 'delete', :id => page.id, :subject_id => @subject.id}, :class => 'action delete') %>
+
+
+

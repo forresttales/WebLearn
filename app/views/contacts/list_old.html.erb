@@ -1,0 +1,116 @@
+<% @title = "contacts list" %>
+
+<%= link_to('Roar', '#', :onclick => "jsRoar(); return false;")%>
+
+<h1>in contacts list</h1>
+
+<!-- <div class="contact list"> -->
+<div>
+
+  <h2><p>Contacts and Messages</p></h2>
+  
+  <table class="listing" summary="Contacts list">
+    <tr align="left">
+      <th width="200">Name</th>
+      <th width="200">Email</th>
+      <th width="200">Subject</th>
+    </tr>
+    <% @contacts.each do |contact| %>
+    <tr align="left" class="<%= cycle('odd', 'even') %>">
+      <td width="20"><%= contact.name %></td>
+      <td width="200"><%= contact.email %></td>
+      <td width="200"><%= contact.subject %></td>
+      <td width="50"><%#= contact.message %></td>
+      
+      <td class="actions">
+        <%= link_to('View', {:action => 'view', :id => contact.id}, :class => 'action view') %>
+      </td>
+      <td class="actions">
+        <%= link_to('Delete', {:action => 'delete', :id => contact.id}, :class => 'action delete') %>
+      </td>      
+    </tr>
+    <% end %>
+  </table>
+
+</div>
+
+<div class="example yui3-skin-sam">
+    <div id="scrolling-xy" class="tableDemo"></div>
+</div>
+
+<script>
+	// function jsRoar() {
+		// alert('in the users table partial');
+// 		
+	// }
+	
+	function jsRoar() {
+		//alert('in the admin list page');
+		//document.write("<h1>You pushed a link</h1>");		
+	}
+	
+</script>
+
+
+<script>
+		YUI().use('datatable-scroll', function (Y) {
+			
+		    //var contact_data = [];
+		    	// {name: gon.contacts[1].name, email: gon.contacts[1].email, subject: gon.contacts[1].subject},
+		    	// {name: gon.contacts[2].name, email: gon.contacts[2].email, subject: gon.contacts[2].subject}		        
+		    //];
+		
+			var contact_data = [];
+			
+	    	for (var i = 0; i < gon.count; i++) {
+	      		contact_data[i] = {
+        		name: gon.contacts[i].name,
+        		email: gon.contacts[i].email,
+        		subject: gon.contacts[i].subject
+	      		};
+			}
+			
+		    var table;
+		
+		
+		
+	        // var singleSelectDataTable = new YAHOO.widget.DataTable("single",
+            // myColumnDefs, myDataSource, {
+                // caption:"Single-Row Selection with Modifier Keys Disabled",
+                // selectionMode:"single"
+            // });
+// 	                
+	        // // Subscribe to events for row selection
+	        // singleSelectDataTable.subscribe("rowMouseoverEvent", singleSelectDataTable.onEventHighlightRow);
+	        // singleSelectDataTable.subscribe("rowMouseoutEvent", singleSelectDataTable.onEventUnhighlightRow);
+	        // singleSelectDataTable.subscribe("rowClickEvent", singleSelectDataTable.onEventSelectRow);
+// 	        
+	        // // Programmatically select the first row
+	        // singleSelectDataTable.selectRow(singleSelectDataTable.getTrEl(0));
+
+		
+		
+		
+		
+		
+		    table = new Y.DataTable({
+		        caption: "X and Y axis scrolling table",
+		        columns: [
+		            { key: "name",      label:"Name" },
+		            { key: "email",     label:"Email" },
+		            { key: "subject",	label:"Subject" }
+		        ],
+		        data: contact_data,
+		        scrollable: true,
+		        width: "500px",
+		        height: "400px"
+		        //selectionMode:"single"
+		    });
+		
+		    table.render('#scrolling-xy');
+		
+		});
+
+</script>
+
+

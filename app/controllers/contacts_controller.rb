@@ -5,6 +5,9 @@ class ContactsController < ApplicationController
   before_filter :confirm_logged_in  
   
   def list
+    gon.contacts = Contact.all
+    gon.count = Contact.count
+    
     @contacts = Contact.all
   end
   

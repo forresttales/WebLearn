@@ -2,109 +2,165 @@
 <html>
     <head>
     	
-  		<title><%= full_title(yield(:title)) %></title> 
-  		
-  		<script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script>
-        <link rel="stylesheet" type="text/css" href="http://developer.yahoo.com/yui/build/reset-fonts-grids/reset-fonts-grids.css">
-      	<link rel="stylesheet" type="text/css" href="http://developer.yahoo.com/yui/build/menu/assets/skins/sam/menu.css">
-    	<link rel="stylesheet" href="http://yui.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css">
+	<!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="jquery,ui,easy,easyui,web">
+	<meta name="description" content="easyui help you build your web page easily!"> -->    	
     	
-        <script type="text/javascript" src="http://developer.yahoo.com/yui/build/yahoo-dom-event/yahoo-dom-event.js"></script>
-        <script type="text/javascript" src="http://developer.yahoo.com/yui/build/container/container_core.js"></script>
-        <script type="text/javascript" src="http://developer.yahoo.com/yui/build/menu/menu.js"></script>
+  		<title><%= full_title(yield(:title)) %></title> 
 
-    	<!-- <link rel="stylesheet" href="/combo/css?main-min.css"> -->    	
+    	<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+    	    	
+    	<!-- javascript_include_tag "application", "data-turbolinks-track" => true -->
+    	
+		<!-- <link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/default/easyui.css">
+		<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/icon.css">
+		<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/demo/demo.css">
+	    <link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/css/main.css">
+	    <link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
+	    <link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
+		<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/demo.css">
+	
+		
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+		<script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
+	    <script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.min.js"></script> -->
+		<!-- http://www.jeasyui.com/datagrid_data1.json -->
 
+
+	<!-- <link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/demo/demo.css"> -->
+		
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
+
+	<!-- <script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.min.js"></script> -->
+	
 	  	<%= csrf_meta_tags %>
+	  	
+  		<%= include_gon %>
+	  	
 	  	<%= render 'layouts/shim' %>  
-  		
-                
-        <style type="text/css">
 
-            div.yui-b p {
-            
-                margin: 0 0 .5em 0;
-                color: #999;
-            
-            }
-            
-            div.yui-b p strong {
-            
-                font-weight: bold;
-                color: #000;
-            
-            }
-            
-            div.yui-b p em {
+	<script>
 
-                color: #000;
-            
-            }            
-            
-            h1 {
-
-                font-weight: bold;
-                margin: 0 0 1em 0;
-                padding: .25em .5em;
-                background-color: #8C7B68;
-
-            }
-
-            #productsandservices {
-            
-                margin: 0 0 10px 0;
-            
-            }
-
-        </style>
-
-        <script type="text/javascript">
-
-            YAHOO.util.Event.onContentReady("productsandservices", function () {
-
-                var oMenuBar = new YAHOO.widget.MenuBar("productsandservices", { 
-                                                            autosubmenudisplay: true, 
-                                                            hidedelay: 750, 
-                                                            lazyload: true });
-
-                oMenuBar.render();
-            });
-
-        </script>
-
+		function getView(){
+			alert('view');
+		}
+	
+		function getSelected(){
+			//alert('getSelected');			
+			var row = $('#user_contacts').datagrid('getSelected');
+			if (row){
+				alert('Name:'+row.name+"\nEmail:"+row.email);
+			}
+			else {
+				alert('no row selected');
+			}
+		}
+		
+		function getSelections(){
+			var ids = [];
+			var rows = $('#user_contacts').datagrid('getSelections');
+			for(var i=0; i<rows.length; i++){
+				ids.push(rows[i].name);
+			}
+			alert(ids.join('\n'));
+		}
+		
+	</script>
+	
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			border:0px none;
+			text-align: center;
+			background-color:#574934;
+		}
+		
+		#main
+		{
+			width: 1060px;
+			height: 800px;
+			text-align: left;
+			border: 4px;
+			padding: 20px;
+			margin: 0 auto;
+			background-color:#F2EEE6;
+		}
+		
+		#menu_admin
+		{
+			text-align: right;
+			background-color:#B83B2A;			
+			padding: 0px 10px 0px 10px;
+			/*font-size:20px;*/
+			/*color: #B8631D;*/
+		}
+		
+		#menu_bar
+		{
+			padding: 5px;
+			border: 1px solid #ddd;
+			/*background-color:#292013;*/
+			background-color: #C9B09B;
+			/*color: #000000;*/
+		}
+		
+		.grid_header
+		{
+			background-color: #C9B09B;			
+		}
+		
+		h1 { 
+			color: #B8631D;
+			/*color: #000000;*/
+			font-size:15px;				
+		}
+		
+		p {
+			font-size:14px;
+			color: #B8631D;			
+		}
+		
+	</style>
+		
     </head>
-    <body class="yui-skin-sam" id="yahoo-com">
+    <body>
 
-        <div id="doc" class="yui-t1" style="width:960px">
+        <div id="main">
         	
-            <div id="hd">
-                    <h1>The Learning Councel</h1>
+            <div>
+            	<h1>The Learning Councel</h1>
+            </div>
+            <div>
+                <p><%= session[:username] %></p>
             </div>
             
-      		<%= render(:partial => "share/menu") %>
             
             <%= render(:partial => "share/menu_bar") %> 
+
+            <div>
+      			<%= render(:partial => "share/menu") %>            	
+            </div>
+
+
+
     	        
 	  		<%= yield %> 
         
       		<%= render(:partial => "share/footer") %>
       		
       		admin layout
+      		
+			<%= debug(params) if Rails.env.development? %>      		
       
         </div>
 
     </body>
 </html>
-
-
-
-
-
-
-
-
-
-
 
 
 <% if false %>
