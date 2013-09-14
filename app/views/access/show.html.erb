@@ -1,20 +1,27 @@
+<h1>Administrator Login</h1>
+
+<center>
+	<div id="admin_login">
+	  <%= form_tag(:action => 'attempt_login') do %>
+	  <table>
+	    <tr>
+	      <td><%= label_tag(:username) %></td>
+	      <td><%= text_field_tag(:username) %></td>
+	    </tr>
+	    <tr>
+	      <td><%= label_tag(:password) %></td>
+	      <td><%= password_field_tag(:password) %></td>
+	    </tr>
+	    <tr>
+	      <td>&nbsp;</td>
+	      <td><%= submit_tag("Log In") %></td>
+	    </tr>
+	  </table>
+	  <% end %>
+	</div>
+</center>
+<div style="padding: 50px 0px 0px 0px;">
+	<p><%= link_to "<<< Cancel and return to previous page", :back %></p>
+</div>
+
 <h1>access show</h1>
-
-  <%= form_tag(:action => 'attempt_login') do %>
-  <table>
-    <tr>
-      <td><%= label_tag(:username) %></td>
-      <td><%= text_field_tag(:username) %></td>
-    </tr>
-    <tr>
-      <td><%= label_tag(:password) %></td>
-      <td><%= password_field_tag(:password) %></td>
-    </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td><%= submit_tag("Log In") %></td>
-    </tr>
-  </table>
-  <% end %>
-
-<%= link_to "Cancel and return to previous page", :back %>

@@ -1,0 +1,13 @@
+<% provide(:title, 'Admin Menu') %>
+
+
+	<div id="menu_admin">
+		<a href="/list" class="easyui-linkbutton" data-options="plain:true">Contact List</a>
+	</div>
+
+	<div style="text-align: right; padding: 0px 0px 0px 0px;">
+	  	<p><%= link_to("Logout  ", :controller => 'admin_users', :action => 'logout' ) %></p>
+	</div>
+
+
+	<!-- <%#=link_to 'Contact List', list_path %> | <%#= link_to("Logout  ", :controller => 'admin_users', :action => 'logout' ) %>-->
