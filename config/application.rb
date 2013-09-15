@@ -20,7 +20,7 @@ module Weblearn
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     
-    config.assets.precompile += ['easyui.css','jquery.easyui.min.js','jquery-1.8.0.min.js']
+    #config.assets.precompile += ['easyui.css','jquery.easyui.min.js','jquery-1.8.0.min.js']
     
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
     

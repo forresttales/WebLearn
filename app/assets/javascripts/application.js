@@ -11,6 +11,4 @@
 // about supported directives.
 //= require jquery
 //= require jquery_ujs
-//= require ../../../vendor/assets/javascripts/jquery.easyui.min.js
-//= require ../../../vendor/assets/javascripts/jquery-1.8.0.min.js
 //= require_tree .
