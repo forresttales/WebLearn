@@ -5,12 +5,18 @@ class ContactsController < ApplicationController
   before_filter :confirm_logged_in  
   
   def list
+
+    @contacts = Contact.paginate(page: params[:page]).per_page(5)
+    #@products = Product.order("name").page(params[:page]).per_page(10)
+
+
+
     # gon.contacts = Contact.all
     # gon.count = Contact.count
 
-    @test = "test msg"
-    
-    @contacts = Contact.all
+    # @test = "test msg"
+     
+    # @contacts = Contact.all
     
     
   end

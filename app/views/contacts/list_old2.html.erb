@@ -1,0 +1,89 @@
+<% @title = "contacts list" %>
+
+
+	<h2>Contacts</h2>
+	
+	
+    <%= link_to('LTest', {:action => 'view', :id => '1', :remote => true}, :id => 'link_test') %>
+    
+    
+	
+	<!-- ><div class="demo-info">
+		<div class="demo-tip icon-tip">&nbsp;</div>
+		<div>Click the row to select one or more records.</div>
+	</div> -->
+
+	<div style="margin:10px 0">
+		<a href="#" class="easyui-linkbutton" onclick="getMsg()">Get Selected</a>
+		<a href="#" class="easyui-linkbutton" onclick="getSelections()">Get Selections</a>
+	</div>
+	
+    <table id="user_contacts" class="easyui-datagrid" style="width: 1000px; height: 300px;" title="Contacts" iconCls="icon-save" >    	    	
+	    <thead class="grid_header">
+		    <tr align="left">
+			    <th field="id" width = "40">ID</th>
+			    <th field="created_at" width = "180">Date</th>			    		    	
+			    <th field="name" width = "200">Name</th>
+			    <th field="email" width = "200">Email</th>
+			    <th field="subject" width = "200">Subject</th>
+			    <th field="atest">atest</th>			    
+			</tr>
+		</thead>
+	    <tbody>
+    		<% @contacts.each do |contact| %>
+		    <tr align="left">
+			    <td><%= contact.id %></td>
+			    <td><%= contact.created_at %></td>		    	
+			    <td><%= contact.name %></td>
+			    <td><%= contact.email %></td>
+			    <td><%= contact.subject %></td>
+			    <td><%= link_to('ATest', {:action => 'view', :id => '2', :remote => true, :format => 'js'}) %></td>			    
+			</tr>
+    		<% end %>	    	
+	    </tbody>
+    </table>
+	<table>
+		<div id="contact_message">
+			<p id="view_message">Show messages here...</p>
+		</div>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			    <!-- = link_to('View', '#', :onclick => "getMsg('hi');") 
+			    = link_to('Delete', {:action => 'delete', :id => contact.id}, :class => 'action delete')  -->
+
+
+				<!-- <td><a data-remote="true" href=onclick=getSelected()>ATest</a></td>			     -->
+
+			    
+	
+	<!-- =link_to "delete", "#{invitation_path(invitation)}.json", :method=>:delete, :remote=>true,' -->
+	
+			    <!-- <td><a href="/contacts/view?id=1" id="action test">ATest</a></td>			   -->
+			    			    
+			    <!-- <td><a href="#" onclick="getMsg(&#39;hi&#39;);">View</a></td>			    
+			    <td><a class="action delete" href="/contacts/delete?id=1">Delete</a></td> -->
+
+			    
+			    <!-- <td><a href="#" onclick="getView()">View</a></td> -->
+
+
+			    <!-- = link_to('View', {:action => 'view', :id => contact.id}, :class => 'action view') 			     -->
+
