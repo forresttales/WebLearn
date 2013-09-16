@@ -8,10 +8,15 @@
     	
   		<title><%= full_title(yield(:title)) %></title> 
   		
+    	<%= javascript_include_tag "jquery", "application" %>  		
   		
 		<link rel="stylesheet" type="text/css" href="http://abelardo-jas.com/assets/easyui/themes/pepper-grinder/easyui.css">
 		<script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery-1.8.0.min.js"></script>
 		<script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>				
+
+		<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>				 -->
+		
+
 
     	    	
   		<!-- <link rel="stylesheet" type="text/css" href="../../../vendor/assets/stylesheets/easyui.css"> -->
@@ -114,33 +119,6 @@
 	  	
 	  	<%= render 'layouts/shim' %>  
 
-	<script>
-
-		function getView(){
-			alert('view');
-		}
-	
-		function getSelected(){
-			//alert('getSelected');			
-			var row = $('#user_contacts').datagrid('getSelected');
-			if (row){
-				alert('Name:'+row.name+"\nEmail:"+row.email);
-			}
-			else {
-				alert('no row selected');
-			}
-		}
-		
-		function getSelections(){
-			var ids = [];
-			var rows = $('#user_contacts').datagrid('getSelections');
-			for(var i=0; i<rows.length; i++){
-				ids.push(rows[i].name);
-			}
-			alert(ids.join('\n'));
-		}
-		
-	</script>
 	
 	<style type="text/css">
 		body{
@@ -192,13 +170,102 @@
 			font-size:14px;
 			color: #B8631D;			
 		}
+
+		#contact_message
+		{
+			width: 200px;
+			height: 100px;
+			text-align: left;
+			border: 4px #000000 ;
+			padding: 10px;
+			margin: 0 auto;
+			background-color:#F2EEE6;
+		}
 		
 	</style>
+
+	<script>
+
+      // window.onload = function() {
+          // var a = document.getElementById("mylink");
+// 
+          	// a.onclick = function() {
+//           		
+            // return false;
+          // }
+        // }	
+	
+		// function getSelected(){
+			// alert('getSelected');			
+			// var row = $('#user_contacts').datagrid('getSelected');
+			// if (row){
+				// //alert('Name:'+row.name+"\nEmail:"+row.email);
+				// return "/contacts/view?id=" + String(row.id);
+			// }
+			// else {
+				// alert('no row selected');
+				// return "/contacts/view?id=" + String(0);
+			// }
+		// }
+	
+	
+		function getSelected(){
+			alert('getSelected');			
+			var row = $('#user_contacts').datagrid('getSelected');
+			if (row){
+				alert('Name:'+row.name+"\nEmail:"+row.email);
+				return String(row.id);
+			}
+			else {
+				alert('no row selected');
+				return "no record selected";
+			}
+		}
 		
+		function getSelections(){
+			var ids = [];
+			var rows = $('#user_contacts').datagrid('getSelections');
+			for(var i=0; i<rows.length; i++){
+				ids.push(rows[i].name);
+			}
+			alert(ids.join('\n'));
+		}
+		
+		
+		// jQuery.ajaxSetup({ 
+		  // 'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
+		// })
+// 		
+		// $(document).ready(function) {
+			// $("link_test").onclick(function() {
+				// alert('in application js');
+				// //$.post($(this).attr("action"), $(this).serialize(), null, "script");
+				// return false;
+			// };)
+		//};)
+		
+		
+		function getMsg(){
+			msg = getSelected();
+			//msg = "msg";
+			alert(msg);
+			var p = document.getElementById("view_message");
+			p.innerHTML = "<em>" + msg  + "</em>";
+			
+		}
+		
+	</script>
+
     </head>
     <body>
 
         <div id="main">
+
+            <%= render(:partial => "share/menu_bar") %> 
+
+            <div>
+      			<%= render(:partial => "share/menu_admin") %>            	
+            </div>
         	
             <div>
             	<h1>The Learning Counsel</h1>
@@ -206,16 +273,6 @@
             <div>
                 <p><%= session[:username] %></p>
             </div>
-            
-            
-            <%= render(:partial => "share/menu_bar") %> 
-
-            <div>
-      			<%= render(:partial => "share/menu_admin") %>            	
-            </div>
-
-
-
     	        
 	  		<%= yield %> 
         
@@ -223,13 +280,15 @@
       		
       		admin layout
       		
-			<%= debug(params) if Rails.env.development? %>      		
+			<%= debug(params) %>      		
       
         </div>
 
     </body>
 </html>
 
+
+			<!-- = debug(params) if Rails.env.development?       		 -->
 
 <% if false %>
 <!-- <!DOCTYPE html>

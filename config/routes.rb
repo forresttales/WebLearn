@@ -2,6 +2,19 @@ Weblearn::Application.routes.draw do
    
     
   
+  # get "user_vendors/new"
+  # get "user_vendors/show"
+  # get "vendors/new"
+  # get "vendors/show"
+  # get "user_surveys/new"
+  # get "user_surveys/show"
+  # get "surveys/new"
+  # get "surveys/show"
+  # get "user_institutes/new"
+  # get "user_institutes/show"
+  # get "institutes/new"
+  # get "institutes/show"
+  
   root to: 'users#home'
 
   resources :access do
@@ -32,6 +45,8 @@ Weblearn::Application.routes.draw do
   get "user_contacts/update", via: :all
   #get "user_contacts/testnewcontact"
   get "contacts/jqmenu"
+  
+  get "contacts/get_message"
 
   get "users/format_yui"
   
@@ -44,10 +59,20 @@ Weblearn::Application.routes.draw do
   match '/news', to: 'users#industry_news', via: 'get'
   match '/services', to: 'users#services', via: 'get'
   match '/directory', to: 'users#directory', via: 'get'
-  match '/survey', to: 'users#survey', via: 'get'  
-  match '/user_contacts', to: 'user_contacts#new', via: 'get'
   match '/access/login', to: 'access#login', :as => :login, via: ['get', 'post']  
+      
+  match '/user_contacts', to: 'user_contacts#new', via: 'get'
   match "/user_contacts/:id" => "user_contacts#update", via: 'post'
+
+  match '/user_surveys', to: 'user_surveys#new', via: 'get'
+  match "/user_surveys/:id" => "user_surveys#update", via: 'post'
+
+  match '/user_vendors', to: 'user_vendors#new', via: 'get'
+  match "/user_vendors/:id" => "user_vendors#update", via: 'post'
+
+
+
+  
   
   #match ':controller(/:action(/:id(.:format)))'
   

@@ -5,10 +5,14 @@ class ContactsController < ApplicationController
   before_filter :confirm_logged_in  
   
   def list
-    gon.contacts = Contact.all
-    gon.count = Contact.count
+    # gon.contacts = Contact.all
+    # gon.count = Contact.count
+
+    @test = "test msg"
     
     @contacts = Contact.all
+    
+    
   end
   
   def new
@@ -16,8 +20,19 @@ class ContactsController < ApplicationController
   
   def view
     @contact = Contact.find(params[:id])
+    
+    
+    #render :template => 'view.js.erb'
+    
+    # @review = Review.create!(params[:review])
+    # flash[:notice] = "Thank you for reviewing this product"
+    respond_to do |format|
+      format.html
+      format.js      
+    end
+    
   end
-  
+    
   def show
   end
   
@@ -52,5 +67,12 @@ class ContactsController < ApplicationController
     end
   end
   
+  def get_message
+    
+    respond_to do |format|
+      format.html
+      format.js      
+    end    
+  end
   
 end

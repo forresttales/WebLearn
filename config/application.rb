@@ -30,5 +30,7 @@ module Weblearn
     #config.sass.load_paths << File.expand_path('../../lib/assets/stylesheets/')
     #config.sass.load_paths << File.expand_path('../../vendor/assets/stylesheets/')    
     
+    #config.action_view.JavaScript_expansions[:defaults] = %w(jquery rails application)     
+    
   end
 end

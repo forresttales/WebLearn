@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
-  
+
+  layout 'application'
+    
   def home
   end
 

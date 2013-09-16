@@ -1,0 +1,2 @@
+class UserSurvey < Survey
+end

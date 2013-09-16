@@ -3,13 +3,16 @@
 
 	<h2>Contacts</h2>
 	
+	
+    <%= link_to('LTest', {:action => 'view', :id => '1', :remote => true}, :id => 'link_test') %>
+	
 	<!-- ><div class="demo-info">
 		<div class="demo-tip icon-tip">&nbsp;</div>
 		<div>Click the row to select one or more records.</div>
 	</div> -->
 
 	<div style="margin:10px 0">
-		<a href="#" class="easyui-linkbutton" onclick="getSelected()">Get Selected</a>
+		<a href="#" class="easyui-linkbutton" onclick="getMsg()">Get Selected</a>
 		<a href="#" class="easyui-linkbutton" onclick="getSelections()">Get Selections</a>
 	</div>
 	
@@ -22,7 +25,8 @@
 			    <th field="email" width = "200">Email</th>
 			    <th field="subject" width = "200">Subject</th>
 			    <th field="view">View</th>
-			    <th field="delete">Delete</th>			    
+			    <th field="delete">Delete</th>
+			    <th field="atest">atest</th>			    
 			</tr>
 		</thead>
 	    <tbody>
@@ -33,18 +37,34 @@
 			    <td><%= contact.name %></td>
 			    <td><%= contact.email %></td>
 			    <td><%= contact.subject %></td>
-			    <td><a><%= link_to('View', {:action => 'view', :id => contact.id}, :class => 'action view') %></a></td>			    
-			    <td><a><%= link_to('Delete', {:action => 'delete', :id => contact.id}, :class => 'action delete') %></a></td>
+			    <td><%= link_to('View', '#', :onclick => "getMsg('hi');") %></td>			    
+			    <td><%= link_to('Delete', {:action => 'delete', :id => contact.id}, :class => 'action delete') %></td>
+			    <td><%= link_to('ATest', {:action => 'view', :id => contact.id, :remote => true}) %></td>			    
 			</tr>
     		<% end %>	    	
 	    </tbody>
     </table>
 	<table>
-		<div id="view_message"></div>
+		<div id="contact_message">
+			<p id="view_message">Show messages here...</p>
+		</div>
 	</table>
 
+
+				<!-- <td><a data-remote="true" href=onclick=getSelected()>ATest</a></td>			     -->
+
+			    
+	
+	<!-- =link_to "delete", "#{invitation_path(invitation)}.json", :method=>:delete, :remote=>true,' -->
+	
+			    <!-- <td><a href="/contacts/view?id=1" id="action test">ATest</a></td>			   -->
+			    			    
+			    <!-- <td><a href="#" onclick="getMsg(&#39;hi&#39;);">View</a></td>			    
+			    <td><a class="action delete" href="/contacts/delete?id=1">Delete</a></td> -->
+
+			    
 			    <!-- <td><a href="#" onclick="getView()">View</a></td> -->
 
 
-
+			    <!-- = link_to('View', {:action => 'view', :id => contact.id}, :class => 'action view') 			     -->
 
