@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
-    	
+		<!-- <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta http-equiv="imagetoolbar" content="no" /> -->
+		    	
   		<title><%= full_title(yield(:title)) %></title> 
   		
     	<%#= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>  		
   		
-		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Fjalla+One">
-		<link rel="stylesheet" type="text/css" href="http://learningcounsel.com/site.css?v=74198312">
-
-
-    	<%= javascript_include_tag "jquery", "application" %>  		
   		
+   	<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>  		
+  		
+  		
+		<!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Fjalla+One">
+		<link rel="stylesheet" type="text/css" href="http://learningcounsel.com/site.css?v=74198312"> -->
+		
+		
+
+   	<%= javascript_include_tag "application", "data-turbolinks-track" => true  %>  		
+
+
+    	<!-- = javascript_include_tag "jquery", "application"  		 -->
+    	
+    	  		
 		<!-- <link rel="stylesheet" type="text/css" href="http://abelardo-jas.com/assets/easyui/themes/pepper-grinder/easyui.css">
 		<script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery-1.8.0.min.js"></script>
 		<script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>				 -->
@@ -21,49 +32,42 @@
 	  	<%= render 'layouts/shim' %>  
   		
   		
-		<script>
-			if ( typeof ($sf) === "undefined") {
-				$sf = {
-					baseUrl : "//img3.wsimg.com/wst/v7/WSB7_J_20130910_1512_Matrix_204",
-					skin : "app",
-					"preload" : 0,
-					require : {
-						jquery : "//img3.wsimg.com/wst/v7/WSB7_J_20130910_1512_Matrix_204/libs/jquery/jq.js"
-					}
-				};
-			}
-		</script><script id="duel" src="//img3.wsimg.com/starfield/duel/v2.5.1/duel.js?appid=O3BkA5J1#TzNCa0E1SjF2Mi41LjFwcm9k"></script>
-                		
+		<!-- <script>
+			// if ( typeof ($sf) === "undefined") {
+				// $sf = {
+					// baseUrl : "//img3.wsimg.com/wst/v7/WSB7_J_20130910_1512_Matrix_204",
+					// skin : "app",
+					// "preload" : 0,
+					// require : {
+						// jquery : "//img3.wsimg.com/wst/v7/WSB7_J_20130910_1512_Matrix_204/libs/jquery/jq.js"
+					// }
+				// };
+			// }
+		</script> -->
+		
+		<!-- <script id="duel" src="//img3.wsimg.com/starfield/duel/v2.5.1/duel.js?appid=O3BkA5J1#TzNCa0E1SjF2Mi41LjFwcm9k">
+			
+		</script> -->
+		
+		                		
     </head>
-	<body>
-		<!-- <div class="wsb-canvas body" >
-			<div class="wsb-canvas-page-container" style="min-height: 100%; padding-top: 50px; position: relative;"> -->
+	<body id="top">
 				
-        <div id="main">
-				
+    			
 			<%= yield %> 
 		
-				<div id="wsb-canvas-template-footer" class="wsb-canvas-page-footer footer" style="margin: auto; min-height:100px; height: 100px; width: 900px; position: relative;">
-					<div id="wsb-canvas-template-footer-container" class="footer-container" style="position: absolute">
-						<div style="position:absolute;top:17px;left:11px;z-index:39;height:16px;width:876px;background:transparent;border:none;">
-							<div class="txt ">
-								<p style="text-align: center;">
-									<span class="editor_footer">Copyright&nbsp;©&nbsp;LearningCounsel&nbsp; |&nbsp;<a href="contact.html" target="">Privacy Policy</a> | <%= link_to 'Admin', login_path %></span>
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-								
-				<div class="view-as-mobile" style="text-align:center; margin:10px auto 20px;display:none;">
-					<a href="#" onclick="return false;">View on Mobile</a>
-				</div>
 
-		</div>
-				
-			<!-- </div>
-		</div> -->
 		
 						
 	</body>
 </html>
+
+
+
+		<!-- <span class="editor_footer">Copyright&nbsp;©&nbsp;LearningCounsel&nbsp; |&nbsp;<a href="contact.html" target="">Privacy Policy</a> | <%= link_to 'Admin', login_path %></span> -->
+		
+
+
+
+
+

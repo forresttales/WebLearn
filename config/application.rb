@@ -22,7 +22,7 @@ module Weblearn
     
     #config.assets.precompile += ['easyui.css','jquery.easyui.min.js','jquery-1.8.0.min.js']
 
-    config.assets.precompile += ['custom.css', 'custom_users.css']
+    config.assets.precompile += ['custom.css']
     
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
     

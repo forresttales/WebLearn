@@ -2,7 +2,7 @@ Weblearn::Application.routes.draw do
    
     
   
-  # get "user_vendors/new"
+  get "users/index"
   # get "user_vendors/show"
   # get "vendors/new"
   # get "vendors/show"
