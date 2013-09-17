@@ -12,39 +12,3 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-
-
-//alert('in application js');
-
-
-  // $.ajax({
-    // url: '/polls/' + poll_id + '/vote?option_id=' + option_id,
-    // dataType: 'script',
-    // type: 'POST',
-    // success: function(data) { $('#poll').html(data); }
-  // });
-
-
-// jQuery.ajaxSetup({ 
-  // 'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
-// })
-// 
-// $(document).ready(function) {
-	// $("link_test").onclick(function() {
-		// alert('in application js');
-		// //$.post($(this).attr("action"), $(this).serialize(), null, "script");
-		// return false;
-	// };)
-// };)
-
-// jQuery.fn.submitWithAjax = function() {
-  // this.submit(function() {
-    // $.post(this.action, $(this).serialize(), null, "script");
-    // return false;
-  // })
-  // return this;
-// };
-// 
-// $(document).ready(function() {
-  // $("#link_test").submitWithAjax();
-// })
