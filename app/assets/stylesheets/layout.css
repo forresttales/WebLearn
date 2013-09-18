@@ -281,7 +281,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 
 /* ----------------------------------------------Footer-------------------------------------*/
 
-#footer{line-height:1.6em; background:url("../images/footer_bg.gif") 550px 0 repeat-y;}
+#footer{line-height:1.6em; background:url("images/footer_bg.gif") 550px 0 repeat-y;}
 
 #footer a{
 	color:#979797;
