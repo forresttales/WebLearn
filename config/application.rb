@@ -23,9 +23,9 @@ module Weblearn
     #config.assets.precompile += ['easyui.css','jquery.easyui.min.js','jquery-1.8.0.min.js']
 
 
-    #config.assets.precompile += ['3_column.css', 'featured_slide.css', 'forms.css', 'gallery.css', 'homepage.css', 'layout.css', 'navi.css', 'portfolio.css', 'prettyPhoto.css', 'tables.css']
+    config.assets.precompile += ['3_column.css', 'featured_slide.css', 'forms.css', 'gallery.css', 'homepage.css', 'layout.css', 'navi.css', 'portfolio.css', 'prettyPhoto.css', 'tables.css']
  
-    #config.assets.precompile += ['jquery.easing.1.3.js', 'jquery.galleryview.2.1.1.min.js', 'jquery.galleryview.setup.js', 'jquery.timers.1.2.js', 'jquery-1.4.1.min.js', 'jquery-prettyPhoto.js', 'jquery-ui-1.8.12.custom.min.js']
+    config.assets.precompile += ['jquery.easing.1.3.js', 'jquery.galleryview.2.1.1.min.js', 'jquery.galleryview.setup.js', 'jquery.timers.1.2.js', 'jquery-1.4.1.min.js', 'jquery-prettyPhoto.js', 'jquery-ui-1.8.12.custom.min.js']
 
     #config.assets.precompile += ['custom.css']
     
