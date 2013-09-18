@@ -109,7 +109,7 @@ Licence: <a href="http://www.os-templates.com/template-terms">Website Template L
 
 #container #homepage #content #top_featured li img{
 	padding-bottom:16px;
-	background:url("images/shadow.gif") bottom center no-repeat;
+	background:url("/public/assets/images/shadow.gif") bottom center no-repeat;
 	}
 
 #container #homepage #content #latestnews{
