@@ -6,15 +6,30 @@
 								    	
   		<title><%= full_title(yield(:title)) %></title> 
   		
-    	<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>   	 	
+    	<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
     	
-    	   	 	   		
+   		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>    		   		
+    	
+		 
+		   		
+ <!-- 
+ *= require featured_slide.css
+ *= require forms.css
+ *= require gallery.css
+ *= require homepage.css
+ *= require layout.css
+ *= require navi.css
+ *= require portfolio.css
+ *= require prettyPhoto.css
+ *= require tables.css
+ 
+  -->
+  		
   		
 		<!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Fjalla+One">
 		<link rel="stylesheet" type="text/css" href="http://learningcounsel.com/site.css?v=74198312"> -->		
 		
 
-   		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>    		   		
    		
 
 		<!-- <link rel="stylesheet" href="/vendor/assets/styles/layout.css" type="text/css" />				
@@ -43,7 +58,7 @@
 		                		
     </head>
 	<body id="top">
-				
+
     			
 			<%= yield %> 
 		
@@ -134,4 +149,20 @@
  *= require portfolio.css
  *= require prettyPhoto.css
  *= require tables.css -->
+ 
+ 
+ <!-- 
+ *= require featured_slide.css
+ *= require forms.css
+ *= require gallery.css
+ *= require homepage.css
+ *= require layout.css
+ *= require navi.css
+ *= require portfolio.css
+ *= require prettyPhoto.css
+ *= require tables.css
+ 
+  -->
+ 
+ 
  

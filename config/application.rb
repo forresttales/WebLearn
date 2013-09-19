@@ -23,7 +23,10 @@ module Weblearn
     #config.assets.precompile += ['easyui.css','jquery.easyui.min.js','jquery-1.8.0.min.js']
 
 
-    config.assets.precompile += ['3_column.css', 'featured_slide.css', 'forms.css', 'gallery.css', 'homepage.css', 'layout.css', 'navi.css', 'portfolio.css', 'prettyPhoto.css', 'tables.css']
+
+    config.assets.precompile += ['featured_slide.css', 'forms.css', 'gallery.css', 'homepage.css', 'layout.css', 'navi.css', 'portfolio.css', 'prettyPhoto.css', 'tables.css']
+
+    #config.assets.precompile += ['3_column.css', 'featured_slide.css', 'forms.css', 'gallery.css', 'homepage.css', 'layout.css', 'navi.css', 'portfolio.css', 'prettyPhoto.css', 'tables.css']
  
     config.assets.precompile += ['jquery.easing.1.3.js', 'jquery.galleryview.2.1.1.min.js', 'jquery.galleryview.setup.js', 'jquery.timers.1.2.js', 'jquery-1.4.1.min.js', 'jquery-prettyPhoto.js', 'jquery-ui-1.8.12.custom.min.js']
 
@@ -31,11 +34,16 @@ module Weblearn
     
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
     
+    
+    #config.assets.paths += Dir["#{Rails.root}/vendor/asset-libs/*"].sort_by { |dir| -dir.size }
+    
     #config.assets.initialize_on_precompile = false    
     #config.assets.enabled = false
+
+    #config.assets.paths << "#{Rails.root}/vendor/assets/javascripts"
     
     #config.sass.load_paths << File.expand_path('../../lib/assets/stylesheets/')
-    #config.sass.load_paths << File.expand_path('../../vendor/assets/stylesheets/')    
+    #config.assets.load_paths << File.expand_path('../../vendor/assets-libs/')    
     
     #config.action_view.JavaScript_expansions[:defaults] = %w(jquery rails application)     
     
