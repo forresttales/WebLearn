@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
 
   layout 'application'
+  
+  def index
+  end
     
   def home
   end
@@ -25,5 +28,22 @@ class UsersController < ApplicationController
   
   def survey
   end
+  
+  def columns3
+  end
+  
+  def fullwidth
+  end
+  
+  def gallery
+  end
+
+  def portfolio
+  end  
+
+  def styledemo
+  end    
+  
+    
   
 end

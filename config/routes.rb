@@ -50,6 +50,12 @@ Weblearn::Application.routes.draw do
 
   get "users/format_yui"
   
+  
+  
+  
+  
+  
+  
   resources :contacts
 
   match '/about', to: 'users#about', via: 'get'
@@ -69,6 +75,29 @@ Weblearn::Application.routes.draw do
 
   match '/user_vendors', to: 'user_vendors#new', via: 'get'
   match "/user_vendors/:id" => "user_vendors#update", via: 'post'
+
+
+  match '/demostyle', to: 'users#styledemo', via: 'get'
+  match '/democolumns3', to: 'users#columns3', via: 'get'
+  match '/demofullwidth', to: 'users#fullwidth', via: 'get'
+  match '/demogallery', to: 'users#gallery', via: 'get'
+  match '/demoportfolio', to: 'users#portfolio', via: 'get'
+
+
+
+
+  # get "users/style-demo"
+  # get "users/3-columns"
+  # get "users/full-width"
+  # get "users/gallery"
+  # get "users/portfolio"
+
+
+
+
+
+
+
 
 
 
