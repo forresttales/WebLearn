@@ -1,10 +1,3 @@
-/*
-Template Name: Education Board
-File: Navigation CSS
-Author: OS Templates
-Author URI: http://www.os-templates.com/
-Licence: <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>
-*/
 
 #topnav{
 	display:block;
@@ -18,12 +11,16 @@ Licence: <a href="http://www.os-templates.com/template-terms">Website Template L
 #topnav, #topnav a{
 	text-transform:uppercase;
 	color:#FFFFFF;
-	background-color:#510000;
+	/*color: #326E37;*/	
+	/*background-color:#510000;*/
+	background-color:#21C43F;
 	}
 
 #topnav a:hover, #topnav li.active a{
-	color:#FB0000;
-	background-color:#510000;
+	/*color:#FB0000;*/	
+	color: #326E37;
+	/*background-color:#510000;*/	
+	background-color:#21C43F;	
 	}
 
 #topnav ul, #topnav li{
