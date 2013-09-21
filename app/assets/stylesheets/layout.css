@@ -1,11 +1,3 @@
-/*
-Template Name: Education Board
-File: Layout CSS
-Author: OS Templates
-Author URI: http://www.os-templates.com/
-Licence: <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>
-*/
-
 
 @import url(navi.css);
 @import url(forms.css);
@@ -14,14 +6,6 @@ Licence: <a href="http://www.os-templates.com/template-terms">Website Template L
 @import url(gallery.css);
 @import url(portfolio.css);
 @import url(featured_slide.css);
-
-
-/*
- *= require 3_column.css
- *= require prettyPhoto.css*/
-
- 
-
 
 
 body{

@@ -85,7 +85,6 @@ Weblearn::Application.routes.draw do
 
 
 
-
   # get "users/style-demo"
   # get "users/3-columns"
   # get "users/full-width"

@@ -1,5 +1,17 @@
 <% provide(:title, 'Gallery Example') %>
 
+    	<%= stylesheet_link_tag "prettyPhoto", media: "all", "data-turbolinks-track" => true %>
+
+<script type="text/javascript">
+$(document).ready(function () {
+    $("a[rel^='prettyPhoto']").prettyPhoto({
+        theme: 'dark_rounded',
+        overlay_gallery: false
+    });
+});
+</script>
+
+
 <div class="wrapper row1">
   <div id="header" class="clear">
     <div class="fl_left">
@@ -13,34 +25,39 @@
     
   </div>
 </div>
-<!-- ####################################################################################################### -->
+
 <div class="wrapper row3">
   <div id="container" class="clear">
-    <!-- ####################################################################################################### -->
+  	
     <div id="gallery" class="clear">
       <h2 class="title">Latest Images From The University</h2>
       <ul>
-        <li><a href="images/demo/450x380.gif" rel="prettyPhoto[gallery1]" title="Image 1"><img src="images/demo/130x130.gif" alt="" /></a></li>
-        <li><a href="images/demo/450x380.gif" rel="prettyPhoto[gallery1]" title="Image 2"><img src="images/demo/130x130.gif" alt="" /></a></li>
-        <li><a href="images/demo/450x380.gif" rel="prettyPhoto[gallery1]" title="Image 3"><img src="images/demo/130x130.gif" alt="" /></a></li>
-        <li><a href="images/demo/450x380.gif" rel="prettyPhoto[gallery1]" title="Image 4"><img src="images/demo/130x130.gif" alt="" /></a></li>
-        <li><a href="images/demo/450x380.gif" rel="prettyPhoto[gallery1]" title="Image 5"><img src="images/demo/130x130.gif" alt="" /></a></li>
-        <li class="last"><a href="images/demo/450x380.gif" rel="prettyPhoto[gallery1]" title="Image 6"><img src="images/demo/130x130.gif" alt="" /></a></li>
-        <li><a href="images/demo/450x380.gif" rel="prettyPhoto[gallery1]" title="Image 7"><img src="images/demo/130x130.gif" alt="" /></a></li>
-        <li><a href="images/demo/450x380.gif" rel="prettyPhoto[gallery1]" title="Image 8"><img src="images/demo/130x130.gif" alt="" /></a></li>
-        <li><a href="images/demo/450x380.gif" rel="prettyPhoto[gallery1]" title="Image 9"><img src="images/demo/130x130.gif" alt="" /></a></li>
-        <li><a href="images/demo/450x380.gif" rel="prettyPhoto[gallery1]" title="Image 10"><img src="images/demo/130x130.gif" alt="" /></a></li>
-        <li><a href="images/demo/450x380.gif" rel="prettyPhoto[gallery1]" title="Image 11"><img src="images/demo/130x130.gif" alt="" /></a></li>
-        <li class="last"><a href="images/demo/450x380.gif" rel="prettyPhoto[gallery1]" title="Image 12"><img src="images/demo/130x130.gif" alt="" /></a></li>
-        <li><a href="images/demo/450x380.gif" rel="prettyPhoto[gallery1]" title="Image 13"><img src="images/demo/130x130.gif" alt="" /></a></li>
-        <li><a href="images/demo/450x380.gif" rel="prettyPhoto[gallery1]" title="Image 14"><img src="images/demo/130x130.gif" alt="" /></a></li>
-        <li><a href="images/demo/450x380.gif" rel="prettyPhoto[gallery1]" title="Image 15"><img src="images/demo/130x130.gif" alt="" /></a></li>
-        <li><a href="images/demo/450x380.gif" rel="prettyPhoto[gallery1]" title="Image 16"><img src="images/demo/130x130.gif" alt="" /></a></li>
-        <li><a href="images/demo/450x380.gif" rel="prettyPhoto[gallery1]" title="Image 17"><img src="images/demo/130x130.gif" alt="" /></a></li>
-        <li class="last"><a href="images/demo/450x380.gif" rel="prettyPhoto[gallery1]" title="Image 18"><img src="images/demo/130x130.gif" alt="" /></a></li>
+        
+        <li><a href="/assets/demo450x380.gif" rel="prettyPhoto[gallery1]" title="Image 1"><%= image_tag("demo130x130.gif", :alt => '') %></a></li>
+        <li><a href="/assets/demo450x380.gif" rel="prettyPhoto[gallery1]" title="Image 2"><%= image_tag("demo130x130.gif", :alt => '') %></a></li>
+        <li><a href="/assets/demo450x380.gif" rel="prettyPhoto[gallery1]" title="Image 3"><%= image_tag("demo130x130.gif", :alt => '') %></a></li>
+        <li><a href="/assets/demo450x380.gif" rel="prettyPhoto[gallery1]" title="Image 4"><%= image_tag("demo130x130.gif", :alt => '') %></a></li>
+        <li><a href="/assets/demo450x380.gif" rel="prettyPhoto[gallery1]" title="Image 5"><%= image_tag("demo130x130.gif", :alt => '') %></a></li>
+        
+        <li class="last"><a href="/assets/demo450x380.gif" rel="prettyPhoto[gallery1]" title="Image 6"><%= image_tag("demo130x130.gif", :alt => '') %></a></li>
+        <li><a href="/assets/demo450x380.gif" rel="prettyPhoto[gallery1]" title="Image 7"><%= image_tag("demo130x130.gif", :alt => '') %></a></li>
+        <li><a href="/assets/demo450x380.gif" rel="prettyPhoto[gallery1]" title="Image 8"><%= image_tag("demo130x130.gif", :alt => '') %></a></li>
+        <li><a href="/assets/demo450x380.gif" rel="prettyPhoto[gallery1]" title="Image 9"><%= image_tag("demo130x130.gif", :alt => '') %></a></li>
+        <li><a href="/assets/demo450x380.gif" rel="prettyPhoto[gallery1]" title="Image 10"><%= image_tag("demo130x130.gif", :alt => '') %></a></li>
+        <li><a href="/assets/demo450x380.gif" rel="prettyPhoto[gallery1]" title="Image 11"><%= image_tag("demo130x130.gif", :alt => '') %></a></li>
+        
+        <li class="last"><a href="/assets/demo450x380.gif" rel="prettyPhoto[gallery1]" title="Image 12"><%= image_tag("demo130x130.gif", :alt => '') %></a></li>
+        <li><a href="/assets/demo450x380.gif" rel="prettyPhoto[gallery1]" title="Image 13"><%= image_tag("demo130x130.gif", :alt => '') %></a></li>
+        <li><a href="/assets/demo450x380.gif" rel="prettyPhoto[gallery1]" title="Image 14"><%= image_tag("demo130x130.gif", :alt => '') %></a></li>
+        <li><a href="/assets/demo450x380.gif" rel="prettyPhoto[gallery1]" title="Image 15"><%= image_tag("demo130x130.gif", :alt => '') %></a></li>
+        <li><a href="/assets/demo450x380.gif" rel="prettyPhoto[gallery1]" title="Image 16"><%= image_tag("demo130x130.gif", :alt => '') %></a></li>
+        <li><a href="/assets/demo450x380.gif" rel="prettyPhoto[gallery1]" title="Image 17"><%= image_tag("demo130x130.gif", :alt => '') %></a></li>
+        
+        <li class="last"><a href="/assets/demo450x380.gif" rel="prettyPhoto[gallery1]" title="Image 18"><%= image_tag("demo130x130.gif", :alt => '') %></a></li>
+        
       </ul>
     </div>
-    <!-- ####################################################################################################### -->
+    
     <div class="pagination">
       <ul>
         <li class="prev"><a href="#">&laquo; Previous</a></li>
@@ -57,65 +74,10 @@
         <li class="next"><a href="#">Next &raquo;</a></li>
       </ul>
     </div>
-    <!-- ####################################################################################################### -->
   </div>
 </div>
-<!-- ####################################################################################################### -->
-<div class="wrapper row4">
-  <div id="footer" class="clear">
-    <!-- ####################################################################################################### -->
-    <div class="footbox">
-      <h2>Quick Links</h2>
-      <ul>
-        <li><a href="#">&raquo; Homepage</a></li>
-        <li><a href="#">&raquo; Contact Us</a></li>
-        <li><a href="#">&raquo; Sitemap</a></li>
-        <li><a href="#">&raquo; Privacy Policy</a></li>
-        <li><a href="#">&raquo; Terms of Use</a></li>
-        <li><a href="#">&raquo; Copyright Information</a></li>
-        <li><a href="#">&raquo; Website Matters</a></li>
-      </ul>
-    </div>
-    <div class="footbox">
-      <h2>How To Find Us</h2>
-      <address>
-      Address Line 1<br />
-      Address Line 2<br />
-      Town/City<br />
-      Postcode/Zip<br />
-      <br />
-      Tel: xxxx xxxx xxxxxx<br />
-      Email: <a href="#">contact@domain.com</a>
-      </address>
-    </div>
-    <div class="fl_right">
-      <div id="social">
-        <h2>Connect With Us</h2>
-        <ul>
-          <li><a href="#"><img src="images/social/facebook.gif" alt="" /></a></li>
-          <li><a href="#"><img src="images/social/twitter.gif" alt="" /></a></li>
-          <li><a href="#"><img src="images/social/flickr.gif" alt="" /></a></li>
-          <li><a href="#"><img src="images/social/youtube.gif" alt="" /></a></li>
-          <li class="last"><a href="#"><img src="images/social/rss.gif" alt="" /></a></li>
-        </ul>
-      </div>
-      <div id="newsletter" class="clear">
-        <form action="#" method="post">
-          <fieldset>
-            <legend>Subscribe To Our Newsletter:</legend>
-            <input type="text" value="Enter Email Here&hellip;" onfocus="this.value=(this.value=='Enter Email Here&hellip;')? '' : this.value ;" />
-            <input type="text" id="subscribe" value="Submit" />
-          </fieldset>
-        </form>
-      </div>
-    </div>
-    <!-- ####################################################################################################### -->
-  </div>
-</div>
-<!-- ####################################################################################################### -->
-<div class="wrapper">
-  <div id="copyright" class="clear">
-    <p class="fl_left">Copyright &copy; 2011 - All Rights Reserved - <a href="#">Domain Name</a></p>
-    <p class="fl_right">Template by <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
-  </div>
-</div>
+
+<%= render 'share/footer_social'%>
+
+<%= render 'share/footer' %>  
+

@@ -43,7 +43,6 @@ class UsersController < ApplicationController
 
   def styledemo
   end    
-  
     
   
 end
