@@ -1,3 +1,5 @@
+<% provide(:title, 'Portfolio Example') %>
+
 <script type="text/javascript">
 $(document).ready(function () {
     $("#portfolio").tabs({
@@ -12,16 +14,8 @@ $(document).ready(function () {
       <h1><a href="index.html">Education Board</a></h1>
       <p>Free CSS Website Template</p>
     </div>
-    <div class="fl_right">
-      <p><a href="#">A - Z Index</a> | <a href="#">Student Login</a> | <a href="#">Staff Login</a></p>
-      <form action="#" method="post" id="sitesearch">
-        <fieldset>
-          <legend>Site Search</legend>
-          <input type="text" value="Search Our Website&hellip;" onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
-          <input type="image" src="images/search.gif" id="search" alt="Search" />
-        </fieldset>
-      </form>
-    </div>
+    
+    <%= render 'share/site_search' %>  
     
     <%= render 'share/navigate' %>  
     
