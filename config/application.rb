@@ -24,7 +24,7 @@ module Weblearn
 
 
 
-    config.assets.precompile += ['3_column.css', 'featured_slide.css', 'forms.css', 'gallery.css', 'homepage.css', 'layout.css', 'navi.css', 'portfolio.css', 'prettyPhoto.css', 'tables.css']
+    config.assets.precompile += ['featured_slide.css', 'forms.css', 'gallery.css', 'homepage.css', 'layout.css', 'navi.css', 'portfolio.css', 'prettyPhoto.css', 'tables.css']
 
     #config.assets.precompile += ['3_column.css', 'featured_slide.css', 'forms.css', 'gallery.css', 'homepage.css', 'layout.css', 'navi.css', 'portfolio.css', 'prettyPhoto.css', 'tables.css']
  
