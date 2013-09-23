@@ -2,6 +2,14 @@ Weblearn::Application.routes.draw do
    
     
   
+  get "publishers/index"
+  get "publishers/new"
+  get "publishers/show"
+  get "publishers/update"
+  get "user_publishers/index"
+  get "user_publishers/new"
+  get "user_publishers/show"
+  get "user_publishers/update"
   get "users/index"
   # get "user_vendors/show"
   # get "vendors/new"
@@ -70,11 +78,11 @@ Weblearn::Application.routes.draw do
   match '/user_contacts', to: 'user_contacts#new', via: 'get'
   match "/user_contacts/:id" => "user_contacts#update", via: 'post'
 
-  match '/user_surveys', to: 'user_surveys#new', via: 'get'
-  match "/user_surveys/:id" => "user_surveys#update", via: 'post'
+  match '/user_publishers', to: 'user_publishers#index', via: 'get'
+  match "/user_publishers/:id" => "user_publishers#update", via: 'post'
 
-  match '/user_vendors', to: 'user_vendors#new', via: 'get'
-  match "/user_vendors/:id" => "user_vendors#update", via: 'post'
+  match '/user_institutes', to: 'user_institutes#index', via: 'get'
+  match "/user_institutes/:id" => "user_institutes#update", via: 'post'
 
 
   match '/demostyle', to: 'users#styledemo', via: 'get'

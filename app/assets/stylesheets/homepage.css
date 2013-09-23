@@ -64,7 +64,10 @@ Licence: <a href="http://www.os-templates.com/template-terms">Website Template L
 #hpage_featured .popular li{
 	display:block;
 	float:left;
-	width:205px;
+	/*width:205px;*/
+		
+	width:70px;
+	
 	margin-bottom:4px;
 	padding:0 20px 0 0;
 	line-height:normal;

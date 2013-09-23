@@ -50,36 +50,30 @@
     
     
     <div class="intro clear">
-      <div class="welcome clear"><%= image_tag("old-train.jpeg", :class => 'imgl') %>
+      
+      <!-- <div class="welcome clear"> = image_tag("old-train.jpeg", :class => 'imgl') 
         <div class="fl_right">
           <h2>Welcome to Our University</h2>
           <p>Morbit incidunt maurisque eros molest nunc anteget sed vel lacus mus semper. Anter dumnullam interdum eros dui urna consequam ac nisl nullam ligula vestassa condimen tumfelis.</p>
         </div>
-      </div>
+      </div> -->      
+      
       <div class="popular">
-        <h2>Most Popular Links</h2>
-        <ul class="clear">
-          <li><a href="#">&raquo; Visiting the University</a></li>
-          <li><a href="#">&raquo; Undergraduate Courses</a></li>
-          <li><a href="#">&raquo; Graduate Courses</a></li>
-          <li><a href="#">&raquo; Postgraduate Research</a></li>
-          <li><a href="#">&raquo; Postgraduate Taught</a></li>
-          <li><a href="#">&raquo; International Students</a></li>
-          <li><a href="#">&raquo; Lifelong Learning</a></li>
-          <li><a href="#">&raquo; Graduate Health Services</a></li>
-          <li><a href="#">&raquo; Graduate Housing</a></li>
-          <li><a href="#">&raquo; Graduate Programs</a></li>
-          <li><a href="#">&raquo; Graduate Student Association</a></li>
-          <li><a href="#">&raquo; Campus Life At a Glance</a></li>
-          <li><a href="#">&raquo; Campus Recreation</a></li>
-          <li><a href="#">&raquo; Campus Safety &amp; Security</a></li>
-          <li><a href="#">&raquo; Class Schedules</a></li>
-          <li><a href="#">&raquo; Course Descriptions &amp; Catalogue</a></li>
-          <li><a href="#">&raquo; Residential Colleges</a></li>
-          <li><a href="#">&raquo; Schools and Colleges</a></li>
-          <li><a href="#">&raquo; Student Activities</a></li>
-          <li><a href="#">&raquo; Student Affairs</a></li>
-        </ul>
+        <div class="fl_right">
+      	
+      	
+	        <h2>Lists and Accounts</h2>
+	        <ul class="clear">
+	        	
+	          <li><%= link_to "&raquo;".html_safe + ' Schools', user_institutes_path %></li>
+			</ul>          
+	        <ul class="clear">
+	          
+	          <li><%= link_to "&raquo;".html_safe + ' Publishers', user_publishers_path %></li>
+	          
+	          <!-- <li><a href="#">&raquo; Student Affairs</a></li> -->          
+	        </ul>
+        </div>
       </div>
     </div>
     <!--  -->

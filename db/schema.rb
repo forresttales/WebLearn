@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130916071523) do
+ActiveRecord::Schema.define(version: 20130923022903) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,37 +39,42 @@ ActiveRecord::Schema.define(version: 20130916071523) do
   end
 
   create_table "institutes", force: true do |t|
-    t.string   "name",       limit: 50
-    t.string   "email",                 default: "", null: false
-    t.string   "address",    limit: 50
-    t.text     "contacts"
+    t.string   "name",                       limit: 100
+    t.string   "address",                    limit: 100
+    t.string   "city",                       limit: 100
+    t.string   "state",                      limit: 50
+    t.string   "country",                    limit: 100
+    t.integer  "zip"
+    t.string   "main_phone",                 limit: 100
+    t.string   "main_contact_email",         limit: 100
+    t.string   "public_private",             limit: 10
+    t.integer  "number_students"
+    t.integer  "number_computing_devices"
+    t.string   "post_rfp_link",              limit: 100
+    t.string   "company_contact_name_first", limit: 100
+    t.string   "company_contact_name_last",  limit: 100
+    t.string   "name_title",                 limit: 50
+    t.string   "company_contact_phone",      limit: 50
+    t.string   "company_contact_email",      limit: 100
+    t.boolean  "allow_add_products"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "surveys", force: true do |t|
-    t.integer  "institute_id"
-    t.string   "name",         limit: 50
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "user_contacts", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "user_institutes", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "user_surveys", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "user_vendors", force: true do |t|
+  create_table "publishers", force: true do |t|
+    t.string   "name",                       limit: 100
+    t.string   "address",                    limit: 100
+    t.string   "city",                       limit: 100
+    t.string   "state",                      limit: 50
+    t.string   "country",                    limit: 100
+    t.integer  "zip"
+    t.string   "phone",                      limit: 100
+    t.string   "url",                        limit: 100
+    t.text     "description"
+    t.string   "company_contact_name_first", limit: 100
+    t.string   "company_contact_name_last",  limit: 100
+    t.string   "company_contact_phone",      limit: 100
+    t.string   "company_contact_email",      limit: 100
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -78,15 +83,6 @@ ActiveRecord::Schema.define(version: 20130916071523) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
-  end
-
-  create_table "vendors", force: true do |t|
-    t.string   "name",       limit: 50
-    t.string   "email",                 default: "", null: false
-    t.string   "address",    limit: 50
-    t.text     "contacts"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
 end
