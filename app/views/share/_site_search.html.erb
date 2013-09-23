@@ -1,5 +1,9 @@
     <div class="fl_right">
-      <p><a href="#">A - Z Index</a> | <a href="#">Student Login</a> | <a href="#">Staff Login</a></p>
+    	
+      <!-- <p><a href="#">A - Z Index</a> | <a href="#">Student Login</a> | <a href="#">Staff Login</a></p> -->
+            
+      <p><%= link_to 'Schools', user_institutes_path %> | <%= link_to 'Publishers', user_publishers_path %>| <%= link_to 'Match Service', match_path %></p>
+      
       <form action="#" method="post" id="sitesearch">
         <fieldset>
           <legend>Site Search</legend>

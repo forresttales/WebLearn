@@ -84,7 +84,6 @@ Weblearn::Application.routes.draw do
   get "users/format_yui"
   
   
-  
   resources :contacts
 
 
@@ -131,6 +130,22 @@ Weblearn::Application.routes.draw do
   match '/demofullwidth', to: 'users#fullwidth', via: 'get'
   match '/demogallery', to: 'users#gallery', via: 'get'
   match '/demoportfolio', to: 'users#portfolio', via: 'get'
+
+  match '/match', to: 'users#match', via: 'get'
+
+
+
+  match '/about_1', to: 'users#about_1', via: 'get'
+  match '/blogs_1', to: 'users#blogs_1', via: 'get'
+  match '/directory_1', to: 'users#directory_1', via: 'get'
+  match '/news_1', to: 'users#news_1', via: 'get'
+  match '/services_1', to: 'users#services_1', via: 'get'
+
+
+
+
+
+
 
 
 
