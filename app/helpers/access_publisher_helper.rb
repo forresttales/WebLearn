@@ -1,0 +1,2 @@
+module AccessPublisherHelper
+end

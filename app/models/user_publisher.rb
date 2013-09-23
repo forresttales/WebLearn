@@ -18,6 +18,9 @@
 #  company_contact_email      :string(100)
 #  created_at                 :datetime
 #  updated_at                 :datetime
+#  username                   :string(50)
+#  hashed_password            :string(255)
+#  salt                       :string(100)
 #
 
 class UserPublisher < Publisher

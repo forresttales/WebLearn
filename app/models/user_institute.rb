@@ -23,6 +23,9 @@
 #  allow_add_products         :boolean
 #  created_at                 :datetime
 #  updated_at                 :datetime
+#  username                   :string(50)
+#  hashed_password            :string(255)
+#  salt                       :string(100)
 #
 
 class UserInstitute < Institute

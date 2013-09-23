@@ -1,25 +1,21 @@
-<h1>user_institutes new</h1>
+<h1>user_publishers new</h1>
 
 <div class="wrapper row3">
   <div id="container" class="clear">
   	
   	<div>
-		<%= link_to "Return", user_institutes_path %>
-	</div>
-		
-  	<br />
-  	<br />
-  	<br />
+		<%= link_to "Return", home_path %>
+	</div>	
   	
     <div id="content">
       
-      <h2>School Create Login</h2>
+      <h2>Publisher Create Login</h2>
       
       <div id="respond">
 		
-		<%= form_for(:user_institutes, :url => {:action => 'create'}) do |f| %>
+		<%= form_for(:user_publishers, :url => {:action => 'create'}) do |f| %>
       	
-			<table summary="User Institute Create Password">
+			<table summary="User Publishers Create Password">
 				
 			  <tr>
 			    <th><%= f.label(:username) %></th>

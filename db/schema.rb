@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130923022903) do
+ActiveRecord::Schema.define(version: 20130923084858) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,7 +59,12 @@ ActiveRecord::Schema.define(version: 20130923022903) do
     t.boolean  "allow_add_products"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "username",                   limit: 50
+    t.string   "hashed_password"
+    t.string   "salt",                       limit: 100
   end
+
+  add_index "institutes", ["username"], name: "index_institutes_on_username", using: :btree
 
   create_table "publishers", force: true do |t|
     t.string   "name",                       limit: 100
@@ -77,7 +82,12 @@ ActiveRecord::Schema.define(version: 20130923022903) do
     t.string   "company_contact_email",      limit: 100
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "username",                   limit: 50
+    t.string   "hashed_password"
+    t.string   "salt",                       limit: 100
   end
+
+  add_index "publishers", ["username"], name: "index_publishers_on_username", using: :btree
 
   create_table "users", force: true do |t|
     t.datetime "created_at"

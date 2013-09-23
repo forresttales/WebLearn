@@ -2,6 +2,12 @@ Weblearn::Application.routes.draw do
    
     
   
+  get "access_publisher/login"
+  get "access_publisher/show"
+  get "access_publisher/update"
+  get "access_institute/login"
+  get "access_institute/show"
+  get "access_institute/update"
   get "publishers/index"
   get "publishers/new"
   get "publishers/show"
@@ -25,17 +31,36 @@ Weblearn::Application.routes.draw do
   
   root to: 'users#home'
 
-  resources :access do
-    member do
-      post 'attempt_login'
-    end
-  end
+  # resources :access do
+    # member do
+      # post 'attempt_login'
+    # end
+  # end
+# 
+  # resources :access_institute do
+    # member do
+      # post 'attempt_login'
+    # end
+  # end
 
   resources :user_contacts do
     member do
       post 'create'
     end
   end
+
+  resources :user_institutes do
+    member do
+      post 'create'
+    end
+  end
+  
+  resources :user_publishers do
+    member do
+      post 'create'
+    end
+  end
+
 
   get "admin_users/index"
   get "admin_users/delete"
@@ -60,11 +85,8 @@ Weblearn::Application.routes.draw do
   
   
   
-  
-  
-  
-  
   resources :contacts
+
 
   match '/about', to: 'users#about', via: 'get'
   match '/blogs', to: 'users#blogs', via: 'get'
@@ -73,16 +95,35 @@ Weblearn::Application.routes.draw do
   match '/news', to: 'users#industry_news', via: 'get'
   match '/services', to: 'users#services', via: 'get'
   match '/directory', to: 'users#directory', via: 'get'
+
+  
   match '/access/login', to: 'access#login', :as => :login, via: ['get', 'post']  
+
       
   match '/user_contacts', to: 'user_contacts#new', via: 'get'
   match "/user_contacts/:id" => "user_contacts#update", via: 'post'
 
+
   match '/user_publishers', to: 'user_publishers#index', via: 'get'
   match "/user_publishers/:id" => "user_publishers#update", via: 'post'
+  match '/user_publishers_new', to: 'user_publishers#new', via: 'get'
 
   match '/user_institutes', to: 'user_institutes#index', via: 'get'
   match "/user_institutes/:id" => "user_institutes#update", via: 'post'
+  match '/user_institutes_new', to: 'user_institutes#new', via: 'get'
+  #match '/user_institutes_create', to: 'user_institutes#create_login', via: 'get'
+
+  match '/access_publisher/login', to: 'access_publisher#login', via: ['get', 'post']  
+  match '/access_publisher/attempt_login_publisher', to: 'access_publisher#attempt_login_publisher', :as => 'attempt_login_publisher', via: ['post']
+
+
+  match '/access_institute/login', to: 'access_institute#login', via: ['get', 'post']  
+  match '/access_institute/attempt_login_institute', to: 'access_institute#attempt_login_institute', :as => 'attempt_login_institute', via: ['post']
+  
+  #match '/user_institutes_attempt_login', to: 'user_institutes#attempt_login', via: ['get', 'post']
+
+  # get 'access_institute/attempt_login', via: ['post']
+  # match '/tasks/:id/finish', :to => 'tasks#finish', :as => 'finish_task'
 
 
   match '/demostyle', to: 'users#styledemo', via: 'get'
