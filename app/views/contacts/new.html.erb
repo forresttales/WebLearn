@@ -14,58 +14,63 @@
 
 <div class="wrapper row3">
   <div id="container" class="clear">
-    <h1><em>Please leave us a message.</em></h1>
-    <p></p>
+    <div id="content">
+      <div id="comments" style="height: 480px">
+  	
+		    <h1><em>Leave a message</em></h1>
+		    <p></p>
+		    
+			<%= form_for(:contact,:url => {:action => 'create'}) do |f| %>
+		    
+		    <table>
+		    	<tr>
+		    		<td>
+				    	<%= f.label(:name) %><span>*</span>
+					</td>
+					<td>
+				    	<%= f.text_field(:name, :class => "form-value") %>
+					</td>	
+		    	</tr>
+		    	<tr>
+		    		<td>
+				    	<%= f.label(:email) %><span>*</span>
+					</td>
+					<td>
+				    	<%= f.text_field(:email, :class => "form-value") %>				
+					</td>	
+		    	</tr>
+		    	<tr>
+		    		<td>
+				    	<%= f.label(:subject) %><span>*</span>    			
+					</td>
+					<td>
+				    	<%= f.text_field(:subject, :class => "form-value") %>				
+					</td>	
+		    	</tr>
+		    	<tr>
+		    		<td>
+				    	<%= f.label(:message) %><span>*</span>    			
+					</td>
+					<td>
+				    	<%= f.text_area(:message, :class => "form-value") %>				
+					</td>	
+		    	</tr>
+		    	<tr>
+		    		<td>
+		    			
+		    		</td>
+		    		<td>
+						<%= submit_tag('Submit', :class => "form-submit") %>
+		    			
+					</td>
+		    	</tr>
+			
+		    </table>
+		
+			<% end %>
     
-	<%= form_for(:contact,:url => {:action => 'create'}) do |f| %>
-    
-    <table>
-    	<tr>
-    		<td>
-		    	<%= f.label(:name) %><span>*</span>
-			</td>
-			<td>
-		    	<%= f.text_field(:name, :class => "form-value") %>
-			</td>	
-    	</tr>
-    	<tr>
-    		<td>
-		    	<%= f.label(:email) %><span>*</span>
-			</td>
-			<td>
-		    	<%= f.text_field(:email, :class => "form-value") %>				
-			</td>	
-    	</tr>
-    	<tr>
-    		<td>
-		    	<%= f.label(:subject) %><span>*</span>    			
-			</td>
-			<td>
-		    	<%= f.text_field(:subject, :class => "form-value") %>				
-			</td>	
-    	</tr>
-    	<tr>
-    		<td>
-		    	<%= f.label(:message) %><span>*</span>    			
-			</td>
-			<td>
-		    	<%= f.text_area(:message, :class => "form-value") %>				
-			</td>	
-    	</tr>
-    	<tr>
-    		<td>
-    			
-    		</td>
-    		<td>
-				<%= submit_tag('Submit', :class => "form-submit") %>
-    			
-			</td>
-    	</tr>
-	
-    </table>
-
-	<% end %>
-    
+      </div>
+    </div>
   </div>
 </div>
 				
