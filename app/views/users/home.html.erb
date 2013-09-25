@@ -38,9 +38,7 @@
         <li><%= image_tag("snapshot2.png") %>
         </li>
         
-        <li><%= image_tag("ruby-classic-sky-blue.jpeg") %>
-          <div class="panel-overlay">
-          </div>
+        <li><%= image_tag("ruby-red-silver.jpeg") %>
         </li>
         
       </ul>
@@ -53,13 +51,12 @@
       <div class="welcome clear"><%= image_tag("old-train.jpeg", :class => 'imgl') %> 
         <div class="fl_right">
           <h2>The Learning Counsel</h2>
+      		<p><strong><em>Search Learning Content Data, Reviews, News, &amp; More</em></strong></p>
         </div>
       </div>
             
       <div class="popular">
         <div class="fl_right">
-      	
-      	
 	        <h2>Listings and Accounts</h2>
 	        <ul class="clear">
 	          <li><%= link_to "&raquo;".html_safe + ' Schools', institutes_path %></li>
@@ -68,8 +65,11 @@
 	          <li><%= link_to "&raquo;".html_safe + ' Publishers', publishers_path %></li>
 	        </ul>
 	        <ul class="clear">
-	          <li><%= link_to "&raquo;".html_safe + ' EdMatch Service', edmatchs_path %></li>
-			</ul>          	        
+	          <li><%= link_to "&raquo;".html_safe + ' EdMatchUp  Service', edmatchs_path %></li>
+			</ul>
+	        <ul class="clear">
+	          <li><%= link_to "&raquo;".html_safe + ' About EdMatchUp', edmatchup_path %></li>
+			</ul>          	        			          	        
         </div>
       </div>
     </div>
@@ -83,6 +83,52 @@
       <div id="content">
       	
         <div id="latestnews">
+          <h2>About our EdMatchUp Service</h2>
+          <ul>
+            <li>
+              <p><strong><em>Free</em> Directory</strong></p>
+              <p>
+              	A free directory of digital content and curriculum for any school to use...
+			  </p>
+              <p class="readmore"><a href="/edmatchup">Read more &raquo;</a></p>
+            </li>
+            <li>
+              <p><strong><em>Free</em> profile for Publishers</strong></p>
+              <p>
+              	Any publisher, offering commercially free or for-profit digital content 
+              	or curriculum, can create a free profile...
+			  </p>
+              <p class="readmore"><a href="/edmatchup">Read more &raquo;</a></p>
+            </li>
+            <li>
+              <p><strong><em>Free</em> inventory analysis for Schools</strong></p>
+              <p>
+              	Any teacher, school or publisher can create a free profile of what they already 
+              	have or are using...
+			  </p>
+              <p class="readmore"><a href="/edmatchup">Read more &raquo;</a></p>
+            </li>
+            <li>
+              <p><strong><em>Free</em> gap analysis and MatchUp</strong></p>
+              <p>
+              	At the end of inventory, schools or teachers can use the match-up feature to tell 
+              	them key facts about their digital content and curriculum strategy...
+			  </p>
+              <p class="readmore"><a href="/edmatchup">Read more &raquo;</a></p>
+            </li>
+            <li>
+              <p><strong>EdMatchUp Game</strong></p>
+              <p>
+              	By creating a profile, schools are automatically part of an annual "game" to be 
+              	one of the best in comprehensive strategy and tactics around digital content and 
+              	curriculum...
+			  </p>
+              <p class="readmore"><a href="/edmatchup">Read more &raquo;</a></p>
+            </li>
+          </ul>
+        	
+          <div style="height: 20px"></div>
+        	
           <h2>Articles</h2>
           <ul>
             <li>
@@ -97,7 +143,7 @@
 				 question an educational system that, for sake of efficiency, used more
 				 technology and fewer teachers.
 			  </p>
-              <p class="readmore"><a href="/blogs">Read The Full Story &raquo;</a></p>
+              <p class="readmore"><a href="/blogs">Read the full article &raquo;</a></p>
             </li>
             
             <li>
@@ -110,7 +156,7 @@
               	 learning content, going from paper to digital in all things. For nearly
               	 100 years, classroom teaching has centered primarily on the textbook. 
               </p>
-              <p class="readmore"><a href="/blogs">Read The Full Story &raquo;</a></p>
+              <p class="readmore"><a href="/blogs">Read the full article &raquo;</a></p>
             </li>
           </ul>
         </div>
@@ -121,19 +167,20 @@
         
         <div id="quicklinks">
 		  <div style="height: 5px"></div>        	
-          <!-- <h2></h2>
+          <!-- <h2></h2> -->
           <ul>
             <li>
-              <p><a href="#">Make an Application <%= image_tag("demo200x80.gif", :alt => '200x80') %></a></p>
+              <p><a href="#">Order a Prospectus <%= image_tag("image_tablets.jpg", :width => '200') %></a></p>
             </li>
+            <div style="height: 30px"></div>            
             <li>
-              <p><a href="#">Order a Prospectus <%= image_tag("demo200x80.gif", :alt => '200x80') %></a></p>
+              <p><a href="#"><%= image_tag("image_student_tablet.jpg", :width => '200') %></a></p>
             </li>
+            <div style="height: 30px"></div>                        
             <li class="last">
-              <p><a href="#">Support Us <%= image_tag("demo200x80.gif", :alt => '200x80') %></a></p>
-            </li>            
-          </ul> -->
-
+              <p><a href="#"><%= image_tag("image_apple_tablet.jpg", :width => '200') %></a></p>
+            </li>
+          </ul>
         </div>
       </div>
             

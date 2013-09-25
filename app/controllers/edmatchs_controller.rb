@@ -1,6 +1,6 @@
 class EdmatchsController < ApplicationController
   
-  layout 'Edmatch'
+  layout 'edmatch'
   
   def index
   end

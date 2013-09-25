@@ -128,6 +128,7 @@ Weblearn::Application.routes.draw do
   match '/news', to: 'users#news', via: 'get'
   match '/services', to: 'users#services', via: 'get'
   match '/directory', to: 'users#directory', via: 'get'
+  match '/edmatchup', to: 'users#edmatchup', via: 'get'
 
   
   match '/access/login', to: 'access#login', :as => :login, via: ['get', 'post']  
@@ -167,7 +168,7 @@ Weblearn::Application.routes.draw do
   match '/demogallery', to: 'users#gallery', via: 'get'
   match '/demoportfolio', to: 'users#portfolio', via: 'get'
 
-  match '/edmatchs', to: 'users#edmatchs', via: 'get'
+  match '/edmatchs', to: 'edmatchs#index', via: 'get'
 
 
   match '/home_1', to: 'users#home_1', via: 'get'
