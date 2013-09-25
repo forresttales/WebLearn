@@ -1,0 +1,27 @@
+<%#= error_messages_for(@admin_user) %>
+
+<h1>_contact_form</h1>
+
+<table summary="User's contact form fields">
+  <tr>
+    <th><%= label_tag(:name) %></th>
+    <td><%= text_field_tag( :contact, :name) %></td>
+  </tr>
+  <tr>
+    <th><%= label_tag(:email) %></th>
+    <td><%= text_field_tag( :contact, :email) %></td>
+  </tr>
+  <tr>
+    <th><%= label_tag(:subject) %></th>
+    <td><%= text_field_tag( :contact, :subject) %></td>
+  </tr>  
+  <tr>
+    <th><%= label_tag(:message) %></th>
+    <td><%= text_area_tag( :contact, :message) %></td>
+  </tr>
+  <tr>
+  	<td>
+  		<%= submit_tag('Submit') %>  		
+  	</td>
+  </tr>
+</table>

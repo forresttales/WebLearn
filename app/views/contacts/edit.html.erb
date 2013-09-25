@@ -1,0 +1,19 @@
+<% @title = "contacts edit" %>
+
+<h1>contacts edit</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+
+  	<%= form_for(:contact, :url => {:action => 'update', :id => @contact.id}) do |f| %>
+
+    <%= render(:partial => 'form', :locals => {:f => f} ) %>
+
+    <div class="form-buttons">
+      <%= submit_tag('Submit') %>
+    </div>
+  
+  	<% end %>
+  	
+  </div>  
+</div>

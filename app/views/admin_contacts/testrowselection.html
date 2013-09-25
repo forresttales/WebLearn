@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Row Selection</title>
+
+<style type="text/css">
+/*margin and padding on body element
+  can introduce errors in determining
+  element position and are not recommended;
+  we turn them off as a foundation for YUI
+  CSS treatments. */
+body {
+	margin:0;
+	padding:0;
+}
+</style>
+
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/fonts/fonts-min.css" />
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/datatable/assets/skins/sam/datatable.css" />
+<script type="text/javascript" src="http://yui.yahooapis.com/2.9.0/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.9.0/build/element/element-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.9.0/build/datasource/datasource-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.9.0/build/event-delegate/event-delegate-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.9.0/build/datatable/datatable-min.js"></script>
+
+
+<style type="text/css">
+	.yui-skin-sam .yui-dt-body { cursor:pointer; } /* when rows are selectable */
+	#single { margin-top:2em; }
+</style>
+
+</head>
+
+<body class="yui-skin-sam">
+
+<a href="#" onclick="rowSel();">Roar</a>
+
+<div id="standard"></div>
+<div id="single"></div>
+
+<script type="text/javascript" src="http://developer.yahoo.com/yui/examples/datatable/assets/js/data.js"></script>
+
+
+
+
+
+<script type="text/javascript">
+
+        var a = [];
+        //var i;
+
+		// function rowSel1() {
+			// alert('test');
+			// //document.write("<h1>You pushed a link</h1>");		
+		// }
+	// var oElement = document.getElementById("elementid");
+	// function fnCallback(e) { alert("click"); }
+	// YAHOO.util.Event.addListener(oElement, "click", fnCallback);
+                                                                                      
+	//YAHOO.util.Event.addListener(window, "load", function() {
+		//YAHOO.example.RowSelection = function() {
+		r = function() {			
+			        var myColumnDefs = [
+			            {key:"Date",formatter:YAHOO.widget.DataTable.formatDate, sortable:true},
+			            {key:"To", sortable:true},
+			            {key:"From", sortable:true},
+			            {key:"Subject", sortable:true}
+	        ];
+	
+	        var myDataSource = new YAHOO.util.DataSource(YAHOO.example.Data.emails);
+		        myDataSource.responseType = YAHOO.util.DataSource.TYPE_JSON;
+		        myDataSource.responseSchema = {
+		            resultsList: "messages",
+		            fields: ["Date","To","From","Subject","XID","Date","Attachment"]
+	        };
+		        
+	        var singleSelectDataTable = new YAHOO.widget.DataTable("single",
+	                myColumnDefs, myDataSource, {
+	                    caption:"Single-Row Selection with Modifier Keys Disabled",
+	                    selectionMode:"single"
+	                });
+	                
+	        // Subscribe to events for row selection
+	        singleSelectDataTable.subscribe("rowMouseoverEvent", singleSelectDataTable.onEventHighlightRow);
+	        singleSelectDataTable.subscribe("rowMouseoutEvent", singleSelectDataTable.onEventUnhighlightRow);
+	        singleSelectDataTable.subscribe("rowClickEvent", singleSelectDataTable.onEventSelectRow);
+	        
+	        // Programmatically select the first row
+	        singleSelectDataTable.selectRow(singleSelectDataTable.getTrEl(2));
+	        
+	        
+			//var recordID = myDataTable.getSelectRows()[0];
+	    	//var record = myDataTable.getRecord(recordID);        
+	        
+	        var a = singleSelectDataTable.getSelectedRows();
+	
+	        //i = singleSelectDataTable.getRecordIndex();
+	        
+	        //alert(a[0]);
+	        
+			// function rowSel() {
+				// alert(a[0].toString());
+			// }
+	        
+	        //alert('in function');
+	
+			// function rowSel() {
+				// alert('trial');
+				// //document.write("<h1>You pushed a link</h1>");		
+			// }
+	        
+	        return {
+	            oDS: myDataSource,
+	            //oDTStandardSelect: standardSelectDataTable,
+	            oDTSingleSelect: singleSelectDataTable
+	        };
+	        
+	        //s = singleSelectDataTable.selectRow;
+	                
+	    }();
+	//});
+
+	a = r.getSelectedRows();
+	i = r.getRecordIndex().toString();
+	//i = r.oDTSingleSelect.selectRow(r.oDTSingleSelect.singleSelectDataTable.getTrEl(2)).toString();
+	//singleSelectDataTable.selectRow(singleSelectDataTable.getTrEl(2));
+	//alert(a[0])
+
+	function rowSel() {
+		alert(a[0]);
+	}
+
+
+</script>
+
+
+</body>
+</html>

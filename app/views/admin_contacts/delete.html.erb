@@ -1,0 +1,19 @@
+<% @title = "Delete Contact: #{@contact.name}" %>
+
+<%#= link_to("<< Back to List", {:action => 'list'}, :class => 'back-link') %>
+
+<div class="contact delete">
+  <h2>Delete Contact</h2>
+  
+  <%= form_for(:contact, :url => {:action => 'destroy', :id => @contact.id}, :method => :delete) do |f| -%>
+
+    <p>Are you sure you want to permanently delete this contact?</p>
+  
+    <p class="reference-name"><%= @contact.name %></p>
+  
+    <div class="form-buttons">
+      <%= submit_tag("Delete Contact") %>
+    </div>
+    
+  <% end %>
+</div>

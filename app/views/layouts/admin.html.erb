@@ -6,13 +6,16 @@
     	
   		<title><%= full_title(yield(:title)) %></title> 
   		
-    	<%= stylesheet_link_tag "custom", media: "all", "data-turbolinks-track" => true %>  		
-    	<%= javascript_include_tag "jquery", "application" %>  		
-  		
-		<link rel="stylesheet" type="text/css" href="http://abelardo-jas.com/assets/easyui/themes/pepper-grinder/easyui.css">
+    	<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+    	  		
+   		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>    		   		
+    	  		
+    	<!-- = javascript_include_tag "jquery", "application"   		 -->
+    	  		
+		<!-- <link rel="stylesheet" type="text/css" href="http://abelardo-jas.com/assets/easyui/themes/pepper-grinder/easyui.css">
 		<script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery-1.8.0.min.js"></script>
-		<script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>				
-
+		<script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>				 -->
+		
 			
 	  	<%= csrf_meta_tags %>
 	  	
@@ -20,19 +23,6 @@
 	  	
 	  	<%= render 'layouts/shim' %>  
 
-	<style>
-		.users {
-		  list-style: none;
-		  margin: 0;
-		  li {
-		    overflow: auto;
-		    padding: 10px 0;
-		    border-top: 1px solid $grayLighter;
-		    &:last-child {
-		      border-bottom: 1px solid $grayLighter;
-		    }
-		  }	
-	</style>
 		
 
 	<script>
@@ -60,27 +50,27 @@
 		// }
 	
 	
-		function getSelected(){
-			alert('getSelected');			
-			var row = $('#user_contacts').datagrid('getSelected');
-			if (row){
-				alert('Name:'+row.name+"\nEmail:"+row.email);
-				return String(row.id);
-			}
-			else {
-				alert('no row selected');
-				return "no record selected";
-			}
-		}
-		
-		function getSelections(){
-			var ids = [];
-			var rows = $('#user_contacts').datagrid('getSelections');
-			for(var i=0; i<rows.length; i++){
-				ids.push(rows[i].name);
-			}
-			alert(ids.join('\n'));
-		}
+		// function getSelected(){
+			// alert('getSelected');			
+			// var row = $('#user_contacts').datagrid('getSelected');
+			// if (row){
+				// alert('Name:'+row.name+"\nEmail:"+row.email);
+				// return String(row.id);
+			// }
+			// else {
+				// alert('no row selected');
+				// return "no record selected";
+			// }
+		// }
+// 		
+		// function getSelections(){
+			// var ids = [];
+			// var rows = $('#user_contacts').datagrid('getSelections');
+			// for(var i=0; i<rows.length; i++){
+				// ids.push(rows[i].name);
+			// }
+			// alert(ids.join('\n'));
+		// }
 		
 		
 		// jQuery.ajaxSetup({ 
@@ -96,28 +86,33 @@
 		//};)
 		
 		
-		function getMsg(){
-			msg = getSelected();
-			//msg = "msg";
-			alert(msg);
-			var p = document.getElementById("view_message");
-			p.innerHTML = "<em>" + msg  + "</em>";
-			
-		}
+		// function getMsg(){
+			// msg = getSelected();
+			// //msg = "msg";
+			// alert(msg);
+			// var p = document.getElementById("view_message");
+			// p.innerHTML = "<em>" + msg  + "</em>";
+// 			
+		// }
 		
 	</script>
 
     </head>
-    <body>
+    <body id='top'>
 
         <!-- <div id="main"> -->        	
         	
  		<div class="container">
  			
-            <%= render(:partial => "share/menu_bar") %> 
-
+ 			<div>
+	 			<h1>
+	            <%= render(:partial => "share/menu_bar") %> 
+				</h1>
+			</div>
             <div>
-      			<%= render(:partial => "share/menu_admin") %>            	
+	 			<h1>
+      			<%= render(:partial => "share/menu_admin") %>
+      			</h1>            	
             </div>
         	
             <div>
@@ -129,8 +124,14 @@
     	        
 	  		<%= yield %> 
         
-      		<%= render(:partial => "share/footer") %>
-      		
+        	<%= render 'share/footer_social'%>
+			
+			<%= render 'share/temp_nav'%>
+
+			<%= render 'share/footer' %>  
+
+      		<!-- = render(:partial => "share/footer")  -->
+      		      		
       		admin layout
       		
 			<%= debug(params) %>      		

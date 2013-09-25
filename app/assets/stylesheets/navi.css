@@ -115,9 +115,9 @@
 
 .pagination{
 	display:block;
-	width:100%;
+	width:100%;	
 	clear:both;
-	text-align:center;
+	text-align:left;
 	}
 
 .pagination ul{
@@ -134,7 +134,7 @@
 	margin:0;
 	}
 
-.pagination a{
+.pagination a{	
 	display:inline-block;
 	margin:0 2px 0 0;
 	padding:2px 5px 3px 5px;

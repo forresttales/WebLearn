@@ -1,21 +1,72 @@
-<% provide(:title, 'contact new') %>
+<% provide(:title, 'Contact') %>
 
-<h1>Contact us</h1>
-<p>Leave a message</p>
-
-<div class="row">
-  <div class="span6 offset3">
-
-
-  	<%= form_for(:contact, :url => {:action => 'create'}) do |f| %>
-
-    <%= render(:partial => 'form', :locals => {:f => f} ) %>
-
-    <div class="form-buttons">
-      <%= submit_tag('Submit') %>
-    </div>
-  
-  	<% end %>
+<div class="wrapper row1">
+  <div id="header" class="clear">
   	
-  </div>  
+	<%= render 'share/title'%>
+  	
+    <%= render 'share/site_search' %>  
+    
+    <%= render 'share/navigate' %>  
+    
+  </div>
 </div>
+
+<div class="wrapper row3">
+  <div id="container" class="clear">
+    <h1>Please leave us a message.</h1>
+    <p></p>
+    
+	<%= form_for(:contact,:url => {:action => 'create'}) do |f| %>
+    
+    <table>
+    	<tr>
+    		<td>
+		    	<%= f.label(:name) %><span>*</span>
+			</td>
+			<td>
+		    	<%= f.text_field(:name, :class => "form-value") %>
+			</td>	
+    	</tr>
+    	<tr>
+    		<td>
+		    	<%= f.label(:email) %><span>*</span>
+			</td>
+			<td>
+		    	<%= f.text_field(:email, :class => "form-value") %>				
+			</td>	
+    	</tr>
+    	<tr>
+    		<td>
+		    	<%= f.label(:subject) %><span>*</span>    			
+			</td>
+			<td>
+		    	<%= f.text_field(:subject, :class => "form-value") %>				
+			</td>	
+    	</tr>
+    	<tr>
+    		<td>
+		    	<%= f.label(:message) %><span>*</span>    			
+			</td>
+			<td>
+		    	<%= f.text_area(:message, :class => "form-value") %>				
+			</td>	
+    	</tr>
+    	<tr>
+    		<td>
+    			
+    		</td>
+    		<td>
+				<%= submit_tag('Submit', :class => "form-submit") %>
+    			
+			</td>
+    	</tr>
+	
+    </table>
+
+	<% end %>
+    
+  </div>
+</div>
+				
+								

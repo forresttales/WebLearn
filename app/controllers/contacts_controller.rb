@@ -1,84 +1,56 @@
 class ContactsController < ApplicationController
   
-  layout 'admin'
-  
-  before_filter :confirm_logged_in  
+  #layout 'application'
   
   def list
-
-    @contacts = Contact.paginate(page: params[:page]).per_page(5)
-    #@products = Product.order("name").page(params[:page]).per_page(10)
-
-
-
-    # gon.contacts = Contact.all
-    # gon.count = Contact.count
-
-    # @test = "test msg"
-     
-    # @contacts = Contact.all
-    
-    
+    #@contacts = Contact.all
+  end
+  
+  def index
+    render('new')    
   end
   
   def new
   end
   
-  def view
-    @contact = Contact.find(params[:id])
-    
-    
-    #render :template => 'view.js.erb'
-    
-    # @review = Review.create!(params[:review])
-    # flash[:notice] = "Thank you for reviewing this product"
-    respond_to do |format|
-      format.html
-      format.js      
-    end
-    
-  end
-    
   def show
+    @contact = Contact.find_by_id(params[:saved_id])
   end
   
   def create
+    @contact = Contact.new(params[:contact])
+
+    if @contact.save
+      @saved_id = @contact.id
+      flash[:notice] = 'Message sent'
+      redirect_to(:action => 'show', :saved_id => @contact.id)
+    else
+      flash[:notice] = 'Unable to send message'
+    end
+    
   end
   
   def edit
-    render text: "in edit"
+    @contact = Contact.find_by_id(params[:id])    
   end
   
   def update
+    
+    @contact = Contact.find(params[:id])
+    
+    if @contact.update_attributes(params[:contact])
+      flash[:notice] = "Contact updated."
+      redirect_to(:action => 'show', :saved_id => @contact.id)
+    else
+      # @subject_count = Subject.count
+      # render('edit')
+    end    
   end
 
   def delete
-    @contact = Contact.find(params[:id])
   end
 
   def destroy
-    contact = Contact.find(params[:id])
-    contact.delete
-    flash[:notice] = "Contact destroyed."
-  end
-  
-  def confirm_logged_in
-    unless session[:user_id]
-      flash[:notice] = "Please log in."
-      redirect_to(login_path)
-      return false # halts the before_filter
-    else
-      #redirect_to(:controller => 'admin_users', :action => 'list')
-      return true
-    end
-  end
-  
-  def get_message
-    
-    respond_to do |format|
-      format.html
-      format.js      
-    end    
   end
   
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130923084858) do
+ActiveRecord::Schema.define(version: 20130925034947) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,13 @@ ActiveRecord::Schema.define(version: 20130923084858) do
     t.string   "email",                 default: "", null: false
     t.string   "subject",    limit: 50
     t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "edmatchs", force: true do |t|
+    t.integer  "institute_id"
+    t.text     "result"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

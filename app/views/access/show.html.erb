@@ -1,7 +1,20 @@
-<h1>Administrator Login</h1>
+<h1>access show</h1>
 
-<center>
-	<div id="admin_login">
+<div class="wrapper row3">
+  <div id="container" class="clear">
+  	
+  	<div>
+		<%= link_to "Return", home_path %>
+	</div>
+		
+  	<br />
+  	<br />
+  	<br />
+  	
+    <div id="content">
+      
+      <h2>Administration Login</h2>
+
 	  <%= form_tag(:action => 'attempt_login') do %>
 	  <table>
 	    <tr>
@@ -18,10 +31,11 @@
 	    </tr>
 	  </table>
 	  <% end %>
-	</div>
-</center>
-<div style="padding: 50px 0px 0px 0px;">
-	<p><%= link_to "<<< Cancel and return to previous page", :back %></p>
+      
+    </div>
+    
+  </div>
 </div>
 
-<h1>access show</h1>
+
+<h1><%= link_to "<<< Cancel and return to previous page", :back %></h1>

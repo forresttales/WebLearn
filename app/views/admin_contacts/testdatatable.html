@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+
+<script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script>
+
+<script>
+// Create a new YUI instance and populate it with the required modules.
+YUI().use('datatable', function (Y) {
+    // DataTable is available and ready for use. Add implementation
+    // code here.
+});
+
+// Columns must match data object property names
+var data = [
+    { id: "ga-3475", name: "gadget",   price: "$6.99", cost: "$5.99" },
+    { id: "sp-9980", name: "sprocket", price: "$3.75", cost: "$3.25" },
+    { id: "wi-0650", name: "widget",   price: "$4.25", cost: "$3.75" }
+];
+
+var table = new Y.DataTable({
+    columns: ["id", "name", "price"],
+    data: data,
+
+    // Optionally configure your table with a caption
+    caption: "My first DataTable!",
+
+    // and/or a summary (table attribute)
+    summary: "Example DataTable showing basic instantiation configuration"
+});
+
+table.render("#example");
+
+
+
+
+
+
+YUI().use("datatable", function (Y) {
+
+    // A table from data with keys that work fine as column names
+    var simple = new Y.DataTable({
+        columns: ["id", "name", "price"],
+        data   : [
+            { id: "ga_3475", name: "gadget",   price: "$6.99" },
+            { id: "sp_9980", name: "sprocket", price: "$3.75" },
+            { id: "wi_0650", name: "widget",   price: "$4.25" }
+        ],
+        summary: "Price sheet for inventory parts",
+        caption: "Example table with simple columns"
+    });
+    
+    simple.render("#simple");
+
+});
+
+</script>
+</head>
+<body>
+<div class="example yui3-skin-sam"> <!-- You need this skin class -->
+    <div id="simple"></div>
+
+    <div id="labels"></div>
+</div>
+
+
+
+></body>

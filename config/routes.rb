@@ -2,6 +2,13 @@ Weblearn::Application.routes.draw do
    
     
   
+  get "edmatchs/index"
+  get "edmatchs/new"
+  get "edmatchs/show"
+  get "edmatchs/update"
+  get "edmatch/index"
+  get "edmatch/show"
+  get "edmatch/update"
   get "access_publisher/login"
   get "access_publisher/show"
   get "access_publisher/update"
@@ -31,11 +38,11 @@ Weblearn::Application.routes.draw do
   
   root to: 'users#home'
 
-  # resources :access do
-    # member do
-      # post 'attempt_login'
-    # end
-  # end
+  resources :access do
+    member do
+      post 'attempt_login'
+    end
+  end
 # 
   # resources :access_institute do
     # member do
@@ -43,11 +50,18 @@ Weblearn::Application.routes.draw do
     # end
   # end
 
-  resources :user_contacts do
+  # resources :user_contacts do
+    # member do
+      # post 'create'
+    # end
+  # end
+
+  resources :contacts do
     member do
       post 'create'
     end
   end
+
 
   resources :user_institutes do
     member do
@@ -69,29 +83,49 @@ Weblearn::Application.routes.draw do
   get "admin_users/new"
   get "admin_users/logout"
   get "logout/index"
-  get "contacts/edit"
-  get "contacts/delete", via: :all
-  get "contacts/show"
-  get "contacts/view"
-  get "user_contacts/show"
-  get "user_contacts/edit", via: :all
-  get "user_contacts/update", via: :all
-  #get "user_contacts/testnewcontact"
-  get "contacts/jqmenu"
   
-  get "contacts/get_message"
+  
+  # get "contacts/edit"
+  # get "contacts/delete", via: :all
+  # get "contacts/show"
+  # get "contacts/view"
+  
+  get "admin_contacts/edit"
+  get "admin_contacts/delete", via: :all
+  get "admin_contacts/show"
+  get "admin_contacts/view"
+  
+  # get "user_contacts/show"
+  # get "user_contacts/edit", via: :all
+  # get "user_contacts/update", via: :all
+  
+  get "contacts/show"
+  get "contacts/edit", via: :all
+  get "contacts/update", via: :all
+  
+  
+  
+  #get "user_contacts/testnewcontact"
+  
+  
+  # get "contacts/jqmenu"
+  # get "contacts/get_message"
+
+  get "admin_contacts/jqmenu"
+  get "admin_contacts/get_message"
 
   get "users/format_yui"
   
-  
-  resources :contacts
+
+  # resources :contacts
+  resources :admin_contacts
 
 
   match '/about', to: 'users#about', via: 'get'
   match '/blogs', to: 'users#blogs', via: 'get'
-  match '/list', to: 'contacts#list', via: 'get'
+  match '/list', to: 'admin_contacts#list', via: 'get'
   match '/home', to: 'users#home', via: 'get'
-  match '/news', to: 'users#industry_news', via: 'get'
+  match '/news', to: 'users#news', via: 'get'
   match '/services', to: 'users#services', via: 'get'
   match '/directory', to: 'users#directory', via: 'get'
 
@@ -99,8 +133,10 @@ Weblearn::Application.routes.draw do
   match '/access/login', to: 'access#login', :as => :login, via: ['get', 'post']  
 
       
-  match '/user_contacts', to: 'user_contacts#new', via: 'get'
-  match "/user_contacts/:id" => "user_contacts#update", via: 'post'
+  # match '/user_contacts', to: 'user_contacts#new', via: 'get'
+  # match "/user_contacts/:id" => "user_contacts#update", via: 'post'
+  match '/contacts', to: 'contacts#new', via: 'get'
+  match "/contacts/:id" => "contacts#update", via: 'post'
 
 
   match '/user_publishers', to: 'user_publishers#index', via: 'get'
@@ -134,7 +170,7 @@ Weblearn::Application.routes.draw do
   match '/match', to: 'users#match', via: 'get'
 
 
-
+  match '/home_1', to: 'users#home_1', via: 'get'
   match '/about_1', to: 'users#about_1', via: 'get'
   match '/blogs_1', to: 'users#blogs_1', via: 'get'
   match '/directory_1', to: 'users#directory_1', via: 'get'
@@ -142,8 +178,11 @@ Weblearn::Application.routes.draw do
   match '/services_1', to: 'users#services_1', via: 'get'
 
 
+  match '/zDZFcDGpL4U', to: 'users#zDZFcDGpL4U', via: 'get'
+  match '/XsNlrgN7mCo', to: 'users#XsNlrgN7mCo', via: 'get'
 
-
+  # get "users/zDZFcDGpL4U"
+  # get "users/XsNlrgN7mCo"
 
 
 
