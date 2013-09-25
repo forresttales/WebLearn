@@ -63,13 +63,13 @@ Weblearn::Application.routes.draw do
   end
 
 
-  resources :user_institutes do
+  resources :institutes do
     member do
       post 'create'
     end
   end
   
-  resources :user_publishers do
+  resources :publishers do
     member do
       post 'create'
     end
@@ -114,7 +114,7 @@ Weblearn::Application.routes.draw do
   get "admin_contacts/jqmenu"
   get "admin_contacts/get_message"
 
-  get "users/format_yui"
+  #get "users/format_yui"
   
 
   # resources :contacts
@@ -139,21 +139,21 @@ Weblearn::Application.routes.draw do
   match "/contacts/:id" => "contacts#update", via: 'post'
 
 
-  match '/user_publishers', to: 'user_publishers#index', via: 'get'
-  match "/user_publishers/:id" => "user_publishers#update", via: 'post'
-  match '/user_publishers_new', to: 'user_publishers#new', via: 'get'
+  match '/publishers', to: 'publishers#index', via: 'get'
+  match "/publishers/:id" => "publishers#update", via: 'post'
+  match '/publishers/new', to: 'publishers#new', via: 'get'
 
-  match '/user_institutes', to: 'user_institutes#index', via: 'get'
-  match "/user_institutes/:id" => "user_institutes#update", via: 'post'
-  match '/user_institutes_new', to: 'user_institutes#new', via: 'get'
+  match '/institutes', to: 'institutes#index', via: 'get'
+  match "/institutes/:id" => "institutes#update", via: 'post'
+  match '/institutes/new', to: 'institutes#new', via: 'get'
   #match '/user_institutes_create', to: 'user_institutes#create_login', via: 'get'
 
-  match '/access_publisher/login', to: 'access_publisher#login', via: ['get', 'post']  
-  match '/access_publisher/attempt_login_publisher', to: 'access_publisher#attempt_login_publisher', :as => 'attempt_login_publisher', via: ['post']
+  match '/access/publisher/login', to: 'access_publisher#login', via: ['get', 'post']  
+  match '/access/publisher/attempt_login_publisher', to: 'access_publisher#attempt_login_publisher', :as => 'attempt_login_publisher', via: ['post']
 
 
-  match '/access_institute/login', to: 'access_institute#login', via: ['get', 'post']  
-  match '/access_institute/attempt_login_institute', to: 'access_institute#attempt_login_institute', :as => 'attempt_login_institute', via: ['post']
+  match '/access/institute/login', to: 'access_institute#login', via: ['get', 'post']  
+  match '/access/institute/attempt_login_institute', to: 'access_institute#attempt_login_institute', :as => 'attempt_login_institute', via: ['post']
   
   #match '/user_institutes_attempt_login', to: 'user_institutes#attempt_login', via: ['get', 'post']
 
@@ -167,7 +167,7 @@ Weblearn::Application.routes.draw do
   match '/demogallery', to: 'users#gallery', via: 'get'
   match '/demoportfolio', to: 'users#portfolio', via: 'get'
 
-  match '/match', to: 'users#match', via: 'get'
+  match '/edmatchs', to: 'users#edmatchs', via: 'get'
 
 
   match '/home_1', to: 'users#home_1', via: 'get'
@@ -176,15 +176,6 @@ Weblearn::Application.routes.draw do
   match '/directory_1', to: 'users#directory_1', via: 'get'
   match '/news_1', to: 'users#news_1', via: 'get'
   match '/services_1', to: 'users#services_1', via: 'get'
-
-
-  match '/zDZFcDGpL4U', to: 'users#zDZFcDGpL4U', via: 'get'
-  match '/XsNlrgN7mCo', to: 'users#XsNlrgN7mCo', via: 'get'
-
-  # get "users/zDZFcDGpL4U"
-  # get "users/XsNlrgN7mCo"
-
-
 
 
 
