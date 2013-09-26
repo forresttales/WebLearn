@@ -2,6 +2,7 @@
 
 
     	<!-- = stylesheet_link_tag "prettyPhoto", media: "all", "data-turbolinks-track" => true  -->
+
     	
 <script type="text/javascript">
 $(document).ready(function () {
@@ -33,12 +34,14 @@ $(document).ready(function () {
   	
     <div id="featured_slide">
       <ul>
-      	
-      	
+      	      	
         <li><%= image_tag("ruby-in-black.jpeg") %>
           <div class="panel-overlay">
             <h2>The Learning Counsel</h2>
-            <p>Welcome to The Learning Counsel. <a href="#">Continue Reading &raquo;</a></p>
+            <!-- <p>Welcome to The Learning Counsel. <a href="#">Continue Reading &raquo;</a></p> -->            
+            
+            <p>Welcome to The Learning Counsel</p>
+            
           </div>
         </li>
         
@@ -88,7 +91,13 @@ $(document).ready(function () {
 			</ul>
 	        <ul class="clear">
 	          <li><%= link_to "&raquo;".html_safe + ' About EdMatchUp', edmatchup_path %></li>
-			</ul>          	        			          	        
+			</ul>
+	        <ul class="clear">
+	          <li><%= link_to "&raquo;".html_safe + ' Login', login_path %></li>
+			</ul>
+	        <ul class="clear">
+	          <li><%= link_to "&raquo; Register".html_safe, registers_new_path %></li>
+			</ul>          	        			          	        			          	        			          	        
         </div>
       </div>
     </div>

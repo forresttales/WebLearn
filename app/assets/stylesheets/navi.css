@@ -1,4 +1,55 @@
 
+#topnav_admin{
+	display:block;
+	clear:both;
+	width:960px;
+	margin:0;
+	padding:0px 0;
+	text-align:left;
+	}
+	
+#topnav_admin{
+	display:block;
+	clear:both;
+	width:960px;
+	margin:0;
+	padding:15px 0;
+	text-align:center;
+	}
+
+#topnav_admin, #topnav_admin a{
+	text-transform:uppercase;
+	color:#FFFFFF;
+	/*color: #326E37;*/	
+	background-color:#510000;
+	}
+
+#topnav_admin a:hover, #topnav_admin li.active a{
+	/*color:#FB0000;*/	
+	color: #326E37;
+	/*background-color:#510000;*/	
+	background-color:#21C43F;	
+	}
+
+#topnav_admin ul, #topnav_admin li{
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+
+#topnav_admin li{
+	display:inline;
+	margin-right:30px;
+	}
+
+#topnav_admin li.last{
+	margin:0;
+	}
+
+
+/*--------------------------------------------------------------------------------------------------*/
+	
+
 #topnav{
 	display:block;
 	clear:both;

@@ -2,7 +2,7 @@
     	
       <!-- <p><a href="#">A - Z Index</a> | <a href="#">Student Login</a> | <a href="#">Staff Login</a></p> -->
             
-      <p><%= link_to 'Schools', institutes_path %> | <%= link_to 'Publishers', publishers_path %>| <%= link_to 'EdMatchUp Service', edmatchs_path %></p>
+      <p><%= link_to 'Schools', institutes_path %> | <%= link_to 'Publishers', publishers_path %> | <%= link_to 'EdMatchUp Service', edmatchs_path %> | <%= link_to 'Login', login_path %> | <%= link_to 'Register', registers_new_path %></p>
       
       <form action="#" method="post" id="sitesearch">
         <fieldset>
@@ -11,4 +11,6 @@
           <%= image_tag("search.png", :id => 'search', :alt => 'Search') %>
         </fieldset>
       </form>
+      <p><%= session[:username] %></p>
+
     </div>

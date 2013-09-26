@@ -1,52 +1,20 @@
-<h1>publishers new</h1>
+<div class="wrapper row1">
+  <div id="header" class="clear">
+  	
+	<%= render 'share/title'%>
+  	
+    <%= render 'share/site_search' %>  
+    
+    <%= render 'share/navigate' %>  
+    
+  </div>
+</div>
 
 <div class="wrapper row3">
   <div id="container" class="clear">
     <div id="content">
       <div id="comments" style="height: 480px">
-
-			<div>
-				<%= link_to "Return", publishers_path %>
-			</div>
-			<h2></h2>      	
-	        <h2>Publisher Create Login</h2>
-			<br />
-		    <div id="content">
-		      <div id="respond">
-				
-				<%= form_for(:publishers, :url => {:action => 'create'}) do |f| %>
-		      	
-					<table summary="User Publishers Create Password">
-						
-					  <tr>
-					    <th><%= f.label(:username) %></th>
-					    <td><%= f.text_field(:username) %></td>
-					  </tr>
-					  <tr>
-					    <th><%= f.label(:password) %></th>
-					    <td><%= f.password_field(:password) %></td>
-					  </tr>
-					  <tr>
-					  	<th><%= f.label :password_confirmation, "Confirmation" %></th>
-					  	<td><%= f.password_field :password_confirmation %></td>
-					  </tr>					  
-					  <tr>
-					  	<th>
-					  		
-					  	</th>
-					  	<td>
-				      		<%= submit_tag('Submit') %>
-					  	</td>
-					  </tr>
-					  
-					</table>
-			  
-			  	<% end %>
-		        
-		      </div>
-		      
-		    </div>
-        
+        <h2>Publisher's new page'</h2>
       </div>
     </div>
   </div>

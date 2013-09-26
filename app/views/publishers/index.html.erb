@@ -1,24 +1,22 @@
-<h1>user_publishers index</h1>
+<div class="wrapper row1">
+  <div id="header" class="clear">
+  	
+	<%= render 'share/title'%>
+  	
+    <%= render 'share/site_search' %>  
+    
+    <%= render 'share/navigate' %>  
+    
+  </div>
+</div>
 
 <div class="wrapper row3">
   <div id="container" class="clear">
     <div id="content">
       <div id="comments" style="height: 480px">
-		<div>
-			<%= link_to "Return to Home", home_path %>
-		</div>
-		<h2></h2>      	
-        <h2>Publisher Directory</h2>
-		<br />
-		<div>      <!-- redirect_to(:controller => 'controller', :action => 'show') -->
-	
-			<%= link_to "Publisher Login", access_publisher_login_path %>
-		</div>
-		<br />
-		<div>
-			<%= link_to "Publisher Create Account", publishers_new_path %>
-		</div>        
+        <h2>Publisher's page</h2>
       </div>
     </div>
   </div>
 </div>
+

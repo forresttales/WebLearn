@@ -18,9 +18,9 @@ class InstitutesController < ApplicationController
   end
   
   def create
-    # @admin_user = AdminUser.new(params[:admin_user])
-    # if @admin_user.save
-      # flash[:notice] = 'Admin user created.'
+    # @institute = Institute.new(params[:admin_user])
+    # if @institute.save
+      # flash[:notice] = 'School password created.'
       # redirect_to(:action => 'list')
     # else
       # render("new")
@@ -28,7 +28,13 @@ class InstitutesController < ApplicationController
   end
   
   def create_login
-    
+    @institute = Institute.new(params[:admin_user])
+    if @institute.save
+      flash[:notice] = 'School password created.'
+      redirect_to(:action => 'list')
+    else
+      render("new")
+    end    
   end
 
   def edit

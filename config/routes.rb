@@ -2,6 +2,14 @@ Weblearn::Application.routes.draw do
    
     
   
+  # get "access_admins/index"
+  # get "access_admins/new"
+  # get "access_admins/show"
+  # get "access_admins/update"
+  # get "registers/index"
+  # get "registers/new"
+  # get "registers/show"
+  # get "registers/update"
   get "edmatchs/index"
   get "edmatchs/new"
   get "edmatchs/show"
@@ -75,6 +83,11 @@ Weblearn::Application.routes.draw do
     end
   end
 
+  resources :registers do
+    member do
+      post 'create'
+    end
+  end
 
   get "admin_users/index"
   get "admin_users/delete"
@@ -131,7 +144,16 @@ Weblearn::Application.routes.draw do
   match '/edmatchup', to: 'users#edmatchup', via: 'get'
 
   
-  match '/access/login', to: 'access#login', :as => :login, via: ['get', 'post']  
+  match '/access/access/login', to: 'access#login', :as => :login, via: ['get', 'post']  
+  match '/access/access/attempt_login', to: 'access#attempt_login', :as => 'attempt_login', via: ['post']
+  
+  
+  
+  
+  
+  
+  
+  match '/access/access_admins/login', to: 'access_admins#login', :as => :login_admin, via: ['get', 'post']  
 
       
   # match '/user_contacts', to: 'user_contacts#new', via: 'get'
@@ -155,6 +177,12 @@ Weblearn::Application.routes.draw do
 
   match '/access/institute/login', to: 'access_institute#login', via: ['get', 'post']  
   match '/access/institute/attempt_login_institute', to: 'access_institute#attempt_login_institute', :as => 'attempt_login_institute', via: ['post']
+
+
+  match '/registers/new', to: 'registers#new', via: 'get'
+  match "/registers/:id" => "registers#update", via: 'post'
+  
+  
   
   #match '/user_institutes_attempt_login', to: 'user_institutes#attempt_login', via: ['get', 'post']
 

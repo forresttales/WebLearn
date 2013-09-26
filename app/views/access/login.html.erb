@@ -1,24 +1,57 @@
-<% provide(:title, 'Admin Login') %>
+<% provide(:title, 'Login') %>
 
-<h1>access login</h1>
+<div class="wrapper row1">
+  <div id="header" class="clear">
+    <div class="fl_left">
 
-<div id="admin_login">
-	
-  <%= form_tag(:action => 'attempt_login') do %>
-  <table>
-    <tr>
-      <td><%= label_tag(:username) %></td>
-      <td><%= text_field_tag(:username) %></td>
-    </tr>
-    <tr>
-      <td><%= label_tag(:password) %></td>
-      <td><%= password_field_tag(:password) %></td>
-    </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td><%= submit_tag("Log In") %></td>
-    </tr>
-  </table>
-  <% end %>
-  
+	<%= render 'share/title'%>
+    
+    <%= render 'share/site_search' %>  
+    	
+    <%= render 'share/navigate' %>
+      
+  	</div>
+  </div>
+</div>
+
+<div class="wrapper row3">
+  <div id="container" class="clear">
+    <div id="content">
+      <div id="comments" style="height: 480px">
+  	
+			<div>
+				<%= link_to "Return", :back %>
+			</div>
+			<h2></h2>      	
+	        <h2>Login</h2>
+			<br />
+		    <div id="content">
+		      <div id="respond">
+		      	
+				  <%= form_tag(:action => 'attempt_login') do %>
+				  <table>
+				    <tr>
+				      <th><%= label_tag(:username) %></th>
+				      <td><%= text_field_tag(:username) %></td>
+				    </tr>
+				    <tr>
+				      <th><%= label_tag(:password) %></th>
+				      <td><%= password_field_tag(:password) %></td>
+				    </tr>
+				    <tr>
+				      <th>
+				      	
+				      </th>	
+				      <td><%= submit_tag("Log In") %></td>
+				    </tr>
+				  </table>
+				  <% end %>
+		        
+		      </div>
+		      
+		    </div>
+    
+      </div>
+    </div>
+  </div>
 </div>
