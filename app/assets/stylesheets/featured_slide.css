@@ -9,7 +9,11 @@ Licence: <a href="http://www.os-templates.com/template-terms">Website Template L
 #featured_slide{
 	display:block;
 	float:left;
-	width:470px;
+	
+	/*width:470px;*/	
+	
+	width:430px;
+	
 	margin:0;
 	}
 

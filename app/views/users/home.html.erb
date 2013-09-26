@@ -1,5 +1,21 @@
 <% provide(:title, 'Home') %>
 
+
+    	<!-- = stylesheet_link_tag "prettyPhoto", media: "all", "data-turbolinks-track" => true  -->
+    	
+    	
+<script type="text/javascript">
+$(document).ready(function () {
+    $("a[rel^='prettyPhoto']").prettyPhoto({
+        theme: 'dark_rounded',
+        overlay_gallery: false
+    });
+});
+</script>
+
+
+
+
 <div class="wrapper row1">
   <div id="header" class="clear">
     <div class="fl_left">
@@ -8,8 +24,8 @@
     
     <%= render 'share/site_search' %>  
     	
-    <%= render 'share/navigate' %>  
-        
+    <%= render 'share/navigate' %>
+      
   	</div>
   </div>
 </div>
@@ -40,6 +56,9 @@
         
         <li><%= image_tag("ruby-red-silver.jpeg") %>
         </li>
+
+        <li><%= image_tag("RoR-train-small.jpeg") %>
+        </li>
         
       </ul>
     </div>
@@ -48,10 +67,13 @@
     
     <div class="intro clear">
       
-      <div class="welcome clear"><%= image_tag("old-train.jpeg", :class => 'imgl') %> 
+      <div class="welcome clear"><%= image_tag("image_tablets.jpg", :class => 'imgl', :width => '200') %> 
         <div class="fl_right">
-          <h2>The Learning Counsel</h2>
-      		<p><strong><em>Search Learning Content Data, Reviews, News, &amp; More</em></strong></p>
+          <!-- <h2>The Learning Counsel</h2> -->
+                    
+      		<p><strong><em>Search Learning Content Data, Reviews, News,</em></strong></p>
+      		<p><strong><em>&amp; More ...</em></strong></p>
+      		
         </div>
       </div>
             
@@ -169,8 +191,21 @@
 		  <div style="height: 5px"></div>        	
           <!-- <h2></h2> -->
           <ul>
+          	
+          	<li class="clear">
+			    <div id="gallery" class="clear">
+			      <ul>
+			        <li><a href="/assets/image_ed_flow_chart_large.jpg" rel="prettyPhoto[gallery1]" title=""><%= image_tag("/assets/image_ed_flow_chart_small.png", :alt => '', :width => '200') %></a></li>
+			        <li style="display: none;"><a href="/assets/image_shopping_cart.jpg" rel="prettyPhoto[gallery1]" title=""><%= image_tag("/assets/image_shopping_cart.jpg", :alt => '', :width => '200') %></a></li>
+			        <li style="display: none;"><a href="/assets/image_handshake.jpg" rel="prettyPhoto[gallery1]" title=""><%= image_tag("/assets/image_handshake.jpg", :alt => '', :width => '200') %></a></li>
+			        <li style="display: none;"><a href="/assets/image_victors.jpg" rel="prettyPhoto[gallery1]" title=""><%= image_tag("/assets/image_victors.jpg", :alt => '', :width => '200') %></a></li>
+			        <li style="display: none;"><a href="/assets/image_laptop.jpg" rel="prettyPhoto[gallery1]" title=""><%= image_tag("/assets/image_laptop.jpg", :alt => '', :width => '200') %></a></li>
+			      </ul>
+			    </div>
+          	</li>
+            <div style="height: 10px"></div>            
             <li>
-              <p><a href="#">Order a Prospectus <%= image_tag("image_tablets.jpg", :width => '200') %></a></p>
+              <p><a href="#"><%= image_tag("image_tablet_1.jpg", :width => '200') %></a></p>
             </li>
             <div style="height: 30px"></div>            
             <li>

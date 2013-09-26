@@ -3,16 +3,19 @@ $(document).ready(function () {
         show_panels: true,              //BOOLEAN - flag to show or hide panel portion of gallery
         show_filmstrip: true,           //BOOLEAN - flag to show or hide filmstrip portion of gallery
         
-		panel_width: 450,               //INT - width of gallery panel (in pixels)
-        panel_height: 320,              //INT - height of gallery panel (in pixels)
+		// panel_width: 450,               //INT - width of gallery panel (in pixels)
+        // panel_height: 320,              //INT - height of gallery panel (in pixels)
+
+		panel_width: 400,               //INT - width of gallery panel (in pixels)
+        panel_height: 284,              //INT - height of gallery panel (in pixels)
         
 		frame_width: 84,               //INT - width of filmstrip frames (in pixels)
         frame_height: 60,               //INT - width of filmstrip frames (in pixels)
         
 		start_frame: 1,                 //INT - index of panel/frame to show first when gallery loads
         
-		filmstrip_size: 4,
-        
+		filmstrip_size: 5,
+
 		transition_speed: 800,          //INT - duration of panel/frame transition (in milliseconds)
         transition_interval: 4000,      //INT - delay between panel/frame transitions (in milliseconds)
         

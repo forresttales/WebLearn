@@ -15,19 +15,40 @@ Licence: <a href="http://www.os-templates.com/template-terms">Website Template L
 	}
 
 #hpage_featured a{
-	color:#510000;
-	background-color:#E1D6CB;
+	
+	
+	/*color:#510000;*/
+	
+	color:#176E2F;
+
+	
+	/*background-color:#E1D6CB;	*/
+		
+	background-color:#DCE8E0;	
 	}
 
 #hpage_featured .intro{
 	display:block;
 	float:right;
-	width:450px;
+	
+	/*width:450px;*/
+	
+	
+	width: 540px;
+		
+	
 	line-height:1.6em;
 	}
 
 #hpage_featured .intro h1, #hpage_featured .intro h2, #hpage_featured .intro h3, #hpage_featured .intro h4, #hpage_featured .intro h5, #hpage_featured .intro h6{
-	background-color:#E1D6CB;
+
+
+	/*background-color:#E1D6CB;*/
+	
+		
+	background-color:#DCE8E0;
+	
+		
 	margin:0 0 15px 0;
 	padding:0 0 10px 0;
 	border-bottom:1px solid #FFFFFF;

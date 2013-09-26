@@ -20,18 +20,30 @@ Licence: <a href="http://www.os-templates.com/template-terms">Website Template L
 
 #gallery li{
 	display:block;
-	float:left;
+
+	/*float:left;*/
+		
+	float: right;
+	
 	width:140px;
 	height:140px;
 	margin:0 24px 24px 0;
-	padding:0;
+	
+	/*padding:0;*/
+	
+	padding:4px;
+		
 	overflow:hidden;
 	}
 
 #gallery li a img{
 	display:block;
-	width:130px;
-	height:130px;
+	/*width:130px;
+	height:130px;*/	
+	
+	width:126px;
+	height:126px;
+	
 	margin:0;
 	padding:4px;
 	border:1px solid #D8D8D8;

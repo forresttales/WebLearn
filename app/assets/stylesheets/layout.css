@@ -11,8 +11,17 @@
 body{
 	margin:0;
 	padding:0;
+	
+	
+	/*font-size:13px;*/	
+	
 	font-size:13px;
-	font-family:Georgia, "Times New Roman", Times, serif;
+	
+	/*font-family:Georgia, "Times New Roman", Times, serif;*/
+		
+	font-family:Arial, Helvetica, sans-serif;
+	
+	
 	color:#979797;
 	background-color:#333333;
 	}
@@ -57,8 +66,18 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 	background-color:transparent;
 	}
 
-.row1, .row2{color:#979797; background-color:#E1D6CB;}
-.row3{color:#979797; background-color:#FFFFFF; border-top:1px solid #510000; border-bottom:5px solid #E1D6CB;}
+/*.row1, .row2{color:#979797; background-color:#E1D6CB;}*/
+
+
+.row1, .row2{color:#979797; background-color:#DCE8E0;}
+
+
+/*.row3{color:#979797; background-color:#FFFFFF; border-top:1px solid #510000; border-bottom:5px solid #E1D6CB;}*/
+
+.row3{color:#979797; background-color:#FFFFFF; border-top:1px solid #510000; border-bottom:5px solid #DCE8E0;}
+
+
+
 .row3 a{color:#896C50; background-color:#FFFFFF;}
 .row4{padding:30px 0;}
 
@@ -83,10 +102,24 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 	}
 
 #header h1{font-size:26px; font-variant:small-caps; font-style:normal;}
-#header h1 a{color:#333333; background-color:#E1D6CB;}
+
+
+
+
+/*#header h1 a{color:#333333; background-color:#E1D6CB;}*/
+
+#header h1 a{color:#333333; background-color:#DCE8E0;}
+
+
 
 #header p{font-size:12px;}
-#header p a{color:#510000; background-color:#E1D6CB;}
+
+
+/*#header p a{color:#510000; background-color:#E1D6CB;}*/
+
+#header p a{color:#176E2F; background-color:#DCE8E0;}
+
+
 
 #header .fl_left, #header .fl_right{margin-bottom:15px;}
 #header .fl_right{margin-top:13px;}
@@ -222,7 +255,11 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 	margin:0;
 	padding:0 0 8px 0;
 	font-weight:normal;
-	font-family:Georgia, "Times New Roman", Times, serif;
+
+	/*font-family:Georgia, "Times New Roman", Times, serif;*/	
+	
+	font-family:Ariel;
+	
 	line-height:normal;
 	border-bottom:1px dotted #999999;
 	}
