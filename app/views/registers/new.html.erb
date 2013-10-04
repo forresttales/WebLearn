@@ -26,7 +26,10 @@
 		    <div id="content">
 		      <div id="respond">
 				
-				<%= form_for(:register, :url => {:action => 'create'}) do |f| %>
+				<%#= form_for(:register, :url => {:action => 'create'}) do |f| %>
+    			<%= form_for(@register) do |f| %>
+
+      			<%#= render 'shared/error_messages', object: f.object %>
 		      	
 					<table summary="Create Password">
 						
@@ -59,7 +62,9 @@
 					  		
 					  	</th>
 					  	<td>
-					  		<%= submit_tag('Submit') %>
+      						<%= f.submit "Create Password" %>
+					  		
+					  		<%#= submit_tag('Submit') %>
 					  		
 					  	</td>
 					  </tr>

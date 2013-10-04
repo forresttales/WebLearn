@@ -37,7 +37,11 @@
     </head>
     
 	<body id="top">
-    	        
+
+			<% if !flash[:notice].blank? %>
+				<div><%= flash[:notice] %></div>
+			<% end %>
+			       
 	  		<%= yield %> 
         
 			<%= render 'share/footer_social'%>

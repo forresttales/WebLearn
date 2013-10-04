@@ -1,0 +1,15 @@
+    <div id="topnav">
+      <ul>
+        <!-- <li class="active"> -->        	
+        <li><%= link_to 'Home', home_path %></li>
+        <li><%= link_to 'About Us', about_path %></li>
+        <li><%= link_to 'Blogs', blogs_path %></li>
+        <li><%= link_to 'Industry News', news_path %></li>
+        <li><%= link_to 'Services', services_path %></li>
+        <li><%= link_to 'Directory', directory_path %></li>
+        <li><%= link_to 'Contact Us', contacts_path %></li>
+        <li class="last"><%= link_to 'Admin', admin_users_index_path %></li>
+      </ul>
+    </div>
+
+<%#= button_to “Ajax me!”, {:action => :action_to_use_ajax_ctrl, :id => btn_id}, :method => ‘post’, :remote => true %>

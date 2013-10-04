@@ -1,2 +1,63 @@
-<h1>AdminUsers#list</h1>
-<p>Find me in app/views/admin_users/list.html.erb</p>
+<div class="wrapper row1">
+  <div id="header" class="clear">
+  	
+	<%= render 'share/title'%>
+  	
+    <%= render 'share/site_search' %>  
+    
+    <%= render 'share/navigate' %>  
+    
+  </div>
+</div>
+
+<div class="wrapper row3">
+  <div id="container" class="clear">
+    <div id="content">
+      <div id="comments" style="height: 480px">
+
+	 		<p><%= render(:partial => "share/menu_admin") %></p>            	
+  	
+			<p><%= link_to "&laquo; Back".html_safe, :back %></p>
+				
+			<div id="content">
+			  
+			  <h2><p><em>User List</em></p></h2>
+			
+				<div class="pagination">
+					
+					<%= will_paginate %>
+				</div>
+					
+				<div style="height: 20px"></div>	
+					
+			    <table id="admin_list" style="width: 1000px; height: 300px;" title="Users" >    	    	
+				    <tr>
+					    <th field="id" width = "40">ID</th>
+					    <th field="created_at" width = "180">Date</th>			    		    	
+					    <th field="name_first" width = "200">First Name</th>
+					    <th field="name_last" width = "200">Last Name</th>					    
+					    <th field="view">View</th>			    
+					</tr>
+					<% @admin_users.each do |user| %>
+				    <tr>
+					    <td><%= user.id %></td>
+					    <td><%= user.created_at %></td>		    	
+					    <td><%= user.name_first %></td>
+					    <td><%= user.name_last %></td>
+					    <td><%= link_to('View', {:action => 'view', :id => user.id}) %></td>			    
+					</tr>
+					<% end %>	    	
+			    </table>
+					
+				<div style="height: 10px"></div>	
+						
+				<div>
+					<%= will_paginate %>
+			  	</div>
+			  	
+			</div>
+    
+      </div>
+    </div>
+  </div>
+</div>

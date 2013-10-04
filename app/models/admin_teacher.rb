@@ -1,0 +1,2 @@
+class AdminTeacher < Teacher
+end

@@ -1,0 +1,2 @@
+class AdminPublishersController < ApplicationController
+end

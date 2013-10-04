@@ -8,7 +8,13 @@
 		    <%= link_to 'Directory', directory_path %>&nbsp;&nbsp;&nbsp;&nbsp;
 		    <%= link_to 'Industry News', news_path %>&nbsp;&nbsp;&nbsp;&nbsp;
 		    <%= link_to 'Services', services_path %>&nbsp;&nbsp;&nbsp;&nbsp;
-		    <%= link_to 'Admin', admin_users_index_path %>
+		    
+			<% if session[:admin].blank? %>
+			<%= link_to 'Admin', admin_users_index_path %>
+			<% end %>
+		    
+		    
+		    
 		</p>
   </div>
 </div>

@@ -2,7 +2,7 @@ class RegistersController < ApplicationController
   
   layout 'register'
   
-  #before_filter :confirm_logged_in
+  before_filter :confirm_logged_in
   
   def index
     #list
@@ -14,21 +14,43 @@ class RegistersController < ApplicationController
   end
 
   def new
-    # @admin_user = AdminUser.new
+    @register = Register.new
+  end
+  
+  def show
+    
   end
   
   def create
-    register = Register.new(params[:register])
     
-    # render text: register.account_type
+    @register = Register.new(register_params)
+    if @register.save
+      #sign_in @register
+      flash[:notice] = "Password Created"
+      #redirect_to @register
+      redirect_to(:action => 'show')
+      
+    else
+      flash[:notice] = "Password Creation Failed"
 
-    render text: register.account_type
+      redirect_to(:action => 'show')
+      
+      #render 'new'
+    end
     
-    # if @register.save
+    # register = Register.new(params[:register])
+#     
+    # # render text: register.account_type
+# 
+    # #render text: register.account_type
+#     
+    # if register.save
       # flash[:notice] = 'Password Created.'
-      # #redirect_to(:action => 'list')
+      # #redirect_to(:action => 'index')
     # else
-      # render("new")
+      # flash[:notice] = 'Password Not Created.'
+#       
+      # #render("new")
     # end
   end
   
@@ -83,5 +105,70 @@ class RegistersController < ApplicationController
     # #render text: "in logout"
   end
   
+  private
+
+    def register_params
+      params.require(:register).permit(:username, :account_type, :password, :password_confirmation)
+    end
+
+    # Before filters
+
+    # def correct_user
+      # @user = User.find(params[:id])
+      # redirect_to(root_url) unless current_user?(@user)
+    # end
+# 
+    # def admin_user
+      # redirect_to(root_url) unless current_user.admin?
+    # end
   
 end
+
+
+  # def update
+    # if @user.update_attributes(user_params)
+      # flash[:success] = "Profile updated"
+      # sign_in @user
+      # redirect_to @user
+    # else
+      # render 'edit'
+    # end
+  # end
+# 
+  # def destroy
+    # User.find(params[:id]).destroy
+    # flash[:success] = "User destroyed."
+    # redirect_to users_url
+  # end
+# 
+  # def following
+    # @title = "Following"
+    # @user = User.find(params[:id])
+    # @users = @user.followed_users.paginate(page: params[:page])
+    # render 'show_follow'
+  # end
+# 
+  # def followers
+    # @title = "Followers"
+    # @user = User.find(params[:id])
+    # @users = @user.followers.paginate(page: params[:page])
+    # render 'show_follow'
+  # end
+# 
+  # private
+# 
+    # def user_params
+      # params.require(:user).permit(:name, :email, :password,
+                                   # :password_confirmation)
+    # end
+# 
+    # # Before filters
+# 
+    # def correct_user
+      # @user = User.find(params[:id])
+      # redirect_to(root_url) unless current_user?(@user)
+    # end
+# 
+    # def admin_user
+      # redirect_to(root_url) unless current_user.admin?
+    # end

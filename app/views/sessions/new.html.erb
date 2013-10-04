@@ -1,0 +1,58 @@
+<% provide(:title, 'Sign In') %>
+
+<div class="wrapper row1">
+  <div id="header" class="clear">
+    <div class="fl_left">
+
+	<%= render 'share/title'%>
+    
+    <%= render 'share/site_search' %>  
+    	
+    <%= render 'share/navigate' %>
+      
+  	</div>
+  </div>
+</div>
+
+<div class="wrapper row3">
+  <div id="container" class="clear">
+    <div id="content">
+      <div id="comments" style="height: 480px">
+  	
+			<div>
+				<%= link_to "Return", :back %>
+			</div>
+			<h2></h2>      	
+	        <h2>Login</h2>
+			<br />
+		    <div id="content">
+		      <div id="respond">
+		      	
+    			  <%= form_for(:session, url: sessions_path) do |f| %>
+				  
+				  <table>
+				    <tr>
+				      <th><%= f.label :username %></th>
+				      <td><%= f.text_field :username %></td>
+				    </tr>
+				    <tr>
+				      <th><%= f.label :password %></th>
+				      <td><%= f.password_field :password %></td>
+				    </tr>
+				    <tr>
+				      <th>
+				      	
+				      </th>	
+				      <td><%= f.submit "Sign in" %></td>
+				    </tr>
+				  </table>
+				  <% end %>
+		        
+		      </div>
+		      
+		    </div>
+    
+      </div>
+    </div>
+  </div>
+</div>

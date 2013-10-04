@@ -1,53 +1,67 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN" lang="EN" dir="ltr">
     <head>
-    	
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="keywords" content="learning counsel survey education standard media">
-	<meta name="description" content="">    	
-    	
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta http-equiv="imagetoolbar" content="no" />
+								    	
   		<title><%= full_title(yield(:title)) %></title> 
+
+    	<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   		
-    	<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>  		
+		<!-- <a href="/assets/demo450x380.gif" rel="prettyPhoto[gallery1]" title="Image 2"> -->
+		<%#= image_tag("demo130x130.gif", :alt => '') %>  		
   		
 		<link rel="icon" type="image/png" href="/assets/image_fav_2.png" />
   		
-    	<%= javascript_include_tag "jquery", "application" %>  		
   		
-
-		<!-- <link rel="stylesheet" type="text/css" href="http://abelardo-jas.com/assets/easyui/themes/pepper-grinder/easyui.css">
-		<script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery-1.8.0.min.js"></script>
-		<script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>				 -->
-		
-		
-			
+   		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>    		   		
+    	
 	  	<%= csrf_meta_tags %>
-	  	
-  		<%= include_gon %>
-	  	
 	  	<%= render 'layouts/shim' %>  
 
-	
-
-	<script>
-
+	<style>
+		h1 {
+		    font-size:30px;
+		}
+		h2 {
+		    font-size:24px;
+		}
+		h3 {
+		    font-size:18px;
+		}
+		h4 {
+		    font-size:14px;
+		}
+		h5 {
+		    font-size:10px;
+			line-height:10%;		    
+		}
 		
-	</script>
-
+		p {
+		    font-size:10px;
+		}
+		
+		
+	</style>						 
+	    	  	
+	  			                		
     </head>
-    
-	<body id="top">
+	<body>
+		<div class="layout-978">
+
+    		<%= render 'layouts/header' %>
+    		    		
+    		<% flash.each do |key, value| %>
+        		<!--<div class="alert alert-<%= key %>"><%= value %></div>-->
+        		<%= content_tag(:div, value, class: "alert alert-#{key}") %>
+      		<% end %>
     	        
 	  		<%= yield %> 
-        
-			<%= render 'share/footer_social'%>
-			
-			<%= render 'share/footer' %>  
-        
-      		
+                
       		institute layout
       		
-			<%= debug(params) %>      		
-      
+			<%= debug(params) %>
+			      		
+      	</div>
     </body>
 </html>

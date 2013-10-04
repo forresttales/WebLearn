@@ -14,7 +14,7 @@ class InstitutesController < ApplicationController
   end
 
   def new
-    # @admin_user = AdminUser.new
+    @institute = Institute.new
   end
   
   def create

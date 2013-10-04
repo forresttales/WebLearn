@@ -14,7 +14,7 @@ class PublishersController < ApplicationController
   end
 
   def new
-    # @admin_user = AdminUser.new
+    @publisher = Publisher.new
   end
   
   def create

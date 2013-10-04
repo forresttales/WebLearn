@@ -1,22 +1,86 @@
 Weblearn::Application.routes.draw do
    
-    
+
+  get "test/basic"
+
+  match '/users/testhome', to: 'users#testhome', via: 'get'
+     
+  # resources :users do
+    # member do
+      # get :following, :followers
+    # end
+  # end
   
+  resources :sessions, only: [:new, :create, :destroy]
+  
+  # resources :microposts, only: [:create, :destroy]
+  # resources :relationships, only: [:create, :destroy]
+  # root to: 'static_pages#home'
+  
+  
+  # match '/signup', to: 'users#new', via: 'get'
+  # match '/signin', to: 'sessions#new', via: 'get'
+  
+  match '/users/new', to: 'users#new', via: 'get'
+  match '/sessions/new', to: 'sessions#new', via: 'get'
+  
+  # match '/signout', to: 'sessions#destroy', via: 'delete'
+  match '/signout', to: 'sessions#destroy', via: 'get'
+  
+  
+  # match '/help', to: 'static_pages#help', via: 'get'
+  # match '/about', to: 'static_pages#about', via: 'get'
+  # match '/contact', to: 'static_pages#contact', via: 'get'
+
+  match "/users/:id/create" => "users#show", via: 'get'
+
+  
+  
+  
+  
+  get "admins/index"
+  get "admins/new"
+  get "admins/create"
+  get "admins/show"
+  get "admins/edit"
+  get "admins/update"
+  get "admins/destroy"
+  get "admin_registers/index"
+  get "admin_registers/new"
+  get "admin_registers/create"
+  get "admin_registers/show"
+  get "admin_registers/edit"
+  get "admin_registers/update"
+  get "admin_registers/destroy"
+  get "admin_publishers/index"
+  get "admin_publishers/new"
+  get "admin_publishers/create"
+  get "admin_publishers/show"
+  get "admin_publishers/edit"
+  get "admin_publishers/update"
+  get "admin_publishers/destroy"
+  get "admin_institutes/index"
+  get "admin_institutes/new"
+  get "admin_institutes/create"
+  get "admin_institutes/show"
+  get "admin_institutes/edit"
+  get "admin_institutes/update"
+  get "admin_institutes/destroy"
+  get "edmatchups/index"
+  get "edmatchups/new"
+  get "edmatchups/create"
+  get "edmatchups/show"
+  get "edmatchups/edit"
+  get "edmatchups/update"
+  get "edmatchups/destroy"
   # get "access_admins/index"
   # get "access_admins/new"
   # get "access_admins/show"
   # get "access_admins/update"
   # get "registers/index"
   # get "registers/new"
-  # get "registers/show"
+  get "registers/show"
   # get "registers/update"
-  get "edmatchs/index"
-  get "edmatchs/new"
-  get "edmatchs/show"
-  get "edmatchs/update"
-  get "edmatch/index"
-  get "edmatch/show"
-  get "edmatch/update"
   get "access_publisher/login"
   get "access_publisher/show"
   get "access_publisher/update"
@@ -31,7 +95,11 @@ Weblearn::Application.routes.draw do
   get "user_publishers/new"
   get "user_publishers/show"
   get "user_publishers/update"
+  
+  
   get "users/index"
+  get "users/show"
+  
   # get "user_vendors/show"
   # get "vendors/new"
   # get "vendors/show"
@@ -44,7 +112,26 @@ Weblearn::Application.routes.draw do
   # get "institutes/new"
   # get "institutes/show"
   
-  root to: 'users#home'
+  # root to: 'users#home'
+
+  # resources :sessions, only: [:new, :create, :destroy]
+  # resources :microposts, only: [:create, :destroy]
+  # resources :relationships, only: [:create, :destroy]
+
+  root to: 'static_pages#home'
+
+  match '/signup', to: 'users#new', via: 'get'
+  match '/signin', to: 'sessions#new', via: 'get'
+  match '/signout', to: 'sessions#destroy', via: 'delete'
+  match '/help', to: 'static_pages#help', via: 'get'
+  match '/about', to: 'static_pages#about', via: 'get'
+  match '/contact', to: 'static_pages#contact', via: 'get'
+
+  match '/edmatchup', to: 'static_pages#edmatchup', via: 'get'
+  match '/events', to: 'static_pages#events', via: 'get'
+  match '/news', to: 'static_pages#news', via: 'get'
+  match '/reports', to: 'static_pages#reports', via: 'get'
+  match '/home', to: 'static_pages#home', via: 'get'
 
   resources :access do
     member do
@@ -89,12 +176,22 @@ Weblearn::Application.routes.draw do
     end
   end
 
+  resources :users do
+    member do
+      post 'create'
+    end
+  end
+
   get "admin_users/index"
   get "admin_users/delete"
   get "admin_users/edit"
-  get "admin_users/list"
+  #get "admin_users/list"
   get "admin_users/new"
   get "admin_users/logout"
+  
+  get "admin_users/view"
+  
+  
   get "logout/index"
   
   
@@ -136,14 +233,25 @@ Weblearn::Application.routes.draw do
 
   match '/about', to: 'users#about', via: 'get'
   match '/blogs', to: 'users#blogs', via: 'get'
-  match '/list', to: 'admin_contacts#list', via: 'get'
   match '/home', to: 'users#home', via: 'get'
   match '/news', to: 'users#news', via: 'get'
   match '/services', to: 'users#services', via: 'get'
   match '/directory', to: 'users#directory', via: 'get'
   match '/edmatchup', to: 'users#edmatchup', via: 'get'
 
+
+  match '/admin_users_list', to: 'admin_users#list', via: 'get'
+  match '/admin_contacts_list', to: 'admin_contacts#list', via: 'get'
+  match '/admin_registers_list', to: 'admin_registers#list', via: 'get'
+  match '/admin_institutes_list', to: 'admin_institutes#list', via: 'get'
+  match '/admin_publishers_list', to: 'admin_publishers#list', via: 'get'
+
+
+  get "sessions/new"
   
+  #match '/sessions/new', to: 'sessions#new', :as => :login, via: ['get', 'post']  
+
+
   match '/access/access/login', to: 'access#login', :as => :login, via: ['get', 'post']  
   match '/access/access/attempt_login', to: 'access#attempt_login', :as => 'attempt_login', via: ['post']
   
@@ -171,6 +279,16 @@ Weblearn::Application.routes.draw do
   match '/institutes/new', to: 'institutes#new', via: 'get'
   #match '/user_institutes_create', to: 'user_institutes#create_login', via: 'get'
 
+  match "/students/:id" => "students#update", via: 'post'
+  match '/students/new', to: 'students#new', via: 'get'
+
+  match "/teachers/:id" => "teachers#update", via: 'post'
+  match '/teachers/new', to: 'teachers#new', via: 'get'
+
+
+
+
+
   match '/access/publisher/login', to: 'access_publisher#login', via: ['get', 'post']  
   match '/access/publisher/attempt_login_publisher', to: 'access_publisher#attempt_login_publisher', :as => 'attempt_login_publisher', via: ['post']
 
@@ -181,6 +299,10 @@ Weblearn::Application.routes.draw do
 
   match '/registers/new', to: 'registers#new', via: 'get'
   match "/registers/:id" => "registers#update", via: 'post'
+
+
+  #match '/users/new', to: 'users#new', via: 'get'
+  match "/users/:id" => "users#update", via: 'post'
   
   
   
@@ -196,7 +318,7 @@ Weblearn::Application.routes.draw do
   match '/demogallery', to: 'users#gallery', via: 'get'
   match '/demoportfolio', to: 'users#portfolio', via: 'get'
 
-  match '/edmatchs', to: 'edmatchs#index', via: 'get'
+  match '/edmatchups', to: 'edmatchups#index', via: 'get'
 
 
   match '/home_1', to: 'users#home_1', via: 'get'

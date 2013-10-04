@@ -44,7 +44,7 @@ class AccessController < ApplicationController
   def attempt_login
     
     #render text: "in attempt login"
-    authorized_user = AdminUser.authenticate(params[:username], params[:password])
+    authorized_user = User.authenticate(params[:username], params[:password])
     if authorized_user
       session[:user_id] = authorized_user.id
       session[:username] = authorized_user.username

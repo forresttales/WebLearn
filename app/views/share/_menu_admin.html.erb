@@ -3,8 +3,12 @@
 
     <div id="topnav_admin">
       <ul>
-        <!-- <li class="active"> -->        	
-        <li><%= link_to 'Contact List', list_path %></li>
+        <!-- <li class="active"> -->
+      	<li><%= link_to 'Users', admin_users_list_path %></li>
+        <li><%= link_to 'Contacts', admin_contacts_list_path %></li>
+        <li><%= link_to 'Institutes', admin_institutes_list_path %></li>
+        <li><%= link_to 'Publishers', admin_publishers_list_path %></li>
+        
         <li><%= link_to("Logout  ", :controller => 'admin_users', :action => 'logout' ) %></li>
       </ul>
     </div>

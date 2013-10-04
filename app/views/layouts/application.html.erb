@@ -18,17 +18,100 @@
     	
 	  	<%= csrf_meta_tags %>
 	  	<%= render 'layouts/shim' %>  
+
+	    	  	
+		<!-- 
+		  body {
+		    width: 1200px;
+			padding-top: 4px;
+		    margin: auto;
+		    /*border: 1px solid red;*/    
+		    overflow: auto;
+		    display: block;
+		  }
+						 -->
+
+	<style>
+		h1 {
+		    font-size:30px;
+		}
+		h2 {
+		    font-size:24px;
+		}
+		h3 {
+		    font-size:18px;
+		}
+		h4 {
+		    font-size:14px;
+		}
+		h5 {
+		    font-size:10px;
+			line-height:10%;		    
+		}
+		
+		p {
+		    font-size:10px;
+		}
+		
+		
+	</style>						 
+						 	  	
+	<script>
+
+      // window.onload = function() {
+          // var a = document.getElementById("mylink");
+// 
+          	// a.onclick = function() {
+//           		
+            // return false;
+          // }
+        // }	
+	
+		
+		// jQuery.ajaxSetup({ 
+		  // 'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
+		// })
+ 		
+		
+		
+		// function getMsg(){
+			// msg = getSelected();
+			// //msg = "msg";
+			// alert(msg);
+			// var p = document.getElementById("view_message");
+			// p.innerHTML = "<em>" + msg  + "</em>";
+ 			
+		// }
+		
+	</script>
 		                		
     </head>
-	<body id="top">
+	<body>
+		<div class="layout-978">
+	
+    		<%= render 'layouts/header' %>
+    		    		
+    		<% flash.each do |key, value| %>
+        		<!--<div class="alert alert-<%= key %>"><%= value %></div>-->
+        		<%= content_tag(:div, value, class: "alert alert-#{key}") %>
+      		<% end %>
     			
 			<%= yield %> 
 
-			<%= render 'share/footer_social'%>
+			
+			<%#= render 'share/footer_social'%>
 			
 			<!-- = render 'share/temp_nav'  -->
 			
 						
-			<%= render 'share/footer' %>  
+			<%#= render 'share/footer' %>
+			
+			<%#= link_to 'Admin', admin_users_index_path %>
+
+      		application layout
+      		
+			<%= debug(params) %>
+			      		
+		</div>	  
 	</body>
 </html>

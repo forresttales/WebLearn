@@ -16,15 +16,33 @@
 	  	<%= csrf_meta_tags %>
 	  	<%= render 'layouts/shim' %>  
   		
+	<style>
+		
+		  body {
+		    width: 1200px;
+		    margin: auto;
+		    /*border: 1px solid red;*/    
+		    overflow: auto;
+		    display: block;
+		  }
+						
+	</style>    	
 
     </head>
-    <body id="top">
-        	
+    <body>
+
+        	<%= render 'layouts/header' %>
+    		    		
+    		<% flash.each do |key, value| %>
+        		<!--<div class="alert alert-<%= key %>"><%= value %></div>-->
+        		<%= content_tag(:div, value, class: "alert alert-#{key}") %>
+      		<% end %>
+
 	  		<%= yield %> 
         
-			<%= render 'share/footer_social'%>
+			<%#= render 'share/footer_social'%>
 			
-			<%= render 'share/footer' %>  
+			<%#= render 'share/footer' %>  
       		      		
       		access layout
       		

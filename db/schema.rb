@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130926101212) do
+ActiveRecord::Schema.define(version: 20131003154643) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,11 @@ ActiveRecord::Schema.define(version: 20130926101212) do
     t.datetime "updated_at"
   end
 
+  create_table "edmatchups", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "institutes", force: true do |t|
     t.string   "name",                       limit: 100
     t.string   "address",                    limit: 100
@@ -66,12 +71,7 @@ ActiveRecord::Schema.define(version: 20130926101212) do
     t.boolean  "allow_add_products"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "username",                   limit: 50
-    t.string   "hashed_password"
-    t.string   "salt",                       limit: 100
   end
-
-  add_index "institutes", ["username"], name: "index_institutes_on_username", using: :btree
 
   create_table "publishers", force: true do |t|
     t.string   "name",                       limit: 100
@@ -89,30 +89,39 @@ ActiveRecord::Schema.define(version: 20130926101212) do
     t.string   "company_contact_email",      limit: 100
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "username",                   limit: 50
-    t.string   "hashed_password"
-    t.string   "salt",                       limit: 100
   end
-
-  add_index "publishers", ["username"], name: "index_publishers_on_username", using: :btree
 
   create_table "registers", force: true do |t|
     t.integer  "account_id"
     t.string   "username",        limit: 50
-    t.string   "hashed_password"
-    t.string   "salt"
     t.boolean  "has_account"
     t.string   "account_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "admin"
+    t.string   "remember_token"
+    t.string   "password_digest"
   end
 
   add_index "registers", ["account_id", "username"], name: "index_registers_on_account_id_and_username", using: :btree
+  add_index "registers", ["remember_token"], name: "index_registers_on_remember_token", using: :btree
+  add_index "registers", ["username"], name: "index_registers_on_username", using: :btree
 
   create_table "users", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "name"
+    t.integer  "account_id"
+    t.string   "name_first",      limit: 50
+    t.string   "name_last",       limit: 50
+    t.string   "email",           limit: 50, default: ""
+    t.string   "username",        limit: 50
+    t.boolean  "has_account"
+    t.string   "account_type",    limit: 50
+    t.string   "password_digest"
+    t.string   "remember_token"
+    t.boolean  "admin",                      default: false
   end
+
+  add_index "users", ["remember_token"], name: "index_users_on_remember_token", using: :btree
 
 end

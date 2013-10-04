@@ -18,10 +18,13 @@
 #  company_contact_email      :string(100)
 #  created_at                 :datetime
 #  updated_at                 :datetime
-#  username                   :string(50)
-#  hashed_password            :string(255)
-#  salt                       :string(100)
 #
 
 class Publisher < ActiveRecord::Base
+  
+    attr_accessible :id, :name, :address, :city, :state, :country, :zip,
+      :phone, :url, :description, :company_contact_name_first, :company_contact_name_last,
+      :company_contact_phone, :company_contact_email, :created_at, :updated_at
+  
 end
+
