@@ -1,0 +1,9 @@
+class AlterStudents < ActiveRecord::Migration
+  def change
+    create_table :students do |t|
+
+      t.timestamps
+    end
+    
+  end
+end

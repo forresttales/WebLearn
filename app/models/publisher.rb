@@ -26,5 +26,6 @@ class Publisher < ActiveRecord::Base
       :phone, :url, :description, :company_contact_name_first, :company_contact_name_last,
       :company_contact_phone, :company_contact_email, :created_at, :updated_at
   
+    belongs_to :user  
 end
 

@@ -1,6 +1,7 @@
 <% provide(:title, 'Create School Account') %>
 
 	<div class="row" style="height: 10px"></div>
+	<div class="row-end">&nbsp;</div>										
 	
 	<div class="row">
 		
@@ -86,10 +87,11 @@
 			<%= f.label(:name, 'Name of School') %>							
 		</div>
 		<div class="col6" align="left">
-			<%= f.text_field(:name, :class => "form-control") %>			
+			<%= f.text_field(:name) %>			
 		</div>      	
 		<div class="row-end">&nbsp;</div>		
 	</div>      		
+	
 	<div class="row" style="height: 10px;"></div>      		
 	<div class="row-end">&nbsp;</div>			
 		      		
@@ -103,9 +105,9 @@
 	<% end %>
 			
 </div>
-
-	<!-- <a href="#" class="easyui-linkbutton">Text Button</a> -->
 		
-<div style="height: 200px; background-color: green"></div>  		
+<div class="row" style="height: 200px; background-color: green"></div>
+<div class="row-end">&nbsp;</div>				
+  		
 
 

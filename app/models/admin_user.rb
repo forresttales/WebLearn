@@ -1,16 +1,18 @@
 # == Schema Information
 #
-# Table name: admin_users
+# Table name: users
 #
 #  id              :integer          not null, primary key
-#  first_name      :string(25)
-#  last_name       :string(50)
-#  email           :string(100)      default(""), not null
-#  hashed_password :string(40)
 #  created_at      :datetime
 #  updated_at      :datetime
-#  username        :string(25)
-#  salt            :string(40)
+#  account_id      :integer
+#  email           :string(50)       default("")
+#  username        :string(50)
+#  has_account     :boolean
+#  account_type    :string(50)
+#  password_digest :string(255)
+#  remember_token  :string(255)
+#  admin           :boolean          default(FALSE)
 #
 
 class AdminUser < User

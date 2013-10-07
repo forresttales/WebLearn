@@ -1,0 +1,33 @@
+<% provide(:title, 'Institutes') %>
+
+	<% if @admin_institutes.any? %>
+
+    <table id="admin_list_intitutes" style="width: 1000px; height: 300px;" title="Institutes List" >    	    	
+	    <tr align="left">
+		    <th field="id" width = "40"><h4>ID</h4></th>
+		    <th field="created_at" width = "180"><h4>Date</h4></th>			    		    	
+		    <th field="name" width = "100"><h4>Name of School</h4></th>
+		</tr>
+		<% @admin_institutes.each do |institute| %>
+	    <tr align="left">
+		    <td width = "40"><h5><%= institute.id %></h5></td>
+		    <td width = "180"><h5><%= institute.created_at %></h5></td>		    	
+		    <td width = "100"><h5><%= institute.name %></h5></td>
+		    
+		    <!-- = link_to('View', {:action => 'view', :id => institute.id})  -->		    
+		    			    
+		</tr>
+		<% end %>	    	
+	</table>
+	<%= will_paginate @admin_institutes %>
+
+	<% else %>
+	<div class="row" style="color: red;">
+		<h3>No record for Institutes</h3>
+	</div>
+	<div class="row-end">&nbsp;</div>			
+	<% end %>
+	
+					
+<div class="row" style="height: 20px;"></div>
+<div class="row-end">&nbsp;</div>				

@@ -12,7 +12,9 @@
   position: relative;
 }
 .panel-title {
-  background: url('images/blank.gif') no-repeat;
+  /*background: url('images/blank.gif') no-repeat;*/
+   
+  background: url('/assets/images_blank.gif') no-repeat;
 }
 .panel-header-noborder {
   border-width: 0 0 1px 0;
@@ -883,14 +885,22 @@ a.l-btn .l-btn-focus {
 }
 a.l-btn {
   color: #444;
-  background-image: url('images/linkbutton_bg.png');
+  /*background-image: url('images/linkbutton_bg.png');*/
+   
+  background-image: url('/assets/images_linkbutton_bg.png');
+
+  
   background-repeat: no-repeat;
   -moz-border-radius: 5px 5px 5px 5px;
   -webkit-border-radius: 5px 5px 5px 5px;
   border-radius: 5px 5px 5px 5px;
 }
 a.l-btn span.l-btn-left {
-  background-image: url('images/linkbutton_bg.png');
+  /*background-image: url('images/linkbutton_bg.png');*/
+   
+  background-image: url('/assets/images_linkbutton_bg.png');  
+  
+  
   background-repeat: no-repeat;
 }
 a.l-btn-plain,

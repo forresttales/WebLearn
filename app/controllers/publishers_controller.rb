@@ -9,28 +9,46 @@ class PublishersController < ApplicationController
     #render('list')
   end
   
+  def home
+    
+  end
+  
   def list
     # @admin_users = AdminUser.sorted
   end
 
+  def show
+    @info = Publisher.where(["user_id = ?", session[:user_id]]).first       
+  end
+  
   def new
     @publisher = Publisher.new
   end
   
   def create
-    # @admin_user = AdminUser.new(params[:admin_user])
-    # if @admin_user.save
-      # flash[:notice] = 'Admin user created.'
-      # redirect_to(:action => 'list')
-    # else
-      # render("new")
-    # end
-  end
-  
-  def create_login
+    @publisher = Publisher.new(publisher_params)
+    @publisher.user_id = session[:user_id]
+    @user = User.find(session[:user_id])
+    
+    if @user.update_attribute(:has_account, TRUE)
+      if @user.update_attribute(:account_type, "publisher")
+        if @publisher.save
+          flash[:notice] = 'Publisher account created'
+          #redirect_to(:action => 'list')
+        else
+          flash.now[:notice] = "Account create failed"
+          
+          render("new")
+        end
+      else
+        flash[:notice] = 'User update failed'      
+      end
+    else
+      flash[:notice] = 'User update failed'      
+    end
     
   end
-
+  
   def edit
     # @admin_user = AdminUser.find(params[:id])
   end
@@ -54,33 +72,11 @@ class PublishersController < ApplicationController
     # flash[:notice] = "Admin user destroyed."
     # redirect_to(:action => 'list')
   end
-  
-  def confirm_logged_in
-    # unless session[:user_id]
-      # flash[:notice] = "Please log in."
-      # #redirect_to(:action => 'login')
-#       
-      # #redirect_to(:action => 'login')
-      # #redirect_to(:controller => 'controller', :action => 'show')
-#       
-#       
-      # return false # halts the before_filter
-    # else
-      # #redirect_to(:controller => 'admin_users', :action => 'list')
-      # return true
-    # end
-  end
-  
-  def logout
-    # session[:user_id] = nil
-    # session[:username] = nil
-    # flash[:notice] = "You have been logged out."
-    # #redirect_to("login_path")
-    # redirect_to(:controller => 'users', :action => 'home')
-#     
-#     
-    # #render text: "in logout"
-  end
-  
+    
+  private
+
+    def publisher_params
+      params.require(:publisher).permit(:name)
+    end
   
 end

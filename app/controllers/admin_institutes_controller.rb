@@ -1,22 +1,39 @@
 class AdminInstitutesController < ApplicationController
-  def index
+  
+  layout 'admin'
+  
+  def list
+    @admin_institutes = Institute.paginate(page: params[:page]).per_page(5)
   end
-
+  
   def new
   end
-
-  def create
+  
+  def view
+    @institute = Institute.find(params[:id])        
   end
-
+    
   def show
   end
-
-  def edit
+  
+  def create
   end
-
+  
+  def edit
+    #render text: "in edit"
+  end
+  
   def update
   end
 
-  def destroy
+  def delete
+    #@user = User.find(params[:id])
   end
+
+  def destroy
+    # user = User.find(params[:id])
+    # user.delete
+    # flash[:notice] = "User destroyed."
+  end
+  
 end

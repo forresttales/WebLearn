@@ -34,5 +34,5 @@ class Institute < ActiveRecord::Base
       :company_contact_phone, :company_contact_email, :allow_add_products,        
       :created_at, :updated_at            
      
-  
+    belongs_to :user  
 end

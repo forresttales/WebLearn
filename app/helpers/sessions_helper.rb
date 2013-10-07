@@ -1,29 +1,27 @@
 module SessionsHelper
-  # complete
+    
   def sign_in(user)
     remember_token = User.new_remember_token
     cookies.permanent[:remember_token] = remember_token
     user.update_attribute(:remember_token, User.encrypt(remember_token))
     self.current_user = user
     
-    session[:username] = user.username
     
-    #session[:admin] = 'TRUE'
+    session[:username] = user.username
+    session[:user_id] = user.id
     
     if user.admin
-
-      session[:admin] = 'admin'
-        
-      #adminsession.js
+      session[:admin] = true
+    else
+      session[:admin] = nil            
     end
-    
-    
+      
+    flash[:success] = 'Logged In'
+
     # respond_to do |format|
       # format.html
       # format.js      
     # end
-    
-    flash[:notice] = session[:username]
     
   end
 
@@ -58,6 +56,8 @@ module SessionsHelper
     
     #session[:user_id] = nil
     session[:username] = nil
+    session[:admin] = nil
+    
     flash[:notice] = "You have been logged out."
     #redirect_to("login_path")
     # redirect_to(:controller => 'users', :action => 'home')

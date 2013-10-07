@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131003154643) do
+ActiveRecord::Schema.define(version: 20131007093858) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 20131003154643) do
     t.boolean  "allow_add_products"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "publishers", force: true do |t|
@@ -89,30 +90,31 @@ ActiveRecord::Schema.define(version: 20131003154643) do
     t.string   "company_contact_email",      limit: 100
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
-  create_table "registers", force: true do |t|
-    t.integer  "account_id"
-    t.string   "username",        limit: 50
-    t.boolean  "has_account"
-    t.string   "account_type"
+  create_table "students", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "admin"
-    t.string   "remember_token"
-    t.string   "password_digest"
+    t.string   "name_first", limit: 50
+    t.string   "name_last",  limit: 50
+    t.string   "phone",      limit: 50
+    t.integer  "user_id"
   end
 
-  add_index "registers", ["account_id", "username"], name: "index_registers_on_account_id_and_username", using: :btree
-  add_index "registers", ["remember_token"], name: "index_registers_on_remember_token", using: :btree
-  add_index "registers", ["username"], name: "index_registers_on_username", using: :btree
+  create_table "teachers", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name_first", limit: 50
+    t.string   "name_last",  limit: 50
+    t.string   "phone",      limit: 50
+    t.integer  "user_id"
+  end
 
   create_table "users", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "account_id"
-    t.string   "name_first",      limit: 50
-    t.string   "name_last",       limit: 50
     t.string   "email",           limit: 50, default: ""
     t.string   "username",        limit: 50
     t.boolean  "has_account"

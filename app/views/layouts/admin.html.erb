@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN" lang="EN" dir="ltr">
     <head>
-    	
-	<!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> -->
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta http-equiv="imagetoolbar" content="no" />
     	
   		<title><%= full_title(yield(:title)) %></title> 
   		
@@ -10,12 +10,6 @@
     	  		
    		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>    		   		
     	  		
-    	<!-- = javascript_include_tag "jquery", "application"   		 -->
-    	  		
-		<!-- <link rel="stylesheet" type="text/css" href="http://abelardo-jas.com/assets/easyui/themes/pepper-grinder/easyui.css">
-		<script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery-1.8.0.min.js"></script>
-		<script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>				 -->
-		
 			
 	  	<%= csrf_meta_tags %>
 	  	
@@ -23,93 +17,18 @@
 	  	
 	  	<%= render 'layouts/shim' %>  
 
-		
-
-	<script>
-
-      // window.onload = function() {
-          // var a = document.getElementById("mylink");
-// 
-          	// a.onclick = function() {
-//           		
-            // return false;
-          // }
-        // }	
-	
-		// function getSelected(){
-			// alert('getSelected');			
-			// var row = $('#user_contacts').datagrid('getSelected');
-			// if (row){
-				// //alert('Name:'+row.name+"\nEmail:"+row.email);
-				// return "/contacts/view?id=" + String(row.id);
-			// }
-			// else {
-				// alert('no row selected');
-				// return "/contacts/view?id=" + String(0);
-			// }
-		// }
-	
-	
-		// function getSelected(){
-			// alert('getSelected');			
-			// var row = $('#user_contacts').datagrid('getSelected');
-			// if (row){
-				// alert('Name:'+row.name+"\nEmail:"+row.email);
-				// return String(row.id);
-			// }
-			// else {
-				// alert('no row selected');
-				// return "no record selected";
-			// }
-		// }
-// 		
-		// function getSelections(){
-			// var ids = [];
-			// var rows = $('#user_contacts').datagrid('getSelections');
-			// for(var i=0; i<rows.length; i++){
-				// ids.push(rows[i].name);
-			// }
-			// alert(ids.join('\n'));
-		// }
-		
-		
-		// jQuery.ajaxSetup({ 
-		  // 'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
-		// })
-// 		
-		// $(document).ready(function) {
-			// $("link_test").onclick(function() {
-				// alert('in application js');
-				// //$.post($(this).attr("action"), $(this).serialize(), null, "script");
-				// return false;
-			// };)
-		//};)
-		
-		
-		// function getMsg(){
-			// msg = getSelected();
-			// //msg = "msg";
-			// alert(msg);
-			// var p = document.getElementById("view_message");
-			// p.innerHTML = "<em>" + msg  + "</em>";
-// 			
-		// }
-		
-	</script>
 
     </head>
-    <body id='top'>
+    <body>
+		<div class="layout-978">
 
+    		<%= render 'layouts/header_admin' %>
+
+    		<%= render 'layouts/header_title_admin' %>
+    		
+    		<%= render 'layouts/flash_alert' %>
     	        
 	  		<%= yield %> 
-        
-        	<%= render 'share/footer_social'%>
-			
-			<!-- = render 'share/temp_nav' -->
-			
-			<%= render 'share/footer' %>  
-
-      		<!-- = render(:partial => "share/footer")  -->
       		      		
       		admin layout
       		
@@ -123,37 +42,3 @@
 
 			<!-- = debug(params) if Rails.env.development?       		 -->
 
-<% if false %>
-<!-- <!DOCTYPE html>
-<html>
-<head>
-  <title><%= full_title(yield(:title)) %></title> 
-  
-  
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-  <%= render 'layouts/shim' %>  
-</head>
-<body>
-
-<div>
-  <% if !flash[:notice].blank? %>
-  <div class="notice">
-    <%= flash[:notice] %>
-  </div>
-  <% end %>
-</div>
-	
-  <%= render(:partial => "share/navigate") %>
-  <%= render(:partial => "share/menu") %>
-
-  <%= yield %>
-
-  <br />
-  
-  <%= debug(params) if Rails.env.development? %>
-
-</body>
-</html> -->
-<% end %>

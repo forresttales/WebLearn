@@ -1,0 +1,35 @@
+<% provide(:title, 'Teachers') %>
+
+	<% if @admin_teachers.any? %>
+
+    <table id="admin_list_teachers" style="width: 1000px; height: 300px;" title="Teachers List" >    	    	
+	    <tr align="left">
+		    <th field="id" width = "40"><h4>ID</h4></th>
+		    <th field="created_at" width = "180"><h4>Date</h4></th>			    		    	
+		    <th field="name_first" width = "100"><h4>First Name</h4></th>
+		    <th field="name_last" width = "100"><h4>Last Name</h4></th>		    
+		</tr>
+		<% @admin_teachers.each do |teacher| %>
+	    <tr align="left">
+		    <td width = "40"><h5><%= teacher.id %></h5></td>
+		    <td width = "180"><h5><%= teacher.created_at %></h5></td>		    	
+		    <td width = "100"><h5><%= teacher.name_first %></h5></td>
+		    <td width = "100"><h5><%= teacher.name_last %></h5></td>		   
+		     
+		    <!-- = link_to('View', {:action => 'view', :id => teacher.id})  -->		    
+		    	    
+		</tr>
+		<% end %>	    	
+	</table>
+	<%= will_paginate @admin_teachers %>
+
+	<% else %>
+	<div class="row" style="color: red;">
+		<h3>No record for Teachers</h3>
+	</div>
+	<div class="row-end">&nbsp;</div>			
+	<% end %>
+	
+					
+<div class="row" style="height: 20px;"></div>
+<div class="row-end">&nbsp;</div>				

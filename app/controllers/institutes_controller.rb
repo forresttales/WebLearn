@@ -9,34 +9,46 @@ class InstitutesController < ApplicationController
     #render('list')
   end
   
+  def home
+    
+  end
+  
   def list
     # @admin_users = AdminUser.sorted
   end
 
+  def show
+    @info = Institute.where(["user_id = ?", session[:user_id]]).first       
+  end
+  
   def new
     @institute = Institute.new
   end
   
   def create
-    # @institute = Institute.new(params[:admin_user])
-    # if @institute.save
-      # flash[:notice] = 'School password created.'
-      # redirect_to(:action => 'list')
-    # else
-      # render("new")
-    # end
+    @institute = Institute.new(institute_params)
+    @institute.user_id = session[:user_id]
+    @user = User.find(session[:user_id])
+    
+    if @user.update_attribute(:has_account, TRUE)
+      if @user.update_attribute(:account_type, "institute")
+        if @institute.save
+          flash[:notice] = 'School account created'
+          #redirect_to(:action => 'list')
+        else
+          flash.now[:notice] = "Account create failed"
+          
+          render("new")
+        end
+      else
+        flash[:notice] = 'User update failed'      
+      end
+    else
+      flash[:notice] = 'User update failed'      
+    end
+    
   end
   
-  def create_login
-    @institute = Institute.new(params[:admin_user])
-    if @institute.save
-      flash[:notice] = 'School password created.'
-      redirect_to(:action => 'list')
-    else
-      render("new")
-    end    
-  end
-
   def edit
     # @admin_user = AdminUser.find(params[:id])
   end
@@ -61,32 +73,11 @@ class InstitutesController < ApplicationController
     # redirect_to(:action => 'list')
   end
   
-  def confirm_logged_in
-    # unless session[:user_id]
-      # flash[:notice] = "Please log in."
-      # #redirect_to(:action => 'login')
-#       
-      # #redirect_to(:action => 'login')
-      # #redirect_to(:controller => 'controller', :action => 'show')
-#       
-#       
-      # return false # halts the before_filter
-    # else
-      # #redirect_to(:controller => 'admin_users', :action => 'list')
-      # return true
-    # end
-  end
-  
-  def logout
-    # session[:user_id] = nil
-    # session[:username] = nil
-    # flash[:notice] = "You have been logged out."
-    # #redirect_to("login_path")
-    # redirect_to(:controller => 'users', :action => 'home')
-#     
-#     
-    # #render text: "in logout"
-  end
+  private
+
+    def institute_params
+      params.require(:institute).permit(:name)
+    end
   
   
 end

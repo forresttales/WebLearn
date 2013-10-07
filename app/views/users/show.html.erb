@@ -1,23 +1,60 @@
 <% provide(:title, 'Show') %>
 
-<div class="wrapper row1">
-  <div id="header" class="clear">
-  	
-	<%= render 'share/title'%>
-  	
-    <%= render 'share/site_search' %>  
-    
-    <%= render 'share/navigate' %>  
-    
-  </div>
-</div>
+	<div class="row" style="height: 10px"></div>
+	<div class="row-end">&nbsp;</div>										
+	
+	<div class="row">
+		
+		<div class="col7">
+			<div class="row">
+				<div class="col2">
+	  				<%= image_tag("image_learning_counsel.png", :alt => '') %>
+				</div>
+				<div class="col2">
+	  				<%= image_tag("image_header_1.jpg", :alt => '') %>
+				</div>
+				<div class="col3">
+	  				<%= image_tag("image_header_2.jpg", :alt => '') %>					
+				</div>
+				<div class="row-end">&nbsp;</div>		
+			</div>
+			<div class="row">
+				<div class="col2" style="font-size: 10px">
+					<p>News and Content on the Shift to Digital Curriculum</p>				
+				</div>
+				<div class="col5" style="font-size: 12px">
+					<h4>Featured News Stream</h4>					
+				</div>
+				<div class="row-end">&nbsp;</div>										
+			</div>			
+		</div>
+		
+		<div class="col5">
+			<div style="width: auto;height:120px;background-color:white;box-shadow: 1px 1px 10px #888888;padding: 10px 10px 10px 30px">
+				<h3>Ad Block</h3>
+			</div>
+		</div>		
+		<div class="row-end">&nbsp;</div>		
+	</div>
 
-<div class="wrapper row3">
-  <div id="container" class="clear">
-    <div id="content">
-      <div id="comments" style="height: 480px">
-        <h2>registers show</h2>
-      </div>
-    </div>
-  </div>
+
+<div class="container" style="padding: 0px 0px 0px 0px; background-color: yellow; height: 400px">
+	
+	<div class="row" style="height: 20px;"></div>
+	<div class="row-end">&nbsp;</div>			
+	
+	<div class="row">
+		<div align="center">
+			<h2>Admin Page</h2>
+		</div>      		
+		<div class="row-end">&nbsp;</div>				
+	</div>      		
+	
+	<div class="row">
+	  	<% if current_user.admin? %>
+	  	<% end %>
+		<div class="row-end">&nbsp;</div>		
+	</div>			
 </div>
+		
+<div class="container" style="padding: 0px 0px 0px 0px; background-color: green; height: 200px"></div>

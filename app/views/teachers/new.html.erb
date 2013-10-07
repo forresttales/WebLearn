@@ -54,31 +54,68 @@
 	<div class="row" style="height: 30px;"></div>
 	<div class="row-end">&nbsp;</div>			
 	
-	<%#= form_for(@student) do |f| %>
+	<%= form_for(@teacher) do |f| %>
 	<!-- = render 'shared/error_messages', object: f.object -->			
-	
-
 	
 	<div class="row">
 		<div class="col6" align="right">
-			<%#= f.label(:name, 'Name of School') %>							
+			<div class="">
+				<%= f.label(:name_first, "First Name") %>
+			</div>
 		</div>
 		<div class="col6" align="left">
-			<%#= f.text_field(:name, :class => "form-control") %>			
-		</div>      	
-		<div class="row-end">&nbsp;</div>		
+			<div class="" style="width: auto;">
+				<%= f.text_field(:name_first) %>
+			</div>
+		</div>
+		<div class="row-end">&nbsp;</div>				      		
 	</div>      		
-	<div class="row" style="height: 10px;"></div>      		
-	<div class="row-end">&nbsp;</div>			
-		      		
+	<div class="row" style="height: 10px;"></div>
+	<div class="row-end">&nbsp;</div>
+
+	<div class="row">
+		<div class="col6" align="right">
+			<div class="">
+				<%= f.label(:name_last, "Last Name") %>
+			</div>
+		</div>
+		<div class="col6" align="left">
+			<div class="" style="width: auto;">
+				<%= f.text_field(:name_last) %>
+			</div>
+		</div>
+		<div class="row-end">&nbsp;</div>				      		
+	</div>      		
+	<div class="row" style="height: 10px;"></div>
+	<div class="row-end">&nbsp;</div>
+
+	<div class="row">
+		<div class="col6" align="right">
+			<div class="">
+				<%= f.label(:phone, "Phone") %>
+			</div>
+		</div>
+		<div class="col6" align="left">
+			<div class="" style="width: auto;">
+				<%= f.text_field(:phone) %>
+			</div>
+		</div>
+		<div class="row-end">&nbsp;</div>				      		
+	</div>      		
+	<div class="row" style="height: 10px;"></div>     
+	<div class="row-end">&nbsp;</div>
+				 		
+				      		
 	<div class="row">
 		<div class="col12" align="center">
-			<%#= f.submit "Submit", class: "" %>
+			<div class="">
+				<%= f.submit "Create Account" %>
+			</div>
 		</div>
 		<div class="row-end">&nbsp;</div>				
 	</div>      		
 						
-	<%# end %>
+	<% end %>
 			
 </div>
 		

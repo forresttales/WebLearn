@@ -6,20 +6,25 @@
 #  created_at      :datetime
 #  updated_at      :datetime
 #  account_id      :integer
-#  name_first      :string(50)
-#  name_last       :string(50)
 #  email           :string(50)       default("")
 #  username        :string(50)
 #  has_account     :boolean
 #  account_type    :string(50)
-#  admin           :boolean
 #  password_digest :string(255)
 #  remember_token  :string(255)
+#  admin           :boolean          default(FALSE)
 #
 
 class User < ActiveRecord::Base
   
-  attr_accessible :username, :account_type, :password, :password_confirmation, :id, :name_first, :name_last, :created_at
+  attr_accessible :username, :email, :account_type, :has_account, :password, :password_confirmation, :id, :name_first, :name_last, :created_at
+  
+  has_one :student, dependent: :destroy
+  has_one :teacher, dependent: :destroy
+  has_one :institute, dependent: :destroy
+  has_one :publisher, dependent: :destroy
+  
+  
   
   
   # has_many :microposts, dependent: :destroy
@@ -109,34 +114,3 @@ class User < ActiveRecord::Base
     
   
 end
-
-
-
-
-
-
-    # has_secure_password
-    # validates :password, length: { minimum: 4 }
-#   
-#   
-#   
-    # attr_accessible :id, :account_id, :username, :has_account, :account_type, 
-      # :created_at, :updated_at, :password, :password_confirmation
-#     
-    # #attr_accessor :password
-#   
-#   
-    # validates :username, :presence => true, :length => { :maximum => 25 }  
-    # validates_length_of :password, :within => 4..25, :on => :create
-#   
-    # before_save :create_hashed_password
-    # after_save :clear_password
-#   
-    # #scope :named, lambda {|first,last| where(:first_name => first, :last_name => last)}
-#     
-    # attr_protected :hashed_password, :salt
-    
-    # def name
-      # "#{first_name} #{last_name}"
-    # end
-
