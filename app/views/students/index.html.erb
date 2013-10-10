@@ -1,0 +1,25 @@
+<% provide(:title, 'Students') %>
+
+	<header>
+    	<%= render 'layouts/flash_alert' %>		
+		<div style="height: 200px;background-color: white;">
+			<div style="height: 70px;"></div>
+			<div style="text-align: center;">
+				<h1 align="center">Signed-in student's default page</h1>
+			</div>			
+		</div>      		
+	</header>
+
+
+	<div class="container" style="padding: 0px 0px 0px 0px; background-color: yellow; height: 400px;">
+		<div style="height: 70px;"></div>
+		
+		<div style="text-align: center">
+			<h2 style="font-style: italic;color: green;"><%= @info.name_first %></h2>			
+			<h3>General student news, notices, blogs, etc.</h3>
+			<h3>Home profile page in navigation</h3>			
+		</div>
+	</div>
+			
+	<div class="container" style="padding: 0px 0px 0px 0px; background-color: green; height: 200px;"></div>
+

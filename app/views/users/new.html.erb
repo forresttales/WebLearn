@@ -1,136 +1,66 @@
 <% provide(:title, 'Create Account') %>
 
-	<div class="row" style="height: 10px"></div>
-	<div class="row-end">&nbsp;</div>										
-	
-	<div class="row">
-		
-		<div class="col7">
-			<div class="row">
-				<div class="col2">
-	  				<%= image_tag("image_learning_counsel.png", :alt => '') %>
-				</div>
-				<div class="col2">
-	  				<%= image_tag("image_header_1.jpg", :alt => '') %>
-				</div>
-				<div class="col3">
-	  				<%= image_tag("image_header_2.jpg", :alt => '') %>					
-				</div>
-				<div class="row-end">&nbsp;</div>		
-			</div>
-			<div class="row">
-				<div class="col2" style="font-size: 10px">
-					<p>News and Content on the Shift to Digital Curriculum</p>				
-				</div>
-				<div class="col5" style="font-size: 12px">
-					<h4>Featured News Stream</h4>					
-				</div>
-				<div class="row-end">&nbsp;</div>										
-			</div>			
-		</div>
-		
-		<div class="col5">
-			<div style="width: auto;height:120px;background-color:white;box-shadow: 1px 1px 10px #888888;padding: 10px 10px 10px 30px">
-				<h3>Ad Block</h3>
-			</div>
-		</div>		
-		<div class="row-end">&nbsp;</div>		
-	</div>
-
-	<div class="row" style="height: 10px"></div>
-	<div class="row-end">&nbsp;</div>		
-	
-
-
-  
-<div class="container" style="padding: 0px 0px 0px 0px; background-color: yellow; height: 400px">
-	
-	<div class="row" style="height: 20px;"></div>
-	<div class="row-end">&nbsp;</div>			
-	
-	<div class="row">
-		<div align="center">
-			<h2>Create Login</h2>
+	<header>
+		<div style="height: 200px;background-color: white;">
+			<div style="height: 70px"></div>
+			<h1 align="center">Create Login</h1>			
 		</div>      		
-		<div class="row-end">&nbsp;</div>				
-	</div>      		
-	
-	<div class="row" style="height: 60px;"></div>
-	<div class="row-end">&nbsp;</div>			
-	
-	<%= form_for(@user) do |f| %>
-		<%= hidden_field_tag :account_type, @account_type  %>
-	<!-- = render 'shared/error_messages', object: f.object -->			
-	
-	<div class="row">
-		<div class="col6" align="right">
-			<div class="">
+	</header>
+
+	<div class="table-yellow">
+		<div style="padding-top: 80px"></div>
+		
+		<%= form_for(@user) do |f| %>
+		
+		<!-- = render 'shared/error_messages', object: f.object -->			
+			<%= hidden_field_tag :account_type, @account_type  %>
+
+		<div class="row">
+			<div class="cell-left-signin">
 				<%= f.label(:email, "Email") %>
 			</div>
-		</div>
-		<div class="col6" align="left">
-			<div class="" style="width: auto;">
-				<%= f.text_field(:email, :class => "form-control") %>
-			</div>
-		</div>
-		<div class="row-end">&nbsp;</div>				      		
-	</div>      		
-	<div class="row" style="height: 10px;"></div>     
-	<div class="row-end">&nbsp;</div>			 		
-	<div class="row">
-		<div class="col6" align="right">
-			<div class="">
+			<div class="cell-right-signin">
+				<%= f.text_field(:email, :class => "input-form", :autofocus => true) %>
+			</div>      	
+		</div>      		
+		
+		<div class="row">
+			<div class="cell-left-signin">
 				<%= f.label(:username, "Username") %>
 			</div>
+			<div class="cell-right-signin">
+				<%= f.text_field(:username, :class => "input-form") %>
+			</div>      	
 		</div>
-		<div class="col6" align="left">
-			<div class="" style="width: auto;">
-				<%= f.text_field(:username, :class => "form-control") %>
-			</div>
-		</div>
-		<div class="row-end">&nbsp;</div>				      		
-	</div>      		
-	<div class="row" style="height: 10px;"></div>
-	<div class="row-end">&nbsp;</div>			      		
-	<div class="row">
-		<div class="col6" align="right">
-			<div class="">
+		
+		<div class="row">
+			<div class="cell-left-signin">
 				<%= f.label(:password, "Password") %>
 			</div>
-		</div>
-		<div class="col6" align="left">
-			<div class="" style="width: auto;">
-				<%= f.password_field(:password, :class => "form-control") %>
-			</div>
-		</div>      	
-		<div class="row-end">&nbsp;</div>					
-	</div>      		
-	<div class="row" style="height: 10px;"></div>
-	<div class="row-end">&nbsp;</div>			      		
-	<div class="row">
-		<div class="col6" align="right">
-			<div class="">
+			<div class="cell-right-signin">
+				<%= f.password_field(:password, :class => "input-form") %>
+			</div>      	
+		</div>      		
+
+		<div class="row">
+			<div class="cell-left-signin">
 				<%= f.label(:password_confirmation, "Confirmation") %>
 			</div>
-		</div>
-		<div class="col6" align="left">
-			<div class="" style="width: auto;">
-				<%= f.password_field(:password_confirmation, :class => "form-control") %>
-			</div>
-		</div>      	
-		<div class="row-end">&nbsp;</div>					
-	</div>      		
-	<div class="row" style="height: 10px;"></div>
-	<div class="row-end">&nbsp;</div>			      		
-	<div class="row">
-		<div class="col12" align="center">
-			<div class="">
+			<div class="cell-right-signin">
+				<%= f.password_field(:password_confirmation, :class => "input-form") %>
+			</div>      	
+		</div>      		
+
+	</div>
+	
+	<div class="table-yellow">
+		<div style="height: 30px;"></div>			
+		<div class="row">
+			<div class="cell-submit-signin">		
 				<%= f.submit "Create Password" %>
 			</div>
 		</div>
-		<div class="row-end">&nbsp;</div>				
-	</div>      		
-						
-	<% end %>
-			
-</div>
+		<div style="height: 140px;"></div>	
+	</div>
+
+		<% end %>

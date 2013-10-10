@@ -9,6 +9,8 @@ module SessionsHelper
     
     session[:username] = user.username
     session[:user_id] = user.id
+    session[:has_account] = user.has_account
+    session[:signed_in] = true
     
     if user.admin
       session[:admin] = true
@@ -16,7 +18,7 @@ module SessionsHelper
       session[:admin] = nil            
     end
       
-    flash[:success] = 'Logged In'
+    flash[:login] = 'Logged In'
 
     # respond_to do |format|
       # format.html
@@ -45,7 +47,7 @@ module SessionsHelper
   def signed_in_user
     unless signed_in?
       store_location
-      redirect_to signin_url, notice: "Please sign in."
+      redirect_to signin_url, notice: "Please sign in"
     end
   end
 
@@ -54,11 +56,16 @@ module SessionsHelper
     cookies.delete(:remember_token)
     
     
-    #session[:user_id] = nil
     session[:username] = nil
     session[:admin] = nil
+    session[:has_account] = nil
+    session[:user_id] = nil
+    session[:signed_in] = nil
     
-    flash[:notice] = "You have been logged out."
+    # if user.admin
+      # session[:admin] = true
+    
+    flash[:logout] = "Logged out"
     #redirect_to("login_path")
     # redirect_to(:controller => 'users', :action => 'home')
     
@@ -66,8 +73,17 @@ module SessionsHelper
   end
 
   def redirect_back_or(default)
-    redirect_to(session[:return_to] || default)
-    session.delete(:return_to)
+    # redirect_to(session[:return_to] || default)
+    # session.delete(:return_to)
+    
+    if session[:has_account]
+      redirect_to(:controller => 'students')
+    else
+      redirect_to(:controller => 'users', :action => 'show')      
+    end
+    
+    
+    
   end
 
   def store_location

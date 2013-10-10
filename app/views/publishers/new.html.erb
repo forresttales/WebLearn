@@ -1,62 +1,15 @@
 <% provide(:title, 'Create Publisher Account') %>
 
-	<div class="row" style="height: 10px"></div>
-	
-	<div class="row">
-		
-		<div class="col7">
-			<div class="row">
-				<div class="col2">
-	  				<%= image_tag("image_learning_counsel.png", :alt => '') %>
-				</div>
-				<div class="col2">
-	  				<%= image_tag("image_header_1.jpg", :alt => '') %>
-				</div>
-				<div class="col3">
-	  				<%= image_tag("image_header_2.jpg", :alt => '') %>					
-				</div>
-				<div class="row-end">&nbsp;</div>		
-			</div>
-			<div class="row">
-				<div class="col2" style="font-size: 10px">
-					<p>News and Content on the Shift to Digital Curriculum</p>				
-				</div>
-				<div class="col5" style="font-size: 12px">
-					<h4>Featured News Stream</h4>					
-				</div>
-				<div class="row-end">&nbsp;</div>										
-			</div>			
-		</div>
-		
-		<div class="col5">
-			<div style="width: auto;height:120px;background-color:white;box-shadow: 1px 1px 10px #888888;padding: 10px 10px 10px 30px">
-				<h3>Ad Block</h3>
-			</div>
-		</div>		
-		<div class="row-end">&nbsp;</div>		
-	</div>
-
-	<div class="row" style="height: 10px"></div>
-	<div class="row-end">&nbsp;</div>		
-	
-
-
-  
-<div class="container" style="padding: 0px 0px 0px 0px; background-color: yellow; height: 400px">
-	
-	<div class="row" style="height: 20px;"></div>
-	<div class="row-end">&nbsp;</div>			
-	
-	<div class="row">
-		<div align="center">
-			<h2>Create Publisher Account</h2>
+	<header>
+		<div style="height: 200px;background-color: white;">
+			<div style="height: 70px"></div>
+			<h1 align="center">Create Publisher Account</h1>			
 		</div>      		
-		<div class="row-end">&nbsp;</div>				
-	</div>      		
-	
-	<div class="row" style="height: 30px;"></div>
-	<div class="row-end">&nbsp;</div>			
-	
+	</header>
+
+	<div class="table-yellow">
+		<div style="padding-top: 80px"></div>
+		
 	<%= form_for(@publisher) do |f| %>
 	<!-- = render 'shared/error_messages', object: f.object -->			
 
@@ -75,33 +28,27 @@
   company_contact_phone      :string(100)
   company_contact_email      :string(100)  
   -->
-	
-	
-	<div class="row">
-		<div class="col6" align="right">
-			<%= f.label(:name, 'Name of Publisher') %>							
-		</div>
-		<div class="col6" align="left">
-			<%= f.text_field(:name) %>			
-		</div>      	
-		<div class="row-end">&nbsp;</div>		
-	</div>      		
-	<div class="row" style="height: 10px;"></div>      		
-	<div class="row-end">&nbsp;</div>			
-		      		
-	<div class="row">
-		<div class="col12" align="center">
-			<%= f.submit "Submit", class: "" %>
-		</div>
-		<div class="row-end">&nbsp;</div>				
-	</div>      		
-						
-	<% end %>
-			
-</div>
-
-	<!-- <a href="#" class="easyui-linkbutton">Text Button</a> -->
 		
-<div class="container" style="height: 200px; background-color: green">
-</div>  		
 
+		<div class="row">
+			<div class="cell-left-signin">
+				<%= f.label(:name, 'Name of Publisher') %>
+			</div>
+			<div class="cell-right-signin">
+				<%= f.text_field(:name,  :class => "input-form", :autofocus => true) %>
+			</div>      	
+		</div>      		
+
+	</div>
+	
+	<div class="table-yellow">
+		<div style="height: 30px;"></div>			
+		<div class="row">
+			<div class="cell-submit-signin">		
+				<%= f.submit "Submit" %>
+			</div>
+		</div>
+		<div style="height: 140px;"></div>	
+	</div>
+
+		<% end %>

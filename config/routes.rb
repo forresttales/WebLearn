@@ -2,7 +2,8 @@ Weblearn::Application.routes.draw do
    
 
   get "test/basic"
-
+  get "static_pages/test"
+  
   #match '/users/testhome', to: 'users#testhome', via: 'get'
      
   # resources :users do
@@ -295,6 +296,7 @@ Weblearn::Application.routes.draw do
   match "/students/:id" => "students#update", via: 'post'
   match '/students/new', to: 'students#new', via: 'get'
   match '/students/home', to: 'students#home', via: 'get'
+  match '/students/show', to: 'students#show', via: 'get'
 
   match "/teachers/:id" => "teachers#update", via: 'post'
   match '/teachers/new', to: 'teachers#new', via: 'get'

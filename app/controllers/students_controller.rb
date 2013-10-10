@@ -5,6 +5,7 @@ class StudentsController < ApplicationController
   #before_filter :confirm_logged_in
   
   def index
+    @info = Student.where(["user_id = ?", session[:user_id]]).first       
     #list
     #render('list')
   end
