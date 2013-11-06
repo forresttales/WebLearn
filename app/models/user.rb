@@ -13,6 +13,8 @@
 #  password_digest :string(255)
 #  remember_token  :string(255)
 #  admin           :boolean          default(FALSE)
+#  name_first      :string(50)
+#  name_last       :string(50)
 #
 
 class User < ActiveRecord::Base
@@ -34,12 +36,12 @@ class User < ActiveRecord::Base
                                    # class_name: "Relationship",
                                    # dependent: :destroy
   # has_many :followers, through: :reverse_relationships, source: :follower
-  # before_save { self.email = email.downcase }
+  before_save { self.email = email.downcase }
   before_create :create_remember_token
   validates :username, presence: true, length: { maximum: 50 }
-  #VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
-  # validates :email, presence: true, format: { with: VALID_EMAIL_REGEX },
-                    # uniqueness: { case_sensitive: false }
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
+  validates :email, presence: true, format: { with: VALID_EMAIL_REGEX },
+                    uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, length: { minimum: 4 }
     

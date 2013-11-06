@@ -3,6 +3,22 @@ Weblearn::Application.routes.draw do
 
   get "test/basic"
   get "static_pages/test"
+  get "static_pages/fonts"
+
+  get "journals/k12_digital"  
+  get "journals/facing_down"
+  get "journals/five_types"
+  get "journals/whats_so_hard"
+  get "journals/education_compared"
+  get "journals/we_need"
+  get "journals/wanted_new_leader"
+  get "journals/coffee_chat"
+  get "journals/checklist_of_top_10"  
+  get "journals/pearson"
+  get "journals/nationally_recognized"
+  get "journals/to_solution"
+  
+  
   
   #match '/users/testhome', to: 'users#testhome', via: 'get'
      
@@ -124,18 +140,23 @@ Weblearn::Application.routes.draw do
   root to: 'static_pages#index'
 
   match '/signup', to: 'users#new', via: 'get'
+
   match '/signin', to: 'sessions#new', via: 'get'
   match '/signout', to: 'sessions#destroy', via: 'delete'
+
+  match '/index', to: 'static_pages#index', via: 'get'
   match '/help', to: 'static_pages#help', via: 'get'
   match '/about', to: 'static_pages#about', via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
-
   match '/edmatchup', to: 'static_pages#edmatchup', via: 'get'
   match '/events', to: 'static_pages#events', via: 'get'
   match '/news', to: 'static_pages#news', via: 'get'
-  match '/reports', to: 'static_pages#reports', via: 'get'
+  match '/reports', to: 'static_pages#reports', via: 'get'  
+  match '/articles', to: 'static_pages#articles', via: 'get'
+  match '/advertise', to: 'static_pages#advertise', via: 'get'
   
-  match '/index', to: 'static_pages#index', via: 'get'
+  #match '/ARTICLES-5-LeiLani-How-Big', to: 'public#ARTICLES-5-LeiLani-How-Big', via: 'get'
+  
 
   resources :access do
     member do
@@ -322,6 +343,7 @@ Weblearn::Application.routes.draw do
 
   #match '/users/new', to: 'users#new', via: 'get'
   match "/users/:id" => "users#update", via: 'post'
+  #match "/users/create" => "users#create", via: ['get', 'post']
   
   
   

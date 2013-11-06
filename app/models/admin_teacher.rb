@@ -8,6 +8,7 @@
 #  name_first :string(50)
 #  name_last  :string(50)
 #  phone      :string(50)
+#  user_id    :integer
 #
 
 class AdminTeacher < Teacher

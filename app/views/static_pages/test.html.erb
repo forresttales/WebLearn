@@ -180,3 +180,108 @@
 		</div>
 	</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<header>					
+	    		<%= render 'layouts/flash_alert' %>
+
+			<div style="width: 1000px; background-color: white; display: table;">			
+				
+				<div class="row">
+					<div class="cell-250" style="padding-left: 10px;">
+			  			<%= image_tag("image_learning_counsel.png", :alt => '') %>
+			  		</div>
+					<div class="cell-100">
+			  			<%= image_tag("image_header_1.jpg", :alt => '') %>					
+			  		</div>
+					<div class="cell-100">
+						<%= image_tag("image_header_2.jpg", :alt => '') %>
+			  		</div>
+					<div class="table-main">
+						<div class="row">
+							<div class="cell-100percent" style="border-width: 1px; border-color: black;">
+								<div id="main_header_adblock_1">
+									<h3>Ad Block</h3>
+								</div>
+					  		</div>
+						</div>
+					</div>		  		
+			  		
+			  	</div>
+			</div>
+			<div class="table-main"
+				<div class="row">
+					<div class="cell-100" style="padding-left: 10px;">
+						<p>News and Content on the Shift<br>to Digital Curriculum</p>
+			  		</div>
+					<div class="cell-80">
+			  		</div>		  		
+					<div class="cell-250">
+						<h4>Featured News Stream</h4>
+			  		</div>
+			  		<div class="cell-200">
+			  			<%= link_to "Browse downloads &raquo;".html_safe, '#', :class => 'link-to-right' %>
+			  		</div>
+			  	</div>
+			</div>
+			
+			
+		</header>		
+			
+			
+		<section>
+			
+			<div style="background-color: white; height: 500px;">
+				
+				<div style="height: 50px;"></div>
+				
+				<div align="center">			
+					<%= button_to "Sign up", {:controller => 'users', :action => 'new', :id => 'Student'}, class: "button3" %>
+				</div>
+	
+				<div style="height: 50px;"></div>
+	
+	
+			    <div id="featured_slide">
+			      <ul>
+			      	
+			        <li><%= image_tag("image_books.jpeg") %>
+			          <div class="panel-overlay">
+			            <h3>The Learning Counsel</h3>
+			            <p><a href="#">About US &raquo;</a></p>
+			          </div>
+			        </li>
+			      	
+			        <li><%= image_tag("image_books.jpeg") %>
+			          <div class="panel-overlay">
+			            <h3>EdMatchUp</h3>
+			            <p><a href="#">About our EdMatchUp service &raquo;</a></p>
+			          </div>
+			        </li>
+	
+			        <li><%= image_tag("image_books.jpeg") %>
+			          <div class="panel-overlay">
+			            <h3>Create Your Profile</h3>
+			            <p>Schools Publishers Students Teachers Recruiters &nbsp&nbsp<a href="#" style="display: inline;">more &raquo;</a></p>
+			          </div>
+			        </li>
+			        
+			      </ul>
+			    </div>
+							
+			</div>
+			
+		</section>
+		
+	<div class="space-20"></div>

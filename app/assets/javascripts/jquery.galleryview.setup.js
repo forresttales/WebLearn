@@ -28,7 +28,9 @@ $(document).ready(function () {
         
 		easing: 'swing',                //STRING - easing method to use for animations (jQuery provides 'swing' or 'linear', more available with jQuery UI or Easing plugin)
         
-		filmstrip_position: 'bottom',   //STRING - position of filmstrip within gallery (bottom, top, left, right)
+		//filmstrip_position: 'bottom',   //STRING - position of filmstrip within gallery (bottom, top, left, right)
+		filmstrip_position: 'right',   //STRING - position of filmstrip within gallery (bottom, top, left, right)
+		
         overlay_position: 'bottom',     //STRING - position of panel overlay (bottom, top, left, right)
         
 		panel_scale: 'crop',            //STRING - cropping option for panel images (crop = scale image and fit to aspect ratio determined by panel_width and panel_height, nocrop = scale image and preserve original aspect ratio)

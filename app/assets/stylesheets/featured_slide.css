@@ -44,6 +44,7 @@ Licence: <a href="http://www.os-templates.com/template-terms">Website Template L
 	color:#F00000;
 	background-color:transparent;
 	font-weight:normal;
+	font-size: 12px;
 	}
 
 #featured_slide p{
@@ -63,7 +64,7 @@ Licence: <a href="http://www.os-templates.com/template-terms">Website Template L
 
 #featured_slide .panel .panel-overlay, #featured_slide .panel .overlay-background{
 	height:60px;
-	padding:5px;
+	padding:20px 5px 0px 5px;
 	white-space:normal;
 	}
 
@@ -73,7 +74,7 @@ Licence: <a href="http://www.os-templates.com/template-terms">Website Template L
 
 #featured_slide .panel .panel-overlay{
 	color:#FFFFFF;
-	font-size:0.7em;
+	font-size:0.5em;
 	}
 
 #featured_slide .filmstrip{

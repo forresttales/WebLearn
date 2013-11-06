@@ -1,0 +1,102 @@
+
+	<!-- <hr class="plain"> -->
+		
+	<header>		
+    	<%= render 'layouts/flash_alert' %>
+		
+		<div class="table">
+			<div class="row">
+				<div class="cell-250" style="padding-left: 10px;">
+		  			<%= image_tag("image_learning_counsel.png", :alt => '') %>
+		  		</div>
+				<div class="cell-100">
+		  			<%= image_tag("image_header_1.jpg", :alt => '') %>					
+		  		</div>
+				<div class="cell-100">
+					<%= image_tag("image_header_2.jpg", :alt => '') %>
+		  		</div>
+				<div class="table">
+					<div class="row">
+						<div class="cell-100percent" style="border-width: 1px; border-color: black;">
+							<div id="main_header_adblock_1">
+								<h3>Ad Block</h3>
+							</div>
+				  		</div>
+					</div>
+				</div>		  		
+		  		
+		  	</div>
+		</div>
+		<div class="table"
+			<div class="row">
+				<div class="cell-100" style="padding-left: 10px;">
+					<p>News and Content on the Shift<br>to Digital Curriculum</p>
+		  		</div>
+				<div class="cell-80">
+		  		</div>		  		
+				<div class="cell-250">
+					<h4>Featured News Stream</h4>
+		  		</div>
+		  		<div class="cell-200">
+		  			<%= link_to "Browse downloads &raquo;".html_safe, '#', :class => 'link-to-right' %>
+		  		</div>
+		  	</div>
+		</div>
+	</header>
+
+	<div class="homepresent">
+		<div class="table-yellow">
+			<div class="row">
+				<div class="cell-600">
+					<table class="table-yellow">
+						<div class="row">
+							<div class="cell-100percent">
+								<h3 style="padding: 0px 0px 0px 170px;">EdMatchUp</h3>
+								<h4 style="padding: 0px 0px 0px 120px;">Digital Curriculum Matching</h4>
+							</div>
+						</div>
+						<div class="row">
+							<div class="cell-100percent">
+								<h3 style="padding: 0px 0px 0px 130px;">Get Started - It's Free</h3>
+								
+							</div>
+						</div>
+						<div class="row">
+							<div class="cell-100percent">
+								<h4 style="padding: 0px 0px 0px 60px;display: inline-block;">SEARCH EdMatchUp</h4>													
+								<input type="text" class="input-search-1" placeholder="Search" style="display: inline-block;">
+							</div>
+						</div>
+						<div class="row">
+							<div class="cell-100percent">
+								<div style="display: inline-block;">
+									<p style="line-height: 12px; font-size: 12px; font-weight: bolder; padding: 0px 0px 0px 60px;">
+										Create<br>
+										Product<br>
+										or<br>
+										Inventory<br>
+										Profile<br><br><br>
+									</p>
+								</div>
+								
+								<% if !session[:signed_in] %>
+    								<%= render 'layouts/menu_accounts' %>
+    							<% else %>
+    								<%= render 'layouts/menu_accounts_signed_in' %>    							
+    							<% end %>
+								
+							</div>
+						</div>
+					</table>
+				</div>
+				<div class="cell-300" style="padding: 10px 20px 40px 0px;">
+					<h4>How does it work?</h4>
+		  			<%= image_tag("image_edmatchup_works.png", :width => '300',  :alt => '') %>
+				</div>
+			<div>
+				
+		
+		  				
+		  	</div>			
+		</div>
+	</div>

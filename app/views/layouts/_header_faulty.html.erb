@@ -1,0 +1,44 @@
+
+	<nav>
+		<div>
+			<a href="/index" class="easyui-linkbutton" data-options="plain:true">Main</a>
+			<a href="/edmatchup" class="easyui-linkbutton" data-options="plain:true">EdMatchUp</a>
+			<a href="/reports" class="easyui-menubutton" data-options="menu:'#mm1',iconCls:'icon-help'">Reports</a>
+			<a href="/news" class="easyui-linkbutton" data-options="plain:true">News</a>
+			<a href="/events" class="easyui-menubutton" data-options="menu:'#mm2'">Events</a>
+			<a href="/about" class="easyui-menubutton" data-options="menu:'#mm3'">About</a>
+			
+		<% if !session[:username] %>
+			<a href="/signin" class="easyui-linkbutton" data-options="plain:true" style="float: right;">Sign In</a>
+		<% else %>
+			<a href="/signout" class="easyui-linkbutton" data-options="plain:true" style="float: right;">Sign Out</a>
+			<% if session[:has_account] %>		
+			<a href="/home" class="easyui-linkbutton" data-options="plain:true" style="float: right;">My Home Page</a>
+			<% end %>		
+			<p style="padding: 0px 30px 0px 0px; color: green;float: right;"><%= session[:username] %></p>
+		<% end %>
+	
+		</div>
+		
+		<div id="mm1" style="width:150px;">
+			<div><%= link_to 'Reports 1', reports_path %></div>
+			<div><%= link_to 'Reports 2', reports_path %></div>
+			<div>
+				<span>Reports 3</span>
+				<div style="width:150px;">
+					<div><%= link_to 'Reports 3 1', reports_path %></div>
+					<div><%= link_to 'Reports 3 2', reports_path %></div>
+					<div><%= link_to 'Reports 3 3', reports_path %></div>
+				</div>
+			</div>
+		</div>
+		<div id="mm2" style="width:100px;">
+			<div><%= link_to 'Events 1', events_path %></div>
+			<div><%= link_to 'Events 2', events_path %></div>
+			<div><%= link_to 'Events 3', events_path %></div>
+		</div>
+		
+		<div id="mm3" class="menu-content" style="background:#f0f0f0;padding:10px;text-align:left">
+			<img src="/assets/image_ed_flow_chart_small.png" style="width:200px;">
+		</div>
+	</nav>

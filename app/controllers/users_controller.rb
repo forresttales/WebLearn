@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: :destroy
   
+  skip_before_filter :verify_authenticity_token
   
   def index
   end
@@ -50,18 +51,18 @@ class UsersController < ApplicationController
       sign_in @user
       flash[:success] = "Welcome to The Learning Counsel!"
       
-        case account_type= params[:account_type]
-        when "School"
-          redirect_to(:controller => 'institutes', :action => 'new')
-        when "Teacher"
-          redirect_to(:controller => 'teachers', :action => 'new')
-        when "Student"
-          redirect_to(:controller => 'students', :action => 'new')
-        when "Publisher"
-          redirect_to(:controller => 'publishers', :action => 'new')
-        else
-          # alert error redirect
-        end
+        # case account_type= params[:account_type]
+        # when "School"
+          # redirect_to(:controller => 'institutes', :action => 'new')
+        # when "Teacher"
+          # redirect_to(:controller => 'teachers', :action => 'new')
+        # when "Student"
+          # redirect_to(:controller => 'students', :action => 'new')
+        # when "Publisher"
+          # redirect_to(:controller => 'publishers', :action => 'new')
+        # else
+          # # alert error redirect
+        # end
       
     else
       flash.now[:notice] = "Password Creation Failed"
@@ -70,7 +71,7 @@ class UsersController < ApplicationController
     end
 
   end
-  
+    
   def edit
   end
   

@@ -19,24 +19,22 @@
 
     </head>
     <body>
-		<div class="container">
+		<% if !session[:admin] %>	
+			<%= render 'layouts/header' %>
+		<% else %>
+			<%= render 'layouts/header_admin' %>			
+		<% end %>
+		
+		<div style="width: 1000px; margin-right: auto; margin-left: auto;">			
 			
-			<% if !session[:admin] %>	
-    			<%= render 'layouts/header' %>
-			<% else %>
-    			<%= render 'layouts/header_admin' %>			
-			<% end %>
-			
-    		<%= render 'layouts/flash_alert' %>
-    		    	    			
 			<%= yield %> 
-
-    		<%= render 'layouts/footer' %>
+	
+			<%= render 'layouts/footer' %>
 			
-      		session layout
-      		
+	  		session layout
+	  		
 			<%= debug(params) %>
-			      		
-		</div>	  
+		
+		</div>
     </body>
 </html>

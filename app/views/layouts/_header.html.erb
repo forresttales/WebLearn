@@ -1,44 +1,289 @@
 
-	<nav>
-		<div>
-			<a href="/index" class="easyui-linkbutton" data-options="plain:true">Main</a>
-			<a href="/edmatchup" class="easyui-linkbutton" data-options="plain:true">EdMatchUp</a>
-			<a href="/reports" class="easyui-menubutton" data-options="menu:'#mm1',iconCls:'icon-help'">Reports</a>
-			<a href="/news" class="easyui-linkbutton" data-options="plain:true">News</a>
-			<a href="/events" class="easyui-menubutton" data-options="menu:'#mm2'">Events</a>
-			<a href="/about" class="easyui-menubutton" data-options="menu:'#mm3'">About</a>
-			
-		<% if !session[:username] %>
-			<a href="/signin" class="easyui-linkbutton" data-options="plain:true" style="float: right;">Sign In</a>
-		<% else %>
-			<a href="/signout" class="easyui-linkbutton" data-options="plain:true" style="float: right;">Sign Out</a>
-			<% if session[:has_account] %>		
-			<a href="/home" class="easyui-linkbutton" data-options="plain:true" style="float: right;">My Home Page</a>
-			<% end %>		
-			<p style="padding: 0px 30px 0px 0px; color: green;float: right;"><%= session[:username] %></p>
-		<% end %>
+<style>
+
+	@font-face {
+	  	font-family: 'msyhb';
+	  	src: url('/assets/msyhb.eot');	  
+	  	src: url('/assets/msyhb.ttf') format('truetype');
+	}
+	@font-face {
+		font-family: 'msyh';
+	    src: url('/assets/msyh.eot');	  		
+		src: url('/assets/msyh.ttf') format('truetype');
+	}
 	
-		</div>
+	@font-face {
+		font-family: digitgraphics;
+		src: url('/assets/digitgraphics.eot');
+	}
+
+	@font-face {
+		font-family: KlavikaExtraLight;
+		src: url('/assets/KlavikaWebDisplayExtraLight.eot');
+	}
 		
-		<div id="mm1" style="width:150px;">
-			<div><%= link_to 'Reports 1', reports_path %></div>
-			<div><%= link_to 'Reports 2', reports_path %></div>
-			<div>
-				<span>Reports 3</span>
-				<div style="width:150px;">
-					<div><%= link_to 'Reports 3 1', reports_path %></div>
-					<div><%= link_to 'Reports 3 2', reports_path %></div>
-					<div><%= link_to 'Reports 3 3', reports_path %></div>
-				</div>
-			</div>
-		</div>
-		<div id="mm2" style="width:100px;">
-			<div><%= link_to 'Events 1', events_path %></div>
-			<div><%= link_to 'Events 2', events_path %></div>
-			<div><%= link_to 'Events 3', events_path %></div>
-		</div>
+	
+	nav {
+		font-family: msyh;
+
+		background-color:#F1F2E1;
+		box-shadow: 2px 2px 10px #000;
+
+		position: relative;
+		z-index: +10;
+
+		/*margin-left: -3000px;
+		padding-left: 3000px;
+		margin-right: -3000px;
+		padding-right: 3000px;*/		
+				
+		background: #56854E; 
+		background: linear-gradient(top, #56854E 0%, #254520 100%);  
+		background: -moz-linear-gradient(top, #56854E 0%, #254520 100%); 
+		background: -webkit-linear-gradient(top, #56854E 0%,#254520 100%);
+		 
+		height: 38px;
 		
-		<div id="mm3" class="menu-content" style="background:#f0f0f0;padding:10px;text-align:left">
-			<img src="/assets/image_ed_flow_chart_small.png" style="width:200px;">
+	}
+
+	nav a:hover {
+	text-decoration: none;
+	}
+
+	nav ul {
+		padding-left: 0px;
+		margin-top: 0px;
+		border-radius: 0px;  
+		list-style: none;
+		position: relative;
+		display: inline-table;		
+	}
+		
+	nav li {
+		float: left;		
+		display: inline;
+	}
+		
+	nav ul:after {
+		content: "";
+		clear: both;
+		display: block;
+	}
+	
+	nav ul li:hover {
+		background: #56854E; 
+		background: linear-gradient(top, #56854E 0%, #254520 100%);  
+		background: -moz-linear-gradient(top, #56854E 0%, #254520 100%); 
+		background: -webkit-linear-gradient(top, #56854E 0%,#254520 100%); 
+	}
+	
+	nav ul li:hover a {
+		color: #BFFAB9;
+	}
+	
+	nav ul li a {
+		display: block;
+		padding: 9px 9px;
+		color: #fff;
+		text-decoration: none;
+		font-size: 20px;
+	}
+
+	nav ul ul {
+		display: none;
+	}
+
+	nav a:active {
+		background: #56854E; 
+		background: linear-gradient(top, #56854E 0%, #254520 100%);  
+		background: -moz-linear-gradient(top, #56854E 0%, #254520 100%); 
+		background: -webkit-linear-gradient(top, #56854E 0%,#254520 100%); 
+		color:#F0F56E;
+		outline: none;
+	}
+		
+		
+	nav ul ul {
+		background-color:rgba(86, 133, 78, 0.8);
+
+		-moz-box-shadow:2px 2px 20px rgba(0,0,0,.8);
+		-webkit-box-shadow:2px 20px 2px rgba(0,0,0,.8);
+		box-shadow:2px 2px 20px rgba(0,0,0,.8);
+
+		/*border-bottom-left-radius: 0px;
+   		border-bottom-right-radius: 0px;		*/
+   		   		
+		border-bottom-left-radius: 10px;
+   		border-bottom-right-radius: 10px;
+		position: absolute;
+	}
+
+	nav ul ul li:first-child {
+		float: none; 
+		position: relative;
+	}
+			
+	nav ul ul li {
+		float: none; 
+		position: relative;
+	}
+				
+	nav ul ul li a {
+		padding: 10px 20px;
+		border-bottom-left-radius: 0px;
+   		border-bottom-right-radius: 0px;
+	}
+
+	nav ul ul li:last-child a {
+		padding: 10px 20px;
+		border-bottom-left-radius: 10px;
+   		border-bottom-right-radius: 10px;
+	}
+
+	/*nav ul ul li a:hover {
+		background-color:rgba(0, 0, 0, 0.4); /*#22401D*/
+		/*color: #000000;*/
+	/*}*/
+			
+	nav ul ul li a:hover {
+		/*background-color:rgba(86, 133, 78, 0.8); */ 
+		background-color:rgba(0, 0, 0, 0.4); /*#22401D*/
+		color: #2AF707;
+	}
+
+	nav ul ul ul {
+		position: absolute;
+		left: 100%; top:0;
+	}
+	
+	/*.extendfull, .extendleft
+	{
+		margin-left: -3000px;
+		padding-left: 3000px;
+	}
+	
+	.extendfull, .extendright
+	{
+		margin-right: -3000px;
+		padding-right: 3000px;
+	}	*/
+
+</style>
+
+
+	 <nav>	 	
+		<div id="topNav">
+			
+			<ul style="width: 100%; padding-left: 0px;">
+				<li><a href="/index">Home</a></li>
+				<li><a href="/edmatchup">EdMatchUp</a>
+					<ul>
+						<li><a href="/edmatchup">
+								<img src="/assets/image_ed_flow_chart_small.png" style="width: auto;">
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li><a href="/reports">Reports</a>
+					<!-- <ul>
+						<li><a href="#">Reports 1</a></li>
+						<li><a href="#">Reports 2</a></li>
+					</ul> -->					
+				</li>
+				
+				<!-- <li><a href="/news">News</a> -->					
+					<!-- <ul>
+						<li><a href="#">News 1</a></li>
+						<li><a href="#">News 2</a></li>
+						<li><a href="#">News 3</a></li>						
+					</ul> -->					
+				<!-- </li> -->
+								
+				<li><a href="/events">Events</a></li>
+				<li><a href="/about">About</a>
+					
+					<!-- <ul>
+						<li><a href="/about">About Us</a></li>
+						<li><a href="/articles">Articles</a></li>
+					</ul> -->
+															
+				</li>
+
+				<% if !session[:username] %>
+					<li style="float: right; padding-right: 40px;"><a href="/signin">Sign In</a></li>
+					<li style="float: right; padding-right: 0px;"><a href="/signup">Join</a></li>
+				<% else %>
+					<li><a href="/signout" style="float: right;">Sign Out</a></li>
+					<% if session[:has_account] %>		
+					<li><a href="/home" style="float: right;">My Home Page</a></li>
+					<% end %>		
+					<p style="padding: 0px 30px 0px 0px; color: green;float: right;"><%= session[:username] %></p>
+				<% end %>
+				
+			</ul>
+						
+			
+			
 		</div>
 	</nav>
+
+    <script>
+      
+        (function($){  
+                      
+            var nav = $("#topNav");  
+                      
+            nav.find("li").each(function() {  
+                if ($(this).find("ul").length > 0) {  
+                      
+                    //$("<span>").text("^").appendTo($(this).children(":first"));  
+      
+                    $(this).mouseenter(function() {  
+                    	
+                        $(this).find("ul").stop(true, true).slideDown(300);  
+                    });  
+                              
+                    $(this).mouseleave(function() {  
+                        $(this).find("ul").stop(true, true).slideUp(300);  
+                    });  
+                }  
+            });  
+        })(jQuery);
+          
+    </script>  
+
+
+
+
+<!-- 
+<div class="nav">
+	
+	<ul>
+		
+		<li><a href="#">Home</a></li>
+		
+		
+		<li><a href="#">Tutorials</a>
+			<ul>
+				<li><a href="#">Photoshop</a></li>
+				<li><a href="#">Illustrator</a></li>
+				<li><a href="#">Web Design</a>
+					<ul>
+						<li><a href="#">HTML</a></li>
+						<li><a href="#">CSS</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="#">Articles</a>
+			<ul>
+				<li><a href="#">Web Design</a></li>
+				<li><a href="#">User Experience</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Inspiration</a></li>
+		
+				
+	</ul>	
+		
+</div> -->

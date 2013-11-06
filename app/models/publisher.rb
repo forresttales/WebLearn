@@ -18,6 +18,7 @@
 #  company_contact_email      :string(100)
 #  created_at                 :datetime
 #  updated_at                 :datetime
+#  user_id                    :integer
 #
 
 class Publisher < ActiveRecord::Base
