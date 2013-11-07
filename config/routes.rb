@@ -17,6 +17,12 @@ Weblearn::Application.routes.draw do
   get "journals/pearson"
   get "journals/nationally_recognized"
   get "journals/to_solution"
+  get "journals/tales_to_go"
+  get "journals/mycore"
+  get "journals/charter_school_assoc"
+  get "journals/unique_az"
+  get "journals/tales_to_go_releases"
+  get "journals/tulsa_charter"
   
   
   
@@ -369,6 +375,7 @@ Weblearn::Application.routes.draw do
   match '/news_1', to: 'users#news_1', via: 'get'
   match '/services_1', to: 'users#services_1', via: 'get'
 
+  match '/create_account', to: 'users#services_1', via: 'get'
 
 
   # get "users/style-demo"

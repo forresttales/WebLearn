@@ -63,7 +63,7 @@
 				src: url('/assets/KlavikaWebDisplayBlack.eot');
 				src: url('/assets/KlavikaWebDisplayBlack.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebDisplayBlack.woff') format('woff');
 			}
-
+		
 		</style>		
 			
 		<!-- <link href="/assets/entrepeneurs_screen.css" media="screen, projection" rel="stylesheet" type="text/css"> -->
@@ -91,8 +91,11 @@
 	    <script type="text/javascript">
 	    	swfobject.embedSWF("/assets/865.swf", "myContent", "300", "120", "9.0.0");
 	    </script> -->
+
 	    
-		<header>					
+		<header>		
+						
+			<%= render 'share/backtotop' %>
 			
 	    	<%= render 'layouts/flash_alert' %>
 	    	
@@ -159,7 +162,11 @@
 			
 			<div style="background-color: white;">
 				
+				
 				<div style="height: 30px;"></div>
+			    
+			    
+			    
 			    
 				<!-- <div align="center" style="margin-top:10px">
 					<div id="sfw_865" align="center" style="height:170px;">&nbsp;</div>
@@ -220,13 +227,9 @@
 					
 						<div style="position: absolute; top: 0px; left: 0px; z-index: 101; opacity: 1;" class="slide cycle-slide cycle-slide-active">
 
-
 							<!-- 1 -->															
 							<div class="fluidrow mainfeaturerow">
 					
-								<!-- <div class="bg-perspective caption"><a href="journals/k12_digital">PERSPECTIVE</a></div> -->
-								
-								
 								<div style="margin-left: 10%;">
 							 		<a href="journals/k12_digital">
 							 			<img src="/assets/article-k12-digital.png" class="mainfeatureimage" height="450">
@@ -242,14 +245,12 @@
 						        </div>
 					        </div>
 							<br>
-
-
 					        
 					    	<div class="fluidrow">					    
 								<!-- 2 -->																				    
 								<div class="psubfeature">
 									<div class="innerpcell-subfeature">
-										<div class="bg-industry-news-orange h1">
+										<div class="bg-industry-news-green h1">
 											<a href="journals/nationally_recognized">INDUSTRY NEWS</a>
 										</div>
 									    <div class="h2">
@@ -266,7 +267,7 @@
 								<!-- 3 -->																			    					    
 								<div class="psubfeature">
 									<div class="innerpcell-subfeature">
-										<div class="bg-industry-news-violet h1">
+										<div class="bg-industry-news-orange h1">
 											<a href="journals/pearson">INDUSTRY NEWS</a>
 										</div>
 									    <div class="h2">
@@ -278,26 +279,35 @@
 									</div>
 								</div>								
 								
-								<!-- 4 -->																				    					    
-								<!-- <div class="psubfeature" onclick="">
+								<!-- 4 -->
+								<div class="psubfeature">
 									<div class="innerpcell-subfeature">
-										<div class="bg-lead h1"><a href="#">LEAD</a></div>
-									    <div class="h2"><a href="#">It's Time to Praise (Yes, <em>Praise</em>) Micromanagers</a></div>
-									    <div class="shares sharrre" data-title="sharrre" data-url=""><span id="article-share"><span class="share-count">53</span> <span class="share-text">SHARES</span></span></div>
+										<div class="bg-industry-news-violet h1">
+											<a href="journals/tales_to_go">INDUSTRY NEWS</a>
+										</div>
+									    <div class="h2">
+									    	<a href="journals/tales_to_go" style="text-decoration: none;">
+									    	Tales2Go Releases Android Version of its Award-Winning Service	
+									    	</a>
+									    	<span class="byline">&nbsp;by&nbsp;
+									    		<a>Sue Hanson, Contributor</a>
+									    	</span>
+								    	</div>
 									</div>
-								</div> -->								
+								</div>								
 						
 							</div>
 												
 						</div>
 					
-						<div style="position: absolute; top: 0px; left: 0px; z-index: 99; display: none;" class="slide cycle-slide">
+						<div style="position: absolute; top: 0px; left: 0px; z-index: 100; display: none;" class="slide cycle-slide">
 							<div class="fluidrow mainfeaturerow">
 								<!-- 5 -->																				    					
-								<!-- <div class="bg-idea caption"><a href="journals/we_need">IDEA</a></div> -->
-																
-								
-						 		<a href="journals/we_need"><img src="/assets/article-we-need.png" class="mainfeatureimage" height="450" width="970"></a>
+								<div style="margin-left: 14%;">
+						 			<a href="journals/we_need">
+						 				<img src="/assets/article-we-need.png" class="mainfeatureimage" height="450">
+						 			</a>
+								</div>
 						 		
 								<div class="channel-article header idea"><a href="journals/we_need"><span>IDEA</span></a></div>
 						 		
@@ -308,46 +318,71 @@
 						
 					        </div> <!-- fluidrow //-->
 					        
-					    	<!-- <div class="fluidrow"> -->
-					    		
-								<!-- 10 -->																				    					    
-								<!-- <div class="psubfeature" onclick="">
+					    	<div class="fluidrow">
+								<!-- 6 -->								    		
+								<div class="psubfeature" onclick="">
 									<div class="innerpcell-subfeature">
-										<div class="bg-grow h1"><a href="#">GROW</a></div>
-									    <div class="h2"><a href="#"> Shift and Pivot: Monitor Your Audience, Then Self-Correct</a><span class="byline">&nbsp;by&nbsp;<a href="#">Debra Kaye</a></span></div>
-									    <div class="shares sharrre" data-title="sharrre" data-url=""><span id="article-share"><span class="share-count">187</span> <span class="share-text">SHARES</span></span></div>
+										<div class="bg-industry-news-pink h1">
+											<a href="journals/tales_to_go_releases">INDUSTRY NEWS</a>
+										</div>
+									    <div class="h2">
+									    	<a href="journals/tales_to_go_releases" style="text-decoration: none;">
+									    		Tales2Go Releases Android Version of its Award-Winning Service
+									    	</a>
+									    	<span class="byline">&nbsp;by&nbsp;
+									    		<a>Jacob Hanson, Contributor</a>
+									    	</span>
+								    	</div>
 									</div>
-								</div> -->								
-								
-								<!-- 11 -->																				    					    					    
-								<!-- <div class="psubfeature" onclick="">
+								</div>					
+								<!-- 7 -->		
+								<div class="psubfeature" onclick="">
 									<div class="innerpcell-subfeature">
-										<div class="bg-default h1">VIDEO&nbsp;|&nbsp;<a href="#">THE PLAYBOOK</a></div>
-									    <div class="h2"><a href="#">Kick Your Employees Out of the Office. Seriously</a><span class="byline">&nbsp;by&nbsp;<a href="#">Christine Lagorio-Chafkin</a></span></div>
-									    <div class="shares sharrre" data-title="sharrre" data-url=""><span id="article-share"><span class="share-count">170</span> <span class="share-text">SHARES</span></span></div>
+										<div class="bg-industry-news-brown h1">
+											<a href="journals/unique_az">INDUSTRY NEWS</a>
+										</div>
+									    <div class="h2">
+									    	<a href="journals/unique_az" style="text-decoration: none;">
+									    		Unique AZ District Closes Achievement Gap with Blended Learning Approach
+									    	</a>
+									    	<span class="byline">&nbsp;by&nbsp;
+									    		<a>Jacob Hanson, Contributor</a>
+									    	</span>
+								    	</div>
 									</div>
-								</div> -->								
-								
-								<!-- 12 -->																				    					    
-								<!-- <div class="psubfeature" onclick="">
+								</div>					
+								<!-- 8 -->			
+								<div class="psubfeature">
 									<div class="innerpcell-subfeature">
-										<div class="bg-people h1"><a href="#">PEOPLE</a></div>
-									    <div class="h2"><a href="#">Is Obamacare Good for Small Businesses? It's Complicated</a><span class="byline">&nbsp;by&nbsp;<a href="#">Adam Bluestein</a></span></div>
-									    <div class="shares sharrre" data-title="sharrre" data-url=""><span id="article-share"><span class="share-count">61</span> <span class="share-text">SHARES</span></span></div>
+										<div class="bg-industry-news-blue h1">
+											<a href="journals/charter_school_assoc">INDUSTRY NEWS</a>
+										</div>
+									    <div class="h2">
+									    	<a href="journals/charter_school_assoc" style="text-decoration: none;">
+									    		Charter School Associates Selects observe4success as Classroom Observation Partner
+									    	</a>
+									    	<span class="byline">&nbsp;by&nbsp;
+									    		<a>Jacob Hanson, Contributor</a>
+									    	</span>
+								    	</div>
 									</div>
-								</div> -->								
+								</div>								
 						
-							<!-- </div>  -->
+							</div>
 							<!-- fluidrow //-->
-					
 						</div>
 					
 					
 					
 						<div style="position: absolute; top: 0px; left: 0px; z-index: 99; display: none;" class="slide cycle-slide">
 							<div class="fluidrow mainfeaturerow">
-								<!-- 9 -->																				    					
-						 		<a href="journals/checklist_of_top_10"><img src="/assets/article-checklist-of-top-10.png" class="mainfeatureimage" height="450" width="970"></a>
+								<!-- 9 -->	
+
+								<div style="margin-left: 16%;">
+							 		<a href="journals/checklist_of_top_10">
+							 			<img src="/assets/article-checklist-of-top-10.png" class="mainfeatureimage" height="450">
+							 		</a>
+								</div>
 						 		
 								<div class="channel-article header tactic"><a href="journals/checklist_of_top_10"><span>TACTIC</span></a></div>
 						 		
@@ -358,24 +393,57 @@
 						
 					        </div> <!-- fluidrow //-->
 					        
-					    	<!-- <div class="fluidrow"> -->
+					    	<div class="fluidrow">
 								<!-- 10 -->																				    					    
-								<!-- <div class="psubfeature" onclick="">
+								<div class="psubfeature" onclick="">
 									<div class="innerpcell-subfeature">
-										<div class="bg-grow h1"><a href="#">GROW</a></div>
+
+										<div class="bg-industry-news-pine h1">
+											<a href="journals/tulsa_charter">INDUSTRY NEWS</a>
+										</div>
+									    <div class="h2">
+									    	<a href="journals/tulsa_charter" style="text-decoration: none;">
+									    		Tulsa Charter School sells cookies to fund purchase of observe4success
+									    	</a>
+									    	<span class="byline">&nbsp;by&nbsp;
+									    		<a>The LC Staff</a>
+									    	</span>
+								    	</div>
+										
+										<!-- <div class="bg-grow h1"><a href="#">GROW</a></div>
 									    <div class="h2"><a href="#"> Shift and Pivot: Monitor Your Audience, Then Self-Correct</a><span class="byline">&nbsp;by&nbsp;<a href="#">Debra Kaye</a></span></div>
-									    <div class="shares sharrre" data-title="sharrre" data-url=""><span id="article-share"><span class="share-count">187</span> <span class="share-text">SHARES</span></span></div>
+									    <div class="shares sharrre" data-title="sharrre" data-url=""><span id="article-share"><span class="share-count">187</span> <span class="share-text">SHARES</span></span></div> -->
+									    									    									
 									</div>
-								</div> -->								
+								</div>					
 								
-								<!-- 11 -->																				    					    					    
-								<!-- <div class="psubfeature" onclick="">
+								<!-- 11 -->			
+								<div class="psubfeature">
 									<div class="innerpcell-subfeature">
-										<div class="bg-default h1">VIDEO&nbsp;|&nbsp;<a href="#">THE PLAYBOOK</a></div>
-									    <div class="h2"><a href="#">Kick Your Employees Out of the Office. Seriously</a><span class="byline">&nbsp;by&nbsp;<a href="#">Christine Lagorio-Chafkin</a></span></div>
-									    <div class="shares sharrre" data-title="sharrre" data-url=""><span id="article-share"><span class="share-count">170</span> <span class="share-text">SHARES</span></span></div>
+										<div class="bg-industry-news-tan h1">
+											<a href="journals/mycore">INDUSTRY NEWS</a>
+										</div>
+									    <div class="h2">
+									    	<a href="journals/mycore" style="text-decoration: none;">
+									    		myCore now offers CCSS-Aligned Units and Lessons
+									    	</a>
+									    	<span class="byline">&nbsp;by&nbsp;
+									    		<a>Jacob Hanson, Contributor</a>
+									    	</span>
+								    	</div>
 									</div>
-								</div> -->								
+								</div>								
+																									    					    					    
+								<div class="psubfeature" onclick="">
+									<div class="innerpcell-subfeature">
+										<div></div>
+										
+										<!-- <div class="bg-default h1">VIDEO&nbsp;|&nbsp;<a href="#">THE PLAYBOOK</a></div>
+									    <div class="h2"><a href="#">Kick Your Employees Out of the Office. Seriously</a><span class="byline">&nbsp;by&nbsp;<a href="#">Christine Lagorio-Chafkin</a></span></div>
+									    <div class="shares sharrre" data-title="sharrre" data-url=""><span id="article-share"><span class="share-count">170</span> <span class="share-text">SHARES</span></span></div> -->
+									    
+									</div>
+								</div>								
 								
 								<!-- 12 -->																				    					    
 								<!-- <div class="psubfeature" onclick="">
@@ -404,11 +472,6 @@
 								
 				</div>
 				<br>
-
-
-
-
-
 
 
 				<!-- headlines -->
@@ -575,8 +638,8 @@
 										</a>
 									</div>
 									
-									<div class="fluidrow row4">
-										<!-- 21 -->
+									<!-- <div class="fluidrow row4">
+										
 										<a href="" class="pin51277 widerowcell prow1x3">
 											<div class="innerpcell">
 												<div class="icellcontainer line-default" onclick="">
@@ -598,9 +661,8 @@
 												</div>
 											</div>
 										</a>
-									</div>
-									
-									<!-- <div class="fluidrow row5" style="border-style: solid; border-width: 3px; border-color: yellow;"> -->
+									</div> -->
+																		
 																				
 									<div class="fluidrow row5">
 										
@@ -663,13 +725,20 @@
 										<a href="#" class="pin51303 col3 ptext" onclick="">
 											<div class="innerpcell">
 												<div class="ptextcontainer picontainer line-startup">
-													<img class="pinboardimage" src="article-to-solution.png" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-4.jpg'">
 													
+													<img class="pinboardimage" src="/assets/article-blogs-and-links.png" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-4.jpg'">
+
+													<div class="headline-junebug">
+														<span class="gold">Blogs</span>
+														<span class="red">&amp;</span>
+														<span class="blue">Links</span>														
+													</div>
+																										
 													<div class="ptextbox">
-														<span class="pbyline">By&nbsp;<span class="pinnerlink" onclick="">position 23</span></span>
+														<span class="pbyline">&nbsp;<span class="pinnerlink" onclick=""></span></span>
 													</div>
 													<div class="ptextcat">
-														<span class="pinnerlink" onclick="">text 23</span>
+														<span class="pinnerlink" onclick=""></span>
 													</div>
 												</div>
 											</div>
@@ -746,7 +815,7 @@
 									
 								</div> <!-- phomepinboardUnit0 -->
 								
-								<div id="phomepinboardUnit1">
+								<!-- <div id="phomepinboardUnit1">
 									<div></div>
 									<div class="fluidrow wideadunitrow row0">
 										<div class="pwideadcontainer">
@@ -776,7 +845,8 @@
 												</div>
 											</div>
 										</a>
-									</div>
+									</div> -->									
+									
 								
 									<div class="fluidrow row2">
 										<!-- 27 -->
@@ -1029,8 +1099,6 @@
 				<!-- <div style="height: 20px;"></div> -->
 								
 			</div>			    
-			
-		 	<%= render 'share/backtotop' %>
 			
 		</section>
 		

@@ -36,15 +36,17 @@
 		</style>		
 			
 		<style type="text/css">
-		@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
+			@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
 		</style>
 			
 			
-		<style type="text/css">
+		<!-- <style type="text/css">
 			#article_left_col{ width: 580px !important;} 
 			#center_col { width: 950px !important;} 
 			h1.indexhead { margin: 0px; padding: 0px;}
-		</style>
+		</style> -->		
+		
+		
 		
 		<script type="text/javascript" src="/assets/entrepeneurs_jquery-1.js"></script> 
 		<script type="text/javascript" src="/assets/entrepeneurs_jquery.js"></script>
@@ -54,13 +56,14 @@
 		
 		<link href="/assets/screen_headlines.css" media="screen, projection" rel="stylesheet" type="text/css">
 
-		<link href="/assets/ink_screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-		
+		<!-- <link href="/assets/ink_screen.css" media="screen, projection" rel="stylesheet" type="text/css"> -->
+				
 
-		<header>					
-			
+		<header>			
+					
+			<%= render 'share/backtotop' %>
+						
 	    	<%= render 'layouts/flash_alert' %>
-	    	
 			
 		</header>		
 		
@@ -69,17 +72,15 @@
 			<div style="background-color: white;">
 				
 				<div style="height: 30px;"></div>
-			    
 				
 				<div id="container" class="inner">
 		
-
 					<div id="bigarticlehead">
 	                	
-	                	<img src="/assets/article-k12-digital.png" alt="article-k12-digital.png">
-	                
-	       				<!-- <div id="channel-article-header" class="bg-perspective"><span class="channel"><a href="#">PERSPECTIVE</a></span></div> -->
-	       					
+						<div style="margin-left: 10%;">
+					 		<img src="/assets/article-k12-digital.png" class="mainfeatureimage" height="450">
+						</div>
+	                	
 	       				<div class="channel-article header perspective"><span>PERSPECTIVE</span></div>
 	        			               
 	        			<h1 id="headline">How BIG <em>is</em> the K-12 Digital Curriculum Market?
@@ -95,14 +96,11 @@
 			
 					<div id="maincolumn" class="withsidebar">
 			
-	
 		    			<div id="articlecontent">
 		    				<a name="articlecontent"></a>
 		
 							<div id="toppromo"></div>
 
-
-		
 		 					<bodycopy id="bodycopy">
 		 						
 		 						
@@ -199,20 +197,8 @@
 
 				<div style="height: 30px;"></div>
 				
-		 		<%= render 'share/backtotop' %>
 								
 			</div> <!--white -->
-			
+
 		</section>
-		
-		
-<!-- <script>
-$(document).ready(function () {
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-  $('#backtotopbutton').css({'display':'none'});
-  $('#prev').css({'display':'none'});
-  $('#next').css({'display':'none'});
-  $('head').append('<script type="text/javascript" src="http://www.inc.com/lib/jquery-cycle2/jquery.cycle2.carousel.min.js"></script>');
-}
-});
-</script> -->
+

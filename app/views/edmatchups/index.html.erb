@@ -1,25 +1,209 @@
 <% provide(:title, 'EdMatchUp Service') %>
 
-<div class="wrapper row1">
-  <div id="header" class="clear">
-  	
-	<%= render 'share/title'%>
-  	
-    <%= render 'share/site_search' %>  
-    
-    <%= render 'share/navigate' %>  
-    
-  </div>
-</div>
+		<link title="Main" rel="stylesheet" type="text/css" href="/assets/shadow_animate_files/home.css">
+		<link href="/assets/shadow_animate_files/demo.css" rel="stylesheet">
+	
 
-<div class="wrapper row3">
-  <div id="container" class="clear">
-    <div id="content">
-      <div id="comments" style="height: 480px">
-        <h2>EdMatchUp Service entry...</h2>
-      	<%= image_tag("image_coming_soon.png") %>
-      	<p><em>Please leave us a message through our easy Contact form.</em></p>
-      </div>
-    </div>
-  </div>
-</div>
+		<style type="text/css">
+		
+			@font-face {
+				font-family: KlavikaExtraLight;
+				src: url('/assets/KlavikaWebDisplayExtraLight.eot');
+				src: url('/assets/KlavikaWebDisplayExtraLight.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebDisplayExtraLight.woff') format('woff');
+			}
+			@font-face {
+				font-family: KlavikaLight;
+				src: url('/assets/KlavikaWebBasicLight.eot');
+				src: url('/assets/KlavikaWebBasicLight.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicLight.woff') format('woff');
+			}
+			@font-face {
+				font-family: KlavikaRegular;
+				src: url('/assets/KlavikaWebBasicRegular.eot');
+				src: url('/assets/KlavikaWebBasicRegular.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicRegular.woff') format('woff');
+			}		
+			@font-face {
+				font-family: KlavikaMedium;
+				src: url('/assets/KlavikaWebBasicMedium.eot');
+				src: url('/assets/KlavikaWebBasicMedium.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicMedium.woff') format('woff');
+			}
+			@font-face {
+				font-family: KlavikaBold;
+				src: url('/assets/KlavikaWebBasicBold.eot');
+				src: url('/assets/KlavikaWebBasicBold.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicBold.woff') format('woff');
+			}
+			@font-face {
+				font-family: KlavikaBlack;
+				src: url('/assets/KlavikaWebDisplayBlack.eot');
+				src: url('/assets/KlavikaWebDisplayBlack.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebDisplayBlack.woff') format('woff');
+			}
+
+
+		div .round { 
+		    background: #000;
+		   		    
+		    height: 100px;
+		    width: 100px;
+		    border-radius: 50px;
+		    margin: 0px;
+		    -webkit-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 1);
+		    -moz-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 1);
+		    box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 1); 
+		}
+
+
+
+		</style>		
+			
+		<!-- <script type="text/javascript" src="/assets/entrepeneurs_jquery-1.js"></script> 
+		<script type="text/javascript" src="/assets/entrepeneurs_jquery.js"></script> -->
+
+		<script src="/assets/shadow_animate_files/jquery-1.js"></script>
+		<script src="/assets/shadow_animate_files/jquery.js"></script>
+
+		
+		<link href="/assets/screen_headlines.css" media="screen, projection" rel="stylesheet" type="text/css">
+	    
+		<header>					
+			
+	    	<%= render 'layouts/flash_alert' %>
+	    	
+			<div class="table-main">			
+				<div class="row">
+					<div class="cell-250">
+						<div class="table-main">
+							<div class="row">
+								<div class="cell-250" style="padding-left: 24px;">
+						  			<%= image_tag("image_learning_counsel.png", :alt => '') %>
+						  		</div>
+							</div>
+							<div class="row">
+								<div class="cell-125" style="padding-left: 24px;">
+									<p style="font-family: msyh; font-size: 12px;">News and Context for the<br>Shift to Digital Curriculum</p>
+						  		</div>
+							</div>							
+						</div>
+					</div>
+					<div class="cell-650">
+						<div class="table-main">
+							<div class="row">
+								<div class="cell-650">
+									<div id="main_header_adblock_1">									
+										<h3>Space Available</h3>
+									</div>					
+								</div>			
+							</div>							
+						</div>
+					</div>
+					<div class="cell-100%">
+						<div class="table-main">
+							<div class="row">
+								<div class="cell-100percent">
+				 						<!-- link_to image_tag(“/assets/EdMatchUp_logo.png”, :class=>’′), :url =>{:controller=> ‘’,:action=>’’} -->															
+									<div id="edmatchuplogo">
+										<%= link_to image_tag("EdMatchUp_logo.png"), edmatchup_path %>															
+									</div>							
+						  		</div>
+							</div>
+							<div class="row">
+								<div class="cell-100percent">
+									<div align="center">
+										<%= link_to image_tag("image_coming_soon_8k.png", :alt => 'Comming Soon'), edmatchup_path %>															
+									</div>							
+						  		</div>							
+							</div>
+						</div>
+					</div>
+				</div>					
+			</div>	
+			  		
+			<!-- <div class="cell-100">
+	  			 image_tag("image_header_1.jpg", :alt => '') 
+	  			 					
+	  		</div>
+			<div class="cell-100">
+				 image_tag("image_header_2.jpg", :alt => '') 
+	  		</div> -->			  		
+			
+		</header>		
+		
+		<section>
+			
+			<div style="background-color: white;">
+				
+				<div style="height: 30px;"></div>
+
+				<div style="height: 30px;"></div>
+
+		
+				<a href="#" id="btn_1" >
+					<img src="/assets/button-round-amber-1.png" class="round" onmousedown="jQuery(this).stop().animate({boxShadow: '2px 2px 5px 0px rgba(0, 0, 0, 1)', top: 3}, 'fast')" onmouseup="jQuery(this).stop().animate({boxShadow: '3px 3px 10px 0px rgba(0, 0, 0, 1)', top: 0}, 'fast')"/>
+				</a>
+
+				<div style="height: 30px;"></div>
+
+
+				<div class="table-white-edmatchup">
+					<div class="row">
+						<div class="cell-600">
+							<table class="table-yellow">
+								<div class="row">
+									<div class="cell-100percent">
+										<h3 style="padding: 0px 0px 0px 170px;">EdMatchUp</h3>
+										<h4 style="padding: 0px 0px 0px 120px;">Digital Curriculum Matching</h4>
+									</div>
+								</div>
+								<div class="row">
+									<div class="cell-100percent">
+										<h3 style="padding: 0px 0px 0px 130px;">Get Started - It's Free</h3>
+										
+									</div>
+								</div>
+								<div class="row">
+									<div class="cell-100percent">
+										<h4 style="padding: 0px 0px 0px 60px;display: inline-block;">SEARCH EdMatchUp</h4>													
+										<input type="text" class="input-search-1" placeholder="Search" style="display: inline-block;">
+									</div>
+								</div>
+								<div class="row">
+									<div class="cell-100percent">
+										<div style="display: inline-block;">
+											<p style="line-height: 12px; font-size: 12px; font-weight: bolder; padding: 0px 0px 0px 60px;">
+												Create<br>
+												Product<br>
+												or<br>
+												Inventory<br>
+												Profile<br><br><br>
+											</p>
+										</div>
+										
+										<% if !session[:signed_in] %>
+											<%= render 'layouts/menu_accounts' %>
+										<% else %>
+											<%= render 'layouts/menu_accounts_signed_in' %>    							
+										<% end %>
+										
+									</div>
+								</div>
+							</table>
+						</div>
+						<div class="cell-300" style="padding: 10px 20px 40px 0px;">
+							<h4>How does it work?</h4>
+							
+							
+				  			 <!-- image_tag("image_edmatchup_works.png", :width => '300',  :alt => '') -->	  			 
+				  			  
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+				<div style="height: 30px;"></div>
+				<div style="height: 30px;"></div>
+
+
+
+
+
+
