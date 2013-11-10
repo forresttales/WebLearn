@@ -1,6 +1,11 @@
 Weblearn::Application.routes.draw do
    
 
+  get "archives/index"
+  get "archives/new"
+  get "archives/show"
+  get "archives/update"
+  get "archives/create"
   get "test/basic"
   get "static_pages/test"
   get "static_pages/fonts"
@@ -23,6 +28,9 @@ Weblearn::Application.routes.draw do
   get "journals/unique_az"
   get "journals/tales_to_go_releases"
   get "journals/tulsa_charter"
+  get "journals/blogs_and_links"
+  get "journals/educating_for_the_design"
+  get "journals/how_to_be"
   
   
   
@@ -266,6 +274,7 @@ Weblearn::Application.routes.draw do
   resources :teachers
   resources :institutes
   resources :publishers
+  resources :static_pages
 
 
   match '/about', to: 'users#about', via: 'get'

@@ -36,15 +36,9 @@
 		</style>		
 			
 		<style type="text/css">
-		@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
+			@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
 		</style>
 			
-		<style type="text/css">
-			#article_left_col{ width: 580px !important;} 
-			#center_col { width: 950px !important;} 
-			h1.indexhead { margin: 0px; padding: 0px;}
-		</style>
-
 		<link href="/assets/screen_headlines.css" media="screen, projection" rel="stylesheet" type="text/css">
 		
 		<script type="text/javascript" src="/assets/entrepeneurs_jquery-1.js"></script> 
@@ -54,7 +48,9 @@
 
 
 		<header>					
-			
+
+			<%= render 'share/backtotop' %>
+								
 	    	<%= render 'layouts/flash_alert' %>
 			
 		</header>		
@@ -192,8 +188,6 @@
 						
 					<div style="height: 30px;"></div>
 					
-			 		<%= render 'share/backtotop' %>
-								
 			</div> <!--white -->
 			
 		</section>

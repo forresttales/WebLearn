@@ -1,0 +1,220 @@
+<% provide(:title, 'Industry News') %>
+
+		<style type="text/css">
+
+			@font-face {
+				font-family: KlavikaExtraLight;
+				src: url('/assets/KlavikaWebDisplayExtraLight.eot');
+				src: url('/assets/KlavikaWebDisplayExtraLight.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebDisplayExtraLight.woff') format('woff');
+			}
+			@font-face {
+				font-family: KlavikaLight;
+				src: url('/assets/KlavikaWebBasicLight.eot');
+				src: url('/assets/KlavikaWebBasicLight.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicLight.woff') format('woff');
+			}
+			@font-face {
+				font-family: KlavikaRegular;
+				src: url('/assets/KlavikaWebBasicRegular.eot');
+				src: url('/assets/KlavikaWebBasicRegular.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicRegular.woff') format('woff');
+			}		
+			@font-face {
+				font-family: KlavikaMedium;
+				src: url('/assets/KlavikaWebBasicMedium.eot');
+				src: url('/assets/KlavikaWebBasicMedium.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicMedium.woff') format('woff');
+			}
+			@font-face {
+				font-family: KlavikaBold;
+				src: url('/assets/KlavikaWebBasicBold.eot');
+				src: url('/assets/KlavikaWebBasicBold.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicBold.woff') format('woff');
+			}
+			@font-face {
+				font-family: KlavikaBlack;
+				src: url('/assets/KlavikaWebDisplayBlack.eot');
+				src: url('/assets/KlavikaWebDisplayBlack.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebDisplayBlack.woff') format('woff');
+			}
+
+		</style>		
+			
+		<style type="text/css">
+			@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
+		</style>
+			
+		<link href="/assets/screen_headlines.css" media="screen, projection" rel="stylesheet" type="text/css">
+		
+		<script type="text/javascript" src="/assets/entrepeneurs_jquery-1.js"></script> 
+		<script type="text/javascript" src="/assets/entrepeneurs_jquery.js"></script>
+
+		<script type="text/javascript" src="/assets/pinboards.js"></script> 
+
+
+		<header>					
+
+			<%= render 'share/backtotop' %>
+			
+	    	<%= render 'layouts/flash_alert' %>
+	    	
+		</header>		
+		
+	    		    	
+	    <a href="javascript:void(0)" id="demo">render page</a>
+	    
+  <!-- id           :integer          not null, primary key
+  article_id   :integer
+  article_type         :string(100)
+  name_url     :string(100)
+  name_file    :string(50)
+  name_author  :string(50)
+  name_admin   :string(50)
+  key_words    :text
+  date_article :date
+  created_at   :datetime
+  updated_at   :datetime -->
+  	    
+	    
+	    <div><span>id: </span><span id="render_id"></span></div>
+	    <div><span>article_id: </span><span id="render_article_id"></span></div>
+	    <div><span>article_type: </span><span id="render_article_type"></span></div>
+	    <div><span>name_url: </span><span id="render_name_url"></span></div>
+	    <div><span>name_file: </span><span id="render_name_file"></span></div>
+	    <div><span>name_author: </span><span id="render_name_author"></span></div>
+	    <div><span>name_admin: </span><span id="render_name_admin"></span></div>
+	    <div><span>key_words: </span><span id="render_key_words"></span></div>
+	    <div><span>date_article: </span><span id="render_date_article"></span></div>
+	    <div><span>created_at: </span><span id="render_created_at"></span></div>
+	    <div><span>updated_at: </span><span id="render_updated_at"></span></div>
+	    
+	    	    	
+		<div id="render"></div>
+
+
+<script>
+  
+  	var name_url = gon.info.name_url;
+	var name_file = gon.info.name_file;
+	//var get_file = "http://localhost:3000/" + name_url + "/" + name_file + ".htm";
+	var get_file = "../" + name_url + "/" + name_file + ".htm";
+
+	var id = gon.info.id;	
+	var article_id = gon.info.article_id;
+	var article_type = gon.info.article_type;	
+	var name_url = gon.info.name_url;	
+	var name_file = gon.info.name_file;	
+	var name_author = gon.info.name_author;	
+	var name_admin = gon.info.name_admin;	
+	var key_words = gon.info.key_words;	
+	var date_article = gon.info.date_article;	
+	var created_at = gon.info.created_at;	
+	var updated_at = gon.info.updated_at;	
+	
+	//alert(get_file);
+	  
+	$(document).ready(function() {
+
+		$( "#render_id" ).html( id );
+		$( "#render_article_id" ).html( article_id );
+		$( "#render_article_type" ).html( article_type );
+		$( "#render_name_url" ).html( name_url );
+		$( "#render_name_file" ).html( name_file );
+		$( "#render_name_author" ).html( name_author );
+		$( "#render_name_admin" ).html( name_admin );
+		$( "#render_key_words" ).html( key_words );
+		$( "#render_date_article" ).html( date_article );
+		$( "#render_created_at" ).html( created_at );
+		$( "#render_updated_at" ).html( updated_at );
+	
+		$("#demo").click(function(){
+			// $.get( "http://localhost:3000/journal/pearson.html", function( data ) {
+				
+			$.get( get_file, function( data ) {
+				
+				$( "#render" ).html( data );
+			});
+		});
+	});
+  
+</script>		
+		
+		<!-- <section>
+			
+			<div style="background-color: white;">
+				
+				<div style="height: 30px;"></div>
+				
+				<div id="container" class="inner">
+			
+					<div id="maincolumn" class="withsidebar">
+						<div id="articlecontent">
+		    				<a name="articlecontent"></a>
+		            		
+		            		<div class="channel-article-header industry_news_orange">
+		            			<div><span>INDUSTRY NEWS</span></div>
+		            		</div>
+		            				        
+		            		<h1 id="headline">Pearson announces a strategic investment in English language learning platform Voxy
+			                    <span class="byline">BY <a href="#" style="color: black;" rel="author">The LC Staff</a>
+			    				</span>
+		    				</h1>                        
+		            		
+		            		<p id="deck"></p>  
+		        
+		                    <div id="panographic-image">
+		                		<img src="/assets/article-pearson.png" alt="article-pearson.png">
+		            		</div>
+		            		
+		                    <p class="imagecaption" id="pancaption"></p>
+		
+								
+							<bodycopy id="bodycopy">
+								
+			 					= render 'articles/pearson_3' 
+			 						
+							</bodycopy>
+	
+							<div id="middlepromo"></div>
+		
+						    <div id="bottom-of-article">
+						        <div class="photo-credit"></div>        
+						        <div class="updated">August 2, 2013</div>
+						    </div>
+			
+			
+						    <div id="article-credit">
+						
+								<div class="columnist-photo">
+									<a href="#" rel="author"><img src="/assets/article-icon-6-m-white.png" width="100px"></a>
+								</div>
+								<div class="color-notch bg-industry-news"></div>						
+								<div class="credits">
+									<p><span class="columnist-name"><a href="#">The LC Staff</a></span>
+									</p>	
+								</div>
+							
+							</div>
+			
+	
+						</div>
+	
+						<br clear="all">
+						
+						<div id="bottompromo"></div>
+		
+						<br clear="all">
+		    
+					</div> 
+	
+	
+					<div id="sidebar">
+						<div id="sidebar_inner">
+
+							
+						</div>
+					</div>
+				</div>
+
+					<br clear="all">
+						
+					<div style="height: 30px;"></div>
+					
+			</div> 
+			
+		</section> -->

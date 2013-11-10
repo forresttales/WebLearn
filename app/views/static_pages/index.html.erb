@@ -68,6 +68,16 @@
 			
 		<!-- <link href="/assets/entrepeneurs_screen.css" media="screen, projection" rel="stylesheet" type="text/css"> -->
 		
+		<!-- <style type="text/css">
+			@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
+		</style>
+			
+		<style type="text/css">
+			#article_left_col{ width: 580px !important;} 
+			#center_col { width: 950px !important;} 
+			h1.indexhead { margin: 0px; padding: 0px;}
+		</style> -->
+				
 							
 		<script type="text/javascript" src="/assets/entrepeneurs_jquery-1.js"></script> 
 		<script type="text/javascript" src="/assets/entrepeneurs_jquery.js"></script>
@@ -155,7 +165,12 @@
 			<div class="cell-100">
 				 image_tag("image_header_2.jpg", :alt => '') 
 	  		</div> -->			  		
-			
+	  		
+		 <!-- button_to "Sign up", {:controller => 'static_pages', :action => 'report', :id => 'Student'}  -->
+		 
+		 		
+		<%= link_to "Get Page", controller: "archives", action: "show", id: '1000' %>
+					
 		</header>		
 		
 		<section>
@@ -240,7 +255,9 @@
 								
 							    <div class="headlines">
 						        	<div class="h1"><a href="journals/k12_digital">How BIG <em>is</em> the K-12 Digital Curriculum Market?</a></div>
-						            <div class="h2">With so many schools in transition, executives want to know what others are doing with digital curriculum.  The question of what, how much of it, and more is being answered – from definitions to market size.<span class="byline">&nbsp;by&nbsp;<a href="#">Lei Lani Cauthen</a></span></div>
+						            <div class="h2">With so many schools in transition, executives want to know what others are doing with digital curriculum.  
+						            	The question of what, how much of it, and more is being answered – from definitions to market size.
+						            	<span class="byline">&nbsp;by&nbsp;<a href="#">LeiLani Cauthen</a></span></div>
 						        	<div class="space-20"></div>
 						        </div>
 					        </div>
@@ -249,7 +266,7 @@
 					    	<div class="fluidrow">					    
 								<!-- 2 -->																				    
 								<div class="psubfeature">
-									<div class="innerpcell-subfeature">
+									<div class="inner_cell-subfeature">
 										<div class="bg-industry-news-green h1">
 											<a href="journals/nationally_recognized">INDUSTRY NEWS</a>
 										</div>
@@ -266,9 +283,16 @@
 								
 								<!-- 3 -->																			    					    
 								<div class="psubfeature">
-									<div class="innerpcell-subfeature">
+									<div class="inner_cell-subfeature">
 										<div class="bg-industry-news-orange h1">
-											<a href="journals/pearson">INDUSTRY NEWS</a>
+											<!-- <a href="journals/pearson">INDUSTRY NEWS</a> -->
+																						
+											<!-- <a href="archives/show/1000">INDUSTRY NEWS</a> -->
+																						
+											<%= link_to "Industry News", controller: "archives", action: "show", id: '1000' %>
+											 																						
+											 <!-- link_to "Get Page", controller: "static_pages", action: "show", id: '12'  -->											
+											
 										</div>
 									    <div class="h2">
 									    	<a href="journals/pearson" style="text-decoration: none;">Pearson announces a strategic investment in English language learning platform Voxy</a>
@@ -281,7 +305,7 @@
 								
 								<!-- 4 -->
 								<div class="psubfeature">
-									<div class="innerpcell-subfeature">
+									<div class="inner_cell-subfeature">
 										<div class="bg-industry-news-violet h1">
 											<a href="journals/tales_to_go">INDUSTRY NEWS</a>
 										</div>
@@ -321,7 +345,7 @@
 					    	<div class="fluidrow">
 								<!-- 6 -->								    		
 								<div class="psubfeature" onclick="">
-									<div class="innerpcell-subfeature">
+									<div class="inner_cell-subfeature">
 										<div class="bg-industry-news-pink h1">
 											<a href="journals/tales_to_go_releases">INDUSTRY NEWS</a>
 										</div>
@@ -337,7 +361,7 @@
 								</div>					
 								<!-- 7 -->		
 								<div class="psubfeature" onclick="">
-									<div class="innerpcell-subfeature">
+									<div class="inner_cell-subfeature">
 										<div class="bg-industry-news-brown h1">
 											<a href="journals/unique_az">INDUSTRY NEWS</a>
 										</div>
@@ -353,7 +377,7 @@
 								</div>					
 								<!-- 8 -->			
 								<div class="psubfeature">
-									<div class="innerpcell-subfeature">
+									<div class="inner_cell-subfeature">
 										<div class="bg-industry-news-blue h1">
 											<a href="journals/charter_school_assoc">INDUSTRY NEWS</a>
 										</div>
@@ -396,7 +420,7 @@
 					    	<div class="fluidrow">
 								<!-- 10 -->																				    					    
 								<div class="psubfeature" onclick="">
-									<div class="innerpcell-subfeature">
+									<div class="inner_cell-subfeature">
 
 										<div class="bg-industry-news-pine h1">
 											<a href="journals/tulsa_charter">INDUSTRY NEWS</a>
@@ -419,7 +443,7 @@
 								
 								<!-- 11 -->			
 								<div class="psubfeature">
-									<div class="innerpcell-subfeature">
+									<div class="inner_cell-subfeature">
 										<div class="bg-industry-news-tan h1">
 											<a href="journals/mycore">INDUSTRY NEWS</a>
 										</div>
@@ -435,7 +459,7 @@
 								</div>								
 																									    					    					    
 								<div class="psubfeature" onclick="">
-									<div class="innerpcell-subfeature">
+									<div class="inner_cell-subfeature">
 										<div></div>
 										
 										<!-- <div class="bg-default h1">VIDEO&nbsp;|&nbsp;<a href="#">THE PLAYBOOK</a></div>
@@ -447,7 +471,7 @@
 								
 								<!-- 12 -->																				    					    
 								<!-- <div class="psubfeature" onclick="">
-									<div class="innerpcell-subfeature">
+									<div class="inner_cell-subfeature">
 										<div class="bg-people h1"><a href="#">PEOPLE</a></div>
 									    <div class="h2"><a href="#">Is Obamacare Good for Small Businesses? It's Complicated</a><span class="byline">&nbsp;by&nbsp;<a href="#">Adam Bluestein</a></span></div>
 									    <div class="shares sharrre" data-title="sharrre" data-url=""><span id="article-share"><span class="share-count">61</span> <span class="share-text">SHARES</span></span></div>
@@ -474,570 +498,1173 @@
 				<br>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 				<!-- headlines -->
 								
-				<div id="outercontainer">
-					<div class="container-bottom">
-						<div id="phomepinboard" class="pinboard homepinboard">
-							<div class="pinboardContent">
-								<div id="phomepinboardUnit0">
-									<div style="width: 100%; height: 30px; background-color: gray; margin-top: 4px; margin-bottom: 20px;"></div>
-									<div class="fluidrow row1">
-										
-										<!-- 13 -->										
-										<a href="journals/facing_down" class="pin50644 col1 pnormal">
-											<div class="innerpcell">
-												<div class="picontainer">
-													<img class="pinboardimage" src="/assets/article-facing-down.jpeg" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-8.jpg'">
-								            		<div class="catbox-article catbox thoughts_catbox">
-								            			<span>THOUGHTS</span>
-								            		</div>													
-												</div>
-												<div class="pheadline">
-													Facing Down the Learning Content Disruption
-													<span class="pbyline">by&nbsp<span class="pinnerlink">David Kafitz</span></span>
-												</div>
-											</div>
-										</a>
-								
-										<!-- 14 -->								
-										<a href="journals/whats_so_hard" class="pin51330 col2 pnormal" onclick=""; return false;">
-											<div class="innerpcell">
-												<div class="picontainer">
-													<img class="pinboardimage" src="/assets/article-whats-so-hard.png" style="height: 200px;" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-3.jpg'">
-								            		<div class="catbox-article catbox tactic_catbox">
-								            			<span>TACTIC</span>
-								            		</div>													
-												</div>
-												<div class="pheadline">
-													What’s So Hard About Choosing Digital Curriculum?
-													<span class="pbyline">by&nbsp;
-														<span class="pinnerlink" onclick="">The LC Staff</span>
-													</span>
-												</div>									
-											</div>
-										</a>
-								
-										<!-- 15 -->								
-										<a href="#" class="pin51320 col3 pnormal" onclick="">
-											<div class="innerpcell">
-												<div class="picontainer">
-													<img class="pinboardimage" src="300x200-6.jpg" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-6.jpg'">
-													<div class="linecolorbox bg-default"></div>
-													<div class="catcolorbox bg-default">
-														<span class="pinnerlink" onclick="">&nbsp</span>
-													</div>
-												</div>
-												
-												<!-- <div class="pheadline">
-													Chill Out, Entrepreneurs: Obamacare Will Be Good For The Economy
-													<span class="pbyline">by&nbsp;<span class="pinnerlink" onclick="innerLinkHandler(event);history.replaceState(null,null,'http://www.inc.com');phomepinboard.updateLocalStorage(0,'http://www.inc.com',51320);phomepinboard.intentionIntercept('http://www.inc.com/author/andrew-griffiths',0,'latestpinboard','normal','author','author','3562'); return false;">Andrew Griffiths</span>
-													</span>
-												</div> -->												
-												
-											</div>
-										</a>
-									</div>
+					
+					<div class="container-main">
+						<div class="board">
+							
+							
 									
-									<div class="fluidrow row2">
-										<!-- 16 -->										
-										<a href="#" class="pin51130 col1 pnormal" onclick="">
-											<div class="innerpcell">
-												<div class="picontainer">
-														<img class="pinboardimage" src="300x200-6.jpg" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-6.jpg'">
-													<div class="linecolorbox bg-default"></div>
-													<div class="catcolorbox bg-default">
-															
-														<span class="pinnerlink" onclick="">&nbsp</span>
-													</div>
-												</div>
-												
-												<!-- <div class="pheadline">
-													Edmund Phelps: How 'Flourishing Economies' Are Born
-													<img src="Entrepeneurs_files/videoicon_sm.png">
-														<span class="pbyline">by&nbsp;<span class="pinnerlink" onclick=""></span></span>
-												</div> -->												
-												
-											</div>
-										</a>
-										
-										<!-- 17 -->
-										<a href="journals/five_types" class="pin51323 col2 pnormal" onclick="">
-											<div class="innerpcell">
-												<div class="picontainer">
-													<img class="pinboardimage" src="/assets/article-five-types.png" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-1.jpg'">
-								            		<div class="catbox-article catbox thoughts_catbox">
-								            			<span>THOUGHTS</span>
-								            		</div>													
-												</div>
-												<div class="pheadline">
-													FIVE TYPES OF CURRICULUM “THINGS”
-													<span class="pbyline">by&nbsp;<span class="pinnerlink" onclick="">Lei Lani Cauthen</span></span>
-												</div>
-											</div>
-										</a>
-										
-										<!-- <div style="border-bottom: medium none;" class="col3 pimubig">
-											<div style="display: none;" id="gpt-imubig-ad-2" class="innerpcell">
-												<iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" name="google_ads_iframe_/4160/mv.inc/homepage/flexiblehalfpage_0" id="google_ads_iframe_/4160/mv.inc/homepage/flexiblehalfpage_0" frameborder="0" height="600" scrolling="no" width="300"></iframe>
-												<div class="padvertlabel">Advertisement</div>
-											</div>
-										</div> -->										
-										
-									</div>
-									
-									<div class="fluidrow row3">
-										<!-- 18 -->
-										<a href="" onclick="">
-											<div class="innerpcell">
-												<div class="ptextcontainer picontainer line-money">																										
-													<div class="ptextbox">
+							<div style="width: 100%; height: 30px; background-color: gray; margin-top: 4px; margin-bottom: 20px;"></div>
 
-															<span class="pbyline">&nbsp;<span class="pinnerlink" onclick=""> </span></span>															
-													</div>
-													<div class="ptextcat">
-														<span class="pinnerlink" onclick="">&nbsp</span>
-													</div>
-													
-												</div>
+
+							<div class="rowfluid boxtemp-black-d">
+								
+								<a href="journals/facing_down" class="col_1 p_normal">
+									<div class="inner_cell">
+										<div class="b_container">
+											<div class="img-cell-single">
+												<img src="png" onerror="this.src='/assets/error-260-180.png'">
 											</div>
-										</a>
-										<!-- 19 -->
-										<a href="">
-											<div class="innerpcell">
-												<div class="picontainer">
-														<img class="pinboardimage" src="300x200-4.jpg" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-4.jpg'">
-													<div class="linecolorbox bg-default"></div>
-													<div class="catcolorbox bg-default">
-														<span>&nbsp</span>
-													</div>
-												</div>
-												<div class="pheadline">
-													
-												</div>
-												<div class="ppartner">&nbsp <span class="ppartnername">&nbsp</span></div>
-												
-											</div>
-										</a>
-										<!-- 20 -->
-										<a style="cursor: default;" href="#" class="pin51306 col3 pnormal" onclick="">
-											<div style="visibility: hidden;" class="innerpcell">
-												<div class="picontainer">
-														<img class="pinboardimage" src="300x200-5.jpg" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-5.jpg'">
-													<div class="linecolorbox bg-default"></div>
-													<div class="catcolorbox bg-default">
-														<span class="pinnerlink" onclick="">&nbsp</span>
-													</div>
-												</div>
-												<div class="pheadline">
-													
-													<span class="pbyline">&nbsp;<span class="pinnerlink" onclick=""> </span></span>
-												</div>
-												
-											</div>
-										</a>
+											<div class="catcolorbox_posit">
+							            		<div class="catbox-article catbox thoughts_catbox">
+							            			<span>CATBOX</span>
+							            		</div>
+						            		</div>																								
+										</div>
+										<div class="b_headline">
+											This is a long line of headline text that goes here
+											<span class="pbyline">by&nbsp<span class="b_link">The Author</span></span>											
+										</div>
 									</div>
+								</a>
+						
+								<a href="journals/whats_so_hard" class="col_2 p_normal">
+									<div class="inner_cell">
+										<div class="b_container">
+											<div class="img-cell-single">
+												<img src="png" onerror="this.src='/assets/error-260-180.png'">
+											</div>
+											<div class="catcolorbox_posit">
+							            		<div class="catbox-article catbox tactic_catbox">
+							            			<span>CATBOX</span>
+							            		</div>
+						            		</div>																								
+										</div>
+										<div class="b_headline">
+											This is a long line of headline text that goes here
+											<span class="pbyline">by&nbsp<span class="b_link">The Author</span></span>											
+										</div>
+									</div>
+								</a>
+						
+								<a href="journals/educating_for_the_design" class="col_3 p_normal" onclick="">
+									<div class="inner_cell">
+										<div class="b_container">
+											<div class="img-cell-single">
+												<img src="png" onerror="this.src='/assets/error-260-180.png'">
+											</div>
+											<div class="catcolorbox_posit">
+							            		<div class="catbox-article catbox design_catbox">
+							            			<span>CATBOX</span>
+							            		</div>
+						            		</div>																								
+										</div>
+										<div class="b_headline">
+											This is a long line of headline text that goes here
+											<span class="pbyline">by&nbsp<span class="b_link">The Author</span></span>											
+										</div>
+									</div>
+								</a>
+								
+							</div>
+
+							<div class="container_space"></div>
+							
+							<div class="fluidrow boxtemp-red">
+								
+								<a href="journals/education_compared" class="col_1 b_portrait" onclick="">
+									<div class="inner_cell boxtemp-black">
+										<div class="b_container">
+											<div style="position: absolute; bottom: 0px;">
+												<img src="jpg" onerror="this.src='/assets/error-300-520.png'">
+											</div>
+											
+											<div class="catcolorbox_pos">
+							            		<div class="catbox-article catbox_pos perspective_catbox">
+							            			<span>PERSPECTIVE</span>
+							            		</div>
+						            		</div>								            		
+						            						            						
+										</div>
+										<div class="b_headline">
+											Education Compared to All Other Industry
+											<span class="pbyline">by&nbsp;<span class="b_link" onclick="">LeiLani Cauthen</span></span>
+										</div>
+									</div>
+								</a>
+								
+								<div class="col_2">
 									
-									<!-- <div class="fluidrow row4">
-										
-										<a href="" class="pin51277 widerowcell prow1x3">
-											<div class="innerpcell">
-												<div class="icellcontainer line-default" onclick="">
-													<div class="picontainer">
-														<img class="pinboardimage" src="643x290-3.jpg" onerror="this.src='http://images.inc.com/refreshgraphics/643x290-3.jpg'">
-													</div>
-													<div class="pwiderightbox">
-														<div class="pheadline">
-															
-														</div>
-														<span class="pbyline">&nbsp;<span class="pinnerlink" onclick="">&nbsp</span></span>
-														<div class="pdeck">
-															
-														</div>
-													</div>
-													<div class="widechannelheadline">
-														<span class="pinnerlink" onclick="">&nbsp</span>
-													</div>
-												</div>
+									<div class="inner_cell">
+										<div class="text_container b_container line-grow">
+											
+											<object type="application/x-shockwave-flash" data="http://www.youtube.com/v/UZePBZ-edfE&feature=youtu.be&noredirect=1" width="300" height="200">          	
+									            <param name="wmode" value="opaque" />
+									            <param name="quality" value="high" />
+									            <param name="bgcolor" value="#E9E9E9" />
+									            <param name="allowfullscreen" value="true" />
+									         	<param name="allowscriptaccess" value="never" />
+									         </object>
+
+											<div class="headline-excelsiorcomics">
+												<span>5 Key Areas of Success K12 Tech Integration Planning</span>
 											</div>
-										</a>
-									</div> -->
-																		
-																				
-									<div class="fluidrow row5">
-										
-										<!-- 22 -->																			
-										<a href="journals/education_compared" class="pin51290 col1 pportrait" onclick="">
-											<div class="innerpcell">
-												<div class="picontainer">
-													<div style="position: absolute; bottom: 0px;">
-														<img class="pinboardimage" src="/assets/article-education-compared.jpg" onerror="this.src='http://images.inc.com/refreshgraphics/300x520-3.jpg'">
-													</div>
-													
-													<!-- <div class="catcolorbox bg-default">
-														<span class="pinnerlink" onclick="">Perspective</span>
-													</div> -->													
-													
-													<div class="catcolorbox_pos">
-									            		<div class="catbox-article catbox_pos perspective_catbox">
-									            			<span>PERSPECTIVE</span>
-									            		</div>
-								            		</div>								            		
-								            						            						
-												</div>
-												<div class="pheadline">
-													Education Compared to All Other Industry
-													<span class="pbyline">by&nbsp;<span class="pinnerlink" onclick="">LeiLani Cauthen</span></span>
-												</div>
-											</div>
-										</a>
-										
-										<div class="col2 pimusmall">
-											<!-- <div style="display: none;" id="gpt-imusmall-ad-3" class="innerpcell"> -->
+
 																								
-											<div id="gpt-imusmall-ad-3" class="innerpcell">
-												
-												<div class="padvertlabel">Advertisement</div>
+											<div class="text_box">
+												<span class="pbyline">&nbsp;<span class="b_link" onclick=""></span></span>
+											</div>
+											<div class="text_cat">
+												<span class="b_link" onclick=""></span>
 											</div>
 										</div>
-										<!-- 23 -->			
-										
-										<!-- <a href="#" class="pin50247 col2 pnormal" onclick="">
-											<div class="innerpcell">
-												
-												<div class="picontainer">
-													<img class="pinboardimage" src="/assets/article-to-solution.png" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-4.jpg'">
-													<div class="linecolorbox bg-default"></div>
-													<div class="catcolorbox bg-default">
-														To Solution or Element – That is the Question
-														<span class="pinnerlink" onclick="">&nbsp</span>
-													</div>
-												</div>
-												<div class="pheadline">
-													
-													<img src="Entrepeneurs_files/videoicon_sm.png">
-														<span class="pbyline">&nbsp;<span class="pinnerlink" onclick="">&nbsp</span></span>
-												</div>
-												
+									</div>
+									
+								</div>
+								
+								<a href="journals/blogs_and_links" class="col_3" onclick="">
+									<div class="inner_cell">
+										<div class="line-lead">
+											
+											<div style="vertical-align: top;">
+												<img src="png" onerror="this.src='/assets/error-260-180.png'">
 											</div>
-										</a> -->		
-																		
-										<a href="#" class="pin51303 col3 ptext" onclick="">
-											<div class="innerpcell">
-												<div class="ptextcontainer picontainer line-startup">
-													
-													<img class="pinboardimage" src="/assets/article-blogs-and-links.png" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-4.jpg'">
 
-													<div class="headline-junebug">
-														<span class="gold">Blogs</span>
-														<span class="red">&amp;</span>
-														<span class="blue">Links</span>														
-													</div>
-																										
-													<div class="ptextbox">
-														<span class="pbyline">&nbsp;<span class="pinnerlink" onclick=""></span></span>
-													</div>
-													<div class="ptextcat">
-														<span class="pinnerlink" onclick=""></span>
-													</div>
-												</div>
+											<div class="headline-junebug">
+												<span class="gold">Blogs</span>
+												<span class="red">&amp;</span>
+												<span class="blue">Links</span>														
 											</div>
-										</a>										
-										
-									</div>
-									
-									<!-- <div class="fluidrow row6" style="border-style: solid; border-width: 3px; border-color: red;"> -->
-																				
-									<div class="fluidrow row6">
-										
-										<div class="col1 pblank">
-											<div class="innerpcell"></div>
-										</div>
-										<!-- 24 -->									
-										<a href="journals/to_solution" class="pin50247 col2 pnormal" onclick="">
-											<div class="innerpcell">
-												<div class="picontainer">
-													<img class="pinboardimage" src="/assets/article-to-solution-300-200.png" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-4.jpg'">
-								            		<div class="catbox-article catbox tactic_catbox">
-								            			<span>TACTIC</span>
-								            		</div>													
-												</div>
-												<div class="pheadline">
-													To Solution or Element – That is the Question
-													<img src="Entrepeneurs_files/videoicon_sm.png">
-														<span class="pbyline">By&nbsp;<span class="pinnerlink" onclick="">The LC Staff</span></span>
-												</div>
+																								
+											<div class="text_box">
+												<span class="pbyline">&nbsp;<span class="b_link" onclick=""></span></span>
 											</div>
-										</a>
-										<!-- 24 -->																			
-										<a href="#" class="pin51305 col3 pnormal" onclick="">
-											<div class="innerpcell">
-												<div class="picontainer">
-														<img class="pinboardimage" src="300x200-2.jpg" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-2.jpg'">
-													<div class="linecolorbox bg-default"></div>
-													<div class="catcolorbox bg-default">
-														<span class="pinnerlink" onclick="">&nbsp</span>
-													</div>
-												</div>
-												<div class="pheadline">
-													
-													<span class="pbyline">&nbsp;<span class="pinnerlink" onclick="">&nbsp</span></span>
-												</div>
-											</div>
-										</a>
-										
-									</div>
-									
-									<div class="fluidrow row7">
-										<!-- 25 -->																													
-										<a href="journals/coffee_chat" class="pin51316 widerowcell prow1x3">
-											<div class="innerpcell">
-												<div class="icellcontainer line-default" onclick="">
-													<div class="picontainer">
-														<img class="pinboardimage" src="/assets/article-coffee-chat.png" onerror="this.src='http://images.inc.com/refreshgraphics/643x290-4.jpg'">
-													</div>
-													<div class="pwiderightbox">
-														<div class="pheadline">
-														COFFEE CHAT WITH HOUSTON ISD	
-														</div>
-														<span class="pbyline">by&nbsp;<span class="pinnerlink" onclick="">The LC Staff</span></span>
-														<div class="pdeck">
-														Two of Houston Independent School District’s leaders, Beatriz Arnillas, and Angela Miller, answer questions of post by The Learning Counsel.  
-														</div>
-													</div>
-													<div class="widechannelheadline">
-														<span class="pinnerlink" onclick="">SPOTLIGHT</span>
-													</div>
-												</div>
-											</div>
-										</a>
-									</div>
-									
-								</div> <!-- phomepinboardUnit0 -->
-								
-								<!-- <div id="phomepinboardUnit1">
-									<div></div>
-									<div class="fluidrow wideadunitrow row0">
-										<div class="pwideadcontainer">
-											<div style="display: none;" id="gpt-wide-ad-4" class="pwideadunit"></div>
-										</div>
-									</div>
-								
-									<div class="fluidrow row1">
-										<a href="#" class="pin51291 widerowcell prow1x3">
-											<div class="innerpcell">
-												<div class="icellcontainer line-people" onclick="">
-													<div class="picontainer">
-														<img class="pinboardimage" src="643x290-2.jpg" onerror="this.src='http://images.inc.com/refreshgraphics/643x290-2.jpg'">														
-													</div>
-													<div class="pwiderightbox">
-														<div class="pheadline">
-															
-														</div>
-														<span class="pbyline">&nbsp;<span class="pinnerlink" onclick="">&nbsp</span></span>
-														<div class="pdeck">
-															
-														</div>
-													</div>
-													<div class="widechannelheadline">
-														<span class="pinnerlink" onclick="">&nbsp</span>
-													</div>
-												</div>
-											</div>
-										</a>
-									</div> -->									
-									
-								
-									<div class="fluidrow row2">
-										<!-- 27 -->
-										<a href="journals/wanted_new_leader" class="pin51299 col1 pnormal" onclick="">
-											<div class="innerpcell">
-												<div class="picontainer">
-													<img class="pinboardimage" src="/assets/article-wanted-new-leader.png" height="200px" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-8.jpg'">
-													<div class="linecolorbox bg-people"></div>
-													
-													
-								            		<div class="catbox-article catbox people_catbox">
-								            			<span>PEOPLE</span>
-								            		</div>													
-												</div>
-												<div class="pheadline">
-													WANTED: NEW LEADER & TEACHER FEATURES
-													<span class="pbyline">by&nbsp;<span class="pinnerlink" onclick="">LeiLani Cauthen</span></span>
-												</div>
-											</div>
-										</a>
-										<a href="#" class="pin51304 col2 pnormal" onclick="">
-											<div class="innerpcell">
-												<div class="picontainer">
-														<img class="pinboardimage" src="300x200-2.jpg" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-2.jpg'">
-													<div class="linecolorbox bg-default"></div>
-													<div class="catcolorbox bg-default">
-														<span class="pinnerlink" onclick="">&nbsp</span>
-													</div>
-												</div>
-												<div class="pheadline">
-													
-													<span class="pbyline">&nbsp;<span class="pinnerlink" onclick="">&nbsp</span></span>
-												</div>
-											</div>
-										</a>
-										<div style="border-bottom: medium none;" class="col3 pimubig">
-											<div style="display: none;" id="gpt-imubig-ad-5" class="innerpcell">
-												<div class="padvertlabel">Advertisement</div>
+											<div class="text_cat">
+												<span class="b_link" onclick=""></span>
 											</div>
 										</div>
 									</div>
+								</a>										
 								
-									<!-- fluidrow row3 -->
+							</div>
+							
+							<div class="fluidrow boxtemp-green">
 								
-									<!-- <div class="fluidrow row4">
-										<a href="http://www.inc.com/jeff-gross/is-a-money-trying-to-buy-your-business-beware.html" class="pin50972 widerowcell prow1x3">
-											<div class="innerpcell">
-												<div class="icellcontainer line-money" onclick="history.replaceState(null,null,'http://www.inc.com/1');phomepinboard.updateLocalStorage(1,'http://www.inc.com',50972);phomepinboard.intentionIntercept('http://www.inc.com/jeff-gross/is-a-money-trying-to-buy-your-business-beware.html',1,'latestpinboard','row1x3','article','article','50972'); return false;">
-													<div class="picontainer">
-														<img class="pinboardimage" src="Entrepeneurs_files/monkey-texting_pan_12371.jpg" onerror="this.src='http://images.inc.com/refreshgraphics/643x290-8.jpg'">
-													</div>
-													<div class="pwiderightbox">
-														<div class="pheadline">
-															Is a Monkey Trying to Buy Your Business? Beware.
-														</div>
-														<span class="pbyline">by&nbsp;<span class="pinnerlink" onclick="innerLinkHandler(event);history.replaceState(null,null,'http://www.inc.com/1');phomepinboard.updateLocalStorage(1,'http://www.inc.com',50972);phomepinboard.intentionIntercept('http://www.inc.com/author/jeff-gross',1,'latestpinboard','row1x3','author','author','3607'); return false;">Jeff Gross</span></span>
-														<div class="pdeck">
-															Unlike 'Bigfoot' buyers, monkeys do exist. And they can cost you, big-time.
-														</div>
-														<div class="pshares sharrre" data-title="sharrre" data-url="http://www.inc.com/jeff-gross/is-a-money-trying-to-buy-your-business-beware.html"><span class="psharecount">169</span> SHARES</div>
-													</div>
-													<div class="widechannelheadline">
-														<span class="pinnerlink" onclick="innerLinkHandler(event);history.replaceState(null,null,'http://www.inc.com/1');phomepinboard.updateLocalStorage(1,'http://www.inc.com',50972);phomepinboard.intentionIntercept('http://www.inc.com/money',1,'latestpinboard','row1x3','channel','channel','20'); return false;">MONEY</span>
-													</div>
-												</div>
-											</div>
-										</a>
-									</div>
-								
-									<div class="fluidrow row5">
-										<a href="http://www.inc.com/geoffrey-james/customer-service-an-opportunity-missed.html" class="pin51262 col1 pnormal" onclick="history.replaceState(null,null,'http://www.inc.com/1');phomepinboard.updateLocalStorage(1,'http://www.inc.com',51262);phomepinboard.intentionIntercept('http://www.inc.com/geoffrey-james/customer-service-an-opportunity-missed.html',1,'latestpinboard','normal','article','article','51262'); return false;">
-											<div class="innerpcell">
-												<div class="picontainer">
-														<img class="pinboardimage" src="Entrepeneurs_files/Kaytee-Riek-flickr-1725x810_27820.jpg" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-1.jpg'">
-													<div class="linecolorbox bg-grow"></div>
-													<div class="catcolorbox bg-grow">
-														<span class="pinnerlink" onclick="innerLinkHandler(event);history.replaceState(null,null,'http://www.inc.com/1');phomepinboard.updateLocalStorage(1,'http://www.inc.com',51262);phomepinboard.intentionIntercept('http://www.inc.com/grow',1,'latestpinboard','normal','channel','channel','24'); return false;">GROW</span>
-													</div>
-												</div>
-												<div class="pheadline">
-													Customer Service: An Opportunity Missed
-													<span class="pbyline">by&nbsp;<span class="pinnerlink" onclick="innerLinkHandler(event);history.replaceState(null,null,'http://www.inc.com/1');phomepinboard.updateLocalStorage(1,'http://www.inc.com',51262);phomepinboard.intentionIntercept('http://www.inc.com/author/geoffrey-james',1,'latestpinboard','normal','author','author','3160'); return false;">Geoffrey James</span></span>
-												</div>
-												<div class="pshares sharrre" data-title="sharrre" data-url="http://www.inc.com/geoffrey-james/customer-service-an-opportunity-missed.html"><span class="psharecount">135</span> SHARES</div>
-											</div>
-										</a>
-									
-										<div class="col2 pimusmall">
-											<div style="display: none;" id="gpt-imusmall-ad-6" class="innerpcell"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" name="google_ads_iframe_/4160/mv.inc/homepage/fixedrectangle_1" id="google_ads_iframe_/4160/mv.inc/homepage/fixedrectangle_1" frameborder="0" height="250" scrolling="no" width="300"></iframe><div class="padvertlabel">Advertisement</div></div>
-										</div>
-									
-										<a href="http://www.inc.com/M-Jeffrey-Hoffman/three-ways-to-beat-the-competition.html" class="pin51307 col3 ptext" onclick="history.replaceState(null,null,'http://www.inc.com/1');phomepinboard.updateLocalStorage(1,'http://www.inc.com',51307);phomepinboard.intentionIntercept('http://www.inc.com/M-Jeffrey-Hoffman/three-ways-to-beat-the-competition.html',1,'latestpinboard','text','article','article','51307'); return false;">
-											<div class="innerpcell">
-												<div class="ptextcontainer picontainer line-grow">
-													<div class="ptextbox">
-														3 WAYS TO BEAT THE COMPETITION
-														<span class="pbyline">by&nbsp;<span class="pinnerlink" onclick="innerLinkHandler(event);history.replaceState(null,null,'http://www.inc.com/1');phomepinboard.updateLocalStorage(1,'http://www.inc.com',51307);phomepinboard.intentionIntercept('http://www.inc.com/author/m-jeffrey-hoffman',1,'latestpinboard','normal','author','author','3601'); return false;">M. Jeffrey Hoffman</span></span>
-														<div class="pshares sharrre" data-title="sharrre" data-url="http://www.inc.com/M-Jeffrey-Hoffman/three-ways-to-beat-the-competition.html"><span class="psharecount">106</span> SHARES</div>
-													</div>
-													<div class="ptextcat">
-														<span class="pinnerlink" onclick="innerLinkHandler(event);history.replaceState(null,null,'http://www.inc.com/1');phomepinboard.updateLocalStorage(1,'http://www.inc.com',51307);phomepinboard.intentionIntercept('http://www.inc.com/grow',1,'latestpinboard','text','channel','channel','24'); return false;">GROW</span>
-													</div>
-												</div>
-											</div>
-										</a>
-									</div>
-								
-									<div class="fluidrow row6">
-										<a href="http://www.inc.com/jon-miller/how-to-build-a-data-driven-marketing-team.html" class="pin51265 col1 pnormal" onclick="history.replaceState(null,null,'http://www.inc.com/1');phomepinboard.updateLocalStorage(1,'http://www.inc.com',51265);phomepinboard.intentionIntercept('http://www.inc.com/jon-miller/how-to-build-a-data-driven-marketing-team.html',1,'latestpinboard','normal','article','article','51265'); return false;">
-											<div class="innerpcell">
-												<div class="picontainer">
-													<img class="pinboardimage" src="Entrepeneurs_files/digital-mountains-1940x900_29457.jpg" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-6.jpg'">
-												<div class="linecolorbox bg-grow"></div>
-												<div class="catcolorbox bg-grow">
-													<span class="pinnerlink" onclick="innerLinkHandler(event);history.replaceState(null,null,'http://www.inc.com/1');phomepinboard.updateLocalStorage(1,'http://www.inc.com',51265);phomepinboard.intentionIntercept('http://www.inc.com/grow',1,'latestpinboard','normal','channel','channel','25'); return false;">GROW</span>
-												</div>
-												</div>
-												<div class="pheadline">
-													How to Build a Data-Driven Marketing Team
-													<span class="pbyline">by&nbsp;<span class="pinnerlink" onclick="innerLinkHandler(event);history.replaceState(null,null,'http://www.inc.com/1');phomepinboard.updateLocalStorage(1,'http://www.inc.com',51265);phomepinboard.intentionIntercept('http://www.inc.com/author/jon-miller',1,'latestpinboard','normal','author','author','3515'); return false;">Jon Miller</span></span>
-												</div>
-												<div class="pshares sharrre" data-title="sharrre" data-url="http://www.inc.com/jon-miller/how-to-build-a-data-driven-marketing-team.html"><span class="psharecount">280</span> SHARES</div>
-											</div>
-										</a>
-										<a href="http://www.inc.com/les-mckeown/how-to-avoid-the-curse-of-success.html" class="pin51279 col2 pnormal" onclick="history.replaceState(null,null,'http://www.inc.com/1');phomepinboard.updateLocalStorage(1,'http://www.inc.com',51279);phomepinboard.intentionIntercept('http://www.inc.com/les-mckeown/how-to-avoid-the-curse-of-success.html',1,'latestpinboard','normal','article','article','51279'); return false;">
-											<div class="innerpcell">
-												<div class="picontainer">
-														<img class="pinboardimage" src="Entrepeneurs_files/cloudsovernewyorkpano_21375.jpg" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-3.jpg'">
-													<div class="linecolorbox bg-grow"></div>
-													<div class="catcolorbox bg-grow">
-														<span class="pinnerlink" onclick="innerLinkHandler(event);history.replaceState(null,null,'http://www.inc.com/1');phomepinboard.updateLocalStorage(1,'http://www.inc.com',51279);phomepinboard.intentionIntercept('http://www.inc.com/grow',1,'latestpinboard','normal','channel','channel','6'); return false;">GROW</span>
-													</div>
-												</div>
-												<div class="pheadline">
-													Better Believe It: There Is a Dark Side to Success
-													<span class="pbyline">by&nbsp;<span class="pinnerlink" onclick="innerLinkHandler(event);history.replaceState(null,null,'http://www.inc.com/1');phomepinboard.updateLocalStorage(1,'http://www.inc.com',51279);phomepinboard.intentionIntercept('http://www.inc.com/author/les-mckeown',1,'latestpinboard','normal','author','author','3361'); return false;">Les McKeown</span></span>
-												</div>
-												<div class="pshares sharrre" data-title="sharrre" data-url="http://www.inc.com/les-mckeown/how-to-avoid-the-curse-of-success.html"><span class="psharecount">116</span> SHARES</div>
-											</div>
-										</a>
+								<div class="col_1">
+									<div class="inner_cell"></div>
+								</div>
+
+								<a href="journals/to_solution" class="col_2 p_normal" onclick="">
+									<div class="inner_cell">
 										
-										<a href="http://www.inc.com/abigail-tracy/amazon-launches-new-program-for-young-startups.html" class="pin51312 col3 pnormal" onclick="history.replaceState(null,null,'http://www.inc.com/1');phomepinboard.updateLocalStorage(1,'http://www.inc.com',51312);phomepinboard.intentionIntercept('http://www.inc.com/abigail-tracy/amazon-launches-new-program-for-young-startups.html',1,'latestpinboard','normal','article','article','51312'); return false;">
-											<div class="innerpcell">
-												<div class="picontainer">
-														<img class="pinboardimage" src="Entrepeneurs_files/1725x810_27904.jpg" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-7.jpg'">
-													<div class="linecolorbox bg-default"></div>
-													<div class="catcolorbox bg-default">
-														<span class="pinnerlink" onclick="innerLinkHandler(event);history.replaceState(null,null,'http://www.inc.com/1');phomepinboard.updateLocalStorage(1,'http://www.inc.com',51312);phomepinboard.intentionIntercept('http://www.inc.com/wire',1,'latestpinboard','normal','channel','channel','374'); return false;">WIRE</span>
-													</div>
-												</div>
-												<div class="pheadline">
-													New Cloud Service: Amazon Looks to Attract Young Companies
-													<span class="pbyline">by&nbsp;<span class="pinnerlink" onclick="innerLinkHandler(event);history.replaceState(null,null,'http://www.inc.com/1');phomepinboard.updateLocalStorage(1,'http://www.inc.com',51312);phomepinboard.intentionIntercept('http://www.inc.com/author/abigail-tracy',1,'latestpinboard','normal','author','author','3282'); return false;">Abigail Tracy</span></span>
-												</div>
-												<div class="pshares sharrre" data-title="sharrre" data-url="http://www.inc.com/abigail-tracy/amazon-launches-new-program-for-young-startups.html"><span class="psharecount">25</span> SHARES</div>
+										<div class="b_container">
+											<div class="img-cell-single">
+												<img src="png" onerror="this.src='/assets/error-260-180.png'">
 											</div>
-										</a>
+											<div class="catcolorbox_posit">
+							            		<div class="catbox-article catbox design_catbox">
+							            			<span>CATBOX</span>
+							            		</div>
+						            		</div>																								
+										</div>
+										<div class="b_headline">
+											This is a long line of headline text that goes here
+											<span class="pbyline">by&nbsp<span class="b_link">The Author</span></span>											
+										</div>
+										
 									</div>
+								</a>
+
+								<a href="journals/how_to_be" class="col_3 p_normal" onclick="">
+									<div class="inner_cell">
+
+										<!-- <div class="text_container b_container line-startup" style="border-style: solid; border-width: 1px; border-color: red;"> -->
+											
+										<div class="line-startup" style="height: 260px; border-style: solid; border-width: 1px; border-color: red;">
+											
+											<div class="headline-second-breakfast" style="vertical-align: top; font-size: 16px; margin-top: 8px;">
+												<span>Blog</span>
+											</div>
+											
+											<div class="headline-JandaCheerfulScript" style="padding-top: 20px; font-size: 40px; border-style: solid; border-width: 1px; border-color: red;">
+												<span style="padding-left: 10px">&ldquo;How</span><br>
+												<span style="padding-left: 120px">to</span><br>
+												<span style="padding-left: 200px">Be&rdquo;</span>														
+											</div>
+											
+											<div style="position: absolute; bottom: 30px; width: 298px; text-align: right; border-style: solid; border-width: 1px; border-color: green;">
+												<span class="pbyline">By&nbsp;<span class="b_link" onclick=""></span>LeiLani Cauthen</span>
+											</div>
+										</div>
+										
+									</div>
+								</a>
 								
-									<div class="fluidrow row7">
-										<a href="http://www.inc.com/dave-kerpen-what-i-wish-id-known-about-fundraising.html" class="pin51286 widerowcell prow1x3">
-											<div class="innerpcell">
-												<div class="icellcontainer line-money" onclick="history.replaceState(null,null,'http://www.inc.com/1');phomepinboard.updateLocalStorage(1,'http://www.inc.com',51286);phomepinboard.intentionIntercept('http://www.inc.com/dave-kerpen-what-i-wish-id-known-about-fundraising.html',1,'latestpinboard','row1x3','article','article','51286'); return false;">
-													<div class="picontainer">
-														<img class="pinboardimage" src="Entrepeneurs_files/money-tight-closeup-1725x810_28055.jpg" onerror="this.src='http://images.inc.com/refreshgraphics/643x290-3.jpg'">
-													</div>
-													<div class="pwiderightbox">
-														<div class="pheadline">
-															What I Wish I'd Known About Fundraising
-														</div>
-														<span class="pbyline">by&nbsp;<span class="pinnerlink" onclick="innerLinkHandler(event);history.replaceState(null,null,'http://www.inc.com/1');phomepinboard.updateLocalStorage(1,'http://www.inc.com',51286);phomepinboard.intentionIntercept('http://www.inc.com/author/dave-kerpen',1,'latestpinboard','row1x3','author','author','3417'); return false;">Dave Kerpen</span></span>
-														<div class="pdeck">
-															After being in the trenches, entrepreneur Dave Kerpen shares his key learnings about fundraising.
-														</div>
-														<div class="pshares sharrre" data-title="sharrre" data-url="http://www.inc.com/dave-kerpen-what-i-wish-id-known-about-fundraising.html"><span class="psharecount">154</span> SHARES</div>
-													</div>
-													<div class="widechannelheadline">
-														<span class="pinnerlink" onclick="innerLinkHandler(event);history.replaceState(null,null,'http://www.inc.com/1');phomepinboard.updateLocalStorage(1,'http://www.inc.com',51286);phomepinboard.intentionIntercept('http://www.inc.com/money',1,'latestpinboard','row1x3','channel','channel','2'); return false;">MONEY</span>
-													</div>
+							</div>
+							
+							
+							<div class="container_space"></div>
+
+							<div class="container_space"></div>
+							
+							
+							<div class="fluidrow boxtemp-red">
+								
+								
+								<div class="col_1">
+									
+									<div class="inner_cell">
+										<div class="text_container b_container line-grow">
+											
+											<object type="application/x-shockwave-flash" data="http://www.youtube.com/v/UZePBZ-edfE&feature=youtu.be&noredirect=1" width="300" height="200">          	
+									            <param name="wmode" value="opaque" />
+									            <param name="quality" value="high" />
+									            <param name="bgcolor" value="#E9E9E9" />
+									            <param name="allowfullscreen" value="true" />
+									         	<param name="allowscriptaccess" value="never" />
+									         </object>
+
+											<div class="headline-excelsiorcomics">
+												<span>5 Key Areas of Success K12 Tech Integration Planning</span>
+											</div>
+
+																								
+											<div class="text_box">
+												<span class="pbyline">&nbsp;<span class="b_link" onclick=""></span></span>
+											</div>
+											<div class="text_cat">
+												<span class="b_link" onclick=""></span>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+								
+								<a href="journals/blogs_and_links" class="col_2" onclick="">
+									<div class="inner_cell">
+										<div class="text_container b_container line-lead">
+											
+											<img src="/assets/article-blogs-and-links.png" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-4.jpg'">
+
+											<div class="headline-junebug">
+												<span class="gold">Blogs</span>
+												<span class="red">&amp;</span>
+												<span class="blue">Links</span>														
+											</div>
+																								
+											<div class="text_box">
+												<span class="pbyline">&nbsp;<span class="b_link" onclick=""></span></span>
+											</div>
+											<div class="text_cat">
+												<span class="b_link" onclick=""></span>
+											</div>
+										</div>
+									</div>
+								</a>			
+								
+								
+								<a href="journals/education_compared" class="col_3 b_portrait" onclick="">
+									<div class="inner_cell boxtemp-black">
+										<div class="b_container">
+											<div style="position: absolute; bottom: 0px;">
+												<img src="jpg" onerror="this.src='http://images.inc.com/refreshgraphics/300x520-3.jpg'">
+											</div>
+											
+											<div class="catcolorbox_pos">
+							            		<div class="catbox-article catbox_pos perspective_catbox">
+							            			<span>PERSPECTIVE</span>
+							            		</div>
+						            		</div>								            		
+						            						            						
+										</div>
+										<div class="b_headline">
+											Education Compared to All Other Industry
+											<span class="pbyline">by&nbsp;<span class="b_link" onclick="">LeiLani Cauthen</span></span>
+										</div>
+									</div>
+								</a>
+								
+							</div>
+							
+							<div class="fluidrow boxtemp-green">
+								
+								<a href="journals/how_to_be" class="col_1 p_normal" onclick="">
+									<div class="inner_cell">
+
+										<div class="text_container b_container line-startup" style="width: 300px; border-style: solid; border-width: 1px; border-color: red;">
+											
+											<div class="headline-second-breakfast" style="font-size: 16px; margin-top: 8px;">
+												<span>Blog</span>
+											</div>
+											
+											<div class="headline-JandaCheerfulScript" style="padding-top: 50px; font-size: 50px; border-style: solid; border-width: 1px; border-color: red;">
+												<span style="padding-left: 10px">How</span>
+												<span style="padding-left: 70px">to</span>
+												<span style="padding-left: 130px">Be</span>														
+											</div>
+																								
+											<div class="text_box" style="border-style: solid; border-width: 1px; border-color: green;">
+												<span class="pbyline">By&nbsp;<span class="b_link" onclick=""></span>LeiLani Cauthen</span>
+											</div>
+											<div class="text_cat">
+												<span class="b_link" onclick=""></span>
+											</div>
+										</div>
+										
+									</div>
+								</a>
+
+								<a href="journals/to_solution" class="col_2 p_normal" onclick="">
+									<div class="inner_cell">
+										<div class="b_container">
+											
+											<img src="/assets/article-to-solution-300-200.png" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-4.jpg'">
+						            		<div class="catbox-article catbox tactic_catbox">
+						            			<span>TACTIC</span>
+						            		</div>													
+										</div>
+										<div class="b_headline">
+											To Solution or Element – That is the Question
+											<img src="Entrepeneurs_files/videoicon_sm.png">
+												<span class="pbyline">By&nbsp;<span class="b_link" onclick="">The LC Staff</span></span>
+										</div>
+										
+									</div>
+								</a>
+
+								<div class="col_3">
+									<div class="inner_cell"></div>
+								</div>
+								
+							</div>
+							
+
+
+
+							<div class="container_space"></div>
+
+							<div class="container_space"></div>
+							
+							
+							<div class="fluidrow boxtemp-red">
+								
+								
+								<div class="col_1">
+									
+									<div class="inner_cell">
+										<div class="text_container b_container line-grow">
+											
+											<object type="application/x-shockwave-flash" data="http://www.youtube.com/v/UZePBZ-edfE&feature=youtu.be&noredirect=1" width="300" height="200">          	
+									            <param name="wmode" value="opaque" />
+									            <param name="quality" value="high" />
+									            <param name="bgcolor" value="#E9E9E9" />
+									            <param name="allowfullscreen" value="true" />
+									         	<param name="allowscriptaccess" value="never" />
+									         </object>
+
+											<div class="headline-excelsiorcomics">
+												<span>5 Key Areas of Success K12 Tech Integration Planning</span>
+											</div>
+
+																								
+											<div class="text_box">
+												<span class="pbyline">&nbsp;<span class="b_link" onclick=""></span></span>
+											</div>
+											<div class="text_cat">
+												<span class="b_link" onclick=""></span>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+								
+								<a href="journals/education_compared" class="col_2 b_portrait" onclick="">
+									<div class="inner_cell boxtemp-black">
+										<div class="b_container">
+											<div style="position: absolute; bottom: 0px;">
+												<img src="jpg" onerror="this.src='http://images.inc.com/refreshgraphics/300x520-3.jpg'">
+											</div>
+											
+											<div class="catcolorbox_pos">
+							            		<div class="catbox-article catbox_pos perspective_catbox">
+							            			<span>PERSPECTIVE</span>
+							            		</div>
+						            		</div>								            		
+						            						            						
+										</div>
+										<div class="b_headline">
+											Education Compared to All Other Industry
+											<span class="pbyline">by&nbsp;<span class="b_link" onclick="">LeiLani Cauthen</span></span>
+										</div>
+									</div>
+								</a>
+								
+								<a href="journals/blogs_and_links" class="col_3" onclick="">
+									<div class="inner_cell">
+										<div class="text_container b_container line-lead">
+											
+											<img src="/assets/article-blogs-and-links.png" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-4.jpg'">
+
+											<div class="headline-junebug">
+												<span class="gold">Blogs</span>
+												<span class="red">&amp;</span>
+												<span class="blue">Links</span>														
+											</div>
+																								
+											<div class="text_box">
+												<span class="pbyline">&nbsp;<span class="b_link" onclick=""></span></span>
+											</div>
+											<div class="text_cat">
+												<span class="b_link" onclick=""></span>
+											</div>
+										</div>
+									</div>
+								</a>			
+								
+								
+								
+							</div>
+							
+							<div class="fluidrow boxtemp-green">
+								
+								<a href="journals/how_to_be" class="col_1 p_normal" onclick="">
+									<div class="inner_cell">
+
+										<div class="text_container b_container line-startup" style="width: 300px; border-style: solid; border-width: 1px; border-color: red;">
+											
+											<div class="headline-second-breakfast" style="font-size: 16px; margin-top: 8px;">
+												<span>Blog</span>
+											</div>
+											
+											<div class="headline-JandaCheerfulScript" style="padding-top: 50px; font-size: 50px; border-style: solid; border-width: 1px; border-color: red;">
+												<span style="padding-left: 10px">How</span>
+												<span style="padding-left: 70px">to</span>
+												<span style="padding-left: 130px">Be</span>														
+											</div>
+																								
+											<div class="text_box" style="border-style: solid; border-width: 1px; border-color: green;">
+												<span class="pbyline">By&nbsp;<span class="b_link" onclick=""></span>LeiLani Cauthen</span>
+											</div>
+											<div class="text_cat">
+												<span class="b_link" onclick=""></span>
+											</div>
+										</div>
+										
+									</div>
+								</a>
+
+								<div class="col_2">
+									<div class="inner_cell"></div>
+								</div>
+
+								<a href="journals/to_solution" class="col_3 p_normal" onclick="">
+									<div class="inner_cell">
+										<div class="b_container">
+											
+											<img src="/assets/article-to-solution-300-200.png" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-4.jpg'">
+						            		<div class="catbox-article catbox tactic_catbox">
+						            			<span>TACTIC</span>
+						            		</div>													
+										</div>
+										<div class="b_headline">
+											To Solution or Element – That is the Question
+											<img src="Entrepeneurs_files/videoicon_sm.png">
+												<span class="pbyline">By&nbsp;<span class="b_link" onclick="">The LC Staff</span></span>
+										</div>
+										
+									</div>
+								</a>
+
+								
+							</div>
+
+
+
+
+
+
+
+
+							
+							
+							
+							<div class="container_space"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							
+							<div class="fluidrow row1 boxtemp-red">
+								
+								<a href="journals/facing_down" class="col_1 p_normal">
+									<div class="inner_cell">
+										<div class="b_container">
+											<img src="/assets/article-facing-down.jpeg" onerror="this.src='/assets/error-300-200.png'">
+						            		<div class="catbox-article catbox thoughts_catbox">
+						            			<span>THOUGHTS</span>
+						            		</div>													
+										</div>
+										<div class="b_headline">
+											Facing Down the Learning Content Disruption
+											<span class="pbyline">by&nbsp<span class="b_link">David Kafitz</span></span>
+										</div>
+									</div>
+								</a>
+						
+								<a href="journals/whats_so_hard" class="col_2 p_normal">
+									<div class="inner_cell">
+										<div class="b_container">
+											<img src="/assets/article-whats-so-hard.png" class="image-h200" onerror="this.src='/assets/error-300-200.png'">
+						            		<div class="catbox-article catbox tactic_catbox">
+						            			<span>TACTIC</span>
+						            		</div>													
+										</div>
+										<div class="b_headline">
+											What’s So Hard About Choosing Digital Curriculum?
+											<span class="pbyline">by&nbsp;
+												<span class="b_link" onclick="">The LC Staff</span>
+											</span>
+										</div>									
+									</div>
+								</a>
+						
+								<a href="journals/educating_for_the_design" class="col_3 p_normal" onclick="">
+									<div class="inner_cell">
+										<div class="b_container">
+											<img src="/assets/article-educating-for-the-design.jpg" style="height: 200px;" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-6.jpg'">
+						            		<div class="catbox-article catbox design_catbox">
+						            			<span>DESIGN</span>
+						            		</div>
+						            	</div>													
+										<div class="b_headline">
+											Educating for the Design Economy
+											<span class="pbyline">by&nbsp;
+												<span class="b_link" onclick="">The LC Staff</span>
+											</span>
+										</div>
+									</div>
+								</a>
+							</div>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							<div class="fluidrow row5 boxtemp-red">
+								
+								<a href="journals/education_compared" class="col_1 b_portrait" onclick="">
+									<div class="inner_cell boxtemp-black">
+										<div class="b_container">
+											<div style="position: absolute; bottom: 0px;">
+												<img src="/assets/article-education-compared.jpg" onerror="this.src='http://images.inc.com/refreshgraphics/300x520-3.jpg'">
+											</div>
+											
+											<div class="catcolorbox_pos">
+							            		<div class="catbox-article catbox_pos perspective_catbox">
+							            			<span>PERSPECTIVE</span>
+							            		</div>
+						            		</div>								            		
+						            						            						
+										</div>
+										<div class="b_headline">
+											Education Compared to All Other Industry
+											<span class="pbyline">by&nbsp;<span class="b_link" onclick="">LeiLani Cauthen</span></span>
+										</div>
+									</div>
+								</a>
+								
+								
+								<div class="col_2 pimusmall">
+									
+									<div class="inner_cell">
+										<div class="text_container b_container line-grow">
+											
+											<object type="application/x-shockwave-flash" data="http://www.youtube.com/v/UZePBZ-edfE&feature=youtu.be&noredirect=1" width="300" height="200">          	
+									            <param name="wmode" value="opaque" />
+									            <param name="quality" value="high" />
+									            <param name="bgcolor" value="#E9E9E9" />
+									            <param name="allowfullscreen" value="true" />
+									         	<param name="allowscriptaccess" value="never" />
+									         </object>
+
+											<div class="headline-excelsiorcomics">
+												<span>5 Key Areas of Success K12 Tech Integration Planning</span>
+											</div>
+
+																								
+											<div class="text_box">
+												<span class="pbyline">&nbsp;<span class="b_link" onclick=""></span></span>
+											</div>
+											<div class="text_cat">
+												<span class="b_link" onclick=""></span>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+								
+								<a href="journals/blogs_and_links" class="col_3 ptext" onclick="">
+									<div class="inner_cell">
+										<div class="text_container b_container line-lead">
+											
+											<img src="/assets/article-blogs-and-links.png" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-4.jpg'">
+
+											<div class="headline-junebug">
+												<span class="gold">Blogs</span>
+												<span class="red">&amp;</span>
+												<span class="blue">Links</span>														
+											</div>
+																								
+											<div class="text_box">
+												<span class="pbyline">&nbsp;<span class="b_link" onclick=""></span></span>
+											</div>
+											<div class="text_cat">
+												<span class="b_link" onclick=""></span>
+											</div>
+										</div>
+									</div>
+								</a>										
+								
+							</div>
+							
+							<div class="fluidrow row6 boxtemp-green">
+								
+								<div class="col_1 pblank">
+									<div class="inner_cell"></div>
+								</div>
+
+								<a href="journals/to_solution" class="col_2 p_normal" onclick="">
+									<div class="inner_cell">
+										<div class="b_container">
+											
+											<img src="/assets/article-to-solution-300-200.png" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-4.jpg'">
+						            		<div class="catbox-article catbox tactic_catbox">
+						            			<span>TACTIC</span>
+						            		</div>													
+										</div>
+										<div class="b_headline">
+											To Solution or Element – That is the Question
+											<img src="Entrepeneurs_files/videoicon_sm.png">
+												<span class="pbyline">By&nbsp;<span class="b_link" onclick="">The LC Staff</span></span>
+										</div>
+										
+									</div>
+								</a>
+
+								<a href="journals/how_to_be" class="col_3 p_normal" onclick="">
+									<div class="inner_cell">
+
+										<div class="text_container b_container line-startup" style="width: 300px; border-style: solid; border-width: 1px; border-color: red;">
+											
+											<div class="headline-second-breakfast" style="font-size: 16px; margin-top: 8px;">
+												<span>Blog</span>
+											</div>
+											
+											<div class="headline-JandaCheerfulScript" style="padding-top: 50px; font-size: 50px; border-style: solid; border-width: 1px; border-color: red;">
+												<span style="padding-left: 10px">How</span>
+												<span style="padding-left: 70px">to</span>
+												<span style="padding-left: 130px">Be</span>														
+											</div>
+																								
+											<div class="text_box" style="border-style: solid; border-width: 1px; border-color: green;">
+												<span class="pbyline">By&nbsp;<span class="b_link" onclick=""></span>LeiLani Cauthen</span>
+											</div>
+											<div class="text_cat">
+												<span class="b_link" onclick=""></span>
+											</div>
+										</div>
+										
+									</div>
+								</a>
+								
+							</div>
+							
+							
+							
+							
+							
+							
+							<div class="container_space"></div>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							<div class="fluidrow row2 boxtemp-green">
+								
+								<a href="#" class="col_1 p_normal" onclick="">
+									<div class="inner_cell">
+										<div class="b_container">
+												<img src="300x200-6.jpg" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-6.jpg'">
+											<div class="linecolorbox bg-default"></div>
+											<div class="catcolorbox bg-default">
+													
+												<span class="b_link" onclick="">&nbsp</span>
+											</div>
+										</div>
+										
+									</div>
+								</a>
+								
+								<a href="journals/five_types" class="col_2 p_normal" onclick="">
+									<div class="inner_cell">
+										<div class="b_container">
+											<img src="/assets/article-five-types.png" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-1.jpg'">
+						            		<div class="catbox-article catbox thoughts_catbox">
+						            			<span>THOUGHTS</span>
+						            		</div>													
+										</div>
+										<div class="b_headline">
+											FIVE TYPES OF CURRICULUM “THINGS”
+											<span class="pbyline">by&nbsp;<span class="b_link" onclick="">Lei Lani Cauthen</span></span>
+										</div>
+									</div>
+								</a>
+
+								<a href="journals/five_types" class="col_2 p_normal" onclick="">
+									<div class="inner_cell">
+										
+										<div class="b_container">
+											<div style="text-align: center; width: 296px; padding-bottom: 6px;">
+												<img src="/assets/article-coffee-chat-with-memphis.jpg" style="width: 198px; height: 200px;" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-1.jpg'">
+											</div>
+						            		<div class="catbox-article catbox industry_news_catbox_tan">
+						            			<span>COFFEE CHAT</span>
+						            		</div>													
+										</div>
+										<div class="b_headline">
+											COFFEE CHAT WITH MEMPHIS
+											<span class="pbyline">by&nbsp;<span class="b_link" onclick="">Lei Lani Cauthen</span></span>
+										</div>
+										
+									</div>
+								</a>
+								
+							</div>
+							
+							<div class="container_space"></div>
+							
+							<div class="fluidrow row3 boxtemp-blue">
+
+								<a href="" onclick="">
+									<div class="inner_cell">
+										<div class="text_container b_container line-money">																										
+											<div class="text_box">
+
+													<span class="pbyline">&nbsp;<span class="b_link" onclick=""> </span></span>															
+											</div>
+											<div class="text_cat">
+												<span class="b_link" onclick="">&nbsp</span>
+											</div>
+											
+										</div>
+									</div>
+								</a>
+
+								<a href="">
+									<div class="inner_cell">
+										<div class="b_container">
+												<img src="300x200-4.jpg" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-4.jpg'">
+											<div class="linecolorbox bg-default"></div>
+											<div class="catcolorbox bg-default">
+												<span>&nbsp</span>
+											</div>
+										</div>
+										<div class="b_headline">
+											
+										</div>
+										<div class="ppartner">&nbsp <span class="ppartnername">&nbsp</span></div>
+										
+									</div>
+								</a>
+
+								<a style="cursor: default;" href="#" class="col_3 p_normal" onclick="">
+									<div style="" class="inner_cell">
+										<div class="b_container">
+												<img src="300x200-5.jpg" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-5.jpg'">
+											<div class="linecolorbox bg-default"></div>
+											<div class="catcolorbox bg-default">
+												<span class="b_link" onclick="">&nbsp</span>
+											</div>
+										</div>
+										<div class="b_headline">
+											
+											<span class="pbyline">&nbsp;<span class="b_link" onclick=""> </span></span>
+										</div>
+										
+									</div>
+								</a>
+							</div>
+							
+							<div class="container_space"></div>
+							
+																		
+							<div class="fluidrow row5 boxtemp-red">
+								
+								<a href="journals/education_compared" class="col_1 b_portrait" onclick="">
+									<div class="inner_cell boxtemp-black">
+										<div class="b_container">
+											<div style="position: absolute; bottom: 0px;">
+												<img src="/assets/article-education-compared.jpg" onerror="this.src='http://images.inc.com/refreshgraphics/300x520-3.jpg'">
+											</div>
+											
+											<div class="catcolorbox_pos">
+							            		<div class="catbox-article catbox_pos perspective_catbox">
+							            			<span>PERSPECTIVE</span>
+							            		</div>
+						            		</div>								            		
+						            						            						
+										</div>
+										<div class="b_headline">
+											Education Compared to All Other Industry
+											<span class="pbyline">by&nbsp;<span class="b_link" onclick="">LeiLani Cauthen</span></span>
+										</div>
+									</div>
+								</a>
+								
+								
+								<div class="col_2 pimusmall">
+									
+									<div class="inner_cell">
+										<div class="text_container b_container line-grow">
+											
+											<object type="application/x-shockwave-flash" data="http://www.youtube.com/v/UZePBZ-edfE&feature=youtu.be&noredirect=1" width="300" height="200">          	
+									            <param name="wmode" value="opaque" />
+									            <param name="quality" value="high" />
+									            <param name="bgcolor" value="#E9E9E9" />
+									            <param name="allowfullscreen" value="true" />
+									         	<param name="allowscriptaccess" value="never" />
+									         </object>
+
+											<div class="headline-excelsiorcomics">
+												<span>5 Key Areas of Success K12 Tech Integration Planning</span>
+											</div>
+
+																								
+											<div class="text_box">
+												<span class="pbyline">&nbsp;<span class="b_link" onclick=""></span></span>
+											</div>
+											<div class="text_cat">
+												<span class="b_link" onclick=""></span>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+								
+								<a href="journals/blogs_and_links" class="col_3 ptext" onclick="">
+									<div class="inner_cell">
+										<div class="text_container b_container line-lead">
+											
+											<img src="/assets/article-blogs-and-links.png" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-4.jpg'">
+
+											<div class="headline-junebug">
+												<span class="gold">Blogs</span>
+												<span class="red">&amp;</span>
+												<span class="blue">Links</span>														
+											</div>
+																								
+											<div class="text_box">
+												<span class="pbyline">&nbsp;<span class="b_link" onclick=""></span></span>
+											</div>
+											<div class="text_cat">
+												<span class="b_link" onclick=""></span>
+											</div>
+										</div>
+									</div>
+								</a>										
+								
+							</div>
+							
+							<div class="fluidrow row6 boxtemp-green">
+								
+								<div class="col_1 pblank">
+									<div class="inner_cell"></div>
+								</div>
+
+								<a href="journals/to_solution" class="col_2 p_normal" onclick="">
+									<div class="inner_cell">
+										<div class="b_container">
+											
+											<img src="/assets/article-to-solution-300-200.png" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-4.jpg'">
+						            		<div class="catbox-article catbox tactic_catbox">
+						            			<span>TACTIC</span>
+						            		</div>													
+										</div>
+										<div class="b_headline">
+											To Solution or Element – That is the Question
+											<img src="Entrepeneurs_files/videoicon_sm.png">
+												<span class="pbyline">By&nbsp;<span class="b_link" onclick="">The LC Staff</span></span>
+										</div>
+										
+									</div>
+								</a>
+
+								<a href="journals/how_to_be" class="col_3 p_normal" onclick="">
+									<div class="inner_cell">
+
+										<div class="text_container b_container line-startup" style="width: 300px; border-style: solid; border-width: 1px; border-color: red;">
+											
+											<div class="headline-second-breakfast" style="font-size: 16px; margin-top: 8px;">
+												<span>Blog</span>
+											</div>
+											
+											<div class="headline-JandaCheerfulScript" style="padding-top: 50px; font-size: 50px; border-style: solid; border-width: 1px; border-color: red;">
+												<span style="padding-left: 30px">How</span>
+												<span style="padding-left: 130px">to</span>
+												<span style="padding-left: 180px">Be</span>														
+											</div>
+																								
+											<div class="text_box" style="border-style: solid; border-width: 1px; border-color: green;">
+												<span class="pbyline">By&nbsp;<span class="b_link" onclick=""></span>LeiLani Cauthen</span>
+											</div>
+											<div class="text_cat">
+												<span class="b_link" onclick=""></span>
+											</div>
+										</div>
+										
+									</div>
+								</a>
+								
+							</div>
+							
+							<div class="fluidrow row7 boxtemp-blue">
+
+								<a href="journals/coffee_chat" class="widerowcell prow1x3">
+									<div class="inner_cell">
+										<div class="icellcontainer line-default" onclick="">
+											<div class="b_container">
+												<img src="/assets/article-coffee-chat.png" onerror="this.src='http://images.inc.com/refreshgraphics/643x290-4.jpg'">
+											</div>
+											<div class="pwiderightbox">
+												<div class="b_headline">
+												COFFEE CHAT WITH HOUSTON ISD	
+												</div>
+												<span class="pbyline">by&nbsp;<span class="b_link" onclick="">The LC Staff</span></span>
+												<div class="pdeck">
+												Two of Houston Independent School District’s leaders, Beatriz Arnillas, and Angela Miller, answer questions of post by The Learning Counsel.  
 												</div>
 											</div>
-										</a>
-									</div>									 -->									
+											<div class="widechannelheadline">
+												<span class="b_link" onclick="">SPOTLIGHT</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
 									
-								</div> <!-- phomepinboardUnit1 -->
-							</div> <!-- pinboardContent -->  
+									
+								
+							<div class="fluidrow row2">
+								<!-- 27 -->
+								<a href="journals/wanted_new_leader" class="col_1 p_normal" onclick="">
+									<div class="inner_cell">
+										<div class="b_container">
+											<img src="/assets/article-wanted-new-leader.png" height="200px" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-8.jpg'">
+											<div class="linecolorbox bg-people"></div>
+											
+											
+						            		<div class="catbox-article catbox people_catbox">
+						            			<span>PEOPLE</span>
+						            		</div>													
+										</div>
+										<div class="b_headline">
+											WANTED: NEW LEADER & TEACHER FEATURES
+											<span class="pbyline">by&nbsp;<span class="b_link" onclick="">LeiLani Cauthen</span></span>
+										</div>
+									</div>
+								</a>
+							</div>
+								
+							  
 						</div>
 					</div>
-				</div> <!--end  outer container//-->
+					
+					
+					
+					
+				<!-- </div>  -->				
+				<!--end  outer container//-->
 
 				<div style="height: 30px;"></div>
+
+          <!-- <object type="application/x-shockwave-flash" data="http://www.youtube.com/v/zDZFcDGpL4U" width="300" height="250"> -->
+          	
+          	
+          <!-- <object type="application/x-shockwave-flash" data="http://www.youtube.com/v/UZePBZ-edfE&feature=youtu.be&noredirect=1" width="300" height="200">          	
+            <param name="wmode" value="opaque" />
+            <param name="quality" value="high" />
+            <param name="bgcolor" value="#E9E9E9" />
+            <param name="allowfullscreen" value="true" />
+            <param name="allowscriptaccess" value="never" />
+          </object> -->
+                    
+          
+<!-- <embed width="300" src="http://www.youtube.com/v/zDZFcDGpL4U" type="application/x-shockwave-flash">
+</embed> -->
+
+
+<!-- https://www.youtube.com/watch?v=zDZFcDGpL4U -->
+
+<!-- <iframe width="300" height="200" src="http://www.youtube.com/v/UZePBZ-edfE&feature=youtu.be&noredirect=1"></iframe> -->
+
 
 				<div id="sfw_865" align="center" style="height:90px">&nbsp;Banner</div>
 				<script type="text/javascript">

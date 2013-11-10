@@ -39,12 +39,6 @@
 			@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
 		</style>
 			
-		<style type="text/css">
-			#article_left_col{ width: 580px !important;} 
-			#center_col { width: 950px !important;} 
-			h1.indexhead { margin: 0px; padding: 0px;}
-		</style>
-		
 		<link href="/assets/screen_headlines.css" media="screen, projection" rel="stylesheet" type="text/css">
 		
 		<script type="text/javascript" src="/assets/entrepeneurs_jquery-1.js"></script> 
@@ -52,13 +46,16 @@
 
 		<script type="text/javascript" src="/assets/pinboards.js"></script> 
 
-		
 
 		<header>					
+
+			<%= render 'share/backtotop' %>
 			
 	    	<%= render 'layouts/flash_alert' %>
 	    	
 		</header>		
+		
+	    		    	
 		
 		<section>
 			
@@ -89,11 +86,10 @@
 		            		
 		                    <p class="imagecaption" id="pancaption"></p>
 		
-							<!-- <div id="toppromo"></div> -->
 								
 							<bodycopy id="bodycopy">
 								
-			 					<%= render 'articles/pearson_3' %>
+			 					<%= render 'articles/pearson_3' %> 
 			 						
 							</bodycopy>
 	
@@ -123,79 +119,25 @@
 	
 						<br clear="all">
 						
-						<!-- <a class="articlefootertool" href="#" target="_blank">PRINT THIS ARTICLE</a>
-						<a class="articlefootertool" href="javascript:mailer();">EMAIL THIS ARTICLE</a> -->
-								
 						<div id="bottompromo"></div>
 		
 						<br clear="all">
 		    
-					</div> <!--end maincolumn //-->
+					</div> 
 	
 	
 					<div id="sidebar">
 						<div id="sidebar_inner">
 
-							<!-- <div style="border-style: solid; border-width: 1px; border-color: orange; padding: 3px; width: 200px; height: 200px;">
-							</div> -->
-																
-							<!-- <div id="particlepinboardsidebar" class="pinboard articlepinboard">
-								<div class="pinboardContent"></div>
-							</div>
-			
-							<div id="select_services">
-								<h2 class="feature">Select Services</h2>
-								
-								<dl id="Services">
-										<dt><a target="_new" href="#">Services</a></dt>
-									<dd>Learn about our services.</dd>
-										<dt><a target="_new" href="#">Services</a></dt>
-									<dd>Learn about our services.</dd>
-										<dt><a target="_new" href="#">Services</a></dt>
-									<dd>Learn about our services.</dd>
-								</dl>
-								
-							</div> -->							
 							
 						</div>
 					</div>
 				</div>
 
 					<br clear="all">
-			
-					<!-- <div class="container-bottom">
-						<div class="readmore-container">
-							<div class="readmore-title-container">
-	    						<div class="readmore-title">READ MORE</div>
-		    				</div>
-	            			<div id="backtotopcontainer">
-								<div id="backtotopinnercontainer">
-									<div id="backtotopbutton">
-										<img src="/assets/back-to-top.png">
-									</div>
-								</div>
-							</div>
-	
-							<div id="particlepinboardreadmore" class="pinboard articlepinboard">
-								<div class="pinboardContent"></div>
-							</div>
-	
-						</div>
-						<div class="readmore-bottombuffer"></div>							
-						<div id="divvy" style="display: none;"></div>
-	
-						<div id="backtotopinnercontainer">
-							<div id="backtotopbutton">
-								<img src="/assets/image_lani_100_100.png">
-								
-							</div>
-						</div>
-					</div> -->
 						
 					<div style="height: 30px;"></div>
 					
-			 		<%= render 'share/backtotop' %>
-								
-			</div> <!--white -->
+			</div> 
 			
 		</section>

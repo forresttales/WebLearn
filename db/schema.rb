@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131025014104) do
+ActiveRecord::Schema.define(version: 20131110005628) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,21 @@ ActiveRecord::Schema.define(version: 20131025014104) do
   end
 
   add_index "admin_users", ["username"], name: "index_admin_users_on_username", using: :btree
+
+  create_table "archives", force: true do |t|
+    t.integer  "article_id"
+    t.string   "name_url",     limit: 100
+    t.string   "name_file",    limit: 50
+    t.string   "name_author",  limit: 50
+    t.string   "name_admin",   limit: 50
+    t.text     "key_words"
+    t.date     "date_article"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "article_type", limit: 20
+  end
+
+  add_index "archives", ["article_id"], name: "index_archives_on_article_id", using: :btree
 
   create_table "contacts", force: true do |t|
     t.string   "name",       limit: 50
