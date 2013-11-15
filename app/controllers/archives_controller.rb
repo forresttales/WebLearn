@@ -11,10 +11,7 @@ class ArchivesController < ApplicationController
   def show
     @info = Archive.where(["article_id = ?", params[:id]]).first       
 
-    #render text: @info.name_file
-
     gon.info = @info
-    
      
     #render :file => "journal/pearson"
         

@@ -9,6 +9,7 @@ Weblearn::Application.routes.draw do
   get "test/basic"
   get "static_pages/test"
   get "static_pages/fonts"
+  get "static_pages/index_test"
 
   get "journals/k12_digital"  
   get "journals/facing_down"
@@ -31,9 +32,12 @@ Weblearn::Application.routes.draw do
   get "journals/blogs_and_links"
   get "journals/educating_for_the_design"
   get "journals/how_to_be"
-  
-  
-  
+  get "journals/coffee_chat_with_memphis"
+  get "journals/guide_k12"
+  get "journals/digital_curriculum_strategy"
+  get "journals/health_care_curriculum"
+  get "journals/amazon"
+
   #match '/users/testhome', to: 'users#testhome', via: 'get'
      
   # resources :users do

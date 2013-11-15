@@ -1,38 +1,6 @@
 
-
 		<style type="text/css">
 		
-			/*@font-face {
-				font-family: KlavikaExtraLight;
-				src: url('http://www.inc.com/lib/fonts/klavika/KlavikaWebDisplayExtraLight.eot');
-				src: url('http://www.inc.com/lib/fonts/klavika/KlavikaWebDisplayExtraLight.eot?#iefix') format('embedded-opentype'), url('http://www.inc.com/lib/fonts/klavika/KlavikaWebDisplayExtraLight.woff') format('woff');
-			}
-			@font-face {
-				font-family: KlavikaLight;
-				src: url('http://www.inc.com/lib/fonts/klavika/KlavikaWebBasicLight.eot');
-				src: url('http://www.inc.com/lib/fonts/klavika/KlavikaWebBasicLight.eot?#iefix') format('embedded-opentype'), url('http://www.inc.com/lib/fonts/klavika/KlavikaWebBasicLight.woff') format('woff');
-			}
-			@font-face {
-				font-family: KlavikaRegular;
-				src: url('http://www.inc.com/lib/fonts/klavika/KlavikaWebBasicRegular.eot');
-				src: url('http://www.inc.com/lib/fonts/klavika/KlavikaWebBasicRegular.eot?#iefix') format('embedded-opentype'), url('http://www.inc.com/lib/fonts/klavika/KlavikaWebBasicRegular.woff') format('woff');
-			}		
-			@font-face {
-				font-family: KlavikaMedium;
-				src: url('http://www.inc.com/lib/fonts/klavika/KlavikaWebBasicMedium.eot');
-				src: url('http://www.inc.com/lib/fonts/klavika/KlavikaWebBasicMedium.eot?#iefix') format('embedded-opentype'), url('http://www.inc.com/lib/fonts/klavika/KlavikaWebBasicMedium.woff') format('woff');
-			}
-			@font-face {
-				font-family: KlavikaBold;
-				src: url('http://www.inc.com/lib/fonts/klavika/KlavikaWebBasicBold.eot');
-				src: url('http://www.inc.com/lib/fonts/klavika/KlavikaWebBasicBold.eot?#iefix') format('embedded-opentype'), url('http://www.inc.com/lib/fonts/klavika/KlavikaWebBasicBold.woff') format('woff');
-			}
-			@font-face {
-				font-family: KlavikaBlack;
-				src: url('http://www.inc.com/lib/fonts/klavika/KlavikaWebDisplayBlack.eot');
-				src: url('http://www.inc.com/lib/fonts/klavika/KlavikaWebDisplayBlack.eot?#iefix') format('embedded-opentype'), url('http://www.inc.com/lib/fonts/klavika/KlavikaWebDisplayBlack.woff') format('woff');
-			}*/
-
 			@font-face {
 				font-family: KlavikaExtraLight;
 				src: url('/assets/KlavikaWebDisplayExtraLight.eot');
@@ -68,15 +36,10 @@
 			
 		<!-- <link href="/assets/entrepeneurs_screen.css" media="screen, projection" rel="stylesheet" type="text/css"> -->
 		
-		<!-- <style type="text/css">
+		<style type="text/css">
 			@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
 		</style>
 			
-		<style type="text/css">
-			#article_left_col{ width: 580px !important;} 
-			#center_col { width: 950px !important;} 
-			h1.indexhead { margin: 0px; padding: 0px;}
-		</style> -->
 				
 							
 		<script type="text/javascript" src="/assets/entrepeneurs_jquery-1.js"></script> 
@@ -94,8 +57,8 @@
 		<!-- <script src="http://www.work.ua/js/cssua.min.js" type="text/javascript"></script> -->		
 		
 		
-		<link href="/assets/screen_headlines.css" media="screen, projection" rel="stylesheet" type="text/css">
-
+		<!-- <link href="/assets/screen_headlines.css" media="screen, projection" rel="stylesheet" type="text/css"> -->
+		
 		<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
 		
 	    <script type="text/javascript">
@@ -115,12 +78,12 @@
 						<div class="table-main">
 							<div class="row">
 								<div class="cell-250" style="padding-left: 24px;">
-						  			<%= image_tag("image_learning_counsel.png", :alt => '') %>
+						  			<img src="../repository/image_learning_counsel.png" alt="image_learning_counsel.png" >
 						  		</div>
 							</div>
 							<div class="row">
 								<div class="cell-125" style="padding-left: 24px;">
-									<p style="font-family: msyh; font-size: 12px;">News and Context for the<br>Shift to Digital Curriculum</p>
+									<p style="font-family: msyh; font-size: 12px;">Research and Context for the<br>Shift to Digital Curriculum</p>
 						  		</div>
 							</div>							
 						</div>
@@ -142,14 +105,14 @@
 								<div class="cell-100percent">
 				 						<!-- link_to image_tag(“/assets/EdMatchUp_logo.png”, :class=>’′), :url =>{:controller=> ‘’,:action=>’’} -->															
 									<div id="edmatchuplogo">
-										<%= link_to image_tag("EdMatchUp_logo.png"), edmatchup_path %>															
+										<%= link_to image_tag("../repository/EdMatchUp_logo.png", :alt => 'EdMatchUp_logo.png'), edmatchup_path %>															
 									</div>							
 						  		</div>
 							</div>
 							<div class="row">
 								<div class="cell-100percent">
 									<div align="center">
-										<%= link_to image_tag("image_coming_soon_8k.png", :alt => 'Comming Soon'), edmatchup_path %>															
+										<%= link_to image_tag("../repository/image_coming_soon_8k.png", :alt => 'image_coming_soon_8k.png'), edmatchup_path %>															
 									</div>							
 						  		</div>							
 							</div>
@@ -157,77 +120,24 @@
 					</div>
 				</div>					
 			</div>	
-			  		
-			<!-- <div class="cell-100">
-	  			 image_tag("image_header_1.jpg", :alt => '') 
-	  			 					
-	  		</div>
-			<div class="cell-100">
-				 image_tag("image_header_2.jpg", :alt => '') 
-	  		</div> -->			  		
-	  		
-		 <!-- button_to "Sign up", {:controller => 'static_pages', :action => 'report', :id => 'Student'}  -->
-		 
-		 		
-		<%= link_to "Get Page", controller: "archives", action: "show", id: '1000' %>
-					
+		 					
 		</header>		
 		
 		<section>
 			
-			<div style="background-color: white;">
-				
+			<!-- <div style="background-color: white;"> -->				
 				
 				<div style="height: 30px;"></div>
 			    
-			    
-			    
-			    
-				<!-- <div align="center" style="margin-top:10px">
-					<div id="sfw_865" align="center" style="height:170px;">&nbsp;</div>
-					<script type="text/javascript">
-						// <![CDATA[
-						_wbn.push(function(){
-						//var so = new SWFObject("http://i.work.ua/b/865.swf?2013043509", "swf", "728", "90", "6", "#ffffff");
-						var so = new SWFObject("/assets/865.swf", "swf", "728", "90", "6", "#ffffff");
-						so.addParam("quality", "best");
-						so.addParam("menu", "false");
-						so.addParam("wmode", "opaque");
-						so.addParam("allowScriptAccess", "always");
-						so.addVariable("url", "http://www.work.ua/go.php?bid=865");
-						so.addVariable("target", "_blank");
-						so.write("sfw_865");
-						});
-						// ]]>
-					</script>
-				</div>				 -->
-			
-				<!-- <div class="space-100"></div> -->
 				
-				<div id="container" class="inner">
-												
-					<script>
-						$(document).ready(function() {
-							$('#prev').hover(function() {$('#prev img').attr('src','http://images.inc.com/header/prev-arrow-hov.png')}, function() {$('#prev img').attr('src','http://images.inc.com/header/prev-arrow.png')})
-							$('#next').hover(function() {$('#next img').attr('src','http://images.inc.com/header/next-arrow-hov.png')}, function() {$('#next img').attr('src','http://images.inc.com/header/next-arrow.png')})
-						});
-					</script>
-					
-					<!-- <span id="prev" style="float:left;left:-70px;top:215px;margin-top:0px;position:absolute;display:inline;">
-						<img src="/assets/entrepeneurs_prev-arrow.png">						
-					</span> -->											
-												
+				<div class="kontainer">
+																								
 					<span id="prev" style="float:left;left:-100px;top:215px;margin-top:0px;position:absolute;display:inline;">
 						<div style="width: 50px; height: 150px;">
 							<a class="scroll_video_prev" title="Previous" href="#"></a>
 						</div>					
 					</span>
 					
-					
-					<!-- <span id="next" style="float:right;right:-70px;top:215px;margin-top:0px;position:absolute;display:inline;">
-						<img src="/assets/entrepeneurs_next-arrow.png">
-					</span> -->
-
 					<span id="next" style="float:right;right:-80px;top:215px;margin-top:0px;position:absolute;display:inline;">
 						<div style="width: 50px; height: 150px;">
 							<a class="scroll_video_next" title="Next" href="#"></a>
@@ -235,23 +145,20 @@
 					</span>
 										
 
-					<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next" data-cycle-slides="&gt; div" style="width:970px;position:relative;height:890px;">					
-					
-					<!-- <div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next" data-cycle-slides="&gt; div" style="width:970px;position:relative;height:700px;"> -->					
+					<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next" data-cycle-slides="&gt; div" style="width:970px;position:relative; height: 890px; overflow: hidden;">					
 					
 					
 						<div style="position: absolute; top: 0px; left: 0px; z-index: 101; opacity: 1;" class="slide cycle-slide cycle-slide-active">
 
-							<!-- 1 -->															
 							<div class="fluidrow mainfeaturerow">
 					
 								<div style="margin-left: 10%;">
-							 		<a href="journals/k12_digital">
-							 			<img src="/assets/article-k12-digital.png" class="mainfeatureimage" height="450">
+							 		<a href="/archives/show?id=1015">
+							 			<img src="../repository/article-k12-digital.png" class="mainfeatureimage" height="450">
 							 		</a>
 								</div>
 
-								<div class="channel-article header perspective"><a href="journals/k12_digital"><span>PERSPECTIVE</span></a></div>
+								<div class="channel-article header perspective"><a href="/archives/show?id=1015"><span>PERSPECTIVE</span></a></div>
 								
 							    <div class="headlines">
 						        	<div class="h1"><a href="journals/k12_digital">How BIG <em>is</em> the K-12 Digital Curriculum Market?</a></div>
@@ -264,14 +171,13 @@
 							<br>
 					        
 					    	<div class="fluidrow">					    
-								<!-- 2 -->																				    
 								<div class="psubfeature">
 									<div class="inner_cell-subfeature">
 										<div class="bg-industry-news-green h1">
-											<a href="journals/nationally_recognized">INDUSTRY NEWS</a>
+											<a href="/archives/show?id=1017">INDUSTRY NEWS</a>
 										</div>
 									    <div class="h2">
-									    	<a href="journals/nationally_recognized" style="text-decoration: none;">
+									    	<a href="/archives/show?id=1017" style="text-decoration: none;">
 									    		Nationally Recognized 1:1 Initiative Chooses Prey to Protect Every Device
 									    	</a>
 									    	<span class="byline">&nbsp;by&nbsp;
@@ -281,21 +187,13 @@
 									</div>
 								</div>								
 								
-								<!-- 3 -->																			    					    
 								<div class="psubfeature">
 									<div class="inner_cell-subfeature">
 										<div class="bg-industry-news-orange h1">
-											<!-- <a href="journals/pearson">INDUSTRY NEWS</a> -->
-																						
-											<!-- <a href="archives/show/1000">INDUSTRY NEWS</a> -->
-																						
-											<%= link_to "Industry News", controller: "archives", action: "show", id: '1000' %>
-											 																						
-											 <!-- link_to "Get Page", controller: "static_pages", action: "show", id: '12'  -->											
-											
+											<a href="/archives/show?id=1018">INDUSTRY NEWS</a>
 										</div>
 									    <div class="h2">
-									    	<a href="journals/pearson" style="text-decoration: none;">Pearson announces a strategic investment in English language learning platform Voxy</a>
+									    	<a href="/archives/show?id=1018" style="text-decoration: none;">Pearson announces a strategic investment in English language learning platform Voxy</a>
 									    	<span class="byline">&nbsp;by&nbsp;
 									    		<a>The LC Staff</a>
 									    	</span>
@@ -303,14 +201,13 @@
 									</div>
 								</div>								
 								
-								<!-- 4 -->
 								<div class="psubfeature">
 									<div class="inner_cell-subfeature">
 										<div class="bg-industry-news-violet h1">
-											<a href="journals/tales_to_go">INDUSTRY NEWS</a>
+											<a href="/archives/show?id=1019">INDUSTRY NEWS</a>
 										</div>
 									    <div class="h2">
-									    	<a href="journals/tales_to_go" style="text-decoration: none;">
+									    	<a href="/archives/show?id=1019" style="text-decoration: none;">
 									    	Tales2Go Releases Android Version of its Award-Winning Service	
 									    	</a>
 									    	<span class="byline">&nbsp;by&nbsp;
@@ -326,31 +223,29 @@
 					
 						<div style="position: absolute; top: 0px; left: 0px; z-index: 100; display: none;" class="slide cycle-slide">
 							<div class="fluidrow mainfeaturerow">
-								<!-- 5 -->																				    					
 								<div style="margin-left: 14%;">
-						 			<a href="journals/we_need">
-						 				<img src="/assets/article-we-need.png" class="mainfeatureimage" height="450">
+						 			<a href="/archives/show?id=1025">
+						 				<img src="../repository/article-we-need.png" class="mainfeatureimage" height="450">
 						 			</a>
 								</div>
 						 		
-								<div class="channel-article header idea"><a href="journals/we_need"><span>IDEA</span></a></div>
+								<div class="channel-article header idea"><a href="/archives/show?id=1025"><span>IDEA</span></a></div>
 						 		
 							    <div class="headlines">
 						        	<div class="h1"><a href="journals/we_need">WE NEED NEW WORDS FOR DIGITAL CURRICULUM</a></div>
 						            <div class="h2">Digital Curriculum is a lot of things, but what it has yet to achieve is an agreed-upon set of words describing what it is and does to give it more context of what’s happening with it in schools today.<span class="byline">&nbsp;by&nbsp;<a href="#">LeiLani Cauthen</a></span></div>
 						        </div>
 						
-					        </div> <!-- fluidrow //-->
+					        </div>
 					        
 					    	<div class="fluidrow">
-								<!-- 6 -->								    		
-								<div class="psubfeature" onclick="">
+								<div class="psubfeature">
 									<div class="inner_cell-subfeature">
 										<div class="bg-industry-news-pink h1">
-											<a href="journals/tales_to_go_releases">INDUSTRY NEWS</a>
+											<a href="/archives/show?id=1020">INDUSTRY NEWS</a>
 										</div>
 									    <div class="h2">
-									    	<a href="journals/tales_to_go_releases" style="text-decoration: none;">
+									    	<a href="/archives/show?id=1020" style="text-decoration: none;">
 									    		Tales2Go Releases Android Version of its Award-Winning Service
 									    	</a>
 									    	<span class="byline">&nbsp;by&nbsp;
@@ -359,14 +254,13 @@
 								    	</div>
 									</div>
 								</div>					
-								<!-- 7 -->		
-								<div class="psubfeature" onclick="">
+								<div class="psubfeature">
 									<div class="inner_cell-subfeature">
 										<div class="bg-industry-news-brown h1">
-											<a href="journals/unique_az">INDUSTRY NEWS</a>
+											<a href="/archives/show?id=1023">INDUSTRY NEWS</a>
 										</div>
 									    <div class="h2">
-									    	<a href="journals/unique_az" style="text-decoration: none;">
+									    	<a href="/archives/show?id=1023" style="text-decoration: none;">
 									    		Unique AZ District Closes Achievement Gap with Blended Learning Approach
 									    	</a>
 									    	<span class="byline">&nbsp;by&nbsp;
@@ -375,14 +269,13 @@
 								    	</div>
 									</div>
 								</div>					
-								<!-- 8 -->			
 								<div class="psubfeature">
 									<div class="inner_cell-subfeature">
 										<div class="bg-industry-news-blue h1">
-											<a href="journals/charter_school_assoc">INDUSTRY NEWS</a>
+											<a href="/archives/show?id=1003">INDUSTRY NEWS</a>
 										</div>
 									    <div class="h2">
-									    	<a href="journals/charter_school_assoc" style="text-decoration: none;">
+									    	<a href="/archives/show?id=1003" style="text-decoration: none;">
 									    		Charter School Associates Selects observe4success as Classroom Observation Partner
 									    	</a>
 									    	<span class="byline">&nbsp;by&nbsp;
@@ -393,40 +286,37 @@
 								</div>								
 						
 							</div>
-							<!-- fluidrow //-->
 						</div>
 					
 					
 					
 						<div style="position: absolute; top: 0px; left: 0px; z-index: 99; display: none;" class="slide cycle-slide">
 							<div class="fluidrow mainfeaturerow">
-								<!-- 9 -->	
 
 								<div style="margin-left: 16%;">
-							 		<a href="journals/checklist_of_top_10">
-							 			<img src="/assets/article-checklist-of-top-10.png" class="mainfeatureimage" height="450">
+							 		<a href="/archives/show?id=1004">
+							 			<img src="../repository/article-checklist-of-top-10.png" class="mainfeatureimage" height="450">
 							 		</a>
 								</div>
 						 		
-								<div class="channel-article header tactic"><a href="journals/checklist_of_top_10"><span>TACTIC</span></a></div>
+								<div class="channel-article header tactic"><a href="/archives/show?id=1004"><span>TACTIC</span></a></div>
 						 		
 							    <div class="headlines">
 						        	<div class="h1"><a href="#">Checklist of Top 10 Benchmarks for Instructional Materials</a></div>
 						            <div class="h2">How do you know you have quality digital learning content?  This question could be made incredibly complex, but luckily people in-the-know have given ten simple guidelines.<span class="byline">&nbsp;by&nbsp;<a href="#">The LC Staff</a></span></div>
 						        </div>
 						
-					        </div> <!-- fluidrow //-->
+					        </div> 
 					        
 					    	<div class="fluidrow">
-								<!-- 10 -->																				    					    
-								<div class="psubfeature" onclick="">
+								<div class="psubfeature">
 									<div class="inner_cell-subfeature">
 
 										<div class="bg-industry-news-pine h1">
-											<a href="journals/tulsa_charter">INDUSTRY NEWS</a>
+											<a href="/archives/show?id=1022">INDUSTRY NEWS</a>
 										</div>
 									    <div class="h2">
-									    	<a href="journals/tulsa_charter" style="text-decoration: none;">
+									    	<a href="/archives/show?id=1022" style="text-decoration: none;">
 									    		Tulsa Charter School sells cookies to fund purchase of observe4success
 									    	</a>
 									    	<span class="byline">&nbsp;by&nbsp;
@@ -434,21 +324,17 @@
 									    	</span>
 								    	</div>
 										
-										<!-- <div class="bg-grow h1"><a href="#">GROW</a></div>
-									    <div class="h2"><a href="#"> Shift and Pivot: Monitor Your Audience, Then Self-Correct</a><span class="byline">&nbsp;by&nbsp;<a href="#">Debra Kaye</a></span></div>
-									    <div class="shares sharrre" data-title="sharrre" data-url=""><span id="article-share"><span class="share-count">187</span> <span class="share-text">SHARES</span></span></div> -->
 									    									    									
 									</div>
 								</div>					
 								
-								<!-- 11 -->			
 								<div class="psubfeature">
 									<div class="inner_cell-subfeature">
 										<div class="bg-industry-news-tan h1">
-											<a href="journals/mycore">INDUSTRY NEWS</a>
+											<a href="/archives/show?id=1016">INDUSTRY NEWS</a>
 										</div>
 									    <div class="h2">
-									    	<a href="journals/mycore" style="text-decoration: none;">
+									    	<a href="/archives/show?id=1016" style="text-decoration: none;">
 									    		myCore now offers CCSS-Aligned Units and Lessons
 									    	</a>
 									    	<span class="byline">&nbsp;by&nbsp;
@@ -458,1215 +344,480 @@
 									</div>
 								</div>								
 																									    					    					    
-								<div class="psubfeature" onclick="">
+								<div class="psubfeature">
 									<div class="inner_cell-subfeature">
-										<div></div>
-										
-										<!-- <div class="bg-default h1">VIDEO&nbsp;|&nbsp;<a href="#">THE PLAYBOOK</a></div>
-									    <div class="h2"><a href="#">Kick Your Employees Out of the Office. Seriously</a><span class="byline">&nbsp;by&nbsp;<a href="#">Christine Lagorio-Chafkin</a></span></div>
-									    <div class="shares sharrre" data-title="sharrre" data-url=""><span id="article-share"><span class="share-count">170</span> <span class="share-text">SHARES</span></span></div> -->
-									    
+										<div class="bg-industry-news-royalred h1">
+											<a href="/archives/show?id=1012">INDUSTRY NEWS</a>
+										</div>
+									    <div class="h2">
+									    	<a href="/archives/show?id=1012" style="text-decoration: none;">
+									    		Miami-Dade Renews contract with GuideK12 for Geovisual Analytics
+									    	</a>
+									    	<span class="byline">&nbsp;by&nbsp;
+									    		<a>Jacob Hanson, Contributor</a>
+									    	</span>
+								    	</div>
 									</div>
 								</div>								
-								
-								<!-- 12 -->																				    					    
-								<!-- <div class="psubfeature" onclick="">
-									<div class="inner_cell-subfeature">
-										<div class="bg-people h1"><a href="#">PEOPLE</a></div>
-									    <div class="h2"><a href="#">Is Obamacare Good for Small Businesses? It's Complicated</a><span class="byline">&nbsp;by&nbsp;<a href="#">Adam Bluestein</a></span></div>
-									    <div class="shares sharrre" data-title="sharrre" data-url=""><span id="article-share"><span class="share-count">61</span> <span class="share-text">SHARES</span></span></div>
-									</div>
-								</div> -->								
-						
-							<!-- </div>  -->
-							<!-- fluidrow //-->
+							</div>
 					
 						</div>
-					
-						<!-- <div style="position: absolute; top: 0px; left: 0px; z-index: 100; opacity: 1;" class="slide cycle-slide">
-							<div class="fluidrow mainfeaturerow">
-								<div class="bg-grow caption"><a href="#">THE LEARNING COUNSEL</a></div>
-						 		<div align="center" style="margin-bottom: 10px;"><a href="#" style="text-align: center;"><img src="/assets/smartboard_1.png" class="mainfeatureimage" height="450"></a></div>
-					        </div>
-					    	<div class="fluidrow">
-							</div>
-						</div> -->					
-					
-					</div> <!-- cycle-slideshow //-->		
 								
+					</div>
+
+					<div style="clear: both; height: 0px; font-size: 1px; line-height: 0px;"></div>
+				
+					<div style="width: 100%; height: 30px; background-color: gray; margin-top: 4px; margin-bottom: 20px;"></div>
+				
+					<div style="height: 20px;"></div>
+					
+				
+				
+
+<!-- start template single row -->
+				
+<div class="k-governcell ktop kbottom">	
+		
+	<div class="k-outercell kol3">
+		<a href="/archives/show?id=1010" class="k-link-a">
+			<div class="k-inner-cell">
+				<div class="k-b-container">
+					<div class="k-img-cell-single">
+						<img src="../repository/article-facing-down.jpeg" class="k-img" height="180" onerror="this.src='../altgraphics/error-260-180.png'">
+					</div>
+					<div class="katcolorbox_posit">
+	            		<div class="katbox-article katbox thoughts_catbox">
+	            			<span>THOUGHTS</span>
+	            		</div>
+	        		</div>																								
 				</div>
-				<br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-				<!-- headlines -->
-								
+				<div class="k-b-headline">
+					Facing Down the Learning Content Disruption 
+					<span class="kbyline">by&nbsp<span class="k-b-link">David Kafitz</span></span>											
+				</div>
+			</div>
+		</a>
+	</div>
+		
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol3">
+		
+		<a href="/archives/show?id=1006" class="k-link-a">
+			<div class="k-inner-cell">
+				<div class="k-b-container">
+					<div class="k-img-cell-single">
+						<img src="../repository/article-coffee-chat-with-memphis.jpg" class="k-img" height="200" onerror="this.src='../altgraphics/error-260-180.png'">
+					</div>
+					<div class="katcolorbox_posit">
+	            		<div class="katbox-article katbox industry_news_catbox_tan">
+	            			<span>COFFEE CHAT</span>
+	            		</div>
+	        		</div>																								
+				</div>
+				<div class="k-b-headline">
+					COFFEE CHAT WITH MEMPHIS
 					
-					<div class="container-main">
-						<div class="board">
-							
-							
-									
-							<div style="width: 100%; height: 30px; background-color: gray; margin-top: 4px; margin-bottom: 20px;"></div>
+					<span class="kbyline">by&nbsp<span class="k-b-link">The LC Staff</span></span>											
+				</div>														
+			</div>
+		</a>	
+		
+	</div>
+	
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol3">
+		<a href="/archives/show?id=1011" class="k-link-a">
+			<div class="k-inner-cell">
+				<div class="k-b-container">
+					<div class="k-img-cell-single">
+						<img src="../repository/article-five-types.png" class="k-img" height="180" onerror="this.src='../altgraphics/error-260-180.png'">
+					</div>
+					<div class="katcolorbox_posit">
+	            		<div class="katbox-article katbox thoughts_catbox">
+	            			<span>THOUGHTS</span>
+	            		</div>
+	        		</div>																								
+				</div>
+				<div class="k-b-headline">
+					FIVE TYPES OF CURRICULUM “THINGS”
+					
+					<span class="kbyline">by&nbsp<span class="k-b-link">LeiLani Cauthen</span></span>											
+				</div>
+			</div>
+		</a>	
+	</div>
+	
+</div>
+
+<!-- end template single row -->				
+					
+<div style="height: 50px; position: relative;"></div>
 
 
-							<div class="rowfluid boxtemp-black-d">
+
+<!-- start template single row -->
+				
+<div class="k-governcell ktop">	
+		
+	<div class="k-outercell kol3">
+		<a href="/archives/show?id=1013" class="k-link-a">
+			<div class="k-inner-cell">
+				<div class="k-b-container">
+					<div class="k-img-cell-single">
+						<img src="png" class="k-img" height="180" onerror="this.src='../altgraphics/error-260-180.png'">
+					</div>
+					<div class="katcolorbox_posit">
+	            		<div class="katbox-article katbox idea_catbox">
+	            			<span>IDEA</span>
+	            		</div>
+	        		</div>																								
+				</div>
+				<div class="k-b-headline">
+					Health Care Curriculum Guide
+					
+					<span class="kbyline">by&nbsp<span class="k-b-link">The LC Staff</span></span>											
+				</div>
+			</div>
+		</a>	
+	</div>
+		
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol3">
+		<a href="#" class="k-link-a">
+			<div class="k-inner-cell">
+				<div class="k-b-container">
+					<div class="k-img-cell-single">
+						<img src="png" class="k-img" width="260" height="180" onerror="this.src='../altgraphics/error-260-180.png'">
+					</div>
+					<div class="katcolorbox_posit">
+	            		<div class="katbox-article katbox tactic_catbox">
+	            			<span>GENRE</span>
+	            		</div>
+	        		</div>																								
+				</div>
+				<div class="k-b-headline">
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr
+					
+					<span class="kbyline">by&nbsp<span class="k-b-link">The Author</span></span>											
+				</div>														
+			</div>
+		</a>	
+	</div>
+	
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol3 k-empty">
+		
+		<div style="background-color: #8080FF; width: 300px; height: 300px; margin-top: 8px;"></div>		
+	</div>
+	
+</div>
+
+<!-- end template single row -->				
 								
-								<a href="journals/facing_down" class="col_1 p_normal">
-									<div class="inner_cell">
-										<div class="b_container">
-											<div class="img-cell-single">
-												<img src="png" onerror="this.src='/assets/error-260-180.png'">
-											</div>
-											<div class="catcolorbox_posit">
-							            		<div class="catbox-article catbox thoughts_catbox">
-							            			<span>CATBOX</span>
-							            		</div>
-						            		</div>																								
-										</div>
-										<div class="b_headline">
-											This is a long line of headline text that goes here
-											<span class="pbyline">by&nbsp<span class="b_link">The Author</span></span>											
-										</div>
-									</div>
-								</a>
+
+				
+<!-- start template single row -->		
+<div class="k-governcell kbottom">			
 						
-								<a href="journals/whats_so_hard" class="col_2 p_normal">
-									<div class="inner_cell">
-										<div class="b_container">
-											<div class="img-cell-single">
-												<img src="png" onerror="this.src='/assets/error-260-180.png'">
-											</div>
-											<div class="catcolorbox_posit">
-							            		<div class="catbox-article catbox tactic_catbox">
-							            			<span>CATBOX</span>
-							            		</div>
-						            		</div>																								
-										</div>
-										<div class="b_headline">
-											This is a long line of headline text that goes here
-											<span class="pbyline">by&nbsp<span class="b_link">The Author</span></span>											
-										</div>
-									</div>
-								</a>
+	<div class="k-outercell kol3">
+		
+		<div class="k-cell-divider-horiz" style=""></div>
+								
+		<a href="#" class="k-link-a">
+			<div class="k-inner-cell">
+				<div class="k-b-container">
+					<div class="k-img-cell-single">
+						<img src="png" class="k-img" width="300" height="260" onerror="this.src='../altgraphics/error-260-260.png'">
+					</div>
+					<div class="katcolorbox_posit">
+	            		<div class="katbox-article katbox industry_news_catbox_pine">
+	            			<span>GENRE</span>
+	            		</div>
+	        		</div>																								
+				</div>
+				<div class="k-b-headline">
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr
+					
+					<span class="kbyline">by&nbsp<span class="k-b-link">The Author</span></span>											
+				</div>														
+			</div>
+		</a>
+	</div>
 						
-								<a href="journals/educating_for_the_design" class="col_3 p_normal" onclick="">
-									<div class="inner_cell">
-										<div class="b_container">
-											<div class="img-cell-single">
-												<img src="png" onerror="this.src='/assets/error-260-180.png'">
-											</div>
-											<div class="catcolorbox_posit">
-							            		<div class="catbox-article catbox design_catbox">
-							            			<span>CATBOX</span>
-							            		</div>
-						            		</div>																								
-										</div>
-										<div class="b_headline">
-											This is a long line of headline text that goes here
-											<span class="pbyline">by&nbsp<span class="b_link">The Author</span></span>											
-										</div>
-									</div>
-								</a>
-								
-							</div>
-
-							<div class="container_space"></div>
-							
-							<div class="fluidrow boxtemp-red">
-								
-								<a href="journals/education_compared" class="col_1 b_portrait" onclick="">
-									<div class="inner_cell boxtemp-black">
-										<div class="b_container">
-											<div style="position: absolute; bottom: 0px;">
-												<img src="jpg" onerror="this.src='/assets/error-300-520.png'">
-											</div>
-											
-											<div class="catcolorbox_pos">
-							            		<div class="catbox-article catbox_pos perspective_catbox">
-							            			<span>PERSPECTIVE</span>
-							            		</div>
-						            		</div>								            		
-						            						            						
-										</div>
-										<div class="b_headline">
-											Education Compared to All Other Industry
-											<span class="pbyline">by&nbsp;<span class="b_link" onclick="">LeiLani Cauthen</span></span>
-										</div>
-									</div>
-								</a>
-								
-								<div class="col_2">
-									
-									<div class="inner_cell">
-										<div class="text_container b_container line-grow">
-											
-											<object type="application/x-shockwave-flash" data="http://www.youtube.com/v/UZePBZ-edfE&feature=youtu.be&noredirect=1" width="300" height="200">          	
-									            <param name="wmode" value="opaque" />
-									            <param name="quality" value="high" />
-									            <param name="bgcolor" value="#E9E9E9" />
-									            <param name="allowfullscreen" value="true" />
-									         	<param name="allowscriptaccess" value="never" />
-									         </object>
-
-											<div class="headline-excelsiorcomics">
-												<span>5 Key Areas of Success K12 Tech Integration Planning</span>
-											</div>
-
-																								
-											<div class="text_box">
-												<span class="pbyline">&nbsp;<span class="b_link" onclick=""></span></span>
-											</div>
-											<div class="text_cat">
-												<span class="b_link" onclick=""></span>
-											</div>
-										</div>
-									</div>
-									
-								</div>
-								
-								<a href="journals/blogs_and_links" class="col_3" onclick="">
-									<div class="inner_cell">
-										<div class="line-lead">
-											
-											<div style="vertical-align: top;">
-												<img src="png" onerror="this.src='/assets/error-260-180.png'">
-											</div>
-
-											<div class="headline-junebug">
-												<span class="gold">Blogs</span>
-												<span class="red">&amp;</span>
-												<span class="blue">Links</span>														
-											</div>
-																								
-											<div class="text_box">
-												<span class="pbyline">&nbsp;<span class="b_link" onclick=""></span></span>
-											</div>
-											<div class="text_cat">
-												<span class="b_link" onclick=""></span>
-											</div>
-										</div>
-									</div>
-								</a>										
-								
-							</div>
-							
-							<div class="fluidrow boxtemp-green">
-								
-								<div class="col_1">
-									<div class="inner_cell"></div>
-								</div>
-
-								<a href="journals/to_solution" class="col_2 p_normal" onclick="">
-									<div class="inner_cell">
-										
-										<div class="b_container">
-											<div class="img-cell-single">
-												<img src="png" onerror="this.src='/assets/error-260-180.png'">
-											</div>
-											<div class="catcolorbox_posit">
-							            		<div class="catbox-article catbox design_catbox">
-							            			<span>CATBOX</span>
-							            		</div>
-						            		</div>																								
-										</div>
-										<div class="b_headline">
-											This is a long line of headline text that goes here
-											<span class="pbyline">by&nbsp<span class="b_link">The Author</span></span>											
-										</div>
-										
-									</div>
-								</a>
-
-								<a href="journals/how_to_be" class="col_3 p_normal" onclick="">
-									<div class="inner_cell">
-
-										<!-- <div class="text_container b_container line-startup" style="border-style: solid; border-width: 1px; border-color: red;"> -->
-											
-										<div class="line-startup" style="height: 260px; border-style: solid; border-width: 1px; border-color: red;">
-											
-											<div class="headline-second-breakfast" style="vertical-align: top; font-size: 16px; margin-top: 8px;">
-												<span>Blog</span>
-											</div>
-											
-											<div class="headline-JandaCheerfulScript" style="padding-top: 20px; font-size: 40px; border-style: solid; border-width: 1px; border-color: red;">
-												<span style="padding-left: 10px">&ldquo;How</span><br>
-												<span style="padding-left: 120px">to</span><br>
-												<span style="padding-left: 200px">Be&rdquo;</span>														
-											</div>
-											
-											<div style="position: absolute; bottom: 30px; width: 298px; text-align: right; border-style: solid; border-width: 1px; border-color: green;">
-												<span class="pbyline">By&nbsp;<span class="b_link" onclick=""></span>LeiLani Cauthen</span>
-											</div>
-										</div>
-										
-									</div>
-								</a>
-								
-							</div>
-							
-							
-							<div class="container_space"></div>
-
-							<div class="container_space"></div>
-							
-							
-							<div class="fluidrow boxtemp-red">
-								
-								
-								<div class="col_1">
-									
-									<div class="inner_cell">
-										<div class="text_container b_container line-grow">
-											
-											<object type="application/x-shockwave-flash" data="http://www.youtube.com/v/UZePBZ-edfE&feature=youtu.be&noredirect=1" width="300" height="200">          	
-									            <param name="wmode" value="opaque" />
-									            <param name="quality" value="high" />
-									            <param name="bgcolor" value="#E9E9E9" />
-									            <param name="allowfullscreen" value="true" />
-									         	<param name="allowscriptaccess" value="never" />
-									         </object>
-
-											<div class="headline-excelsiorcomics">
-												<span>5 Key Areas of Success K12 Tech Integration Planning</span>
-											</div>
-
-																								
-											<div class="text_box">
-												<span class="pbyline">&nbsp;<span class="b_link" onclick=""></span></span>
-											</div>
-											<div class="text_cat">
-												<span class="b_link" onclick=""></span>
-											</div>
-										</div>
-									</div>
-									
-								</div>
-								
-								<a href="journals/blogs_and_links" class="col_2" onclick="">
-									<div class="inner_cell">
-										<div class="text_container b_container line-lead">
-											
-											<img src="/assets/article-blogs-and-links.png" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-4.jpg'">
-
-											<div class="headline-junebug">
-												<span class="gold">Blogs</span>
-												<span class="red">&amp;</span>
-												<span class="blue">Links</span>														
-											</div>
-																								
-											<div class="text_box">
-												<span class="pbyline">&nbsp;<span class="b_link" onclick=""></span></span>
-											</div>
-											<div class="text_cat">
-												<span class="b_link" onclick=""></span>
-											</div>
-										</div>
-									</div>
-								</a>			
-								
-								
-								<a href="journals/education_compared" class="col_3 b_portrait" onclick="">
-									<div class="inner_cell boxtemp-black">
-										<div class="b_container">
-											<div style="position: absolute; bottom: 0px;">
-												<img src="jpg" onerror="this.src='http://images.inc.com/refreshgraphics/300x520-3.jpg'">
-											</div>
-											
-											<div class="catcolorbox_pos">
-							            		<div class="catbox-article catbox_pos perspective_catbox">
-							            			<span>PERSPECTIVE</span>
-							            		</div>
-						            		</div>								            		
-						            						            						
-										</div>
-										<div class="b_headline">
-											Education Compared to All Other Industry
-											<span class="pbyline">by&nbsp;<span class="b_link" onclick="">LeiLani Cauthen</span></span>
-										</div>
-									</div>
-								</a>
-								
-							</div>
-							
-							<div class="fluidrow boxtemp-green">
-								
-								<a href="journals/how_to_be" class="col_1 p_normal" onclick="">
-									<div class="inner_cell">
-
-										<div class="text_container b_container line-startup" style="width: 300px; border-style: solid; border-width: 1px; border-color: red;">
-											
-											<div class="headline-second-breakfast" style="font-size: 16px; margin-top: 8px;">
-												<span>Blog</span>
-											</div>
-											
-											<div class="headline-JandaCheerfulScript" style="padding-top: 50px; font-size: 50px; border-style: solid; border-width: 1px; border-color: red;">
-												<span style="padding-left: 10px">How</span>
-												<span style="padding-left: 70px">to</span>
-												<span style="padding-left: 130px">Be</span>														
-											</div>
-																								
-											<div class="text_box" style="border-style: solid; border-width: 1px; border-color: green;">
-												<span class="pbyline">By&nbsp;<span class="b_link" onclick=""></span>LeiLani Cauthen</span>
-											</div>
-											<div class="text_cat">
-												<span class="b_link" onclick=""></span>
-											</div>
-										</div>
-										
-									</div>
-								</a>
-
-								<a href="journals/to_solution" class="col_2 p_normal" onclick="">
-									<div class="inner_cell">
-										<div class="b_container">
-											
-											<img src="/assets/article-to-solution-300-200.png" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-4.jpg'">
-						            		<div class="catbox-article catbox tactic_catbox">
-						            			<span>TACTIC</span>
-						            		</div>													
-										</div>
-										<div class="b_headline">
-											To Solution or Element – That is the Question
-											<img src="Entrepeneurs_files/videoicon_sm.png">
-												<span class="pbyline">By&nbsp;<span class="b_link" onclick="">The LC Staff</span></span>
-										</div>
-										
-									</div>
-								</a>
-
-								<div class="col_3">
-									<div class="inner_cell"></div>
-								</div>
-								
-							</div>
-							
-
-
-
-							<div class="container_space"></div>
-
-							<div class="container_space"></div>
-							
-							
-							<div class="fluidrow boxtemp-red">
-								
-								
-								<div class="col_1">
-									
-									<div class="inner_cell">
-										<div class="text_container b_container line-grow">
-											
-											<object type="application/x-shockwave-flash" data="http://www.youtube.com/v/UZePBZ-edfE&feature=youtu.be&noredirect=1" width="300" height="200">          	
-									            <param name="wmode" value="opaque" />
-									            <param name="quality" value="high" />
-									            <param name="bgcolor" value="#E9E9E9" />
-									            <param name="allowfullscreen" value="true" />
-									         	<param name="allowscriptaccess" value="never" />
-									         </object>
-
-											<div class="headline-excelsiorcomics">
-												<span>5 Key Areas of Success K12 Tech Integration Planning</span>
-											</div>
-
-																								
-											<div class="text_box">
-												<span class="pbyline">&nbsp;<span class="b_link" onclick=""></span></span>
-											</div>
-											<div class="text_cat">
-												<span class="b_link" onclick=""></span>
-											</div>
-										</div>
-									</div>
-									
-								</div>
-								
-								<a href="journals/education_compared" class="col_2 b_portrait" onclick="">
-									<div class="inner_cell boxtemp-black">
-										<div class="b_container">
-											<div style="position: absolute; bottom: 0px;">
-												<img src="jpg" onerror="this.src='http://images.inc.com/refreshgraphics/300x520-3.jpg'">
-											</div>
-											
-											<div class="catcolorbox_pos">
-							            		<div class="catbox-article catbox_pos perspective_catbox">
-							            			<span>PERSPECTIVE</span>
-							            		</div>
-						            		</div>								            		
-						            						            						
-										</div>
-										<div class="b_headline">
-											Education Compared to All Other Industry
-											<span class="pbyline">by&nbsp;<span class="b_link" onclick="">LeiLani Cauthen</span></span>
-										</div>
-									</div>
-								</a>
-								
-								<a href="journals/blogs_and_links" class="col_3" onclick="">
-									<div class="inner_cell">
-										<div class="text_container b_container line-lead">
-											
-											<img src="/assets/article-blogs-and-links.png" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-4.jpg'">
-
-											<div class="headline-junebug">
-												<span class="gold">Blogs</span>
-												<span class="red">&amp;</span>
-												<span class="blue">Links</span>														
-											</div>
-																								
-											<div class="text_box">
-												<span class="pbyline">&nbsp;<span class="b_link" onclick=""></span></span>
-											</div>
-											<div class="text_cat">
-												<span class="b_link" onclick=""></span>
-											</div>
-										</div>
-									</div>
-								</a>			
-								
-								
-								
-							</div>
-							
-							<div class="fluidrow boxtemp-green">
-								
-								<a href="journals/how_to_be" class="col_1 p_normal" onclick="">
-									<div class="inner_cell">
-
-										<div class="text_container b_container line-startup" style="width: 300px; border-style: solid; border-width: 1px; border-color: red;">
-											
-											<div class="headline-second-breakfast" style="font-size: 16px; margin-top: 8px;">
-												<span>Blog</span>
-											</div>
-											
-											<div class="headline-JandaCheerfulScript" style="padding-top: 50px; font-size: 50px; border-style: solid; border-width: 1px; border-color: red;">
-												<span style="padding-left: 10px">How</span>
-												<span style="padding-left: 70px">to</span>
-												<span style="padding-left: 130px">Be</span>														
-											</div>
-																								
-											<div class="text_box" style="border-style: solid; border-width: 1px; border-color: green;">
-												<span class="pbyline">By&nbsp;<span class="b_link" onclick=""></span>LeiLani Cauthen</span>
-											</div>
-											<div class="text_cat">
-												<span class="b_link" onclick=""></span>
-											</div>
-										</div>
-										
-									</div>
-								</a>
-
-								<div class="col_2">
-									<div class="inner_cell"></div>
-								</div>
-
-								<a href="journals/to_solution" class="col_3 p_normal" onclick="">
-									<div class="inner_cell">
-										<div class="b_container">
-											
-											<img src="/assets/article-to-solution-300-200.png" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-4.jpg'">
-						            		<div class="catbox-article catbox tactic_catbox">
-						            			<span>TACTIC</span>
-						            		</div>													
-										</div>
-										<div class="b_headline">
-											To Solution or Element – That is the Question
-											<img src="Entrepeneurs_files/videoicon_sm.png">
-												<span class="pbyline">By&nbsp;<span class="b_link" onclick="">The LC Staff</span></span>
-										</div>
-										
-									</div>
-								</a>
-
-								
-							</div>
-
-
-
-
-
-
-
-
-							
-							
-							
-							<div class="container_space"></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-							
-							<div class="fluidrow row1 boxtemp-red">
-								
-								<a href="journals/facing_down" class="col_1 p_normal">
-									<div class="inner_cell">
-										<div class="b_container">
-											<img src="/assets/article-facing-down.jpeg" onerror="this.src='/assets/error-300-200.png'">
-						            		<div class="catbox-article catbox thoughts_catbox">
-						            			<span>THOUGHTS</span>
-						            		</div>													
-										</div>
-										<div class="b_headline">
-											Facing Down the Learning Content Disruption
-											<span class="pbyline">by&nbsp<span class="b_link">David Kafitz</span></span>
-										</div>
-									</div>
-								</a>
+	
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol3">
+		
+		<div class="k-cell-divider-horiz"></div>
 						
-								<a href="journals/whats_so_hard" class="col_2 p_normal">
-									<div class="inner_cell">
-										<div class="b_container">
-											<img src="/assets/article-whats-so-hard.png" class="image-h200" onerror="this.src='/assets/error-300-200.png'">
-						            		<div class="catbox-article catbox tactic_catbox">
-						            			<span>TACTIC</span>
-						            		</div>													
-										</div>
-										<div class="b_headline">
-											What’s So Hard About Choosing Digital Curriculum?
-											<span class="pbyline">by&nbsp;
-												<span class="b_link" onclick="">The LC Staff</span>
-											</span>
-										</div>									
-									</div>
-								</a>
+		<a href="/archives/show?id=1007" class="k-link-a">
+			<div class="k-inner-cell">
+				<div class="k-b-container">
+					<div class="k-img-cell-single">
+						<img src="../repository/article-digital-curriculum-strategy.jpg" class="k-img" height="300" onerror="this.src='../altgraphics/error-260-260.png'">
+					</div>
+					<div class="katcolorbox_posit">
+	            		<div class="katbox-article katbox tactic_catbox">
+	            			<span>STRATEGY</span>
+	            		</div>
+	        		</div>																								
+				</div>
+				<div class="k-b-headline">
+					What is a Digital Curriculum Strategy?
+					
+					<span class="kbyline">by&nbsp<span class="k-b-link">David Kafitz</span></span>											
+				</div>														
+			</div>
+		</a>	
+	</div>
+	
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell-double kol3">
+		
+		<div style="background-color: #8080FF; width: 300px; height: 376px;"></div>
+		
+		<!-- <a href="#" class="k-link-a">
+			<div class="k-inner-cell">
+				<div class="k-b-container" style="padding-bottom: 126px;">
+					<div class="k-img-cell-single">
+						<img src="png" class="k-img" height="700" onerror="this.src='/assets/error-300-700-blue.png'">
+					</div>
+				</div>
+			</div>
+		</a> -->		
+				
+	</div>
+	
+</div>
+		
+<!-- end template single row -->				
+
+
+<div style="height: 50px;"></div>
+
+
+<!-- start template double row -->
+				
+<div class="k-governcell ktop">	
+		
+	<div class="k-outercell kol3 k-empty">
+		<a href="#" class="k-link-a">
+			<div class="k-inner-cell">
+			</div>
+		</a>	
+	</div>
+		
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol3">
+		
+			<div class="k-inner-cell"  style="padding-top: 2px;">
+				<div class="text_container b_container line-grow">
+					
+					<object type="application/x-shockwave-flash" data="http://www.youtube.com/v/UZePBZ-edfE&feature=youtu.be&noredirect=1" width="300" height="200">          	
+			            <param name="wmode" value="opaque" />
+			            <param name="quality" value="high" />
+			            <param name="bgcolor" value="#E9E9E9" />
+			            <param name="allowfullscreen" value="true" />
+			         	<param name="allowscriptaccess" value="never" />
+			         </object>
+
+					<div class="headline-excelsiorcomics">
+						<span>5 Key Areas of Success K12 Tech Integration Planning</span>
+					</div>
+				</div>
+			</div>
+			
+	</div>
+	
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol3">
+		<a href="/archives/show?id=1002" class="k-link-a">
+			<div class="k-inner-cell" style="padding-top: 2px;">
+				<div class="text_container b_container line-blog">
+					
+					<img src="../repository/article-blogs-and-links.png" alt="article-blogs-and-links.png" onerror="this.src='../altgraphics/error-300-200.png'">
+					
+					<div class="headline-junebug">
+						<span class="gold">Blogs</span>
+						<span class="red">&amp;</span>
+						<span class="blue">Links</span>														
+					</div>
+				</div>
+			</div>
+		</a>	
+	</div>
+</div>
+
+
+<div class="k-governcell kbottom">			
 						
-								<a href="journals/educating_for_the_design" class="col_3 p_normal" onclick="">
-									<div class="inner_cell">
-										<div class="b_container">
-											<img src="/assets/article-educating-for-the-design.jpg" style="height: 200px;" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-6.jpg'">
-						            		<div class="catbox-article catbox design_catbox">
-						            			<span>DESIGN</span>
-						            		</div>
-						            	</div>													
-										<div class="b_headline">
-											Educating for the Design Economy
-											<span class="pbyline">by&nbsp;
-												<span class="b_link" onclick="">The LC Staff</span>
-											</span>
-										</div>
-									</div>
-								</a>
-							</div>
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							<div class="fluidrow row5 boxtemp-red">
+	<div class="k-outercell-double kol3">
+		<a href="/archives/show?id=1009" class="k-link-a">
+			<div class="k-inner-cell">
+				<div class="k-b-container">
+					<div class="k-img-cell-single">
+						<img src="../repository/article-education-compared.jpg" class="k-img" width="260" onerror="this.src='../altgraphics/error-300-520.png'">
+					</div>
+					<div class="katcolorbox_posit">
+	            		<div class="katbox-article katbox perspective_catbox">
+	            			<span>PERSPECTIVE</span>
+	            		</div>
+	        		</div>																								
+				</div>
+				<div class="k-b-headline">
+					Education Compared to All Other Industry
+					
+					<span class="kbyline">by&nbsp<span class="k-b-link">LeiLani Cauthen</span></span>											
+				</div>														
+			</div>
+		</a>		
+	</div>
+	
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol3">
+		
+		<div class="k-cell-divider-horiz"></div>
+						
+		<a href="/archives/show?id=1021" class="k-link-a">
+			<div class="k-inner-cell">
+				<div class="k-b-container">
+					<div class="k-img-cell-single">
+						<img src="../repository/article-to-solution-300-200.png" class="k-img" height="200" onerror="this.src='../altgraphics/error-260-180.png'">
+					</div>
+					<div class="katcolorbox_posit">
+	            		<div class="katbox-article katbox tactic_catbox">
+	            			<span>TACTIC</span>
+	            		</div>
+	        		</div>																								
+				</div>
+				<div class="k-b-headline">
+					To Solution or Element – That is the Question
+					
+					<span class="kbyline">by&nbsp<span class="k-b-link">The LC Staff</span></span>											
+				</div>														
+			</div>
+		</a>	
+	</div>
+	
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol3">
+		
+		<div class="k-cell-divider-horiz"></div>
 								
-								<a href="journals/education_compared" class="col_1 b_portrait" onclick="">
-									<div class="inner_cell boxtemp-black">
-										<div class="b_container">
-											<div style="position: absolute; bottom: 0px;">
-												<img src="/assets/article-education-compared.jpg" onerror="this.src='http://images.inc.com/refreshgraphics/300x520-3.jpg'">
-											</div>
-											
-											<div class="catcolorbox_pos">
-							            		<div class="catbox-article catbox_pos perspective_catbox">
-							            			<span>PERSPECTIVE</span>
-							            		</div>
-						            		</div>								            		
-						            						            						
-										</div>
-										<div class="b_headline">
-											Education Compared to All Other Industry
-											<span class="pbyline">by&nbsp;<span class="b_link" onclick="">LeiLani Cauthen</span></span>
-										</div>
-									</div>
-								</a>
-								
-								
-								<div class="col_2 pimusmall">
-									
-									<div class="inner_cell">
-										<div class="text_container b_container line-grow">
-											
-											<object type="application/x-shockwave-flash" data="http://www.youtube.com/v/UZePBZ-edfE&feature=youtu.be&noredirect=1" width="300" height="200">          	
-									            <param name="wmode" value="opaque" />
-									            <param name="quality" value="high" />
-									            <param name="bgcolor" value="#E9E9E9" />
-									            <param name="allowfullscreen" value="true" />
-									         	<param name="allowscriptaccess" value="never" />
-									         </object>
+		<a href="/archives/show?id=1024" class="k-link-a">
+			<div class="k-inner-cell">
+				<div class="k-b-container">
+					<div class="k-img-cell-single">
+						<img src="../repository/article-wanted-new-leader.png" class="k-img" height="180" onerror="this.src='../altgraphics/error-260-180.png'">
+					</div>
+					<div class="katcolorbox_posit">
+	            		<div class="katbox-article katbox people_catbox">
+	            			<span>PEOPLE</span>
+	            		</div>
+	        		</div>																								
+				</div>
+				<div class="k-b-headline">
+					WANTED: NEW LEADER & TEACHER FEATURES
+					
+					<span class="kbyline">by&nbsp<span class="k-b-link">LeiLani Cauthen</span></span>											
+				</div>														
+			</div>
+		</a>
+	</div>
+	
+</div>
+		
+<!-- end template double row -->				
+							
+							
+							
+<div style="height: 50px; position: relative;"></div>
 
-											<div class="headline-excelsiorcomics">
-												<span>5 Key Areas of Success K12 Tech Integration Planning</span>
-											</div>
+<!-- start template single 2 cell row -->
+				
+<div class="k-governcell ktop kbottom">	
+		
+	<div class="k-outercell kol2">
+		<a href="/archives/show?id=1005" class="k-link-a">
+			<div class="k-inner-cell" style="padding-top: 2px;">
+				
+				<div class="text_container b_container line-lead">
+					
+					<img src="../repository/article-coffee-chat.png" onerror="this.src='../altgraphics/error-300-200.png'">
 
-																								
-											<div class="text_box">
-												<span class="pbyline">&nbsp;<span class="b_link" onclick=""></span></span>
-											</div>
-											<div class="text_cat">
-												<span class="b_link" onclick=""></span>
-											</div>
-										</div>
-									</div>
-									
-								</div>
-								
-								<a href="journals/blogs_and_links" class="col_3 ptext" onclick="">
-									<div class="inner_cell">
-										<div class="text_container b_container line-lead">
-											
-											<img src="/assets/article-blogs-and-links.png" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-4.jpg'">
-
-											<div class="headline-junebug">
-												<span class="gold">Blogs</span>
-												<span class="red">&amp;</span>
-												<span class="blue">Links</span>														
-											</div>
-																								
-											<div class="text_box">
-												<span class="pbyline">&nbsp;<span class="b_link" onclick=""></span></span>
-											</div>
-											<div class="text_cat">
-												<span class="b_link" onclick=""></span>
-											</div>
-										</div>
-									</div>
-								</a>										
-								
-							</div>
-							
-							<div class="fluidrow row6 boxtemp-green">
-								
-								<div class="col_1 pblank">
-									<div class="inner_cell"></div>
-								</div>
-
-								<a href="journals/to_solution" class="col_2 p_normal" onclick="">
-									<div class="inner_cell">
-										<div class="b_container">
-											
-											<img src="/assets/article-to-solution-300-200.png" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-4.jpg'">
-						            		<div class="catbox-article catbox tactic_catbox">
-						            			<span>TACTIC</span>
-						            		</div>													
-										</div>
-										<div class="b_headline">
-											To Solution or Element – That is the Question
-											<img src="Entrepeneurs_files/videoicon_sm.png">
-												<span class="pbyline">By&nbsp;<span class="b_link" onclick="">The LC Staff</span></span>
-										</div>
-										
-									</div>
-								</a>
-
-								<a href="journals/how_to_be" class="col_3 p_normal" onclick="">
-									<div class="inner_cell">
-
-										<div class="text_container b_container line-startup" style="width: 300px; border-style: solid; border-width: 1px; border-color: red;">
-											
-											<div class="headline-second-breakfast" style="font-size: 16px; margin-top: 8px;">
-												<span>Blog</span>
-											</div>
-											
-											<div class="headline-JandaCheerfulScript" style="padding-top: 50px; font-size: 50px; border-style: solid; border-width: 1px; border-color: red;">
-												<span style="padding-left: 10px">How</span>
-												<span style="padding-left: 70px">to</span>
-												<span style="padding-left: 130px">Be</span>														
-											</div>
-																								
-											<div class="text_box" style="border-style: solid; border-width: 1px; border-color: green;">
-												<span class="pbyline">By&nbsp;<span class="b_link" onclick=""></span>LeiLani Cauthen</span>
-											</div>
-											<div class="text_cat">
-												<span class="b_link" onclick=""></span>
-											</div>
-										</div>
-										
-									</div>
-								</a>
-								
-							</div>
-							
-							
-							
-							
-							
-							
-							<div class="container_space"></div>
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							<div class="fluidrow row2 boxtemp-green">
-								
-								<a href="#" class="col_1 p_normal" onclick="">
-									<div class="inner_cell">
-										<div class="b_container">
-												<img src="300x200-6.jpg" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-6.jpg'">
-											<div class="linecolorbox bg-default"></div>
-											<div class="catcolorbox bg-default">
-													
-												<span class="b_link" onclick="">&nbsp</span>
-											</div>
-										</div>
-										
-									</div>
-								</a>
-								
-								<a href="journals/five_types" class="col_2 p_normal" onclick="">
-									<div class="inner_cell">
-										<div class="b_container">
-											<img src="/assets/article-five-types.png" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-1.jpg'">
-						            		<div class="catbox-article catbox thoughts_catbox">
-						            			<span>THOUGHTS</span>
-						            		</div>													
-										</div>
-										<div class="b_headline">
-											FIVE TYPES OF CURRICULUM “THINGS”
-											<span class="pbyline">by&nbsp;<span class="b_link" onclick="">Lei Lani Cauthen</span></span>
-										</div>
-									</div>
-								</a>
-
-								<a href="journals/five_types" class="col_2 p_normal" onclick="">
-									<div class="inner_cell">
-										
-										<div class="b_container">
-											<div style="text-align: center; width: 296px; padding-bottom: 6px;">
-												<img src="/assets/article-coffee-chat-with-memphis.jpg" style="width: 198px; height: 200px;" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-1.jpg'">
-											</div>
-						            		<div class="catbox-article catbox industry_news_catbox_tan">
-						            			<span>COFFEE CHAT</span>
-						            		</div>													
-										</div>
-										<div class="b_headline">
-											COFFEE CHAT WITH MEMPHIS
-											<span class="pbyline">by&nbsp;<span class="b_link" onclick="">Lei Lani Cauthen</span></span>
-										</div>
-										
-									</div>
-								</a>
-								
-							</div>
-							
-							<div class="container_space"></div>
-							
-							<div class="fluidrow row3 boxtemp-blue">
-
-								<a href="" onclick="">
-									<div class="inner_cell">
-										<div class="text_container b_container line-money">																										
-											<div class="text_box">
-
-													<span class="pbyline">&nbsp;<span class="b_link" onclick=""> </span></span>															
-											</div>
-											<div class="text_cat">
-												<span class="b_link" onclick="">&nbsp</span>
-											</div>
-											
-										</div>
-									</div>
-								</a>
-
-								<a href="">
-									<div class="inner_cell">
-										<div class="b_container">
-												<img src="300x200-4.jpg" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-4.jpg'">
-											<div class="linecolorbox bg-default"></div>
-											<div class="catcolorbox bg-default">
-												<span>&nbsp</span>
-											</div>
-										</div>
-										<div class="b_headline">
-											
-										</div>
-										<div class="ppartner">&nbsp <span class="ppartnername">&nbsp</span></div>
-										
-									</div>
-								</a>
-
-								<a style="cursor: default;" href="#" class="col_3 p_normal" onclick="">
-									<div style="" class="inner_cell">
-										<div class="b_container">
-												<img src="300x200-5.jpg" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-5.jpg'">
-											<div class="linecolorbox bg-default"></div>
-											<div class="catcolorbox bg-default">
-												<span class="b_link" onclick="">&nbsp</span>
-											</div>
-										</div>
-										<div class="b_headline">
-											
-											<span class="pbyline">&nbsp;<span class="b_link" onclick=""> </span></span>
-										</div>
-										
-									</div>
-								</a>
-							</div>
-							
-							<div class="container_space"></div>
-							
-																		
-							<div class="fluidrow row5 boxtemp-red">
-								
-								<a href="journals/education_compared" class="col_1 b_portrait" onclick="">
-									<div class="inner_cell boxtemp-black">
-										<div class="b_container">
-											<div style="position: absolute; bottom: 0px;">
-												<img src="/assets/article-education-compared.jpg" onerror="this.src='http://images.inc.com/refreshgraphics/300x520-3.jpg'">
-											</div>
-											
-											<div class="catcolorbox_pos">
-							            		<div class="catbox-article catbox_pos perspective_catbox">
-							            			<span>PERSPECTIVE</span>
-							            		</div>
-						            		</div>								            		
-						            						            						
-										</div>
-										<div class="b_headline">
-											Education Compared to All Other Industry
-											<span class="pbyline">by&nbsp;<span class="b_link" onclick="">LeiLani Cauthen</span></span>
-										</div>
-									</div>
-								</a>
-								
-								
-								<div class="col_2 pimusmall">
-									
-									<div class="inner_cell">
-										<div class="text_container b_container line-grow">
-											
-											<object type="application/x-shockwave-flash" data="http://www.youtube.com/v/UZePBZ-edfE&feature=youtu.be&noredirect=1" width="300" height="200">          	
-									            <param name="wmode" value="opaque" />
-									            <param name="quality" value="high" />
-									            <param name="bgcolor" value="#E9E9E9" />
-									            <param name="allowfullscreen" value="true" />
-									         	<param name="allowscriptaccess" value="never" />
-									         </object>
-
-											<div class="headline-excelsiorcomics">
-												<span>5 Key Areas of Success K12 Tech Integration Planning</span>
-											</div>
-
-																								
-											<div class="text_box">
-												<span class="pbyline">&nbsp;<span class="b_link" onclick=""></span></span>
-											</div>
-											<div class="text_cat">
-												<span class="b_link" onclick=""></span>
-											</div>
-										</div>
-									</div>
-									
-								</div>
-								
-								<a href="journals/blogs_and_links" class="col_3 ptext" onclick="">
-									<div class="inner_cell">
-										<div class="text_container b_container line-lead">
-											
-											<img src="/assets/article-blogs-and-links.png" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-4.jpg'">
-
-											<div class="headline-junebug">
-												<span class="gold">Blogs</span>
-												<span class="red">&amp;</span>
-												<span class="blue">Links</span>														
-											</div>
-																								
-											<div class="text_box">
-												<span class="pbyline">&nbsp;<span class="b_link" onclick=""></span></span>
-											</div>
-											<div class="text_cat">
-												<span class="b_link" onclick=""></span>
-											</div>
-										</div>
-									</div>
-								</a>										
-								
-							</div>
-							
-							<div class="fluidrow row6 boxtemp-green">
-								
-								<div class="col_1 pblank">
-									<div class="inner_cell"></div>
-								</div>
-
-								<a href="journals/to_solution" class="col_2 p_normal" onclick="">
-									<div class="inner_cell">
-										<div class="b_container">
-											
-											<img src="/assets/article-to-solution-300-200.png" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-4.jpg'">
-						            		<div class="catbox-article catbox tactic_catbox">
-						            			<span>TACTIC</span>
-						            		</div>													
-										</div>
-										<div class="b_headline">
-											To Solution or Element – That is the Question
-											<img src="Entrepeneurs_files/videoicon_sm.png">
-												<span class="pbyline">By&nbsp;<span class="b_link" onclick="">The LC Staff</span></span>
-										</div>
-										
-									</div>
-								</a>
-
-								<a href="journals/how_to_be" class="col_3 p_normal" onclick="">
-									<div class="inner_cell">
-
-										<div class="text_container b_container line-startup" style="width: 300px; border-style: solid; border-width: 1px; border-color: red;">
-											
-											<div class="headline-second-breakfast" style="font-size: 16px; margin-top: 8px;">
-												<span>Blog</span>
-											</div>
-											
-											<div class="headline-JandaCheerfulScript" style="padding-top: 50px; font-size: 50px; border-style: solid; border-width: 1px; border-color: red;">
-												<span style="padding-left: 30px">How</span>
-												<span style="padding-left: 130px">to</span>
-												<span style="padding-left: 180px">Be</span>														
-											</div>
-																								
-											<div class="text_box" style="border-style: solid; border-width: 1px; border-color: green;">
-												<span class="pbyline">By&nbsp;<span class="b_link" onclick=""></span>LeiLani Cauthen</span>
-											</div>
-											<div class="text_cat">
-												<span class="b_link" onclick=""></span>
-											</div>
-										</div>
-										
-									</div>
-								</a>
-								
-							</div>
-							
-							<div class="fluidrow row7 boxtemp-blue">
-
-								<a href="journals/coffee_chat" class="widerowcell prow1x3">
-									<div class="inner_cell">
-										<div class="icellcontainer line-default" onclick="">
-											<div class="b_container">
-												<img src="/assets/article-coffee-chat.png" onerror="this.src='http://images.inc.com/refreshgraphics/643x290-4.jpg'">
-											</div>
-											<div class="pwiderightbox">
-												<div class="b_headline">
-												COFFEE CHAT WITH HOUSTON ISD	
-												</div>
-												<span class="pbyline">by&nbsp;<span class="b_link" onclick="">The LC Staff</span></span>
-												<div class="pdeck">
-												Two of Houston Independent School District’s leaders, Beatriz Arnillas, and Angela Miller, answer questions of post by The Learning Counsel.  
-												</div>
-											</div>
-											<div class="widechannelheadline">
-												<span class="b_link" onclick="">SPOTLIGHT</span>
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-									
-									
-								
-							<div class="fluidrow row2">
-								<!-- 27 -->
-								<a href="journals/wanted_new_leader" class="col_1 p_normal" onclick="">
-									<div class="inner_cell">
-										<div class="b_container">
-											<img src="/assets/article-wanted-new-leader.png" height="200px" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-8.jpg'">
-											<div class="linecolorbox bg-people"></div>
-											
-											
-						            		<div class="catbox-article catbox people_catbox">
-						            			<span>PEOPLE</span>
-						            		</div>													
-										</div>
-										<div class="b_headline">
-											WANTED: NEW LEADER & TEACHER FEATURES
-											<span class="pbyline">by&nbsp;<span class="b_link" onclick="">LeiLani Cauthen</span></span>
-										</div>
-									</div>
-								</a>
-							</div>
-								
-							  
-						</div>
+				</div>
+				<div class="k-b-headline">
+					COFFEE CHAT WITH HOUSTON ISD
+					<div style="padding: 10px;">
+						<p style="font-family: KlavikaRegular;">
+							Two of Houston Independent School District’s leaders, Beatriz Arnillas,
+							 and Angela Miller, answer questions of post by The Learning Counsel.  
+						</p>
 					</div>
 					
+					<span class="kbyline">by&nbsp<span class="k-b-link">The LC Staff</span></span>											
+				</div>														
+			</div>
+		</a>	
+	</div>
+		
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol2">
+		<a href="/archives/show?id=1001" class="k-link-a">
+			<div class="k-inner-cell" style="padding-top: 2px;">
+				
+				<div class="text_container b_container line-lead">
 					
+					<img src="../repository/article-amazon.jpg" height="183" alt="article-amazon.jpg" onerror="this.src='../altgraphics/error-300-200.png'">
+
+				</div>
+				<div class="k-b-headline">
+					Amazon Has the Most Education Apps – By FAR
+					<div style="padding: 10px;">
+						<p style="font-family: KlavikaRegular;">
+							A look at the App Universe across Microsoft Windows, Amazon, Google Android and Apple’s iTunes
+						</p>
+					</div>
 					
+					<span class="kbyline">by&nbsp<span class="k-b-link">The LC Staff</span></span>											
+				</div>														
+			</div>
+		</a>	
+	</div>
+			
+</div>
+
+<!-- end template single row -->				
+
+
+					<!-- ><div class="container-main">
+						<div class="board">					
+							  
+						</div>
+					</div>			-->		 				
+
+					
+			<!-- <div class="container-main">
+				<div class="board"> -->					
 					
 				<!-- </div>  -->				
 				<!--end  outer container//-->
 
-				<div style="height: 30px;"></div>
-
-          <!-- <object type="application/x-shockwave-flash" data="http://www.youtube.com/v/zDZFcDGpL4U" width="300" height="250"> -->
-          	
-          	
-          <!-- <object type="application/x-shockwave-flash" data="http://www.youtube.com/v/UZePBZ-edfE&feature=youtu.be&noredirect=1" width="300" height="200">          	
-            <param name="wmode" value="opaque" />
-            <param name="quality" value="high" />
-            <param name="bgcolor" value="#E9E9E9" />
-            <param name="allowfullscreen" value="true" />
-            <param name="allowscriptaccess" value="never" />
-          </object> -->
-                    
-          
-<!-- <embed width="300" src="http://www.youtube.com/v/zDZFcDGpL4U" type="application/x-shockwave-flash">
-</embed> -->
 
 
-<!-- https://www.youtube.com/watch?v=zDZFcDGpL4U -->
 
-<!-- <iframe width="300" height="200" src="http://www.youtube.com/v/UZePBZ-edfE&feature=youtu.be&noredirect=1"></iframe> -->
-
-
-				<div id="sfw_865" align="center" style="height:90px">&nbsp;Banner</div>
+				<!-- <div id="sfw_865" align="center" style="height:90px">&nbsp;Banner</div>
 				<script type="text/javascript">
 					// <![CDATA[
 					_wbn.push(function(){
@@ -1680,11 +831,13 @@
 					so.write("sfw_865");
 					});
 					// ]]>
-				</script>
-
-				<div style="height: 30px;"></div>
+				</script> -->
+				
+							
+							
 								
-			</div> <!--white -->
+			<!-- </div>  -->			
+			<!--white -->
 					
 
 				<!-- <div id="sfw_866" align="center" style="height:90px">&nbsp;</div>
@@ -1704,28 +857,100 @@
 					</script> -->
 
 					
-   				<!-- <div id="myContent">
-      				<p>Alternative content</p>
-    			</div>					
+				<div style="height: 100px;"></div>
 					
-				<object>
-					<param name="SRC" value="865.swf">
-					<embed src="/assets/865.swf"></embed>
-				</object> 					 -->
-									
-
-				<!-- <div align="center">			
-					 button_to "Sign up", {:controller => 'users', :action => 'new', :id => 'Student'}, class: "button3" 
-				</div>
-
-				<div align="center">			
-					 button_to "Sign up", {:controller => 'users', :action => 'new', :id => 'Student'}, class: "btn red large" 
-				</div> -->
-				
-					
-				<!-- <div style="height: 20px;"></div> -->
-								
 			</div>			    
 			
 		</section>
 		
+    <script>
+                
+		$(window).load( function() {
+						
+			var j;
+			var k;
+			var l;
+			var m;
+			var n;
+			var p;
+			var t;
+			var jj;
+			var kk;
+			var ll;
+			var mm;
+			var nn;
+
+			var upperCell;			
+
+			$('.k-governcell').each( function() {
+				
+				j = 0;
+				k = 0;
+				l = 0;
+				m = 0;
+				n = 0;
+				p = 0;
+				s = 0;
+				t = 0;
+				jj = 0;
+				kk = 0;	
+				ll = 0;	
+				mm = 0;
+
+				$(this).children().each( function() {
+					
+					if ($(this).hasClass('k-outercell')) {
+						if (!(jj = $(this).find("img").attr("height"))) {
+							jj = 0;
+						}
+						console.log('jj = ' + jj);
+						j = j >= jj ? j : jj;
+						n = parseInt(j);																		
+					}
+				});
+
+				n += 6;
+				upperCell = $(this).find('.k-b-container');
+				upperCell.height(n);
+				
+				console.log('n = ' + $(this).find('.k-b-container').height());
+
+				$(this).children().each( function() {
+					
+					if ($(this).hasClass('k-outercell')) {
+						kk = $(this).height();
+						if (!(kk = $(this).height())) {
+							kk = 0;
+						}
+						k = k >= kk ? k : kk;
+						t = k;
+					}
+					if ($(this).hasClass('k-outercell-double')) {
+						kk = $(this).height();
+						if (!(kk = $(this).height())) {
+							kk = 0;
+						}
+						k = k >= kk ? k : kk;
+						s = k;
+					}
+					if ($(this).hasClass('k-outercell-double')) {
+						kk = $(this).height();
+						if (!(kk = $(this).height())) {
+							kk = 0;
+						}
+						k = k >= kk ? k : kk;
+						s = k;
+					}
+				});
+				
+				m = s >= t ? s : t;
+
+				m += 2;
+				m = m <= 1000 ? m : 1000;
+				
+				$(this).height(m);
+				$(this).children($('.k-cell-divider')).height(m);
+			});
+		});
+		
+	</script>
