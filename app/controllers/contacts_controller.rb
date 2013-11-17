@@ -1,16 +1,17 @@
 class ContactsController < ApplicationController
   
-  #layout 'application'
+  layout 'application'
   
   def list
-    #@contacts = Contact.all
+
   end
   
   def index
-    render('new')    
+    
   end
   
   def new
+    @contact = Contact.new
   end
   
   def show

@@ -628,14 +628,14 @@ p#deck {
 	background: #5628e1
 }
 
-#article-credit .color-notch {
+/*#article-credit .color-notch {
 	float: left;
 	height: 3px;
 	width: 14px;
 	background: #0099FF;
 	margin-bottom: 14px;
 	margin-right: 486px
-}
+}*/
 
 #article-credit .credits {
 	float: left;

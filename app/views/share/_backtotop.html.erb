@@ -30,7 +30,7 @@
 
 		/* back to top home */
 
-		.back-to-home {
+		/*.back-to-home {
 			display: none;		
 			color: rgba(170, 170, 170, 0.70);
 		}
@@ -53,9 +53,8 @@
 		  	z-index: 201;
 		}
 		div.fixed-home:hover {
-			/*background-color: rgba(252, 207, 235, 0.50);		*/						
-		}
-	
+		}*/
+			
 	</style>
 
 
@@ -69,20 +68,20 @@
     	</div>
   	</div>
 
-  	<div class="inflow-home">
+  	<!-- <div class="inflow-home">
     	<div class="positioner-home">
       		<div class="fixed-home">
       			<a href="/index" class="back-to-home">Home</a>
       		</div>
     	</div>
-  	</div>
-
+  	</div> -->
+  	
 
     <script>
                 
 		jQuery(document).ready(function() {
 			var offset_top = 220;
-			var offset_hom = 50;			
+			//var offset_hom = 50;			
 			var duration = 1000;
 			jQuery(window).scroll(function() {
 				if (jQuery(this).scrollTop() > offset_top) {
@@ -90,11 +89,11 @@
 				} else {
 					jQuery('.back-to-top').fadeOut(duration);
 				}
-				if (jQuery(this).scrollTop() > offset_hom) {
-					jQuery('.back-to-home').fadeIn(duration);					
-				} else {
-					jQuery('.back-to-home').fadeOut(duration);					
-				}	
+				// if (jQuery(this).scrollTop() > offset_hom) {
+					// jQuery('.back-to-home').fadeIn(duration);					
+				// } else {
+					// jQuery('.back-to-home').fadeOut(duration);					
+				// }	
 			});
 			
 			jQuery('.back-to-top').click(function(event) {

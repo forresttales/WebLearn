@@ -1,171 +1,84 @@
 <% provide(:title, 'Reports') %>
 
-	<!-- <link title="Main" rel="stylesheet" type="text/css" href="/assets/shadow_animate_files/home.css">
-	<link href="/assets/shadow_animate_files/demo.css" rel="stylesheet">	 -->	
-	
-	<style>
-	
-		.form-signin {
-			
-			width: 400px;
-			height: 100px;
-			display: block;
-			
-			background-color:rgba(86, 133, 78, 0.8);
-	
-			-moz-box-shadow:5px 5px 40px #fff;
-			-webkit-box-shadow:5px 40px 5px #fff;
-			box-shadow:5px 5px 40px #CCAE37;
-	
-			border-top-left-radius: 10px;
-	   		border-top-right-radius: 10px;		
-			border-bottom-left-radius: 10px;
-	   		border-bottom-right-radius: 10px;
-	   		
-			position: absolute;
-			text-align: center;			
-			top: 140px;				   			   		
-		}
+		<header>				
 				
-	</style>
-	<script>
-	
-		function showSignin() {
-	
-			var a = $("#mainpage");
-			var b = $("#mainfooter");
-		
-			a.animate({
-				"top": "+=500px"
-			}, 1000, function(){ loadSignin(); });
-		
-			b.animate({
-				"top": "+=500px"
-			}, 1000);
-		}
-		
-		function hideSignin() {
-		
-			disableSignin();
+			<%= render 'share/backtotop' %>
 			
-			var a = $("#mainpage");
-			var b = $("#mainfooter");
+	    	<%= render 'layouts/flash_alert' %>
+	    	
+		</header>		
 		
-			a.animate({
-				"top": "-=500px"
-			}, 1000);
+		<section>
 			
-			b.animate({
-				"top": "-=500px"
-			}, 1000);
-			
-		}
-		
-		var signinStatus = 0;
-		function loadSignin() {
-			if (signinStatus == 0) {
-				$("#form_signin").fadeIn("slow");
-				signinStatus = 1
-			}
-		}
-		
-		function disableSignin() {
-			if (signinStatus == 1) {
-				$("#form_signin").fadeOut("slow");
-				signinStatus = 0
-			}
-		}
-		
-		function centerSignin() {
-			var a = document.documentElement.clientWidth;
-			//var d = document.documentElement.clientHeight;
-			//var c = $("#popupSignin").height();
-			var b = $("#form_signin").width();
-			$("#form_signin").css({
-				//position : "absolute",
-				//top : d / 2 - c / 2,
-				//top : 70,				
-				left : a / 2 - b / 2				
-			})
-		}
-	
-		function glowBox() {
-			//$("#box1").animate({boxShadow: '0 0 30px #44f'});
-			
-			$("#form_signin").animate({boxShadow: '0 0 30px #CCAE37'});			
+			<div class="kontainer">
+				
+				<div class="kontainer-space-1"></div>
+				<div class="kontainer-space-1"></div>
+				<div class="kontainer-space-1"></div>
+				
+					<div id="mainkolumn" class="withsidebar">
+						<div id="k-articlecontent">
+		    				
+								
+							<bodycopy id="bodykopy">
 						
-		}
+								<div style="font-family: KlavikaMedium;">
+											
+			 						<%= render 'share/reports' %>
+			 						
+			 					</div>
+			 					
+							</bodycopy>
+	
+						</div>
+	
+						<a href="/contacts/new" style="font-family: klavikaBold; color: #000;">Contact Us</a>
+						
+						<br clear="all">
+						
+					</div>
+	
+					<div id="k-sidebar">
+						<div id="k-sidebar_inner">
 
-		function unglowBox() {
-			//$("#box1").animate({boxShadow: '0 0 10px #000'});
+							<div style="border-style: solid; border-width: 1px; border-color: orange; padding: 3px; width: 180px; height: 135px;">
+							    <img src="../repository/image-reports.jpg" alt="image-reports.jpg" width="180px" >
+							</div>
+							
+							<!-- <div id="particlepinboardsidebar" class="pinboard articlepinboard">
+								<div class="pinboardContent"></div>
+							</div> -->
 			
-			$("#form_signin").animate({boxShadow: '0 0 30px #000'});			
-		}
-		
-	
-		$(document).ready(function(){
-			$(".btn1").click(function(){
-				centerSignin();				
-				showSignin();
-			});
-			$(".btn2").click(function(){
-			  	hideSignin();
-			 });
-		
-			$("#form_signin").fadeOut();
+							<div id="select_services">
+								<!-- <h2 class="feature">Select Services</h2> -->
+																
+								<dl id="Services">
+										<dt><a target="_new" href="#">LeiLani Cauthen, CEO</a></dt>
+
+									<!-- <dd>LeiLani Cauthen</dd>
+										<dt>LeiLani Cauthen</dt> -->
+																				
+									<!-- <dd>Learn about our services.</dd>
+										<dt><a target="_new" href="#">Services</a></dt>
+									<dd>Learn about our services.</dd> -->									
+									
+								</dl>
+								
+							</div>				
+							
+						</div>
+					</div>
+
+					<br clear="all">
 			
-			signinStatus = 0;
-		});
-	
-		
-	</script>
-
-<div  style="background: #F1F2E1 url('/assets/background_cambridge_bridges_1280.png') no-repeat right top;">
-
-	<header>					
-
-	</header>		
-	
-	<section>
-		
-		<div id="form_signin" class="form-signin">
-			<h1 style="color: #fff; padding-top: 20px;">Signin</h1>
-		</div>
-
-		<div id="mainpage" class="table-white shadow" style="height: 700px; position: relative; top: -4px;">
-
-			<div style="height: 10px;"></div>			
-			<div class="row">
-				<div class="cell-100"></div>
-				<div class="cell-100">
-					<button class="btn1">Show</button>
-					<button class="btn2">Hide</button>		
-				</div>
-				<div class="cell-100">
-					<button class="btn3" onclick="glowBox();">Glow</button>
-					<button class="btn4" onclick="unglowBox();">Unglow</button>							
-				</div>
+					<div class="kontainer-space-2"></div>
+					
+					<div style="height: 600px;"></div>
+					
 			</div>
 			
-			<!-- <div class="row">
-				
-				<div class="cell-100"></div>
-				<div class="cell-100">
-					<div id="box1" style="width:100px;height:50px;border-width: 2px; border-color: black;">click me</div>
-				</div>
-			</div> -->
-						
-						
-		</div>
+		</section>
 
-				
-	</section>
-	
-</div>
 
-		<!-- <script src="/assets/shadow_animate_jquery-1.js"></script> -->
 
-		<!-- <script src="shadow_animate_files/jquery-1.js"></script> -->
-				
-		 <!-- <script src="/assets/jquery-1.js"></script> -->
 

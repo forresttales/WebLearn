@@ -163,15 +163,15 @@ Weblearn::Application.routes.draw do
   match '/signout', to: 'sessions#destroy', via: 'delete'
 
   match '/index', to: 'static_pages#index', via: 'get'
-  match '/help', to: 'static_pages#help', via: 'get'
+  #match '/help', to: 'static_pages#help', via: 'get'
   match '/about', to: 'static_pages#about', via: 'get'
-  match '/contact', to: 'static_pages#contact', via: 'get'
+  #match '/contact', to: 'static_pages#contact', via: 'get'
   match '/edmatchup', to: 'static_pages#edmatchup', via: 'get'
   match '/events', to: 'static_pages#events', via: 'get'
-  match '/news', to: 'static_pages#news', via: 'get'
+  #match '/news', to: 'static_pages#news', via: 'get'
   match '/reports', to: 'static_pages#reports', via: 'get'  
-  match '/articles', to: 'static_pages#articles', via: 'get'
-  match '/advertise', to: 'static_pages#advertise', via: 'get'
+  #match '/articles', to: 'static_pages#articles', via: 'get'
+  match '/sponsor', to: 'static_pages#sponsor', via: 'get'
   
   #match '/ARTICLES-5-LeiLani-How-Big', to: 'public#ARTICLES-5-LeiLani-How-Big', via: 'get'
   
@@ -194,11 +194,11 @@ Weblearn::Application.routes.draw do
     # end
   # end
 
-  resources :contacts do
-    member do
-      post 'create'
-    end
-  end
+  # resources :contacts do
+    # member do
+      # post 'create'
+    # end
+  # end
 
 
   resources :institutes do
@@ -254,10 +254,11 @@ Weblearn::Application.routes.draw do
   # get "user_contacts/edit", via: :all
   # get "user_contacts/update", via: :all
   
-  get "contacts/show"
-  get "contacts/edit", via: :all
-  get "contacts/update", via: :all
-  
+  # get "contacts/show"
+  # get "contacts/edit", via: :all
+  # match '/contacts', to: 'contacts#new', via: 'get'
+  # match "/contacts/:id" => "contacts#update", via: 'post'
+
   
   
   #get "user_contacts/testnewcontact"
@@ -279,7 +280,7 @@ Weblearn::Application.routes.draw do
   resources :institutes
   resources :publishers
   resources :static_pages
-
+  resources :contacts
 
   match '/about', to: 'users#about', via: 'get'
   match '/blogs', to: 'users#blogs', via: 'get'
@@ -305,21 +306,11 @@ Weblearn::Application.routes.draw do
 
   match '/access/access/login', to: 'access#login', :as => :login, via: ['get', 'post']  
   match '/access/access/attempt_login', to: 'access#attempt_login', :as => 'attempt_login', via: ['post']
-  
-  
-  
-  
-  
-  
+    
   
   match '/access/access_admins/login', to: 'access_admins#login', :as => :login_admin, via: ['get', 'post']  
 
       
-  # match '/user_contacts', to: 'user_contacts#new', via: 'get'
-  # match "/user_contacts/:id" => "user_contacts#update", via: 'post'
-  match '/contacts', to: 'contacts#new', via: 'get'
-  match "/contacts/:id" => "contacts#update", via: 'post'
-
 
   match '/publishers', to: 'publishers#index', via: 'get'
   match "/publishers/:id" => "publishers#update", via: 'post'
@@ -372,23 +363,23 @@ Weblearn::Application.routes.draw do
   # match '/tasks/:id/finish', :to => 'tasks#finish', :as => 'finish_task'
 
 
-  match '/demostyle', to: 'users#styledemo', via: 'get'
-  match '/democolumns3', to: 'users#columns3', via: 'get'
-  match '/demofullwidth', to: 'users#fullwidth', via: 'get'
-  match '/demogallery', to: 'users#gallery', via: 'get'
-  match '/demoportfolio', to: 'users#portfolio', via: 'get'
-
-  match '/edmatchups', to: 'edmatchups#index', via: 'get'
-
-
-  match '/home_1', to: 'users#home_1', via: 'get'
-  match '/about_1', to: 'users#about_1', via: 'get'
-  match '/blogs_1', to: 'users#blogs_1', via: 'get'
-  match '/directory_1', to: 'users#directory_1', via: 'get'
-  match '/news_1', to: 'users#news_1', via: 'get'
-  match '/services_1', to: 'users#services_1', via: 'get'
-
-  match '/create_account', to: 'users#services_1', via: 'get'
+  # match '/demostyle', to: 'users#styledemo', via: 'get'
+  # match '/democolumns3', to: 'users#columns3', via: 'get'
+  # match '/demofullwidth', to: 'users#fullwidth', via: 'get'
+  # match '/demogallery', to: 'users#gallery', via: 'get'
+  # match '/demoportfolio', to: 'users#portfolio', via: 'get'
+# 
+  # match '/edmatchups', to: 'edmatchups#index', via: 'get'
+# 
+# 
+  # match '/home_1', to: 'users#home_1', via: 'get'
+  # match '/about_1', to: 'users#about_1', via: 'get'
+  # match '/blogs_1', to: 'users#blogs_1', via: 'get'
+  # match '/directory_1', to: 'users#directory_1', via: 'get'
+  # match '/news_1', to: 'users#news_1', via: 'get'
+  # match '/services_1', to: 'users#services_1', via: 'get'
+# 
+  # match '/create_account', to: 'users#services_1', via: 'get'
 
 
   # get "users/style-demo"
