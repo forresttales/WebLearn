@@ -51,6 +51,15 @@ class UsersController < ApplicationController
       sign_in @user
       flash[:success] = "Welcome to The Learning Counsel!"
       
+        mail = UserMailer.welcome_email(@user)
+        mail.deliver
+ 
+        # format.html { redirect_to(@user, notice: 'User was successfully created.') }
+        # format.json { render json: @user, status: :created, location: @user }
+      # else
+        # format.html { render action: 'new' }
+        # format.json { render json: @user.errors, status: :unprocessable_entity }
+              
         # case account_type= params[:account_type]
         # when "School"
           # redirect_to(:controller => 'institutes', :action => 'new')

@@ -166,9 +166,9 @@ Weblearn::Application.routes.draw do
   #match '/help', to: 'static_pages#help', via: 'get'
   match '/about', to: 'static_pages#about', via: 'get'
   #match '/contact', to: 'static_pages#contact', via: 'get'
-  match '/edmatchup', to: 'static_pages#edmatchup', via: 'get'
+  #match '/edmatchup', to: 'static_pages#edmatchup', via: 'get'
   match '/events', to: 'static_pages#events', via: 'get'
-  #match '/news', to: 'static_pages#news', via: 'get'
+  match '/papers', to: 'static_pages#papers', via: 'get'
   match '/reports', to: 'static_pages#reports', via: 'get'  
   #match '/articles', to: 'static_pages#articles', via: 'get'
   match '/sponsor', to: 'static_pages#sponsor', via: 'get'
@@ -281,6 +281,8 @@ Weblearn::Application.routes.draw do
   resources :publishers
   resources :static_pages
   resources :contacts
+  resources :edmatchups
+  
 
   match '/about', to: 'users#about', via: 'get'
   match '/blogs', to: 'users#blogs', via: 'get'
@@ -288,7 +290,7 @@ Weblearn::Application.routes.draw do
   match '/news', to: 'users#news', via: 'get'
   match '/services', to: 'users#services', via: 'get'
   #match '/directory', to: 'users#directory', via: 'get'
-  match '/edmatchup', to: 'users#edmatchup', via: 'get'
+  #match '/edmatchup', to: 'users#edmatchup', via: 'get'
 
 
   match '/admin_contacts_list', to: 'admin_contacts#list', via: 'get'
@@ -297,6 +299,8 @@ Weblearn::Application.routes.draw do
   match '/admin_publishers_list', to: 'admin_publishers#list', via: 'get'
   match '/admin_teachers_list', to: 'admin_teachers#list', via: 'get'
   match '/admin_students_list', to: 'admin_students#list', via: 'get'
+
+  match '/edmatchup', to: 'static_pages#edmatchup', via: 'get'
 
 
   get "sessions/new"

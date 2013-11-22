@@ -32,7 +32,15 @@
 					
 		display: block;
 		
-		background-color:rgba(86, 133, 78, 0.97);
+		/*background-color:rgba(86, 133, 78, 0.97);*/
+		
+		
+		/*background-color: rgba(79, 92, 79, 0.97);*/
+
+		/*background-color: rgba(19, 59, 19, 0.97);*/
+
+		background-color: rgba(4, 26, 4, 0.96);
+
 
 		/*background-color:rgba(86, 133, 78, 0.75);*/
 		
@@ -51,7 +59,7 @@
    		
 		position: absolute;
 		text-align: center;			
-		top: 380px;			
+		top: 350px;			
 		padding-top: 30px;	   			   	
 		padding-bottom: 30px;	
 	}
@@ -243,12 +251,12 @@
 						<div class="table-main">
 							<div class="row">
 								<div class="cell-250" style="padding-left: 24px;">
-						  			<%= image_tag("../repository/image_learning_counsel.png", :alt => '') %>
+						  			<img src="../repository/image_learning_counsel.png" alt="image_learning_counsel.png" >
 						  		</div>
 							</div>
 							<div class="row">
 								<div class="cell-125" style="padding-left: 24px;">
-									<p style="font-family: msyh; font-size: 12px;">News and Context for the<br>Shift to Digital Curriculum</p>
+									<p style="font-family: msyh; font-size: 12px;">Research and Context for the<br>Shift to Digital Curriculum</p>
 						  		</div>
 							</div>							
 						</div>
@@ -257,9 +265,13 @@
 						<div class="table-main">
 							<div class="row">
 								<div class="cell-650">
-									<div id="main_header_adblock_1">									
+									
+									<img src="../repository/banner-1.png" alt="banner-1.png" width="630px" >
+									
+									<!-- <div id="main_header_adblock_1">									
 										<h3>Space Available</h3>
-									</div>					
+									</div> -->									
+														
 								</div>			
 							</div>							
 						</div>
@@ -270,25 +282,27 @@
 								<div class="cell-100percent">
 				 						<!-- link_to image_tag(“/assets/EdMatchUp_logo.png”, :class=>’′), :url =>{:controller=> ‘’,:action=>’’} -->															
 									<div id="edmatchuplogo">
-										<%= link_to image_tag("../repository/EdMatchUp_logo.png"), edmatchup_path %>															
+										<%= link_to image_tag("../repository/EdMatchUp_logo.png", :alt => 'EdMatchUp_logo.png'), '#' %>															
 									</div>							
 						  		</div>
 							</div>
 							<div class="row">
 								<div class="cell-100percent">
 									<div align="center">
-										<%= link_to image_tag("../repository/image_coming_soon_8k.png", :alt => 'Comming Soon'), edmatchup_path %>															
+										<%= link_to image_tag("../repository/image_coming_soon_8k.png", :alt => 'image_coming_soon_8k.png'), '#' %>															
 									</div>							
 						  		</div>							
 							</div>
 						</div>
 					</div>
-				</div>
+				</div>					
 			</div>	
 			
+			<!-- <div style="height: 60px;"> -->
+								
 			<div class="table-white" style="height: 70px;">
 				<div class="row">
-					<div class="cell-100percent" style="padding: 4px 0px 10px 40px;">
+					<div class="cell-100percent" style="padding: 4px 0px 0px 40px;">
 						<h2 style="font-family: msyh; color: #26B821;">Join our eNewsletter, get invitations to events, and get<br >
 							the first peek at EdMatchUp with Beta in 2014 !</h2>
 					</div>
@@ -714,7 +728,8 @@
 			});
 		}
 
-		$(document).ready(function(){
+		$(window).load( function() {
+		//$(document).ready(function(){
 			
 			$("#btn1").click(function(){
 				centerSignin();				

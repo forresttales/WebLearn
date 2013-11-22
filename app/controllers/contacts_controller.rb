@@ -24,7 +24,7 @@ class ContactsController < ApplicationController
     if @contact.save
       @saved_id = @contact.id
       flash[:notice] = 'Message sent'
-      redirect_to(:action => 'show', :saved_id => @contact.id)
+      #redirect_to(:action => 'show', :saved_id => @contact.id)
     else
       flash[:notice] = 'Unable to send message'
     end

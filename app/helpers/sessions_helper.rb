@@ -12,13 +12,14 @@ module SessionsHelper
     session[:has_account] = user.has_account
     session[:signed_in] = true
     
-    if user.admin
-      session[:admin] = true
-    else
-      session[:admin] = nil            
-    end
-      
-    flash[:login] = 'Logged In'
+    
+    # if user.admin
+      # session[:admin] = true
+    # else
+      # session[:admin] = nil            
+    # end
+#       
+    # flash[:login] = 'Logged In'
 
     # respond_to do |format|
       # format.html
@@ -57,7 +58,7 @@ module SessionsHelper
     
     
     session[:username] = nil
-    session[:admin] = nil
+    #session[:admin] = nil
     session[:has_account] = nil
     session[:user_id] = nil
     session[:signed_in] = nil
@@ -65,7 +66,8 @@ module SessionsHelper
     # if user.admin
       # session[:admin] = true
     
-    flash[:logout] = "Logged out"
+    #flash[:logout] = "Logged out"
+    
     #redirect_to("login_path")
     # redirect_to(:controller => 'users', :action => 'home')
     

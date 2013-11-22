@@ -1,0 +1,1056 @@
+#masterhead {
+	clear: both;
+	margin-bottom: 18px;
+	margin-top: 7px
+}
+#masterhead.masterheadNormal #leaderboard, #masterhead.masterheadNormal #leaderboard_ad {
+	text-align: center
+}
+#masterhead.masterheadNormal #leaderboard_ad > div {
+	margin: auto
+}
+/*#masterhead.masterheadNormal #top-black-bar {
+	width: 100%;
+	height: 55px;
+	background-color: black;
+	color: #ccc;
+	font: normal 9pt KlavikaLight;
+	margin-top: 7px;
+	z-index: 9999999;
+	overflow: hidden;
+	-webkit-transform: translate3d(0, 0, 0)
+}
+#masterhead.masterheadNormal #top-black-bar a {
+	color: #ccc
+}*/
+
+#masterhead.masterheadNormal #slimlogonav {
+	float: left;
+	padding-top: 8px;
+	border-right: 2px solid transparent;
+	border-left: 2px solid transparent;
+	height: 24px;
+	padding-left: 10px;
+	margin-right: 10px;
+	display: none
+}
+#masterhead.masterheadNormal #productnav {
+	float: left;
+	height: 34px;
+	margin-left: 8px
+}
+#masterhead.masterheadNormal .navselected {
+	border-right: 2px solid white !important;
+	border-left: 2px solid white !important;
+	border-bottom: 2px solid rgba(0,0,0,0.9);
+	height: 24px !important
+}
+#masterhead.masterheadNormal #smalllogo {
+	margin-right: 8px
+}
+#masterhead.masterheadNormal #smallnav {
+	margin-left: 3px;
+	margin-right: 8px
+}
+/*#masterhead.masterheadNormal #white-stripe-bar {
+	width: 100%;
+	height: 32px;
+	border-bottom: #FFFFFF 2px solid
+}
+
+#masterhead.masterheadNormal #top-black-bar-narrow {
+	width: 100%;
+	height: 14px;
+	background: #000000;
+	color: #FFFFFF;
+	font: normal 10px Arial
+}
+#masterhead.masterheadNormal #white-stripe-bar-narrow {
+	width: 100%;
+	height: 12px;
+	border-bottom: #FFFFFF 2px solid
+}
+*/
+
+#masterhead.masterheadNormal #welcome, #masterhead.masterheadNormal #welcome_loggedout {
+	float: left;
+	margin-top: 3px;
+	display: none;
+	font-family: KlavikaLight;
+	margin-left: 10px;
+	color: white
+}
+#masterhead.masterheadNormal #welcome a, #masterhead.masterheadNormal #welcome_loggedout a {
+	color: white
+}
+#masterhead.masterheadNormal #s-icons {
+	margin-top: 5px;
+	margin-right: 8px
+}
+#masterhead.masterheadNormal #s-links {
+	margin-right: 10px;
+	margin-top: 11px;
+	text-transform: uppercase
+}
+#masterhead.masterheadNormal #s-icons ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px
+}
+#masterhead.masterheadNormal #s-icons ul li {
+	display: inline;
+	float: left;
+	margin-right: 4px
+}
+#masterhead.masterheadNormal #s-icons ul li a, #masterhead.masterheadNormal .twitterbutton, #masterhead.masterheadNormal .facebookbutton, #masterhead.masterheadNormal .tumblrbutton, #masterhead.masterheadNormal .youtubebutton, #masterhead.masterheadNormal .rssbutton, #masterhead.masterheadNormal .linkedinbutton, #masterhead.masterheadNormal .googlebutton, #masterhead.masterheadNormal .yahoobutton {
+	width: 21px;
+	height: 21px;
+	display: block;
+	background-image: url("http://images.inc.com/header/social-icons.png")
+}
+#masterhead.masterheadNormal .tumblrbutton {
+	background-position: -276px -155px
+}
+#masterhead.masterheadNormal .youtubebutton {
+	background-position: -298px -155px
+}
+#masterhead.masterheadNormal .rssbutton {
+	background-position: -320px -155px
+}
+#masterhead.masterheadNormal #s-icons ul li.linkedin a {
+	background-position: 0px 0px
+}
+#masterhead.masterheadNormal #s-icons ul li.linkedin a:hover {
+	background-position: 0px -21px
+}
+#masterhead.masterheadNormal .linkedinbutton {
+	background-position: 0px -42px
+}
+#masterhead.masterheadNormal #s-icons ul li.facebook a {
+	background-position: 42px 0px
+}
+#masterhead.masterheadNormal #s-icons ul li.facebook a:hover {
+	background-position: 42px -21px
+}
+#masterhead.masterheadNormal .facebookbutton {
+	background-position: 42px -42px
+}
+#masterhead.masterheadNormal #s-icons ul li.google a {
+	background-position: 63px 0px
+}
+#masterhead.masterheadNormal #s-icons ul li.google a:hover {
+	background-position: 63px -21px
+}
+#masterhead.masterheadNormal .googlebutton {
+	background-position: 63px -42px
+}
+#masterhead.masterheadNormal #s-icons ul li.twitter a {
+	background-position: 84px 0px
+}
+#masterhead.masterheadNormal #s-icons ul li.twitter a:hover {
+	background-position: 84px -21px
+}
+#masterhead.masterheadNormal .twitterbutton {
+	background-position: 22px -42px
+}
+#masterhead.masterheadNormal .yahoobutton {
+	background-position: 21px -42px
+}
+#masterhead.masterheadNormal #search-bar {
+	height: 28px;
+	border: 0px;
+	margin-bottom: 10px;
+	margin-right: 8px;
+	padding: 0px;
+	float: right;
+	width: 250px
+}
+#masterhead.masterheadNormal #search-icon img, #masterhead.masterheadNormal #search-icon input {
+	margin: 0px;
+	padding: 0px;
+	float: left
+}
+#masterhead.masterheadNormal #search-field {
+	margin: 0px;
+	background: #666666;
+	border: none;
+	width: 205px;
+	font-family: KlavikaMedium;
+	font-size: 10pt;
+	padding-left: 7px;
+	float: left;
+	height: 20px;
+	color: white
+}
+#masterhead.masterheadNormal input#search-field:focus {
+	outline: none
+}
+#masterhead.masterheadNormal #inc-logo {
+	width: 225px;
+	height: 77px;
+	margin: 0 auto;
+	margin-bottom: 19px;
+	margin-top: 20px
+}
+#masterhead.masterheadNormal #main-nav {
+	width: 100%;
+	border-top: #000000 1px solid
+}
+#masterhead.masterheadNormal #main-nav-items {
+	padding-top: 6px;
+	padding-bottom: 6px
+}
+#masterhead.masterheadNormal #main-nav-items ul {
+	padding: 5px 0px;
+	margin: 0px;
+	list-style: none
+}
+#masterhead.masterheadNormal #main-nav-items ul li {
+	padding: 8px 3px;
+	display: inline;
+	font-family: KlavikaBlack;
+	font-size: 14pt;
+	text-transform: uppercase;
+	margin-left: 45px
+}
+#masterhead.masterheadNormal #main-nav-items ul li:first-child {
+	margin-left: 0px
+}
+#masterhead.masterheadNormal #main-nav-items ul li a {
+	text-decoration: none;
+	color: #000000;
+	display: inline-block
+}
+#masterhead.masterheadNormal #dropdown {
+	margin: 0px;
+	height: 210px;
+	width: 100%;
+	z-index: 1000;
+	position: relative;
+	display: none;
+	background-color: #FFFFFF;
+	margin-bottom: 45px
+}
+#masterhead.masterheadNormal #dropdown ul {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	text-transform: uppercase;
+	display: block
+}
+#masterhead.masterheadNormal #dropdown ul li {
+	margin-bottom: 8px;
+	font-family: KlavikaRegular;
+	font-size: 12pt
+}
+#masterhead.masterheadNormal #dropdown ul li a {
+	text-decoration: none;
+	color: #000000
+}
+#masterhead.masterheadNormal #interrupt {
+	width: 175px;
+	height: 60px;
+	background: url("http://images.inc.com/header/line-interrupt.jpg");
+	position: relative;
+	right: 3px;
+	top: 97px;
+	z-index: 2000;
+	float: right;
+	margin: 0px;
+	border: 0px
+}
+#masterhead.masterheadNormal #interrupt-imgs {
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	left: 0px;
+	top: 0px
+}
+#masterhead.masterheadNormal #login {
+	height: 30px;
+	width: 970px;
+	background: #000000;
+	position: absolute;
+	display: none;
+	z-index: 10
+}
+#masterhead.masterheadNormal #login input {
+	font-family: KlavikaLight;
+	font-size: 8pt
+}
+#masterhead.masterheadNormal #login input[type=text] {
+	width: 150px;
+	height: 20px;
+	border: 0px;
+	margin: 5px 0px;
+	margin-right: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	float: left
+}
+#masterhead.masterheadNormal #login input[type=password] {
+	width: 95px;
+	height: 20px;
+	border: 0px;
+	margin: 5px 0px;
+	margin-right: 4px;
+	padding-left: 10px;
+	padding-right: 10px;
+	float: left
+}
+#masterhead.masterheadNormal #login input[type=image] {
+	margin-right: 11px;
+	margin-top: 5px;
+	float: left
+}
+#masterhead.masterheadNormal #login .forgot {
+	width: 95px;
+	margin-top: 4px;
+	border-right: #676767 1px solid;
+	font-family: KlavikaMedium;
+	font-size: 8pt;
+	text-transform: uppercase;
+	float: left;
+	padding: 5px 0px;
+	text-decoration: underline
+}
+#masterhead.masterheadNormal #login .using {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 18px;
+	border-right: #676767 1px solid;
+	float: left;
+	margin-top: 4px;
+	font-family: KlavikaRegular;
+	font-size: 9pt
+}
+#masterhead.masterheadNormal #login .close {
+	margin-left: 15px;
+	padding: 5px 0px;
+	float: left;
+	margin-top: 4px;
+	text-transform: uppercase;
+	font-family: KlavikaRegular;
+	font-size: 8pt
+}
+#masterhead.masterheadNormal #register {
+	margin: 0px;
+	height: 280px;
+	width: 100%;
+	z-index: 100000;
+	position: relative;
+	background-color: #000000;
+	color: #FFFFFF;
+	font-family: KlavikaLight;
+	font-size: 11pt;
+	left: 0px
+}
+#masterhead.masterheadNormal #register .blocks {
+	width: 275px;
+	float: left;
+	margin-right: 30px
+}
+#masterhead.masterheadNormal #register .blocks-cb {
+	width: 150px;
+	float: left;
+	margin-right: 30px
+}
+#masterhead.masterheadNormal #register .header {
+	font-family: KlavikaMedium;
+	font-size: 22pt;
+	text-transform: uppercase;
+	clear: both;
+	margin-bottom: 26px;
+	padding-top: 5px;
+	letter-spacing: -0.01em
+}
+#masterhead.masterheadNormal #register .subhead {
+	font-family: KlavikaLight;
+	font-size: 12pt;
+	margin-left: 10px;
+	text-transform: none;
+	color: #d4d4d4
+}
+#masterhead.masterheadNormal #register .label {
+	font-family: KlavikaMedium;
+	font-size: 9pt;
+	text-transform: uppercase;
+	color: #666666;
+	width: 85px;
+	height: 22px
+}
+#masterhead.masterheadNormal #register .label-cb {
+	font-family: KlavikaLight;
+	font-size: 9pt;
+	text-transform: uppercase;
+	margin: 0px;
+	margin-bottom: 20px;
+	padding-top: 2px
+}
+#masterhead.masterheadNormal #register ul {
+	margin-top: 5px
+}
+#masterhead.masterheadNormal #register ul li {
+	font-size: 7pt;
+	color: #0487AF
+}
+#masterhead.masterheadNormal #register ul li span {
+	color: #d4d4d4;
+	font-family: KlavikaLight;
+	font-size: 12pt;
+	vertical-align: middle;
+	line-height: 28px
+}
+#masterhead.masterheadNormal #register input[type=text], #masterhead.masterheadNormal #register input[type=password] {
+	border: none;
+	background-color: #FFFFFF;
+	color: #000000;
+	font-family: KlavikaLight;
+	font-size: 10pt;
+	padding: 3px
+}
+#masterhead.masterheadNormal #register .text-box-left {
+	margin-left: 30px;
+	width: 340px;
+	border-right: #343434 1px solid;
+	color: #d4d4d4;
+	font-family: KlavikaLight;
+	font-size: 12pt;
+	float: left
+}
+#masterhead.masterheadNormal #register .text-box-right {
+	padding-top: 3px;
+	margin-left: 30px;
+	color: #d4d4d4;
+	font-family: KlavikaExtraLight;
+	font-size: 12pt;
+	float: left
+}
+#masterhead.masterheadNormal #register .sign-up-with {
+	color: #d4d4d4;
+	font-family: KlavikaMedium;
+	font-size: 9pt;
+	text-transform: uppercase
+}
+#masterhead.masterheadNormal #register input:focus, #masterhead.masterheadNormal #login input:focus {
+	outline: none
+}
+#masterhead.masterheadNormal #register, #masterhead.masterheadNormal #register .pane1, #masterhead.masterheadNormal #register .pane2, #masterhead.masterheadNormal #register .pane3, #masterhead.masterheadNormal #register .pane4 {
+	display: none
+}
+#masterhead.masterheadNormal #register .pane1, #masterhead.masterheadNormal #register .pane2, #masterhead.masterheadNormal #register .pane3, #masterhead.masterheadNormal #register .pane4 {
+	padding-left: 34px
+}
+#masterhead.masterheadNormal #register .close {
+	position: absolute;
+	top: 5px;
+	left: 900px;
+	font-family: KlavikaRegular;
+	font-size: 8pt;
+	text-transform: uppercase;
+	cursor: pointer
+}
+#masterhead.masterheadNormal #externalauthorizors {
+	float: left;
+	margin-top: -3px
+}
+#masterhead.masterheadNormal #externalauthorizors .external_authorizer {
+	margin-left: 2px;
+	margin-right: 4px;
+	float: left
+}
+#masterhead.masterheadNormal #slimnavcontainer {
+	height: 36px;
+	margin-top: -4px;
+	padding-top: 1px;
+	display: none;
+	z-index: -1
+}
+#masterhead.masterheadNormal #slimNav {
+	padding-left: 0px
+}
+#masterhead.masterheadNormal #slimNav li {
+	display: inline;
+	float: left;
+	color: white;
+	font-family: KlavikaBold;
+	font-size: 18px;
+	text-transform: uppercase;
+	margin-left: 10px;
+	margin-right: 25px;
+	padding-top: 9px
+}
+#masterhead.masterheadNormal #slimNav li a {
+	color: white
+}
+/*#masterhead.masterheadNormal .inner {
+	width: 970px;
+	position: relative;
+	margin: 0 auto
+}*/
+
+#masterhead.masterheadNormal .outer {
+	width: 1150px;
+	margin: 0 auto
+}
+#masterhead.masterheadNormal .social {
+	float: right
+}
+#masterhead.masterheadNormal .panel {
+	display: none
+}
+#masterhead.masterheadNormal #bottombar {
+	width: 100%;
+	height: 30px;
+	background: #000000;
+	position: absolute;
+	bottom: -30px
+}
+#masterhead.masterheadNormal #bottombarinner {
+	font-family: KlavikaMedium;
+	color: #FFFFFF;
+	font-size: 14px;
+	margin-top: 7px
+}
+#masterhead.masterheadNormal #bottombarinner a {
+	color: #FFFFFF
+}
+#masterhead.masterheadVideo #leaderboard, #masterhead.masterheadVideo #leaderboard_ad {
+	text-align: center
+}
+#masterhead.masterheadVideo #leaderboard_ad > div {
+	margin: auto
+}
+#masterhead.masterheadVideo #top-black-bar {
+	width: 100%;
+	height: 55px;
+	background-color: black;
+	color: #ccc;
+	font: normal 9pt KlavikaLight;
+	margin-top: 7px;
+	z-index: 9999999;
+	overflow: hidden;
+	-webkit-transform: translate3d(0, 0, 0)
+}
+#masterhead.masterheadVideo #top-black-bar a {
+	color: #ccc
+}
+#masterhead.masterheadVideo #slimlogonav {
+	float: left;
+	padding-top: 8px;
+	border-right: 2px solid transparent;
+	border-left: 2px solid transparent;
+	height: 24px;
+	padding-left: 10px;
+	margin-right: 10px;
+	display: none
+}
+#masterhead.masterheadVideo #productnav {
+	float: left;
+	height: 34px;
+	margin-left: 8px
+}
+#masterhead.masterheadVideo .navselected {
+	border-right: 2px solid white !important;
+	border-left: 2px solid white !important;
+	border-bottom: 2px solid rgba(0,0,0,0.9);
+	height: 24px !important
+}
+#masterhead.masterheadVideo #smalllogo {
+	margin-right: 8px
+}
+#masterhead.masterheadVideo #smallnav {
+	margin-left: 3px;
+	margin-right: 8px
+}
+/*#masterhead.masterheadVideo #white-stripe-bar {
+	width: 100%;
+	height: 32px;
+	border-bottom: #FFFFFF 2px solid;
+	background: none
+}
+#masterhead.masterheadVideo #top-black-bar-narrow {
+	width: 100%;
+	height: 14px;
+	background: #000000;
+	color: #FFFFFF;
+	font: normal 10px Arial
+}
+#masterhead.masterheadVideo #white-stripe-bar-narrow {
+	width: 100%;
+	height: 12px;
+	border-bottom: #FFFFFF 2px solid
+}*/
+
+
+#masterhead.masterheadVideo #welcome, #masterhead.masterheadVideo #welcome_loggedout {
+	float: left;
+	margin-top: 3px;
+	display: none;
+	font-family: KlavikaLight;
+	margin-left: 10px;
+	color: white
+}
+#masterhead.masterheadVideo #welcome a, #masterhead.masterheadVideo #welcome_loggedout a {
+	color: white
+}
+#masterhead.masterheadVideo #s-icons {
+	margin-top: 5px;
+	margin-right: 8px
+}
+#masterhead.masterheadVideo #s-links {
+	margin-right: 10px;
+	margin-top: 11px;
+	text-transform: uppercase
+}
+#masterhead.masterheadVideo #s-icons ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px
+}
+#masterhead.masterheadVideo #s-icons ul li {
+	display: inline;
+	float: left;
+	margin-right: 4px
+}
+#masterhead.masterheadVideo #s-icons ul li a, #masterhead.masterheadVideo .twitterbutton, #masterhead.masterheadVideo .facebookbutton, #masterhead.masterheadVideo .tumblrbutton, #masterhead.masterheadVideo .youtubebutton, #masterhead.masterheadVideo .rssbutton, #masterhead.masterheadVideo .linkedinbutton, #masterhead.masterheadVideo .googlebutton, #masterhead.masterheadVideo .yahoobutton {
+	width: 21px;
+	height: 21px;
+	display: block;
+	background-image: url("http://images.inc.com/header/social-icons.png")
+}
+#masterhead.masterheadVideo .tumblrbutton {
+	background-position: -276px -155px
+}
+#masterhead.masterheadVideo .youtubebutton {
+	background-position: -298px -155px
+}
+#masterhead.masterheadVideo .rssbutton {
+	background-position: -320px -155px
+}
+#masterhead.masterheadVideo #s-icons ul li.linkedin a {
+	background-position: 0px 0px
+}
+#masterhead.masterheadVideo #s-icons ul li.linkedin a:hover {
+	background-position: 0px -21px
+}
+#masterhead.masterheadVideo .linkedinbutton {
+	background-position: 0px -42px
+}
+#masterhead.masterheadVideo #s-icons ul li.facebook a {
+	background-position: 42px 0px
+}
+#masterhead.masterheadVideo #s-icons ul li.facebook a:hover {
+	background-position: 42px -21px
+}
+#masterhead.masterheadVideo .facebookbutton {
+	background-position: 42px -42px
+}
+#masterhead.masterheadVideo #s-icons ul li.google a {
+	background-position: 63px 0px
+}
+#masterhead.masterheadVideo #s-icons ul li.google a:hover {
+	background-position: 63px -21px
+}
+#masterhead.masterheadVideo .googlebutton {
+	background-position: 63px -42px
+}
+#masterhead.masterheadVideo #s-icons ul li.twitter a {
+	background-position: 84px 0px
+}
+#masterhead.masterheadVideo #s-icons ul li.twitter a:hover {
+	background-position: 84px -21px
+}
+#masterhead.masterheadVideo .twitterbutton {
+	background-position: 84px -42px
+}
+#masterhead.masterheadVideo .yahoobutton {
+	background-position: 21px -42px
+}
+#masterhead.masterheadVideo #search-bar {
+	height: 28px;
+	border: 0px;
+	margin-bottom: 10px;
+	margin-right: 8px;
+	padding: 0px;
+	float: right;
+	width: 250px
+}
+#masterhead.masterheadVideo #search-icon img, #masterhead.masterheadVideo #search-icon input {
+	margin: 0px;
+	padding: 0px;
+	float: left
+}
+#masterhead.masterheadVideo #search-field {
+	margin: 0px;
+	background: #666666;
+	border: none;
+	width: 205px;
+	font-family: KlavikaMedium;
+	font-size: 10pt;
+	padding-left: 7px;
+	float: left;
+	height: 20px;
+	color: white
+}
+#masterhead.masterheadVideo input#search-field:focus {
+	outline: none
+}
+#masterhead.masterheadVideo #inc-logo {
+	width: 225px;
+	height: 77px;
+	margin: 0 auto;
+	margin-bottom: 19px;
+	margin-top: 20px
+}
+#masterhead.masterheadVideo #main-nav {
+	width: 100%;
+	border-top: #C8CCCF 1px solid
+}
+#masterhead.masterheadVideo #main-nav-items {
+	padding-top: 6px;
+	padding-bottom: 6px
+}
+#masterhead.masterheadVideo #main-nav-items ul {
+	padding: 5px 0px;
+	margin: 0px;
+	list-style: none
+}
+#masterhead.masterheadVideo #main-nav-items ul li {
+	padding: 8px 3px;
+	display: inline;
+	font-family: KlavikaBlack;
+	font-size: 14pt;
+	text-transform: uppercase;
+	margin-left: 45px
+}
+#masterhead.masterheadVideo #main-nav-items ul li:first-child {
+	margin-left: 0px
+}
+#masterhead.masterheadVideo #main-nav-items ul li a {
+	text-decoration: none;
+	color: #FFFFFF !important;
+	display: inline-block;
+	border-bottom: transparent 2px solid
+}
+#masterhead.masterheadVideo #dropdown {
+	margin: 0px;
+	height: 210px;
+	width: 100%;
+	z-index: 1000;
+	position: relative;
+	display: none;
+	background-color: #222222;
+	margin-bottom: 45px
+}
+#masterhead.masterheadVideo #dropdown ul {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	text-transform: uppercase;
+	display: block
+}
+#masterhead.masterheadVideo #dropdown ul li {
+	margin-bottom: 8px;
+	font-family: KlavikaRegular;
+	font-size: 12pt
+}
+#masterhead.masterheadVideo #dropdown ul li a {
+	text-decoration: none;
+	color: #FFFFFF
+}
+#masterhead.masterheadVideo #dropdown ul li a:hover {
+	color: #FFFFFF !important
+}
+#masterhead.masterheadVideo #interrupt {
+	width: 175px;
+	height: 60px;
+	background: url("http://images.inc.com/header/line-interrupt-video.png?bustcache");
+	position: relative;
+	right: 3px;
+	top: 97px;
+	z-index: 2000;
+	float: right;
+	margin: 0px;
+	border: 0px
+}
+#masterhead.masterheadVideo #interrupt-imgs {
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	left: 0px;
+	top: 0px
+}
+#masterhead.masterheadVideo #login {
+	height: 30px;
+	width: 970px;
+	background: #000000;
+	position: absolute;
+	display: none
+}
+#masterhead.masterheadVideo #login input {
+	font-family: KlavikaLight;
+	font-size: 8pt
+}
+#masterhead.masterheadVideo #login input[type=text] {
+	width: 150px;
+	height: 20px;
+	border: 0px;
+	margin: 5px 0px;
+	margin-right: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	float: left
+}
+#masterhead.masterheadVideo #login input[type=password] {
+	width: 95px;
+	height: 20px;
+	border: 0px;
+	margin: 5px 0px;
+	margin-right: 4px;
+	padding-left: 10px;
+	padding-right: 10px;
+	float: left
+}
+#masterhead.masterheadVideo #login input[type=image] {
+	margin-right: 11px;
+	margin-top: 5px;
+	float: left
+}
+#masterhead.masterheadVideo #login .forgot {
+	width: 95px;
+	margin-top: 4px;
+	border-right: #676767 1px solid;
+	font-family: KlavikaMedium;
+	font-size: 8pt;
+	text-transform: uppercase;
+	float: left;
+	padding: 5px 0px;
+	text-decoration: underline
+}
+#masterhead.masterheadVideo #login .using {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 18px;
+	border-right: #676767 1px solid;
+	float: left;
+	margin-top: 4px;
+	font-family: KlavikaRegular;
+	font-size: 9pt
+}
+#masterhead.masterheadVideo #login .close {
+	margin-left: 15px;
+	padding: 5px 0px;
+	float: left;
+	margin-top: 4px;
+	text-transform: uppercase;
+	font-family: KlavikaRegular;
+	font-size: 8pt
+}
+#masterhead.masterheadVideo #register {
+	margin: 0px;
+	height: 280px;
+	width: 100%;
+	z-index: 100000;
+	position: relative;
+	background-color: #000000;
+	color: #FFFFFF;
+	font-family: KlavikaLight;
+	font-size: 11pt;
+	left: 0px
+}
+#masterhead.masterheadVideo #register .blocks {
+	width: 275px;
+	float: left;
+	margin-right: 30px
+}
+#masterhead.masterheadVideo #register .blocks-cb {
+	width: 150px;
+	float: left;
+	margin-right: 30px
+}
+#masterhead.masterheadVideo #register .header {
+	font-family: KlavikaMedium;
+	font-size: 22pt;
+	text-transform: uppercase;
+	clear: both;
+	margin-bottom: 26px;
+	padding-top: 5px;
+	letter-spacing: -0.01em
+}
+#masterhead.masterheadVideo #register .subhead {
+	font-family: KlavikaLight;
+	font-size: 12pt;
+	margin-left: 10px;
+	text-transform: none;
+	color: #d4d4d4
+}
+#masterhead.masterheadVideo #register .label {
+	font-family: KlavikaMedium;
+	font-size: 9pt;
+	text-transform: uppercase;
+	color: #666666;
+	width: 85px;
+	height: 22px
+}
+#masterhead.masterheadVideo #register .label-cb {
+	font-family: KlavikaLight;
+	font-size: 9pt;
+	text-transform: uppercase;
+	margin: 0px;
+	margin-bottom: 20px;
+	padding-top: 2px
+}
+#masterhead.masterheadVideo #register ul {
+	margin-top: 5px
+}
+#masterhead.masterheadVideo #register ul li {
+	font-size: 7pt;
+	color: #0487AF
+}
+#masterhead.masterheadVideo #register ul li span {
+	color: #d4d4d4;
+	font-family: KlavikaLight;
+	font-size: 12pt;
+	vertical-align: middle;
+	line-height: 28px
+}
+#masterhead.masterheadVideo #register input[type=text], #masterhead.masterheadVideo #register input[type=password] {
+	border: none;
+	background-color: #FFFFFF;
+	color: #000000;
+	font-family: KlavikaLight;
+	font-size: 10pt;
+	padding: 3px
+}
+#masterhead.masterheadVideo #register .text-box-left {
+	margin-left: 30px;
+	width: 340px;
+	border-right: #343434 1px solid;
+	color: #d4d4d4;
+	font-family: KlavikaLight;
+	font-size: 12pt;
+	float: left
+}
+#masterhead.masterheadVideo #register .text-box-right {
+	padding-top: 3px;
+	margin-left: 30px;
+	color: #d4d4d4;
+	font-family: KlavikaExtraLight;
+	font-size: 12pt;
+	float: left
+}
+#masterhead.masterheadVideo #register .sign-up-with {
+	color: #d4d4d4;
+	font-family: KlavikaMedium;
+	font-size: 9pt;
+	text-transform: uppercase
+}
+#masterhead.masterheadVideo #register input:focus, #masterhead.masterheadVideo #login input:focus {
+	outline: none
+}
+#masterhead.masterheadVideo #register, #masterhead.masterheadVideo #register .pane1, #masterhead.masterheadVideo #register .pane2, #masterhead.masterheadVideo #register .pane3, #masterhead.masterheadVideo #register .pane4 {
+	display: none
+}
+#masterhead.masterheadVideo #register .pane1, #masterhead.masterheadVideo #register .pane2, #masterhead.masterheadVideo #register .pane3, #masterhead.masterheadVideo #register .pane4 {
+	padding-left: 34px
+}
+#masterhead.masterheadVideo #register .close {
+	float: right;
+	position: relative;
+	top: 0px;
+	font-family: KlavikaRegular;
+	font-size: 8pt;
+	text-transform: uppercase;
+	cursor: pointer
+}
+#masterhead.masterheadVideo #externalauthorizors {
+	float: left;
+	margin-left: 8px;
+	margin-top: -3px
+}
+#masterhead.masterheadVideo #externalauthorizors .external_authorizer {
+	margin-left: 2px;
+	margin-right: 4px;
+	float: left
+}
+#masterhead.masterheadVideo #slimnavcontainer {
+	height: 36px;
+	margin-top: -4px;
+	padding-top: 1px;
+	display: none;
+	z-index: -1
+}
+#masterhead.masterheadVideo #slimNav {
+	padding-left: 0px
+}
+#masterhead.masterheadVideo #slimNav li {
+	display: inline;
+	float: left;
+	color: white;
+	font-family: KlavikaBold;
+	font-size: 18px;
+	text-transform: uppercase;
+	margin-left: 10px;
+	margin-right: 25px;
+	padding-top: 9px
+}
+#masterhead.masterheadVideo #slimNav li a {
+	color: white
+}
+/*#masterhead.masterheadVideo .inner {
+	width: 970px;
+	position: relative;
+	margin: 0 auto
+}*/
+
+#masterhead.masterheadVideo .outer {
+	width: 1150px;
+	margin: 0 auto
+}
+#masterhead.masterheadVideo .social {
+	float: right
+}
+#masterhead.masterheadVideo .panel {
+	display: none
+}
+#masterhead.masterheadVideo #bottombar {
+	width: 100%;
+	height: 30px;
+	background: #000000;
+	position: absolute;
+	bottom: -30px
+}
+#masterhead.masterheadVideo #bottombarinner {
+	font-family: KlavikaMedium;
+	color: #FFFFFF;
+	margin-top: 7px;
+	font-size: 14px
+}
+#masterhead.masterheadVideo #bottombarinner a {
+	color: #FFFFFF
+}
+.adBlockerEnabled #masterhead {
+	margin-top: -7px !important
+}
+#masterheadContentContainer {
+	width: 761px;
+	height: 205px;
+	float: left;
+	font-size: 0px;
+	position: relative
+}
+.ajaxloader, .masterheadajaxloader {
+	position: relative;
+	text-align: center;
+	width: 100%;
+	margin: 30px 0px
+}
+#masterheadContentContainer .masterheadajaxloader {
+	margin-top: 65px
+}
+

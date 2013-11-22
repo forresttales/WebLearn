@@ -1,47 +1,30 @@
-<% provide(:title, 'Join') %>
+<% provide(:title, 'Sign In') %>
+		
+	<script src="/assets/jquery.validate.js"></script>
 
-<!-- <script src='js/jquery.min.js' type='text/javascript'></script> -->
-
-<!-- <script src="http://jquery.bassistance.de/validate/lib/jquery.js"></script> -->
-	
-	
-<!-- <script src="http://jquery.bassistance.de/validate/jquery.validate.js"></script> -->
-
-<!-- <script src="/assets/jquery.js"></script> -->
-<script src="/assets/jquery.validate.js"></script>
-
-<!-- <script src="//code.jquery.com/jquery-1.9.1.js"></script> -->
-
-  <!-- <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.4/jquery.validate.min.js"></script> -->
-  
-  
-
-
-	<!-- <div id="join_image" style="background: #F1F2E1 url('/assets/background_cambridge_garden.jpg') no-repeat right top;"> -->
-					
-					
 	<style>
 		
 	/* -- input form -- */
 	
 	
-	.form-signin {
+	#form-message {
 		
 		width: 600px;
 		height: auto;
 					
 		display: block;
 		
-		/*background-color:rgba(86, 133, 78, 0.97);*/
+		/*background-color:rgba(86, 133, 78, 0.97);*/		
 		
+		/*background-color: #D5E8D8;*/
+				
+		/*background-color: #4F5C4F;*/		
 		
-		/*background-color: rgba(79, 92, 79, 0.97);*/
-
-		/*background-color: rgba(19, 59, 19, 0.97);*/
-
 		background-color: rgba(4, 26, 4, 0.96);
-
-
+		
+		
+				
+		
 		/*background-color:rgba(86, 133, 78, 0.75);*/
 		
 		/*-moz-box-shadow:5px 5px 40px #fff;
@@ -57,31 +40,19 @@
 		border-bottom-left-radius: 10px;
    		border-bottom-right-radius: 10px;
    		
-		position: absolute;
-		text-align: center;			
-		top: 350px;			
+		position: relative;
+		
+		
+		/*text-align: center;			*/		
+		
 		padding-top: 30px;	   			   	
 		padding-bottom: 30px;	
 	}
 	
-	#joinClose {
-		right: 6px;
-		top: 6px;
-		position: absolute;
-		display: block
-	}
 	
 	/**:focus {
 		outline: none
 	}*/
-	
-	#loading {
-		background:url("/assets/icon_loading.gif") no-repeat center center;
-		height: 100px; width: 100px;
-		position: fixed; left: 47%; top: 50%; z-index: 1000;
-		margin: -25px 0 0 -25px;
-	}				
-				
 	
 	.input-form {
 		font-family: msyh;
@@ -140,57 +111,14 @@
 		font-size: 11px;
 		color: #851717;		    			
 	}
-
-	/*.input-form:invalid {
-		color: #851717;
-		background: url("/assets/submit_form_cancel.png") no-repeat 216px 7px;									
-	}
-
-	.input-form:error {
-		color: #851717;
-		background: url("/assets/submit_form_cancel.png") no-repeat 216px 7px;									
-	}
-
-	.input-form:required {
-		color: orange;		
-		background: url("/assets/submit_form_asterisk_orange.png") no-repeat 218px 7px;
-	}
-
-	.input-form:success {
-		color: #ACDDE3;		
-		background: url("/assets/submit_form_tick.png") no-repeat 218px 5px;
-	}
-	
-	.input-form:valid {
-		color: #ACDDE3;		
-		background: url("/assets/submit_form_tick.png") no-repeat 218px 5px;
-	}*/	
 	
 	.input-label {
 		font-family: msyh;
 		font-size: 16px;
-		width: 220px;
+		width: 230px;
 		height: 18px;
 	}
 
-	/*.input-label:focus {
-		color: #43B557;
-	}
-
-	.input-label:error {
-		color: #851717;
-	}
-
-	.input-label:required {
-		color: orange;		
-	}
-
-	.input-label:success {
-		color: orange;		
-	}*/		
-		
-		
-		
 	.success {
 		color: #ACDDE3;		
 		background: url("/assets/submit_form_tick.png") no-repeat 278px 5px;		
@@ -210,10 +138,6 @@
 		
 	}
 	
-	/*.focus {
-		color: #fff;
-	}*/
-	
 	.error-label {
 		color: #851717;
 	}
@@ -232,8 +156,10 @@
 		font-family: Arial;
 		width: 200px;
 	}
-
-
+		
+	.message {
+		height: 120px;
+	}
 		
 	div .cell-right-contact {
 		display: table-cell;
@@ -257,126 +183,57 @@
 		align: top;		
 	}
 		
+	
 	</style>					
 					
-					
-					
-					
-	<div id="join_image">
 				
 	<header>					
-    	     	
-    	<div class="shadow" style="position: relative; z-index: +2;">
     		
-    		<%= render 'layouts/flash_alert' %>
-    		
-			<div class="table-main">			
-				<div class="row">
-					<div class="cell-250">
-						<div class="table-main">
-							<div class="row">
-								<div class="cell-250" style="padding-left: 24px;">
-									
-						  			<img src="../repository/image_learning_counsel.png" alt="image_learning_counsel.png" >
-						  			
-						  		</div>
-							</div>
-							<div class="row">
-								<div class="cell-125" style="padding-left: 24px;">
-									<p style="font-family: msyh; font-size: 12px;">Research and Context for the<br>Shift to Digital Curriculum</p>
-						  		</div>
-							</div>							
-						</div>
-					</div>
-					<div class="cell-650">
-						<div class="table-main">
-							<div class="row">
-								<div class="cell-650">
-									
-									<img src="../repository/banner-1.png" alt="banner-1.png" width="630px" >
-									
-									<!-- <div id="main_header_adblock_1">									
-										<h3>Space Available</h3>
-									</div> -->									
-														
-								</div>			
-							</div>							
-						</div>
-					</div>
-					<div class="cell-100%">
-						<div class="table-main">
-							<div class="row">
-								<div class="cell-100percent">
-				 						<!-- link_to image_tag(“/assets/EdMatchUp_logo.png”, :class=>’′), :url =>{:controller=> ‘’,:action=>’’} -->															
-									<div id="edmatchuplogo">
-										<%= link_to image_tag("../repository/EdMatchUp_logo.png", :alt => 'EdMatchUp_logo.png'), '#' %>															
-									</div>							
-						  		</div>
-							</div>
-							<div class="row">
-								<div class="cell-100percent">
-									<div align="center">
-										<%= link_to image_tag("../repository/image_coming_soon_8k.png", :alt => 'image_coming_soon_8k.png'), '#' %>															
-									</div>							
-						  		</div>							
-							</div>
-						</div>
-					</div>
-				</div>					
-			</div>	
+		<%= render 'layouts/flash_alert' %>
+		
+		<div class="shadow" style="position: relative; z-index: +2;">
 			
-			<!-- <div style="height: 60px;"> -->
-								
-			<div class="table-white" style="height: 70px;">
-				<div class="row">
-					<div class="cell-100percent" style="padding: 4px 0px 0px 40px;">
-						<h2 style="font-family: msyh; color: #26B821;"><br>Sign In</h2>
-					</div>
-					<!-- <p>
-						<button class="btn blue small">Join</button>
-					</p>
-					<p>
-						<button class="btn blue small">Cancel</button>
-					</p> -->											
-				</div>
-				<div class="row">
-					<!-- <div align="right" style="margin-right: 6px; margin-bottom: 6px;">
-						<button href="users/create" id="btn3" class="btn blue small">Create Account</button>
-						<button id="btn1" class="btn blue small">Join</button>
-						<button id="btn2" class="btn blue small">Cancel</button>						
-					</div> -->					
-					
-				</div>
-				
-				<!-- <div class="row">
-					<div class="cell-100percent">
-						<div id="errorContainer">
-						    <p>Please correct the following errors and try again:</p>
-						    <ul />
-						</div>		
-					</div>
-				</div> -->				
-				
-			</div>
-		</div>	
-		
-		
-		<div id="loading"> </div>
-				
+		</div>
+
 	</header>		
 	
 	<section>
 
+		<div style="height: 140px;"></div>
 		
-		<div id="form_signin" class="form-signin">
-			
-			<a id="joinClose" class="btn-joinClose" onclick="hideSignin();"><img src="/assets/submit_form_close.png" width="20" alt="" /></a>
- 			
- 			
-    		  <!-- form_for(@user, :id => "join_form", :url => {:controller => "users", :action => "create"}) do |f|  -->
-    		      		     		
-    		      		     		
-    		      	<%= form_for(:session, url: sessions_path, :html => {:id => "form_join"}) do |f| %>
+		<div class="kontainer">
+
+			<div id="mainkolumn" class="withsidebar">
+	
+	
+				<div>			
+					<h2 style="font-family: msyh; color: #26B821;">
+						Sign In
+					</h2>
+				</div>
+				
+				<div style="height: 20px;"></div>
+				
+				<div id="form-message">
+					
+					
+    	 <!-- form_for(:session, url: sessions_path) do |f| 	
+	
+		 f.label(:username, 'Username') 						
+		 f.text_field :username, :class => "input-form", :autofocus => true 	
+		 f.label(:password, 'Password') 
+		 f.password_field :password, :class => "input-form" 
+		 f.submit "Sign In", class: ""  -->
+
+					
+					   <!-- form_for @session, :html => {:id => "form_join"} do |f| -->					   
+					    
+					    
+					    
+					    
+					    
+					    
+					<%= form_for(:session, url: sessions_path, :html => {:id => "form_join"}) do |f| %>
 					<!-- = render 'shared/error_messages', object: f.object -->
 					 <!-- hidden_field_tag :account_type, @account_type  -->
 					 	
@@ -441,92 +298,42 @@
 					</div>      		
 		
 				<% end %>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+				</div>		
+	
+				<br clear="all">
 
-			<!-- <div class="space-150"></div> -->
-				
-		</div>		
+			</div>
 
-		<div id="mainpage" class="shadow" style="background-color: #fff; height: 500px; position: relative; z-index: +1;"></div>
+			<div id="k-sidebar">
+				<div id="k-sidebar_inner">
+					
+				</div>
+			</div>
 
+			<br clear="all">
+
+		</div>
+
+		
+		<div style="height: 450px;"></div>
+			
 	</section>
 	
-</div>
+
+
 
 	<script>
-	
-		function showSignin() {
-	
-			var a = $("#mainpage");
-			var b = $("#mainfooter");
-		
-			a.animate({
-				"top": "+=500px"
-			}, 1000, function(){ loadSignin(); });
-		
-			b.animate({
-				"top": "+=500px"
-			}, 1000);
-		}
-		
-		function hideSignin() {
-		
-			disableSignin();
-			
-			var a = $("#mainpage");
-			var b = $("#mainfooter");
-		
-			a.animate({
-				"top": "-=500px"
-			}, 1000);
-			
-			b.animate({
-				"top": "-=500px"
-			}, 1000);
-		}
-
-		function loadSignin() {
-			glowBoxGold();
-
-			$("#form_signin").fadeIn( "slow", function(){$("#form_signin").css({'boxShadow': '0 0 30px #0800FA'}) } );
-
-			setTimeout( function(){
-				glowBoxBlack();
-			}, 2500);
-			
-			setTimeout( function(){$("#session_username").focus();}, 1500);
-		}
-		
-		function disableSignin() {
-			$("#form_signin").fadeOut("slow");
-		}
-		
-		function centerSignin() {
-			var a = document.documentElement.clientWidth;
-			var b = $("#form_signin").width();
-			$("#form_signin").css({
-				left : a / 2 - b / 2				
-			})
-		}
-
-		function glowBoxGold() {
-			$("#form_signin").css({
-				'boxShadow': '0 0 30px #CCAE37'
-			})
-		}
-
-		function glowBoxBlack() {
-			$("#form_signin").css({
-				'boxShadow': '0 0 30px #000'
-			})
-		}
-
-		function glowBoxBlue() {
-			$("#form_signin").css({				
-				'boxShadow': '0 0 5px #ACDDE3'
-			})
-		}
-		
-		//var ec = $("user_name_first");
 
 		function formValidate() {
 						
@@ -615,52 +422,98 @@
 			});
 		}
 
+		
+		function loadSession() {
+			setTimeout( function(){$("#session_username").focus();}, 500);
+		}
+
 		$(document).ready(function(){
-			
-			$("#btn1").click(function(){
-				centerSignin();				
-				showSignin();
-			});
-			$("#btn2").click(function(){
-			  	hideSignin();
-			 });
-
-			var image = '../repository/background-image-proxy.jpeg';
-
-			//var image = '/assets/background_cambridge_garden.jpg';
-			
-			//var image = '/assets/join_form_welcome.png';
-			
-			//ImageProxy.mvc.jpeg
-			
-			img = $('<img />');
-			
-			img.bind('load', function() {
-			    $('#loading').fadeOut(1000);
-
-				setTimeout( function(){
-					centerSignin();
-					showSignin();
-					formValidate();
-				}, 1000);
-			});
- 			
-			img.attr('src', image);
- 			
-			$('#join_image').css({
-				//background: '#F1F2E1 url(' + image + ') no-repeat right top'
-				background: '#F1F2E1 url(' + image + ') repeat right top'
-				
-			})
-				
-			// $(window).bind("load", function() {
-			    // $('#loading').fadeOut(2000);
-			// });
-				
-			$("#form_signin").fadeOut();
-			
+			loadSession();
+			formValidate();
 		});
 	
 	</script>
 	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<% if false %>
+	<div class="table-yellow-edmatchup">
+		<div class="row">
+			<div class="cell-600">
+				<table class="table-yellow">
+					<div class="row">
+						<div class="cell-100percent">
+							<h3 style="padding: 0px 0px 0px 170px;">EdMatchUp</h3>
+							<h4 style="padding: 0px 0px 0px 120px;">Digital Curriculum Matching</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="cell-100percent">
+							<h3 style="padding: 0px 0px 0px 130px;">Get Started - It's Free</h3>
+							
+						</div>
+					</div>
+					<div class="row">
+						<div class="cell-100percent">
+							<h4 style="padding: 0px 0px 0px 60px;display: inline-block;">SEARCH EdMatchUp</h4>													
+							<input type="text" class="input-search-1" placeholder="Search" style="display: inline-block;">
+						</div>
+					</div>
+					<div class="row">
+						<div class="cell-100percent">
+							<div style="display: inline-block;">
+								<p style="line-height: 12px; font-size: 12px; font-weight: bolder; padding: 0px 0px 0px 60px;">
+									Create<br>
+									Product<br>
+									or<br>
+									Inventory<br>
+									Profile<br><br><br>
+								</p>
+							</div>
+							
+							<% if !session[:signed_in] %>
+								<%= render 'layouts/menu_accounts' %>
+							<% else %>
+								<%= render 'layouts/menu_accounts_signed_in' %>    							
+							<% end %>
+							
+						</div>
+					</div>
+				</table>
+			</div>
+			<div class="cell-300" style="padding: 10px 20px 40px 0px;">
+				<h4>How does it work?</h4>
+	  			<%= image_tag("image_edmatchup_works.png", :width => '300',  :alt => '') %>
+			</div>
+		</div>
+	</div>
+	<% end %>

@@ -726,31 +726,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-/*.overlay {
-	width: 1000px;
-	height: 200px;
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	background: url(../images/dotted.png);
-	opacity: 0.3
-}*/
-
-
-
-
-
-
 	/*--btn--*/
 
 	.btn {
@@ -1015,105 +990,6 @@
 
 
 
-	/* -- navigation -- */
-		
-		
-		
-	/* -- */		
-		
-	
-	
-	
-	/*div.horizontal {
-		width: auto;
-		background-color:#254520;
-		height:29px;
-		box-shadow: 5px 5px 4px #333333;
-	}
-	
-	div.horizontal ul {
-		list-style-type:none;
-		margin:0;
-		padding:0;
-	}
-	
-	div.horzontal ul:after {
-		content: ""; clear: both; display: block;
-	}
-	
-	div.horizontal ul li a {
-		display: block; padding: 0px 0px;
-		color: #757575; text-decoration: none;
-	}
-	
-	div.horizontal ul ul {
-		display: none;
-	}
-	
-	div.horizontal ul li:hover > ul {
-		display: block;
-	}	*/
-	
-		
-	/*div.horizontal ul ul {
-		background: #5f6975; border-radius: 0px; padding: 0;
-		position: absolute; top: 100%;
-	}*/
-	
-	
-		
-	
-	
-	/*div.horizontal li {
-		float:left;
-	}
-	
-	div.horizontal a {
-		display:block;
-	}
-	
-	div.horizontal a:link,div.horizontal a:visited {
-		font-weight:bold;
-		color:#FFFFFF;
-		background-color:#254520;
-		text-align:center;
-		padding:4px 10px 4px 10px;
-		text-decoration:none;
-		text-transform:uppercase;
-		outline: none;
-	}*/
-	
-		
-	/*div.horizontal a:hover {
-		background-color:rgba(0, 0, 0, 0.3);
-		color:#C7FABE;
-		outline: none;
-	}*/
-	
-	/*div.horizontal ul li:hover a {
-		background-color:rgba(0, 0, 0, 0.3);
-		color:#C7FABE;
-		outline: none;
-	}	
-	
-	div.horizontal a:active {
-		background-color:rgba(0, 0, 0, 0.3);
-		color:#F0F56E;	
-		outline: none;
-	}*/
-	
-		
-
-
-
-
-
-
-
-
-
-
-
 	
 	
 	
@@ -1137,15 +1013,24 @@
       	/*background: -moz-linear-gradient(center bottom, #4F7551 10%, #49695A 95%, #829179 96%, #67785A 99%);     */		
 		
 		
-        background: #4F7551;
+        background: #203121;
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(0.1, #203121), color-stop(0.95, #3E4F4B), color-stop(0.96, #6F7C67), color-stop(0.99, #4F5E44));
+        background: -moz-linear-gradient(center bottom, #203121 10%, #3E4F4B 95%, #6F7C67 96%, #4F5E44 99%);
+        background: -webkit-linear-gradient(bottom, #203121 10%, #3E4F4B 95%, #6F7C67 96%, #4F5E44 99%);
+        background: -o-linear-gradient(bottom, #203121 10%, #3E4F4B 95%, #6F7C67 96%, #4F5E44 99%);
+        background: -ms-linear-gradient(bottom, #203121 10%, #3E4F4B 95%, #6F7C67 96%, #4F5E44 99%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#203121', endColorstr='#3E4F4B', GradientType=0 );
+        background: linear-gradient(bottom, #203121 10%, #3E4F4B 95%, #6F7C67 96%, #4F5E44 99%);     
+		
+		
+        /*background: #4F7551;
         background: -webkit-gradient(linear, left bottom, left top, color-stop(0.1, #4F7551), color-stop(0.95, #49695A), color-stop(0.96, #829179), color-stop(0.99, #67785A));
         background: -moz-linear-gradient(center bottom, #4F7551 10%, #49695A 95%, #829179 96%, #67785A 99%);
         background: -webkit-linear-gradient(bottom, #4F7551 10%, #49695A 95%, #829179 96%, #67785A 99%);
         background: -o-linear-gradient(bottom, #4F7551 10%, #49695A 95%, #829179 96%, #67785A 99%);
         background: -ms-linear-gradient(bottom, #4F7551 10%, #49695A 95%, #829179 96%, #67785A 99%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4F7551', endColorstr='#49695A', GradientType=0 );
-        background: linear-gradient(bottom, #4F7551 10%, #49695A 95%, #829179 96%, #67785A 99%);
-		
+        background: linear-gradient(bottom, #4F7551 10%, #49695A 95%, #829179 96%, #67785A 99%);*/		
 		
 		
 		
@@ -1162,16 +1047,26 @@
 		
       	/*background: -moz-linear-gradient(center bottom, #4F7551 10%, #49695A 95%, #829179 96%, #67785A 99%);     */
 
+        background: #203121;
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(0.1, #203121), color-stop(0.95, #3E4F4B), color-stop(0.96, #6F7C67), color-stop(0.99, #4F5E44));
+        background: -moz-linear-gradient(center bottom, #203121 10%, #3E4F4B 95%, #6F7C67 96%, #4F5E44 99%);
+        background: -webkit-linear-gradient(bottom, #203121 10%, #3E4F4B 95%, #6F7C67 96%, #4F5E44 99%);
+        background: -o-linear-gradient(bottom, #203121 10%, #3E4F4B 95%, #6F7C67 96%, #4F5E44 99%);
+        background: -ms-linear-gradient(bottom, #203121 10%, #3E4F4B 95%, #6F7C67 96%, #4F5E44 99%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#203121', endColorstr='#3E4F4B', GradientType=0 );
+        background: linear-gradient(bottom, #203121 10%, #3E4F4B 95%, #6F7C67 96%, #4F5E44 99%);     
 
-        background: #4F7551;
+
+        /*background: #4F7551;
         background: -webkit-gradient(linear, left bottom, left top, color-stop(0.1, #4F7551), color-stop(0.95, #49695A), color-stop(0.96, #829179), color-stop(0.99, #67785A));
         background: -moz-linear-gradient(center bottom, #4F7551 10%, #49695A 95%, #829179 96%, #67785A 99%);
         background: -webkit-linear-gradient(bottom, #4F7551 10%, #49695A 95%, #829179 96%, #67785A 99%);
         background: -o-linear-gradient(bottom, #4F7551 10%, #49695A 95%, #829179 96%, #67785A 99%);
         background: -ms-linear-gradient(bottom, #4F7551 10%, #49695A 95%, #829179 96%, #67785A 99%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4F7551', endColorstr='#49695A', GradientType=0 );
-        background: linear-gradient(bottom, #4F7551 10%, #49695A 95%, #829179 96%, #67785A 99%);
-		
+        background: linear-gradient(bottom, #4F7551 10%, #49695A 95%, #829179 96%, #67785A 99%);*/
+       
+       		
 		/*background: linear-gradient(top, #254520 0%, #56854E 100%);  
 		background: -moz-linear-gradient(top, #254520 0%, #56854E 100%); 
 		background: -webkit-linear-gradient(top, #254520 0%,#56854E 100%);*/		
@@ -1189,12 +1084,10 @@
 		color: #BFFAB9;
 	}
 	
-	
-	
-	
-	
-	
-	
+	div .table-footer a:active {
+		color:#F0F56E;
+		outline: none;
+	}
 	
 	/*-- eleminate dotted border on Mozilla buttons --*/
 	a:focus, a:active, 
@@ -1246,132 +1139,6 @@
 	
 	
 
-	/* slider - index page */
-	
-	/*.container1 {
-		
-		border-top:1px solid #666;		
-		padding:30px 0;		
-		
-		position: relative;
-		display: block;
-		width: 960px;
-		margin: 0 auto
-	}
-	
-	.container1 .slideheading {
-		letter-spacing: 2px;
-		text-shadow: 0px 5px 5px #333
-	}
-	
-	#slide1 span, #slide2 span, #slide3 span {
-		background: url(/assets/contentBg.png) repeat top left transparent;
-		position: absolute;
-		bottom: 20px;
-		right: 20px;
-		padding: 10px
-	}
-	
-	#slide1 .slideheading, #slide2 .slideheading, #slide3 .slideheading {
-		font-family: "ChunkFive Regular", Georgia, serif;
-		color: #FFF;
-		font-size: 35px;
-		letter-spacing: 2px;
-		margin: 0 0 10px
-	}
-	
-	#slide1 p, #slide2 p, #slide3 p {
-		font-family: Artifika, Georgia, serif;
-		color: #FFF;
-		margin: 0
-	}
-	
-	#mySlides {
-		font-family: Verdana, Arial, sans-serif;
-		color: #FFF
-	}
-	
-	a.readmore {
-		text-align: center;
-		float: right;
-		font-size: 13px;
-		color: #fff;
-		text-decoration: none;
-		margin-top: 30px;
-		background: #454545;
-		-webkit-border-radius: 10px;
-		-moz-border-radius: 10px;
-		border-radius: 10px;
-		padding: 10px
-	}
-	
-	a.readmore:hover {
-		background: #272727
-	}
-	
-	.jFlowSlideContainer a {
-		color: #F90;
-		text-decoration: none
-	}
-	
-	.jFlowSlideContainer a:hover {
-		text-decoration: none
-	}
-	
-	.jFlowSlideContainer a:focus {
-		position: relative;
-		top: 1px
-	}
-	
-	.jFlowNext div {
-		background: url(/assets/arrows.png) no-repeat scroll 0 -35px transparent;
-		height: 130px;
-		position: absolute;
-		top: 110px;
-		right: -50px;
-		width: 50px;
-		cursor: pointer
-	}
-	
-	.jFlowPrev div {
-		background: url(/assets/arrows.png) no-repeat scroll -84px -35px transparent;
-		height: 130px;
-		position: absolute;
-		top: 110px;
-		left: -50px;
-		width: 50px;
-		cursor: pointer
-	}
-	
-	.jFlowPrev div:hover {
-		background-position: -84px -235px
-	}
-	
-	.jFlowNext div:hover {
-		background-position: 0 -235px
-	}*/
-
-
-
-
-/*
-	.slideShow {
-	    width: 900px;
-	    height: 420px;
-	    position: relative;
-	    overflow: hidden;
-	}
-	
-	.slides {
-	    margin: 0;
-	    list-style: none;
-	}
-	
-	.pager {
-	    position: relative;
-	    top: 380px;
-	}*/
-	
 
 
 
@@ -1409,38 +1176,6 @@
     
 }
 
-/*.bar-article-header-spotlight span {
-    position: relative;
-    top: -26px;
-	color: #FFFFFF;	
-	font-family: KlavikaBold;
-	font-size: 12px;
-	padding-left: 10px;
-	clear: both;
-}
-
-.arrow-right-spotlight {
-	width: 0; 
-	height: 0; 
-	border-top: 0px solid transparent;
-	border-bottom: 30px solid transparent;
-	border-right: 30px solid #9DC786;
-}		
-
-.arrow-right-idea {
-	width: 0; 
-	height: 0; 
-	border-top: 0px solid transparent;
-	border-bottom: 30px solid transparent;
-	border-right: 30px solid #F7CE00;
-}		*/
-
-
-
-
-
-
-
 
 
 
@@ -1450,6 +1185,9 @@
 }
 .blog {/* brown */
 	border-top: 30px solid #AD4B05;
+}
+.coffee_chat { /*coffee brown*/
+	border-top: 30px solid #634E3F;	
 }
 .industry_news_orange {/* orange */
 	border-top: 30px solid #F6861F
@@ -1512,6 +1250,9 @@
 .blog_catbox {/* brown */
 	border-top: 27px solid #AD4B05;
 }
+.coffee_chat_catbox {/* coffee brown */
+	border-top: 27px solid #634E3F;
+}
 .industry_news_catbox_orange {/* orange */
 	border-top: 27px solid #F6861F
 }
@@ -1573,6 +1314,9 @@
 }
 .bg-blog {/* brown */
 	background-color: #AD4B05 !important
+}
+.bg-coffee-chat {/* coffee brown */
+	background-color: #634E3F !important
 }
 .bg-industry-news {/* orange */
 	background-color: #F6861F !important
@@ -1663,6 +1407,9 @@
 .line-blog {/* brown */
 	border-top: #AD4B05 5px solid !important
 }
+.line-coffee-chat {/* coffee brown */
+	border-top: #634E3F 5px solid !important
+}
 .line-industry-news {/* orange */
 	border-top: #F6861F 5px solid !important
 }
@@ -1724,36 +1471,7 @@
 }
 
 
-/*.line-startup {
-	border-top: #F7CE00 5px solid !important
-}
-.line-grow {
-	border-top: #F6861F 5px solid !important
-}
-.line-lead {
-	border-top: #009CD8 5px solid !important
-}
-.line-innovate {
-	border-top: #9DC786 5px solid !important
-}
-.line-money {
-	border-top: #07017B 5px solid !important
-}
-.line-people {
-	border-top: #FB433A 5px solid !important
-}
-.line-video {
-	border-top: #000000 5px solid !important
-}
-.line-sponsor {
-	border-top: #9fa5a3 5px solid !important
-}
-.line-default {
-	border-top: #000000 5px solid !important
-}
-.line-outbrain {
-	border-top: #3b4143 5px solid !important
-}*/
+
 
 
 
@@ -1850,11 +1568,12 @@ a:hover {
 
 
 
-body {
+/*body {
 	position: relative;
 	margin: 0px;
 	font-family: KlavikaRegular, Helvetica, Arial, san-serif;
-}
+}*/
+
 
 h3 {
 	font-family: KlavikaMedium;
@@ -1884,18 +1603,6 @@ h3 {
 	clear: both;
 	width: 970px;
 }
-
-/*#masthead.mastheadNormal .inner {
-	width: 970px;
-	position: relative;
-	margin: 0 auto
-}
-#masthead.mastheadVideo .inner {
-	width: 970px;
-	position: relative;
-	margin: 0 auto
-}*/
-
 
 
 .container-home {
@@ -1975,10 +1682,6 @@ bodykopy ol, #bodykopy ul {
 	float: left;
 	width: 100%
 }
-/*#maincolumn.maincolumnnofloat {
-	float: none;
-	clear: both
-}*/
 
 #mainkolumn.withsidebar {
 	width: 639px
@@ -1989,77 +1692,6 @@ bodykopy ol, #bodykopy ul {
 	margin-left: 29px
 }
 
-/*body.smallformat #sidebar {
-	margin-top: 20px
-}*/
-
-/*div #sidebar_inner div.events-calendar {
-	background: url(http://images.inc.com/images/orange-calendar-background.gif) repeat;
-	padding: 28px 25px;
-	margin-bottom: 15px
-}
-div #sidebar_inner div.events-calendar div.calendarinner {
-	background: #ffffff;
-	padding: 12px 20px;
-	font-family: arial, helvetica, sans-serif
-}
-div #sidebar_inner div.events-calendar div.calendarinner h3.month {
-	font-family: georgia, times, serif;
-	font-size: 18px;
-	line-height: 19px;
-	font-weight: normal;
-	text-align: center;
-	margin: 0 0 10px
-}
-div #sidebar_inner div.events-calendar div.calendarinner p.date {
-	float: left;
-	text-align: right;
-	margin: 4px 10px 4px 0;
-	width: 50px;
-	font-size: 12px !important;
-	line-height: 15px !important
-}
-div #sidebar_inner div.events-calendar div.calendarinner p.event-details {
-	float: right;
-	text-align: left;
-	width: 210px;
-	font-size: 12px !important;
-	line-height: 15px !important;
-	margin: 4px 0
-}
-div #sidebar_inner div.partner_box {
-	margin-bottom: 15px;
-	padding-left: 12px;
-	padding-right: 12px;
-	padding-bottom: 12px;
-	background-color: #F0F0F0;
-	border: 1px solid #E5E5E5;
-	color: #B4B4B4;
-	margin-top: 5px;
-	position: relative;
-	text-align: center
-}
-div #sidebar_inner div.partner_box p.title {
-	font-family: arial, helvetica, sans-serif;
-	font-size: 8px;
-	margin: 2px;
-	color: #B4B4B4;
-	text-align: center;
-	text-transform: uppercase
-}
-div #sidebar_inner div.partner_box div.partner_content {
-	width: 338px;
-	padding-bottom: 10px;
-	background-color: #ffffff
-}
-div #sidebar_inner div.partner_box div.partner_content p {
-	font-family: arial, helvetica, sans-serif;
-	font-size: 14px;
-	line-height: 19px;
-	margin: 10px 10px 0 27px;
-	color: #111111;
-	text-align: left
-}*/
 
 
 
@@ -2187,17 +1819,17 @@ h1#k-headline {
 
 
 
-.fluidrow .psubfeature {
+.rowfluid .psubfeature {
 	width: 33%;
 	height: 200px;
 	display: inline-block;
 	position: relative;
 	vertical-align: top
 }
-.fluidrow .psubfeature .innerpcell-subfeature {
+.rowfluid .psubfeature .innerpcell-subfeature {
 	margin-right: 61px
 }
-.fluidrow .psubfeature .h1 {
+.rowfluid .psubfeature .h1 {
 	font-size: 9pt;
 	font-family: KlavikaMedium;
 	text-transform: uppercase;
@@ -2209,7 +1841,7 @@ h1#k-headline {
 	display: inline;
 	line-height: 22pt
 }
-.fluidrow .psubfeature .h1-channel {
+.rowfluid .psubfeature .h1-channel {
 	font-size: 9pt;
 	font-family: KlavikaLight;
 	text-transform: uppercase;
@@ -2218,7 +1850,7 @@ h1#k-headline {
 	display: inline;
 	line-height: 22pt
 }
-.fluidrow .psubfeature .h1 a {
+.rowfluid .psubfeature .h1 a {
 	color: white
 }
 #front-page-item .h1 {
@@ -2228,7 +1860,7 @@ h1#k-headline {
 	color: #000000;
 	margin-right: 1em
 }
-.fluidrow .psubfeature .h2 {
+.rowfluid .psubfeature .h2 {
 	font-size: 20pt;
 	font-family: KlavikaBlack;
 	margin-top: 18px;
@@ -2236,11 +1868,11 @@ h1#k-headline {
 	overflow: visible;
 	margin-bottom: 5px
 }
-.fluidrow .psubfeature .h2 a {
+.rowfluid .psubfeature .h2 a {
 	color: #000000;
 	text-decoration: none
 }
-.fluidrow .psubfeature #article-share {
+.rowfluid .psubfeature #article-share {
 	width: 100%
 }
 
@@ -2290,7 +1922,7 @@ body.page .kk-headlines .h1 {
 
 
 
-	@font-face {
+	/*@font-face {
 	  	font-family: 'msyhb';
 	  	src: url('/assets/msyhb.eot');	  
 	  	src: url('/assets/msyhb.ttf') format('truetype');
@@ -2418,7 +2050,19 @@ body.page .kk-headlines .h1 {
 	nav ul ul ul {
 		position: absolute;
 		left: 100%; top:0;
-	}
+	}*/
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -2610,17 +2254,17 @@ body.channel h1 {
 	font-family: KlavikaBlack;
 	margin: 0px
 }
-.fluidrow .psubfeature {
+.rowfluid .psubfeature {
 	width: 33%;
 	height: 200px;
 	display: inline-block;
 	position: relative;
 	vertical-align: top
 }
-.fluidrow .psubfeature .innerpcell-subfeature {
+.rowfluid .psubfeature .innerpcell-subfeature {
 	margin-right: 61px
 }
-.fluidrow .psubfeature .h1 {
+.rowfluid .psubfeature .h1 {
 	font-size: 9pt;
 	font-family: KlavikaMedium;
 	text-transform: uppercase;
@@ -2632,7 +2276,7 @@ body.channel h1 {
 	display: inline;
 	line-height: 22pt
 }
-.fluidrow .psubfeature .h1-channel {
+.rowfluid .psubfeature .h1-channel {
 	font-size: 9pt;
 	font-family: KlavikaLight;
 	text-transform: uppercase;
@@ -2641,10 +2285,10 @@ body.channel h1 {
 	display: inline;
 	line-height: 22pt
 }
-.fluidrow .psubfeature .h1 a {
+.rowfluid .psubfeature .h1 a {
 	color: white
 }
-.fluidrow .psubfeature .h2 {
+.rowfluid .psubfeature .h2 {
 	font-size: 20pt;
 	font-family: KlavikaBlack;
 	margin-top: 18px;
@@ -2652,11 +2296,11 @@ body.channel h1 {
 	overflow: visible;
 	margin-bottom: 5px
 }
-.fluidrow .psubfeature .h2 a {
+.rowfluid .psubfeature .h2 a {
 	color: #000000;
 	text-decoration: none
 }
-.fluidrow .psubfeature #article-share {
+.rowfluid .psubfeature #article-share {
 	width: 100%
 }
 body {

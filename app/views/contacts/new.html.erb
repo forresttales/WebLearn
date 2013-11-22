@@ -20,9 +20,13 @@
 		
 		/*background-color: #D5E8D8;*/
 				
-		background-color: #4F5C4F;
+		/*background-color: #4F5C4F;*/		
 		
-
+		background-color: rgba(4, 26, 4, 0.96);
+		
+		
+				
+		
 		/*background-color:rgba(86, 133, 78, 0.75);*/
 		
 		/*-moz-box-shadow:5px 5px 40px #fff;
@@ -189,24 +193,26 @@
 					
 	<div id="join_image">
 				
-	<header>					
-    	     	
-    	<div>
-    		
-    		<%= render 'layouts/flash_alert' %>
-    		
+				
+		<header>		
+								
+			<%= render 'share/backtotop' %>
+			
+	    	<%= render 'layouts/flash_alert' %>
+	    	
 			<div class="table-main">			
 				<div class="row">
 					<div class="cell-250">
 						<div class="table-main">
 							<div class="row">
 								<div class="cell-250" style="padding-left: 24px;">
-						  			<%= image_tag("../repository/image_learning_counsel.png", :alt => '') %>
+						  			<img src="../repository/logo-words-1.png" alt="logo-words-1.png" >
 						  		</div>
 							</div>
 							<div class="row">
 								<div class="cell-125" style="padding-left: 24px;">
-									<p style="font-family: msyh; font-size: 12px;">News and Context for the<br>Shift to Digital Curriculum</p>
+									<!-- <p style="font-family: msyh; font-size: 12px;">Research and Context for the<br>Shift to Digital Curriculum</p> -->									
+									
 						  		</div>
 							</div>							
 						</div>
@@ -215,9 +221,13 @@
 						<div class="table-main">
 							<div class="row">
 								<div class="cell-650">
-									<div id="main_header_adblock_1">									
+									
+									<img src="../repository/banner-1.png" alt="banner-1.png" width="630px" >
+									
+									<!-- <div id="main_header_adblock_1">									
 										<h3>Space Available</h3>
-									</div>					
+									</div> -->									
+														
 								</div>			
 							</div>							
 						</div>
@@ -228,25 +238,24 @@
 								<div class="cell-100percent">
 				 						<!-- link_to image_tag(“/assets/EdMatchUp_logo.png”, :class=>’′), :url =>{:controller=> ‘’,:action=>’’} -->															
 									<div id="edmatchuplogo">
-										<%= link_to image_tag("../repository/EdMatchUp_logo.png"), edmatchup_path %>															
+										<%= link_to image_tag("../repository/EdMatchUp_logo.png", :alt => 'EdMatchUp_logo.png'), edmatchups_path %>															
 									</div>							
 						  		</div>
 							</div>
 							<div class="row">
 								<div class="cell-100percent">
 									<div align="center">
-										<%= link_to image_tag("../repository/image_coming_soon_8k.png", :alt => 'Comming Soon'), edmatchup_path %>															
+										<%= link_to image_tag("../repository/image_coming_soon_8k.png", :alt => 'image_coming_soon_8k.png'), edmatchups_path %>															
 									</div>							
 						  		</div>							
 							</div>
 						</div>
 					</div>
-				</div>
+				</div>					
 			</div>	
-			
-		</div>	
-		
-	</header>		
+		 					
+		</header>		
+				
 	
 	<section>
 
@@ -256,6 +265,17 @@
 
 			<div id="mainkolumn" class="withsidebar">
 	
+				<div>			
+					<h2 style="font-family: msyh; color: #26B821;">
+						Please call us: (888) 611-7709
+					</h2>
+				</div>
+
+				<div>			
+					<h2 style="font-family: msyh; color: #26B821;">
+						or
+					</h2>
+				</div>
 	
 				<div>			
 					<h2 style="font-family: msyh; color: #26B821;">
@@ -514,7 +534,6 @@
 		}
 
 		$(document).ready(function(){
-			//alert('ready');
 			loadContact();
 			formValidate();
 		});
