@@ -372,6 +372,9 @@
 		box-shadow: 1px 1px 10px #888888;
 	}
 
+	div .shadow-inset {
+		box-shadow: 1px 1px 10px #888888 inset;
+	}
 
 	div .content {
 		background-color: white;
@@ -815,11 +818,63 @@
 		
 		background-color: inherit;
 				
-		color: #D0D618;
+		/*color: #7FD1FA;*/		
+		
+		color: #3A8EC9;
 		
 		font-family: msyh;
 		font-size: 16px;
 		width: 308px;
+		height: 30px;
+		border-style:solid;
+		border-radius: 6px;
+		border-color: #005C9E;
+		border-width: 2px;
+		
+		-webkit-transition: all 0.5s ease-in-out;
+		-moz-transition: all 0.5s ease-in-out;
+		-o-transition: all 0.5s ease-in-out;
+		-ms-transition: all 0.5s ease-in-out;
+		transition: all 0.5s ease-in-out;		
+	}
+		
+	.submitcontact.btn:focus {
+		border-color: #47FFFF;
+		
+		color: #18C9C9;
+				
+		-webkit-box-shadow: 0 0 25px #ccc;
+		-moz-box-shadow: 0 0 25px #ccc;
+		box-shadow: 0 0 25px #ccc;
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		transform: scale(1.05)
+	}
+
+	.submitreg.btn {
+		/*background-color: white;*/
+				
+		/*background-color:rgba(86, 133, 78, 0.8);*/
+		
+		background-color: inherit;
+				
+		color: #D0D618;
+		
+		font-family: msyh;
+		font-size: 16px;
+		width: 310px;
 		height: 30px;
 		border-style:solid;
 		border-radius: 6px;
@@ -833,7 +888,7 @@
 		transition: all 0.5s ease-in-out;		
 	}
 		
-	.submitcontact.btn:focus {
+	.submitreg.btn:focus {
 		border-color: #97FF47;
 		
 		color: #2AF707;
@@ -857,7 +912,6 @@
 		-ms-transform: scale(1.05);
 		transform: scale(1.05)
 	}
-
 
 	::-webkit-input-placeholder { /* WebKit browsers */
 	    color:    #ccc;
@@ -2390,4 +2444,41 @@ h3 {
 		position: relative;
 		margin-left: 44%;
 		margin-top: 8%;
+	}
+
+
+	.link-back {
+		color: #C4740C; /*#9C5800;*/
+		font-size: 16px;
+		font-family: KlavikaMedium;		
+	}
+	.linkback {
+		margin-left: 50px;		
+	}
+
+	#privacy-format {
+		color: #000;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+	#privacy-format strong {
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: bold;
+	}
+	#privacy-format ul li {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 16px;
+		font-weight: 800;
+	}
+	#privacy-format .privacy-title {
+		color: #010157;
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: bold;		
+		font-size: 22px;
+	}
+	#privacy-format blockquote {
+		font-weight: 800;
+	}
+	#privacy-format em {
+		color: #666;
+		font-weight: 400;
 	}

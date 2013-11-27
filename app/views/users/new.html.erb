@@ -30,8 +30,11 @@
 		width: 620px;
 		height: auto;
 					
-		display: block;
+		display: none;
 		
+		/*visibility: hidden;*/
+		
+						
 		/*background-color:rgba(86, 133, 78, 0.97);*/
 		
 		
@@ -59,7 +62,7 @@
    		
 		position: absolute;
 		text-align: center;			
-		top: 350px;			
+		top: 250px;			
 		padding-top: 30px;	   			   	
 		padding-bottom: 30px;	
 	}
@@ -232,76 +235,39 @@
 	}
 		
 		
+	#join-image {
+		height: 500px;
+	}
+		
 	</style>					
 					
 					
 					
 					
-	<div id="join_image">
-				
+	<!-- <div id="join_image" style="background: #F1F2E1 repeat right top"> -->
+
+<div style="width: 1200px; margin-right: auto; margin-left: auto; background: #fff;">
+		
+						
 	<header>					
     	     	
-    	<div class="shadow" style="position: relative; z-index: +2;">
+    	<!-- <div class="shadow" style="position: relative; z-index: +2;"> -->    		
     		
-    		<%= render 'layouts/flash_alert' %>
-    		
-			<div class="table-main">			
-				<div class="row">
-					<div class="cell-250">
-						<div class="table-main">
-							<div class="row">
-								<div class="cell-250" style="padding-left: 24px;">
-						  			<img src="../repository/image_learning_counsel.png" alt="image_learning_counsel.png" >
-						  		</div>
-							</div>
-							<div class="row">
-								<div class="cell-125" style="padding-left: 24px;">
-									<p style="font-family: msyh; font-size: 12px;">Research and Context for the<br>Shift to Digital Curriculum</p>
-						  		</div>
-							</div>							
-						</div>
-					</div>
-					<div class="cell-650">
-						<div class="table-main">
-							<div class="row">
-								<div class="cell-650">
-									
-									<img src="../repository/banner-1.png" alt="banner-1.png" width="630px" >
-									
-									<!-- <div id="main_header_adblock_1">									
-										<h3>Space Available</h3>
-									</div> -->									
-														
-								</div>			
-							</div>							
-						</div>
-					</div>
-					<div class="cell-100%">
-						<div class="table-main">
-							<div class="row">
-								<div class="cell-100percent">
-				 						<!-- link_to image_tag(“/assets/EdMatchUp_logo.png”, :class=>’′), :url =>{:controller=> ‘’,:action=>’’} -->															
-									<div id="edmatchuplogo">
-										<%= link_to image_tag("../repository/EdMatchUp_logo.png", :alt => 'EdMatchUp_logo.png'), '#' %>															
-									</div>							
-						  		</div>
-							</div>
-							<div class="row">
-								<div class="cell-100percent">
-									<div align="center">
-										<%= link_to image_tag("../repository/image_coming_soon_8k.png", :alt => 'image_coming_soon_8k.png'), '#' %>															
-									</div>							
-						  		</div>							
-							</div>
-						</div>
-					</div>
-				</div>					
-			</div>	
 			
 			<!-- <div style="height: 60px;"> -->
 								
-			<div class="table-white" style="height: 70px;">
-				<div class="row">
+			<div class="table-white">
+
+				<div class="row" style="height: 50px;">
+					<div class="cell-100percent">
+						<div id="errorContainer">
+						    <!-- <p>Please correct the following errors and try again:</p> -->						    
+						    
+						</div>		
+					</div>
+				</div>				
+				
+				<div class="row" style="height: 50px;">
 					<div class="cell-100percent" style="padding: 4px 0px 0px 40px;">
 						<h2 style="font-family: msyh; color: #26B821;">Join our eNewsletter, get invitations to events, and get<br >
 							the first peek at EdMatchUp with Beta in 2014 !</h2>
@@ -313,39 +279,40 @@
 						<button class="btn blue small">Cancel</button>
 					</p> -->											
 				</div>
-				<div class="row">
-					<!-- <div align="right" style="margin-right: 6px; margin-bottom: 6px;">
-						<button href="users/create" id="btn3" class="btn blue small">Create Account</button>
-						<button id="btn1" class="btn blue small">Join</button>
-						<button id="btn2" class="btn blue small">Cancel</button>						
-					</div> -->					
-					
+
+				<div class="row" style="height: 30px;">
 				</div>
 				
-				<!-- <div class="row">
-					<div class="cell-100percent">
-						<div id="errorContainer">
-						    <p>Please correct the following errors and try again:</p>
-						    <ul />
-						</div>		
-					</div>
-				</div> -->				
-				
 			</div>
-		</div>	
-		
-		
-		<div id="loading"> </div>
+			
+			
+		<!-- </div>	 -->
 				
+		
+		<!-- <div id="loading"> </div> -->
+		
+						
 	</header>		
 	
+</div>
+
+
+<div style="width: 1200px; margin-right: auto; margin-left: auto; height: 100px;">
+	
 	<section>
+
+	<div id="join-image" class="shadow-inset">
 
 		
 		<div id="form_signin" class="form-signin">
 			
-			<a id="joinClose" class="btn-joinClose" onclick="hideSignin();"><img src="/assets/submit_form_close.png" width="20" alt="" /></a>
- 			
+			<!-- <a id="joinClose" class="btn-joinClose" onclick="hideSignin();"><img src="/assets/submit_form_close.png" width="20" alt="" /></a> --> 			
+
+
+			<a id="joinClose" class="btn-joinClose" onclick=""><img src="/assets/submit_form_close.png" width="20" alt="" /></a>
+
+
+
  			
     		  <!-- form_for(@user, :id => "join_form", :url => {:controller => "users", :action => "create"}) do |f|  -->
     		      		     		
@@ -504,54 +471,72 @@
 		
 		<% end %>
 
-
-			<!-- <div class="space-150"></div> -->
-				
 		</div>		
 			
 
 
-		<div id="mainpage" class="shadow" style="background-color: #fff; height: 500px; position: relative; z-index: +1;"></div>
+		<!-- <div id="mainpage" class="shadow" style="background-color: #fff; height: 500px; position: relative; z-index: +1;"></div> -->
 
-
-
+		<!-- <div id="mainpage" class="shadow" style="background-color: #fff; height: 50px; position: relative; top: 550px; z-index: +1;"></div> -->
+				
+	
+	
+	</div>
+	
 	</section>
 	
 </div>
 
 
+<div style="height: 500px;"></div>
+
+
+
 
 	<script>
-	
+
 		function showSignin() {
 	
-			var a = $("#mainpage");
-			var b = $("#mainfooter");
-		
-			a.animate({
-				"top": "+=500px"
-			}, 1000, function(){ loadSignin(); });
-		
-			b.animate({
-				"top": "+=500px"
-			}, 1000);
-		}
-		
-		function hideSignin() {
-		
-			disableSignin();
+			$("#form_signin").fadeIn(1000);
+
+			// $("#form_signin").css({
+				// 'visibility': 'visible'
+			// }, function(){ fadeIn("slow"); });
+
+
+			loadSignin();
 			
-			var a = $("#mainpage");
-			var b = $("#mainfooter");
-		
-			a.animate({
-				"top": "-=500px"
-			}, 1000);
-			
-			b.animate({
-				"top": "-=500px"
-			}, 1000);
 		}
+	
+		// function showSignin() {
+// 	
+			// var a = $("#mainpage");
+			// var b = $("#mainfooter");
+// 		
+			// a.animate({
+				// "top": "+=50px"
+			// }, 1000, function(){ loadSignin(); });
+// 		
+			// b.animate({
+				// "top": "+=50px"
+			// }, 1000);
+		// }
+// 		
+		// function hideSignin() {
+// 		
+			// disableSignin();
+// 			
+			// var a = $("#mainpage");
+			// var b = $("#mainfooter");
+// 		
+			// a.animate({
+				// "top": "-=50px"
+			// }, 1000);
+// 			
+			// b.animate({
+				// "top": "-=50px"
+			// }, 1000);
+		// }
 
 		function loadSignin() {
 			glowBoxGold();
@@ -562,7 +547,7 @@
 				glowBoxBlack();
 			}, 2500);
 			
-			setTimeout( function(){$("#user_name_first").focus();}, 1500);
+			setTimeout( function(){$("#user_name_first").focus();}, 1000);
 		}
 		
 		function disableSignin() {
@@ -750,18 +735,19 @@
 			img = $('<img />');
 			
 			img.bind('load', function() {
-			    $('#loading').fadeOut(1000);
+				
+			    // $('#loading').fadeOut(1000);
 
 				setTimeout( function(){
 					centerSignin();
 					showSignin();
 					formValidate();
-				}, 1000);
+				}, 500);
 			});
  			
 			img.attr('src', image);
  			
-			$('#join_image').css({
+			$('#join-image').css({
 				//background: '#F1F2E1 url(' + image + ') no-repeat right top'
 				background: '#F1F2E1 url(' + image + ') repeat right top'
 				
@@ -771,7 +757,7 @@
 			    // $('#loading').fadeOut(2000);
 			// });
 				
-			$("#form_signin").fadeOut();
+			// $("#form_signin").fadeOut();
 			
 		});
 	

@@ -4,7 +4,6 @@
 #
 #  id           :integer          not null, primary key
 #  article_id   :integer
-#  type         :string(100)
 #  name_url     :string(100)
 #  name_file    :string(50)
 #  name_author  :string(50)
@@ -13,6 +12,7 @@
 #  date_article :date
 #  created_at   :datetime
 #  updated_at   :datetime
+#  article_type :string(20)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html

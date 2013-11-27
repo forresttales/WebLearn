@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131110005628) do
+ActiveRecord::Schema.define(version: 20131125165105) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -106,6 +106,52 @@ ActiveRecord::Schema.define(version: 20131110005628) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+  end
+
+  create_table "reg_communs", force: true do |t|
+    t.string   "name_first",            limit: 50
+    t.string   "name_last",             limit: 50
+    t.string   "name_title",            limit: 50
+    t.string   "name_affiliation",      limit: 100
+    t.string   "public_private",        limit: 10
+    t.string   "address",               limit: 100
+    t.string   "city",                  limit: 50
+    t.string   "state",                 limit: 50
+    t.string   "zip",                   limit: 10
+    t.string   "phone",                 limit: 50
+    t.string   "email",                             default: "", null: false
+    t.string   "level",                 limit: 50
+    t.string   "institution_size",      limit: 50
+    t.string   "characterize_decision", limit: 50
+    t.text     "characterize_area"
+    t.text     "survey_preferences"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reg_events", force: true do |t|
+    t.string   "name_first",       limit: 50
+    t.string   "name_last",        limit: 50
+    t.string   "name_title",       limit: 50
+    t.string   "type_affiliation", limit: 50
+    t.string   "name_affiliation", limit: 100
+    t.string   "address",          limit: 100
+    t.string   "city",             limit: 50
+    t.string   "state",            limit: 50
+    t.string   "zip",              limit: 10
+    t.string   "phone",            limit: 50
+    t.string   "email",                        default: "", null: false
+    t.string   "city_workshop",    limit: 50
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reg_letters", force: true do |t|
+    t.string   "email",                        default: "", null: false
+    t.string   "name_title",       limit: 50
+    t.string   "name_affiliation", limit: 100
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "students", force: true do |t|

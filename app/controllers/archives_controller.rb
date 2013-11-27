@@ -1,6 +1,6 @@
 class ArchivesController < ApplicationController
   
-  layout 'application'
+  layout 'archive'
   
   def index
   end

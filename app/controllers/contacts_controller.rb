@@ -7,7 +7,7 @@ class ContactsController < ApplicationController
   end
   
   def index
-    
+      redirect_to '/index'    
   end
   
   def new
@@ -22,11 +22,18 @@ class ContactsController < ApplicationController
     @contact = Contact.new(params[:contact])
 
     if @contact.save
-      @saved_id = @contact.id
-      flash[:notice] = 'Message sent'
-      #redirect_to(:action => 'show', :saved_id => @contact.id)
+
+      #@saved_id = @contact.id
+      
+      session[:contact_saved] = true
+      
+      # mail = RegLetterMailer.welcome_email(@reg_letter)
+      # mail.deliver
+      
     else
-      flash[:notice] = 'Unable to send message'
+      
+      session[:contact_saved] = nil
+      
     end
     
   end

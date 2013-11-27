@@ -14,6 +14,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log 
 /tmp
+/test
 /public/repository
 /public/journal
 /public/fonts
@@ -21,7 +22,8 @@
 /public/assets
 /public/journalscripts
 /public/pdfs
-
+/config/locales/database.yml
+/config/environments/production.rb
 
 
 

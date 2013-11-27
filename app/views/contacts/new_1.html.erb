@@ -1,0 +1,547 @@
+<% provide(:title, 'Contact') %>
+		    
+	<!-- form_for(:contact,:url => {:action => 'create'}) do |f|  -->		    
+    
+	<script src="/assets/jquery.validate.js"></script>
+
+	<style>
+		
+	/* -- input form -- */
+	
+	
+	#form-message {
+		
+		width: 600px;
+		height: auto;
+					
+		display: block;
+		
+		/*background-color:rgba(86, 133, 78, 0.97);*/		
+		
+		/*background-color: #D5E8D8;*/
+				
+		/*background-color: #4F5C4F;*/		
+		
+		background-color: rgba(4, 26, 4, 0.96);
+		
+		
+				
+		
+		/*background-color:rgba(86, 133, 78, 0.75);*/
+		
+		/*-moz-box-shadow:5px 5px 40px #fff;
+		-webkit-box-shadow:5px 40px 5px #fff;
+		box-shadow:5px 5px 40px #CCAE37;*/
+		
+	    /*box-shadow: 0 0 30px #CCAE37;*/
+	   		   		    
+	    transition: box-shadow 3s ease-in-out;				
+			
+		border-top-left-radius: 10px;
+   		border-top-right-radius: 10px;		
+		border-bottom-left-radius: 10px;
+   		border-bottom-right-radius: 10px;
+   		
+		position: relative;
+		
+		
+		/*text-align: center;			*/		
+		
+		padding-top: 30px;	   			   	
+		padding-bottom: 30px;	
+	}
+	
+	
+	/**:focus {
+		outline: none
+	}*/
+	
+	.input-form {
+		font-family: msyh;
+		font-size: 16px;
+		width: 300px;
+		height: 24px;
+		border-style:solid;
+		border-radius: 6px;
+		border-color: #13571F;
+		border-width: 2px;
+		padding-left: 6px;
+		
+		-webkit-transition: all 0.5s ease-in-out;
+		-moz-transition: all 0.5s ease-in-out;
+		-o-transition: all 0.5s ease-in-out;
+		-ms-transition: all 0.5s ease-in-out;
+		transition: all 0.5s ease-in-out;
+	}
+
+	.input-form:focus {
+		/*border-color: #97FF47;*/
+		
+		color: #fff;
+						
+		background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;						
+				
+		-webkit-box-shadow: 0 0 25px #ccc;
+		-moz-box-shadow: 0 0 25px #ccc;
+		box-shadow: 0 0 25px #ccc;
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		transform: scale(1.05);
+	}
+
+	div .error_label {
+	    display: none;
+		font-family: msyh;
+		font-size: 12px;
+		color: #851717;		    
+	}
+
+	div .errors {
+		font-family: msyh;
+		font-size: 11px;
+		color: #851717;		    			
+	}
+	
+	.input-label {
+		font-family: msyh;
+		font-size: 16px;
+		width: 220px;
+		height: 18px;
+	}
+
+	.success {
+		color: #ACDDE3;		
+		background: url("/assets/submit_form_tick.png") no-repeat 278px 5px;		
+	}		
+	
+	.error {
+		color: #851717;
+		background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;		
+		border-color: #851717; 						
+	}
+
+	.required {
+		color: orange;		
+		background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;		
+		
+		/*background: url("/assets/submit_form_asterisk_orange.png") no-repeat 218px 7px;*/		
+		
+	}
+	
+	.error-label {
+		color: #851717;
+	}
+
+	.required-label {
+		color: orange;		
+	}
+	
+	.input-form-spacer {
+		height: 8px;
+	}
+
+	.input-search-1 {
+		background-color: white;
+		color: black;
+		font-family: Arial;
+		width: 200px;
+	}
+		
+	.message {
+		height: 120px;
+	}
+		
+	div .cell-right-contact {
+		display: table-cell;
+		width: 50%;
+		text-align: left;
+		align: top;		
+	}
+
+	div .cell-left-contact {
+		display: table-cell;
+		width: 15%;	
+		align: top;
+		text-align: right;		
+		padding-right: 20px;
+	}
+	
+	div .cell-submit-contact {
+		display: table-cell;
+		width: 50%;
+		text-align: left;
+		align: top;		
+	}
+		
+	
+	</style>					
+					
+					
+					
+					
+	<div id="join_image">
+				
+				
+		<header>		
+								
+			<%= render 'share/backtotop' %>
+			
+	    	<%= render 'layouts/flash_alert' %>
+	    	
+			<div class="table-main">			
+				<div class="row">
+					<div class="cell-250">
+						<div class="table-main">
+							<div class="row">
+								<div class="cell-250" style="padding-left: 24px;">
+						  			<img src="../repository/logo-words-1.png" alt="logo-words-1.png" >
+						  		</div>
+							</div>
+							<div class="row">
+								<div class="cell-125" style="padding-left: 24px;">
+									<!-- <p style="font-family: msyh; font-size: 12px;">Research and Context for the<br>Shift to Digital Curriculum</p> -->									
+									
+						  		</div>
+							</div>							
+						</div>
+					</div>
+					<div class="cell-650">
+						<div class="table-main">
+							<div class="row">
+								<div class="cell-650">
+									
+									<img src="../repository/banner-1.png" alt="banner-1.png" width="630px" >
+									
+									<!-- <div id="main_header_adblock_1">									
+										<h3>Space Available</h3>
+									</div> -->									
+														
+								</div>			
+							</div>							
+						</div>
+					</div>
+					<div class="cell-100%">
+						<div class="table-main">
+							<div class="row">
+								<div class="cell-100percent">
+				 						<!-- link_to image_tag(“/assets/EdMatchUp_logo.png”, :class=>’′), :url =>{:controller=> ‘’,:action=>’’} -->															
+									<div id="edmatchuplogo">
+										<%= link_to image_tag("../repository/EdMatchUp_logo.png", :alt => 'EdMatchUp_logo.png'), edmatchups_path %>															
+									</div>							
+						  		</div>
+							</div>
+							<div class="row">
+								<div class="cell-100percent">
+									<div align="center">
+										<%= link_to image_tag("../repository/image_coming_soon_8k.png", :alt => 'image_coming_soon_8k.png'), edmatchups_path %>															
+									</div>							
+						  		</div>							
+							</div>
+						</div>
+					</div>
+				</div>					
+			</div>	
+		 					
+		</header>		
+				
+	
+	<section>
+
+		<div style="height: 140px;"></div>
+		
+		<div class="kontainer">
+
+			<div id="mainkolumn" class="withsidebar">
+	
+				<div>			
+					<h2 style="font-family: msyh; color: #26B821;">
+						Leave us a message
+					</h2>
+				</div>
+				
+				<div style="height: 20px;"></div>
+				
+				<div id="form-message">
+					
+					  <%= form_for @contact, :html => {:id => "form_join"} do |f| %> 
+					  			 
+					<!-- = render 'shared/error_messages', object: f.object -->
+					 <!-- hidden_field_tag :account_type, @account_type  -->
+					 	
+					<div class="errors">
+						<div class="row">
+							<div class="cell-left-contact" style="width: 190px;"></div>
+							<div class="cell-right-contact">
+								<p></p>
+							</div>
+						</div>
+					</div>			
+		
+		
+		
+					<div class="error_label">
+						<div class="row">
+							<div class="cell-left-contact" style="width: 190px;"></div>
+							<div class="cell-right-contact" style="width: 300px;">
+								<p id="error_contact_name"></p>
+							</div>
+						</div>
+					</div>			
+																				
+					<div class="row">
+						<div class="cell-left-contact">
+							<%= f.label(:name, "Name", :class => 'input-label required-label', :id => 'label_contact_name') %>
+						</div>
+						<div class="cell-right-contact">
+							 <%= f.text_field(:name, :class => "input-form required", :placeholder => 'Name' ) %>					 
+						</div>   
+					</div>      		
+			
+					<div class="input-form-spacer"></div>
+			
+					<div class="error_label">
+						<div class="row">
+							<div class="cell-left-contact" style="width: 190px;"></div>
+							<div class="cell-right-contact" style="width: 300px;">
+								<p id="error_contact_email"></p>
+							</div>
+						</div>
+					</div>
+		
+					<div class="row">
+						<div class="cell-left-contact">
+							<%= f.label(:email, "Email", :class => 'input-label required-label', :id => 'label_contact_email') %>
+						</div>
+						<div class="cell-right-contact">
+							<!-- <input type="email" id="email" name="email" placeholder="email@example.com" class="input-form" required /> -->					
+							<%= f.text_field(:email, :class => "input-form required", :placeholder => 'email@example' ) %>
+						</div>      	
+					</div>      		
+			
+					<div class="input-form-spacer"></div>
+		
+					<div class="error_label">
+						<div class="row">
+							<div class="cell-left-contact" style="width: 190px;"></div>
+							<div class="cell-right-contact" style="width: 300px;">
+								<p id="error_contact_subject"></p>
+							</div>
+						</div>
+					</div>			
+																				
+					<div class="row">
+						<div class="cell-left-contact">
+							<%= f.label(:subject, "Subject", :class => 'input-label required-label', :id => 'label_contact_subject') %>
+						</div>
+						<div class="cell-right-contact">
+							 <%= f.text_field(:subject, :class => "input-form required", :placeholder => 'Subject') %>					 
+						</div>   
+					</div>      		
+		
+					<div class="input-form-spacer"></div>
+		
+					<div class="error_label">
+						<div class="row">
+							<div class="cell-left-contact" style="width: 190px;"></div>
+							<div class="cell-right-contact" style="width: 300px;">
+								<p id="error_contact_message"></p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="cell-left-contact" style="vertical-align: top;">
+							<%= f.label(:message, "Message", :class => 'input-label required-label', :id => 'label_contact_message') %>
+						</div>
+						<div class="cell-right-contact">
+							<%= f.text_area(:message, :class => "input-form required message", :placeholder => 'Message' ) %>
+						</div>      	
+					</div>
+					
+					<div class="input-form-spacer"></div>
+					<div class="input-form-spacer"></div>
+					<div class="input-form-spacer"></div>
+	
+					<div class="row">
+						<div class="cell-left-contact">
+						</div>
+						<div class="cell-right-contact" style="padding-left: 0px;">
+							<%= f.submit "Submit", :class => 'btn submitcontact' %>
+						</div>      	
+					</div>      		
+		
+				<% end %>
+						
+				</div>		
+	
+				<br clear="all">
+
+				<div style="height: 20px;"></div>
+				
+				<div>			
+					<h2 style="font-family: msyh; color: #26B821;">
+						Learning Counsel, P.O. Box 1315 Fair Oaks, CA 95628						
+					</h2>
+				</div>
+
+				<div>			
+					<h2 style="font-family: msyh; color: #26B821;">
+						888-611-7709						
+					</h2>
+				</div>
+
+
+
+			</div>
+
+			<div id="k-sidebar">
+				<div id="k-sidebar_inner">
+					
+				</div>
+			</div>
+
+			<br clear="all">
+
+		</div>
+
+		
+		<div style="height: 400px;"></div>
+			
+	</section>
+	
+
+
+
+	<script>
+
+		function formValidate() {
+						
+			$("#form_join").validate({
+			
+				submitHandler: function(form) {
+					form.submit();
+				},
+			
+				debug: true,
+				onkeyup: false,
+				focusCleanup: true,
+				
+				rules: {
+					'contact[name]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 30						
+					},
+					'contact[email]': {
+						required: true,
+						maxlength: 40,
+						email: true
+					},
+					'contact[subject]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 50						
+					},
+					'contact[message]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 2000						
+					}
+				},
+				invalidHandler: function(event, validator) {
+					var errors = validator.numberOfInvalids();
+					if (errors) {
+						var message = errors == 1
+						? 'You missed 1 field'
+						: 'You missed ' + errors + ' fields';
+						$("div.errors p").html(message);
+						$("div.errors").show();
+					} else {
+						$("div.errors").hide();
+					}
+				},				
+				messages: {
+					'contact[name]': {
+						required: "Please enter your name",
+						maxlength: "First name exceeds 30 characters"							
+					},
+					'contact[email]': {
+						required: "Please enter an email address",
+						maxlength: "Email address exceeds 40 characters",
+						email: "Please enter a valid email address"
+					},
+					'contact[subject]': {
+						required: "Please enter a subject",
+						minlength: "Subject at least 1 character",
+						maxlength: "Subject exceeds 50 characters"
+					},
+					'contact[message]': {
+						required: "Please enter a message",
+						minlength: "Message at least 1 character",
+						maxlength: "Message exceeds 2000 characters"
+					}
+				},
+				errorContainer: $("div .error_label"),				
+				errorPlacement: function(error, element) {
+					error.insertAfter('#error_' + element.attr('id'));
+					$('#' + element.attr('id')).removeClass('required').removeClass('success').addClass('error');
+					//$('#label_' + element.attr('id')).removeClass('required-label').addClass('error-label');
+				},
+				// invalid: function(element) {
+					// $('#' + element.attr('id')).removeClass('required').removeClass('success').addClass('error');
+					// $('#label_' + element.attr('id')).removeClass('required-label').addClass('error-label');					
+				// },
+				// highlight: function(element) {
+					// $('#' + element.attr('id')).removeClass('required').removeClass('success').addClass('error');
+					// //$('#label_' + element.attr('id')).removeClass('required-label').addClass('error-label');
+				// },
+				// unhighlight: function(element) {
+					// //$('#' + element.attr('id')).removeClass('required').removeClass('success').addClass('error');
+					// //$('#label_' + element.attr('id')).removeClass('required-label').addClass('error-label');
+				// },
+				error: function(label) {
+					$('#' + label.attr('for')).removeClass('required').removeClass('success').addClass('error');
+					$('#label_' + label.attr('for')).removeClass('required-label').addClass('error-label');
+				},
+				success: function(label) {
+					$('#' + label.attr('for')).removeClass('required').removeClass('error').addClass('success');
+					$('#label_' + label.attr('for')).removeClass('error-label').addClass('required-label');
+				},				
+				focus: function(element) {
+				 	$('#' + element.attr('id')).removeClass('required').removeClass('error').removeClass('success').addClass('focus');
+				}
+			});
+			
+			$.validator.setDefaults({
+				
+				submitHandler: function() {
+					form.submit();
+				}
+			});
+		}
+
+		
+		function loadContact() {
+			setTimeout( function(){$("#contact_name").focus();}, 500);
+		}
+
+		$(document).ready(function(){
+			loadContact();
+			formValidate();
+		});
+	
+	</script>
+	
+	

@@ -579,7 +579,7 @@
 }
 .k-img {
 }
-.kol {
+.kol1 {
 	width: 955px;
 	position: relative;
 	display: inline-block;
@@ -594,7 +594,11 @@
 	position: relative;
 	display: inline-block;
 }
-
+.kol-619 {
+	width: 619px;
+	position: relative;
+	display: inline-block;
+}
 .ktop {
 	border-top: 1px solid #e5e5e5;
 }
@@ -721,16 +725,37 @@
 	text-decoration: underline;
 }
 .kbyline {
-	line-height: 20px;
+	line-height: 16px;
 	white-space: nowrap;
 	text-transform: uppercase;
 	font-family: KlavikaMedium, Arial, sans-serif;
 	font-size: 12px;
-	letter-spacing: 0px;
 }
 .kbyline:hover {
 	text-decoration: underline;
 }
+
+.kpaper-text-wrapper {
+	text-align: left;
+	display: inline-block;
+	margin-top: 20px;
+	margin-left: 20px;
+	vertical-align: top;
+}
+.kpaper-text {
+	font-size: 20px;
+	line-height: 20px;
+	color: #000;
+	font-family: KlavikaMedium, Arial, sans-serif;
+}
+.kpaper-text h2 {
+	font-size: 16px;
+	line-height: 20px;
+	color: #000;
+	font-family: KlavikaMedium, Arial, sans-serif;
+}
+
+
 
 
 

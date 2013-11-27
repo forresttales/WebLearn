@@ -1,102 +1,67 @@
-		<div style="width: 1200px; margin-right: auto; margin-left: auto; background: #fff;">
-	    
-		<header>		
-								
+
+<% provide(:title, 'Contact Confirmation') %>
+
+	<script type="text/javascript" src="/assets/entrepeneurs_jquery-1.js"></script>
+
+	<style type="text/css">
+										
+		@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
+											
+	</style>
+
+	<div style="width: 1200px; margin-right: auto; margin-left: auto; background: #fff;">
+
+		<header>				
+				
 			<%= render 'share/backtotop' %>
 			
-	    	<%= render 'layouts/flash_alert' %>
-	    	
-			<div class="table-main">			
-				<div class="row">
-					<div class="cell-250">
-						<div class="table-main">
-							<div class="row">
-								<div class="cell-250" style="padding-left: 24px;">
-						  			<img src="../repository/logo-words-1.png" alt="logo-words-1.png" >
-						  		</div>
-							</div>
-							<div class="row">
-								<div class="cell-125" style="padding-left: 24px;">
-									<!-- <p style="font-family: msyh; font-size: 12px;">Research and Context for the<br>Shift to Digital Curriculum</p> -->									
-									
-						  		</div>
-							</div>							
-						</div>
-					</div>
-					<div class="cell-650">
-						<div class="table-main">
-							<div class="row">
-								<div class="cell-650">
-									
-									<img src="../repository/banner-1.png" alt="banner-1.png" width="630px" >
-									
-									<!-- <div id="main_header_adblock_1">									
-										<h3>Space Available</h3>
-									</div> -->									
-														
-								</div>			
-							</div>							
-						</div>
-					</div>
-					<div class="cell-100%">
-						<div class="table-main">
-							<div class="row">
-								<div class="cell-100percent">
-				 						<!-- link_to image_tag(“/assets/EdMatchUp_logo.png”, :class=>’′), :url =>{:controller=> ‘’,:action=>’’} -->															
-									<div id="edmatchuplogo">
-										<%= link_to image_tag("../repository/EdMatchUp_logo.png", :alt => 'EdMatchUp_logo.png'), edmatchups_path %>															
-									</div>							
-						  		</div>
-							</div>
-							<div class="row">
-								<div class="cell-100percent">
-									<div align="center">
-										<%= link_to image_tag("../repository/image_coming_soon_8k.png", :alt => 'image_coming_soon_8k.png'), edmatchups_path %>															
-									</div>							
-						  		</div>							
-							</div>
-						</div>
-					</div>
-				</div>					
-			</div>	
-		 					
 		</header>		
-
-
-	<section>
-
-		<div style="height: 140px;"></div>
 		
-		<div class="kontainer">
-
-			<div id="mainkolumn" class="withsidebar">
-	
-	
-				<div>			
-					<h2 style="font-family: msyh; color: #26B821;">
-						Message sent
-					</h2>
-				</div>
-				
-				<div style="height: 20px;"></div>
-				
-
-			</div>
-
-			<div id="k-sidebar">
-				<div id="k-sidebar_inner">
-					
-				</div>
-			</div>
-
-			<br clear="all">
-
-		</div>
-
-		
-		<div style="height: 400px;"></div>
+		<section>
 			
-	</section>
+			<div class="linkback">
+				<%= link_to '&laquo;'.html_safe + 'Home', '/index', :class => "link-back" %>
+			</div>
+			
+			<div class="kontainer">
+				
+				<div class="kontainer-space-1"></div>
+				
+					<div id="mainkolumn" class="withsidebar">
+						<div id="k-articlecontent">
+								
+							<bodycopy id="bodykopy">
+
+								<% if session[:contact_saved] %>
+									<%= render 'share/contact_success'%>
+								<% else %>
+									<%= render 'share/contact_failure'%>
+								<% end %>
+																
+							</bodycopy>
+							
+								
+						</div>
+						
+						<br clear="all">
+						
+					</div>
+	
+					<div id="k-sidebar">
+						<div id="k-sidebar_inner">
+
+							
+						</div>
+					</div>
+
+					<br clear="all">
+			
+				<div style="height: 700px;"></div>
+					
+			</div>
+			
+		</section>
+
+	</div>
 
 
-		</div>

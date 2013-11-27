@@ -1,6 +1,22 @@
 Weblearn::Application.routes.draw do
    
 
+  get "reg_communs/index"
+  get "reg_communs/new"
+  get "reg_communs/create"
+  get "reg_communs/show"
+  get "reg_communitys/index"
+  get "reg_communitys/new"
+  get "reg_communitys/create"
+  get "reg_communitys/show"
+  get "reg_events/index"
+  get "reg_events/new"
+  get "reg_events/create"
+  get "reg_events/show"
+  get "reg_letters/index"
+  get "reg_letters/new"
+  get "reg_letters/create"
+  get "reg_letters/show"
   get "archives/index"
   get "archives/new"
   get "archives/show"
@@ -163,15 +179,16 @@ Weblearn::Application.routes.draw do
   match '/signout', to: 'sessions#destroy', via: 'delete'
 
   match '/index', to: 'static_pages#index', via: 'get'
-  #match '/help', to: 'static_pages#help', via: 'get'
+  match '/privacy', to: 'static_pages#privacy', via: 'get'
   match '/about', to: 'static_pages#about', via: 'get'
   #match '/contact', to: 'static_pages#contact', via: 'get'
-  #match '/edmatchup', to: 'static_pages#edmatchup', via: 'get'
+  match '/edmatchup', to: 'static_pages#edmatchup', via: 'get'
   match '/events', to: 'static_pages#events', via: 'get'
   match '/papers', to: 'static_pages#papers', via: 'get'
   match '/reports', to: 'static_pages#reports', via: 'get'  
   #match '/articles', to: 'static_pages#articles', via: 'get'
   match '/sponsor', to: 'static_pages#sponsor', via: 'get'
+
   
   #match '/ARTICLES-5-LeiLani-How-Big', to: 'public#ARTICLES-5-LeiLani-How-Big', via: 'get'
   
@@ -282,6 +299,9 @@ Weblearn::Application.routes.draw do
   resources :static_pages
   resources :contacts
   resources :edmatchups
+  resources :reg_letters
+  resources :reg_events
+  resources :reg_communs
   
 
   match '/about', to: 'users#about', via: 'get'
