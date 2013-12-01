@@ -1,5 +1,5 @@
 
-<% provide(:title, 'News Letter') %>
+<% provide(:title, 'News Letter Confirmation') %>
 
 	<script type="text/javascript" src="/assets/entrepeneurs_jquery-1.js"></script>
 
@@ -33,9 +33,9 @@
 							<bodycopy id="bodykopy">
 
 								<% if session[:reg_letter_saved] %>
-									<%= render 'share/reg_letter_success'%>
+									<%= render 'reg_letter_success'%>
 								<% else %>
-									<%= render 'share/reg_letter_failure'%>
+									<%= render 'reg_letter_failure'%>
 								<% end %>
 																
 							</bodycopy>

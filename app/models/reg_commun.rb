@@ -24,4 +24,9 @@
 #
 
 class RegCommun < ActiveRecord::Base
+  
+  attr_accessible :id, :name_first, :name_last, :name_title, :name_affiliation, :public_private, 
+                  :address, :city, :state, :zip, :phone, :email, :level, :institution_size,
+                  :characterize_decision, :characterize_area, :survey_preferences, :city_workshop, :created_at, :updated_at
+  
 end

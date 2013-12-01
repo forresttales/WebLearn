@@ -224,7 +224,7 @@
 	}
 	
 	.input-form-spacer {
-		height: 8px;
+		height: 16px;
 	}
 
 	.input-search-1 {
@@ -555,11 +555,44 @@
 		}
 		
 		function centerSignin() {
-			var a = document.documentElement.clientWidth;
+
+			// var a = document.documentElement.clientWidth;
+			// var b = $("#form_signin").width();
+			
+			var a = $("#join-image").width();
 			var b = $("#form_signin").width();
+
+			var l = ((a/2) - (b/2));
+			
 			$("#form_signin").css({
-				left : a / 2 - b / 2				
+				left : l				
 			})
+			
+			
+			// var l = ((a/2) - (b/2));
+// 			
+			// $("#form_contact").css({
+				// left : l
+			// })
+
+			var h1 = $("#join-image").height();
+			
+			var h2 =  (h1 * (0.86));
+			
+			//var d = $("#form_contact").height();
+			
+			$("#form_signin").css({
+				height : h2
+			})			
+
+			//var e = (c / 2 - d / 2) * (9/10)
+
+			var t = ((h1/2) - (h2/2)) * (0.5)
+
+			$("#form_signin").css({
+				top : t
+			})			
+			
 		}
 
 		function glowBoxGold() {

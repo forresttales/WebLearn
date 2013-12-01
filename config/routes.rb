@@ -1,6 +1,10 @@
 Weblearn::Application.routes.draw do
    
 
+  get "visitors/index"
+  get "visitors/show"
+  get "visitors/create"
+  get "visitors/new"
   get "reg_communs/index"
   get "reg_communs/new"
   get "reg_communs/create"

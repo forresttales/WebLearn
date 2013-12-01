@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131125165105) do
+ActiveRecord::Schema.define(version: 20131130144634) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -135,15 +135,15 @@ ActiveRecord::Schema.define(version: 20131125165105) do
     t.string   "name_title",       limit: 50
     t.string   "type_affiliation", limit: 50
     t.string   "name_affiliation", limit: 100
-    t.string   "address",          limit: 100
-    t.string   "city",             limit: 50
-    t.string   "state",            limit: 50
-    t.string   "zip",              limit: 10
-    t.string   "phone",            limit: 50
     t.string   "email",                        default: "", null: false
     t.string   "city_workshop",    limit: 50
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "address",          limit: 50
+    t.string   "city",             limit: 50
+    t.string   "state",            limit: 50
+    t.string   "zip",              limit: 50
+    t.string   "phone",            limit: 50
   end
 
   create_table "reg_letters", force: true do |t|
@@ -188,5 +188,11 @@ ActiveRecord::Schema.define(version: 20131125165105) do
   end
 
   add_index "users", ["remember_token"], name: "index_users_on_remember_token", using: :btree
+
+  create_table "visitors", force: true do |t|
+    t.integer  "count"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

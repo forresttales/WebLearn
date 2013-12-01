@@ -221,7 +221,7 @@
 	}
 	
 	.input-form-spacer {
-		height: 8px;
+		height: 16px;
 	}
 
 	.input-search-1 {
@@ -233,7 +233,7 @@
 		
 		
 	#join-image {
-		height: 400px;
+		height: 410px;
 	}
 		
 	div .cell-right-contact {
@@ -245,7 +245,7 @@
 
 	div .cell-left-contact {
 		display: table-cell;
-		width: 200px;	
+		width: 280px;	
 		align: top;
 		text-align: right;		
 		padding-right: 20px;
@@ -529,32 +529,30 @@
 		}
 		
 		function centerSignin() {
-			// var a = document.documentElement.clientWidth;
 			
 			var a = $("#join-image").width();
 			var b = $("#form_reg_letter").width();
 			
+			var l = ((a/2) - (b/2));
+			
 			$("#form_reg_letter").css({
-				left : a / 2 - b / 2
+				left : l
 			})
 
-			var c = $("#join-image").height();
+			var h1 = $("#join-image").height();
 			
-			var d = c * 8 / 10;
-			
-			//var d = $("#form_reg_letter").height();
+			var h2 = (h1 * (0.82));
 			
 			$("#form_reg_letter").css({
-				height : d
+				height : h2
 			})			
 
-			//var e = (c / 2 - d / 2) * (9/10)
-
-			var e = (c / 2 - d / 2) * (0.5)
+			var t = ((h1/2) - (h2/2)) * (0.5)
 
 			$("#form_reg_letter").css({
-				top : e
+				top : t
 			})			
+			
 		}
 
 		function glowBoxGold() {
@@ -576,7 +574,7 @@
 		}
 		
 
-		var val = null;
+		// var val = null;
 
 		function formValidate() {
 						
@@ -611,14 +609,14 @@
 					}															
 				},
 				invalidHandler: function(event, validator) {
-					val = validator;
+					// val = validator;
 					var errors = validator.numberOfInvalids();
 					if (errors) {
-						var message = errors == 1
-						? 'You missed 1 field'
-						: 'You missed ' + errors + ' fields';
-						$("div.errors p").html(message);
-						$("div.errors").show();
+						// var message = errors == 1
+						// ? 'You missed 1 field'
+						// : 'You missed ' + errors + ' fields';
+						// $("div.errors p").html(message);
+						// $("div.errors").show();
 						$("#btn_submit").blur();
 						$("#form_reg_letter").focus();						
 					} else {
@@ -628,16 +626,16 @@
 				},				
 				messages: {
 					'reg_letter[email]': {
-						required: "Please enter an email address",
+						required: "*",
 						maxlength: "Email address exceeds 40 characters",
 						email: "Please enter a valid email address"
 					},
 					'reg_letter[name_title]': {
-						required: "Please enter your title",
+						required: "*",
 						maxlength: "Title exceeds 30 characters"							
 					},
 					'reg_letter[name_affiliation]': {
-						required: "Please enter School or Company",
+						required: "*",
 						maxlength: "School or Company exceeds 100 characters"							
 					}															
 				},
@@ -688,23 +686,23 @@
 		var error_name_affiliation = null;
 		
 		function errorMessageUpdate( element ) {
-			if ((val !== undefined) && (val !== null)) {
-				
-				var errors = val.numberOfInvalids();
-				
-				if (errors) {
-					var message = errors == 1
-					? 'You missed 1 field'
-					: 'You missed ' + errors + ' fields';
-					$("div.errors p").html(message);
-					$("div.errors").show();
-				} else {
-					$("div.errors").hide();
-				}
-				
-				val.reset();
-				
-			}			
+			// if ((val !== undefined) && (val !== null)) {
+// 				
+				// var errors = val.numberOfInvalids();
+// 				
+				// if (errors) {
+					// var message = errors == 1
+					// ? 'You missed 1 field'
+					// : 'You missed ' + errors + ' fields';
+					// $("div.errors p").html(message);
+					// $("div.errors").show();
+				// } else {
+					// $("div.errors").hide();
+				// }
+// 				
+				// val.reset();
+// 				
+			// }			
 			
 			
 			if ($('#' + element).hasClass('error')) {

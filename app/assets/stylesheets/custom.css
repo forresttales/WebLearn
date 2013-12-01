@@ -373,7 +373,7 @@
 	}
 
 	div .shadow-inset {
-		box-shadow: 1px 1px 10px #888888 inset;
+		box-shadow: 1px 1px 10px #000000 inset;
 	}
 
 	div .content {
@@ -862,6 +862,115 @@
 		-ms-transform: scale(1.05);
 		transform: scale(1.05)
 	}
+
+
+
+	.submitregevent.btn {
+		/*background-color: white;*/
+				
+		/*background-color:rgba(86, 133, 78, 0.8);*/
+		
+		background-color: inherit;
+				
+		/*color: #7FD1FA;*/		
+		
+		color: #3A8EC9;
+		
+		font-family: msyh;
+		font-size: 16px;
+		width: 308px;
+		height: 30px;
+		border-style:solid;
+		border-radius: 6px;
+		border-color: #005C9E;
+		border-width: 2px;
+		
+		-webkit-transition: all 0.5s ease-in-out;
+		-moz-transition: all 0.5s ease-in-out;
+		-o-transition: all 0.5s ease-in-out;
+		-ms-transition: all 0.5s ease-in-out;
+		transition: all 0.5s ease-in-out;		
+	}
+		
+	.submitregevent.btn:focus {
+		border-color: #47FFFF;
+		
+		color: #18C9C9;
+				
+		-webkit-box-shadow: 0 0 25px #ccc;
+		-moz-box-shadow: 0 0 25px #ccc;
+		box-shadow: 0 0 25px #ccc;
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		transform: scale(1.05)
+	}
+
+
+	.submitregcommun.btn {
+		/*background-color: white;*/
+				
+		/*background-color:rgba(86, 133, 78, 0.8);*/
+		
+		background-color: inherit;
+				
+		/*color: #7FD1FA;*/		
+		
+		color: #3A8EC9;
+		
+		font-family: msyh;
+		font-size: 16px;
+		width: 308px;
+		height: 30px;
+		border-style:solid;
+		border-radius: 6px;
+		border-color: #005C9E;
+		border-width: 2px;
+		
+		-webkit-transition: all 0.5s ease-in-out;
+		-moz-transition: all 0.5s ease-in-out;
+		-o-transition: all 0.5s ease-in-out;
+		-ms-transition: all 0.5s ease-in-out;
+		transition: all 0.5s ease-in-out;		
+	}
+		
+	.submitregcommun.btn:focus {
+		border-color: #47FFFF;
+		
+		color: #18C9C9;
+				
+		-webkit-box-shadow: 0 0 25px #ccc;
+		-moz-box-shadow: 0 0 25px #ccc;
+		box-shadow: 0 0 25px #ccc;
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		transform: scale(1.05)
+	}
+
+
 
 	.submitreg.btn {
 		/*background-color: white;*/
@@ -1758,7 +1867,7 @@ bodykopy ol, #bodykopy ul {
 	width: 842px
 }
 #k-bigarticlehead h1#k-headline {
-	width: 770px
+	width: 958px;
 }
 p#k-deck {
 	font-family: KlavikaExtraLight;
@@ -1802,7 +1911,6 @@ h1#k-headline {
 	line-height: 1em;
 	margin-top: 18px;
 	margin-bottom: 5px;
-	display: block;
 	letter-spacing: -0.03em
 }
 

@@ -15,7 +15,7 @@ class ContactsController < ApplicationController
   end
   
   def show
-    @contact = Contact.find_by_id(params[:saved_id])
+    #@contact = Contact.find_by_id(params[:saved_id])
   end
   
   def create
