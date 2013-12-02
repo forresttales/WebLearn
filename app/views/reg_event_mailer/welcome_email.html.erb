@@ -4,6 +4,23 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Welcome to TheLearningCounsel.com <%= @user.name_first %></h1>
+
+    <h1>Thank you for your events registration with The Learning Counsel</h1>
+    <br>
+    <p>The information you gave us is as follows. If anything is incorrect, you may contact us and/or register again.</p>
+    <br>
+    <p>First Name: <%= @reg_event.name_first %></p>
+    <p>Last Name: <%= @reg_event.name_last %></p>
+    <p>Title: <%= @reg_event.name_title %></p>
+    <p>Address: <%= @reg_event.address %></p>
+    <p>City: <%= @reg_event.city %></p>
+    <p>State: <%= @reg_event.state %></p>
+    <p>Zip: <%= @reg_event.zip %></p>
+    <p>Phone: <%= @reg_event.phone %></p>
+    <p>Email: <%= @reg_event.email %></p>    
+    <p>Institute or Company: <%= @reg_event.type_affiliation %></p>
+    <p>Name of Institute or Company: <%= @reg_event.name_affiliation %></p>
+    <p>Workshop City: <%= @reg_event.city_workshop %></p>
+    
   </body>
 </html>

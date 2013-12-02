@@ -20,7 +20,8 @@
 			padding-left: 4px;		  	
 		  	position: fixed; 
 		  	top: 500px; 
-		  	margin-left: 15px;
+		  	right: 0px;
+		  	margin-right: 50px;
 		  	z-index: 200;
 		}
 		div.fixed:hover {
@@ -30,18 +31,20 @@
 
 		/* back to top home */
 
-		/*.back-to-home {
+		.back-to {
 			display: none;		
-			color: rgba(170, 170, 170, 0.70);
+			color: rgba(196, 116, 12, 0.50);
+			color: #C4740C; /*#9C5800;*/
+			font-size: 16px;
+			font-family: KlavikaMedium;		
+			
 		}
-		
-		div.inflow-home {
+		div.inflow-back-to {
 		  	position: relative;	  	
-		  	
-		  	margin-left: 0.4em;		  
+		  	/*margin-left: -0.1em;*/		  			  
 		}
-		div.positioner-home {position: absolute; left: 0;}
-		div.fixed-home {
+		div.positioner-back-to {position: absolute; left: 0;}
+		div.fixed-back-to {
 			color: rgba(200, 200, 200, 0.60);
 			text-align: center;
 			padding-top: 10px;
@@ -49,11 +52,12 @@
 		  	height: 32px; 
 		  	position: fixed; 
 		  	top: 100px; 
-		  	margin-left: 5px;
+		  	left: 0px;
+		  	margin-left: 30px;
 		  	z-index: 201;
 		}
-		div.fixed-home:hover {
-		}*/
+		div.fixed-back-to:hover {
+		}
 			
 	</style>
 
@@ -68,20 +72,23 @@
     	</div>
   	</div>
 
-  	<!-- <div class="inflow-home">
-    	<div class="positioner-home">
-      		<div class="fixed-home">
-      			<a href="/index" class="back-to-home">Home</a>
+  	<div class="inflow-back-to">
+    	<div class="positioner-back-to">
+      		<div class="fixed-back-to">
+      			
+				<%= link_to '&laquo;'.html_safe + 'Back', :back, :class => "back-to" %> 
+      			
+      			<!-- <a href="/index" class="back-to">&laquo;Back</a>		 -->      			
       		</div>
     	</div>
-  	</div> -->
+  	</div>
   	
 
     <script>
                 
 		jQuery(document).ready(function() {
 			var offset_top = 220;
-			//var offset_hom = 50;			
+			// var offset_hom = 0;			
 			var duration = 1000;
 			jQuery(window).scroll(function() {
 				if (jQuery(this).scrollTop() > offset_top) {
@@ -90,9 +97,9 @@
 					jQuery('.back-to-top').fadeOut(duration);
 				}
 				// if (jQuery(this).scrollTop() > offset_hom) {
-					// jQuery('.back-to-home').fadeIn(duration);					
+					// jQuery('.back-to').fadeIn(duration);					
 				// } else {
-					// jQuery('.back-to-home').fadeOut(duration);					
+					// jQuery('.back-to').fadeOut(duration);					
 				// }	
 			});
 			
@@ -101,6 +108,9 @@
 				jQuery('html, body').animate({scrollTop: 0}, duration);
 				return false;
 			})
+			
+			jQuery('.back-to').fadeIn(duration);					
+			
 		});
 		
 	</script>

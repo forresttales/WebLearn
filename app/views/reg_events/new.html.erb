@@ -322,83 +322,66 @@
 	</style>					
 					
 					
-					
-					
-<!-- <style>
+	<!-- <script id="dropdown-data-selected" type="text/x-dot-template">
+		{{=it.label}}
+		<span class="people">{{=it.people}}<br /><span class="desc">People</span></span>
+		<i>&darr;</i>
+	</script>
 	
-.dropdown {
-    position: relative;
-    width: 300px;
-    outline: none;
-}
-.dropdown > .selected {
-    position: relative;
-}
-.dropdown.focus > .selected,
-.dropdown:focus > .selected {
-    outline: none;
-}
-
-.dropdown > .selected:hover,
-.dropdown > .selected:focus {
-    cursor: pointer;
-}
-.dropdown > .selected i {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 40px;
-    line-height: 40px;
-}
-.dropdown.open > .selected {
-
-}
-.dropdown ul {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    width: 100%;
-    z-index: 10;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    line-height: 1;
-    max-height: 300px;
-    overflow: auto;
-    margin: 0;
-    padding: 0;
-}
-.dropdown ul li {
-    display: block;
-    cursor: pointer;
-}
-.dropdown ul li.selected {
-    
-}
-.dropdown ul li:last-child.selected {
-
-}
-.dropdown ul li {
-    position: relative;
-    display: block;
-}
-
-.dropdown ul li.hover { 
-
-}
+			
+	<script id="dropdown-data" type="text/x-dot-template">
+		<div class="dropdown" tabindex="13">
+		    <div class="selected">
+		      {{=it.selected.label}}
+		      
+		      <span class="people">{{=it.selected.people}}
+		      	<br />
+		      	<span class="desc">People</span>			      
+		      </span>			      
+		      
+		      <i>&darr;</i>
+		    </div>
+		    <ul>
+		        {{~it.items :item:index}}
+		        
+		        
+		        <li data-index="{{=index}}">{{=item.label}}<span class="people">{{=item.people}}</span></li>			        
+		        
+		        {{~}}
+		    </ul>
+		</div>
+	</script> -->		
+					
+	<script id="dropdown-data1-selected" type="text/x-dot-template">
+		{{=it.label}}<i>&darr;</i>
+	</script>
 	
-</style>					 -->					
-					
-					
-					
-					
-					
-					
+	<script id="dropdown-data1" type="text/x-dot-template">
+		<div class="dropdown1" id="dropdown1" tabindex="13">
+		    <div class="selected">{{=it.selected.label}}<i>&darr;</i></div>
+		    <ul>
+		        {{~it.items :item:index}}
+		        <li data-index="{{=index}}">{{=item.label}}</li>
+		        {{~}}
+		    </ul>
+		</div>
+	</script>		
 
-<div class="linkback">
-	<%= link_to '&laquo;'.html_safe + 'Back', :back, :class => "link-back" %>
-</div>
+	<script id="dropdown-data2-selected" type="text/x-dot-template">
+		{{=it.label}}<i>&darr;</i>
+	</script>
+					
+	<script id="dropdown-data2" type="text/x-dot-template">
+		<div class="dropdown2" id="dropdown2" tabindex="5">
+		    <div class="selected">{{=it.selected.label}}<i>&darr;</i></div>
+		    <ul>
+		        {{~it.items :item:index}}
+		        <li data-index="{{=index}}">{{=item.label}}</li>
+		        {{~}}
+		    </ul>
+		</div>
+	</script>		
+					
 
 <div style="width: 1000px; margin-right: auto; margin-left: auto; background: #fff;">
 		
@@ -526,22 +509,31 @@
 			<!--type_affiliation-->
 			<div class="row">
 				<div class="cell-left-reg-event">
-					<%= f.label(:type_affiliation, "Affiliation Type", :class => 'input-label required-label', :id => 'label_reg_event_type_affiliation') %>
+					<%= f.label(:type_affiliation, "Institution or Company?", :class => 'input-label required-label', :id => 'label_reg_event_type_affiliation') %>
 				</div>
 				<div class="cell-right-reg-event">
-					 <%= f.text_field(:type_affiliation, :class => "input-form required", :placeholder => 'Affiliation Type', :tabindex => '5') %>					 
+					
+					<select name="reg_event[type_affiliation]" id="reg_event_type_affiliation" class="" style="display: none;" data-template="#dropdown-data2">
+					    <option value="0" selected="selected" id="option-default">-Institution or Company?-</option>	
+					    <option value="1">Institution</option>
+					    <option value="2">Company</option>
+					    <option value="3">OTHER</option>
+					</select>										
+					
+					 <!-- f.text_field(:type_affiliation, :class => "input-form required", :placeholder => 'Institution or Company?', :tabindex => '5') -->
+					 					 					 
 				</div>
-				<div class="cell-error-reg-event" id="state_reg_event_type_affiliation"><p id="error_reg_event_type_affiliation"></p></div>      					   
+				<div class="cell-error-reg-event" id="state_reg_event_type_affiliation"><p id="error_reg_event_type_affiliation" class="select-errors"></p></div>     
 			</div>      		
 
 			<div class="input-form-spacer"></div>
 			<!--name_affiliation-->
 			<div class="row">
 				<div class="cell-left-reg-event">
-					<%= f.label(:name_affiliation, "Affiliation Name", :class => 'input-label required-label', :id => 'label_reg_event_name_affiliation') %>
+					<%= f.label(:name_affiliation, "Institution or Company Name", :class => 'input-label required-label', :id => 'label_reg_event_name_affiliation') %>
 				</div>
 				<div class="cell-right-reg-event">
-					 <%= f.text_field(:name_affiliation, :class => "input-form required", :placeholder => 'Affiliation Name', :tabindex => '6') %>					 
+					 <%= f.text_field(:name_affiliation, :class => "input-form required", :placeholder => 'Institution or Company Name', :tabindex => '6') %>					 
 				</div>
 				<div class="cell-error-reg-event" id="state_reg_event_name_affiliation"><p id="error_reg_event_name_affiliation"></p></div>      					   
 			</div>      		
@@ -618,54 +610,6 @@
 				<div class="cell-error-reg-event" id="state_reg_event_email"><p id="error_reg_event_email"></p></div>      	
 			</div>      		
 
-
-
-		<!-- <script id="dropdown-data-selected" type="text/x-dot-template">
-			{{=it.label}}
-			<span class="people">{{=it.people}}<br /><span class="desc">People</span></span>
-			<i>&darr;</i>
-		</script>
-		
-				
-		<script id="dropdown-data" type="text/x-dot-template">
-			<div class="dropdown" tabindex="13">
-			    <div class="selected">
-			      {{=it.selected.label}}
-			      
-			      <span class="people">{{=it.selected.people}}
-			      	<br />
-			      	<span class="desc">People</span>			      
-			      </span>			      
-			      
-			      <i>&darr;</i>
-			    </div>
-			    <ul>
-			        {{~it.items :item:index}}
-			        
-			        
-			        <li data-index="{{=index}}">{{=item.label}}<span class="people">{{=item.people}}</span></li>			        
-			        
-			        {{~}}
-			    </ul>
-			</div>
-		</script> -->		
-		
-
-		<script id="dropdown-data-selected" type="text/x-dot-template">
-			{{=it.label}}<i>&darr;</i>
-		</script>
-		
-		<script id="dropdown-data" type="text/x-dot-template">
-			<div class="dropdown" tabindex="13">
-			    <div class="selected">{{=it.selected.label}}<i>&darr;</i></div>
-			    <ul>
-			        {{~it.items :item:index}}
-			        <li data-index="{{=index}}">{{=item.label}}</li>
-			        {{~}}
-			    </ul>
-			</div>
-		</script>		
-
 			<div class="input-form-spacer"></div>
 			<!--city_workshop-->
 			<div class="row">
@@ -674,20 +618,25 @@
 				</div>
 				<div class="cell-right-reg-event">
 
-					<select name="reg_event[city_workshop]" id="reg_event_city_workshop" class="" style="display: none;" data-template="#dropdown-data">
+					<select name="reg_event[city_workshop]" id="reg_event_city_workshop" class="" style="display: none;" data-template="#dropdown-data1">
 					    <option value="0" selected="selected" id="option-default">-Choose a workshop-</option>	
-					    <option value="1">Switzerland</option>
-					    <option value="2">Germany</option>
-					    <option value="3">United States</option>
-					    <option value="4">Sweden</option>
-					    <option value="5">France</option>
-					    <option value="6">Australia</option>
+					    <option value="1">Charleston/Columbia, SC</option>
+					    <option value="2">Houston, TX</option>
+					    <option value="3">Albuquerque, NM</option>
+					    <option value="4">Chicago, IL</option>
+					    <option value="5">Fresno, CA (Central)</option>
+					    <option value="6">Columbus, OH</option>
+					    <option value="7">San Bernadino, CA</option>
+					    <option value="8">Richmond, VA</option>
+					    <option value="9">Milwaukee, MI</option>
+					    <option value="10">Las Vegas</option>
+					    <option value="11">Newark, NJ</option>
+					    <option value="12">Tucson/Santa Fe, AZ</option>
+					    <option value="13">Tampa, FL</option>
+					    <option value="14">OTHER</option>
 					</select>										
 
-										
 					  <!-- f.text_field(:city_workshop, :class => "input-form required", :placeholder => 'Workshop', :tabindex => '13') 					 -->
-					  
-					  
 					  										 
 				</div>
 				<div class="cell-error-reg-event" id="state_reg_event_city_workshop"><p id="error_reg_event_city_workshop" class="select-errors"></p></div>      					   
@@ -867,8 +816,38 @@
 			// $("#form_join").validate({
 			
 				submitHandler: function(form) {
-					if (!selectInvalid) {
+
+					//form.submit();
+					
+					selectValid1 = validateSelect1();
+					selectValid2 = validateSelect2();
+					
+					//var s = 'selectValid1 = ' + selectValid1 + ' selectValid2 = ' + selectValid2;
+					//alert(s);
+					
+					if ( selectValid1 && selectValid2 ) {
 						form.submit();
+					}
+					else
+					{
+						var errors = 0;
+						if (!selectValid1) {
+							errors += 1;
+						}
+						if (!selectValid2) {
+							errors += 1;
+						}					
+						if (errors) {
+							var message = errors == 1
+							? '1 required field missed'
+							: errors + ' required fields missed';
+							$("div.errors p").html(message);
+							$("div.errors").show();
+							$("#btn_submit").blur();
+							$("#form_reg_event").focus();						
+						} else {
+							$("div.errors").hide();
+						}
 					}
 				},
 			
@@ -943,9 +922,12 @@
 				invalidHandler: function(event, validator) {
 					val = validator;
 					var errors = validator.numberOfInvalids();
-					if (validateSelect()) {
+					if (!validateSelect1()) {
 						errors += 1;
 					}
+					if (!validateSelect2()) {
+						errors += 1;
+					}					
 					if (errors) {
 						var message = errors == 1
 						? '1 required field missed'
@@ -957,7 +939,6 @@
 					} else {
 						$("div.errors").hide();
 					}
-					
 				},			
 				messages: {
 					'reg_event[name_first]': {
@@ -1089,11 +1070,16 @@
 
 			//val = formval.validator;
 			
+			//alert('updateErrorCount');
+			
 			if ((val !== undefined) && (val !== null)) {
 
 				var errors = val.numberOfInvalids();
 				
-				if (validateSelect()) {
+				if (!validateSelect1()) {
+					errors += 1;
+				}
+				if (!validateSelect2()) {
 					errors += 1;
 				}
 				
@@ -1199,12 +1185,30 @@
 		});
 
 		// $("#reg_event_city_workshop").on("blur", function () {
-			// errorMessageUpdate('reg_event_city_workshop');
+			// updateErrorCount();
+		// });
+// 
+		// $("#reg_event_type_affiliation").on("focusout", function () {
+			// alert('focusout');
+			// updateErrorCount();
+		// });
+// 
+		// $(".dropdown2").on("focusout", function () {
+			// alert('focusout');
+			// updateErrorCount();
+		// });
+// 
+		// $(".dropdown2").on("blur", function () {
+			// alert('blur');
+			// updateErrorCount();
 		// });
 
-		var selectInvalid = null;
+
+
+		var selectValid1 = false;
+		var selectValid2 = false;
 		
-		function selectStatus() {
+		function selectStatus1() {
 			
 			// alert($("#reg_event_city_workshop_select option:selected").val());
 			
@@ -1213,27 +1217,27 @@
 					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
 				});
 				
-				$('.dropdown').css ({			
+				$('.dropdown1').css ({			
 					color: '#838383'
 				});
 				
-				selectInvalid = true;						
+				selectValid1 = false;						
 			}
 			else {
 				$('#state_reg_event_city_workshop').css ({			
 					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 5px'
 				});
 				
-				$('.dropdown').css ({			
+				$('.dropdown1').css ({			
 					color: '#ACDDE3'
 				});			
 		
-				if( selectInvalid ) {
-					$('.dropdown').css ({			
+				if( !selectValid1 ) {
+					$('.dropdown1').css ({			
 						'border-color' : '#005C9E'
 					});
 					
-					$('.dropdown > .selected i').css ({			
+					$('.dropdown1 > .selected i').css ({			
 						'color' : '#005C9E',
 						'border-left-color' : '#005C9E' 
 					});
@@ -1241,13 +1245,56 @@
 					$('#error_reg_event_city_workshop').html("");					
 				}
 				
-				selectInvalid = null;		
+				selectValid1 = true;		
 			}
 			
 			updateErrorCount();			
 		}
 
-		function validateSelect() {
+		function selectStatus2() {
+			
+			// alert($("#reg_event_city_workshop_select option:selected").val());
+			
+			if ($("#reg_event_type_affiliation option:selected").val() == '0') {
+				$('#state_reg_event_type_affiliation').css ({			
+					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
+				});
+				
+				$('.dropdown2').css ({			
+					color: '#838383'
+				});
+				
+				selectValid2 = false;						
+			}
+			else {
+				$('#state_reg_event_type_affiliation').css ({			
+					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 5px'
+				});
+				
+				$('.dropdown2').css ({			
+					color: '#ACDDE3'
+				});			
+		
+				if( !selectValid2 ) {
+					$('.dropdown2').css ({			
+						'border-color' : '#005C9E'
+					});
+					
+					$('.dropdown2 > .selected i').css ({			
+						'color' : '#005C9E',
+						'border-left-color' : '#005C9E' 
+					});
+					
+					$('#error_reg_event_type_affiliation').html("");					
+				}
+				
+				selectValid2 = true;		
+			}
+			
+			updateErrorCount();			
+		}
+
+		function validateSelect1() {
 			
 			if ($("#reg_event_city_workshop option:selected").val() == '0') {
 				// $('#state_reg_event_city_workshop').css ({			
@@ -1258,37 +1305,78 @@
 					// color: '#838383'
 				// });
 				
-				$('.dropdown').css ({			
+				$('.dropdown1').css ({			
 					'border-color' : '#851717'
 				});
 				
-				$('.dropdown > .selected i').css ({			
+				$('.dropdown1 > .selected i').css ({			
 					'color' : '#851717',
 					'border-left-color' : '#851717' 
 				});
 		
 				$('#error_reg_event_city_workshop').html("*");
 		
-				selectInvalid = true;		
+				selectValid1 = false;		
 			}
 			else {
-				$('.dropdown').css ({			
+				$('.dropdown1').css ({			
 					'border-color' : '#005C9E'
 				});
 				
-				$('.dropdown > .selected i').css ({			
+				$('.dropdown1 > .selected i').css ({			
 					'color' : '#005C9E',
 					'border-left-color' : '#005C9E' 
 				});
 
 				$('#error_reg_event_city_workshop').html("");
 				
-				selectInvalid = null;		
+				selectValid1 = true;		
 			}
 			
-			return selectInvalid;
+			return selectValid1;
 		}
 
+		function validateSelect2() {
+			
+			if ($("#reg_event_type_affiliation option:selected").val() == '0') {
+				// $('#state_reg_event_city_workshop').css ({			
+					// background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
+				// });
+// 				
+				// $('.dropdown').css ({			
+					// color: '#838383'
+				// });
+				
+				$('.dropdown2').css ({			
+					'border-color' : '#851717'
+				});
+				
+				$('.dropdown2 > .selected i').css ({			
+					'color' : '#851717',
+					'border-left-color' : '#851717' 
+				});
+		
+				$('#error_reg_event_type_affiliation').html("*");
+		
+				selectValid2 = false;		
+			}
+			else {
+				$('.dropdown2').css ({			
+					'border-color' : '#005C9E'
+				});
+				
+				$('.dropdown2 > .selected i').css ({			
+					'color' : '#005C9E',
+					'border-left-color' : '#005C9E' 
+				});
+
+				$('#error_reg_event_type_affiliation').html("");
+				
+				selectValid2 = true;		
+			}
+			
+			return selectValid2;
+		}
 
 // .dropdown > .selected i {
     // position: absolute;
@@ -1343,7 +1431,8 @@
 				
 			$('select').dropdown({
 			    'changed': function(data) {
-			        selectStatus();
+			        selectStatus1();
+			        selectStatus2();			        
 			    }
 			});	    
 				

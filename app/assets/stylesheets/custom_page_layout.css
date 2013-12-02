@@ -700,6 +700,17 @@
 	position: relative;
 	height: auto;
 }
+.k-b-headline-kol2 {
+	font-size: 20px;
+	line-height: 20px;
+	color: #000;
+	font-family: KlavikaBlack, Arial, sans-serif;
+	margin-top: 20px;
+	margin-left: 0px;
+	width: 400px;
+	position: relative;
+	height: auto;
+}
 .k-b-headline:hover {
 	text-decoration: none;
 }
