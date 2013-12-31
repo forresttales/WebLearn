@@ -41,17 +41,31 @@
 		</style>
 			
 				
+		<script type="text/javascript" src="../scripts/jquery-1.4.1.min.js"></script>
 							
 		<script type="text/javascript" src="/assets/entrepeneurs_jquery-1.js"></script> 
 		<script type="text/javascript" src="/assets/entrepeneurs_jquery.js"></script>
 
-		<script type="text/javascript" src="http://www.work.ua/js/mootools_1350549978.js"></script>
-		<script type="text/javascript" src="http://www.work.ua/js/mootools-more_1380281301.js"></script>
+
+    	<script type="text/javascript" src="../scripts/jquery.tmpl.js"></script>
+
+
+		<style>
+			
+			.k-decorate-none {
+				text-decoration: none;
+			}
+			
+		</style>
+
+
+
+		<!-- <script type="text/javascript" src="http://www.work.ua/js/mootools_1350549978.js"></script>
+		<script type="text/javascript" src="http://www.work.ua/js/mootools-more_1380281301.js"></script> -->
 		
+				
 		<!-- <script type="text/javascript" src="http://www.work.ua/ru/js/lp_1378193134.js"></script> -->
 				
-		
-		<script type="text/javascript" src="http://www.work.ua/js/main_1377000345.js"></script>
 		
 		
 		<!-- <script src="http://www.work.ua/js/cssua.min.js" type="text/javascript"></script> -->		
@@ -69,6 +83,13 @@
 	    
 		<header>		
 								
+
+
+
+
+		 <!-- link_to 'archive', archives_url(:id => '@archive.id')  -->
+		 
+		 								
 			<%= render 'share/backtotop' %>
 			
 			<div class="table-main">			
@@ -77,11 +98,11 @@
 						<div class="table-main">
 							<div class="row">
 								<div class="cell-250" style="padding-left: 24px;">
-						  			<img src="../repository/logo-words-1.png" alt="logo-words-1.png" >
+						  			<img src="../repository/logo-icon-come-together-tag.png" alt="logo-icon-come-together.png" >
 						  		</div>
 							</div>
 							<div class="row">
-								<div class="cell-125" style="padding-left: 24px;">
+								<div class="cell-125" style="padding-left: 34px;">
 									<!-- <p style="font-family: msyh; font-size: 12px;">Research and Context for the<br>Shift to Digital Curriculum</p> -->									
 									
 						  		</div>
@@ -91,10 +112,10 @@
 					<div class="cell-650">
 						<div class="table-main">
 							<div class="row">
-								<div class="cell-650">
+								<div class="cell-650" style="padding-left: 10px;">
 									
 									<a href="/events">
-										<img src="../repository/banner-1.png" alt="banner-1.png" width="630px" >
+										<img src="../repository/banner-1.jpg" alt="banner-1.jpg" width="630px" >
 									</a>
 									<!-- <div id="main_header_adblock_1">									
 										<h3>Space Available</h3>
@@ -134,103 +155,48 @@
 				
 		<section>
 			
-			<!-- <div style="background-color: white;"> -->				
-				
 				<div style="height: 30px;"></div>
-			    
 				
 				<div class="kontainer">
 																								
-					<span id="prev" style="float:left;left:-100px;top:215px;margin-top:0px;position:absolute;display:inline;">
-						<div style="width: 50px; height: 150px;">
-							<a class="scroll_video_prev" title="Previous" href="#"></a>
-						</div>					
-					</span>
+					<script>
+						$(document).ready(function() {
+							$('#prev').hover(function() {$('#prev img').attr('src','/assets/prev-arrow-hov.png')}, function() {$('#prev img').attr('src','/assets/prev-arrow.png')})
+							$('#next').hover(function() {$('#next img').attr('src','/assets/next-arrow-hov.png')}, function() {$('#next img').attr('src','/assets/next-arrow.png')})
+						});
+					</script>
 					
-					<span id="next" style="float:right;right:-80px;top:215px;margin-top:0px;position:absolute;display:inline;">
-						<div style="width: 50px; height: 150px;">
-							<a class="scroll_video_next" title="Next" href="#"></a>
-						</div>					
-					</span>
-										
+					<span id="prev" style="float:left;left:-70px;top:215px;margin-top:0px;position:absolute;display:inline;"><img src="/assets/prev-arrow.png"></span>
+					<span id="next" style="float:right;right:-70px;top:215px;margin-top:0px;position:absolute;display:inline;"><img src="/assets/next-arrow.png"></span>
 
-					<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next" data-cycle-slides="&gt; div" style="width:970px;position:relative; height: 890px; overflow: hidden;">					
+					<div class="cycle-slideshow" data-cycle-speed="600" data-cycle-pause-on-hover="true" data-cycle-fx="scrollHorz" data-cycle-prev="#prev" data-cycle-next="#next" data-cycle-slides="&gt; div" style="width: 970px; position: relative; height: 890px; overflow: hidden;">					
 					
-					
-						<!-- <div style="position: absolute; top: 0px; left: 0px; z-index: 101; opacity: 1;" class="slide cycle-slide cycle-slide-active"> -->
-
 						<div style="position: absolute; top: 0px; left: 0px; z-index: 101; opacity: 1;">
 
-							<!-- <div class="rowfluid mainfeaturerow"> -->
-
 							<div class="k-mainfeaturerow">
-					
-								<div style="margin-left: 10%;">
-							 		<a href="/archives/show?id=1015">
-							 			<img src="../repository/article-k12-digital.png" class="mainfeatureimage" height="450">
-							 		</a>
-								</div>
 
-								<div class="channel-article header perspective"><a href="/archives/show?id=1015"><span>PERSPECTIVE</span></a></div>
-								
-							    <div class="kk-headlines">
-						        	<div class="h1"><a href="/archives/show?id=1015">How BIG <em>is</em> the K-12 Digital Curriculum Market?</a></div>
-						            <div class="h2">With so many schools in transition, executives want to know what others are doing with digital curriculum.  
-						            	The question of what, how much of it, and more is being answered – from definitions to market size.
-						            	<span class="byline">&nbsp;by&nbsp;<a href="#">LeiLani Cauthen</a></span></div>
-						        	<div class="space-20"></div>
-						        </div>
+    							<div id="12"></div>
+						        
 					        </div>
-							<br>
 					        
-					    	<!-- <div class="rowfluid"> -->
-					    							    		
 					    	<div class="rowfluid">					    
 					    							    
 								<div class="psubfeature">
-									<div class="inner_cell-subfeature">
-										<div class="bg-industry-news-green h1">
-											<a href="/archives/show?id=1017">INDUSTRY NEWS</a>
-										</div>
-									    <div class="h2">
-									    	<a href="/archives/show?id=1017" style="text-decoration: none;">
-									    		Nationally Recognized 1:1 Initiative Chooses Prey to Protect Every Device
-									    	</a>
-									    	<span class="byline">&nbsp;by&nbsp;
-									    		<a>Jacob Hanson</a>
-									    	</span>
-								    	</div>
-									</div>
+
+    								<div id="14"></div>
+
 								</div>								
 								
 								<div class="psubfeature">
-									<div class="inner_cell-subfeature">
-										<div class="bg-industry-news-orange h1">
-											<a href="/archives/show?id=1018">INDUSTRY NEWS</a>
-										</div>
-									    <div class="h2">
-									    	<a href="/archives/show?id=1018" style="text-decoration: none;">Pearson announces a strategic investment in English language learning platform Voxy</a>
-									    	<span class="byline">&nbsp;by&nbsp;
-									    		<a>The LC Staff</a>
-									    	</span>
-								    	</div>
-									</div>
+									
+    								<div id="15"></div>
+									
 								</div>								
 								
 								<div class="psubfeature">
-									<div class="inner_cell-subfeature">
-										<div class="bg-industry-news-violet h1">
-											<a href="/archives/show?id=1019">INDUSTRY NEWS</a>
-										</div>
-									    <div class="h2">
-									    	<a href="/archives/show?id=1019" style="text-decoration: none;">
-									    	Tales2Go Releases Android Version of its Award-Winning Service	
-									    	</a>
-									    	<span class="byline">&nbsp;by&nbsp;
-									    		<a>Sue Hanson, Contributor</a>
-									    	</span>
-								    	</div>
-									</div>
+									
+    								<div id="16"></div>
+									
 								</div>								
 						
 							</div>
@@ -242,72 +208,27 @@
 						<div style="position: absolute; top: 0px; left: 0px; z-index: 100; display: none;">
 							
 							
-							<div class="rowfluid mainfeaturerow">
-								<div style="margin-left: 14%;">
-						 			<a href="/archives/show?id=1025">
-						 				<img src="../repository/article-we-need.png" class="mainfeatureimage" height="450">
-						 			</a>
-								</div>
-						 		
-								<div class="channel-article header idea"><a href="/archives/show?id=1025"><span>IDEA</span></a></div>
-						 		
-							    <div class="headlines">
-						        	<div class="h1"><a href="/archives/show?id=1025">WE NEED NEW WORDS FOR DIGITAL CURRICULUM</a></div>
-						            <div class="h2">
-						            	Digital Curriculum is a lot of things, but what it has yet to achieve is an agreed-upon 
-						            	set of words describing what it <em>is</em> and <em>does</em> to give it more context of what’s 
-						            	happening with it in schools today. 
-						            	<span class="byline">&nbsp;by&nbsp;<a href="#">LeiLani Cauthen</a></span>
-						            </div>
-						        </div>
+							<div class="rowfluid k-mainfeaturerow">
+								
+    							<div id="22"></div>
 						
 					        </div>
 					        
 					    	<div class="rowfluid">
 								<div class="psubfeature">
-									<div class="inner_cell-subfeature">
-										<div class="bg-industry-news-pink h1">
-											<a href="/archives/show?id=1020">INDUSTRY NEWS</a>
-										</div>
-									    <div class="h2">
-									    	<a href="/archives/show?id=1020" style="text-decoration: none;">
-									    		Tales2Go Releases Android Version of its Award-Winning Service
-									    	</a>
-									    	<span class="byline">&nbsp;by&nbsp;
-									    		<a>Jacob Hanson, Contributor</a>
-									    	</span>
-								    	</div>
-									</div>
+
+    								<div id="17"></div>
+
 								</div>					
 								<div class="psubfeature">
-									<div class="inner_cell-subfeature">
-										<div class="bg-industry-news-brown h1">
-											<a href="/archives/show?id=1023">INDUSTRY NEWS</a>
-										</div>
-									    <div class="h2">
-									    	<a href="/archives/show?id=1023" style="text-decoration: none;">
-									    		Unique AZ District Closes Achievement Gap with Blended Learning Approach
-									    	</a>
-									    	<span class="byline">&nbsp;by&nbsp;
-									    		<a>Jacob Hanson, Contributor</a>
-									    	</span>
-								    	</div>
-									</div>
+
+    								<div id="20"></div>
+									
 								</div>					
 								<div class="psubfeature">
-									<div class="inner_cell-subfeature">
-										<div class="bg-industry-news-blue h1">
-											<a href="/archives/show?id=1003">INDUSTRY NEWS</a>
-										</div>
-									    <div class="h2">
-									    	<a href="/archives/show?id=1003" style="text-decoration: none;">
-									    		Charter School Associates Selects observe4success as Classroom Observation Partner
-									    	</a>
-									    	<span class="byline">&nbsp;by&nbsp;
-									    		<a>Jacob Hanson, Contributor</a>
-									    	</span>
-								    	</div>
-									</div>
+									
+									<div id="2"></div>
+									
 								</div>								
 						
 							</div>
@@ -319,75 +240,29 @@
 							
 						<div style="position: absolute; top: 0px; left: 0px; z-index: 99; display: none;">
 							
-							<div class="rowfluid mainfeaturerow">
+							<div class="rowfluid k-mainfeaturerow">
 
-								<div style="margin-left: 16%;">
-							 		<a href="/archives/show?id=1004">
-							 			<img src="../repository/article-checklist-of-top-10.png" class="mainfeatureimage" height="450">
-							 		</a>
-								</div>
-						 		
-								<div class="channel-article header tactic"><a href="/archives/show?id=1004"><span>TACTIC</span></a></div>
-						 		
-							    <div class="headlines">
-						        	<div class="h1"><a href="/archives/show?id=1004">Checklist of Top 10 Benchmarks for Instructional Materials</a></div>
-						            <div class="h2">How do you know you have quality digital learning content?  This question could be made 
-						            	incredibly complex, but luckily people in-the-know have given ten 
-						            	simple guidelines.<span class="byline">&nbsp;by&nbsp;<a href="#">The LC Staff</a></span></div>
-						        </div>
+								<div id="3"></div>
 						
 					        </div> 
 					        
 					    	<div class="rowfluid">
 								<div class="psubfeature">
-									<div class="inner_cell-subfeature">
-
-										<div class="bg-industry-news-pine h1">
-											<a href="/archives/show?id=1022">INDUSTRY NEWS</a>
-										</div>
-									    <div class="h2">
-									    	<a href="/archives/show?id=1022" style="text-decoration: none;">
-									    		Tulsa Charter School sells cookies to fund purchase of observe4success
-									    	</a>
-									    	<span class="byline">&nbsp;by&nbsp;
-									    		<a>The LC Staff</a>
-									    	</span>
-								    	</div>
-										
-									    									    									
-									</div>
+									
+									<div id="19"></div>
+									
 								</div>					
 								
 								<div class="psubfeature">
-									<div class="inner_cell-subfeature">
-										<div class="bg-industry-news-tan h1">
-											<a href="/archives/show?id=1016">INDUSTRY NEWS</a>
-										</div>
-									    <div class="h2">
-									    	<a href="/archives/show?id=1016" style="text-decoration: none;">
-									    		myCore now offers CCSS-Aligned Units and Lessons
-									    	</a>
-									    	<span class="byline">&nbsp;by&nbsp;
-									    		<a>Jacob Hanson, Contributor</a>
-									    	</span>
-								    	</div>
-									</div>
+									
+									<div id="13"></div>
+									
 								</div>								
 																									    					    					    
 								<div class="psubfeature">
-									<div class="inner_cell-subfeature">
-										<div class="bg-industry-news-royalred h1">
-											<a href="/archives/show?id=1012">INDUSTRY NEWS</a>
-										</div>
-									    <div class="h2">
-									    	<a href="/archives/show?id=1012" style="text-decoration: none;">
-									    		Miami-Dade Renews contract with GuideK12 for Geovisual Analytics
-									    	</a>
-									    	<span class="byline">&nbsp;by&nbsp;
-									    		<a>Jacob Hanson, Contributor</a>
-									    	</span>
-								    	</div>
-									</div>
+									
+									<div id="9"></div>
+
 								</div>								
 							</div>
 					
@@ -428,74 +303,26 @@
 <div class="k-governcell ktop kbottom">	
 		
 	<div class="k-outercell kol3">
-		<a href="/archives/show?id=1010" class="k-link-a">
-			<div class="k-inner-cell">
-				<div class="k-b-container">
-					<div class="k-img-cell-single">
-						<img src="../repository/article-facing-down.jpeg" class="k-img" height="180" onerror="this.src='../altgraphics/error-260-180.png'">
-					</div>
-					<div class="katcolorbox_posit">
-	            		<div class="katbox-article katbox thoughts_catbox">
-	            			<span>THOUGHTS</span>
-	            		</div>
-	        		</div>																								
-				</div>
-				<div class="k-b-headline">
-					Facing Down the Learning Content Disruption 
-					<span class="kbyline">by&nbsp<span class="k-b-link">David Kafitz</span></span>											
-				</div>
-			</div>
-		</a>
+		
+		<div id="7"></div>
+		
 	</div>
 		
 	<div class="k-cell-divider"></div>
 	
-	<div class="k-outercell kol3">
-		
-		<a href="/archives/show?id=1006" class="k-link-a">
-			<div class="k-inner-cell">
-				<div class="k-b-container">
-					<div class="k-img-cell-single">
-						<img src="../repository/article-coffee-chat-with-memphis.jpg" class="k-img" height="200" onerror="this.src='../altgraphics/error-260-180.png'">
-					</div>
-					<div class="katcolorbox_posit">
-	            		<div class="katbox-article katbox coffee_chat_catbox">
-	            			<span>PEOPLE</span>
-	            		</div>
-	        		</div>																								
-				</div>
-				<div class="k-b-headline">
-					COFFEE CHAT WITH MEMPHIS
-					
-					<span class="kbyline">by&nbsp<span class="k-b-link">The LC Staff</span></span>											
-				</div>														
-			</div>
-		</a>	
-		
-	</div>
 	
+	<div class="k-outercell kol3">
+
+    	<div id="4"></div>
+						
+	</div>
+
 	<div class="k-cell-divider"></div>
 	
 	<div class="k-outercell kol3">
-		<a href="/archives/show?id=1011" class="k-link-a">
-			<div class="k-inner-cell">
-				<div class="k-b-container">
-					<div class="k-img-cell-single">
-						<img src="../repository/article-five-types.png" class="k-img" height="180" onerror="this.src='../altgraphics/error-260-180.png'">
-					</div>
-					<div class="katcolorbox_posit">
-	            		<div class="katbox-article katbox thoughts_catbox">
-	            			<span>THOUGHTS</span>
-	            		</div>
-	        		</div>																								
-				</div>
-				<div class="k-b-headline">
-					FIVE TYPES OF CURRICULUM “THINGS”
-					
-					<span class="kbyline">by&nbsp<span class="k-b-link">LeiLani Cauthen</span></span>											
-				</div>
-			</div>
-		</a>	
+		
+		<div id="8"></div>
+		
 	</div>
 	
 </div>
@@ -511,49 +338,17 @@
 <div class="k-governcell ktop">	
 		
 	<div class="k-outercell kol3">
-		<a href="/archives/show?id=1013" class="k-link-a">
-			<div class="k-inner-cell">
-				<div class="k-b-container">
-					<div class="k-img-cell-single">
-						<img src="../repository/article-health-care-curriculum.jpg" class="k-img" height="180" onerror="this.src='../altgraphics/error-260-180.png'">
-					</div>
-					<div class="katcolorbox_posit">
-	            		<div class="katbox-article katbox idea_catbox">
-	            			<span>IDEA</span>
-	            		</div>
-	        		</div>																								
-				</div>
-				<div class="k-b-headline">
-					Health Care Curriculum Guide
-					
-					<span class="kbyline">by&nbsp<span class="k-b-link">The LC Staff</span></span>											
-				</div>
-			</div>
-		</a>	
+
+		<div id="10"></div>
+		
 	</div>
 		
 	<div class="k-cell-divider"></div>
 	
 	<div class="k-outercell kol3">
-		<a href="/archives/show?id=1027" class="k-link-a">
-			<div class="k-inner-cell">
-				<div class="k-b-container">
-					<div class="k-img-cell-single">
-						<img src="../repository/article-plagiarism.jpg" class="k-img" height="180" onerror="this.src='../altgraphics/error-260-180.png'">
-					</div>
-					<div class="katcolorbox_posit">
-	            		<div class="katbox-article katbox research_catbox">
-	            			<span>RESEARCH</span>
-	            		</div>
-	        		</div>																								
-				</div>
-				<div class="k-b-headline">
-					School Risk of Plagiarism in Creating your own Digital Curriculum
-					
-					<span class="kbyline">by&nbsp<span class="k-b-link">The LC Staff</span></span>											
-				</div>														
-			</div>
-		</a>	
+
+		<div id="25"></div>
+		
 	</div>
 	
 	<div class="k-cell-divider"></div>
@@ -581,25 +376,8 @@
 		
 		<div class="k-cell-divider-horiz" style=""></div>
 								
-		<a href="/archives/show?id=1005" class="k-link-a">
-			<div class="k-inner-cell">
-				<div class="k-b-container">
-					<div class="k-img-cell-single">
-						<img src="../repository/article-coffee-chat-with-huston-large.jpg" class="k-img" width="300" onerror="this.src='../altgraphics/error-260-260.png'">
-					</div>
-					<div class="katcolorbox_posit">
-	            		<div class="katbox-article katbox coffee_chat_catbox">
-	            			<span>PEOPLE</span>
-	            		</div>
-	        		</div>																								
-				</div>
-				<div class="k-b-headline">
-					COFFEE CHAT WITH HOUSTON ISD
-					
-					<span class="kbyline">by&nbsp<span class="k-b-link">The Author</span></span>											
-				</div>														
-			</div>
-		</a>
+		<div id="27"></div>
+								
 	</div>
 						
 	
@@ -608,27 +386,9 @@
 	<div class="k-outercell kol3">
 		
 		<div class="k-cell-divider-horiz"></div>
+
+		<div id="5"></div>
 						
-		<a href="/archives/show?id=1007" class="k-link-a">
-			<div class="k-inner-cell">
-				<div class="k-b-container">
-					<div class="k-img-cell-single">
-						<img src="../repository/article-digital-curriculum-strategy.jpg" class="k-img" height="240" onerror="this.src='../altgraphics/error-260-260.png'">
-					</div>
-					<div class="katcolorbox_posit">
-	            		<div class="katbox-article katbox tactic_catbox">
-	            			<span>STRATEGY</span>
-	            		</div>
-	        		</div>																								
-				</div>
-				<div class="k-b-headline">
-					What is a Digital Curriculum Strategy?
-					<br>
-					
-					<span class="kbyline">by&nbsp<span class="k-b-link">David Kafitz</span></span>											
-				</div>														
-			</div>
-		</a>	
 	</div>
 	
 	<div class="k-cell-divider"></div>
@@ -637,9 +397,10 @@
 		
 		<!-- <div id="ad1-lower"></div> -->
 				
-		<a href="#" class="k-link-a">
+		<a href="/papers" class="k-link-a">
+						
 			<div class="k-inner-cell">
-				<div class="k-b-container" style="padding-bottom: 0px; top: 168px;">
+				<div class="k-b-container" style="padding-bottom: 0px; top: 176px;">
 					<div class="k-img-cell-single">
 						<a href="/papers">
 							<img src="../repository/banner-2.png" class="k-img" height="686px" onerror="this.src='/assets/error-300-700-blue.png'">
@@ -647,8 +408,9 @@
 					</div>
 				</div>
 			</div>
-		</a>		
-				
+			
+		</a>
+						
 	</div>
 	
 </div>
@@ -674,42 +436,31 @@
 	
 	<div class="k-outercell kol3">
 		
-			<div class="k-inner-cell"  style="padding-top: 2px;">
-				<div class="text_container b_container line-grow">
-					
-					<object type="application/x-shockwave-flash" data="http://www.youtube.com/v/UZePBZ-edfE&feature=youtu.be&noredirect=1" width="300" height="200">          	
-			            <param name="wmode" value="opaque" />
-			            <param name="quality" value="high" />
-			            <param name="bgcolor" value="#E9E9E9" />
-			            <param name="allowfullscreen" value="true" />
-			         	<param name="allowscriptaccess" value="never" />
-			         </object>
+		<div class="k-inner-cell"  style="padding-top: 2px;">
+			<div class="text_container b_container line-grow">
+				
+				<object type="application/x-shockwave-flash" data="http://www.youtube.com/v/UZePBZ-edfE&feature=youtu.be&noredirect=1" width="300" height="200">          	
+		            <param name="wmode" value="opaque" />
+		            <param name="quality" value="high" />
+		            <param name="bgcolor" value="#E9E9E9" />
+		            <param name="allowfullscreen" value="true" />
+		         	<param name="allowscriptaccess" value="never" />
+		         </object>
 
-					<div class="headline-excelsiorcomics">
-						<span>5 Key Areas of Successful K12 Tech Integration Planning</span>
-					</div>
+				<div class="headline-excelsiorcomics">
+					<span>5 Key Areas of Successful K12 Tech Integration Planning</span>
 				</div>
 			</div>
+		</div>
 			
 	</div>
 	
 	<div class="k-cell-divider"></div>
 	
 	<div class="k-outercell kol3">
-		<a href="/archives/show?id=1002" class="k-link-a">
-			<div class="k-inner-cell" style="padding-top: 2px;">
-				<div class="text_container b_container line-blog">
-					
-					<img src="../repository/article-blogs-and-links.png" alt="article-blogs-and-links.png" onerror="this.src='../altgraphics/error-300-200.png'">
-					
-					<div class="headline-junebug">
-						<span class="gold">Blogs</span>
-						<span class="red">&amp;</span>
-						<span class="blue">Links</span>														
-					</div>
-				</div>
-			</div>
-		</a>	
+
+		<div id="1"></div>
+
 	</div>
 </div>
 
@@ -717,25 +468,9 @@
 <div class="k-governcell kbottom">			
 						
 	<div class="k-outercell-double kol3">
-		<a href="/archives/show?id=1009" class="k-link-a">
-			<div class="k-inner-cell">
-				<div class="k-b-container">
-					<div class="k-img-cell-single">
-						<img src="../repository/article-education-compared.jpg" class="k-img" width="260" onerror="this.src='../altgraphics/error-300-520.png'">
-					</div>
-					<div class="katcolorbox_posit">
-	            		<div class="katbox-article katbox perspective_catbox">
-	            			<span>PERSPECTIVE</span>
-	            		</div>
-	        		</div>																								
-				</div>
-				<div class="k-b-headline">
-					Education Compared to All Other Industry
-					
-					<span class="kbyline">by&nbsp<span class="k-b-link">LeiLani Cauthen</span></span>											
-				</div>														
-			</div>
-		</a>		
+		
+		<div id="6"></div>
+		
 	</div>
 	
 	<div class="k-cell-divider"></div>
@@ -743,26 +478,9 @@
 	<div class="k-outercell kol3">
 		
 		<div class="k-cell-divider-horiz"></div>
+
+		<div id="18"></div>
 						
-		<a href="/archives/show?id=1021" class="k-link-a">
-			<div class="k-inner-cell">
-				<div class="k-b-container">
-					<div class="k-img-cell-single">
-						<img src="../repository/article-to-solution-300-200.png" class="k-img" height="200" onerror="this.src='../altgraphics/error-260-180.png'">
-					</div>
-					<div class="katcolorbox_posit">
-	            		<div class="katbox-article katbox tactic_catbox">
-	            			<span>TACTIC</span>
-	            		</div>
-	        		</div>																								
-				</div>
-				<div class="k-b-headline">
-					To Solution or Element – That is the Question
-					
-					<span class="kbyline">by&nbsp<span class="k-b-link">The LC Staff</span></span>											
-				</div>														
-			</div>
-		</a>	
 	</div>
 	
 	<div class="k-cell-divider"></div>
@@ -770,26 +488,9 @@
 	<div class="k-outercell kol3">
 		
 		<div class="k-cell-divider-horiz"></div>
+
+		<div id="21"></div>
 								
-		<a href="/archives/show?id=1024" class="k-link-a">
-			<div class="k-inner-cell">
-				<div class="k-b-container">
-					<div class="k-img-cell-single">
-						<img src="../repository/article-wanted-new-leader.png" class="k-img" height="180" onerror="this.src='../altgraphics/error-260-180.png'">
-					</div>
-					<div class="katcolorbox_posit">
-	            		<div class="katbox-article katbox people_catbox">
-	            			<span>PEOPLE</span>
-	            		</div>
-	        		</div>																								
-				</div>
-				<div class="k-b-headline">
-					WANTED: NEW LEADER & TEACHER FEATURES
-					
-					<span class="kbyline">by&nbsp<span class="k-b-link">LeiLani Cauthen</span></span>											
-				</div>														
-			</div>
-		</a>
 	</div>
 	
 </div>
@@ -804,51 +505,17 @@
 <div class="k-governcell ktop kbottom">	
 		
 	<div class="k-outercell kol2">
-		<a href="/archives/show?id=1008" class="k-link-a">
-			<div class="k-inner-cell" style="padding-top: 2px;">
-				
-				<div class="text_container b_container line-lead">
-					
-					<img src="../repository/article-educating-for-the-design.jpg" height="250" onerror="this.src='../altgraphics/error-300-200.png'">
-
-				</div>
-				<div class="k-b-headline">
-					Educating for the Design Economy
-					<div style="padding: 10px;">
-						<p style="font-family: KlavikaRegular;">
-						</p>
-					</div>
-					
-					<span class="kbyline">by&nbsp<span class="k-b-link">LeiLani Cauthen</span></span>											
-				</div>														
-			</div>
-		</a>		
-			
+		
+		<div id="26"></div>
+		
 	</div>
 		
 	<div class="k-cell-divider"></div>
 	
 	<div class="k-outercell kol2">
-		<a href="/archives/show?id=1001" class="k-link-a">
-			<div class="k-inner-cell" style="padding-top: 2px;">
-				
-				<div class="text_container b_container line-lead">
-					
-					<img src="../repository/article-amazon-large.jpg" height="250" alt="article-amazon-large.jpg" onerror="this.src='../altgraphics/error-300-200.png'">
-
-				</div>
-				<div class="k-b-headline-kol2">
-					Amazon Has the Most Education Apps
-					<div style="padding: 10px;">
-						<p style="font-family: KlavikaRegular;">
-							A look at the App Universe across Microsoft Windows, Amazon, Google Android and Apple’s iTunes
-						</p>
-					</div>
-					
-					<span class="kbyline">by&nbsp<span class="k-b-link">The LC Staff</span></span>											
-				</div>														
-			</div>
-		</a>	
+		
+		<div id="24"></div>
+		
 	</div>
 			
 </div>
@@ -947,6 +614,9 @@
 					
 			</div>			    
 			
+ <%= render 'archives/article' %>
+			
+			
 		</section>
 		</div>
 		
@@ -1041,5 +711,29 @@
 				$(this).children($('.k-cell-divider')).height(m);
 			});
 		});
+
+
+	// var get_file = "../archives/article.htm";
+// 
+	// $.get( get_file, function( data ) {
+		// $( "#render" ).html( data );
+	// });
+
 		
 	</script>
+
+
+<!-- <script>
+  
+	// var get_file = "../archives/article.htm";
+// 
+	// $(document).ready(function() {
+	// //$(window).load( function() {
+// 
+			// $.get( get_file, function( data ) {
+				// $( "#render" ).html( data );
+			// });
+// 		
+	// });
+  
+</script>		 -->

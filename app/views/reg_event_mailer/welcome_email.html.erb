@@ -2,25 +2,43 @@
 <html>
   <head>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    
+    <style>
+    	
+    	.main {
+    		font-family:Arial, Helvetica, sans-serif;
+    		font-size: 20px;
+    		color: black;
+    	}
+    	
+    	.links {
+    		font-family:Arial, Helvetica, sans-serif;
+    		font-size: 13px;
+    		color: brown;    		
+    	}
+    	
+    </style>
+    
   </head>
   <body>
 
-    <h1>Thank you for your events registration with The Learning Counsel</h1>
+  	<br>
+  	<br>
+    <span class="main">
+		THANK YOU for registering to attend a Learning Counsel event!  
+		<br>
+		You will receive another email confirming the details of the event venue 
+		<br>
+		you’ve signed up for, agenda, and what to expect.      	
+    	<br>
+    	We’re so exciting you’re attending!  See you there!
+    </span>
     <br>
-    <p>The information you gave us is as follows. If anything is incorrect, you may contact us and/or register again.</p>
     <br>
-    <p>First Name: <%= @reg_event.name_first %></p>
-    <p>Last Name: <%= @reg_event.name_last %></p>
-    <p>Title: <%= @reg_event.name_title %></p>
-    <p>Address: <%= @reg_event.address %></p>
-    <p>City: <%= @reg_event.city %></p>
-    <p>State: <%= @reg_event.state %></p>
-    <p>Zip: <%= @reg_event.zip %></p>
-    <p>Phone: <%= @reg_event.phone %></p>
-    <p>Email: <%= @reg_event.email %></p>    
-    <p>Institute or Company: <%= @reg_event.type_affiliation %></p>
-    <p>Name of Institute or Company: <%= @reg_event.name_affiliation %></p>
-    <p>Workshop City: <%= @reg_event.city_workshop %></p>
-    
+    <a href="mailto:cancelattendance@learningcounsel.com?Subject=Cancel Event Attendance" target="_top"><span class="links">To Cancel Attendance</span></a>
+   	<br>
+   	<br>
+    <a href="thelearningcounsel.com/privacy"><span class="links">Privacy Policy</span></a>
+
   </body>
 </html>

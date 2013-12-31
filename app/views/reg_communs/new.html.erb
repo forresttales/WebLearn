@@ -1,8 +1,9 @@
 
 <% provide(:title, 'Community Registration') %>
 
-<script src="/assets/jquery.validate.js"></script>
+	<script src="/assets/jquery.validate.js"></script>
 
+	<link rel="stylesheet" type="text/css" href="../styles/dropdown.css"/>
 					
 	<style>
 	
@@ -86,6 +87,60 @@
 		box-shadow: 0 0 25px #ccc;
 		-webkit-transform: scale(1.05);
 		-moz-transform: scale(1.05);
+
+		/*-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);*/
+		
+		-o-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		
+		/*-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-ms-transform: scale(1.05);*/		
+		
+		transform: scale(1.05);
+	}
+
+	.input-form-dropdown {
+		font-family: msyh;
+		font-size: 16px;
+		width: 310px;
+		height: 30px;
+		border-style:solid;
+		border-radius: 6px;
+		/*border-color: #13571F; green*/		
+		border-color: #005C9E; /*blue*/
+		
+		
+		border-width: 2px;
+		padding-left: 6px;
+		
+		-webkit-transition: all 0.5s ease-in-out;
+		-moz-transition: all 0.5s ease-in-out;
+		-o-transition: all 0.5s ease-in-out;
+		-ms-transition: all 0.5s ease-in-out;
+		transition: all 0.5s ease-in-out;
+		
+		text-decoration: none;
+	}
+
+	.input-form-dropdown:focus {
+		/*border-color: #97FF47;*/
+		
+		color: #fff;
+						
+		background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;						
+				
+		-webkit-box-shadow: 0 0 25px #ccc;
+		-moz-box-shadow: 0 0 25px #ccc;
+		box-shadow: 0 0 25px #ccc;
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
 		-webkit-transform: scale(1.05);
 		-moz-transform: scale(1.05);
 		-o-transform: scale(1.05);
@@ -99,7 +154,15 @@
 		-o-transform: scale(1.05);
 		-ms-transform: scale(1.05);
 		transform: scale(1.05);
+		
+		text-decoration: none;		
+		
+		outline: 0;
+		
 	}
+
+
+
 
 	div .error_label {
 	    display: none;
@@ -117,31 +180,10 @@
 		color: #FC7777;		
 	}
 
-	/*.input-form:invalid {
-		color: #851717;
-		background: url("/assets/submit_form_cancel.png") no-repeat 216px 7px;									
+	.select-errors {
+		color: #FC7777;
 	}
 
-	.input-form:error {
-		color: #851717;
-		background: url("/assets/submit_form_cancel.png") no-repeat 216px 7px;									
-	}
-
-	.input-form:required {
-		color: orange;		
-		background: url("/assets/submit_form_asterisk_orange.png") no-repeat 218px 7px;
-	}
-
-	.input-form:success {
-		color: #ACDDE3;		
-		background: url("/assets/submit_form_tick.png") no-repeat 218px 5px;
-	}
-	
-	.input-form:valid {
-		color: #ACDDE3;		
-		background: url("/assets/submit_form_tick.png") no-repeat 218px 5px;
-	}*/	
-	
 	.input-label {
 		font-family: msyh;
 		font-size: 16px;
@@ -149,45 +191,33 @@
 		height: 18px;
 	}
 
-	/*.input-label:focus {
-		color: #43B557;
-	}
-
-	.input-label:error {
-		color: #851717;
-	}
-
-	.input-label:required {
-		color: orange;		
-	}
-
-	.input-label:success {
-		color: orange;		
-	}*/		
-		
-		
-		
 		
 	.success {
 		color: #ACDDE3;		
-		background: url("/assets/submit_form_tick.png") no-repeat 278px 5px;		
+		background: url("/assets/submit_form_empty.png") no-repeat 278px 1px;		
 	}		
-	
+
 	.error {
-		/*color: #851717;*/		
 		color: #FC7777;
-		background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;		
-		border-color: #851717; 						
+		border-color: #851717; 								
+		background: url("/assets/submit_form_empty.png") no-repeat 278px 1px;		
 	}
 
 	.required {
-		color: orange;		
-		background: url("/assets/submit_form_asterisk_orange.png") no-repeat 278px 7px;
+		background: url("/assets/submit_form_empty.png") no-repeat 278px 1px;		
 	}
 	
-	/*.focus {
+	.focus {
 		color: #fff;
-	}*/
+		border-color: #005C9E;						
+		background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;								
+	}
+	
+	
+		
+	.unrequired {
+		background: url("/assets/submit_form_empty.png") no-repeat 278px 1px;		
+	}
 	
 	.error-label {
 		/*color: #851717;*/		
@@ -211,7 +241,7 @@
 		
 		
 	#join-image {
-		height: 1020px;
+		height: 2460px;
 	}
 		
 	div .cell-right-reg-commun {
@@ -243,23 +273,261 @@
 		vertical-align: bottom;
 		text-align: left;
 	}
+
+
+	div .cell-right-reg-commun-cb {
+		display: table-cell;
+		width: 430px;
+		text-align: left;
+		align: top;		
+	}
+
+	div .cell-error-reg-commun-cb {
+		display: inline-block;
+		width: 200px;
+		height: 18px;
+		vertical-align: bottom;
+		text-align: left;
+	}
 		
 	.message {
 		height: 120px;
 	}
 		
+	.button-border {
+		width: 480px; 
+		border-style: solid; 
+		border-width: 2px; 
+		border-color: #005C9E; 
+		border-radius: 6px; 
+		padding-right: 6px; 
+		padding-top: 6px; 
+		padding-bottom: 6px;
+	}
+		
+		
+		
+	#label_cb {
+		text-decoration: none;
+	}		
+	#label_cb:focus {
+		text-decoration: underline;
+		/*color:#FF9900;*/		
+		color: #FFF480;		
+		outline: none;
+	}		
+	
+	.radio-errors {
+		color: #FC7777;
+	}
+	.cb-errors {
+		color: #FC7777;
+		font-family: msyh;
+		font-size: 14px;
+		font-weight: 400;
+	}
+
+	div .cell-error-reg-commun {
+		display: inline-block;
+		width: 300px;
+		height: 18px;
+		vertical-align: bottom;
+		text-align: left;
+	}
+
+	input[type=checkbox] {
+	    display:none;
+	}			
+	input[type=radio] {
+	    display:none;
+	}			
+
+	.rd-button {
+		width: 20px;
+		height: 20px; 
+		border-style: solid; 
+		border-width: 2px; 
+		border-color: #005C9E; 
+		border-radius: 20px;		
+		margin-bottom: -4px;
+		display: inline-block;
+		margin-right: 6px;
+	}
+	
+	.cb-button {
+		width: 20px;
+		height: 21px; 
+		border-style: solid; 
+		border-width: 2px; 
+		border-color: #005C9E; 
+		border-radius: 6px;		
+		margin-bottom: -4px;
+		display: inline-block;
+		margin-right: 6px;
+	}
+
+	.cb-button-test {
+		width: 20px;
+		height: 21px; 
+		border-style: solid; 
+		border-width: 2px; 
+		border-color: #005C9E; 
+		border-radius: 6px;		
+		margin-bottom: -4px;
+		margin-right: 6px;
+	}
+
+	.rd-background {
+		background-image: url("/assets/radio_tick.png");		
+		background-repeat: no-repeat;
+		background-position: 2px 2px;
+	}	
+
+	.cb-background {
+		background-image: url("/assets/checkbox_tick.png");		
+		background-repeat: no-repeat;
+		background-position: 2px 3px;
+	}	
+				
+	.cb-spacer {
+		height: 20px;
+	}
+
+	.cb-align {
+		vertical-align: top;
+	}		
+	
+	.cb-pad {
+		padding-top: 5px;		
+	}
+
+
 	</style>					
 					
+	<style type="text/css">
+		/*#cb-align-1 {
+			vertical-align: top !important;
+		}*/
+		
+				
+				
+	</style>					
 					
+	<style>
+		
+		.commun p {
+			font-family: msyh; 
+			font-size: 16px;
+			color: #005187;"
+		}
+		
+	</style>
+					
+	<script id="dropdown-data1-selected" type="text/x-dot-template">
+		{{=it.label}}<i>&darr;</i>
+	</script>
+	
+	<script id="dropdown-data1" type="text/x-dot-template">
+		<div class="dropdown1" id="dropdown1" tabindex="22" style="z-index: 90">
+		    <div class="selected">{{=it.selected.label}}<i>&darr;</i></div>
+		    <ul>
+		        {{~it.items :item:index}}
+		        <li data-index="{{=index}}">{{=item.label}}</li>
+		        {{~}}
+		    </ul>
+		</div>
+	</script>		
 
-<div class="linkback">
-	<%= link_to '&laquo;'.html_safe + 'Back', :back, :class => "link-back" %>
-</div>
+	<script id="dropdown-data2-selected" type="text/x-dot-template">
+		{{=it.label}}<i>&darr;</i>
+	</script>
+	
+	<script id="dropdown-data2" type="text/x-dot-template">
+		<div class="dropdown2" id="dropdown2" tabindex="23" style="z-index: 80">
+		    <div class="selected">{{=it.selected.label}}<i>&darr;</i></div>
+		    <ul>
+		        {{~it.items :item:index}}
+		        <li data-index="{{=index}}">{{=item.label}}</li>
+		        {{~}}
+		    </ul>
+		</div>
+	</script>		
 
+	<script id="dropdown-data3-selected" type="text/x-dot-template">
+		{{=it.label}}<i>&darr;</i>
+	</script>
+	
+	<script id="dropdown-data3" type="text/x-dot-template">
+		<div class="dropdown3" id="dropdown3" tabindex="24" style="z-index: 70">
+		    <div class="selected">{{=it.selected.label}}<i>&darr;</i></div>
+		    <ul>
+		        {{~it.items :item:index}}
+		        <li data-index="{{=index}}">{{=item.label}}</li>
+		        {{~}}
+		    </ul>
+		</div>
+	</script>		
+					
+	<!-- <style>
+	
+		body {
+			font-family: tahoma, ariel, sans-serif;
+			letter-spacing: 0.1em;
+			color: #444;
+		}
+		
+						
+		.styledRadio, .styledCheckbox {
+			display: inline-block;
+		}
+		
+		.example {
+			padding: 50px 0 0 20px;
+		}
+		
+		label {
+			line-height: 43px;
+			font-size: 20px;
+			vertical-align: 14px;
+			padding-right: 20px;
+		}
+		
+		button{
+			display: block;
+		}
+	
+	</style> -->					
+	
+	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="/assets/jquery.screwdefaultbuttonsV2.js"></script>
+						
+	<script type="text/javascript">
+		
+		$(function(){
+		
+			$('input:radio').screwDefaultButtons({
+				image: 'url("/assets/radioSmall.png")',
+				width: 43,
+				height: 43
+			});
+			
+			$('input:checkbox').screwDefaultButtons({
+				image: 'url("/assets/checkboxSmall.jpg")',
+				width: 43,
+				height: 43
+			});
+			
+		});
+		
+	</script> -->
+	
+		
 <div style="width: 1000px; margin-right: auto; margin-left: auto; background: #fff;">
 		
 	<header>					
-    	     	
+    	     	    	     	
+			<%= render 'share/backtotop_2' %>
+
     	<!-- <div class="shadow" style="position: relative; z-index: +2;"> -->    		
 			
 			<!-- <div style="height: 40px;"> -->
@@ -277,13 +545,30 @@
 								
 				<div class="row">
 					
-					<div class="cell-100" style="padding-left: 24px;">
-			  			<img src="../repository/form-welcome.png" alt="form-welcome.png" height="150px" >
-			  		</div>
-					
-					<div class="cell-600">
-						<h2 style="font-family: msyh; color: #005187;">Join our eNewsletter, get invitations to events, and get<br >
-							the first peek at EdMatchUp with Beta in 2014 !</h2>
+					<div class="cell-100percent">
+						<div class="commun">							
+							<p>
+								HELLO!  You are at this page to opt-in to be a part of making all things about digital curriculum better.  
+								By opting in you agree that we can send you special emails to periodically survey you about things happening 
+								in the industry, your opinions on best approaches, and more.  We'll share a cut of the data back with you in a 
+								report via email.  That way you also know what hundreds of your peers are thinking about the same things.  
+							</p>
+							<br>
+							<img src="../repository/form-welcome.png" alt="form-welcome.png" height="164px" style="float: left;" >
+							<p>
+								The LC Community membership is restricted to United States residents 18 years and older. All personally 
+								identifiable information that you provide will be kept strictly confidential and used only for legitimate 
+								research purposes. You will never be solicited and your personal information will not be released to any other 
+								companies or organizations. Invitation to join the LC Exchange is currently opened only for U.S. education sector, 
+								public or private school employees.
+							</p>
+							<br>
+							<p>
+								Occasionally there may be a Survey that offers some sort of give-away.  You can tell us your options on how 
+								you would like that or opt out.  You'll also be our special invite to our annual Gathering event, our invitation-only 
+								premier national get-together for members of this community where you can see each other face to face!
+							</p>
+						</div>
 					</div>
 					<!-- <p>
 						<button class="btn blue small">Join</button>
@@ -293,8 +578,9 @@
 					</p> -->											
 				</div>
 
-				<div class="row" style="height: 30px;">
-				</div>
+				<a name="anchor1"></a>    		      		     		
+
+				<div class="row" style="height: 30px;"></div>
 				
 			</div>
 			
@@ -314,6 +600,7 @@
 	
 	<section>
 
+
 	<div id="join-image" class="shadow-inset">
 
 		
@@ -325,6 +612,7 @@
  			
     		  <!-- form_for(@user, :id => "join_form", :url => {:controller => "users", :action => "create"}) do |f|  -->
     		      		     		
+    		      		     		    		      		     		
 			<%= form_for( @reg_commun, :html => {:id => "form_join"}) do |f| %> 
 			  			 
 			<!-- = render 'shared/error_messages', object: f.object -->
@@ -343,12 +631,12 @@
 			<!--name_first-->
 			<div class="row">
 				<div class="cell-left-reg-commun">
-					<%= f.label(:name_first, "Name", :class => 'input-label required-label', :id => 'label_reg_commun_name_first') %>
+					<%= f.label(:name_first, "First Name", :class => 'input-label required-label', :id => 'label_reg_commun_name_first') %>
 				</div>
 				<div class="cell-right-reg-commun">
 					 <%= f.text_field(:name_first, :class => "input-form required", :placeholder => 'First Name', :tabindex => '2') %>					 
 				</div>
-				<div class="cell-error-reg-commun"><p id="error_reg_commun_name_first"></p></div>      					   
+				<div class="cell-error-reg-commun" id="state_reg_commun_name_first"><p id="error_reg_commun_name_first"></p></div>      					   
 			</div>      		
 
 			<div class="input-form-spacer"></div>
@@ -360,19 +648,19 @@
 				<div class="cell-right-reg-commun">
 					 <%= f.text_field(:name_last, :class => "input-form required", :placeholder => 'Last Name', :tabindex => '3') %>					 
 				</div>
-				<div class="cell-error-reg-commun"><p id="error_reg_commun_name_first"></p></div>      					   
+				<div class="cell-error-reg-commun" id="state_reg_commun_name_last"><p id="error_reg_commun_name_last"></p></div>      					   
 			</div>      		
 
 			<div class="input-form-spacer"></div>
 			<!--name_title-->
 			<div class="row">
 				<div class="cell-left-reg-commun">
-					<%= f.label(:name_title, "Name", :class => 'input-label required-label', :id => 'label_reg_commun_name_title') %>
+					<%= f.label(:name_title, "Title", :class => 'input-label required-label', :id => 'label_reg_commun_name_title') %>
 				</div>
 				<div class="cell-right-reg-commun">
 					 <%= f.text_field(:name_title, :class => "input-form required", :placeholder => 'Title', :tabindex => '4') %>					 
 				</div>
-				<div class="cell-error-reg-commun"><p id="error_reg_commun_name_title"></p></div>      					   
+				<div class="cell-error-reg-commun" id="state_reg_commun_name_title"><p id="error_reg_commun_name_title"></p></div>      					   
 			</div>      		
 
 			<div class="input-form-spacer"></div>
@@ -384,21 +672,56 @@
 				<div class="cell-right-reg-commun">
 					 <%= f.text_field(:name_affiliation, :class => "input-form required", :placeholder => 'Affiliation Name', :tabindex => '5') %>					 
 				</div>
-				<div class="cell-error-reg-commun"><p id="error_reg_commun_name_affiliation"></p></div>      					   
+				<div class="cell-error-reg-commun" id="state_reg_commun_name_affiliation"><p id="error_reg_commun_name_affiliation"></p></div>      					   
 			</div>      		
 
+
+
+			<div class="input-form-spacer"></div>
 			<div class="input-form-spacer"></div>
 			<!--public_private-->
 			<div class="row">
 				<div class="cell-left-reg-commun">
-					<%= f.label(:public_private, "Public or Private", :class => 'input-label required-label', :id => 'label_reg_commun_public_private') %>
+					
+					 <%= f.label(:public_private, "Public or Private", :class => 'input-label required-label', :id => 'label_reg_commun_public_private') %>
+					 					
 				</div>
-				<div class="cell-right-reg-commun">
-					 <%= f.text_field(:public_private, :class => "input-form required", :placeholder => 'Public or Private', :tabindex => '6') %>					 
+				
+				<div class="button-border" id="border_public_private" style="width: 300px; display: table-cell;">
+					
+					<div class="cell-right-reg-commun">
+
+						<div style="display: inline-block; width: 40px;"></div>						
+							<div id="rd_public_private_public" class="rd-button"></div>
+							<%= f.radio_button(:public_private, 'public') %>
+							<label id="label_public_private_public" class="input-label required-label" for="public_private_public" onclick="rd_public_private('public');" tabindex="6">Public</label>
+							 
+							 <!-- f.label(:public_private_public, "Public", :id => 'label_public', :class => "input-label required-label", :tabindex => '6')  -->
+							 
+						<div style="display: inline-block; width: 30px;"></div>
+							<div id="rd_public_private_private" class="rd-button"></div>						
+							<%= f.radio_button(:public_private, 'private') %>
+							<label id="label_public_private_private" class="input-label required-label" for="public_private_private" onclick="rd_public_private('private');" tabindex="7">Private</label>
+
+							 <!-- f.label(:public_private_private, "Private", :id => 'label_private', :class => "input-label required-label", :tabindex => '7')  -->
+						
+							<!-- <input checked="checked" id="public_private_public" name="public_private" type="radio" value="public" />
+							<label id="label_public" class="input-label required-label" for="public_private_public" onclick="radio_public();" tabindex="6">Public</label>
+							<div style="display: inline-block; width: 30px;"></div>
+							<input checked="checked" id="public_private_private" name="public_private" type="radio" value="private" />
+							<label id="label_private" class="input-label required-label" for="public_private_private" onclick="radio_private();" tabindex="7">Private</label>						 -->
+												 					 
+					</div>
+					
 				</div>
-				<div class="cell-error-reg-commun"><p id="error_reg_commun_public_private"></p></div>      					   
+				<div style="display: table-cell; padding-left: 20px; padding-bottom: 4px;">
+					<div class="cell-error-reg-commun" id="state_reg_commun_public_private"><p id="error_reg_commun_public_private" class="radio-errors"></p></div>
+				</div>
 			</div>      		
 
+
+
+			<div class="input-form-spacer"></div>
 			<div class="input-form-spacer"></div>
 			<!--address-->
 			<div class="row">
@@ -406,9 +729,9 @@
 					<%= f.label(:address, "Address", :class => 'input-label required-label', :id => 'label_reg_commun_address') %>
 				</div>
 				<div class="cell-right-reg-commun">
-					 <%= f.text_field(:address, :class => "input-form required", :placeholder => 'Address', :tabindex => '7') %>					 
+					 <%= f.text_field(:address, :class => "input-form required", :placeholder => 'Address', :tabindex => '8') %>					 
 				</div>
-				<div class="cell-error-reg-commun"><p id="error_reg_commun_address"></p></div>      					   
+				<div class="cell-error-reg-commun" id="state_reg_commun_address"><p id="error_reg_commun_address"></p></div>      					   
 			</div>      		
 
 			<div class="input-form-spacer"></div>
@@ -418,9 +741,9 @@
 					<%= f.label(:city, "City", :class => 'input-label required-label', :id => 'label_reg_commun_city') %>
 				</div>
 				<div class="cell-right-reg-commun">
-					 <%= f.text_field(:city, :class => "input-form required", :placeholder => 'City', :tabindex => '8') %>					 
+					 <%= f.text_field(:city, :class => "input-form required", :placeholder => 'City', :tabindex => '9') %>					 
 				</div>
-				<div class="cell-error-reg-commun"><p id="error_reg_commun_city"></p></div>      					   
+				<div class="cell-error-reg-commun" id="state_reg_commun_city"><p id="error_reg_commun_city"></p></div>      					   
 			</div>      		
 
 			<div class="input-form-spacer"></div>
@@ -430,9 +753,9 @@
 					<%= f.label(:state, "State", :class => 'input-label required-label', :id => 'label_reg_commun_state') %>
 				</div>
 				<div class="cell-right-reg-commun">
-					 <%= f.text_field(:state, :class => "input-form required", :placeholder => 'State', :tabindex => '9') %>					 
+					 <%= f.text_field(:state, :class => "input-form required", :placeholder => 'State', :tabindex => '10') %>					 
 				</div>
-				<div class="cell-error-reg-commun"><p id="error_reg_commun_state"></p></div>      					   
+				<div class="cell-error-reg-commun" id="state_reg_commun_state"><p id="error_reg_commun_state"></p></div>      					   
 			</div>      		
 
 			<div class="input-form-spacer"></div>
@@ -442,9 +765,9 @@
 					<%= f.label(:zip, "Zip", :class => 'input-label required-label', :id => 'label_reg_commun_zip') %>
 				</div>
 				<div class="cell-right-reg-commun">
-					 <%= f.text_field(:zip, :class => "input-form required", :placeholder => 'Zip', :tabindex => '10') %>					 
+					 <%= f.text_field(:zip, :class => "input-form required", :placeholder => 'Zip', :tabindex => '11') %>					 
 				</div>
-				<div class="cell-error-reg-commun"><p id="error_reg_commun_zip"></p></div>      					   
+				<div class="cell-error-reg-commun" id="state_reg_commun_zip"><p id="error_reg_commun_zip"></p></div>      					   
 			</div>      		
 
 			<div class="input-form-spacer"></div>
@@ -454,9 +777,9 @@
 					<%= f.label(:phone, "Phone", :class => 'input-label required-label', :id => 'label_reg_commun_phone') %>
 				</div>
 				<div class="cell-right-reg-commun">
-					 <%= f.text_field(:phone, :class => "input-form required", :placeholder => 'Phone', :tabindex => '11') %>					 
+					 <%= f.text_field(:phone, :class => "input-form required", :placeholder => 'Phone', :tabindex => '12') %>					 
 				</div>
-				<div class="cell-error-reg-commun"><p id="error_reg_commun_phone"></p></div>      					   
+				<div class="cell-error-reg-commun" id="state_reg_commun_phone"><p id="error_reg_commun_phone"></p></div>      					   
 			</div>      		
 
 			<div class="input-form-spacer"></div>
@@ -466,70 +789,520 @@
 					<%= f.label(:email, "Email", :class => 'input-label required-label', :id => 'label_reg_commun_email') %>
 				</div>
 				<div class="cell-right-reg-commun">
-					<%= f.text_field(:email, :class => "input-form required", :placeholder => 'email@example.com', :tabindex => '12' ) %>
+					<%= f.text_field(:email, :class => "input-form required", :placeholder => 'email@example.com', :tabindex => '13' ) %>
 				</div>
-				<div class="cell-error-reg-commun"><p id="error_reg_commun_email"></p></div>      	
+				<div class="cell-error-reg-commun" id="state_reg_commun_email"><p id="error_reg_commun_email"></p></div>      	
 			</div>      		
 
+
+			<!--level
+			Federal- level
+			State- level
+			Regional Authority level
+			District or Campus level senior management
+			Department level within management offices
+			School level senior management
+			Department within school or Classroom level
+			f.text_field(:level, :class => "input-form required", :placeholder => 'Level', :tabindex => '13')  -->					 
+
+
+			<!-- level start -->
 			<div class="input-form-spacer"></div>
-			<!--level-->
+			<div class="input-form-spacer"></div>
+			
 			<div class="row">
 				<div class="cell-left-reg-commun">
-					<%= f.label(:level, "Level", :class => 'input-label required-label', :id => 'label_reg_commun_level') %>
+					 <!-- f.label(:level, "Level", :class => 'input-label required-label', :id => 'label_reg_commun_level')  -->					
+					<label class="input-label required-label"><br><br>Level</label>
 				</div>
-				<div class="cell-right-reg-commun">
-					 <%= f.text_field(:level, :class => "input-form required", :placeholder => 'Level', :tabindex => '13') %>					 
+				
+				<div id="border_level" class="button-border" style="width: 416px;">
+					<div class="cell-right-reg-commun-cb">
+
+						<div style="height: 2px;"></div>
+						<div style="margin-left: 20px;">
+							
+							<table id="table1" class="cb-table">
+								<tr class="cb-spacer"></tr>								
+								<tr>
+									<td>
+										<div id="cb_level_1" class="cb-button-test"></div>
+										<%= f.check_box :level_1 %>
+									</td>
+									<td>
+										<label id="label_level_1" class="input-label required-label label_cb" for="level_1" onclick="cb_level('1');" tabindex="14">Federal level</label>
+									</td>									
+								</tr>
+								<tr class="cb-spacer"></tr>
+								<tr>
+									<td>
+										<div id="cb_level_2" class="cb-button"></div>
+										<%= f.check_box :level_2 %>
+									</td>
+									<td>
+										<label id="label_level_2" class="input-label required-label label_cb" for="level_2" onclick="cb_level('2');" tabindex="15">State level</label>
+									</td>									
+								</tr>
+								<tr class="cb-spacer"></tr>
+								<tr>
+									<td>
+										<div id="cb_level_3" class="cb-button"></div>
+										<%= f.check_box(:level_3) %>
+									</td>
+									<td>
+										<label id="label_level_3" class="input-label required-label label_cb" for="level_3" onclick="cb_level('3');" tabindex="16">Regional Authority level</label>
+									</td>									
+								</tr>
+								<tr class="cb-spacer"></tr>
+								<tr>
+									<td>
+										<div id="cb_level_4" class="cb-button"></div>
+										<%= f.check_box(:level_4) %>
+									</td>
+									<td>
+										<label id="label_level_4" class="input-label required-label label_cb" for="level_4" onclick="cb_level('4');" tabindex="17">District or Campus level senior management</label>
+									</td>									
+								</tr>
+								<tr class="cb-spacer"></tr>
+								<tr>
+									<td>
+										<div id="cb_level_5" class="cb-button"></div>
+										<%= f.check_box(:level_5) %>
+									</td>
+									<td>
+										<label id="label_level_5" class="input-label required-label label_cb" for="level_5" onclick="cb_level('5');" tabindex="18">Department level within managment offices</label>
+									</td>									
+								</tr>
+								<tr class="cb-spacer"></tr>
+								<tr>
+									<td>
+										<div id="cb_level_6" class="cb-button"></div>
+										<%= f.check_box(:level_6) %>
+									</td>
+									<td>
+										<label id="label_level_6" class="input-label required-label label_cb" for="level_6" onclick="cb_level('6');" tabindex="19">School level senior management</label>
+									</td>									
+								</tr>
+								<tr class="cb-spacer"></tr>
+								<tr>
+									<td>
+										<div id="cb_level_7" class="cb-button"></div>
+										<%= f.check_box(:level_7) %>
+									</td>
+									<td>
+										<label id="label_level_7" class="input-label required-label label_cb" for="level_7" onclick="cb_level('7');" tabindex="20">Department within School or Classroom level</label>
+									</td>									
+								</tr>
+								<tr class="cb-spacer"></tr>
+							</table>
+							
+						</div>
+							 						
+						<div style="height: 22px;"></div>						
+						<div style="margin-left: 20px;">
+							<label class="input-label required-label">OTHER:</label>
+							<div style="height: 6px;"></div>
+							<%= f.text_field(:level_other, :class => "input-form unrequired", :placeholder => 'OTHER', :tabindex => '21') %>					 
+						</div>
+						<div style="height: 16px;"></div>
+												
+					</div>
 				</div>
-				<div class="cell-error-reg-commun"><p id="error_reg_commun_level"></p></div>      					   
+				
+				<div style="display: table-cell; padding-left: 20px;">
+					<div style="display: table;">
+						<div style="display: table-row; height: 16px;"></div>
+						<div style="display: table-row;">
+							<div style="display: table-cell;">
+
+								<div class="cell-error-reg-commun-cb" id="state_reg_commun_level">
+									<p id="error_reg_commun_level" class="cb-errors"></p>
+								</div>      
+								
+							</div>							
+						</div>
+					</div>
+				</div>
+				
 			</div>      		
+			<!-- level end -->
 
 			<div class="input-form-spacer"></div>
+			<div class="input-form-spacer"></div>
+
 			<!--institution_size-->
 			<div class="row">
+				
 				<div class="cell-left-reg-commun">
-					<%= f.label(:institution_size, "Institution Size", :class => 'input-label required-label', :id => 'label_reg_commun_institution_size') %>
+					<%= f.label(:institution_size, :class => 'input-label required-label', :id => 'label_reg_commun_institution_size') do %>
+						Please characterize your<br>institution by size:
+					<% end %>
 				</div>
 				<div class="cell-right-reg-commun">
-					 <%= f.text_field(:institution_size, :class => "input-form required", :placeholder => 'Institution Size', :tabindex => '14') %>					 
+
+					<select name="reg_commun[institution_size]" id="reg_commun_institution_size" class="" style="display: none;" data-template="#dropdown-data1">
+					    <option value="0" selected="selected" id="option-default">-Size of Institution-</option>	
+					    <option value="1">Less than 2,000 students</option>
+					    <option value="2">2,000-3,999 students</option>
+					    <option value="3">4,000-5,999 students</option>
+					    <option value="4">6,000-7,999 students</option>
+					    <option value="5">8,000-10,000 students</option>
+					    <option value="6">Greater than 10,000 students</option>
+					    <option value="7">Don’t know</option>
+					</select>										
+
 				</div>
-				<div class="cell-error-reg-commun"><p id="error_reg_commun_institution_size"></p></div>      					   
+				<div class="cell-error-reg-commun" id="state_reg_commun_institution_size"><p id="error_reg_commun_institution_size" class="select-errors"></p></div>
+			</div>      		
+			
+			<div class="input-form-spacer"></div>
+
+			<div class="row">
+				
+				<div class="cell-left-reg-commun">
+					<%= f.label(:employee_number, :class => 'input-label required-label', :id => 'label_reg_commun_employee_number') do %>
+						Please characterize the<br>number of employees:
+					<% end %>
+				</div>
+				<div class="cell-right-reg-commun">
+
+					<!-- 
+					Less than 500 employees
+					500-999 employees
+					1,000-2,999 employees
+					3,000-5,999 employees
+					6,000-8,999 employees
+					9,000+ employees
+					Don’t know 
+					-->
+
+					<select name="reg_commun[employee_number]" id="reg_commun_employee_number" class="" style="display: none;" data-template="#dropdown-data2">
+					    <option value="0" selected="selected" id="option-default">-Number of Employees-</option>	
+					    <option value="1">Less than 500 employees</option>
+					    <option value="2">500-999 employees</option>
+					    <option value="3">1,000-2,999 employees</option>
+					    <option value="4">3,000-5,999 employees</option>
+					    <option value="5">6,000-8,999 employees</option>
+					    <option value="6">9,000+ employees</option>
+					</select>										
+
+				</div>
+				<div class="cell-error-reg-commun" id="state_reg_commun_employee_number"><p id="error_reg_commun_employee_number" class="select-errors"></p></div>
+			</div>      		
+			
+			<div class="input-form-spacer"></div>
+			
+			<div class="row">
+				<div class="cell-left-reg-commun">
+					<%= f.label(:characterize_decision, :class => 'input-label required-label', :id => 'label_reg_commun_characterize_decision') do %>
+						Please characterize decision<br>making status:
+					<% end %>
+				</div>
+				<div class="cell-right-reg-commun">
+
+					<!-- 
+					Influencer
+					Recommender
+					Decision Maker
+					Budget Officer
+					None of the above 
+					-->
+
+					<select name="reg_commun[characterize_decision]" id="reg_commun_characterize_decision" class="" style="display: none;" data-template="#dropdown-data3">
+					    <option value="0" selected="selected" id="option-default">-Sphere of Influence-</option>	
+					    <option value="1">Influencer</option>
+					    <option value="2">Recommender</option>
+					    <option value="3">Decision Maker</option>
+					    <option value="4">Budget Officer</option>
+					    <option value="5">None of the above</option>
+					</select>										
+
+				</div>
+				<div class="cell-error-reg-commun" id="state_reg_commun_characterize_decision"><p id="error_reg_commun_characterize_decision" class="select-errors"></p></div>      					   
 			</div>      		
 
 			<div class="input-form-spacer"></div>
-			<!--characterize_decision-->
+
+
+
+			<!-- characterize area start -->
+			<div class="input-form-spacer"></div>
+			<div class="input-form-spacer"></div>
+			
 			<div class="row">
 				<div class="cell-left-reg-commun">
-					<%= f.label(:characterize_decision, "Characterize Decision", :class => 'input-label required-label', :id => 'label_reg_commun_characterize_decision') %>
+					 <!-- f.label(:level, "Level", :class => 'input-label required-label', :id => 'label_reg_commun_level')  -->					
+					<label class="input-label required-label"><br><br>Please characterize your area<br>(select all that apply):</label>
 				</div>
-				<div class="cell-right-reg-commun">
-					 <%= f.text_field(:characterize_decision, :class => "input-form required", :placeholder => 'Characterize Decision', :tabindex => '15') %>					 
+				
+				<div id="border_characterize_area" class="button-border" style="width: 416px;">
+					<div class="cell-right-reg-commun-cb">
+
+						<div style="height: 2px;"></div>
+						<div style="margin-left: 20px;">
+							
+							<!-- 
+							1 Mostly overall administration
+							2 Some overall administration
+							3 Mostly curriculum management
+							4 Some overall curriculum management
+							5 Mostly technical management (devices, networks, programming, storage, back-end system maintenance, telecom services, etc.)
+							6 Some technical management
+							7 Mostly instructional design
+							8 Some instructional design
+							9 Mostly procurement
+							10 Some procurement
+							11 Other
+							-->
+							<table id="table1" class="cb-table">
+								<tr class="cb-spacer"></tr>								
+								<tr>
+									<td>
+										<div id="cb_characterize_area_1" class="cb-button"></div>
+										<%= f.check_box :characterize_area_1 %>
+									</td>
+									<td>
+										<label id="label_characterize_area_1" class="input-label required-label label_cb" for="characterize_area_1" onclick="cb_characterize_area('1');" tabindex="25">Mostly overall administration</label>
+									</td>									
+								</tr>
+								<tr class="cb-spacer"></tr>
+								<tr>
+									<td>
+										<div id="cb_characterize_area_2" class="cb-button"></div>
+										<%= f.check_box :characterize_area_2 %>
+									</td>
+									<td>
+										<label id="label_characterize_area_2" class="input-label required-label label_cb" for="characterize_area_2" onclick="cb_characterize_area('2');" tabindex="26">Some overall administration</label>
+									</td>									
+								</tr>
+								<tr class="cb-spacer"></tr>
+								<tr>
+									<td>
+										<div id="cb_characterize_area_3" class="cb-button"></div>
+										<%= f.check_box :characterize_area_3 %>
+									</td>
+									<td>
+										<label id="label_characterize_area_3" class="input-label required-label label_cb" for="characterize_area_3" onclick="cb_characterize_area('3');" tabindex="27">Mostly curriculum management</label>
+									</td>									
+								</tr>
+								<tr class="cb-spacer"></tr>								
+								<tr>
+									<td>
+										<div id="cb_characterize_area_4" class="cb-button"></div>
+										<%= f.check_box :characterize_area_4 %>
+									</td>
+									<td>
+										<label id="label_characterize_area_4" class="input-label required-label label_cb" for="characterize_area_4" onclick="cb_characterize_area('4');" tabindex="28">Some overall curriculum management</label>
+									</td>									
+								</tr>
+								<tr class="cb-spacer"></tr>								
+								<tr>
+									<td class="cb-align">
+										<div id="cb_characterize_area_5" class="cb-button"></div>
+										<%= f.check_box :characterize_area_5 %>
+									</td>
+									<td class="cb-pad">
+										<label id="label_characterize_area_5" class="input-label required-label label_cb" for="characterize_area_5" onclick="cb_characterize_area('5');" tabindex="29">
+											Mostly technical management (devices, networks, programming, storage, back-end system maintenance, telecom services, etc.)
+										</label>
+									</td>									
+								</tr>
+								<tr class="cb-spacer"></tr>								
+								<tr>
+									<td>
+										<div id="cb_characterize_area_6" class="cb-button"></div>
+										<%= f.check_box :characterize_area_6 %>
+									</td>
+									<td>
+										<label id="label_characterize_area_6" class="input-label required-label label_cb" for="characterize_area_6" onclick="cb_characterize_area('6');" tabindex="30">Some technical management</label>
+									</td>									
+								</tr>
+								<tr class="cb-spacer"></tr>								
+								<tr>
+									<td>
+										<div id="cb_characterize_area_7" class="cb-button"></div>
+										<%= f.check_box :characterize_area_7 %>
+									</td>
+									<td>
+										<label id="label_characterize_area_7" class="input-label required-label label_cb" for="characterize_area_7" onclick="cb_characterize_area('7');" tabindex="31">Mostly instructional design</label>
+									</td>									
+								</tr>
+								<tr class="cb-spacer"></tr>								
+								<tr>
+									<td>
+										<div id="cb_characterize_area_8" class="cb-button"></div>
+										<%= f.check_box :characterize_area_8 %>
+									</td>
+									<td>
+										<label id="label_characterize_area_8" class="input-label required-label label_cb" for="characterize_area_8" onclick="cb_characterize_area('8');" tabindex="32">Some instructional design</label>
+									</td>									
+								</tr>
+								<tr class="cb-spacer"></tr>								
+								<tr>
+									<td>
+										<div id="cb_characterize_area_9" class="cb-button"></div>
+										<%= f.check_box :characterize_area_9 %>
+									</td>
+									<td>
+										<label id="label_characterize_area_9" class="input-label required-label label_cb" for="characterize_area_9" onclick="cb_characterize_area('9');" tabindex="33">Mostly procurement</label>
+									</td>									
+								</tr>
+								<tr class="cb-spacer"></tr>								
+								<tr>
+									<td>
+										<div id="cb_characterize_area_10" class="cb-button"></div>
+										<%= f.check_box :characterize_area_10 %>
+									</td>
+									<td>
+										<label id="label_characterize_area_10" class="input-label required-label label_cb" for="characterize_area_10" onclick="cb_characterize_area('10');" tabindex="34">Some procurement</label>
+									</td>									
+								</tr>
+							</table>
+						</div>
+						
+						<div style="height: 22px;"></div>						
+						<div style="margin-left: 20px;">
+							<label class="input-label required-label">OTHER:</label>
+							<div style="height: 6px;"></div>
+							<%= f.text_field(:characterize_area_other, :class => "input-form unrequired", :placeholder => 'OTHER', :tabindex => '35') %>					 
+						</div>
+						<div style="height: 16px;"></div>
+												
+					</div>
 				</div>
-				<div class="cell-error-reg-commun"><p id="error_reg_commun_characterize_decision"></p></div>      					   
+				
+				<div style="display: table-cell; padding-left: 20px;">
+					<div style="display: table;">
+						<div style="display: table-row; height: 16px;"></div>
+						<div style="display: table-row;">
+							<div style="display: table-cell;">
+
+								<div class="cell-error-reg-commun-cb" id="state_reg_commun_characterize_area">
+									<p id="error_reg_commun_characterize_area" class="cb-errors"></p>
+								</div>      
+								
+							</div>							
+						</div>
+					</div>
+				</div>
+				
 			</div>      		
 
+			<!-- characterize area end -->
+
+
+
+			<!-- survey preferences start -->
 			<div class="input-form-spacer"></div>
-			<!--characterize_area-->
+			<div class="input-form-spacer"></div>
+			
 			<div class="row">
 				<div class="cell-left-reg-commun">
-					<%= f.label(:characterize_area, "Characterize Area", :class => 'input-label required-label', :id => 'label_reg_commun_characterize_area') %>
+					 <!-- f.label(:level, "Level", :class => 'input-label required-label', :id => 'label_reg_commun_level')  -->					
+					<label class="input-label required-label"><br><br>Please let us know your<br>preference for surveys that<br>may make special offers:</label>
 				</div>
-				<div class="cell-right-reg-commun">
-					 <%= f.text_field(:characterize_area, :class => "input-form required", :placeholder => 'Characterize Area', :tabindex => '16') %>					 
+				
+				<div id="border_survey_preferences" class="button-border" style="width: 416px;">
+					<div class="cell-right-reg-commun-cb">
+
+						<div style="height: 2px;"></div>
+						<div style="margin-left: 20px;">
+							
+							<!-- 
+							1 Individual Amazon or iTunes gift cards
+							2 Institutional Amazon or iTunes gift cards
+							3 Institution named-charity
+							4 Accrue my give-away for the LC’s scholarship fund for poorer schools or districts to be able to travel and attend the Gathering annual event
+							5 Opt-out of any contests or give-aways 
+							-->
+
+							<table class="cb-table">
+								<tr class="cb-spacer"></tr>								
+								<tr>
+									<td>
+										<div id="cb_survey_preferences_1" class="cb-button"></div>
+										<%= f.check_box :survey_preferences_1 %>
+									</td>
+									<td>
+										<label id="label_survey_preferences_1" class="input-label required-label label_cb" for="survey_preferences_1" onclick="cb_survey_preferences('1');" tabindex="36">Individual Amazon or iTunes gift cards</label>
+									</td>									
+								</tr>
+								<tr class="cb-spacer"></tr>								
+								<tr>
+									<td>
+										<div id="cb_survey_preferences_2" class="cb-button"></div>
+										<%= f.check_box :survey_preferences_2 %>
+									</td>
+									<td>
+										<label id="label_survey_preferences_2" class="input-label required-label label_cb" for="survey_preferences_2" onclick="cb_survey_preferences('2');" tabindex="37">Institutional Amazon or iTunes gift cards</label>
+									</td>									
+								</tr>
+								<tr class="cb-spacer"></tr>								
+								<tr>
+									<td>
+										<div id="cb_survey_preferences_3" class="cb-button"></div>
+										<%= f.check_box :survey_preferences_3 %>
+									</td>
+									<td>
+										<label id="label_survey_preferences_3" class="input-label required-label label_cb" for="survey_preferences_3" onclick="cb_survey_preferences('3');" tabindex="38">Institution named-charity</label>
+									</td>									
+								</tr>
+								<tr class="cb-spacer"></tr>								
+								<tr>
+									<td class="cb-align">
+										<div id="cb_survey_preferences_4" class="cb-button"></div>
+										<%= f.check_box :survey_preferences_4 %>
+									</td>
+									<td class="cb-pad">
+										<label id="label_survey_preferences_4" class="input-label required-label label_cb" for="survey_preferences_4" onclick="cb_survey_preferences('4');" tabindex="39">
+											Accrue my give-away for the LC's scholarship fund for poorer schools or districts to be able to travel and attend the Gathering annual event
+										</label>
+									</td>									
+								</tr>
+								<tr class="cb-spacer"></tr>								
+								<tr>
+									<td>
+										<div id="cb_survey_preferences_5" class="cb-button"></div>
+										<%= f.check_box :survey_preferences_5 %>
+									</td>
+									<td>
+										<label id="label_survey_preferences_5" class="input-label required-label label_cb" for="survey_preferences_5" onclick="cb_survey_preferences('5');" tabindex="40">Opt-out of any contests or give-aways</label>
+									</td>									
+								</tr>
+								<tr class="cb-spacer"></tr>								
+							</table>
+
+						</div>
+						<!-- <div style="height: 22px;"></div>						
+						<div style="margin-left: 20px;">
+							<label class="input-label required-label">OTHER:</label>
+							<div style="height: 6px;"></div>
+							 f.text_field(:level_other, :class => "input-form unrequired", :placeholder => 'OTHER', :tabindex => '41') 					 
+						</div>
+						<div style="height: 6px;"></div> -->
+																		
+					</div>
 				</div>
-				<div class="cell-error-reg-commun"><p id="error_reg_commun_characterize_area"></p></div>      					   
+				
+				<div style="display: table-cell; padding-left: 20px;">
+					<div style="display: table;">
+						<div style="display: table-row; height: 16px;"></div>
+						<div style="display: table-row;">
+							<div style="display: table-cell;">
+
+								<div class="cell-error-reg-commun-cb" id="state_reg_commun_survey_preferences">
+									<p id="error_reg_commun_survey_preferences" class="cb-errors"></p>
+								</div>      
+								
+							</div>							
+						</div>
+					</div>
+				</div>
+				
 			</div>      		
 
-			<div class="input-form-spacer"></div>
-			<!--survey_preferences-->
-			<div class="row">
-				<div class="cell-left-reg-commun">
-					<%= f.label(:survey_preferences, "Survey Preferences", :class => 'input-label required-label', :id => 'label_reg_commun_survey_preferences') %>
-				</div>
-				<div class="cell-right-reg-commun">
-					 <%= f.text_field(:survey_preferences, :class => "input-form required", :placeholder => 'Survey Preferences', :tabindex => '17') %>					 
-				</div>
-				<div class="cell-error-reg-commun"><p id="error_reg_commun_survey_preferences"></p></div>      					   
-			</div>      		
+			<!-- survey preferences end -->
+
 
 			<div class="input-form-spacer"></div>
 			<div class="input-form-spacer"></div>
@@ -539,7 +1312,7 @@
 				<div class="cell-left-reg-commun">
 				</div>
 				<div class="cell-submit-reg-commun" style="padding-left: 0px;">
-					<%= f.submit "Submit", :id => 'btn_submit', :class => 'btn submitregcommun', :tabindex => '18' %>
+					<%= f.submit "Submit", :id => 'btn_submit', :class => 'btn submitregcommun', :tabindex => '41' %>
 				</div>      	
 			</div>      		
 
@@ -551,14 +1324,6 @@
 
 		</div>		
 			
-
-
-		<!-- <div id="mainpage" class="shadow" style="background-color: #fff; height: 500px; position: relative; z-index: +1;"></div> -->
-
-		<!-- <div id="mainpage" class="shadow" style="background-color: #fff; height: 50px; position: relative; top: 550px; z-index: +1;"></div> -->
-				
-	
-	
 	</div>
 	
 	</section>
@@ -569,53 +1334,27 @@
 <div style="height: 300px;"></div>
 
 
+    <script src="../scripts/dot.js"></script>    
+    <script src="../scripts/jquery-dropdown-dot.js"></script>
 
 
 	<script>
+
+		function scrollToAnchor(aid) {
+			var a = $("a[name='" + aid + "']");
+			$('html, body').animate({ scrollTop: a.offset().top }, 1000);
+			// jQuery('html, body').animate({scrollTop: 100}, 1000);				
+		}
+
 
 		function showSignin() {
 	
 			$("#form_reg_commun").fadeIn(1000);
 
-			// $("#form_signin").css({
-				// 'visibility': 'visible'
-			// }, function(){ fadeIn("slow"); });
-
-
 			loadSignin();
 			
 		}
 	
-		// function showSignin() {
-// 	
-			// var a = $("#mainpage");
-			// var b = $("#mainfooter");
-// 		
-			// a.animate({
-				// "top": "+=50px"
-			// }, 1000, function(){ loadSignin(); });
-// 		
-			// b.animate({
-				// "top": "+=50px"
-			// }, 1000);
-		// }
-// 		
-		// function hideSignin() {
-// 		
-			// disableSignin();
-// 			
-			// var a = $("#mainpage");
-			// var b = $("#mainfooter");
-// 		
-			// a.animate({
-				// "top": "-=50px"
-			// }, 1000);
-// 			
-			// b.animate({
-				// "top": "-=50px"
-			// }, 1000);
-		// }
-
 		function loadSignin() {
 			glowBoxGold();
 
@@ -633,7 +1372,6 @@
 		}
 		
 		function centerSignin() {
-			// var a = document.documentElement.clientWidth;
 			
 			var a = $("#join-image").width();
 			var b = $("#form_reg_commun").width();
@@ -646,7 +1384,7 @@
 
 			var h1 = $("#join-image").height();
 			
-			var h2 = (h1 * (0.92));
+			var h2 = (h1 * (0.96));
 			
 			$("#form_reg_commun").css({
 				height : h2
@@ -679,22 +1417,75 @@
 		}
 		
 
-		// var val = null;
+		validatorCalled = false;
+		var val = null;
 
 		function formValidate() {
 						
 			$("#form_join").validate({
 			
 				submitHandler: function(form) {
-					form.submit();
+
+					validRadio1 = validateRadio1();
+					validLevel = validateLevel();
+					selectValid1 = validateSelect1();
+					selectValid2 = validateSelect2();
+					selectValid3 = validateSelect3();
+					validCharacterizeArea = validateCharacterizeArea();
+					validSurveyPreferences = validateSurveyPreferences()
+					
+					//var s = 'selectValid1 = ' + selectValid1 + ' selectValid2 = ' + selectValid2;
+					//alert(s);
+					
+					
+					if ( validRadio1 && validLevel && selectValid1 && selectValid2 && selectValid3 && validCharacterizeArea && validSurveyPreferences ) {
+						form.submit();
+					}
+					else
+					{
+						var errors = 0;
+						if ( !validRadio1 ) {
+							errors += 1;
+						}
+						if ( !validLevel ) {
+							errors += 1;
+						}
+						if (!selectValid1) {
+							errors += 1;
+						}
+						if (!selectValid2) {
+							errors += 1;
+						}
+						if (!selectValid3) {
+							errors += 1;
+						}
+						if ( !validCharacterizeArea ) {
+							errors += 1;
+						}					
+						if ( !validSurveyPreferences ) {
+							errors += 1;
+						}					
+
+						if (errors) {
+							var message = errors == 1
+							? '1 required field missed'
+							: errors + ' required fields missed';
+							$("div.errors p").html(message);
+							$("div.errors").show();
+							$("#btn_submit").blur();
+							$("#form_reg_commun").focus();
+							scrollToAnchor('anchor1');
+							// jQuery('html, body').animate({scrollTop: 100}, 1000);				
+						} else {
+							$("div.errors").hide();
+						}
+					}
 				},
 			
 				debug: true,
 				onkeyup: false,
 				focusCleanup: true,
 				focusInvalid: false,
-				// invalidClass: "error",
-				// validClass: "success",
 								
 				rules: {
 					'reg_commun[name_first]': {
@@ -779,53 +1570,74 @@
 					}
 				},
 				invalidHandler: function(commun, validator) {
-					// val = validator;
+					validatorCalled = true;
+					val = validator;
 					var errors = validator.numberOfInvalids();
-					if (errors) {
-						// var message = errors == 1
-						// ? 'You missed 1 field'
-						// : 'You missed ' + errors + ' fields';
-						// $("div.errors p").html(message);
-						// $("div.errors").show();
-						$("#btn_submit").blur();
-						$("#form_reg_commun").focus();						
-					} else {
-						// $("div.errors").hide();
-					}
 					
+					if ( !validateRadio1() ) {
+						errors += 1;
+					}
+					if ( !validateLevel() ) {
+						errors += 1;
+					}					
+					if (!validateSelect1()) {
+						errors += 1;
+					}
+					if (!validateSelect2()) {
+						errors += 1;
+					}
+					if (!validateSelect3()) {
+						errors += 1;
+					}
+					if ( !validateCharacterizeArea() ) {
+						errors += 1;
+					}					
+					if ( !validateSurveyPreferences() ) {
+						errors += 1;
+					}					
+					
+					if (errors) {
+						var message = errors == 1
+						? '1 required field missed'
+						: errors + ' required fields missed';
+						$("div.errors p").html(message);
+						$("div.errors").show();
+						$("#btn_submit").blur();
+						$("#form_reg_commun").focus();			
+						scrollToAnchor('anchor1');
+						// jQuery('html, body').animate({scrollTop: 0}, 1000);			
+					} else {
+						$("div.errors").hide();
+					}
 				},				
 				messages: {
 					'reg_commun[name_first]': {
 						required: "*",
-						maxlength: "Name exceeds 50 characters"							
+						maxlength: "First Name exceeds 50 characters"							
 					},
 					'reg_commun[name_last]': {
 						required: "*",
-						maxlength: "Name exceeds 50 characters"							
+						maxlength: "Last Name exceeds 50 characters"							
 					},
 					'reg_commun[name_title]': {
 						required: "*",
-						maxlength: "Name exceeds 50 characters"							
+						maxlength: "Title exceeds 50 characters"							
 					},
 					'reg_commun[name_affiliation]': {
 						required: "*",
-						maxlength: "Name exceeds 50 characters"							
-					},
-					'reg_commun[public_private]': {
-						required: "*",
-						maxlength: "Name exceeds 50 characters"							
+						maxlength: "Affiliation exceeds 100 characters"							
 					},
 					'reg_commun[address]': {
 						required: "*",
-						maxlength: "Name exceeds 50 characters"							
+						maxlength: "Address exceeds 100 characters"							
 					},
 					'reg_commun[city]': {
 						required: "*",
-						maxlength: "Name exceeds 50 characters"							
+						maxlength: "City exceeds 50 characters"							
 					},
 					'reg_commun[state]': {
 						required: "*",
-						maxlength: "Name exceeds 50 characters"							
+						maxlength: "State exceeds 50 characters"							
 					},
 					'reg_commun[zip]': {
 						required: "*",
@@ -837,29 +1649,9 @@
 					},
 					'reg_commun[email]': {
 						required: "*",
-						maxlength: "Email address exceeds 40 characters",
+						maxlength: "Email address exceeds 255 characters",
 						email: "Please enter a valid email address"
-					},					
-					'reg_commun[level]': {
-						required: "*",
-						maxlength: "Name exceeds 50 characters"							
-					},
-					'reg_commun[institution_size]': {
-						required: "*",
-						maxlength: "Name exceeds 50 characters"							
-					},
-					'reg_commun[characterize_decision]': {
-						required: "*",
-						maxlength: "Name exceeds 50 characters"							
-					},
-					'reg_commun[characterize_area]': {
-						required: "*",
-						maxlength: "Name exceeds 50 characters"							
-					},
-					'reg_commun[survey_preferences]': {
-						required: "*",
-						maxlength: "Name exceeds 50 characters"							
-					}
+					}					
 				},
 				errorContainer: $("div .error_label"),				
 				errorPlacement: function(error, element) {
@@ -885,79 +1677,77 @@
 				success: function(label) {
 					$('#' + label.attr('for')).removeClass('required').removeClass('error').addClass('success');
 					$('#label_' + label.attr('for')).removeClass('error-label').addClass('required-label');
+					
+					$('#state_' + label.attr('for')).css ({			
+						background: 'url("/assets/submit_form_tick.png") no-repeat 0px 5px'
+					});
+
+					$('#error_' + label.attr('for')).html("");
 				},				
 				focus: function(element) {
-				 	//$('#' + element.attr('id')).removeClass('required').removeClass('error').removeClass('success').addClass('focus');
+				 	$('#' + element.attr('id')).removeClass('required').removeClass('error').removeClass('success').addClass('focus');
 				 	
-				 	$('#' + element.attr('id')).removeClass('required').removeClass('success').addClass('focus');
+				 	//$('#' + element.attr('id')).removeClass('required').removeClass('success').addClass('focus');
 				}
 			});
 
-			$.validator.setDefaults({
-				submitHandler: function() {
-					form.submit();
-				}
-			});
+			// $.validator.setDefaults({
+				// submitHandler: function() {
+					// form.submit();
+				// }
+			// });
 		}
-
-
-		// by field error message update
 		
-// #  name_first            :string(50)
-// #  name_last             :string(50)
-// #  name_title            :string(50)
-// #  name_affiliation      :string(100)
-// #  public_private        :string(10)
-// #  address               :string(100)
-// #  city                  :string(50)
-// #  state                 :string(50)
-// #  zip                   :string(10)
-// #  phone                 :string(50)
-// #  email                 :string(255)      default(""), not null
-// #  level                 :string(50)
-// #  institution_size      :string(50)
-// #  characterize_decision :string(50)
-// #  characterize_area     :text
-// #  survey_preferences    :text
+		function updateErrorCount () {
 
-		var error_name_first = null;
-		var error_name_last = null;
-		var error_name_title = null;
-		var error_name_affiliation = null;
-		var error_public_private = null;
-		var error_address = null;
-		var error_city = null;
-		var error_state = null;
-		var error_zip = null;
-		var error_phone = null;
-		var error_email = null;
-		var error_level = null;
-		var error_institution_size = null;
-		var error_characterize_decision = null;
-		var error_characterize_area = null;
-		var error_survey_preferences = null;
+			//val = formval.validator;
+			
+			//alert('updateErrorCount');
+			
+			if ((val !== undefined) && (val !== null)) {
 
+				var errors = val.numberOfInvalids();
+				
+				if (!validateRadio1()) {
+					//errors += 1;
+				}
+				if (!validateLevel()) {
+					errors += 1;
+				}
+				if (!validateSelect1()) {
+					errors += 1;
+				}
+				if (!validateSelect2()) {
+					errors += 1;
+				}
+				if (!validateSelect3()) {
+					errors += 1;
+				}
+				if ( !validateCharacterizeArea() ) {
+					errors += 1;
+				}					
+				if ( !validateSurveyPreferences() ) {
+					errors += 1;
+				}					
+				
+				if (errors) {
+					var message = errors == 1
+					? '1 required field missed'
+					: errors + ' required fields missed';
+					$("div.errors p").html(message);
+					$("div.errors").show();
+				} else {
+					$("div.errors").hide();
+				}
+				
+				val.reset();
+			}					
+		}
 		
 		function errorMessageUpdate( element ) {
-			// if ((val !== undefined) && (val !== null)) {
-// 				
-				// var errors = val.numberOfInvalids();
-// 				
-				// if (errors) {
-					// var message = errors == 1
-					// ? 'You missed 1 field'
-					// : 'You missed ' + errors + ' fields';
-					// $("div.errors p").html(message);
-					// $("div.errors").show();
-				// } else {
-					// $("div.errors").hide();
-				// }
-// 				
-				// val.reset();
-// 				
-			// }			
 			
-			
+			updateErrorCount();
+
 			if ($('#' + element).hasClass('error')) {
 				if ($('#' + element).val().length > 0) {
 					$('#' + element).removeClass('required').removeClass('success').addClass('error');
@@ -965,20 +1755,39 @@
 				}
 				else {
 					$('#' + element).removeClass('success').removeClass('error').addClass('required');
-					$('#label_' + element).removeClass('success-label').removeClass('error-label').addClass('required-label');						
+					$('#label_' + element).removeClass('success-label').removeClass('error-label').addClass('required-label');				
+					
+					$('#' + element).css ({			
+						'border-color' : '#851717'
+					});
+					
+					$('#state_' + element).css ({			
+						background: 'url("/assets/submit_form_empty.png") no-repeat 0px 1px'
+					});					
 				}
 			}
 			else {			
 				if ($('#' + element).val().length > 0) {
 					$('#' + element).removeClass('required').removeClass('error').addClass('success');
 					$('#label_' + element).removeClass('error-label').addClass('required-label');
+					
+					$('#' + element).css ({			
+						'border-color' : '#005C9E'
+					});					
 				}
 				else {
 					$('#' + element).removeClass('success').removeClass('error').addClass('required');
-					$('#label_' + element).removeClass('success-label').removeClass('error-label').addClass('required-label');						
+					$('#label_' + element).removeClass('success-label').removeClass('error-label').addClass('required-label');		
+					
+					$('#state_' + element).css ({			
+						background: 'url("/assets/submit_form_empty.png") no-repeat 0px 1px'
+					});
+									
 				}
 			}
 		}
+		
+		
 
 		$("#reg_commun_name_first").on("blur", function () {
 			errorMessageUpdate('reg_commun_name_first');
@@ -994,10 +1803,6 @@
 
 		$("#reg_commun_name_affiliation").on("blur", function () {
 			errorMessageUpdate('reg_commun_name_affiliation');
-		});
-
-		$("#reg_commun_public_private").on("blur", function () {
-			errorMessageUpdate('reg_commun_public_private');
 		});
 
 		$("#reg_commun_address").on("blur", function () {
@@ -1024,26 +1829,580 @@
 			errorMessageUpdate('reg_commun_email');
 		});
 
-		$("#reg_commun_level").on("blur", function () {
-			errorMessageUpdate('reg_commun_level');
+
+		$("#reg_commun_level_other").on("blur", function () {
+			validateLevel();
 		});
 
-		$("#reg_commun_institution_size").on("blur", function () {
-			errorMessageUpdate('reg_commun_institution_size');
+		$("#reg_commun_characterize_area_other").on("blur", function () {
+			validateCharacterizeArea();
 		});
 
-		$("#reg_commun_characterize_decision").on("blur", function () {
-			errorMessageUpdate('reg_commun_characterize_decision');
+		// $("#reg_commun_survey_preferences_other").on("blur", function () {
+			// validateCharacterizeArea();
+		// });
+
+
+		var rd_public_private_clicked = false;
+		$("#reg_commun_public_private_public").on("change", function () {
+			
+			$('#reg_commun_address').focus();
+
+			if (rd_public_private_clicked == false) {
+				validateRadio1();
+				rd_public_private_clicked = true;
+			}
+		});
+		$("#reg_commun_public_private_private").on("change", function () {
+			
+			$('#reg_commun_address').focus();
+
+			if (rd_public_private_clicked == false) {
+				validateRadio1();
+				rd_public_private_clicked = true;
+			}
 		});
 
-		$("#reg_commun_characterize_area").on("blur", function () {
-			errorMessageUpdate('reg_commun_characterize_area');
-		});
 
-		$("#reg_commun_survey_preferences").on("blur", function () {
-			errorMessageUpdate('reg_commun_survey_preferences');
-		});
 
+		function validateRadio1() {
+
+			var isChecked = false;
+			if($("#reg_commun_public_private_public").is(':checked')) {
+				isChecked = true;
+			}
+			if($("#reg_commun_public_private_private").is(':checked')) {
+				isChecked = true;
+			}
+			
+			if ( !isChecked ) {
+				$("#border_public_private").css ({
+					'border-color' : '#851717'
+				});
+				
+				$('#error_reg_commun_public_private').html("*");
+				
+				$("#state_reg_commun_public_private").css ({			
+					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
+				});				
+				
+				
+			}
+			else {
+				$("#border_public_private").css ({
+					'border-color' : '#005C9E'
+				});
+				
+				$('#error_reg_commun_public_private').html("");
+				
+				$("#state_reg_commun_public_private").css ({			
+					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 5px'
+				});																
+			}
+			
+			return isChecked;
+		}
+
+
+
+		function set_rd_1() {
+			var rd ="#reg_commun_public_private_public";
+			var sd = "#rd_public_private_public";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_1() {
+			var sd = "#rd_public_private_public";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_2() {
+			var rd ="#reg_commun_public_private_private";
+			var sd = "#rd_public_private_private";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_2() {
+			var sd = "#rd_public_private_private";
+			
+			$(sd).removeClass("rd-background");			
+		}
+
+		function rd_public_private(caller) {
+
+			switch (caller)
+			{
+			  case 'public':
+			  		set_rd_1();
+			  		unset_rd_2();
+			  	break;
+			  case 'private':
+			  		set_rd_2();
+			  		unset_rd_1();
+			  	break;
+
+			  default:
+			  //
+			}
+			
+			if (rd_public_private_clicked == false) {
+				validateRadio1();
+				rd_public_private_clicked = true;
+			}
+		}
+				
+				
+				
+		function cb_level(caller) {
+			var cb = "#reg_commun_level_" + caller;
+			var sb = "#cb_level_" + caller;
+			if($(cb).is(':checked')) {
+				$(cb).prop('checked', false);
+				
+				$(sb).removeClass("cb-background");			
+			}
+			else {
+				$(cb).prop('checked', true);
+
+				$(sb).addClass("cb-background");			
+			}
+			validateLevel();			
+		}
+				
+		function cb_characterize_area(caller) {
+			var cb = "#reg_commun_characterize_area_" + caller;
+			var sb = "#cb_characterize_area_" + caller;			
+			if($(cb).is(':checked')) {
+				$(cb).prop('checked', false);
+
+				$(sb).removeClass("cb-background");			
+			}
+			else {
+				$(cb).prop('checked', true);
+
+				$(sb).addClass("cb-background");			
+			}
+			validateCharacterizeArea();			
+		}
+
+		function cb_survey_preferences(caller) {
+			var cb = "#reg_commun_survey_preferences_" + caller;
+			var sb = "#cb_survey_preferences_" + caller;			
+			if($(cb).is(':checked')) {
+				$(cb).prop('checked', false);
+
+				$(sb).removeClass("cb-background");			
+			}
+			else {
+				$(cb).prop('checked', true);
+
+				$(sb).addClass("cb-background");			
+			}
+			validateSurveyPreferences();			
+		}
+
+
+
+		function validateLevel() {
+
+			var isChecked = false;
+			var cb;
+			for (var i = 1; i < 8; i++ ) {
+				cb = "#reg_commun_level_" + i;
+				if($(cb).is(':checked')) {
+					isChecked = true;
+				}
+						
+			}
+
+			if($("#reg_commun_level_other").val().length > 0) {
+				isChecked = true;
+			}
+			
+			if ( !isChecked ) {
+				if (validatorCalled ) {
+					$("#border_level").css ({
+						'border-color' : '#851717'
+					});
+					
+					$('#error_reg_commun_level').html("*<br>Please select an option<br>or indicate an OTHER");
+				}
+	
+				$("#state_reg_commun_level").css ({			
+					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
+				});				
+			}
+			else {
+				$("#border_level").css ({
+					'border-color' : '#005C9E'
+				});
+				
+				$('#error_reg_commun_level').html("");
+				
+				$("#state_reg_commun_level").css ({			
+					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 5px'
+				});
+			}
+
+			// if ( validatorCalled ) {
+				// updateErrorCount();
+			// }
+
+			
+			return isChecked;
+		}
+
+
+		function validateCharacterizeArea() {
+
+			var isChecked = false;
+			var cb;
+			for (var i = 1; i < 11; i++ ) {
+				cb = "#reg_commun_characterize_area_" + i;
+				if($(cb).is(':checked')) {
+					isChecked = true;
+				}
+						
+			}
+
+			if($("#reg_commun_characterize_area_other").val().length > 0) {
+				isChecked = true;
+			}
+			
+			if ( !isChecked ) {
+				if (validatorCalled ) {
+					$("#border_characterize_area").css ({
+						'border-color' : '#851717'
+					});
+					
+					$('#error_reg_commun_characterize_area').html("*<br>Please select an option<br>or indicate an OTHER");
+				}
+	
+				$("#state_reg_commun_characterize_area").css ({			
+					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
+				});				
+			}
+			else {
+				$("#border_characterize_area").css ({
+					'border-color' : '#005C9E'
+				});
+				
+				$('#error_reg_commun_characterize_area').html("");
+				
+				$("#state_reg_commun_characterize_area").css ({			
+					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 5px'
+				});
+			}
+
+			// if ( validatorCalled ) {
+				// updateErrorCount();
+			// }
+			
+			return isChecked;
+		}
+
+
+		function validateSurveyPreferences() {
+
+			var isChecked = false;
+			var cb;
+			for (var i = 1; i < 6; i++ ) {
+				cb = "#reg_commun_survey_preferences_" + i;
+				if($(cb).is(':checked')) {
+					isChecked = true;
+				}
+						
+			}
+
+			if ( !isChecked ) {
+				if (validatorCalled ) {
+					$("#border_survey_preferences").css ({
+						'border-color' : '#851717'
+					});
+					
+					$('#error_reg_commun_survey_preferences').html("*<br>Please select an option<br>or indicate an OTHER");
+				}
+	
+				$("#state_reg_commun_survey_preferences").css ({			
+					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
+				});				
+			}
+			else {
+				$("#border_survey_preferences").css ({
+					'border-color' : '#005C9E'
+				});
+				
+				$('#error_reg_commun_survey_preferences').html("");
+				
+				$("#state_reg_commun_survey_preferences").css ({			
+					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 5px'
+				});
+			}
+
+			// if ( validatorCalled ) {
+				// updateErrorCount();
+			// }
+
+			
+			return isChecked;
+		}
+
+
+		var selectValid1 = false;
+		
+		function selectStatus1() {
+			
+			if ($("#reg_commun_institution_size option:selected").val() == '0') {
+				$('#state_reg_commun_institution_size').css ({			
+					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
+				});
+				
+				$('.dropdown1').css ({			
+					color: '#838383'
+				});
+				
+				selectValid1 = false;						
+			}
+			else {
+				$('#state_reg_commun_institution_size').css ({			
+					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 5px'
+				});
+				
+				$('.dropdown1').css ({			
+					color: '#ACDDE3'
+				});			
+		
+				if( !selectValid1 ) {
+					$('.dropdown1').css ({			
+						'border-color' : '#005C9E'
+					});
+					
+					$('.dropdown1 > .selected i').css ({			
+						'color' : '#005C9E',
+						'border-left-color' : '#005C9E' 
+					});
+					
+					$('#error_reg_commun_institution_size').html("");					
+				}
+				
+				selectValid1 = true;		
+			}
+			
+			updateErrorCount();			
+		}
+
+		function validateSelect1() {
+			
+			if ($("#reg_commun_institution_size option:selected").val() == '0') {
+				
+				$('.dropdown1').css ({			
+					'border-color' : '#851717'
+				});
+				
+				$('.dropdown1 > .selected i').css ({			
+					'color' : '#851717',
+					'border-left-color' : '#851717' 
+				});
+		
+				$('#error_reg_commun_institution_size').html("*");
+		
+				selectValid1 = false;		
+			}
+			else {
+				$('.dropdown1').css ({			
+					'border-color' : '#005C9E'
+				});
+				
+				$('.dropdown1 > .selected i').css ({			
+					'color' : '#005C9E',
+					'border-left-color' : '#005C9E' 
+				});
+
+				$('#error_reg_commun_institution_size').html("");
+				
+				selectValid1 = true;		
+			}
+			
+			return selectValid1;
+		}
+
+
+		var selectValid2 = false;
+		
+		function selectStatus2() {
+			
+			if ($("#reg_commun_employee_number option:selected").val() == '0') {
+				$('#state_reg_commun_employee_number').css ({			
+					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
+				});
+				
+				$('.dropdown2').css ({			
+					color: '#838383'
+				});
+				
+				selectValid2 = false;						
+			}
+			else {
+				$('#state_reg_commun_employee_number').css ({			
+					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 5px'
+				});
+				
+				$('.dropdown2').css ({			
+					color: '#ACDDE3'
+				});			
+		
+				if( !selectValid2 ) {
+					$('.dropdown2').css ({			
+						'border-color' : '#005C9E'
+					});
+					
+					$('.dropdown2 > .selected i').css ({			
+						'color' : '#005C9E',
+						'border-left-color' : '#005C9E' 
+					});
+					
+					$('#error_reg_commun_employee_number').html("");					
+				}
+				
+				selectValid2 = true;		
+			}
+			
+			updateErrorCount();			
+		}
+
+		function validateSelect2() {
+			
+			if ($("#reg_commun_employee_number option:selected").val() == '0') {
+				// $('#state_reg_event_city_workshop').css ({			
+					// background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
+				// });
+// 				
+				// $('.dropdown').css ({			
+					// color: '#838383'
+				// });
+				
+				$('.dropdown2').css ({			
+					'border-color' : '#851717'
+				});
+				
+				$('.dropdown2 > .selected i').css ({			
+					'color' : '#851717',
+					'border-left-color' : '#851717' 
+				});
+		
+				$('#error_reg_commun_employee_number').html("*");
+		
+				selectValid2 = false;		
+			}
+			else {
+				$('.dropdown2').css ({			
+					'border-color' : '#005C9E'
+				});
+				
+				$('.dropdown2 > .selected i').css ({			
+					'color' : '#005C9E',
+					'border-left-color' : '#005C9E' 
+				});
+
+				$('#error_reg_commun_employee_number').html("");
+				
+				selectValid2 = true;		
+			}
+			
+			return selectValid1;
+		}
+
+
+		// reg_commun_characterize_decision
+		var selectValid3 = false;
+		
+		function selectStatus3() {
+			
+			if ($("#reg_commun_characterize_decision option:selected").val() == '0') {
+				$('#state_reg_commun_characterize_decision').css ({			
+					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
+				});
+				
+				$('.dropdown3').css ({			
+					color: '#838383'
+				});
+				
+				selectValid3 = false;						
+			}
+			else {
+				$('#state_reg_commun_characterize_decision').css ({			
+					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 5px'
+				});
+				
+				$('.dropdown3').css ({			
+					color: '#ACDDE3'
+				});			
+		
+				if( !selectValid1 ) {
+					$('.dropdown3').css ({			
+						'border-color' : '#005C9E'
+					});
+					
+					$('.dropdown3 > .selected i').css ({			
+						'color' : '#005C9E',
+						'border-left-color' : '#005C9E' 
+					});
+					
+					$('#error_reg_commun_characterize_decision').html("");					
+				}
+				
+				selectValid3 = true;		
+			}
+			
+			updateErrorCount();			
+		}
+
+		function validateSelect3() {
+			
+			if ($("#reg_commun_characterize_decision option:selected").val() == '0') {
+				// $('#state_reg_event_city_workshop').css ({			
+					// background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
+				// });
+// 				
+				// $('.dropdown').css ({			
+					// color: '#838383'
+				// });
+				
+				$('.dropdown3').css ({			
+					'border-color' : '#851717'
+				});
+				
+				$('.dropdown3 > .selected i').css ({			
+					'color' : '#851717',
+					'border-left-color' : '#851717' 
+				});
+		
+				$('#error_reg_commun_characterize_decision').html("*");
+		
+				selectValid3 = false;		
+			}
+			else {
+				$('.dropdown3').css ({			
+					'border-color' : '#005C9E'
+				});
+				
+				$('.dropdown3 > .selected i').css ({			
+					'color' : '#005C9E',
+					'border-left-color' : '#005C9E' 
+				});
+
+				$('#error_reg_commun_characterize_decision').html("");
+				
+				selectValid3 = true;		
+			}
+			
+			return selectValid1;
+		}
 
 		$(window).load( function() {
 		//$(document).ready(function(){
@@ -1051,11 +2410,8 @@
 			var image = '../backgrounds/comp025.jpg';
 
 			// var image = '../backgrounds/comp020.gif';
-
 			// var image = '../backgrounds/multi134.jpg';
-
 			// var image = '../backgrounds/background-image-proxy.jpeg';
-
 
 			img = $('<img />');
 			
@@ -1075,9 +2431,216 @@
 			$('#join-image').css({
 				//background: '#F1F2E1 url(' + image + ') no-repeat right top'
 				background: '#F1F2E1 url(' + image + ') repeat right top'
-				
 			})
 				
+			
+			
+			$('#reg_commun_public_private_public').prop('checked', false);				
+			$('#reg_commun_public_private_private').prop('checked', false);				
+
+				
+			$('#rd_public_private_public').on('click', function() {
+				rd_public_private('public');
+			});
+			$('#rd_public_private_private').on('click', function() {
+				rd_public_private('private');
+			});
+
+
+				
+			$('#cb_level_1').on('click', function() {
+				cb_level(1);
+			});
+			$('#cb_level_2').on('click', function() {
+				cb_level(2);
+			});
+			$('#cb_level_3').on('click', function() {
+				cb_level(3);
+			});
+			$('#cb_level_4').on('click', function() {
+				cb_level(4);
+			});
+			$('#cb_level_5').on('click', function() {
+				cb_level(5);
+			});
+			$('#cb_level_6').on('click', function() {
+				cb_level(6);
+			});
+			$('#cb_level_7').on('click', function() {
+				cb_level(7);
+			});
+
+			$('#cb_characterize_area_1').on('click', function() {
+				cb_characterize_area(1);
+			});
+			$('#cb_characterize_area_2').on('click', function() {
+				cb_characterize_area(2);
+			});
+			$('#cb_characterize_area_3').on('click', function() {
+				cb_characterize_area(3);
+			});
+			$('#cb_characterize_area_4').on('click', function() {
+				cb_characterize_area(4);
+			});
+			$('#cb_characterize_area_5').on('click', function() {
+				cb_characterize_area(5);
+			});
+			$('#cb_characterize_area_6').on('click', function() {
+				cb_characterize_area(6);
+			});
+			$('#cb_characterize_area_7').on('click', function() {
+				cb_characterize_area(7);
+			});
+			$('#cb_characterize_area_8').on('click', function() {
+				cb_characterize_area(8);
+			});
+			$('#cb_characterize_area_9').on('click', function() {
+				cb_characterize_area(9);
+			});
+			$('#cb_characterize_area_10').on('click', function() {
+				cb_characterize_area(10);
+			});
+
+			$('#cb_survey_preferences_1').on('click', function() {
+				cb_survey_preferences(1);
+			});
+			$('#cb_survey_preferences_2').on('click', function() {
+				cb_survey_preferences(2);
+			});
+			$('#cb_survey_preferences_3').on('click', function() {
+				cb_survey_preferences(3);
+			});
+			$('#cb_survey_preferences_4').on('click', function() {
+				cb_survey_preferences(4);
+			});
+			$('#cb_survey_preferences_5').on('click', function() {
+				cb_survey_preferences(5);
+			});
+				
+				
+				
+				
+				
+    		$('#label_public_private_public').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_public_private_public').click();
+    		});				
+    		$('#label_public_private_private').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_public_private_private').click();
+    		});				
+
+
+
+
+
+
+    		$('#label_level_1').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_level_1').click();
+    		});				
+    		$('#label_level_2').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_level_2').click();
+    		});				
+    		$('#label_level_3').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_level_3').click();
+    		});				
+    		$('#label_level_4').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_level_4').click();
+    		});				
+    		$('#label_level_5').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_level_5').click();
+    		});				
+    		$('#label_level_6').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_level_6').click();
+    		});				
+    		$('#label_level_7').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_level_7').click();
+    		});				
+				
+    		$('#label_characterize_area_1').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_characterize_area_1').click();
+    		});				
+    		$('#label_characterize_area_2').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_characterize_area_2').click();
+    		});				
+    		$('#label_characterize_area_3').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_characterize_area_3').click();
+    		});				
+    		$('#label_characterize_area_4').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_characterize_area_4').click();
+    		});				
+    		$('#label_characterize_area_5').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_characterize_area_5').click();
+    		});				
+    		$('#label_characterize_area_6').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_characterize_area_6').click();
+    		});				
+    		$('#label_characterize_area_7').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_characterize_area_7').click();
+    		});				
+    		$('#label_characterize_area_8').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_characterize_area_8').click();
+    		});				
+    		$('#label_characterize_area_9').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_characterize_area_9').click();
+    		});				
+    		$('#label_characterize_area_10').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_characterize_area_10').click();
+    		});				
+
+    		$('#label_survey_preferences_1').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_survey_preferences_1').click();
+    		});				
+    		$('#label_survey_preferences_2').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_survey_preferences_2').click();
+    		});				
+    		$('#label_survey_preferences_3').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_survey_preferences_3').click();
+    		});				
+    		$('#label_survey_preferences_4').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_survey_preferences_4').click();
+    		});				
+    		$('#label_survey_preferences_5').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_survey_preferences_5').click();
+    		});				
+				
+			$('input:checkbox').on('change', function() {
+				validateLevel();
+				validateCharacterizeArea();
+				validateSurveyPreferences();
+			});
+
+			$('select').dropdown({
+			    'changed': function(data) {
+			        selectStatus1();
+			        selectStatus2();
+			       	selectStatus3();			        
+			    }
+			});	    
+
+
 			// $(window).bind("load", function() {
 			    // $('#loading').fadeOut(2000);
 			// });

@@ -2,6 +2,16 @@ class StaticPagesController < ApplicationController
   
   layout 'application'
   
+  def index
+    
+    @archives = Archive.friendly.all
+    
+    # gon.archives = @archives
+    
+    # gon.id = 8    
+    
+  end
+  
   def home
     
   end
@@ -38,9 +48,9 @@ class StaticPagesController < ApplicationController
     
     #id_sent = params[:id]
     
-    @article = Article.where(["article_id = ?", params[:id]]).first       
+    # @article = Article.where(["article_id = ?", params[:id]]).first       
     
-    render text: @article.name_file
+    # render text: @article.name_file
 #     
     # render text: 'in show id ' + id_sent
     
@@ -49,7 +59,7 @@ class StaticPagesController < ApplicationController
   
   def getPartial
     
-    render :partial => "http://localhost:3000/journal/pearson"
+    # render :partial => "http://localhost:3000/journal/pearson"
   end
 end
 

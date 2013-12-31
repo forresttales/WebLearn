@@ -11,20 +11,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131130144634) do
+ActiveRecord::Schema.define(version: 20131230004626) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "admin_users", force: true do |t|
-    t.string   "first_name",      limit: 25
-    t.string   "last_name",       limit: 50
-    t.string   "email",           limit: 100, default: "", null: false
-    t.string   "hashed_password", limit: 40
+  create_table "admin_landings", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "username",        limit: 25
-    t.string   "salt",            limit: 40
+  end
+
+  create_table "admin_reg_communs", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "admin_reg_events", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "admin_reg_letters", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "admin_users", force: true do |t|
+    t.string   "email",           limit: 100, default: "", null: false
+    t.string   "hashed_password", limit: 300
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "username",        limit: 30
+    t.string   "salt",            limit: 300
+    t.string   "name_first",      limit: 50
+    t.string   "name_last",       limit: 50
+    t.string   "password_digest"
+    t.string   "remember_token"
   end
 
   add_index "admin_users", ["username"], name: "index_admin_users_on_username", using: :btree
@@ -40,9 +62,15 @@ ActiveRecord::Schema.define(version: 20131130144634) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "article_type", limit: 20
+    t.string   "description",  limit: 200
+    t.string   "linkimg",      limit: 50
+    t.string   "linkimg_url",  limit: 100
+    t.string   "linktitle",    limit: 200
+    t.string   "slug",         limit: 200
   end
 
   add_index "archives", ["article_id"], name: "index_archives_on_article_id", using: :btree
+  add_index "archives", ["slug"], name: "index_archives_on_slug", unique: true, using: :btree
 
   create_table "contacts", force: true do |t|
     t.string   "name",       limit: 50
@@ -64,6 +92,20 @@ ActiveRecord::Schema.define(version: 20131130144634) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "friendly_id_slugs", force: true do |t|
+    t.string   "slug"
+    t.integer  "sluggable_id"
+    t.string   "sluggable_type", limit: 50
+    t.string   "scope"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "friendly_id_slugs", ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, using: :btree
+  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
+  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
+  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
   create_table "institutes", force: true do |t|
     t.string   "name",                       limit: 100
@@ -89,6 +131,16 @@ ActiveRecord::Schema.define(version: 20131130144634) do
     t.integer  "user_id"
   end
 
+  create_table "landings", force: true do |t|
+    t.string   "name_promo", limit: 50
+    t.integer  "id_promo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name",       limit: 100
+    t.string   "email",      limit: 100
+    t.string   "company",    limit: 100
+  end
+
   create_table "publishers", force: true do |t|
     t.string   "name",                       limit: 100
     t.string   "address",                    limit: 100
@@ -109,47 +161,135 @@ ActiveRecord::Schema.define(version: 20131130144634) do
   end
 
   create_table "reg_communs", force: true do |t|
-    t.string   "name_first",            limit: 50
-    t.string   "name_last",             limit: 50
-    t.string   "name_title",            limit: 50
-    t.string   "name_affiliation",      limit: 100
-    t.string   "public_private",        limit: 10
-    t.string   "address",               limit: 100
-    t.string   "city",                  limit: 50
-    t.string   "state",                 limit: 50
-    t.string   "zip",                   limit: 10
-    t.string   "phone",                 limit: 50
-    t.string   "email",                             default: "", null: false
-    t.string   "level",                 limit: 50
-    t.string   "institution_size",      limit: 50
-    t.string   "characterize_decision", limit: 50
+    t.string   "name_first",                limit: 50
+    t.string   "name_last",                 limit: 50
+    t.string   "name_title",                limit: 50
+    t.string   "name_affiliation",          limit: 100
+    t.string   "address",                   limit: 100
+    t.string   "city",                      limit: 50
+    t.string   "state",                     limit: 50
+    t.string   "zip",                       limit: 10
+    t.string   "phone",                     limit: 50
+    t.string   "email",                                 default: "",    null: false
+    t.string   "institution_size",          limit: 50
+    t.string   "characterize_decision",     limit: 50
     t.text     "characterize_area"
     t.text     "survey_preferences"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "level_other",               limit: 100
+    t.string   "public_private",            limit: 50
+    t.string   "employee_number",           limit: 100
+    t.string   "characterize_area_other",   limit: 200
+    t.boolean  "level_1",                               default: false
+    t.boolean  "level_2",                               default: false
+    t.boolean  "level_3",                               default: false
+    t.boolean  "level_4",                               default: false
+    t.boolean  "level_5",                               default: false
+    t.boolean  "level_6",                               default: false
+    t.boolean  "level_7",                               default: false
+    t.string   "level_1_text",              limit: 200
+    t.string   "level_2_text",              limit: 200
+    t.string   "level_3_text",              limit: 200
+    t.string   "level_4_text",              limit: 200
+    t.string   "level_5_text",              limit: 200
+    t.string   "level_6_text",              limit: 200
+    t.string   "level_7_text",              limit: 200
+    t.boolean  "characterize_area_1",                   default: false
+    t.boolean  "characterize_area_2",                   default: false
+    t.boolean  "characterize_area_3",                   default: false
+    t.boolean  "characterize_area_4",                   default: false
+    t.boolean  "characterize_area_5",                   default: false
+    t.boolean  "characterize_area_6",                   default: false
+    t.boolean  "characterize_area_7",                   default: false
+    t.boolean  "characterize_area_8",                   default: false
+    t.boolean  "characterize_area_9",                   default: false
+    t.boolean  "characterize_area_10",                  default: false
+    t.boolean  "survey_preferences_1",                  default: false
+    t.boolean  "survey_preferences_2",                  default: false
+    t.boolean  "survey_preferences_3",                  default: false
+    t.boolean  "survey_preferences_4",                  default: false
+    t.boolean  "survey_preferences_5",                  default: false
+    t.string   "characterize_area_1_text",  limit: 200
+    t.string   "characterize_area_2_text",  limit: 200
+    t.string   "characterize_area_3_text",  limit: 200
+    t.string   "characterize_area_4_text",  limit: 200
+    t.string   "characterize_area_5_text",  limit: 200
+    t.string   "characterize_area_6_text",  limit: 200
+    t.string   "characterize_area_7_text",  limit: 200
+    t.string   "characterize_area_8_text",  limit: 200
+    t.string   "characterize_area_9_text",  limit: 200
+    t.string   "characterize_area_10_text", limit: 200
+    t.string   "survey_preferences_1_text", limit: 200
+    t.string   "survey_preferences_2_text", limit: 200
+    t.string   "survey_preferences_3_text", limit: 200
+    t.string   "survey_preferences_4_text", limit: 200
+    t.string   "survey_preferences_5_text", limit: 200
   end
 
   create_table "reg_events", force: true do |t|
-    t.string   "name_first",       limit: 50
-    t.string   "name_last",        limit: 50
-    t.string   "name_title",       limit: 50
-    t.string   "type_affiliation", limit: 50
-    t.string   "name_affiliation", limit: 100
-    t.string   "email",                        default: "", null: false
-    t.string   "city_workshop",    limit: 50
+    t.string   "name_first",            limit: 50
+    t.string   "name_last",             limit: 50
+    t.string   "name_title",            limit: 50
+    t.string   "type_affiliation",      limit: 50
+    t.string   "name_affiliation",      limit: 100
+    t.string   "email",                             default: "",    null: false
+    t.string   "city_workshop",         limit: 50
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "address",          limit: 50
-    t.string   "city",             limit: 50
-    t.string   "state",            limit: 50
-    t.string   "zip",              limit: 50
-    t.string   "phone",            limit: 50
+    t.string   "address",               limit: 50
+    t.string   "city",                  limit: 50
+    t.string   "state",                 limit: 50
+    t.string   "zip",                   limit: 50
+    t.string   "phone",                 limit: 50
+    t.string   "email_cc_1",            limit: 100
+    t.string   "email_cc_2",            limit: 100
+    t.boolean  "city_workshop_1",                   default: false
+    t.boolean  "city_workshop_2",                   default: false
+    t.boolean  "city_workshop_3",                   default: false
+    t.boolean  "city_workshop_4",                   default: false
+    t.boolean  "city_workshop_5",                   default: false
+    t.boolean  "city_workshop_6",                   default: false
+    t.boolean  "city_workshop_7",                   default: false
+    t.boolean  "city_workshop_8",                   default: false
+    t.boolean  "city_workshop_9",                   default: false
+    t.boolean  "city_workshop_10",                  default: false
+    t.boolean  "city_workshop_11",                  default: false
+    t.boolean  "city_workshop_12",                  default: false
+    t.boolean  "city_workshop_13",                  default: false
+    t.string   "city_workshop_1_text",  limit: 100
+    t.string   "city_workshop_2_text",  limit: 100
+    t.string   "city_workshop_3_text",  limit: 100
+    t.string   "city_workshop_4_text",  limit: 100
+    t.string   "city_workshop_5_text",  limit: 100
+    t.string   "city_workshop_6_text",  limit: 100
+    t.string   "city_workshop_7_text",  limit: 100
+    t.string   "city_workshop_8_text",  limit: 100
+    t.string   "city_workshop_9_text",  limit: 100
+    t.string   "city_workshop_10_text", limit: 100
+    t.string   "city_workshop_11_text", limit: 100
+    t.string   "city_workshop_12_text", limit: 100
+    t.string   "city_workshop_13_text", limit: 100
+    t.boolean  "city_workshop_14",                  default: false
+    t.string   "city_workshop_14_text", limit: 100
   end
 
   create_table "reg_letters", force: true do |t|
     t.string   "email",                        default: "", null: false
     t.string   "name_title",       limit: 50
     t.string   "name_affiliation", limit: 100
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "share_files", force: true do |t|
+    t.string   "name_originator", limit: 50
+    t.string   "name_file",       limit: 50
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "static_pages", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -170,6 +310,11 @@ ActiveRecord::Schema.define(version: 20131130144634) do
     t.string   "name_last",  limit: 50
     t.string   "phone",      limit: 50
     t.integer  "user_id"
+  end
+
+  create_table "uploads", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|

@@ -1,5 +1,10 @@
 
-<style>
+
+
+ <!-- stylesheet_link_tag "custom-masterhead", media: "all", "data-turbolinks-track" => true 
+ stylesheet_link_tag "ink_screen_2", media: "all", "data-turbolinks-track" => true  -->
+
+<style type="text/css" scoped>
 
 	@font-face {
 	  	font-family: 'msyhb';
@@ -149,21 +154,21 @@
 			                	            				
 			                <form id="forgotten_login_form" method="post" action="#">
 			                    <input style="width: 250px;height: 20px;border: 0px;margin: 5px 0px;float: left;" placeholder="Email" name="retrieve_email" id="forgotemail" type="text">
-			                    <input src="/assets/login-submit-button.png" onclick="document.forgotten_login_form.submit();" id="forgotlogin_submit" style="margin-left:5px;margin-top:5px;float:left;" type="image">
+			                    <input src="/assets/login-submit-button.png" onclick="document.forgotten_login_form.submit();" id="forgotlogin_submit" style="margin-left:5px;margin-top:5px;float:left;" type="image" alt="login-submit-button.png">
 			                </form>
 			                <div class="hide_forgot" onclick="closeForgotPass();return false;" style="float: left;margin-top: 8px;margin-left: 10px;text-transform: uppercase;font-family: KlavikaRegular;font-size: 8pt;">hide [x]</div> 
             			</div>
             			<div id="login">
                 			<form><input id="email" placeholder="Email" type="text">
                 				<input id="password" placeholder="Password" type="password">
-                				<input src="/assets/login-submit-button.png" id="login_submit" type="image">
+                				<input src="/assets/login-submit-button.png" id="login_submit" type="image" alt="login-submit-button.png">
                 			</form>
                 			<div class="forgot" style="cursor:pointer;" onclick="openForgotPass();return false;">forgot login?</div>
 	                		<div class="using">
 	                    		<div style="float:left;margin-right:2px;">Or login using:</div>
 	                    		<div id="externalauthorizors">
 	                    			
-			                        <div id="external_google_sm" class="external_authorizer">
+			                        <!-- <div id="external_google_sm" class="external_authorizer">
 			                            <form name="google_openid_form" id="google_openid_form" action="http://www.inc.com/lib/dopeid/openidlogin.php" method="post" autocomplete="off">
 			                                <input name="openid_identifier" id="openid_identifier" value="https://www.google.com/accounts/o8/id" type="hidden">
 			                                <input name="process" value="1" type="hidden">
@@ -181,11 +186,12 @@
 			                                <input id="yahoofollowusrid" name="followusrid" value="" type="hidden">
 			                                <button class="yahoobutton" style="border:0px;background-color:transparent;" type="submit" id="login_yahoo_sm"></button>
 			                            </form>
-			                        </div>
+			                        </div> -->
 			                        
+			                        			                        
 			                        <div id="external_facebook_sm" class="external_authorizer">
-			                            <a href="#"><img src="/assets/spacer_002.gif" class="facebookbutton"></a>
-			                        	
+			                            <!-- <a href="#"><img src="/assets/spacer_002.gif" class="facebookbutton"></a> -->
+			                            			                        	
 			                            <!-- <a href="http://www.inc.com/lib/facebook/fb_login.php"><img src="/assets/spacer_002.gif" class="facebookbutton"></a> -->			                            
 			                        </div>
 			                        
@@ -214,8 +220,10 @@
 				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->				        	
 				        	
 				        	<a id="signup" style="font-family: msyh; font-size: 13px;" href="/reg_letters/new">Join eNewsletter</a>
-				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				        	<a style="font-family: msyh; font-size: 13px;" href="/contacts/new">Contact Us</a>
+				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				        	<a style="font-family: msyh; font-size: 13px;" href="/reg_communs/new">Join Our Community</a>
 				        	
 				        </div>
 				        

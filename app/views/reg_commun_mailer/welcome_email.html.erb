@@ -2,8 +2,508 @@
 <html>
   <head>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    
+    <style>
+    	
+    	.notify {
+    		display: none;
+    	}
+    	.main {
+    		font-family:Arial, Helvetica, sans-serif;
+    		font-size: 20px;
+    		color: black;
+    	}
+
+    	p {
+    		font-family:Arial, Helvetica, sans-serif;
+    		font-size: 16px;
+    		color: black;
+    	}
+    	
+    	.links {
+    		font-family:Arial, Helvetica, sans-serif;
+    		font-size: 13px;
+    		color: brown;    		
+    	}
+    	
+    	table td .left {
+    		width: 100px;
+    		text-align: right;
+    	}
+    	table td .right {
+    		width: 100px;
+    		text-align: left;
+    	}
+    	
+    </style>
+    
   </head>
-  <body>
-    <h1>Welcome to TheLearningCounsel.com <%= @user.name_first %></h1>
+  <body class="notify">
+  	<br>
+  	<br>
+  	<%= image_tag attachments['logo-icon-come-together.png'].url, :alt => '' %>
+  	<br>
+  	<br>
+    <span class="main">
+    	THANK YOU for becoming part of the Learning Counsel Community.
+    	<br>
+    	We’re excited about the changes we can all create together to further digital curriculum strategies that work.  
+    </span>
+  	<br>
+  	<br>
+  	<p>To update the information you gave us, please first use our 'Leave Community' link below and then resubmit our Community form.</p>
+  	<br>
+  	<br>
+  	<p>The information you provided:</p>
+  	<br>
+  	
+<!-- 
+#  id                        :integer          not null, primary key
+#  name_first                :string(50)
+#  name_last                 :string(50)
+#  name_title                :string(50)
+#  name_affiliation          :string(100)
+#  address                   :string(100)
+#  city                      :string(50)
+#  state                     :string(50)
+#  zip                       :string(10)
+#  phone                     :string(50)
+#  email                     :string(255)      default(""), not null
+#  institution_size          :string(50)
+#  characterize_decision     :string(50)
+#  characterize_area         :text
+#  survey_preferences        :text
+#  created_at                :datetime
+#  updated_at                :datetime
+#  level_other               :string(100)
+#  public_private            :string(50)
+#  employee_number           :string(100)
+#  characterize_area_other   :string(200)
+#  level_1                   :boolean          default(FALSE)
+#  level_2                   :boolean          default(FALSE)
+#  level_3                   :boolean          default(FALSE)
+#  level_4                   :boolean          default(FALSE)
+#  level_5                   :boolean          default(FALSE)
+#  level_6                   :boolean          default(FALSE)
+#  level_7                   :boolean          default(FALSE)
+#  level_1_text              :string(200)
+#  level_2_text              :string(200)
+#  level_3_text              :string(200)
+#  level_4_text              :string(200)
+#  level_5_text              :string(200)
+#  level_6_text              :string(200)
+#  level_7_text              :string(200)
+#  characterize_area_1       :boolean          default(FALSE)
+#  characterize_area_2       :boolean          default(FALSE)
+#  characterize_area_3       :boolean          default(FALSE)
+#  characterize_area_4       :boolean          default(FALSE)
+#  characterize_area_5       :boolean          default(FALSE)
+#  characterize_area_6       :boolean          default(FALSE)
+#  characterize_area_7       :boolean          default(FALSE)
+#  characterize_area_8       :boolean          default(FALSE)
+#  characterize_area_9       :boolean          default(FALSE)
+#  characterize_area_10      :boolean          default(FALSE)
+#  survey_preferences_1      :boolean          default(FALSE)
+#  survey_preferences_2      :boolean          default(FALSE)
+#  survey_preferences_3      :boolean          default(FALSE)
+#  survey_preferences_4      :boolean          default(FALSE)
+#  survey_preferences_5      :boolean          default(FALSE)
+#  characterize_area_1_text  :string(200)
+#  characterize_area_2_text  :string(200)
+#  characterize_area_3_text  :string(200)
+#  characterize_area_4_text  :string(200)
+#  characterize_area_5_text  :string(200)
+#  characterize_area_6_text  :string(200)
+#  characterize_area_7_text  :string(200)
+#  characterize_area_8_text  :string(200)
+#  characterize_area_9_text  :string(200)
+#  characterize_area_10_text :string(200)
+#  survey_preferences_1_text :string(200)
+#  survey_preferences_2_text :string(200)
+#  survey_preferences_3_text :string(200)
+#  survey_preferences_4_text :string(200)
+#  survey_preferences_5_text :string(200)
+-->
+
+  	<table>
+  		<tr>
+  			<td class="left">
+    			<p>First Name:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.name_first %></p>
+  			</td>
+  		</tr>
+  		<tr>
+  			<td class="left">
+    			<p>Last Name:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.name_last %></p>
+  			</td>
+  		</tr>
+  		<tr>
+  			<td class="left">
+    			<p>Title:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.name_title %></p>
+  			</td>
+  		</tr>
+  		<tr>
+  			<td class="left">
+    			<p>Affiliation:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.name_affiliation %></p>
+  			</td>
+  		</tr>
+  		<tr>
+  			<td class="left">
+    			<p>Address:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.address %></p>
+  			</td>
+  		</tr>
+  		<tr>
+  			<td class="left">
+    			<p>City:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.city %></p>
+  			</td>
+  		</tr>
+  		<tr>
+  			<td class="left">
+    			<p>State:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.state %></p>
+  			</td>
+  		</tr>
+  		<tr>
+  			<td class="left">
+    			<p>Zip:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.zip %></p>
+  			</td>
+  		</tr>
+  		<tr>
+  			<td class="left">
+    			<p>Phone:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.phone %></p>
+  			</td>
+  		</tr>
+  		<tr>
+  			<td class="left">
+    			<p>Email:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.email %></p>
+  			</td>
+  		</tr>
+  		
+
+
+
+
+  		<% if @reg_commun.level_1 %>
+  		<tr>
+  			<td class="left">
+    			<p>Level:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.level_1_text %></p>
+  			</td>
+  		</tr>  		
+  		<% end %>
+  		<% if @reg_commun.level_2 %>
+  		<tr>
+  			<td class="left">
+    			<p>Level:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.level_2_text %></p>
+  			</td>
+  		</tr>  		
+  		<% end %>
+  		<% if @reg_commun.level_3 %>
+  		<tr>
+  			<td class="left">
+    			<p>Level:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.level_3_text %></p>
+  			</td>
+  		</tr>  		
+  		<% end %>
+  		<% if @reg_commun.level_4 %>
+  		<tr>
+  			<td class="left">
+    			<p>Level:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.level_4_text %></p>
+  			</td>
+  		</tr>  		
+  		<% end %>
+  		<% if @reg_commun.level_5 %>
+  		<tr>
+  			<td class="left">
+    			<p>Level:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.level_5_text %></p>
+  			</td>
+  		</tr>  		
+  		<% end %>
+  		<% if @reg_commun.level_6 %>
+  		<tr>
+  			<td class="left">
+    			<p>Level:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.level_6_text %></p>
+  			</td>
+  		</tr>  		
+  		<% end %>
+  		<% if @reg_commun.level_7 %>
+  		<tr>
+  			<td class="left">
+    			<p>Level:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.level_7_text %></p>
+  			</td>
+  		</tr>  		
+  		<% end %>
+  		<% if @reg_commun.level_other.length > 0 %>
+  		<tr>
+  			<td class="left">
+    			<p>Level:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.level_other %></p>
+  			</td>
+  		</tr>  		
+  		<% end %>
+  		
+  		<tr>
+  			<td class="left">
+    			<p>Institution Size:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.institution_size %></p>
+  			</td>
+  		</tr>
+  		<tr>
+  			<td class="left">
+    			<p>Decision Making Status:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.characterize_decision %></p>
+  			</td>
+  		</tr>
+  		
+  		
+  		
+  		
+  		
+  		<% if @reg_commun.characterize_area_1 %>
+  		<tr>
+  			<td class="left">
+    			<p>Area:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.characterize_area_1_text %></p>
+  			</td>
+  		</tr>  		
+  		<% end %>
+  		<% if @reg_commun.characterize_area_2 %>
+  		<tr>
+  			<td class="left">
+    			<p>Area:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.characterize_area_2_text %></p>
+  			</td>
+  		</tr>  		
+  		<% end %>
+  		<% if @reg_commun.characterize_area_3 %>
+  		<tr>
+  			<td class="left">
+    			<p>Area:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.characterize_area_3_text %></p>
+  			</td>
+  		</tr>  		
+  		<% end %>
+  		<% if @reg_commun.characterize_area_4 %>
+  		<tr>
+  			<td class="left">
+    			<p>Area:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.characterize_area_4_text %></p>
+  			</td>
+  		</tr>  		
+  		<% end %>
+  		<% if @reg_commun.characterize_area_5 %>
+  		<tr>
+  			<td class="left">
+    			<p>Area:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.characterize_area_5_text %></p>
+  			</td>
+  		</tr>  		
+  		<% end %>
+  		<% if @reg_commun.characterize_area_6 %>
+  		<tr>
+  			<td class="left">
+    			<p>Area:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.characterize_area_6_text %></p>
+  			</td>
+  		</tr>  		
+  		<% end %>
+  		<% if @reg_commun.characterize_area_7 %>
+  		<tr>
+  			<td class="left">
+    			<p>Area:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.characterize_area_7_text %></p>
+  			</td>
+  		</tr>  		
+  		<% end %>
+  		<% if @reg_commun.characterize_area_8 %>
+  		<tr>
+  			<td class="left">
+    			<p>Area:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.characterize_area_8_text %></p>
+  			</td>
+  		</tr>  		
+  		<% end %>
+  		<% if @reg_commun.characterize_area_9 %>
+  		<tr>
+  			<td class="left">
+    			<p>Area:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.characterize_area_9_text %></p>
+  			</td>
+  		</tr>  		
+  		<% end %>
+  		<% if @reg_commun.characterize_area_10 %>
+  		<tr>
+  			<td class="left">
+    			<p>Area:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.characterize_area_10_text %></p>
+  			</td>
+  		</tr>  		
+  		<% end %>
+  		
+  		<% if @reg_commun.characterize_area_other.length > 0 %>
+  		<tr>
+  			<td class="left">
+    			<p>Area:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.characterize_area_other %></p>
+  			</td>
+  		</tr>  		
+  		<% end %>
+  		
+
+
+  		<% if @reg_commun.survey_preferences_1 %>
+  		<tr>
+  			<td class="left">
+    			<p>Survey Preferences:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.survey_preferences_1_text %></p>
+  			</td>
+  		</tr>  		
+  		<% end %>
+  		<% if @reg_commun.survey_preferences_2 %>
+  		<tr>
+  			<td class="left">
+    			<p>Survey Preferences:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.survey_preferences_2_text %></p>
+  			</td>
+  		</tr>  		
+  		<% end %>
+  		<% if @reg_commun.survey_preferences_3 %>
+  		<tr>
+  			<td class="left">
+    			<p>Survey Preferences:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.survey_preferences_3_text %></p>
+  			</td>
+  		</tr>  		
+  		<% end %>
+  		<% if @reg_commun.survey_preferences_4 %>
+  		<tr>
+  			<td class="left">
+    			<p>Survey Preferences:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.survey_preferences_4_text %></p>
+  			</td>
+  		</tr>  		
+  		<% end %>
+  		<% if @reg_commun.survey_preferences_5 %>
+  		<tr>
+  			<td class="left">
+    			<p>Survey Preferences:</p>
+  			</td>
+  			<td class="right">
+    			<p><%= @reg_commun.survey_preferences_5_text %></p>
+  			</td>
+  		</tr>  		
+  		<% end %>
+  		
+  	</table>
+
+    
+    <br>
+    <br>
+    <a href="mailto:leavecommunity@learningcounsel.com?Subject=Leave Community" target="_top"><span class="links">To Leave the Community</span></a>
+   	<br>
+   	<br>
+    <a href="thelearningcounsel.com/privacy"><span class="links">Privacy Policy</span></a>
+
   </body>
 </html>
+
+<script>
+	
+	$(window).load( function() {
+		
+		img = $('<img />');
+		
+		img.bind('load', function() {
+			
+			$('.notify').show();		
+			});
+			
+		});
+		
+	});
+	
+</script>

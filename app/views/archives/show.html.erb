@@ -1,51 +1,29 @@
 <% provide(:title, @info.article_type) %>
-					
+
+
+ <!-- provide(:title, @info.article_type)  -->					
 			
-		<link href="/assets/screen_headlines.css" media="screen, projection" rel="stylesheet" type="text/css">
+		<!-- <link href="/assets/screen_headlines.css" media="screen, projection" rel="stylesheet" type="text/css"> -->		
+				
+		<script type="text/javascript" src="/assets/entrepeneurs_jquery-1.js"></script> 		
 		
-		<script type="text/javascript" src="/assets/entrepeneurs_jquery-1.js"></script> 
-		<script type="text/javascript" src="/assets/entrepeneurs_jquery.js"></script>
-
-		<script type="text/javascript" src="/assets/pinboards.js"></script> 
-
-
+		
+		
+		<!-- <script type="text/javascript" src="/assets/entrepeneurs_jquery.js"></script> -->
+		
+		
+		<!-- <script type="text/javascript" src="/assets/pinboards.js"></script> -->
+		
+		
 		<header>					
 
 			<%= render 'share/backtotop' %>
 			
 		</header>		
-		
-	    		    	
-	    <!-- <a href="javascript:void(0)" id="demo">render page</a> -->
-	    	    	    	    
-  <!-- id           :integer          not null, primary key
-  article_id   :integer
-  article_type         :string(100)
-  name_url     :string(100)
-  name_file    :string(50)
-  name_author  :string(50)
-  name_admin   :string(50)
-  key_words    :text
-  date_article :date
-  created_at   :datetime
-  updated_at   :datetime -->
-  	    
-	    
-	    <!-- <div><span>id: </span><span id="render_id"></span></div> -->
-	    
-	    <!-- <div><span>article_id: </span><span id="render_article_id"></span></div> -->
-	    	    
-	    <!-- <div><span>article_type: </span><span id="render_article_type"></span></div>
-	    <div><span>name_url: </span><span id="render_name_url"></span></div>
-	    <div><span>name_file: </span><span id="render_name_file"></span></div>
-	    <div><span>name_author: </span><span id="render_name_author"></span></div>
-	    <div><span>name_admin: </span><span id="render_name_admin"></span></div>
-	    <div><span>key_words: </span><span id="render_key_words"></span></div>
-	    <div><span>date_article: </span><span id="render_date_article"></span></div>
-	    <div><span>created_at: </span><span id="render_created_at"></span></div>
-	    <div><span>updated_at: </span><span id="render_updated_at"></span></div> -->
-	    	    
 
+		<div id="desc" style="visibility: hidden;"></div>
+		
+		
 		<div id="render"></div>
 
 
@@ -53,57 +31,22 @@
   
   	var name_url = gon.info.name_url;
 	var name_file = gon.info.name_file;
-	//var get_file = "http://localhost:3000/" + name_url + "/" + name_file + ".htm";
+
+	var title = gon.info.linktitle;	
+	var description = gon.info.description;
+	
+	var strg = title + "\n" + description;
 
 	var get_file = "../" + name_url + "/" + name_file + ".htm";
 
-
-	// var id = gon.info.id;	
-	//var article_id = gon.info.article_id;
-	// var article_type = gon.info.article_type;	
-	// var name_url = gon.info.name_url;	
-	// var name_file = gon.info.name_file;	
-	// var name_author = gon.info.name_author;	
-	// var name_admin = gon.info.name_admin;	
-	// var key_words = gon.info.key_words;	
-	// var date_article = gon.info.date_article;	
-	// var created_at = gon.info.created_at;	
-	// var updated_at = gon.info.updated_at;	
-
-	
 	//$(document).ready(function() {
-
 	$(window).load( function() {
 
-			// $.get( get_file, function( data) {
-// 				
-				// $( "#render" ).html( data );
-			// });
+			$( "#desc" ).text( strg );
 
-
-		// $( "#render_id" ).html( id );
-		//$( "#render_article_id" ).html( article_id );
-		// $( "#render_article_type" ).html( article_type );
-		// $( "#render_name_url" ).html( name_url );
-		// $( "#render_name_file" ).html( name_file );
-		// $( "#render_name_author" ).html( name_author );
-		// $( "#render_name_admin" ).html( name_admin );
-		// $( "#render_key_words" ).html( key_words );
-		// $( "#render_date_article" ).html( date_article );
-		// $( "#render_created_at" ).html( created_at );
-		// $( "#render_updated_at" ).html( updated_at );
-	
-		// $("#demo").click(function(){
-			// // $.get( "http://localhost:3000/journal/pearson.html", function( data ) {
-// 				
-			// $.get( get_file, function() {
-// 				
-				// $( "#render" ).html();
-			// });
-		// });
+			// $( "#desc" ).text( description );
 		
 			$.get( get_file, function( data ) {
-				
 				$( "#render" ).html( data );
 			});
 		

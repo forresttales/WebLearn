@@ -42,6 +42,8 @@ GEM
     execjs (2.0.2)
     faker (1.2.0)
       i18n (~> 0.5)
+    friendly_id (5.0.2)
+      activerecord (~> 4.0.0)
     gon (4.1.1)
       actionpack (>= 2.3.0)
       json
@@ -131,10 +133,12 @@ DEPENDENCIES
   bcrypt-ruby (= 3.0.0)
   coffee-rails
   faker
+  friendly_id (~> 5.0.0)
   gon
   jbuilder
   jquery-rails
   jquery-turbolinks
+  json
   pg
   protected_attributes
   rails (= 4.0.0)

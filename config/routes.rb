@@ -1,10 +1,33 @@
 Weblearn::Application.routes.draw do
    
+   
+   
+  resources :landings
+  
+  get "landings/index"
+  get "landings/show"
 
-  get "visitors/index"
-  get "visitors/show"
-  get "visitors/create"
-  get "visitors/new"
+  post "landings/secretlanding"
+
+  resources :landings do
+    member do
+      post :secretlanding
+    end
+  end
+
+  match "landings/new" => "landings#new", via: :all
+
+
+
+  get "tests/list"
+  get "tests/index"
+
+  get "pages/events_inter"
+
+
+
+
+
   get "reg_communs/index"
   get "reg_communs/new"
   get "reg_communs/create"
@@ -21,71 +44,42 @@ Weblearn::Application.routes.draw do
   get "reg_letters/new"
   get "reg_letters/create"
   get "reg_letters/show"
+  
+  
+  
+  
   get "archives/index"
   get "archives/new"
   get "archives/show"
   get "archives/update"
   get "archives/create"
+  
+  #match "/:id" => "archives#show", via: 'get'
+  
+  # match 'archives/:id' => 'archives#index', :as => :archives
+  
+  
+  
+  
   get "test/basic"
+  
+  get "static_pages/events_inter"
+  
   get "static_pages/test"
   get "static_pages/fonts"
   get "static_pages/index_test"
+  get "static_pages/buttons"
 
-  get "journals/k12_digital"  
-  get "journals/facing_down"
-  get "journals/five_types"
-  get "journals/whats_so_hard"
-  get "journals/education_compared"
-  get "journals/we_need"
-  get "journals/wanted_new_leader"
-  get "journals/coffee_chat"
-  get "journals/checklist_of_top_10"  
-  get "journals/pearson"
-  get "journals/nationally_recognized"
-  get "journals/to_solution"
-  get "journals/tales_to_go"
-  get "journals/mycore"
-  get "journals/charter_school_assoc"
-  get "journals/unique_az"
-  get "journals/tales_to_go_releases"
-  get "journals/tulsa_charter"
-  get "journals/blogs_and_links"
-  get "journals/educating_for_the_design"
-  get "journals/how_to_be"
-  get "journals/coffee_chat_with_memphis"
-  get "journals/guide_k12"
-  get "journals/digital_curriculum_strategy"
-  get "journals/health_care_curriculum"
-  get "journals/amazon"
-
-  #match '/users/testhome', to: 'users#testhome', via: 'get'
-     
-  # resources :users do
-    # member do
-      # get :following, :followers
-    # end
-  # end
   
   resources :sessions, only: [:new, :create, :destroy]
   
-  # resources :microposts, only: [:create, :destroy]
-  # resources :relationships, only: [:create, :destroy]
-  # root to: 'static_pages#home'
-  
-  
-  # match '/signup', to: 'users#new', via: 'get'
-  # match '/signin', to: 'sessions#new', via: 'get'
   
   match '/users/new', to: 'users#new', via: 'get'
   match '/sessions/new', to: 'sessions#new', via: 'get'
   
-  # match '/signout', to: 'sessions#destroy', via: 'delete'
   match '/signout', to: 'sessions#destroy', via: 'get'
   
   
-  # match '/help', to: 'static_pages#help', via: 'get'
-  # match '/about', to: 'static_pages#about', via: 'get'
-  # match '/contact', to: 'static_pages#contact', via: 'get'
 
   match "/users/:id/create" => "users#show", via: 'get'
 
@@ -157,22 +151,6 @@ Weblearn::Application.routes.draw do
   get "users/index"
   get "users/show"
   
-  # get "user_vendors/show"
-  # get "vendors/new"
-  # get "vendors/show"
-  # get "user_surveys/new"
-  # get "user_surveys/show"
-  # get "surveys/new"
-  # get "surveys/show"
-  # get "user_institutes/new"
-  # get "user_institutes/show"
-  # get "institutes/new"
-  # get "institutes/show"
-  
-  # root to: 'users#home'
-
-  # resources :sessions, only: [:new, :create, :destroy]
-  # resources :microposts, only: [:create, :destroy]
   # resources :relationships, only: [:create, :destroy]
 
   root to: 'static_pages#index'
@@ -194,32 +172,12 @@ Weblearn::Application.routes.draw do
   match '/sponsor', to: 'static_pages#sponsor', via: 'get'
 
   
-  #match '/ARTICLES-5-LeiLani-How-Big', to: 'public#ARTICLES-5-LeiLani-How-Big', via: 'get'
-  
 
   resources :access do
     member do
       post 'attempt_login'
     end
   end
-# 
-  # resources :access_institute do
-    # member do
-      # post 'attempt_login'
-    # end
-  # end
-
-  # resources :user_contacts do
-    # member do
-      # post 'create'
-    # end
-  # end
-
-  # resources :contacts do
-    # member do
-      # post 'create'
-    # end
-  # end
 
 
   resources :institutes do
@@ -235,11 +193,6 @@ Weblearn::Application.routes.draw do
   end
 
 
-  # resources :registers do
-    # member do
-      # post 'create'
-    # end
-  # end
 
   resources :users do
     member do
@@ -261,40 +214,18 @@ Weblearn::Application.routes.draw do
   get "logout/index"
   
   
-  # get "contacts/edit"
-  # get "contacts/delete", via: :all
-  # get "contacts/show"
-  # get "contacts/view"
   
   get "admin_contacts/edit"
   get "admin_contacts/delete", via: :all
   get "admin_contacts/show"
   get "admin_contacts/view"
   
-  # get "user_contacts/show"
-  # get "user_contacts/edit", via: :all
-  # get "user_contacts/update", via: :all
-  
-  # get "contacts/show"
-  # get "contacts/edit", via: :all
-  # match '/contacts', to: 'contacts#new', via: 'get'
-  # match "/contacts/:id" => "contacts#update", via: 'post'
-
-  
-  
-  #get "user_contacts/testnewcontact"
-  
-  
-  # get "contacts/jqmenu"
-  # get "contacts/get_message"
 
   get "admin_contacts/jqmenu"
   get "admin_contacts/get_message"
 
-  #get "users/format_yui"
   
 
-  # resources :contacts
   resources :admin_contacts
   resources :students
   resources :teachers
@@ -307,14 +238,15 @@ Weblearn::Application.routes.draw do
   resources :reg_events
   resources :reg_communs
   
+  
+  resources :archives
+  
 
   match '/about', to: 'users#about', via: 'get'
   match '/blogs', to: 'users#blogs', via: 'get'
   match '/home', to: 'users#home', via: 'get'
   match '/news', to: 'users#news', via: 'get'
   match '/services', to: 'users#services', via: 'get'
-  #match '/directory', to: 'users#directory', via: 'get'
-  #match '/edmatchup', to: 'users#edmatchup', via: 'get'
 
 
   match '/admin_contacts_list', to: 'admin_contacts#list', via: 'get'
@@ -329,7 +261,6 @@ Weblearn::Application.routes.draw do
 
   get "sessions/new"
   
-  #match '/sessions/new', to: 'sessions#new', :as => :login, via: ['get', 'post']  
 
 
   match '/access/access/login', to: 'access#login', :as => :login, via: ['get', 'post']  
@@ -375,57 +306,7 @@ Weblearn::Application.routes.draw do
   match '/access/institute/attempt_login_institute', to: 'access_institute#attempt_login_institute', :as => 'attempt_login_institute', via: ['post']
 
 
-  # match '/registers/new', to: 'registers#new', via: 'get'
-  # match "/registers/:id" => "registers#update", via: 'post'
-
-
-  #match '/users/new', to: 'users#new', via: 'get'
   match "/users/:id" => "users#update", via: 'post'
-  #match "/users/create" => "users#create", via: ['get', 'post']
-  
-  
-  
-  #match '/user_institutes_attempt_login', to: 'user_institutes#attempt_login', via: ['get', 'post']
-
-  # get 'access_institute/attempt_login', via: ['post']
-  # match '/tasks/:id/finish', :to => 'tasks#finish', :as => 'finish_task'
-
-
-  # match '/demostyle', to: 'users#styledemo', via: 'get'
-  # match '/democolumns3', to: 'users#columns3', via: 'get'
-  # match '/demofullwidth', to: 'users#fullwidth', via: 'get'
-  # match '/demogallery', to: 'users#gallery', via: 'get'
-  # match '/demoportfolio', to: 'users#portfolio', via: 'get'
-# 
-  # match '/edmatchups', to: 'edmatchups#index', via: 'get'
-# 
-# 
-  # match '/home_1', to: 'users#home_1', via: 'get'
-  # match '/about_1', to: 'users#about_1', via: 'get'
-  # match '/blogs_1', to: 'users#blogs_1', via: 'get'
-  # match '/directory_1', to: 'users#directory_1', via: 'get'
-  # match '/news_1', to: 'users#news_1', via: 'get'
-  # match '/services_1', to: 'users#services_1', via: 'get'
-# 
-  # match '/create_account', to: 'users#services_1', via: 'get'
-
-
-  # get "users/style-demo"
-  # get "users/3-columns"
-  # get "users/full-width"
-  # get "users/gallery"
-  # get "users/portfolio"
-
-
-
-
-
-
-
-
-
-
-  
   
   #match ':controller(/:action(/:id(.:format)))'
   

@@ -5,14 +5,34 @@
 								    	
   		<title><%= full_title(yield(:title)) %></title> 
 
-    	<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+		<link rel="image_src" href="<%= @info.linkimg_url %>">
+		<meta name="original-source" content="http://thelearningcounsel.com/archives/show?id=<%= @info.article_id %>">
+		<meta property="og:title" content="<%= @info.linktitle %>">
+		<meta property="og:description" content="<%= @info.description %>" >
+		<meta property="og:type" content="article">
+		<meta property="og:url" content="http://thelearningcounsel.com/archives/show?id=<%= @info.article_id %>">
+		<meta property="og:image" content="http://thelearningcounsel.com/repository/<%= @info.linkimg %>">
+
+
+
+
+
+    	 <!-- stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true  -->    	
+    	
+		<link href="/assets/custom_nav.css" media="all" rel="stylesheet">
+		<link href="/assets/ink_screen_2.css" media="all" rel="stylesheet">    	
+		<link href="/assets/custom.css" media="all" rel="stylesheet">    	
+		<link href="/assets/custom_page_layout.css" media="all" rel="stylesheet">    	
+
+    	
+
+
+
   		
 		<!-- <link rel="icon" type="image/png" href="/assets/image_fav_2.png" /> -->		
 		
-		<link rel="icon" type="image/png" href="/assets/logo-lc-round-fav.png" />
+		<link rel="icon" type="image/png" href="/assets/logo-lc-round-fav.png">
   		
-		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Bubbler+One|Metrophobic' rel='stylesheet' type='text/css'>
 				  		
    		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>    		   		
     	
@@ -22,78 +42,15 @@
 	  	<%= csrf_meta_tags %>
 	  	<%= render 'layouts/shim' %>  
 
-		<!-- <link href="css/custom-theme/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+		<!-- <link href="css/custom-theme/jquery-ui-1.10.3.custom.css" rel="stylesheet"> -->
+		
+		
 		<script src="js/jquery-1.9.1.js"></script>
-		<script src="js/jquery-ui-1.10.3.custom.js"></script> -->
+		<script src="js/jquery-ui-1.10.3.custom.js"></script>
 		
 		
-		<style type="text/css">
+
 		
-			@font-face {
-				font-family: KlavikaExtraLight;
-				src: url('/assets/KlavikaWebDisplayExtraLight.eot');
-				src: url('/assets/KlavikaWebDisplayExtraLight.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebDisplayExtraLight.woff') format('woff');
-			}
-			@font-face {
-				font-family: KlavikaLight;
-				src: url('/assets/KlavikaWebBasicLight.eot');
-				src: url('/assets/KlavikaWebBasicLight.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicLight.woff') format('woff');
-			}
-			@font-face {
-				font-family: KlavikaRegular;
-				src: url('/assets/KlavikaWebBasicRegular.eot');
-				src: url('/assets/KlavikaWebBasicRegular.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicRegular.woff') format('woff');
-			}		
-			@font-face {
-				font-family: KlavikaMedium;
-				src: url('/assets/KlavikaWebBasicMedium.eot');
-				src: url('/assets/KlavikaWebBasicMedium.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicMedium.woff') format('woff');
-			}
-			@font-face {
-				font-family: KlavikaBold;
-				src: url('/assets/KlavikaWebBasicBold.eot');
-				src: url('/assets/KlavikaWebBasicBold.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicBold.woff') format('woff');
-			}
-			@font-face {
-				font-family: KlavikaBlack;
-				src: url('/assets/KlavikaWebDisplayBlack.eot');
-				src: url('/assets/KlavikaWebDisplayBlack.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebDisplayBlack.woff') format('woff');
-			}
-		
-			@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
-			
-		</style>
-		
-		<script>
-	
-	      // window.onload = function() {
-	          // var a = document.getElementById("mylink");
-	// 
-	          	// a.onclick = function() {
-	//           		
-	            // return false;
-	          // }
-	        // }	
-			
-			// jQuery.ajaxSetup({ 
-			  // 'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
-			// })
-	 		
-			// function getMsg(){
-				// msg = getSelected();
-				// //msg = "msg";
-				// alert(msg);
-				// var p = document.getElementById("view_message");
-				// p.innerHTML = "<em>" + msg  + "</em>";
-	 			
-			// }
-	
-			// $(function() {
-				// $( "#button" ).button();
-			// });
-			
-			
-		</script>
 		                		
     </head>
     
@@ -109,10 +66,20 @@
 									
 			<%= yield %> 
 
+
 		<!-- </div> -->
+
+
+
+
+
+
+
 		
 		<%= debug(params) if Rails.env.development? %>
 		
 	</body>
 	
 </html>
+
+

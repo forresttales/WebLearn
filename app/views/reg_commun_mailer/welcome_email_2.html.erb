@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>Thank you for your registration with The Learning Counsel Community.</h1>
+    <br>
+    <p>The information you gave us is as follows. If anything is incorrect, you may contact us and/or register again.</p>
+    <br>
+    
+
+    <p>First Name: <%= @reg_commun.name_first %></p>
+    <p>Last Name: <%= @reg_commun.name_last %></p>
+    <p>Title: <%= @reg_commun.name_title %></p>
+    <p>Address: <%= @reg_commun.address %></p>
+    <p>City: <%= @reg_commun.city %></p>
+    <p>State: <%= @reg_commun.state %></p>
+    <p>Zip: <%= @reg_commun.zip %></p>
+    <p>Phone: <%= @reg_commun.phone %></p>
+    <p>Email: <%= @reg_commun.email %></p>    
+    <p>Public or Private: <%= @reg_commun.public_private %></p>
+    <p>Affiliation: <%= @reg_commun.name_affiliation %></p>
+    
+
+    <p>Levels</p>
+    <% if @reg_commun.level_federal %>
+    	<p><%= @reg_commun.level_federal_text %></p>
+    <% end %>
+    <% if @reg_commun.level_state %>
+    	<p><%= @reg_commun.level_state_text %></p>
+    <% end %>
+    <% if @reg_commun.level_regional_authority %>
+    	<p><%= @reg_commun.level_regional_authority_text %></p>
+    <% end %>
+    <% if @reg_commun.level_district_campus %>
+    	<p><%= @reg_commun.level_district_campus_text %></p>
+    <% end %>
+    <% if @reg_commun.level_department_management %>
+    	<p><%= @reg_commun.level_department_management_text %></p>
+    <% end %>
+    <% if @reg_commun.level_school_management %>
+    	<p><%= @reg_commun.level_school_management_text %></p>
+    <% end %>
+    <% if @reg_commun.level_department_school_classroom %>
+    	<p><%= @reg_commun.level_department_school_classroom_text %></p>
+    <% end %>
+    
+    	<p><%= @reg_commun.level_other %></p>
+
+    
+    <br>
+        <p>Institution Size: <%= @reg_commun.institution_size %></p>    
+        <p>Characterize Decision: <%= @reg_commun.characterize_decision %></p>    
+        <p>Characterize Area: <%= @reg_commun.characterize_area %></p>    
+        <p>Survey Preferences: <%= @reg_commun.survey_preferences %></p>
+            
+    
+  </body>
+</html>

@@ -4,13 +4,13 @@
 	<script src="/assets/jquery.validate.js"></script>
 			
 	<link rel="stylesheet" type="text/css" href="../styles/dropdown.css"/>
-	
-	<!-- <link rel="stylesheet" type="text/css" href="../styles/styles.css"/> -->					
-					
-
 					
 					
 	<style>
+	
+	#join-image {
+		height: 1700px;
+	}
 	
 	.form-reg-event {
 		
@@ -22,7 +22,6 @@
 		
 		background-color: rgba(0, 0, 0, 0.8);
 
-		
 		/*-moz-box-shadow:5px 5px 40px #fff;
 		-webkit-box-shadow:5px 40px 5px #fff;
 		box-shadow:5px 5px 40px #CCAE37;*/
@@ -40,17 +39,6 @@
 		padding-bottom: 20px;	
 	}
 	
-	#joinClose {
-		right: 6px;
-		top: 6px;
-		position: absolute;
-		display: block
-	}
-	
-	/**:focus {
-		outline: none
-	}*/
-	
 	#loading {
 		background:url("/assets/icon_loading.gif") no-repeat center center;
 		height: 100px; width: 100px;
@@ -66,9 +54,7 @@
 		height: 24px;
 		border-style:solid;
 		border-radius: 6px;
-		/*border-color: #13571F; green*/		
 		border-color: #005C9E; /*blue*/
-		
 		
 		border-width: 2px;
 		padding-left: 6px;
@@ -81,7 +67,6 @@
 	}
 
 	.input-form:focus {
-		/*border-color: #97FF47;*/
 		
 		color: #fff;
 						
@@ -114,9 +99,7 @@
 		height: 30px;
 		border-style:solid;
 		border-radius: 6px;
-		/*border-color: #13571F; green*/		
 		border-color: #005C9E; /*blue*/
-		
 		
 		border-width: 2px;
 		padding-left: 6px;
@@ -131,7 +114,6 @@
 	}
 
 	.input-form-dropdown:focus {
-		/*border-color: #97FF47;*/
 		
 		color: #fff;
 						
@@ -172,9 +154,6 @@
 	div .errors {
 		font-family: msyh;
 		font-size: 16px;
-		
-		/*color: #851717;*/
-				
 		color: #FC7777;		
 	}
 
@@ -183,31 +162,6 @@
 	}
 
 
-	/*.input-form:invalid {
-		color: #851717;
-		background: url("/assets/submit_form_cancel.png") no-repeat 216px 7px;									
-	}
-
-	.input-form:error {
-		color: #851717;
-		background: url("/assets/submit_form_cancel.png") no-repeat 216px 7px;									
-	}
-
-	.input-form:required {
-		color: orange;		
-		background: url("/assets/submit_form_asterisk_orange.png") no-repeat 218px 7px;
-	}
-
-	.input-form:success {
-		color: #ACDDE3;		
-		background: url("/assets/submit_form_tick.png") no-repeat 218px 5px;
-	}
-	
-	.input-form:valid {
-		color: #ACDDE3;		
-		background: url("/assets/submit_form_tick.png") no-repeat 218px 5px;
-	}*/	
-	
 	.input-label {
 		font-family: msyh;
 		font-size: 16px;
@@ -215,49 +169,20 @@
 		height: 18px;
 	}
 
-	/*.input-label:focus {
-		color: #43B557;
-	}
-
-	.input-label:error {
-		color: #851717;
-	}
-
-	.input-label:required {
-		color: orange;		
-	}
-
-	.input-label:success {
-		color: orange;		
-	}*/		
-		
-		
-		
 		
 	.success {
 		color: #ACDDE3;		
-		/*background: url("/assets/submit_form_tick.png") no-repeat 278px 5px;*/		
-
 		background: url("/assets/submit_form_empty.png") no-repeat 278px 1px;		
-				
 	}		
 
 	.error {
-		/*color: #851717;*/		
 		color: #FC7777;
-		
 		background: url("/assets/submit_form_empty.png") no-repeat 278px 1px;		
-			
 		border-color: #851717; 						
 	}
 
 	.required {
-		/*color: orange;		*/
-				
-		/*background: url("/assets/submit_form_asterisk_orange.png") no-repeat 278px 7px;		*/
-		
 		background: url("/assets/submit_form_empty.png") no-repeat 278px 1px;		
-				
 	}
 	
 	.error-label {
@@ -279,12 +204,7 @@
 		font-family: Arial;
 		width: 200px;
 	}
-		
-		
-	#join-image {
-		height: 810px;
-	}
-		
+				
 	div .cell-right-reg-event {
 		display: table-cell;
 		width: 330px;
@@ -315,10 +235,95 @@
 		text-align: left;
 	}
 		
-	.message {
-		height: 120px;
+	div .cell-right-reg-event-cb {
+		display: table-cell;
+		width: 430px;
+		text-align: left;
+		align: top;		
+	}
+
+	div .cell-error-reg-event-cb {
+		display: inline-block;
+		width: 200px;
+		height: 18px;
+		vertical-align: bottom;
+		text-align: left;
 	}
 		
+	.button-border {
+		width: 480px; 
+		border-style: solid; 
+		border-width: 2px; 
+		border-color: #005C9E; 
+		border-radius: 6px; 
+		padding-right: 6px; 
+		padding-top: 6px; 
+		padding-bottom: 6px;
+	}
+		
+		
+		
+	#label_cb {
+		text-decoration: none;
+	}		
+	#label_cb:focus {
+		text-decoration: underline;
+		/*color:#FF9900;*/		
+		color: #FFF480;		
+		outline: none;
+	}		
+		
+	.cb-errors {
+		color: #FC7777;
+		font-family: msyh;
+		font-size: 14px;
+		font-weight: 400;
+	}
+
+			
+	input[type=checkbox] {
+	    display:none;
+	}			
+	
+	.cb-button {
+		width: 20px;
+		height: 21px; 
+		border-style: solid; 
+		border-width: 2px; 
+		border-color: #005C9E; 
+		border-radius: 6px;		
+		margin-bottom: -8px;
+		display: inline-block;
+		margin-right: 6px;
+	}
+			
+	
+	.cb-background {
+		background-image: url("/assets/checkbox_tick.png");		
+		background-repeat: no-repeat;
+		background-position: 2px 3px;
+	}	
+	.cb-align {
+		vertical-align: top;
+	}		
+	.cb-pad {
+		padding-top: 5px;		
+	}
+	.cb-margin {
+		width: 40px;		
+	}
+	.cb-col-2 {
+		color: orange;		
+	}
+	.cb-valign {
+		margin-bottom: 1px;
+	}
+	.cb-spacer {
+		height: 20px;
+	}
+	
+	
+			
 	</style>					
 					
 					
@@ -352,12 +357,12 @@
 		</div>
 	</script> -->		
 					
-	<script id="dropdown-data1-selected" type="text/x-dot-template">
+	<!-- <script id="dropdown-data1-selected" type="text/x-dot-template">
 		{{=it.label}}<i>&darr;</i>
 	</script>
 	
 	<script id="dropdown-data1" type="text/x-dot-template">
-		<div class="dropdown1" id="dropdown1" tabindex="13">
+		<div class="dropdown1" id="dropdown1" tabindex="15">
 		    <div class="selected">{{=it.selected.label}}<i>&darr;</i></div>
 		    <ul>
 		        {{~it.items :item:index}}
@@ -365,8 +370,9 @@
 		        {{~}}
 		    </ul>
 		</div>
-	</script>		
-
+	</script>		 -->
+	
+	
 	<script id="dropdown-data2-selected" type="text/x-dot-template">
 		{{=it.label}}<i>&darr;</i>
 	</script>
@@ -386,6 +392,8 @@
 <div style="width: 1000px; margin-right: auto; margin-left: auto; background: #fff;">
 		
 	<header>					
+
+			<%= render 'share/backtotop_2' %>
     	     	
     	<!-- <div class="shadow" style="position: relative; z-index: +2;"> -->    		
 			
@@ -423,8 +431,9 @@
 					</p> -->											
 				</div>
 
-				<div class="row" style="height: 30px;">
-				</div>
+				<a name="anchor1"></a>    		      		     		
+
+				<div class="row" style="height: 30px;"></div>
 				
 			</div>
 			
@@ -611,36 +620,286 @@
 			</div>      		
 
 			<div class="input-form-spacer"></div>
-			<!--city_workshop-->
+			<!--email_cc_1 -->
 			<div class="row">
 				<div class="cell-left-reg-event">
-					<%= f.label(:city_workshop, "Digital Curriculum Workshop", :class => 'input-label required-label', :id => 'label_reg_event_city_workshop') %>
+					<%= f.label(:email_cc_1, "(*optional) cc Email", :class => 'input-label required-label', :id => 'label_reg_event_email_cc_1') %>
 				</div>
 				<div class="cell-right-reg-event">
-
-					<select name="reg_event[city_workshop]" id="reg_event_city_workshop" class="" style="display: none;" data-template="#dropdown-data1">
-					    <option value="0" selected="selected" id="option-default">-Choose a workshop-</option>	
-					    <option value="1">Charleston/Columbia, SC</option>
-					    <option value="2">Houston, TX</option>
-					    <option value="3">Albuquerque, NM</option>
-					    <option value="4">Chicago, IL</option>
-					    <option value="5">Fresno, CA (Central)</option>
-					    <option value="6">Columbus, OH</option>
-					    <option value="7">San Bernadino, CA</option>
-					    <option value="8">Richmond, VA</option>
-					    <option value="9">Milwaukee, MI</option>
-					    <option value="10">Las Vegas</option>
-					    <option value="11">Newark, NJ</option>
-					    <option value="12">Tucson/Santa Fe, AZ</option>
-					    <option value="13">Tampa, FL</option>
-					    <option value="14">OTHER</option>
-					</select>										
-
-					  <!-- f.text_field(:city_workshop, :class => "input-form required", :placeholder => 'Workshop', :tabindex => '13') 					 -->
-					  										 
+					<%= f.text_field(:email_cc_1, :class => "input-form required", :placeholder => 'email@example.com', :tabindex => '13' ) %>
 				</div>
-				<div class="cell-error-reg-event" id="state_reg_event_city_workshop"><p id="error_reg_event_city_workshop" class="select-errors"></p></div>      					   
+				<div class="cell-error-reg-event" id="state_reg_event_email_cc_1"><p id="error_reg_event_email_cc_1"></p></div>      	
 			</div>      		
+
+			<div class="input-form-spacer"></div>
+			<!--email_cc_2-->
+			<div class="row">
+				<div class="cell-left-reg-event">
+					<%= f.label(:email_cc_2, "(*optional) cc Email", :class => 'input-label required-label', :id => 'label_reg_event_email_cc_2') %>
+				</div>
+				<div class="cell-right-reg-event">
+					<%= f.text_field(:email_cc_2, :class => "input-form required", :placeholder => 'email@example.com', :tabindex => '14' ) %>
+				</div>
+				<div class="cell-error-reg-event" id="state_reg_event_email_cc_2"><p id="error_reg_event_email_cc_2"></p></div>      	
+			</div>      		
+
+			<div class="input-form-spacer"></div>
+			
+			
+			<!-- city_workshop start -->
+			<div class="input-form-spacer"></div>
+			<div class="input-form-spacer"></div>
+			
+			<div class="row">
+				<div class="cell-left-reg-event">
+					<label class="input-label required-label"><br><br>Workshops<br>(select all that apply):</label>								
+				</div>
+				
+				<div id="border_city_workshop" class="button-border" style="width: 370px;">
+					<div class="cell-right-reg-event-cb">
+
+						<div style="height: 2px;"></div>
+						<div style="margin-left: 20px;">
+							
+						    <!-- 
+						    <option value="1">Columbia, SC</option>
+						    <option value="2">Houston, TX</option>
+						    <option value="3">Albuquerque, NM</option>
+						    <option value="4">Fresno, CA (Central)</option>						    
+						    <option value="5">Chicago, IL</option>
+						    <option value="6">San Bernadino, CA</option>						    
+						    <option value="7">Richmond, VA</option>
+						    <option value="8">Minneapolis, MN</option> 
+						    <option value="9">Detroit, MI</option>
+						    <option value="10">Las Vegas, NV</option>
+						    <option value="11">San Jose, CA</option>						    
+						    <option value="12">Newark, NJ</option>
+						    <option value="13">Tucson/Santa Fe, AZ</option>
+						    <option value="14">Tampa, FL</option>
+						    -->							
+					    
+							<table id="table1" class="cb-table">
+								<tr class="cb-spacer"></tr>								
+								<tr>
+									<td>
+										<div id="cb_workshop_1" class="cb-button cb-valign"></div>
+										<%= f.check_box :city_workshop_1 %>
+									</td>
+									<td>
+										<label id="label_city_workshop_1" class="input-label required-label label_cb" for="city_workshop_1" onclick="cb_city_workshop('1');" tabindex="15">Columbia, SC</label>
+									</td>
+									<td class="cb-margin"></td>
+									<td class="cb-col-2">
+										<span>Feb 27, 2014</span>
+									</td>									
+								</tr>
+								<tr class="cb-spacer"></tr>
+								<tr>
+									<td>
+										<div id="cb_workshop_2" class="cb-button cb-valign"></div>							
+										<%= f.check_box :city_workshop_2 %>
+									</td>
+									<td>
+										<label id="label_city_workshop_2" class="input-label required-label label_cb" for="city_workshop_2" onclick="cb_city_workshop('2');" tabindex="16">Houston, TX</label>
+									</td>
+									<td class="cb-margin"></td>										
+									<td class="cb-col-2">
+										<span>March 4, 2014</span>
+									</td>																										
+								</tr>
+								<tr class="cb-spacer"></tr>
+								<tr>
+									<td>
+										<div id="cb_workshop_3" class="cb-button cb-valign"></div>							
+										<%= f.check_box :city_workshop_3 %>
+									</td>
+									<td>
+										<label id="label_city_workshop_3" class="input-label required-label label_cb" for="city_workshop_3" onclick="cb_city_workshop('3');" tabindex="17">Albuquerque, NM</label>
+									</td>					
+									<td class="cb-margin"></td>									
+									<td class="cb-col-2">
+										<span>March TBD</span>
+									</td>																						
+								</tr>
+								<tr class="cb-spacer"></tr>
+								<tr>
+									<td>
+										<div id="cb_workshop_4" class="cb-button cb-valign"></div>							
+										<%= f.check_box :city_workshop_4 %>
+									</td>
+									<td>
+										<label id="label_city_workshop_4" class="input-label required-label label_cb" for="city_workshop_4" onclick="cb_city_workshop('4');" tabindex="18">Fresno, CA (Central)</label>
+									</td>
+									<td class="cb-margin"></td>									
+									<td class="cb-col-2">
+										<span>March TBD</span>
+									</td>																																								
+								</tr>
+								<tr class="cb-spacer"></tr>
+								<tr>
+									<td>
+										<div id="cb_workshop_5" class="cb-button cb-valign"></div>							
+										<%= f.check_box :city_workshop_5 %>
+									</td>
+									<td>
+										<label id="label_city_workshop_5" class="input-label required-label label_cb" for="city_workshop_5" onclick="cb_city_workshop('5');" tabindex="19">Chicago, IL</label>
+									</td>				
+									<td class="cb-margin"></td>									
+									<td class="cb-col-2">
+										<span>April 15, 2014</span>
+									</td>																																				
+								</tr>
+								<tr class="cb-spacer"></tr>
+								<tr>
+									<td>
+										<div id="cb_workshop_6" class="cb-button cb-valign"></div>							
+										<%= f.check_box :city_workshop_6 %>
+									</td>
+									<td>
+										<label id="label_city_workshop_6" class="input-label required-label label_cb" for="city_workshop_6" onclick="cb_city_workshop('6');" tabindex="20">San Bernadino, CA</label>									
+									</td>					
+									<td class="cb-margin"></td>									
+									<td class="cb-col-2">
+										<span>April TBD</span>
+									</td>																																			
+								</tr>
+								<tr class="cb-spacer"></tr>
+								<tr>
+									<td>
+										<div id="cb_workshop_7" class="cb-button cb-valign"></div>							
+										<%= f.check_box :city_workshop_7 %>
+									</td>
+									<td>
+										<label id="label_city_workshop_7" class="input-label required-label label_cb" for="city_workshop_7" onclick="cb_city_workshop('7');" tabindex="21">Richmond, VA</label>
+									</td>		
+									<td class="cb-margin"></td>									
+									<td class="cb-col-2">
+										<span>May TBD</span>
+									</td>																																						
+								</tr>
+								<tr class="cb-spacer"></tr>
+								<tr>
+									<td>
+										<div id="cb_workshop_8" class="cb-button cb-valign"></div>							
+										<%= f.check_box :city_workshop_8 %>
+									</td>
+									<td>
+										<label id="label_city_workshop_8" class="input-label required-label label_cb" for="city_workshop_8" onclick="cb_city_workshop('8');" tabindex="22">Minneapolis, MN</label>
+									</td>
+									<td class="cb-margin"></td>									
+									<td class="cb-col-2">
+										<span>June TBD</span>
+									</td>																																								
+								</tr>
+								<tr class="cb-spacer"></tr>
+								<tr>
+									<td>
+										<div id="cb_workshop_9" class="cb-button cb-valign"></div>							
+										<%= f.check_box :city_workshop_9 %>
+									</td>
+									<td>
+										<label id="label_city_workshop_9" class="input-label required-label label_cb" for="city_workshop_9" onclick="cb_city_workshop('9');" tabindex="23">Detroit, MI</label>
+									</td>		
+									<td class="cb-margin"></td>									
+									<td class="cb-col-2">
+										<span>June TBD</span>
+									</td>																																						
+								</tr>
+								<tr class="cb-spacer"></tr>
+								<tr>
+									<td>
+										<div id="cb_workshop_10" class="cb-button cb-valign"></div>							
+										<%= f.check_box :city_workshop_10 %>
+									</td>
+									<td>
+										<label id="label_city_workshop_10" class="input-label required-label label_cb" for="city_workshop_10" onclick="cb_city_workshop('10');" tabindex="24">Las Vegas, NV</label>
+									</td>		
+									<td class="cb-margin"></td>									
+									<td class="cb-col-2">
+										<span>Sept TBD</span>
+									</td>																																						
+								</tr>
+								<tr class="cb-spacer"></tr>
+								<tr>
+									<td>
+										<div id="cb_workshop_11" class="cb-button cb-valign"></div>							
+										<%= f.check_box :city_workshop_11 %>
+									</td>
+									<td>
+										<label id="label_city_workshop_11" class="input-label required-label label_cb" for="city_workshop_11" onclick="cb_city_workshop('11');" tabindex="25">San Jose, CA</label>
+									</td>	
+									<td class="cb-margin"></td>									
+									<td class="cb-col-2">
+										<span>Sept TBD</span>
+									</td>																																							
+								</tr>
+								<tr class="cb-spacer"></tr>
+								<tr>
+									<td>
+										<div id="cb_workshop_12" class="cb-button cb-valign"></div>							
+										<%= f.check_box :city_workshop_12 %>
+									</td>
+									<td>
+										<label id="label_city_workshop_12" class="input-label required-label label_cb" for="city_workshop_12" onclick="cb_city_workshop('12');" tabindex="26">Newark, NJ</label>
+									</td>	
+									<td class="cb-margin"></td>									
+									<td class="cb-col-2">
+										<span>Sept TBD</span>
+									</td>																																							
+								</tr>
+								<tr class="cb-spacer"></tr>
+								<tr>
+									<td>
+										<div id="cb_workshop_13" class="cb-button cb-valign"></div>							
+										<%= f.check_box :city_workshop_13 %>
+									</td>
+									<td>
+										<label id="label_city_workshop_13" class="input-label required-label label_cb" for="city_workshop_13" onclick="cb_city_workshop('13');" tabindex="27">Tucson/Santa Fe, AZ</label>
+									</td>	
+									<td class="cb-margin"></td>									
+									<td class="cb-col-2">
+										<span>Oct TBD</span>
+									</td>																																							
+								</tr>
+								<tr class="cb-spacer"></tr>
+								<tr>
+									<td>
+										<div id="cb_workshop_14" class="cb-button cb-valign"></div>							
+										<%= f.check_box :city_workshop_14 %>
+									</td>
+									<td>
+										<label id="label_city_workshop_14" class="input-label required-label label_cb" for="city_workshop_14" onclick="cb_city_workshop('14');" tabindex="28">Tampa, FL</label>
+									</td>	
+									<td class="cb-margin"></td>									
+									<td class="cb-col-2">
+										<span>Oct TBD</span>
+									</td>																																							
+								</tr>
+							</table>
+							
+							<div style="height: 24px;"></div>
+
+						</div>
+												
+					</div>
+				</div>
+				
+				<div style="display: table-cell; padding-left: 20px;">
+					<div style="display: table;">
+						<div style="display: table-row; height: 16px;"></div>
+						<div style="display: table-row;">
+							<div style="display: table-cell;">
+
+								<div class="cell-error-reg-event-cb" id="state_reg_event_city_workshop">
+									<p id="error_reg_event_city_workshop" class="cb-errors"></p>
+								</div>      
+								
+							</div>							
+						</div>
+					</div>
+				</div>
+			</div>      		
+			<!-- city_workshop end -->
 
 			<div class="input-form-spacer"></div>
 			<div class="input-form-spacer"></div>
@@ -650,7 +909,7 @@
 				<div class="cell-left-reg-event">
 				</div>
 				<div class="cell-submit-reg-event" style="padding-left: 0px;">
-					<%= f.submit "Submit", :id => 'btn_submit', :class => 'btn submitregevent', :tabindex => '14' %>
+					<%= f.submit "Submit", :id => 'btn_submit', :class => 'btn submitregevent', :tabindex => '29' %>
 				</div>      	
 			</div>      		
 
@@ -700,6 +959,13 @@
     </script> -->
     
 	<script>
+
+		function scrollToAnchor(aid) {
+			var a = $("a[name='" + aid + "']");
+			$('html, body').animate({ scrollTop: a.offset().top }, 1000);
+			// jQuery('html, body').animate({scrollTop: 100}, 1000);				
+		}
+
 
 		function showSignin() {
 	
@@ -772,8 +1038,10 @@
 			})
 
 			var h1 = $("#join-image").height();
+
+			// var h1 = 2000;
 			
-			var h2 = (h1 * (0.9));
+			var h2 = (h1 * (0.94));
 			
 			$("#form_reg_event").css({
 				height : h2
@@ -806,35 +1074,45 @@
 		}
 		
 
+		validatorCalled = false;
 		var val = null;
-		var formval = null;
+		//var formval = null;
 		
 		function formValidate() {
 						
-			formval = $("#form_join").validate({
+			//formval = $("#form_join").validate({
 
-			// $("#form_join").validate({
+			var selectValid2;
+			var validCityWorkshop;
+			
+			$("#form_join").validate({
 			
 				submitHandler: function(form) {
 
 					//form.submit();
 					
-					selectValid1 = validateSelect1();
+					// selectValid1 = validateSelect1();
 					selectValid2 = validateSelect2();
+					validCityWorkshop = validateCityWorkshop();
+					
 					
 					//var s = 'selectValid1 = ' + selectValid1 + ' selectValid2 = ' + selectValid2;
 					//alert(s);
 					
-					if ( selectValid1 && selectValid2 ) {
+					// if ( selectValid1 && selectValid2 ) {
+					if ( selectValid2 && validCityWorkshop ) {						
 						form.submit();
 					}
 					else
 					{
 						var errors = 0;
-						if (!selectValid1) {
-							errors += 1;
-						}
+						// if (!selectValid1) {
+							// errors += 1;
+						// }
 						if (!selectValid2) {
+							errors += 1;
+						}			
+						if ( !validCityWorkshop ) {
 							errors += 1;
 						}					
 						if (errors) {
@@ -844,7 +1122,8 @@
 							$("div.errors p").html(message);
 							$("div.errors").show();
 							$("#btn_submit").blur();
-							$("#form_reg_event").focus();						
+							$("#form_reg_event").focus();		
+							scrollToAnchor('anchor1');											
 						} else {
 							$("div.errors").hide();
 						}
@@ -910,9 +1189,20 @@
 					},
 					'reg_event[email]': {
 						required: true,
-						maxlength: 50,
+						maxlength: 100,
+						email: true
+					},
+					'reg_event[email_cc_1]': {
+						required: false,
+						maxlength: 100,
+						email: true
+					},
+					'reg_event[email_cc_2]': {
+						required: false,
+						maxlength: 100,
 						email: true
 					}
+
 					// 'reg_event[city_workshop]': {
 						// required: true,
 						// minlength: 1,						
@@ -920,14 +1210,18 @@
 					// }
 				},
 				invalidHandler: function(event, validator) {
+					validatorCalled = true;					
 					val = validator;
 					var errors = validator.numberOfInvalids();
-					if (!validateSelect1()) {
-						errors += 1;
-					}
+					// if (!validateSelect1()) {
+						// errors += 1;
+					// }
 					if (!validateSelect2()) {
 						errors += 1;
-					}					
+					}		
+					if ( !validateCityWorkshop() ) {
+						errors += 1;
+					}													
 					if (errors) {
 						var message = errors == 1
 						? '1 required field missed'
@@ -935,7 +1229,8 @@
 						$("div.errors p").html(message);
 						$("div.errors").show();
 						$("#btn_submit").blur();
-						$("#form_reg_event").focus();						
+						$("#form_reg_event").focus();		
+						scrollToAnchor('anchor1');										
 					} else {
 						$("div.errors").hide();
 					}
@@ -983,9 +1278,20 @@
 					},
 					'reg_event[email]': {
 						required: "*",
-						maxlength: "Email address exceeds 40 characters",
-						email: "Please enter a valid email address"
+						maxlength: "Email address exceeds 100 characters",
+						email: "Invalid form on email address"
+					},
+					'reg_event[email_cc_1]': {
+						required: "*",
+						maxlength: "Email address exceeds 100 characters",
+						email: "Invalid form on email address"
+					},					
+					'reg_event[email_cc_2]': {
+						required: "*",
+						maxlength: "Email address exceeds 100 characters",
+						email: "Invalid form on email address"
 					}					
+										
 					// 'reg_event[city_workshop]': {
 						// required: "*",
 						// maxlength: "Subject exceeds 50 characters"							
@@ -1037,35 +1343,6 @@
 		}
 
 
-		// by field error message update
-		
-// #  name_first       :string(50)
-// #  name_last        :string(50)
-// #  name_title       :string(50)
-// #  type_affiliation :string(50)
-// #  name_affiliation :string(100)
-// #  address          :string(100)
-// #  city             :string(50)
-// #  state            :string(50)
-// #  zip              :string(10)
-// #  phone            :string(50)
-// #  email            :string(255)      default(""), not null
-// #  city_workshop    :string(50)
-
-		var error_name_first = null;
-		var error_name_last = null;		
-		var error_name_title = null;		
-		var error_type_affiliation = null;		
-		var error_name_affiliation = null;		
-		var error_address = null;		
-		var error_city = null;		
-		var error_state = null;		
-		var error_zip = null;		
-		var error_phone = null;		
-		var error_email = null;
-		var error_city_workshop = null;
-		
-		
 		function updateErrorCount () {
 
 			//val = formval.validator;
@@ -1076,12 +1353,15 @@
 
 				var errors = val.numberOfInvalids();
 				
-				if (!validateSelect1()) {
-					errors += 1;
-				}
+				// if (!validateSelect1()) {
+					// errors += 1;
+				// }
 				if (!validateSelect2()) {
 					errors += 1;
 				}
+				if ( !validateCityWorkshop() ) {
+					errors += 1;
+				}					
 				
 				if (errors) {
 					var message = errors == 1
@@ -1184,6 +1464,14 @@
 			errorMessageUpdate('reg_event_email');
 		});
 
+		$("#reg_event_email_cc_1").on("blur", function () {
+			errorMessageUpdate('reg_event_email_cc_1');
+		});
+
+		$("#reg_event_email_cc_2").on("blur", function () {
+			errorMessageUpdate('reg_event_email_cc_2');
+		});
+
 		// $("#reg_event_city_workshop").on("blur", function () {
 			// updateErrorCount();
 		// });
@@ -1205,55 +1493,51 @@
 
 
 
-		var selectValid1 = false;
+		//var selectValid1 = false;
 		var selectValid2 = false;
 		
-		function selectStatus1() {
-			
-			// alert($("#reg_event_city_workshop_select option:selected").val());
-			
-			if ($("#reg_event_city_workshop option:selected").val() == '0') {
-				$('#state_reg_event_city_workshop').css ({			
-					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
-				});
-				
-				$('.dropdown1').css ({			
-					color: '#838383'
-				});
-				
-				selectValid1 = false;						
-			}
-			else {
-				$('#state_reg_event_city_workshop').css ({			
-					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 5px'
-				});
-				
-				$('.dropdown1').css ({			
-					color: '#ACDDE3'
-				});			
-		
-				if( !selectValid1 ) {
-					$('.dropdown1').css ({			
-						'border-color' : '#005C9E'
-					});
-					
-					$('.dropdown1 > .selected i').css ({			
-						'color' : '#005C9E',
-						'border-left-color' : '#005C9E' 
-					});
-					
-					$('#error_reg_event_city_workshop').html("");					
-				}
-				
-				selectValid1 = true;		
-			}
-			
-			updateErrorCount();			
-		}
+		// function selectStatus1() {
+// 			
+			// if ($("#reg_event_city_workshop option:selected").val() == '0') {
+				// $('#state_reg_event_city_workshop').css ({			
+					// background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
+				// });
+// 				
+				// $('.dropdown1').css ({			
+					// color: '#838383'
+				// });
+// 				
+				// selectValid1 = false;						
+			// }
+			// else {
+				// $('#state_reg_event_city_workshop').css ({			
+					// background: 'url("/assets/submit_form_tick.png") no-repeat 0px 5px'
+				// });
+// 				
+				// $('.dropdown1').css ({			
+					// color: '#ACDDE3'
+				// });			
+// 		
+				// if( !selectValid1 ) {
+					// $('.dropdown1').css ({			
+						// 'border-color' : '#005C9E'
+					// });
+// 					
+					// $('.dropdown1 > .selected i').css ({			
+						// 'color' : '#005C9E',
+						// 'border-left-color' : '#005C9E' 
+					// });
+// 					
+					// $('#error_reg_event_city_workshop').html("");					
+				// }
+// 				
+				// selectValid1 = true;		
+			// }
+// 			
+			// updateErrorCount();			
+		// }
 
 		function selectStatus2() {
-			
-			// alert($("#reg_event_city_workshop_select option:selected").val());
 			
 			if ($("#reg_event_type_affiliation option:selected").val() == '0') {
 				$('#state_reg_event_type_affiliation').css ({			
@@ -1294,58 +1578,51 @@
 			updateErrorCount();			
 		}
 
-		function validateSelect1() {
-			
-			if ($("#reg_event_city_workshop option:selected").val() == '0') {
-				// $('#state_reg_event_city_workshop').css ({			
-					// background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
+		// function validateSelect1() {
+// 			
+			// if ($("#reg_event_city_workshop option:selected").val() == '0') {
+				// // $('#state_reg_event_city_workshop').css ({			
+					// // background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
+				// // });
+// // 				
+				// // $('.dropdown').css ({			
+					// // color: '#838383'
+				// // });
+// 				
+				// $('.dropdown1').css ({			
+					// 'border-color' : '#851717'
 				// });
 // 				
-				// $('.dropdown').css ({			
-					// color: '#838383'
+				// $('.dropdown1 > .selected i').css ({			
+					// 'color' : '#851717',
+					// 'border-left-color' : '#851717' 
 				// });
-				
-				$('.dropdown1').css ({			
-					'border-color' : '#851717'
-				});
-				
-				$('.dropdown1 > .selected i').css ({			
-					'color' : '#851717',
-					'border-left-color' : '#851717' 
-				});
-		
-				$('#error_reg_event_city_workshop').html("*");
-		
-				selectValid1 = false;		
-			}
-			else {
-				$('.dropdown1').css ({			
-					'border-color' : '#005C9E'
-				});
-				
-				$('.dropdown1 > .selected i').css ({			
-					'color' : '#005C9E',
-					'border-left-color' : '#005C9E' 
-				});
-
-				$('#error_reg_event_city_workshop').html("");
-				
-				selectValid1 = true;		
-			}
-			
-			return selectValid1;
-		}
+// 		
+				// $('#error_reg_event_city_workshop').html("*");
+// 		
+				// selectValid1 = false;		
+			// }
+			// else {
+				// $('.dropdown1').css ({			
+					// 'border-color' : '#005C9E'
+				// });
+// 				
+				// $('.dropdown1 > .selected i').css ({			
+					// 'color' : '#005C9E',
+					// 'border-left-color' : '#005C9E' 
+				// });
+// 
+				// $('#error_reg_event_city_workshop').html("");
+// 				
+				// selectValid1 = true;		
+			// }
+// 			
+			// return selectValid1;
+		// }
 
 		function validateSelect2() {
 			
 			if ($("#reg_event_type_affiliation option:selected").val() == '0') {
-				// $('#state_reg_event_city_workshop').css ({			
-					// background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
-				// });
-// 				
-				// $('.dropdown').css ({			
-					// color: '#838383'
-				// });
 				
 				$('.dropdown2').css ({			
 					'border-color' : '#851717'
@@ -1378,21 +1655,69 @@
 			return selectValid2;
 		}
 
-// .dropdown > .selected i {
-    // position: absolute;
-    // top: -2px;
-    // right: 8px;
-    // bottom: 0;
-    // width: 40px;
-    // line-height: 40px;
-    // border-left: 2px solid #005C9E;
-    // text-align: center;
-    // /*color: #999;*/
-//        
-    // color: #005C9E;
-//     
-// }
 
+		function cb_city_workshop(caller) {
+			var cb = "#reg_event_city_workshop_" + caller;
+			var sb = "#cb_workshop_" + caller;
+			if($(cb).is(':checked')) {
+				$(cb).prop('checked', false);
+				
+				$(sb).removeClass("cb-background");			
+			}
+			else {
+				$(cb).prop('checked', true);
+
+				$(sb).addClass("cb-background");			
+			}
+			validateCityWorkshop();			
+		}
+
+
+
+		function validateCityWorkshop() {
+
+			var isChecked = false;
+			var cb;
+			for (var i = 1; i < 15; i++ ) {
+				cb = "#reg_event_city_workshop_" + i;
+				if($(cb).is(':checked')) {
+					isChecked = true;
+				}
+						
+			}
+			
+			if ( !isChecked ) {
+				if (validatorCalled ) {
+					$("#border_city_workshop").css ({
+						'border-color' : '#851717'
+					});
+					
+					$('#error_reg_event_city_workshop').html("*<br>Please select an option");
+				}
+	
+				$("#state_reg_event_city_workshop").css ({			
+					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
+				});				
+			}
+			else {
+				$("#border_city_workshop").css ({
+					'border-color' : '#005C9E'
+				});
+				
+				$('#error_reg_event_city_workshop').html("");
+				
+				$("#state_reg_event_city_workshop").css ({			
+					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 5px'
+				});
+			}
+
+			// if ( validatorCalled ) {
+				// updateErrorCount();
+			// }
+
+			
+			return isChecked;
+		}
 
 
 		$(window).load( function() {
@@ -1431,17 +1756,134 @@
 				
 			$('select').dropdown({
 			    'changed': function(data) {
-			        selectStatus1();
-			        selectStatus2();			        
+			        // selectStatus1();
+			        selectStatus2();	
 			    }
 			});	    
 				
+				
+			$('#cb_workshop_1').on('click', function() {
+				cb_city_workshop(1);
+			});
+			$('#cb_workshop_2').on('click', function() {
+				cb_city_workshop(2);
+			});
+			$('#cb_workshop_3').on('click', function() {
+				cb_city_workshop(3);
+			});
+			$('#cb_workshop_4').on('click', function() {
+				cb_city_workshop(4);
+			});
+			$('#cb_workshop_5').on('click', function() {
+				cb_city_workshop(5);
+			});
+			$('#cb_workshop_6').on('click', function() {
+				cb_city_workshop(6);
+			});
+			$('#cb_workshop_7').on('click', function() {
+				cb_city_workshop(7);
+			});
+			$('#cb_workshop_8').on('click', function() {
+				cb_city_workshop(8);
+			});
+			$('#cb_workshop_9').on('click', function() {
+				cb_city_workshop(9);
+			});
+			$('#cb_workshop_10').on('click', function() {
+				cb_city_workshop(10);
+			});
+			$('#cb_workshop_11').on('click', function() {
+				cb_city_workshop(11);
+			});
+			$('#cb_workshop_12').on('click', function() {
+				cb_city_workshop(12);
+			});
+			$('#cb_workshop_13').on('click', function() {
+				cb_city_workshop(13);
+			});
+			$('#cb_workshop_14').on('click', function() {
+				cb_city_workshop(14);
+			});
+				
+				
+			// var lb;
+			// for (var i = 1; i < 14; i++ ) {
+				// lb = "#label_city_workshop_" + i;
+	    		// $(lb).keypress(function(e){
+	      			// if(e.keyCode==13)
+	      			// $(lb).click();
+	    		// });				
+			// }
+				
+				
+    		$('#label_city_workshop_1').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_city_workshop_1').click();
+    		});				
+    		$('#label_city_workshop_2').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_city_workshop_2').click();
+    		});				
+    		$('#label_city_workshop_3').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_city_workshop_3').click();
+    		});				
+    		$('#label_city_workshop_4').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_city_workshop_4').click();
+    		});				
+    		$('#label_city_workshop_5').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_city_workshop_5').click();
+    		});				
+    		$('#label_city_workshop_6').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_city_workshop_6').click();
+    		});				
+    		$('#label_city_workshop_7').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_city_workshop_7').click();
+    		});				
+    		$('#label_city_workshop_8').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_city_workshop_8').click();
+    		});				
+    		$('#label_city_workshop_9').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_city_workshop_9').click();
+    		});				
+    		$('#label_city_workshop_10').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_city_workshop_10').click();
+    		});				
+    		$('#label_city_workshop_11').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_city_workshop_11').click();
+    		});				
+    		$('#label_city_workshop_12').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_city_workshop_12').click();
+    		});				
+    		$('#label_city_workshop_13').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_city_workshop_13').click();
+    		});				
+    		$('#label_city_workshop_14').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_city_workshop_14').click();
+    		});				
+
+			$('input:checkbox').on('change', function() {
+				validateCityWorkshop();
+			});
 				
 			// $(window).bind("load", function() {
 			    // $('#loading').fadeOut(2000);
 			// });
 				
 			// $("#form_signin").fadeOut();
+			
+			
 			
 		});
 	

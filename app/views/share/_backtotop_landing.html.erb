@@ -1,0 +1,68 @@
+
+	<style type="text/css">
+	
+		/* back to top button */
+	
+		.back-to-top {
+			display: none;			
+		}
+		
+		div.inflow {
+		  	position: relative; 
+		  	margin-right: 4.5em;		  
+		}
+		div.positioner {position: absolute; right: 0;} /*may not be needed: see below*/
+		div.fixed {
+		  	width: 40px;
+		  	height: 60px; 
+		  	text-align: center;
+			padding-top: 22px;
+			padding-left: 4px;		  	
+		  	position: fixed; 
+		  	top: 500px; 
+		  	right: 0px;
+		  	margin-right: 50px;
+		  	z-index: 200;
+		}
+		div.fixed:hover {
+			/*background-color: rgba(252, 207, 235, 0.50);		*/		
+		}
+
+			
+	</style>
+
+
+  	<div class="inflow">
+    	<div class="positioner"><!-- might not be needed -->
+      		<a href="#" class="back-to-top">
+      			<div class="fixed">
+      				<img src="/assets/back-to-top-gray.png" alt="back-to-top-gray.png" />
+      			</div>
+      		</a>
+    	</div>
+  	</div>
+
+
+    <script>
+                
+		jQuery(document).ready(function() {
+			
+			var offset_top = 220;
+			var duration = 1000;
+			jQuery(window).scroll(function() {
+				if (jQuery(this).scrollTop() > offset_top) {
+					jQuery('.back-to-top').fadeIn(duration);
+				} else {
+					jQuery('.back-to-top').fadeOut(duration);
+				}
+			});
+			
+			jQuery('.back-to-top').click(function(event) {
+				event.preventDefault();
+				jQuery('html, body').animate({scrollTop: 0}, duration);
+				return false;
+			})
+			
+		});
+		
+	</script>

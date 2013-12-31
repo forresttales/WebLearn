@@ -878,7 +878,7 @@
 		
 		font-family: msyh;
 		font-size: 16px;
-		width: 308px;
+		width: 310px;
 		height: 30px;
 		border-style:solid;
 		border-radius: 6px;
@@ -1950,7 +1950,8 @@ h1#k-headline {
 	color: #000000
 }
 #k-article-credit .columnist-name {
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
+		
 	font-weight: bold
 }
 #k-bottom-of-article {
@@ -1975,6 +1976,14 @@ h1#k-headline {
 	float: right;
 	text-align: right
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -2030,10 +2039,6 @@ h1#k-headline {
 	overflow: visible;
 	margin-bottom: 5px
 }
-.rowfluid .psubfeature .h2 a {
-	color: #000000;
-	text-decoration: none
-}
 .rowfluid .psubfeature #article-share {
 	width: 100%
 }
@@ -2061,9 +2066,15 @@ body.page .kk-headlines .h1 {
 	position: relative;
 	line-height: 1.15em
 }
-.kk-headlines .h1 a, .kk-headlines .h2 a {
+.kk-headlines .h1 a {
 	color: black;
-	text-decoration: none
+	text-decoration: none;
+}
+.kk-headlines .k-decorate-none {
+	text-decoration: none;
+}
+.kk-headlines .h2 a {
+	color: black;
 }
 .k-mainfeaturerow .kk-headlines {
 	float: right;
@@ -2346,7 +2357,7 @@ span.byline a:hover {
 }
 .headlines .h1 a, .headlines .h2 a {
 	color: black;
-	text-decoration: none
+	/*text-decoration: none*/	
 }
 div.headlines {
 	margin-left: 0px;
@@ -2459,8 +2470,11 @@ body.channel h1 {
 	margin-bottom: 5px
 }
 .rowfluid .psubfeature .h2 a {
-	color: #000000;
-	text-decoration: none
+	color: #000;
+	/*text-decoration: none*/	
+}
+.rowfluid .psubfeature .k-decorate-none {
+	text-decoration: none;	
 }
 .rowfluid .psubfeature #article-share {
 	width: 100%

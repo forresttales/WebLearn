@@ -13,6 +13,11 @@
 #  created_at   :datetime
 #  updated_at   :datetime
 #  article_type :string(20)
+#  description  :string(200)
+#  linkimg      :string(50)
+#  linkimg_url  :string(100)
+#  linktitle    :string(200)
+#  slug         :string(200)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
