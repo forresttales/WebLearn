@@ -5,13 +5,16 @@
 #  id              :integer          not null, primary key
 #  created_at      :datetime
 #  updated_at      :datetime
-#  account_id      :integer
 #  email           :string(50)       default("")
 #  username        :string(50)
-#  has_account     :boolean
-#  account_type    :string(50)
 #  password_digest :string(255)
 #  remember_token  :string(255)
+#  account_type    :string(50)
+#  has_account     :boolean          default(FALSE)
+#  name_first      :string(50)
+#  name_last       :string(50)
+#
+
 #  admin           :boolean          default(FALSE)
 #  name_first      :string(50)
 #  name_last       :string(50)
@@ -19,14 +22,25 @@
 
 class User < ActiveRecord::Base
   
-  attr_accessible :username, :email, :account_type, :has_account, :password, :password_confirmation, :id, :name_first, :name_last, :created_at
+  attr_accessible :id, 
+                  :name_first,
+                  :name_last,
+                  :email, 
+                  :username, 
+                  :account_type, 
+                  :has_account, 
+                  :password, 
+                  :password_confirmation, 
+                  :created_at, 
+                  :updated_at
   
-  has_one :student, dependent: :destroy
-  has_one :teacher, dependent: :destroy
+  
+  
   has_one :institute, dependent: :destroy
   has_one :publisher, dependent: :destroy
-  
-  
+  has_one :recruiter, dependent: :destroy
+  has_one :student, dependent: :destroy
+  has_one :teacher, dependent: :destroy
   
   
   # has_many :microposts, dependent: :destroy
@@ -36,6 +50,7 @@ class User < ActiveRecord::Base
                                    # class_name: "Relationship",
                                    # dependent: :destroy
   # has_many :followers, through: :reverse_relationships, source: :follower
+
   before_save { self.email = email.downcase }
   before_create :create_remember_token
   validates :username, presence: true, length: { maximum: 50 }
@@ -53,6 +68,9 @@ class User < ActiveRecord::Base
     def User.encrypt(token)
       Digest::SHA1.hexdigest(token.to_s)
     end
+    
+    
+    
     
     # def feed
       # Micropost.from_users_followed_by(self)

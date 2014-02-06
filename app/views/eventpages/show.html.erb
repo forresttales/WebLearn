@@ -1,0 +1,424 @@
+<% @title = "Tablets Record" %>
+
+	<style>
+	
+		#signin-page {
+			/*height: 800px;*/			
+		}
+	
+		#signin-page #signin-page-inner {
+		    width: 60%;
+		    margin: 0 auto;
+		}	
+
+		div .table-signin {
+			display: table;
+			background-color: #BFBD47;
+			width: 700px;
+			border-radius: 20px;
+			border:2px solid #254520;
+			box-shadow: 1px 1px 10px #888888;
+			padding-top: 40px;
+			padding-bottom: 40px;
+			padding-left: 40px;
+		}
+	
+		/*.input-signin {
+			font-family: Arial, Helvetica, sans-serif;
+			color: #000;			
+			font-size: 16px;
+			width: 300px;
+			height: 24px;
+			border-style:solid;
+			border-radius: 4px;
+			background-color: #fff;
+			border-color: #000;
+			border-width: 1px;
+			padding-left: 6px;
+		}*/
+		
+		.input-signin-show {
+			font-family: Arial, Helvetica, sans-serif;
+			color: #000;			
+			font-size: 16px;
+			width: 300px;
+			height: 24px;
+			background-color: #BFBD47;			
+			border-color: #000;
+			border-width: 0px;			
+			padding-left: 6px;
+		}
+	
+		/*.input-signin:focus {
+			border-color: #3949C4;
+			color: #000;
+			-webkit-box-shadow: 0 0 10px #3949C4;
+			-moz-box-shadow: 0 0 10px #3949C4;
+			box-shadow: 0 0 10px #3949C4;
+		}
+
+		.input-signin:disabled {
+			border-color: #523401;
+			color: #523401;
+			background-color:#CCCBC8;
+		}*/
+					
+		.input-label-signin {
+			font-family: Arial, Helvetica, sans-serif;
+			color: #000;
+			font-size: 16px;
+			width: 220px;
+			height: 18px;
+		}
+
+		.input-label-signin:disabled {
+			font-family: Arial, Helvetica, sans-serif;
+			color: #523401;
+		}
+			
+		.input-signin-spacer {
+			height: 18px;
+		}
+			
+		div .cell-right-signin-admin {
+			display: table-cell;
+			width: 50%;
+			text-align: left;
+			align: top;		
+		}
+	
+		div .cell-left-signin-admin {
+			display: table-cell;
+			width: 36%;	
+			align: top;
+			text-align: right;		
+			padding-right: 20px;
+		}
+		
+		div .cell-submit-signin-admin {
+			display: table-cell;
+			width: 50%;
+			text-align: left;
+			align: top;		
+			padding-left: 0px;
+		}
+		
+		.signin-btn {
+		  
+		  	display: inline-block;
+		  	text-decoration: none; 
+		  	width: 308px;
+		  	height: 30px;
+		  	background: linear-gradient(#000, #000);
+		  	text-shadow: 1px 1px 1px #0E86B2; 
+		  	border-radius: 6px;
+		}
+	
+		.signin-btn:focus {
+		  background: #CCC; 
+		  color: #5F7A2A;
+		  box-shadow: inset 0 1px 0 rgba(200,200,200,0.2);
+		}
+		
+		.signin-btn:hover { 
+		  box-shadow: inset 0 1px 1px rgba(255,255,255,0.2), 
+		  inset 0 1.5em 1em rgba(255,255,255,0.3);
+		}
+		
+		.signin-btn:active { 
+		  box-shadow: inset 0 1px 1px rgba(255,255,255,0.2), 
+		  inset 0 1.5em 1em rgba(0,0,0,0.3); 
+		}
+		
+	</style>
+
+
+	<div id="signin-page">
+		
+		<header>
+	
+			<%= render 'share/backtotop' %>
+			
+			<div style="height: 40px;"></div>
+			
+		</header>
+		
+		
+		<div id="signin-page-inner">
+						
+			<div class="table-signin">
+				
+				<%= button_to "Edit", {:action => 'edit', :id => @tablet.id } %> 
+				
+				<div class="row">
+					
+					<div class="cell-100percent">
+					
+						<div class="row">
+							<div class="cell-left-signin-admin">
+								<!-- <span class="input-signin-label">ID</span>		 -->								
+								<label class="input-signin-label" for="tablet_id">ID</label>
+							</div>
+							<div class="cell-right-signin-admin">
+								<input class="input-signin-show" type="text" value="<%= @tablet.id %>" />
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin-admin">
+								<span class="input-signin-label">Created</span>							
+							</div>
+							<div class="cell-right-signin-admin">
+								<input class="input-signin-show" type="text" value="<%= @tablet.created_at %>" />
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin-admin">
+								<span class="input-signin-label">Updated</span>							
+							</div>
+							<div class="cell-right-signin-admin">
+								<input class="input-signin-show" type="text" value="<%= @tablet.updated_at %>" />
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin-admin">
+								<span class="input-signin-label">Type</span>							
+							</div>
+							<div class="cell-right-signin-admin">
+								<input class="input-signin-show" type="text" value="<%= @tablet.col_1 %>" />
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin-admin">
+								<span class="input-signin-label">Type</span>							
+							</div>
+							<div class="cell-right-signin-admin">
+								<input class="input-signin-show" type="text" value="<%= @tablet.col_2 %>" />
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin-admin">
+								<span class="input-signin-label">Type</span>							
+							</div>
+							<div class="cell-right-signin-admin">
+								<input class="input-signin-show" type="text" value="<%= @tablet.col_3 %>" />
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin-admin">
+								<span class="input-signin-label">Type</span>							
+							</div>
+							<div class="cell-right-signin-admin">
+								<input class="input-signin-show" type="text" value="<%= @tablet.col_4 %>" />
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin-admin">
+								<span class="input-signin-label">Type</span>							
+							</div>
+							<div class="cell-right-signin-admin">
+								<input class="input-signin-show" type="text" value="<%= @tablet.col_5 %>" />
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin-admin">
+								<span class="input-signin-label">Type</span>							
+							</div>
+							<div class="cell-right-signin-admin">
+								<input class="input-signin-show" type="text" value="<%= @tablet.col_6 %>" />
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin-admin">
+								<span class="input-signin-label">Type</span>							
+							</div>
+							<div class="cell-right-signin-admin">
+								<input class="input-signin-show" type="text" value="<%= @tablet.col_7 %>" />
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin-admin">
+								<span class="input-signin-label">Type</span>							
+							</div>
+							<div class="cell-right-signin-admin">
+								<input class="input-signin-show" type="text" value="<%= @tablet.col_8 %>" />
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin-admin">
+								<span class="input-signin-label">Type</span>							
+							</div>
+							<div class="cell-right-signin-admin">
+								<input class="input-signin-show" type="text" value="<%= @tablet.col_9 %>" />
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin-admin">
+								<span class="input-signin-label">Type</span>							
+							</div>
+							<div class="cell-right-signin-admin">
+								<input class="input-signin-show" type="text" value="<%= @tablet.col_10 %>" />
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin-admin">
+								<span class="input-signin-label">Type</span>							
+							</div>
+							<div class="cell-right-signin-admin">
+								<input class="input-signin-show" type="text" value="<%= @tablet.col_11 %>" />
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin-admin">
+								<span class="input-signin-label">Type</span>							
+							</div>
+							<div class="cell-right-signin-admin">
+								<input class="input-signin-show" type="text" value="<%= @tablet.col_12 %>" />
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin-admin">
+								<span class="input-signin-label">Type</span>							
+							</div>
+							<div class="cell-right-signin-admin">
+								<input class="input-signin-show" type="text" value="<%= @tablet.col_13 %>" />
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin-admin">
+								<span class="input-signin-label">Type</span>							
+							</div>
+							<div class="cell-right-signin-admin">
+								<input class="input-signin-show" type="text" value="<%= @tablet.col_14 %>" />
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin-admin">
+								<span class="input-signin-label">Type</span>							
+							</div>
+							<div class="cell-right-signin-admin">
+								<input class="input-signin-show" type="text" value="<%= @tablet.col_15 %>" />
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin-admin">
+								<span class="input-signin-label">Type</span>							
+							</div>
+							<div class="cell-right-signin-admin">
+								<input class="input-signin-show" type="text" value="<%= @tablet.col_16 %>" />
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin-admin">
+								<span class="input-signin-label">Type</span>							
+							</div>
+							<div class="cell-right-signin-admin">
+								<input class="input-signin-show" type="text" value="<%= @tablet.col_17 %>" />
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin-admin">
+								<span class="input-signin-label">Type</span>							
+							</div>
+							<div class="cell-right-signin-admin">
+								<input class="input-signin-show" type="text" value="<%= @tablet.col_18 %>" />
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin-admin">
+								<span class="input-signin-label">Type</span>							
+							</div>
+							<div class="cell-right-signin-admin">
+								<input class="input-signin-show" type="text" value="<%= @tablet.col_19 %>" />
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin-admin">
+								<span class="input-signin-label">Type</span>							
+							</div>
+							<div class="cell-right-signin-admin">
+								<input class="input-signin-show" type="text" value="<%= @tablet.col_20 %>" />
+							</div>      	
+						</div>
+
+
+						<div class="input-signin-spacer"></div>
+						<div class="input-signin-spacer"></div>
+						      		
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</div>	
+		
+	</div>
+	
+	<div style="height: 100px;"></div>
+

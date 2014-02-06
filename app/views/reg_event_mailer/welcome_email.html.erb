@@ -10,18 +10,89 @@
     		font-size: 20px;
     		color: black;
     	}
+
+    	p {
+    		font-family:Arial, Helvetica, sans-serif;
+    		font-size: 16px;
+    		color: black;
+    	}
     	
     	.links {
     		font-family:Arial, Helvetica, sans-serif;
     		font-size: 13px;
     		color: brown;    		
     	}
+
+		div.table-info {
+			padding-left: 30px;
+		}    	
+		
+    	table#tbl-main {
+    	}
+    	table#tbl-main td.left {
+    		width: 220px;
+    		vertical-align: top;
+    	}
+    	table#tbl-main td.right {
+    		width: 400px;
+    		vertical-align: top;    		
+    	}
+    	    	
+    	table#workshop {
+    		width: 
+    	}
+    	table#workshop td.left {
+    		width: 220px;
+    		vertical-align: top;
+    	}    	
+    	table#workshop td.right-workshop {
+    		width: 250px;
+    		vertical-align: top;    		
+    	}
+    	table#workshop td.right-workshop-2 {
+    		width: 100px;
+    		vertical-align: top;    	
+    		color: red;	
+    	}
+
+    	.right-workshop-2 {
+    		width: 100px;
+    		vertical-align: top;    	
+    		color: red;	
+    	}
+    	
+    	span.workshop-1 {
+			display: inline-block;
+			width: 100px;
+    		font-family:Arial, Helvetica, sans-serif;			
+			font-size: 16px;    		
+    	}
+    	span.workshop-2 {
+			display: inline-block;
+			width: 200px;
+    		font-family:Arial, Helvetica, sans-serif;			
+			font-size: 16px;    		
+    	}
+    	span.workshop-3 {
+			display: inline-block;
+			width: 150px;
+    		font-family:Arial, Helvetica, sans-serif;			
+			font-size: 16px;    		
+    	}
+    	span.workshop-4 {
+			display: inline-block;
+			width: 150px;
+    		font-family:Arial, Helvetica, sans-serif;			
+			font-size: 16px;    		
+    	}
     	
     </style>
     
   </head>
   <body>
-
+  	<br>
+  	<br>
+  	<%= image_tag attachments['logo-icon-come-together.png'].url, :alt => '' %>
   	<br>
   	<br>
     <span class="main">
@@ -33,6 +104,379 @@
     	<br>
     	We’re so exciting you’re attending!  See you there!
     </span>
+  	<br>
+  	<br>
+  	<p>To update the information you gave us, please first use our 'Cancel Attendance' link below and then resubmit our Events form.</p>
+  	<br>
+  	<br>
+  	<p>The information you provided:</p>
+  	<br>  	
+	<div class="table-info">
+	  	<table id="tbl-main">
+	  		<tr>
+	  			<td class="left">
+	    			<p>First Name:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event.name_first %></p>
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="left">
+	    			<p>Last Name:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event.name_last %></p>
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="left">
+	    			<p>Title:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event.name_title %></p>
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="left">
+	    			<p>Institution or Company:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event.type_affiliation %></p>
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="left">
+	    			<p>Institution or Company Name:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event.name_affiliation %></p>
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="left">
+	    			<p>Address:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event.address %></p>
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="left">
+	    			<p>City:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event.city %></p>
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="left">
+	    			<p>State:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event.state %></p>
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="left">
+	    			<p>Zip:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event.zip %></p>
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="left">
+	    			<p>Phone:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event.phone %></p>
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="left">
+	    			<p>Email:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event.email %></p>
+	  			</td>
+	  		</tr>
+	  		
+	  		<% if @reg_event.email_cc_1.length > 0 %>	  		
+	  		<tr>
+	  			<td class="left">
+	    			<p>cc Email:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event.email_cc_1 %></p>
+	  			</td>
+	  		</tr>
+	  		<% end %>
+	  		<% if @reg_event.email_cc_2.length > 0 %>	  			  		
+	  		<tr>
+	  			<td class="left">
+	    			<p>cc Email:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event.email_cc_2 %></p>
+	  			</td>
+	  		</tr>
+			<% end %>
+		</table>
+			
+			
+		<table style="width: 650px;">
+	  		<% if @reg_event.city_workshop_1 %>
+	  		<tr>
+	  			<td>
+	    			<span class="workshop-1">Workshop:</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-2"><%= @reg_event.city_workshop_1_text %></span>
+	  			</td>
+	  			<td class="workshop-3">
+	  				<span>February 27, 2014</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-4"><%= @reg_event.city_workshop_1_session_text %></span>
+	  			</td>
+	  		</tr>  		
+	  		<% end %>
+	  		
+	  		
+	  		
+	  		<% if @reg_event.city_workshop_2 %>
+	  		<tr>
+	  			<td>
+	    			<span class="workshop-1">Workshop:</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-2"><%= @reg_event.city_workshop_2_text %></span>
+	  			</td>
+	  			<td class="workshop-3">
+	  				<span>March 17, 2014</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-4"><%= @reg_event.city_workshop_2_session_text %></span>
+	  			</td>
+	  		</tr>  		
+	  		<% end %>
+	  		<% if @reg_event.city_workshop_3 %>
+	  		<tr>
+	  			<td>
+	    			<span class="workshop-1">Workshop:</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-2"><%= @reg_event.city_workshop_3_text %></span>
+	  			</td>
+	  			<td class="workshop-3">
+	  				<span>April 15, 2014</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-4"><%= @reg_event.city_workshop_3_session_text %></span>
+	  			</td>
+	  		</tr>  		
+	  		<% end %>
+	  		<% if @reg_event.city_workshop_4 %>
+	  		<tr>
+	  			<td>
+	    			<span class="workshop-1">Workshop:</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-2"><%= @reg_event.city_workshop_4_text %></span>
+	  			</td>
+	  			<td class="workshop-3">
+	  				<span>April 10 (tentative), 2014</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-4"><%= @reg_event.city_workshop_4_session_text %></span>
+	  			</td>
+	  		</tr>  		
+	  		<% end %>
+	  		<% if @reg_event.city_workshop_5 %>
+	  		<tr>
+	  			<td>
+	    			<span class="workshop-1">Workshop:</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-2"><%= @reg_event.city_workshop_5_text %></span>
+	  			</td>
+	  			<td class="workshop-3">
+	  				<span>April 24, 2014</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-4"><%= @reg_event.city_workshop_5_session_text %></span>
+	  			</td>
+	  		</tr>  		
+	  		<% end %>
+	  		<% if @reg_event.city_workshop_6 %>
+	  		<tr>
+	  			<td>
+	    			<span class="workshop-1">Workshop:</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-2"><%= @reg_event.city_workshop_6_text %></span>
+	  			</td>
+	  			<td class="workshop-3">
+	  				<span>May 6, 2014</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-4"><%= @reg_event.city_workshop_6_session_text %></span>
+	  			</td>
+	  		</tr>  		
+	  		<% end %>
+	  		<% if @reg_event.city_workshop_7 %>
+	  		<tr>
+	  			<td>
+	    			<span class="workshop-1">Workshop:</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-2"><%= @reg_event.city_workshop_7_text %></span>
+	  			</td>
+	  			<td class="workshop-3">
+	  				<span>June TBD, 2014</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-4"><%= @reg_event.city_workshop_7_session_text %></span>
+	  			</td>
+	  		</tr>  		
+	  		<% end %>
+	  		<% if @reg_event.city_workshop_8 %>
+	  		<tr>
+	  			<td>
+	    			<span class="workshop-1">Workshop:</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-2"><%= @reg_event.city_workshop_8_text %></span>
+	  			</td>
+	  			<td class="workshop-3">
+	  				<span>June TBD, 2014</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-4"><%= @reg_event.city_workshop_8_session_text %></span>
+	  			</td>
+	  		</tr>  		
+	  		<% end %>
+	  		<% if @reg_event.city_workshop_9 %>
+	  		<tr>
+	  			<td>
+	    			<span class="workshop-1">Workshop:</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-2"><%= @reg_event.city_workshop_9_text %></span>
+	  			</td>
+	  			<td class="workshop-3">
+	  				<span>September TBD, 2014</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-4"><%= @reg_event.city_workshop_9_session_text %></span>
+	  			</td>
+	  		</tr>  		
+	  		<% end %>
+	  		<% if @reg_event.city_workshop_10 %>
+	  		<tr>
+	  			<td>
+	    			<span class="workshop-1">Workshop:</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-2"><%= @reg_event.city_workshop_10_text %></span>
+	  			</td>
+	  			<td class="workshop-3">
+	  				<span>September TBD, 2014</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-4"><%= @reg_event.city_workshop_10_session_text %></span>
+	  			</td>
+	  		</tr>  		
+	  		<% end %>
+	  		<% if @reg_event.city_workshop_11 %>
+	  		<tr>
+	  			<td>
+	    			<span class="workshop-1">Workshop:</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-2"><%= @reg_event.city_workshop_11_text %></span>
+	  			</td>
+	  			<td class="workshop-3">
+	  				<span>September TBD, 2014</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-4"><%= @reg_event.city_workshop_11_session_text %></span>
+	  			</td>
+	  		</tr>  		
+	  		<% end %>
+	  		<% if @reg_event.city_workshop_12 %>
+	  		<tr>
+	  			<td>
+	    			<span class="workshop-1">Workshop:</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-2"><%= @reg_event.city_workshop_12_text %></span>
+	  			</td>
+	  			<td class="workshop-3">
+	  				<span>September TBD, 2014</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-4"><%= @reg_event.city_workshop_12_session_text %></span>
+	  			</td>
+	  		</tr>  		
+	  		<% end %>
+	  		<% if @reg_event.city_workshop_13 %>
+	  		<tr>
+	  			<td>
+	    			<span class="workshop-1">Workshop:</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-2"><%= @reg_event.city_workshop_13_text %></span>
+	  			</td>
+	  			<td class="workshop-3">
+	  				<span>October TBD, 2014</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-4"><%= @reg_event.city_workshop_13_session_text %></span>
+	  			</td>
+	  		</tr>  		
+	  		<% end %>
+	  		<% if @reg_event.city_workshop_14 %>
+	  		<tr>
+	  			<td>
+	    			<span class="workshop-1">Workshop:</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-2"><%= @reg_event.city_workshop_14_text %></span>
+	  			</td>
+	  			<td class="workshop-3">
+	  				<span>October TBD, 2014</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-4"><%= @reg_event.city_workshop_14_session_text %></span>
+	  			</td>
+	  		</tr>  		
+	  		<% end %>
+	  		<% if @reg_event.city_workshop_15 %>
+	  		<tr>
+	  			<td>
+	    			<span class="workshop-1">Workshop:</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-2"><%= @reg_event.city_workshop_15_text %></span>
+	  			</td>
+	  			<td class="workshop-3">
+	  				<span>November 3-4, 2014</span>
+	  			</td>
+	  			<td>
+	  			</td>
+	  		</tr>  		
+	  		<% end %>
+	  		
+	  	</table>
+	</div>
+    <br>
+    <br>
+    <p>If we have not posted a venue for the event you have pre-registered for, 
+    	please note that we will be sending you updated data via email as we get closer 
+    	to the event.</p>   
+    <p>Please also feel free to call David Kafitz at (888) 611-7709 ext. 11.</p>
     <br>
     <br>
     <a href="mailto:cancelattendance@learningcounsel.com?Subject=Cancel Event Attendance" target="_top"><span class="links">To Cancel Attendance</span></a>

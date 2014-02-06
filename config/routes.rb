@@ -1,12 +1,33 @@
 Weblearn::Application.routes.draw do
    
    
-   
-  resources :landings
-  
-  get "landings/index"
-  get "landings/show"
+  root to: 'static_pages#index'
 
+  match '/', to: 'static_pages#index', via: 'get'
+  match '/Privacy', to: 'static_pages#privacy', via: 'get'
+  match '/About', to: 'static_pages#about', via: 'get'
+  match '/Edmatchup', to: 'static_pages#edmatchup', via: 'get'
+  match '/Events', to: 'eventpages#index', via: 'get'
+  match '/Papers', to: 'static_pages#papers', via: 'get'
+  match '/Reports', to: 'static_pages#reports', via: 'get'  
+  match '/Sponsor', to: 'static_pages#sponsor', via: 'get'
+
+  match '/events', to: 'eventpages#index', via: 'get'
+  match '/index', to: 'static_pages#index', via: 'get'
+  match '/sponsor', to: 'static_pages#sponsor', via: 'get'
+  match '/papers', to: 'static_pages#papers', via: 'get'
+  match '/edmatchup', to: 'static_pages#edmatchup', via: 'get'
+  match '/privacy', to: 'static_pages#privacy', via: 'get'
+  match '/about', to: 'static_pages#about', via: 'get'
+
+  # match '/Events', to: 'events#index', via: 'get'
+
+
+
+   
+  # get "landings/index"
+  get "landings/show"
+ 
   post "landings/secretlanding"
 
   resources :landings do
@@ -15,282 +36,707 @@ Weblearn::Application.routes.draw do
     end
   end
 
-  match "landings/new" => "landings#new", via: :all
+  get "landings/new"
+  match "Subscribe" => "landings#new", via: ['get']
+  resources :landings   
 
 
 
   get "tests/list"
   get "tests/index"
 
-  get "pages/events_inter"
+  # aliases
+  get "pages/events_agenda"
+  match 'Schedule', to: 'pages#events_agenda', via: ['get']
+  match 'EventRegistration', to: 'reg_events#new', via: ['get']
+
+  # get "reg_events/index"
+  # match 'RegisterEvents', to: 'reg_events#index', via: ['get']
+  match 'RegisterEvents', to: 'events#index', via: ['get']
+
+
+  match '/Signup', to: 'users#new', via: 'get'
+
+  resources :sessions, only: [:new, :create, :destroy]
+
+  match '/Signin', to: 'sessions#new', via: 'get'
+  match '/Signout', to: 'sessions#destroy', via: 'get'
+
+
+
+  # match '/Students/home', to: 'students#home', via: 'get'
+
+
+  match '/users/show', to: 'users#show', via: 'get'
+
+
+  match '/institutes/home', to: 'institutes#index', via: 'get'
+  match '/publishers/home', to: 'publishers#index', via: 'get'
+  match '/recruiters/home', to: 'recruiters#index', via: 'get'
+  match '/students/home', to: 'students#index', via: 'get'
+  match '/teachers/home', to: 'teachers#index', via: 'get'
+
+
+  match '/ContactUs', to: 'contacts#new', via: 'get'
+  match '/LetterRegistration', to: 'reg_letters#new', via: 'get'
+  match '/CommunityRegistration', to: 'reg_communs#new', via: 'get'
+  match 'SeminarRegistration', to: 'reg_seminars#new', via: ['get']
 
 
 
 
 
-  get "reg_communs/index"
-  get "reg_communs/new"
-  get "reg_communs/create"
-  get "reg_communs/show"
-  get "reg_communitys/index"
-  get "reg_communitys/new"
-  get "reg_communitys/create"
-  get "reg_communitys/show"
-  get "reg_events/index"
-  get "reg_events/new"
-  get "reg_events/create"
-  get "reg_events/show"
-  get "reg_letters/index"
-  get "reg_letters/new"
-  get "reg_letters/create"
-  get "reg_letters/show"
-  
-  
-  
-  
-  get "archives/index"
-  get "archives/new"
-  get "archives/show"
-  get "archives/update"
-  get "archives/create"
-  
-  #match "/:id" => "archives#show", via: 'get'
-  
-  # match 'archives/:id' => 'archives#index', :as => :archives
-  
-  
+  resources :users
+  resources :students
+  resources :teachers
+  resources :institutes
+  resources :recruiters
+
+  resources :contacts
+  resources :edmatchups
+  resources :reg_letters
+  resources :reg_events
+  resources :reg_communs
+  resources :reg_seminars
+
+  # get "archives/index"
+  # get "archives/new"
+  get "archives/show"  
+  resources :archives
+
   
   
   get "test/basic"
   
   get "static_pages/events_inter"
-  
   get "static_pages/test"
   get "static_pages/fonts"
   get "static_pages/index_test"
   get "static_pages/buttons"
 
   
-  resources :sessions, only: [:new, :create, :destroy]
   
   
-  match '/users/new', to: 'users#new', via: 'get'
-  match '/sessions/new', to: 'sessions#new', via: 'get'
+  # get "eventpages/index"
+  resources :eventpages
   
-  match '/signout', to: 'sessions#destroy', via: 'get'
-  
-  
+  # get "event1pages/index"
+  match '/Discussions', to: 'event1pages#index', via: 'get'
+  resources :event1pages
 
-  match "/users/:id/create" => "users#show", via: 'get'
+  # get "event2pages/index"
+  match '/Gathering', to: 'event2pages#index', via: 'get'  
+  resources :event2pages
+
+  match '/InternetSeminars', to: 'event3pages#index', via: 'get'  
+  resources :event3pages
+  
+  
+  
+  
+  
+  # publishers  
+  
+  #get 'publishers/index'
+  match "/Publishers" => "publishers#index", via: 'get'  
+  match '/PublishersUpload', to: 'publishers#upload', via: 'post'
+  match '/PublishersNew', to: 'publishers#new', via: 'get'
+  match "/PublishersEdit" => "publishers#edit", via: 'post'
+  match "/PublishersUpdate" => "publishers#update", via: 'post'
+
+  # match "/Publishers/:id/edit" => "publishers#edit", via: 'post'
+  # match "/publishers/:id" => "publishers#update", via: 'post'
+  
+  resources :publishers do
+    collection do
+      post :settings
+    end
+  end
+
+  resources :publishers
 
   
-  match"/users/:id/admins/index" => "admins#index", via: 'get'
+  #get "publisher_images/index"
+  get "publisher_images/show"
+  match '/PublisherImages', to: 'publisher_images#index', via: 'get'
+  match '/publisher_images/upload', to: 'publisher_images#upload', via: 'post'
+  match '/PublisherNewImage', to: 'publisher_images#new', via: 'get'
+  match "/publisher_images/:id/edit" => "publisher_images#edit", via: 'post'
+  match "/publisher_images/:id" => "publisher_images#update", via: 'get'
+
+  resources :publisher_images do
+    collection { post :set_primary }
+  end
+
+  resources :publisher_images
+
+
+
+  # get "publisher_profiles/index"
+  get "publisher_profiles/show"
+  match '/PublisherProfiles', to: 'publisher_profiles#index', via: 'get'
+  match '/publisher_profiles/upload', to: 'publisher_profiles#upload', via: 'post'
+  match '/publisher_profiles/new', to: 'publisher_profiles#new', via: 'get'
+  match "/publisher_profiles/:id/edit" => "publisher_profiles#edit", via: 'post'
+  match "/publisher_profiles/:id" => "publisher_profiles#update", via: 'get'
+
+  resources :publisher_profiles
+
+
+
+  # get "publisher_settings/index"
+  get "publisher_settings/show"
+  match '/PublisherSettings', to: 'publisher_settings#index', via: 'get'
+  match '/publisher_settings/upload', to: 'publisher_settings#upload', via: 'post'
+  match '/publisher_settings/new', to: 'publisher_settings#new', via: 'get'
+  match "/publisher_settings/:id/edit" => "publisher_settings#edit", via: 'post'
+  match "/publisher_settings/:id" => "publisher_settings#update", via: 'get'
+
+  resources :publisher_settings
+
+
+
+  # get "publisher_products/index"
+  get "publisher_products/show"
+  match '/PublisherProducts', to: 'publisher_products#index', via: 'get'
+  match '/publisher_products/upload', to: 'publisher_products#upload', via: 'post'
+  match '/PublisherAddProduct', to: 'publisher_products#new', via: 'get'
+  match "/publisher_products/:id/edit" => "publisher_products#edit", via: 'post'
+  match "/publisher_products/:id" => "publisher_products#update", via: 'get'
+
+  resources :publisher_products
+
+
+
+
+  get "publisher_product_descriptions/show"
+  match '/PublisherProductDescription', to: 'publisher_product_descriptions#index', via: 'get'
+  match '/publisher_product_descriptions/upload', to: 'publisher_product_descriptions#upload', via: 'post'
+  match '/PublisherAddProductInformation', to: 'publisher_product_descriptions#new', via: 'get'
+  match "/publisher_product_descriptions/:id/edit" => "publisher_product_descriptions#edit", via: 'post'
+  match "/publisher_product_descriptions/:id" => "publisher_product_descriptions#update", via: 'post'
+
+  resources :publisher_product_descriptions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  get "image_institutes/index"
+  get "image_institutes/show"
+  match '/image_institutes/upload', to: 'image_institutes#upload', via: 'post'
+  match '/image_institutes/new', to: 'image_institutes#new', via: 'get'
+  match "/image_institutes/:id/edit" => "image_institutes#edit", via: 'post'
+  match "/image_institutes/:id" => "image_institutes#update", via: 'get'
+
+  resources :image_institutes do
+    collection { post :set_primary }
+  end
+
+  resources :image_institutes
+  
+  
+  
+  
+  
+  
+  
+  # institutes
+  
+  #get 'institutes/index'
+  match "/Institutes" => "institutes#index", via: 'get'  
+  match '/InstitutesUpload', to: 'institutes#upload', via: 'post'
+  match '/InstitutesNew', to: 'institutes#new', via: 'get'
+  match "/InstitutesEdit" => "institutes#edit", via: 'post'
+  match "/InstitutesUpdate" => "institutes#update", via: 'post'
+
+  # match "/Institutes/:id/edit" => "institutes#edit", via: 'post'
+  # match "/institutes/:id" => "institutes#update", via: 'post'
+  
+  resources :institutes do
+    collection do
+      post :settings
+    end
+  end
+
+  resources :institutes
+
+  
+  #get "institute_images/index"
+  get "institute_images/show"
+  match '/InstituteImages', to: 'institute_images#index', via: 'get'
+  match '/institute_images/upload', to: 'institute_images#upload', via: 'post'
+  match '/InstituteNewImage', to: 'institute_images#new', via: 'get'
+  match "/institute_images/:id/edit" => "institute_images#edit", via: 'post'
+  match "/institute_images/:id" => "institute_images#update", via: 'get'
+
+  resources :institute_images do
+    collection { post :set_primary }
+  end
+
+  resources :institute_images
+
+
+
+  # get "institute_profiles/index"
+  get "institute_profiles/show"
+  match '/InstituteProfiles', to: 'institute_profiles#index', via: 'get'
+  match '/institute_profiles/upload', to: 'institute_profiles#upload', via: 'post'
+  match '/institute_profiles/new', to: 'institute_profiles#new', via: 'get'
+  match "/institute_profiles/:id/edit" => "institute_profiles#edit", via: 'post'
+  match "/institute_profiles/:id" => "institute_profiles#update", via: 'get'
+
+  resources :institute_profiles
+
+
+
+  # get "institute_settings/index"
+  get "institute_settings/show"
+  match '/InstituteSettings', to: 'institute_settings#index', via: 'get'
+  match '/institute_settings/upload', to: 'institute_settings#upload', via: 'post'
+  match '/institute_settings/new', to: 'institute_settings#new', via: 'get'
+  match "/institute_settings/:id/edit" => "institute_settings#edit", via: 'post'
+  match "/institute_settings/:id" => "institute_settings#update", via: 'get'
+
+  resources :institute_settings
+
+
+
+  # get "institute_queries/index"
+  # get "institute_queries/show"
+  match '/InstituteQuery/:id', to: 'institute_queries#show', via: 'get'
+  match '/InstituteQueries', to: 'institute_queries#index', via: 'get'
+  match '/institute_queries/upload', to: 'institute_queries#upload', via: 'post'
+  match '/InstituteAddQuery', to: 'institute_queries#new', via: 'get'
+  match "/institute_queries/:id/edit" => "institute_queries#edit", via: 'post'
+  match "/institute_queries/:id" => "institute_queries#update", via: 'post'
+
+  resources :institute_queries do
+    member do
+      post :execute
+    end
+  end
+
+
+  resources :institute_queries
+
+
+
+
+  #get "institute_query_results/show"
+  match '/InstituteQueryResult/:id', to: 'institute_query_results#show', via: 'get'  
+  match '/InstituteQueryResults/:id', to: 'institute_query_results#index', via: 'get'
+  match '/institute_query_results/upload', to: 'institute_query_results#upload', via: 'post'
+  match '/InstituteAddQueryDetails', to: 'institute_query_results#new', via: 'get'
+  match "/institute_query_results/:id/edit" => "institute_query_results#edit", via: 'post'
+  match "/institute_query_results/:id" => "institute_query_results#update", via: 'post'
+
+  resources :institute_query_results
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  get "tablets/index"
+  get "tablets/show"
+  match '/tablets/upload', to: 'tablets#upload', via: 'post'
+  match '/tablets/new', to: 'tablets#new', via: 'get'
+  match "/tablets/:id/edit" => "tablets#edit", via: 'post'
+
+  resources :tablets do
+    collection { post :import }
+  end
+
+  # match '/exec_sql', to: 'tablets#exec_sql', via: 'post'
+
+  resources :tablets do
+    collection { post :exec_sql }
+  end
+
+  resources :tablets do
+    collection { post :remote_test }
+  end
+
+  resources :tablets do
+    collection { post :remote_form }
+  end
+
+  # resources :tablets do
+    # collection do
+      # post :exec_sql
+    # end
+  # end
+
+
+  match "/tablets/:id" => "tablets#update", via: 'get'
+
+
+  resources :tablets do
+    member do
+      get 'export'
+    end
+  end
+
+  resources :tablets do
+    collection do
+      post :dbclear
+    end
+  end
+
+  resources :tablets do
+    collection do
+      post :dbdelete
+    end
+  end
+
+
+  # resources :tablets do
+    # get "results_content", :on => :member
+  # end
+
+  resources :tablets do
+    collection do
+      get :results_content
+    end
+  end
+
+
+  # match "/tablets/dbclear" => "tablets#dbclear", via: :all
+
+  resources :tablets
+
+
+
+
+
+
+
+
+
+  get "tab1lets/index"
+  get "tab1lets/show"
+  match '/tab1lets/upload', to: 'tab1lets#upload', via: 'post'
+  match '/tab1lets/new', to: 'tab1lets#new', via: 'get'
+  match "/tab1lets/:id/edit" => "tab1lets#edit", via: 'post'
+
+  resources :tab1lets do
+    collection { post :import }
+  end
+
+  match "/tab1lets/:id" => "tab1lets#update", via: 'get'
+
+
+  resources :tab1lets do
+    member do
+      get 'export'
+    end
+  end
+
+  resources :tab1lets do
+    collection do
+      post :dbclear
+    end
+  end
+
+  resources :tab1lets do
+    collection do
+      post :dbdelete
+    end
+  end
+
+  # match "/tab1lets/dbclear" => "tab1lets#dbclear", via: :all
+
+  resources :tab1lets
+
+
+
+
+
+
+  get "tab2lets/index"
+  get "tab2lets/show"
+  match '/tab2lets/upload', to: 'tab2lets#upload', via: 'post'
+  match '/tab2lets/new', to: 'tab2lets#new', via: 'get'
+  match "/tab2lets/:id/edit" => "tab2lets#edit", via: 'post'
+
+  resources :tab2lets do
+    collection { post :import }
+  end
+
+  match "/tab2lets/:id" => "tab2lets#update", via: 'get'
+
+
+  resources :tab2lets do
+    member do
+      get 'export'
+    end
+  end
+
+  resources :tab2lets do
+    collection do
+      post :dbclear
+    end
+  end
+
+  resources :tab2lets do
+    collection do
+      post :dbdelete
+    end
+  end
+
+  # match "/tab2lets/dbclear" => "tab2lets#dbclear", via: :all
+
+  resources :tab2lets
+
+
+
+
+
+  get "tab3lets/index"
+  get "tab3lets/show"
+  match '/tab3lets/upload', to: 'tab3lets#upload', via: 'post'
+  match '/tab3lets/new', to: 'tab3lets#new', via: 'get'
+  match "/tab3lets/:id/edit" => "tab3lets#edit", via: 'post'
+
+  resources :tab3lets do
+    collection { post :import }
+  end
+
+  match "/tab3lets/:id" => "tab3lets#update", via: 'get'
+
+
+  resources :tab3lets do
+    member do
+      get 'export'
+    end
+  end
+
+  resources :tab3lets do
+    collection do
+      post :dbclear
+    end
+  end
+
+  resources :tab3lets do
+    collection do
+      post :dbdelete
+    end
+  end
+
+  # match "/tab3lets/dbclear" => "tab3lets#dbclear", via: :all
+
+  resources :tab3lets
+
+
+
+
+
+
+  get "tab4lets/index"
+  get "tab4lets/show"
+  match '/tab4lets/upload', to: 'tab4lets#upload', via: 'post'
+  match '/tab4lets/new', to: 'tab4lets#new', via: 'get'
+  match "/tab4lets/:id/edit" => "tab4lets#edit", via: 'post'
+
+  resources :tab4lets do
+    collection { post :import }
+  end
+
+  match "/tab4lets/:id" => "tab4lets#update", via: 'get'
+
+
+  resources :tab4lets do
+    member do
+      get 'export'
+    end
+  end
+
+  resources :tab4lets do
+    collection do
+      post :dbclear
+    end
+  end
+
+  resources :tab4lets do
+    collection do
+      post :dbdelete
+    end
+  end
+
+  # match "/tab4lets/dbclear" => "tab4lets#dbclear", via: :all
+
+  resources :tab4lets
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  # match '/:id', :to => proc { |env|
+#   
+      # id = env["action_dispatch.request.path_parameters"][:id]
+#   
+        # target = Slug.find_by!(slug: id).target
+#   
+        # controller = [target.class.to_s.tableize, 'controller'].join('_').classify.constantize
+#   
+        # controller.action('show').call(env)
+#   
+    # }, :as => :slugable, via: ['get']
+    
+  
+  
+  # resources :sessions, only: [:new, :create, :destroy]
+  
+  # match '/users/new', to: 'users#new', via: 'get'
+  # match '/sessions/new', to: 'sessions#new', via: 'get'
+  
+  # match '/signout', to: 'sessions#destroy', via: 'get'
+
+  # match "/users/:id/create" => "users#show", via: 'get'
+  # match"/users/:id/admins/index" => "admins#index", via: 'get'
 
 
   
   
-  get "admins/index"
-  get "admins/new"
-  get "admins/create"
-  get "admins/show"
-  get "admins/edit"
-  get "admins/update"
-  get "admins/destroy"
-  get "admin_registers/index"
-  get "admin_registers/new"
-  get "admin_registers/create"
-  get "admin_registers/show"
-  get "admin_registers/edit"
-  get "admin_registers/update"
-  get "admin_registers/destroy"
-  get "admin_publishers/index"
-  get "admin_publishers/new"
-  get "admin_publishers/create"
-  get "admin_publishers/show"
-  get "admin_publishers/edit"
-  get "admin_publishers/update"
-  get "admin_publishers/destroy"
-  get "admin_institutes/index"
-  get "admin_institutes/new"
-  get "admin_institutes/create"
-  get "admin_institutes/show"
-  get "admin_institutes/edit"
-  get "admin_institutes/update"
-  get "admin_institutes/destroy"
-  get "edmatchups/index"
-  get "edmatchups/new"
-  get "edmatchups/create"
-  get "edmatchups/show"
-  get "edmatchups/edit"
-  get "edmatchups/update"
-  get "edmatchups/destroy"
-  # get "access_admins/index"
-  # get "access_admins/new"
-  # get "access_admins/show"
-  # get "access_admins/update"
+  # get "edmatchups/index"
+  # get "edmatchups/new"
+  # get "edmatchups/create"
+  # get "edmatchups/show"
+  # get "edmatchups/edit"
+  # get "edmatchups/update"
+  # get "edmatchups/destroy"
   # get "registers/index"
   # get "registers/new"
   # get "registers/show"
   # get "registers/update"
-  get "access_publisher/login"
-  get "access_publisher/show"
-  get "access_publisher/update"
-  get "access_institute/login"
-  get "access_institute/show"
-  get "access_institute/update"
-  get "publishers/index"
-  get "publishers/new"
-  get "publishers/show"
-  get "publishers/update"
-  get "user_publishers/index"
-  get "user_publishers/new"
-  get "user_publishers/show"
-  get "user_publishers/update"
+  # get "access_publisher/login"
+  # get "access_publisher/show"
+  # get "access_publisher/update"
+  # get "access_institute/login"
+  # get "access_institute/show"
+  # get "access_institute/update"
+  # get "publishers/index"
+  # get "publishers/new"
+  # get "publishers/show"
+  # get "publishers/update"
+  # get "user_publishers/index"
+  # get "user_publishers/new"
+  # get "user_publishers/show"
+  # get "user_publishers/update"
   
   
-  get "users/index"
-  get "users/show"
+  # get "users/index"
+  # get "users/show"
   
-  # resources :relationships, only: [:create, :destroy]
-
-  root to: 'static_pages#index'
-
-  match '/signup', to: 'users#new', via: 'get'
-
-  match '/signin', to: 'sessions#new', via: 'get'
-  match '/signout', to: 'sessions#destroy', via: 'delete'
-
-  match '/index', to: 'static_pages#index', via: 'get'
-  match '/privacy', to: 'static_pages#privacy', via: 'get'
-  match '/about', to: 'static_pages#about', via: 'get'
-  #match '/contact', to: 'static_pages#contact', via: 'get'
-  match '/edmatchup', to: 'static_pages#edmatchup', via: 'get'
-  match '/events', to: 'static_pages#events', via: 'get'
-  match '/papers', to: 'static_pages#papers', via: 'get'
-  match '/reports', to: 'static_pages#reports', via: 'get'  
-  #match '/articles', to: 'static_pages#articles', via: 'get'
-  match '/sponsor', to: 'static_pages#sponsor', via: 'get'
-
   
 
-  resources :access do
-    member do
-      post 'attempt_login'
-    end
-  end
+  # resources :access do
+    # member do
+      # post 'attempt_login'
+    # end
+  # end
 
 
-  resources :institutes do
-    member do
-      post 'create'
-    end
-  end
+  # resources :institutes do
+    # member do
+      # post 'create'
+    # end
+  # end
   
-  resources :publishers do
-    member do
-      post 'create'
-    end
-  end
+  # resources :publishers do
+    # member do
+      # post 'create'
+    # end
+  # end
 
-
-
-  resources :users do
-    member do
-      post 'create'
-    end
-  end
+  # resources :users do
+    # member do
+      # post 'create'
+    # end
+  # end
   
-  
-  #get "admin_users/index"
-  get "admin_users/delete"
-  get "admin_users/edit"
-  #get "admin_users/list"
-  get "admin_users/new"
-  get "admin_users/logout"
-  
-  get "admin_users/view"
-  
-  
-  get "logout/index"
-  
-  
-  
-  get "admin_contacts/edit"
-  get "admin_contacts/delete", via: :all
-  get "admin_contacts/show"
-  get "admin_contacts/view"
-  
-
-  get "admin_contacts/jqmenu"
-  get "admin_contacts/get_message"
+  # get "logout/index"
 
   
 
-  resources :admin_contacts
-  resources :students
-  resources :teachers
-  resources :institutes
-  resources :publishers
-  resources :static_pages
-  resources :contacts
-  resources :edmatchups
-  resources :reg_letters
-  resources :reg_events
-  resources :reg_communs
-  
-  
-  resources :archives
-  
-
-  match '/about', to: 'users#about', via: 'get'
-  match '/blogs', to: 'users#blogs', via: 'get'
-  match '/home', to: 'users#home', via: 'get'
-  match '/news', to: 'users#news', via: 'get'
-  match '/services', to: 'users#services', via: 'get'
+  # match '/about', to: 'users#about', via: 'get'
+  # match '/blogs', to: 'users#blogs', via: 'get'
+  # match '/home', to: 'users#home', via: 'get'
+  # match '/news', to: 'users#news', via: 'get'
+  # match '/services', to: 'users#services', via: 'get'
 
 
-  match '/admin_contacts_list', to: 'admin_contacts#list', via: 'get'
-  match '/admin_users_list', to: 'admin_users#list', via: 'get'  
-  match '/admin_institutes_list', to: 'admin_institutes#list', via: 'get'
-  match '/admin_publishers_list', to: 'admin_publishers#list', via: 'get'
-  match '/admin_teachers_list', to: 'admin_teachers#list', via: 'get'
-  match '/admin_students_list', to: 'admin_students#list', via: 'get'
-
-  match '/edmatchup', to: 'static_pages#edmatchup', via: 'get'
-
-
-  get "sessions/new"
+  # get "sessions/new"
   
 
 
-  match '/access/access/login', to: 'access#login', :as => :login, via: ['get', 'post']  
-  match '/access/access/attempt_login', to: 'access#attempt_login', :as => 'attempt_login', via: ['post']
+  # match '/access/access/login', to: 'access#login', :as => :login, via: ['get', 'post']  
+  # match '/access/access/attempt_login', to: 'access#attempt_login', :as => 'attempt_login', via: ['post']
     
-  
-  match '/access/access_admins/login', to: 'access_admins#login', :as => :login_admin, via: ['get', 'post']  
 
-      
+  # match '/publishers', to: 'publishers#index', via: 'get'
+  # match "/publishers/:id" => "publishers#update", via: 'post'
+  # match '/publishers/new', to: 'publishers#new', via: 'get'
+  # match '/publishers/home', to: 'publishers#home', via: 'get'
 
-  match '/publishers', to: 'publishers#index', via: 'get'
-  match "/publishers/:id" => "publishers#update", via: 'post'
-  match '/publishers/new', to: 'publishers#new', via: 'get'
-  match '/publishers/home', to: 'publishers#home', via: 'get'
-
-  match '/institutes', to: 'institutes#index', via: 'get'
-  match "/institutes/:id" => "institutes#update", via: 'post'
-  match '/institutes/new', to: 'institutes#new', via: 'get'
-  match '/institutes/home', to: 'institutes#home', via: 'get'
+  # match '/institutes', to: 'institutes#index', via: 'get'
+  # match "/institutes/:id" => "institutes#update", via: 'post'
+  # match '/institutes/new', to: 'institutes#new', via: 'get'
+  # match '/institutes/home', to: 'institutes#home', via: 'get'
   
   #match '/user_institutes_create', to: 'user_institutes#create_login', via: 'get'
 
-  match "/students/:id" => "students#update", via: 'post'
-  match '/students/new', to: 'students#new', via: 'get'
-  match '/students/home', to: 'students#home', via: 'get'
-  match '/students/show', to: 'students#show', via: 'get'
+  # match "/students/:id" => "students#update", via: 'post'
+  # match '/students/new', to: 'students#new', via: 'get'
+  # match '/students/home', to: 'students#home', via: 'get'
+  # match '/students/show', to: 'students#show', via: 'get'
 
-  match "/teachers/:id" => "teachers#update", via: 'post'
-  match '/teachers/new', to: 'teachers#new', via: 'get'
-  match '/teachers/home', to: 'teachers#home', via: 'get'
+  # match "/teachers/:id" => "teachers#update", via: 'post'
+  # match '/teachers/new', to: 'teachers#new', via: 'get'
+  # match '/teachers/home', to: 'teachers#home', via: 'get'
 
 
   #match "/admins_index/:id" => "admins#index", via: 'get'
@@ -298,17 +744,31 @@ Weblearn::Application.routes.draw do
 
 
 
-  match '/access/publisher/login', to: 'access_publisher#login', via: ['get', 'post']  
-  match '/access/publisher/attempt_login_publisher', to: 'access_publisher#attempt_login_publisher', :as => 'attempt_login_publisher', via: ['post']
+  # match '/access/publisher/login', to: 'access_publisher#login', via: ['get', 'post']  
+  # match '/access/publisher/attempt_login_publisher', to: 'access_publisher#attempt_login_publisher', :as => 'attempt_login_publisher', via: ['post']
 
 
-  match '/access/institute/login', to: 'access_institute#login', via: ['get', 'post']  
-  match '/access/institute/attempt_login_institute', to: 'access_institute#attempt_login_institute', :as => 'attempt_login_institute', via: ['post']
+  # match '/access/institute/login', to: 'access_institute#login', via: ['get', 'post']  
+  # match '/access/institute/attempt_login_institute', to: 'access_institute#attempt_login_institute', :as => 'attempt_login_institute', via: ['post']
 
 
-  match "/users/:id" => "users#update", via: 'post'
+  # match "/users/:id" => "users#update", via: 'post'
   
   #match ':controller(/:action(/:id(.:format)))'
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   # The priority is based upon order of creation: first created -> highest priority.

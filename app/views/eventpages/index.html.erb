@@ -1,0 +1,382 @@
+<% provide(:title, 'Events') %>
+
+
+<style>
+	
+	
+	#lc-landing {
+	}	
+		
+	#lc-landing #page {
+	  width: 800px;
+	  /*margin-left: 235px;*/
+	 	  
+	  margin-left: auto;
+	  margin-right: auto;
+	  
+	  
+	  /*margin-right: auto;*/  
+	  
+	}
+	
+	#lc-landing #subscribe-box  {
+	float: right; 
+	margin-left: 20px;
+	}
+	
+	#lc-landing #subscribe-box .form {   
+		width: 255px;
+		height: 289px;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		border-radius: 4px; /* border radius */
+		-moz-background-clip: padding;
+		-webkit-background-clip: padding-box;
+		background-clip: padding-box; /* prevents bg color from leaking outside the border */
+		background-color: #eaeaea; /* layer fill content */
+		-moz-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+		-webkit-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+		box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+	}
+	
+	#lc-landing #subscribe-box .label { 
+		height: 35px;
+	    width: 240px;
+		background-color: #414141; /* layer fill content */
+		-moz-border-radius: 4px 4px 0 0;
+		-webkit-border-radius: 4px 4px 0 0;
+		border-radius: 4px 4px 0 0; /* border radius */
+		-moz-background-clip: padding;
+		-webkit-background-clip: padding-box;
+		background-clip: padding-box; /* prevents bg color from leaking outside the border */
+		-moz-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+		-webkit-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+		box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+		}
+	
+	#lc-landing #subscribe-box h3 {  
+		color: #ebeff1; /* text color */
+		/*KlavikaMedium*/
+		font-family: KlavikaMedium;
+		/*font-family: "Quattrocento Sans", sans-serif;*/
+		font-size: 15px;
+		margin:0;
+		padding-left: 15px;
+	    padding-top: 15px;
+		}
+	#lc-landing #subscribe-box img {
+	  float:left;
+	  position: relative;
+	  left: 116px;
+	}
+	
+	
+	
+	/*#lc-landing .services-ov {
+	    background-clip: padding-box;
+	    background-color: #999999;
+	    border: 1px solid #999999;
+	    border-radius: 4px 4px 4px 4px;
+	    height: 22px;
+	    margin-left: auto;
+	    margin-right: auto;
+	    margin-top: 30px;
+	    width: 200px;
+	}
+	
+	#lc-landing .services-ov a:link {
+	    color: #F2F2F2;
+	    font-family: "Quattrocento Sans",sans-serif;
+	    font-size: 13px;
+	    padding: 0 8px 8px 7px;
+	    text-decoration: none;
+	}*/
+	
+	
+	
+	#lc-landing .services-ov {
+	    background-clip: padding-box;
+		
+		
+	  width: 232px;
+		height: 22px;
+		border: 1px solid #999;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
+		-moz-background-clip: padding;
+		-webkit-background-clip: padding-box;
+		background-clip: padding-box;
+		background-color: #999;
+		margin-left: auto;
+	    margin-right: auto;
+	    margin-top: 30px;
+	}
+	
+	#lc-landing .services-ov a:link {
+	    /*padding: 0 8px 8px 7px;*/
+	   	
+		color: #f2f2f2;
+		font-family: "Quattrocento Sans", sans-serif;
+		font-size: 13px;
+		text-decoration: none;
+		padding: 2px 2px 3px;	
+		position: abolute;
+		margin-left: 8px;
+	}
+	
+	
+	
+	
+	.services-ov a:hover {color: #f2f2f2; text-decoration: none; background-color: #6a6a6a;}
+	.services-ov a:active {color: #f2f2f2; text-decoration: none; background-color: #535353; /* layer fill content */
+		-moz-box-shadow: inset 1px 2px 0 rgba(3,4,4,.4); /* inner shadow */
+		-webkit-box-shadow: inset 1px 2px 0 rgba(3,4,4,.4); /* inner shadow */
+		box-shadow: inset 1px 2px 0 rgba(3,4,4,.4); /* inner shadow */}
+	.services-ov a:visited {color: #f2f2f2; text-decoration: none;}
+	
+	#lc-landing p {
+		color: #333;
+		/*font-family: "Quattrocento";*/
+		font-family: KlavikaLight;
+		font-size: 13px;
+		width: 800px;
+		line-height: 1.2em;	
+	  	font-size: 1.15em;
+		
+		}
+	
+	#lc-landing a {
+		color: #C4740C;
+		}
+	
+	#lc-landing .table p {
+		color: #333;
+		/*font-family: "Quattrocento";*/
+		font-family: KlavikaLight;
+		font-size: 13px;
+		/*width: 400px;*/
+		line-height: 1.2em;	
+	  	font-size: 1.15em;
+		}
+	
+	#lc-landing ul li {
+		color: #000;
+		font-family: KlavikaMedium;
+		/*font-family: "Quattrocento";*/	
+		font-size: 16px;
+		margin-left: 30px;
+		font-weight: 600;
+		line-height: 1.2em;		
+		}
+		
+	#lc-landing .page-title {
+	  font-size: 35px;
+	  color: #808080;
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 580px;
+	}
+	
+	#lc-landing .page-title-centered {
+	  font-size: 40px;
+	  color: #808080;
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 580px;
+	}
+	
+	#lc-landing .center {
+		text-align: center;
+		margin-right: 17%;
+	}
+	
+	#lc-landing .sub-title {
+	  font-size: 30px;
+	  color: #34633A;
+	  margin-left: auto;
+	  margin-right: auto;
+	  /*width: 500px;*/  
+	  width: 470px;
+	  
+	}
+	
+	#lc-landing .green-this {
+	    color: #41b737;
+		font-style: bold;
+		}
+		
+	#lc-landing .bold-close {	
+		color: #34633a;
+		size: 22px;
+		font-weight: bold;
+		}
+	
+	
+	#lc-landing #bottom-graphic img {
+	  bottom: 220px;
+	  position: relative;
+	  float:left;
+	}
+	
+	/*#lc-landing .box-row {*/	
+	.lc-landing-box-row {
+	  background: url(../repository/lc-boxes.png) white repeat-x;
+	  height: 59px;
+	  margin-left: 440px;
+	  margin-top: 30px;
+	}
+	
+	.spacer {
+		height: 20px;
+	}
+			
+	#lc-landing table tr td {
+		vertical-align: top;
+	}			
+	
+	.city-color {
+		color: #1B237A;	
+	}
+	
+</style>	
+	
+
+<!-- <div class="tabs">
+  <ul>
+    <li class="active">
+    	<a href="/Events" class="tab" >Events</a>
+    </li>
+    <li>
+    	<a href="/event1pages" class="tab" >Discussions</a>
+    </li>
+    <li>
+    	<a href="/event2pages" class="tab" >Gathering</a>
+    </li>
+    <li>
+    	<a href="/EventRegistration" class="tab" >Register</a>
+    </li>
+  </ul>
+</div> -->
+
+<%= render 'share/backtotop_2' %>
+
+
+<div id="tab-container">
+
+
+<%= render 'share/eventpages_tabs'%>
+
+
+
+<div id="lc-landing">
+		
+<!-- <div class="spacer"></div>
+<div class="spacer"></div>
+<div class="spacer"></div> -->
+
+	
+<div id="page">
+
+<img src="../repository/events/conference.jpg" alt="conference.jpg" width="800px">
+
+<div class="spacer"></div>
+<div class="spacer"></div>
+
+<p style="color: #96328E; font-size: 30px; font-weight: 800;">WELCOME!</p>
+
+
+<div class="spacer"></div>
+
+<p>
+	<img src="../repository/events/lani-blue-1.png" alt="lani-blue-1.png" align="right">
+    <strong>
+        <em>Are you ready?</em> Join us to get a national perspective on what other districts are doing with digital curriculum from our exclusive research.
+    </strong>
+	<br>
+	<br>
+    If you’re involved with going digital with teaching and learning, IT or school leadership, we’ll look for you when we’re in a city near you.
+	<br>
+	<br>
+	As a research institute and media hub, we’re interested in what works. Our multi-city tour of small events called the    <strong>Digital Curriculum Strategy Discussions</strong> for education executives have a unique goal-setting workshop, group discussion, and show and
+    discuss by digital curriculum providers. They are <strong>free to attend</strong> for schools, useful and educational, and sponsored by multiple publishers
+    and technology companies.
+	<br>
+	<br>
+    In addition, we create on annual invitation-only event called “the Gathering” for executives to hear what’s on the horizon nationally, discuss and plan.
+</p>
+
+<div class="spacer"></div>
+<p>
+    <strong>How will you contribute? </strong>
+</p>
+<p>
+    When you attend these one-day events, just be you. Represent for your school and your interests. Bring your curiosity and fellow executives. A lot is
+    changing with schools as they are implementing digital curriculum, so everyone has lots of questions and comments. There is more sophistication needed
+    beyond what device to select. The world of digital content and curriculum is enormously complex now. Therefore, it’s important to bring the curriculum and
+    IT worlds together with district leadership to learn about, and discuss, a complete strategy.
+</p>
+
+<div class="spacer"></div>
+
+<p>
+    You’ll be surprised at how much you gain from an old-fashioned day of peer discussion and some interesting new developments from the industry.
+</p>
+
+<div class="spacer"></div>
+
+<p>
+    See you there!
+</p>
+
+<div class="spacer"></div>
+
+<p>
+	<img src="../repository/events/image-lani-signature-1.png" alt="image-lani-signature-1.png">	
+</p>
+
+<div class="spacer"></div>
+<div class="spacer"></div>
+<p>
+	<a href="/EventRegistration" class="k-link"><strong>ATTEND REPRESENTING A SCHOOL</strong></a>	
+</p>
+
+<div class="spacer"></div>
+
+<p>
+	<a href="/EventRegistration" class="k-link"><strong>ATTEND REPRESENTING A VENDOR</strong></a>	
+</p>
+
+<div class="spacer"></div>
+
+<p>
+	<a href="/ContactUs" class="k-link"><strong>SPONSOR</strong></a>	
+</p>
+
+
+</div>
+
+
+</div>
+
+<div style="height: 200px;"></div>
+
+	
+<div id="bottom-graphic">
+<img src="../repository/lc-box-cloud.png"/>
+<div class="lc-landing-box-row"></div>
+</div>
+
+<div style="clear: both;"></div>
+
+</div>
+
+
+<script>
+	
+		$(window).load( function() {
+		//$(document).ready(function(){
+			$("#tab1").addClass("active");
+		});
+	
+</script>

@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <!-- <Cell><Data ss:Type="String">id</Data></Cell> -->              	
+        <Cell><Data ss:Type="String">col_1</Data></Cell>
+        <Cell><Data ss:Type="String">col_2</Data></Cell>
+        <Cell><Data ss:Type="String">col_3</Data></Cell>
+        <Cell><Data ss:Type="String">col_4</Data></Cell>
+        <Cell><Data ss:Type="String">col_5</Data></Cell>
+        <Cell><Data ss:Type="String">col_6</Data></Cell>
+        <Cell><Data ss:Type="String">col_7</Data></Cell>
+        <Cell><Data ss:Type="String">col_8</Data></Cell>
+        <Cell><Data ss:Type="String">col_9</Data></Cell>
+        <Cell><Data ss:Type="String">col_10</Data></Cell>
+        <Cell><Data ss:Type="String">col_11</Data></Cell>
+        <Cell><Data ss:Type="String">col_12</Data></Cell>
+        <Cell><Data ss:Type="String">col_13</Data></Cell>
+        <Cell><Data ss:Type="String">col_14</Data></Cell>
+        <Cell><Data ss:Type="String">col_15</Data></Cell>
+        <Cell><Data ss:Type="String">col_16</Data></Cell>
+        <Cell><Data ss:Type="String">col_17</Data></Cell>
+        <Cell><Data ss:Type="String">col_18</Data></Cell>
+        <Cell><Data ss:Type="String">col_19</Data></Cell>
+        <Cell><Data ss:Type="String">col_20</Data></Cell>
+        <Cell><Data ss:Type="String">col_21</Data></Cell>
+        <Cell><Data ss:Type="String">col_22</Data></Cell>
+        <Cell><Data ss:Type="String">col_23</Data></Cell>
+        <Cell><Data ss:Type="String">col_24</Data></Cell>
+        <Cell><Data ss:Type="String">col_25</Data></Cell>
+        
+      </Row>
+    <% @tab4lets.each do |tab4let| %>
+      <Row>
+	    <!-- <Cell><Data ss:Type=""> store.id </Data></Cell>
+	    <td> store.created_at.strftime("%B %e, %Y") </td>
+	    <td> store.updated_at.strftime("%B %e, %Y") </td> -->    
+	    <Cell><Data ss:Type="col_1"><%= tab4let.col_1 %></Data></Cell>
+	    <Cell><Data ss:Type="col_1"><%= tab4let.col_2 %></Data></Cell>
+	    <Cell><Data ss:Type="col_1"><%= tab4let.col_3 %></Data></Cell>
+	    <Cell><Data ss:Type="col_1"><%= tab4let.col_4 %></Data></Cell>
+	    <Cell><Data ss:Type="col_1"><%= tab4let.col_5 %></Data></Cell>
+	    <Cell><Data ss:Type="col_1"><%= tab4let.col_6 %></Data></Cell>
+	    <Cell><Data ss:Type="col_1"><%= tab4let.col_7 %></Data></Cell>
+	    <Cell><Data ss:Type="col_1"><%= tab4let.col_8 %></Data></Cell>
+	    <Cell><Data ss:Type="col_1"><%= tab4let.col_9 %></Data></Cell>
+	    <Cell><Data ss:Type="col_1"><%= tab4let.col_10 %></Data></Cell>
+	    <Cell><Data ss:Type="col_1"><%= tab4let.col_11 %></Data></Cell>
+	    <Cell><Data ss:Type="col_1"><%= tab4let.col_12 %></Data></Cell>
+	    <Cell><Data ss:Type="col_1"><%= tab4let.col_13 %></Data></Cell>
+	    <Cell><Data ss:Type="col_1"><%= tab4let.col_14 %></Data></Cell>
+	    <Cell><Data ss:Type="col_1"><%= tab4let.col_15 %></Data></Cell>
+	    <Cell><Data ss:Type="col_1"><%= tab4let.col_16 %></Data></Cell>
+	    <Cell><Data ss:Type="col_1"><%= tab4let.col_17 %></Data></Cell>
+	    <Cell><Data ss:Type="col_1"><%= tab4let.col_18 %></Data></Cell>
+	    <Cell><Data ss:Type="col_1"><%= tab4let.col_19 %></Data></Cell>
+	    <Cell><Data ss:Type="col_1"><%= tab4let.col_20 %></Data></Cell>
+	    <Cell><Data ss:Type="col_1"><%= tab4let.col_21 %></Data></Cell>
+	    <Cell><Data ss:Type="col_1"><%= tab4let.col_22 %></Data></Cell>
+	    <Cell><Data ss:Type="col_1"><%= tab4let.col_23 %></Data></Cell>
+	    <Cell><Data ss:Type="col_1"><%= tab4let.col_24 %></Data></Cell>
+	    <Cell><Data ss:Type="col_1"><%= tab4let.col_25 %></Data></Cell>
+
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>
+

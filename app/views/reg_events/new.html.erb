@@ -9,7 +9,7 @@
 	<style>
 	
 	#join-image {
-		height: 1700px;
+		height: 1900px;
 	}
 	
 	.form-reg-event {
@@ -285,6 +285,10 @@
 	    display:none;
 	}			
 	
+	input[type=radio] {
+	    display:none;
+	}			
+	
 	.cb-button {
 		width: 20px;
 		height: 21px; 
@@ -297,7 +301,6 @@
 		margin-right: 6px;
 	}
 			
-	
 	.cb-background {
 		background-image: url("/assets/checkbox_tick.png");		
 		background-repeat: no-repeat;
@@ -323,7 +326,82 @@
 	}
 	
 	
+	
+	
+	div .cell-right-reg-event-wide {
+		display: table-cell;
+		width: 500px;
+		text-align: left;
+		align: top;		
+	}
+
+	div .cell-left-reg-event-narrow {
+		display: table-cell;
+		width: 100px;	
+		align: top;
+		text-align: right;		
+		padding-right: 20px;
+	}
+	
+	div .cell-center-reg-event {
+		display: table-cell;
+		width: 700px;	
+		align: top;
+		text-align: right;		
+		padding-right: 20px;
+	}
 			
+	div .cell-right-reg-event-cb-wide {
+		display: table-cell;
+		width: 800px;
+		text-align: left;
+		align: top;		
+	}
+			
+	.input-label-wide {
+		font-family: msyh;
+		font-size: 16px;
+		width: 700px;
+		height: 18px;
+	}
+
+	.cb-margin {
+		width: 20px;		
+	}
+
+	.cb-margin-2 {
+		width: 20px;		
+	}
+			
+	.rd-button {
+		width: 18px;
+		height: 18px; 
+		border-style: solid; 
+		border-width: 2px; 
+		border-color: #005C9E; 
+		border-radius: 18px;		
+		margin-bottom: -4px;
+		display: inline-block;
+		margin-right: 0px;
+	}
+
+	.rd-background {
+		background-image: url("/assets/radio_tick.png");		
+		background-repeat: no-repeat;
+		background-position: 1px 1px;
+	}	
+		
+	.sessions {
+		font-size: 12px;	
+	}
+	
+	.text-form-top {
+		color: #023363;
+		font-family: msyh;
+		font-size: 16px;
+		line-height: 1.1em;
+	}
+	
 	</style>					
 					
 					
@@ -387,18 +465,28 @@
 		    </ul>
 		</div>
 	</script>		
-					
+
+
+
+<div id="tab-container">
+
+
+<%= render 'share/eventpages_tabs'%>
+
+
 
 <div style="width: 1000px; margin-right: auto; margin-left: auto; background: #fff;">
+
 		
 	<header>					
 
 			<%= render 'share/backtotop_2' %>
     	     	
+    	     	
     	<!-- <div class="shadow" style="position: relative; z-index: +2;"> -->    		
 			
-			<!-- <div style="height: 40px;"> -->
-												
+			<!-- <div style="height: 20px;"></div> -->
+															
 			<div class="table-white">
 
 				<!-- <div class="row" style="height: 50px;">
@@ -408,20 +496,45 @@
 						</div>		
 					</div>
 				</div>				 -->
-				
+		
+				<div class="row">
+					<div class="cell-800">
+						<!-- <div style="background: #41B737; width: 100%; text-align: center;"> -->
+						<div style="background: #3D3D3D; width: 100%; text-align: center; height: 40px; padding-top: 15px; border: 4px solid #41B737;">
+							<span style="font-family: msyhb; font-size: 22px; font-weight: 400; color: #41B737;">LIVE EVENTS REGISTRATION</span>
+						</div>						
+					</div>
+				</div>		
+
+				<div style="height: 20px;"></div>
 								
 				<div class="row">
 					
-					<div class="cell-100" style="padding-left: 24px;">
-			  			<img src="../repository/form-welcome.png" alt="form-welcome.png" height="150px" >
-			  		</div>
-					
-					<div class="cell-600">
-						<h2 style="font-family: msyh; color: #005187;">
-							School executives are welcome to attend in any city free of charge.  
-							The attendance fee for private sector company representatives who are 
-							not sponsors is <span style="color: #49A3E3;">$125</span> per person per city.   If you mark you are with a company, 
-							we will check if you are a sponsor, and if not, send you a credit card form to fill out for processing.  
+					<div class="cell-700" style="padding-left: 32px;">
+						<h2 class="text-form-top">
+							<img src="../repository/events/events-reg-form-1.png" alt="events-reg-form-1.png" height="150px" align="left" >
+							<strong>REGISTER </strong>for events with existing venues below or PRE-REGISTER for upcoming events and we&apos;ll keep you 
+							posted on dates and final venues via email. Once you have registered an email will remind you of the event 
+							time and location the week prior and day prior. 
+						</h2>
+						<br>
+						<h2 class="text-form-top">
+							<span style="color: #000"><strong>Schools & Districts: </strong></span>School executives and educators are welcome to attend 
+							in any city free of charge representing their institution.
+						</h2>
+						<br>						
+						<h2 class="text-form-top">
+							<span style="color: #000"><strong>Private sector industry: </strong></span>The 14-city Digital Curriculum Strategy Discussion 
+							events have an attendance fee for company representatives who are not sponsors.  It is<span style="color: #026326;"> $125 </span> 
+							per person per city for the Panel and Reception. Only a handful of sponsors can attend during the early part of the day. 
+							If you mark you are with a company and not an institution (School or District), we will check if your company is already 
+							sponsoring, and if not, send you a credit card form to fill out for processing.
+
+						</h2>
+						<br>						
+						<h2 class="text-form-top">
+							The annual national Gathering event is invitation only and private industry attendees must be sponsors to attend.
+						</h2>
 					</div>
 					<!-- <p>
 						<button class="btn blue small">Join</button>
@@ -650,13 +763,46 @@
 			<div class="input-form-spacer"></div>
 			<div class="input-form-spacer"></div>
 			
+			<div style="padding-left: 116px; text-align: left;">
+				<label class="input-label-wide required-label">
+					Workshops
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					Select all that apply</label>								
+			</div>
+
+			<div class="input-form-spacer"></div>
+			
 			<div class="row">
-				<div class="cell-left-reg-event">
-					<label class="input-label required-label"><br><br>Workshops<br>(select all that apply):</label>								
-				</div>
+
+				<div class="cell-left-reg-event-narrow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 				
-				<div id="border_city_workshop" class="button-border" style="width: 370px;">
-					<div class="cell-right-reg-event-cb">
+				<div id="border_city_workshop" class="button-border" style="width: 800px;">
+					
+					<div class="input-form-spacer"></div>
+					<div style="text-align: left; color: #2B95A6; padding-left: 50px; width: 700px;">
+						For each workshop you select, please also indicate the sessions you plan to attend.
+						
+					</div>
+					<div class="input-form-spacer"></div>
+					<div style="text-align: left; color: #2B95A6; padding-left: 50px; width: 700px;">
+						<ul>
+							<li>
+								<span style="color: #2B95A6; display: inline-block; width: 140px">8:30am-3:30pm</span> - Morning national state-of-the-market briefing and discussion meeting
+							</li>
+							<li> 
+								<span style="color: #2B95A6; display: inline-block; width: 140px">4-6:30pm</span> - Panel and Reception
+							</li>
+							<li> 
+								<span style="color: #2B95A6; display: inline-block; width: 140px"></span> - Both
+							</li>
+						</ul>
+					</div>
+					<div class="input-form-spacer"></div>
+					<div class="input-form-spacer"></div>
+					
+					
+					<div class="cell-right-reg-event-cb-wide">
 
 						<div style="height: 2px;"></div>
 						<div style="margin-left: 20px;">
@@ -679,19 +825,58 @@
 						    -->							
 					    
 							<table id="table1" class="cb-table">
+
+								<tr class="cb-spacer"></tr>								
+								<tr>
+									<td>
+										<div></div>
+									</td>
+									<td>
+										<label class="input-label required-label label_cb"></label>
+									</td>
+									<td class="cb-margin"></td>
+									<td class="cb-col-2">
+										<span>2014</span>
+									</td>									
+								</tr>
+
 								<tr class="cb-spacer"></tr>								
 								<tr>
 									<td>
 										<div id="cb_workshop_1" class="cb-button cb-valign"></div>
 										<%= f.check_box :city_workshop_1 %>
 									</td>
-									<td>
+									<td style="width: 200px;">
 										<label id="label_city_workshop_1" class="input-label required-label label_cb" for="city_workshop_1" onclick="cb_city_workshop('1');" tabindex="15">Columbia, SC</label>
 									</td>
 									<td class="cb-margin"></td>
-									<td class="cb-col-2">
-										<span>Feb 27, 2014</span>
+									<td class="cb-col-2" style="width: 170px;">
+										<span>Feb 27</span>
+									</td>
+									<td class="cb-margin-2"></td>
+									<td id="opt_city_workshop_1_session" class="cb-col-2" style="width: 500px;">
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_1_session_1" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_1_session, '1') %>
+										<label id="label_city_workshop_1_session_1" class="input-label required-label" for="city_workshop_1_session_1" onclick="rd_city_workshop_1_session('1');" tabindex="16">
+											<span class="sessions">8:30am-3:30pm</span>
+										</label>
+											 
+										<div style="display: inline-block; width: 30px;"></div>
+										<div id="rd_city_workshop_1_session_2" class="rd-button"></div>						
+										<%= f.radio_button(:city_workshop_1_session, '2') %>
+										<label id="label_city_workshop_1_session_2" class="input-label required-label" for="city_workshop_1_session_2" onclick="rd_city_workshop_1_session('2');" tabindex="17">
+											<span class="sessions">4-6:30pm</span>
+										</label>
+										
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_1_session_3" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_1_session, '3') %>
+										<label id="label_city_workshop_1_session_3" class="input-label required-label" for="city_workshop_1_session_3" onclick="rd_city_workshop_1_session('3');" tabindex="18">
+											<span class="sessions">Both</span>											
+										</label>
 									</td>									
+
 								</tr>
 								<tr class="cb-spacer"></tr>
 								<tr>
@@ -700,12 +885,36 @@
 										<%= f.check_box :city_workshop_2 %>
 									</td>
 									<td>
-										<label id="label_city_workshop_2" class="input-label required-label label_cb" for="city_workshop_2" onclick="cb_city_workshop('2');" tabindex="16">Houston, TX</label>
+										<label id="label_city_workshop_2" class="input-label required-label label_cb" for="city_workshop_2" onclick="cb_city_workshop('2');" tabindex="19">Fresno, CA (Central)</label>
 									</td>
 									<td class="cb-margin"></td>										
 									<td class="cb-col-2">
-										<span>March 4, 2014</span>
-									</td>																										
+										<span>March 17</span>
+									</td>	
+									<td class="cb-margin-2"></td>
+									<td id="opt_city_workshop_2_session" class="cb-col-2" style="width: 500px;">
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_2_session_1" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_2_session, '1') %>
+										<label id="label_city_workshop_2_session_1" class="input-label required-label" for="city_workshop_2_session_1" onclick="rd_city_workshop_2_session('1');" tabindex="20">
+											<span class="sessions">8:30am-3:30pm</span>
+										</label>
+											 
+										<div style="display: inline-block; width: 30px;"></div>
+										<div id="rd_city_workshop_2_session_2" class="rd-button"></div>						
+										<%= f.radio_button(:city_workshop_2_session, '2') %>
+										<label id="label_city_workshop_2_session_2" class="input-label required-label" for="city_workshop_2_session_2" onclick="rd_city_workshop_2_session('2');" tabindex="21">
+											<span class="sessions">4-6:30pm</span>
+										</label>
+										
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_2_session_3" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_2_session, '3') %>
+										<label id="label_city_workshop_2_session_3" class="input-label required-label" for="city_workshop_2_session_3" onclick="rd_city_workshop_2_session('3');" tabindex="22">
+											<span class="sessions">Both</span>											
+										</label>
+									</td>									
+																																		
 								</tr>
 								<tr class="cb-spacer"></tr>
 								<tr>
@@ -714,12 +923,36 @@
 										<%= f.check_box :city_workshop_3 %>
 									</td>
 									<td>
-										<label id="label_city_workshop_3" class="input-label required-label label_cb" for="city_workshop_3" onclick="cb_city_workshop('3');" tabindex="17">Albuquerque, NM</label>
+										<label id="label_city_workshop_3" class="input-label required-label label_cb" for="city_workshop_3" onclick="cb_city_workshop('3');" tabindex="23">Chicago, IL</label>
 									</td>					
 									<td class="cb-margin"></td>									
 									<td class="cb-col-2">
-										<span>March TBD</span>
-									</td>																						
+										<span>April 15</span>
+									</td>	
+									<td class="cb-margin-2"></td>
+									<td id="opt_city_workshop_3_session" class="cb-col-2" style="width: 500px;">
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_3_session_1" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_3_session, '1') %>
+										<label id="label_city_workshop_3_session_1" class="input-label required-label" for="city_workshop_3_session_1" onclick="rd_city_workshop_3_session('1');" tabindex="24">
+											<span class="sessions">8:30am-3:30pm</span>
+										</label>
+											 
+										<div style="display: inline-block; width: 30px;"></div>
+										<div id="rd_city_workshop_3_session_2" class="rd-button"></div>						
+										<%= f.radio_button(:city_workshop_3_session, '2') %>
+										<label id="label_city_workshop_3_session_2" class="input-label required-label" for="city_workshop_3_session_2" onclick="rd_city_workshop_3_session('2');" tabindex="25">
+											<span class="sessions">4-6:30pm</span>
+										</label>
+										
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_3_session_3" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_3_session, '3') %>
+										<label id="label_city_workshop_3_session_3" class="input-label required-label" for="city_workshop_3_session_3" onclick="rd_city_workshop_3_session('3');" tabindex="26">
+											<span class="sessions">Both</span>											
+										</label>
+									</td>									
+																														
 								</tr>
 								<tr class="cb-spacer"></tr>
 								<tr>
@@ -728,12 +961,36 @@
 										<%= f.check_box :city_workshop_4 %>
 									</td>
 									<td>
-										<label id="label_city_workshop_4" class="input-label required-label label_cb" for="city_workshop_4" onclick="cb_city_workshop('4');" tabindex="18">Fresno, CA (Central)</label>
+										<label id="label_city_workshop_4" class="input-label required-label label_cb" for="city_workshop_4" onclick="cb_city_workshop('4');" tabindex="27">Houston, TX</label>
 									</td>
 									<td class="cb-margin"></td>									
 									<td class="cb-col-2">
-										<span>March TBD</span>
-									</td>																																								
+										<span>April 10 (tentative)</span>
+									</td>	
+									<td class="cb-margin-2"></td>
+									<td id="opt_city_workshop_4_session" class="cb-col-2" style="width: 500px;">
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_4_session_1" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_4_session, '1') %>
+										<label id="label_city_workshop_4_session_1" class="input-label required-label" for="city_workshop_4_session_1" onclick="rd_city_workshop_4_session('1');" tabindex="28">
+											<span class="sessions">8:30am-3:30pm</span>
+										</label>
+											 
+										<div style="display: inline-block; width: 30px;"></div>
+										<div id="rd_city_workshop_4_session_2" class="rd-button"></div>						
+										<%= f.radio_button(:city_workshop_4_session, '2') %>
+										<label id="label_city_workshop_4_session_2" class="input-label required-label" for="city_workshop_4_session_2" onclick="rd_city_workshop_4_session('2');" tabindex="29">
+											<span class="sessions">4-6:30pm</span>
+										</label>
+										
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_4_session_3" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_4_session, '3') %>
+										<label id="label_city_workshop_4_session_3" class="input-label required-label" for="city_workshop_4_session_3" onclick="rd_city_workshop_4_session('3');" tabindex="30">
+											<span class="sessions">Both</span>											
+										</label>
+									</td>									
+																																																
 								</tr>
 								<tr class="cb-spacer"></tr>
 								<tr>
@@ -742,12 +999,36 @@
 										<%= f.check_box :city_workshop_5 %>
 									</td>
 									<td>
-										<label id="label_city_workshop_5" class="input-label required-label label_cb" for="city_workshop_5" onclick="cb_city_workshop('5');" tabindex="19">Chicago, IL</label>
+										<label id="label_city_workshop_5" class="input-label required-label label_cb" for="city_workshop_5" onclick="cb_city_workshop('5');" tabindex="31">San Bernadino, CA</label>
 									</td>				
 									<td class="cb-margin"></td>									
 									<td class="cb-col-2">
-										<span>April 15, 2014</span>
-									</td>																																				
+										<span>April 23 (tentative)</span>
+									</td>	
+									<td class="cb-margin-2"></td>
+									<td id="opt_city_workshop_5_session" class="cb-col-2" style="width: 500px;">
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_5_session_1" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_5_session, '1') %>
+										<label id="label_city_workshop_5_session_1" class="input-label required-label" for="city_workshop_5_session_1" onclick="rd_city_workshop_5_session('1');" tabindex="32">
+											<span class="sessions">8:30am-3:30pm</span>
+										</label>
+											 
+										<div style="display: inline-block; width: 30px;"></div>
+										<div id="rd_city_workshop_5_session_2" class="rd-button"></div>						
+										<%= f.radio_button(:city_workshop_5_session, '2') %>
+										<label id="label_city_workshop_5_session_2" class="input-label required-label" for="city_workshop_5_session_2" onclick="rd_city_workshop_5_session('2');" tabindex="33">
+											<span class="sessions">4-6:30pm</span>
+										</label>
+										
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_5_session_3" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_5_session, '3') %>
+										<label id="label_city_workshop_5_session_3" class="input-label required-label" for="city_workshop_5_session_3" onclick="rd_city_workshop_5_session('3');" tabindex="34">
+											<span class="sessions">Both</span>											
+										</label>
+									</td>									
+																																												
 								</tr>
 								<tr class="cb-spacer"></tr>
 								<tr>
@@ -756,12 +1037,36 @@
 										<%= f.check_box :city_workshop_6 %>
 									</td>
 									<td>
-										<label id="label_city_workshop_6" class="input-label required-label label_cb" for="city_workshop_6" onclick="cb_city_workshop('6');" tabindex="20">San Bernadino, CA</label>									
+										<label id="label_city_workshop_6" class="input-label required-label label_cb" for="city_workshop_6" onclick="cb_city_workshop('6');" tabindex="35">Richmond, VA</label>									
 									</td>					
 									<td class="cb-margin"></td>									
 									<td class="cb-col-2">
-										<span>April TBD</span>
-									</td>																																			
+										<span>May 6</span>
+									</td>		
+									<td class="cb-margin-2"></td>
+									<td id="opt_city_workshop_6_session" class="cb-col-2" style="width: 500px;">
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_6_session_1" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_6_session, '1') %>
+										<label id="label_city_workshop_6_session_1" class="input-label required-label" for="city_workshop_6_session_1" onclick="rd_city_workshop_6_session('1');" tabindex="36">
+											<span class="sessions">8:30am-3:30pm</span>
+										</label>
+											 
+										<div style="display: inline-block; width: 30px;"></div>
+										<div id="rd_city_workshop_6_session_2" class="rd-button"></div>						
+										<%= f.radio_button(:city_workshop_6_session, '2') %>
+										<label id="label_city_workshop_6_session_2" class="input-label required-label" for="city_workshop_6_session_2" onclick="rd_city_workshop_6_session('2');" tabindex="37">
+											<span class="sessions">4-6:30pm</span>
+										</label>
+										
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_6_session_3" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_6_session, '3') %>
+										<label id="label_city_workshop_6_session_3" class="input-label required-label" for="city_workshop_6_session_3" onclick="rd_city_workshop_6_session('3');" tabindex="38">
+											<span class="sessions">Both</span>											
+										</label>
+									</td>									
+																																										
 								</tr>
 								<tr class="cb-spacer"></tr>
 								<tr>
@@ -770,12 +1075,36 @@
 										<%= f.check_box :city_workshop_7 %>
 									</td>
 									<td>
-										<label id="label_city_workshop_7" class="input-label required-label label_cb" for="city_workshop_7" onclick="cb_city_workshop('7');" tabindex="21">Richmond, VA</label>
+										<label id="label_city_workshop_7" class="input-label required-label label_cb" for="city_workshop_7" onclick="cb_city_workshop('7');" tabindex="39">Minneapolis, MN</label>
 									</td>		
 									<td class="cb-margin"></td>									
 									<td class="cb-col-2">
-										<span>May TBD</span>
-									</td>																																						
+										<span>June TBD</span>
+									</td>		
+									<td class="cb-margin-2"></td>
+									<td id="opt_city_workshop_7_session" class="cb-col-2" style="width: 500px;">
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_7_session_1" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_7_session, '1') %>
+										<label id="label_city_workshop_7_session_1" class="input-label required-label" for="city_workshop_7_session_1" onclick="rd_city_workshop_7_session('1');" tabindex="40">
+											<span class="sessions">8:30am-3:30pm</span>
+										</label>
+											 
+										<div style="display: inline-block; width: 30px;"></div>
+										<div id="rd_city_workshop_7_session_2" class="rd-button"></div>						
+										<%= f.radio_button(:city_workshop_7_session, '2') %>
+										<label id="label_city_workshop_7_session_2" class="input-label required-label" for="city_workshop_7_session_2" onclick="rd_city_workshop_7_session('2');" tabindex="41">
+											<span class="sessions">4-6:30pm</span>
+										</label>
+										
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_7_session_3" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_7_session, '3') %>
+										<label id="label_city_workshop_7_session_3" class="input-label required-label" for="city_workshop_7_session_3" onclick="rd_city_workshop_7_session('3');" tabindex="42">
+											<span class="sessions">Both</span>											
+										</label>
+									</td>									
+																																													
 								</tr>
 								<tr class="cb-spacer"></tr>
 								<tr>
@@ -784,12 +1113,35 @@
 										<%= f.check_box :city_workshop_8 %>
 									</td>
 									<td>
-										<label id="label_city_workshop_8" class="input-label required-label label_cb" for="city_workshop_8" onclick="cb_city_workshop('8');" tabindex="22">Minneapolis, MN</label>
+										<label id="label_city_workshop_8" class="input-label required-label label_cb" for="city_workshop_8" onclick="cb_city_workshop('8');" tabindex="43">Detroit, MI</label>
 									</td>
 									<td class="cb-margin"></td>									
 									<td class="cb-col-2">
 										<span>June TBD</span>
-									</td>																																								
+									</td>	
+									<td class="cb-margin-2"></td>
+									<td id="opt_city_workshop_8_session" class="cb-col-2" style="width: 500px;">
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_8_session_1" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_8_session, '1') %>
+										<label id="label_city_workshop_8_session_1" class="input-label required-label" for="city_workshop_8_session_1" onclick="rd_city_workshop_8_session('1');" tabindex="44">
+											<span class="sessions">8:30am-3:30pm</span>
+										</label>
+											 
+										<div style="display: inline-block; width: 30px;"></div>
+										<div id="rd_city_workshop_8_session_2" class="rd-button"></div>						
+										<%= f.radio_button(:city_workshop_8_session, '2') %>
+										<label id="label_city_workshop_8_session_2" class="input-label required-label" for="city_workshop_8_session_2" onclick="rd_city_workshop_8_session('2');" tabindex="45">
+											<span class="sessions">4-6:30pm</span>
+										</label>
+										
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_8_session_3" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_8_session, '3') %>
+										<label id="label_city_workshop_8_session_3" class="input-label required-label" for="city_workshop_8_session_3" onclick="rd_city_workshop_8_session('3');" tabindex="46">
+											<span class="sessions">Both</span>											
+										</label>
+									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>
 								<tr>
@@ -798,12 +1150,35 @@
 										<%= f.check_box :city_workshop_9 %>
 									</td>
 									<td>
-										<label id="label_city_workshop_9" class="input-label required-label label_cb" for="city_workshop_9" onclick="cb_city_workshop('9');" tabindex="23">Detroit, MI</label>
+										<label id="label_city_workshop_9" class="input-label required-label label_cb" for="city_workshop_9" onclick="cb_city_workshop('9');" tabindex="47">Denver, CO</label>
 									</td>		
 									<td class="cb-margin"></td>									
 									<td class="cb-col-2">
-										<span>June TBD</span>
-									</td>																																						
+										<span>Sept TBD</span>
+									</td>
+									<td class="cb-margin-2"></td>
+									<td id="opt_city_workshop_9_session" class="cb-col-2" style="width: 500px;">
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_9_session_1" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_9_session, '1') %>
+										<label id="label_city_workshop_9_session_1" class="input-label required-label" for="city_workshop_9_session_1" onclick="rd_city_workshop_9_session('1');" tabindex="48">
+											<span class="sessions">8:30am-3:30pm</span>
+										</label>
+											 
+										<div style="display: inline-block; width: 30px;"></div>
+										<div id="rd_city_workshop_9_session_2" class="rd-button"></div>						
+										<%= f.radio_button(:city_workshop_9_session, '2') %>
+										<label id="label_city_workshop_9_session_2" class="input-label required-label" for="city_workshop_9_session_2" onclick="rd_city_workshop_9_session('2');" tabindex="49">
+											<span class="sessions">4-6:30pm</span>
+										</label>
+										
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_9_session_3" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_9_session, '3') %>
+										<label id="label_city_workshop_9_session_3" class="input-label required-label" for="city_workshop_9_session_3" onclick="rd_city_workshop_9_session('3');" tabindex="50">
+											<span class="sessions">Both</span>											
+										</label>
+									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>
 								<tr>
@@ -812,12 +1187,35 @@
 										<%= f.check_box :city_workshop_10 %>
 									</td>
 									<td>
-										<label id="label_city_workshop_10" class="input-label required-label label_cb" for="city_workshop_10" onclick="cb_city_workshop('10');" tabindex="24">Las Vegas, NV</label>
+										<label id="label_city_workshop_10" class="input-label required-label label_cb" for="city_workshop_10" onclick="cb_city_workshop('10');" tabindex="51">Dallas, TX</label>
 									</td>		
 									<td class="cb-margin"></td>									
 									<td class="cb-col-2">
 										<span>Sept TBD</span>
-									</td>																																						
+									</td>
+									<td class="cb-margin-2"></td>
+									<td id="opt_city_workshop_10_session" class="cb-col-2" style="width: 500px;">
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_10_session_1" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_10_session, '1') %>
+										<label id="label_city_workshop_10_session_1" class="input-label required-label" for="city_workshop_10_session_1" onclick="rd_city_workshop_10_session('1');" tabindex="52">
+											<span class="sessions">8:30am-3:30pm</span>
+										</label>
+											 
+										<div style="display: inline-block; width: 30px;"></div>
+										<div id="rd_city_workshop_10_session_2" class="rd-button"></div>						
+										<%= f.radio_button(:city_workshop_10_session, '2') %>
+										<label id="label_city_workshop_10_session_2" class="input-label required-label" for="city_workshop_10_session_2" onclick="rd_city_workshop_10_session('2');" tabindex="53">
+											<span class="sessions">4-6:30pm</span>
+										</label>
+										
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_10_session_3" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_10_session, '3') %>
+										<label id="label_city_workshop_10_session_3" class="input-label required-label" for="city_workshop_10_session_3" onclick="rd_city_workshop_10_session('3');" tabindex="54">
+											<span class="sessions">Both</span>											
+										</label>
+									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>
 								<tr>
@@ -826,12 +1224,35 @@
 										<%= f.check_box :city_workshop_11 %>
 									</td>
 									<td>
-										<label id="label_city_workshop_11" class="input-label required-label label_cb" for="city_workshop_11" onclick="cb_city_workshop('11');" tabindex="25">San Jose, CA</label>
+										<label id="label_city_workshop_11" class="input-label required-label label_cb" for="city_workshop_11" onclick="cb_city_workshop('11');" tabindex="55">Newark, NJ</label>
 									</td>	
 									<td class="cb-margin"></td>									
 									<td class="cb-col-2">
 										<span>Sept TBD</span>
-									</td>																																							
+									</td>
+									<td class="cb-margin-2"></td>
+									<td id="opt_city_workshop_11_session" class="cb-col-2" style="width: 500px;">
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_11_session_1" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_11_session, '1') %>
+										<label id="label_city_workshop_11_session_1" class="input-label required-label" for="city_workshop_11_session_1" onclick="rd_city_workshop_11_session('1');" tabindex="56">
+											<span class="sessions">8:30am-3:30pm</span>
+										</label>
+											 
+										<div style="display: inline-block; width: 30px;"></div>
+										<div id="rd_city_workshop_11_session_2" class="rd-button"></div>						
+										<%= f.radio_button(:city_workshop_11_session, '2') %>
+										<label id="label_city_workshop_11_session_2" class="input-label required-label" for="city_workshop_11_session_2" onclick="rd_city_workshop_11_session('2');" tabindex="57">
+											<span class="sessions">4-6:30pm</span>
+										</label>
+										
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_11_session_3" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_11_session, '3') %>
+										<label id="label_city_workshop_11_session_3" class="input-label required-label" for="city_workshop_11_session_3" onclick="rd_city_workshop_11_session('3');" tabindex="58">
+											<span class="sessions">Both</span>											
+										</label>
+									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>
 								<tr>
@@ -840,12 +1261,35 @@
 										<%= f.check_box :city_workshop_12 %>
 									</td>
 									<td>
-										<label id="label_city_workshop_12" class="input-label required-label label_cb" for="city_workshop_12" onclick="cb_city_workshop('12');" tabindex="26">Newark, NJ</label>
+										<label id="label_city_workshop_12" class="input-label required-label label_cb" for="city_workshop_12" onclick="cb_city_workshop('12');" tabindex="59">San Jose, CA</label>
 									</td>	
 									<td class="cb-margin"></td>									
 									<td class="cb-col-2">
 										<span>Sept TBD</span>
-									</td>																																							
+									</td>	
+									<td class="cb-margin-2"></td>
+									<td id="opt_city_workshop_12_session" class="cb-col-2" style="width: 500px;">
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_12_session_1" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_12_session, '1') %>
+										<label id="label_city_workshop_12_session_1" class="input-label required-label" for="city_workshop_12_session_1" onclick="rd_city_workshop_12_session('1');" tabindex="60">
+											<span class="sessions">8:30am-3:30pm</span>
+										</label>
+											 
+										<div style="display: inline-block; width: 30px;"></div>
+										<div id="rd_city_workshop_12_session_2" class="rd-button"></div>						
+										<%= f.radio_button(:city_workshop_12_session, '2') %>
+										<label id="label_city_workshop_12_session_2" class="input-label required-label" for="city_workshop_12_session_2" onclick="rd_city_workshop_12_session('2');" tabindex="61">
+											<span class="sessions">4-6:30pm</span>
+										</label>
+										
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_12_session_3" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_12_session, '3') %>
+										<label id="label_city_workshop_12_session_3" class="input-label required-label" for="city_workshop_12_session_3" onclick="rd_city_workshop_12_session('3');" tabindex="62">
+											<span class="sessions">Both</span>											
+										</label>
+									</td>																																																								
 								</tr>
 								<tr class="cb-spacer"></tr>
 								<tr>
@@ -854,12 +1298,35 @@
 										<%= f.check_box :city_workshop_13 %>
 									</td>
 									<td>
-										<label id="label_city_workshop_13" class="input-label required-label label_cb" for="city_workshop_13" onclick="cb_city_workshop('13');" tabindex="27">Tucson/Santa Fe, AZ</label>
+										<label id="label_city_workshop_13" class="input-label required-label label_cb" for="city_workshop_13" onclick="cb_city_workshop('13');" tabindex="63">Las Vegas, CA</label>
 									</td>	
 									<td class="cb-margin"></td>									
 									<td class="cb-col-2">
 										<span>Oct TBD</span>
-									</td>																																							
+									</td>
+									<td class="cb-margin-2"></td>
+									<td id="opt_city_workshop_13_session" class="cb-col-2" style="width: 500px;">
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_13_session_1" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_13_session, '1') %>
+										<label id="label_city_workshop_13_session_1" class="input-label required-label" for="city_workshop_13_session_1" onclick="rd_city_workshop_13_session('1');" tabindex="64">
+											<span class="sessions">8:30am-3:30pm</span>
+										</label>
+											 
+										<div style="display: inline-block; width: 30px;"></div>
+										<div id="rd_city_workshop_13_session_2" class="rd-button"></div>						
+										<%= f.radio_button(:city_workshop_13_session, '2') %>
+										<label id="label_city_workshop_13_session_2" class="input-label required-label" for="city_workshop_13_session_2" onclick="rd_city_workshop_13_session('2');" tabindex="65">
+											<span class="sessions">4-6:30pm</span>
+										</label>
+										
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_13_session_3" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_13_session, '3') %>
+										<label id="label_city_workshop_13_session_3" class="input-label required-label" for="city_workshop_13_session_3" onclick="rd_city_workshop_13_session('3');" tabindex="66">
+											<span class="sessions">Both</span>											
+										</label>
+									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>
 								<tr>
@@ -868,12 +1335,54 @@
 										<%= f.check_box :city_workshop_14 %>
 									</td>
 									<td>
-										<label id="label_city_workshop_14" class="input-label required-label label_cb" for="city_workshop_14" onclick="cb_city_workshop('14');" tabindex="28">Tampa, FL</label>
+										<label id="label_city_workshop_14" class="input-label required-label label_cb" for="city_workshop_14" onclick="cb_city_workshop('14');" tabindex="67">Tampa, FL</label>
 									</td>	
 									<td class="cb-margin"></td>									
 									<td class="cb-col-2">
 										<span>Oct TBD</span>
-									</td>																																							
+									</td>	
+									<td class="cb-margin-2"></td>
+									<td id="opt_city_workshop_14_session" class="cb-col-2" style="width: 500px;">
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_14_session_1" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_14_session, '1') %>
+										<label id="label_city_workshop_14_session_1" class="input-label required-label" for="city_workshop_14_session_1" onclick="rd_city_workshop_14_session('1');" tabindex="68">
+											<span class="sessions">8:30am-3:30pm</span>
+										</label>
+											 
+										<div style="display: inline-block; width: 30px;"></div>
+										<div id="rd_city_workshop_14_session_2" class="rd-button"></div>						
+										<%= f.radio_button(:city_workshop_14_session, '2') %>
+										<label id="label_city_workshop_14_session_2" class="input-label required-label" for="city_workshop_14_session_2" onclick="rd_city_workshop_14_session('2');" tabindex="69">
+											<span class="sessions">4-6:30pm</span>
+										</label>
+										
+										<div style="display: inline-block; width: 40px;"></div>						
+										<div id="rd_city_workshop_14_session_3" class="rd-button"></div>
+										<%= f.radio_button(:city_workshop_14_session, '3') %>
+										<label id="label_city_workshop_14_session_3" class="input-label required-label" for="city_workshop_14_session_3" onclick="rd_city_workshop_14_session('3');" tabindex="70">
+											<span class="sessions">Both</span>											
+										</label>
+									</td>									
+								</tr>
+							</table>
+								
+								
+							<table id="table2" class="cb-table">
+								<tr class="cb-spacer"></tr>
+								<tr>
+									<td style="width: 150px"></td>
+									<td>
+										<div id="cb_workshop_15" class="cb-button cb-valign"></div>							
+										<%= f.check_box :city_workshop_15 %>
+									</td>
+									<td>
+										<label id="label_city_workshop_15" class="input-label required-label label_cb" for="city_workshop_15" onclick="cb_city_workshop('15');" tabindex="71">National "The Gathering" Event</label>
+									</td>	
+									<td class="cb-margin"></td>									
+									<td class="cb-col-2">
+										<span>November 3-4</span>
+									</td>	
 								</tr>
 							</table>
 							
@@ -909,7 +1418,7 @@
 				<div class="cell-left-reg-event">
 				</div>
 				<div class="cell-submit-reg-event" style="padding-left: 0px;">
-					<%= f.submit "Submit", :id => 'btn_submit', :class => 'btn submitregevent', :tabindex => '29' %>
+					<%= f.submit "Submit", :id => 'btn_submit', :class => 'btn submitregevent', :tabindex => '72' %>
 				</div>      	
 			</div>      		
 
@@ -936,9 +1445,9 @@
 </div>
 
 
-<div style="height: 300px;"></div>
+<div style="height: 100px;"></div>
 
-
+</div>
 
 
     <!-- <script src="../scripts/jquery.js"></script> -->
@@ -1041,7 +1550,7 @@
 
 			// var h1 = 2000;
 			
-			var h2 = (h1 * (0.94));
+			var h2 = (h1 * (0.95));
 			
 			$("#form_reg_event").css({
 				height : h2
@@ -1074,7 +1583,7 @@
 		}
 		
 
-		validatorCalled = false;
+		var validatorCalled = false;
 		var val = null;
 		//var formval = null;
 		
@@ -1088,6 +1597,8 @@
 			$("#form_join").validate({
 			
 				submitHandler: function(form) {
+
+					validatorCalled = true;					
 
 					//form.submit();
 					
@@ -1210,9 +1721,10 @@
 					// }
 				},
 				invalidHandler: function(event, validator) {
-					validatorCalled = true;					
 					val = validator;
 					var errors = validator.numberOfInvalids();
+					validatorCalled = true;					
+					
 					// if (!validateSelect1()) {
 						// errors += 1;
 					// }
@@ -1494,7 +2006,6 @@
 
 
 		//var selectValid1 = false;
-		var selectValid2 = false;
 		
 		// function selectStatus1() {
 // 			
@@ -1537,7 +2048,11 @@
 			// updateErrorCount();			
 		// }
 
+		var selectValid2 = false;
+
 		function selectStatus2() {
+			
+			// alert($("#reg_event_type_affiliation option:selected").val());
 			
 			if ($("#reg_event_type_affiliation option:selected").val() == '0') {
 				$('#state_reg_event_type_affiliation').css ({			
@@ -1573,6 +2088,10 @@
 				}
 				
 				selectValid2 = true;		
+			}
+			
+			if(validatorCalled) {
+				validateSelect2();
 			}
 			
 			updateErrorCount();			
@@ -1623,7 +2142,6 @@
 		function validateSelect2() {
 			
 			if ($("#reg_event_type_affiliation option:selected").val() == '0') {
-				
 				$('.dropdown2').css ({			
 					'border-color' : '#851717'
 				});
@@ -1635,7 +2153,7 @@
 		
 				$('#error_reg_event_type_affiliation').html("*");
 		
-				selectValid2 = false;		
+				selectValid2 = false;
 			}
 			else {
 				$('.dropdown2').css ({			
@@ -1657,17 +2175,28 @@
 
 
 		function cb_city_workshop(caller) {
+			
+			var rd = "#opt_city_workshop_" + caller + "_session";
+			
 			var cb = "#reg_event_city_workshop_" + caller;
 			var sb = "#cb_workshop_" + caller;
 			if($(cb).is(':checked')) {
 				$(cb).prop('checked', false);
 				
-				$(sb).removeClass("cb-background");			
+				$(sb).removeClass("cb-background");
+				
+				$(rd).css ({			
+					visibility: 'hidden'
+				});							
 			}
 			else {
 				$(cb).prop('checked', true);
 
-				$(sb).addClass("cb-background");			
+				$(sb).addClass("cb-background");
+				
+				$(rd).css ({			
+					visibility: 'visible'
+				});
 			}
 			validateCityWorkshop();			
 		}
@@ -1678,12 +2207,11 @@
 
 			var isChecked = false;
 			var cb;
-			for (var i = 1; i < 15; i++ ) {
+			for (var i = 1; i < 16; i++ ) {
 				cb = "#reg_event_city_workshop_" + i;
 				if($(cb).is(':checked')) {
 					isChecked = true;
 				}
-						
 			}
 			
 			if ( !isChecked ) {
@@ -1699,7 +2227,7 @@
 					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
 				});				
 			}
-			else {
+			else {								
 				$("#border_city_workshop").css ({
 					'border-color' : '#005C9E'
 				});
@@ -1718,6 +2246,967 @@
 			
 			return isChecked;
 		}
+
+
+
+
+
+		// radio - no validations required on radios
+
+		// radio city_workshop_1
+		function set_rd_city_workshop_1_session_1() {
+			var rd ="#reg_event_city_workshop_1_session_1";
+			var sd = "#rd_city_workshop_1_session_1";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_1_session_1() {
+			var sd = "#rd_city_workshop_1_session_1";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_1_session_2() {
+			var rd ="#reg_event_city_workshop_1_session_2";
+			var sd = "#rd_city_workshop_1_session_2";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_1_session_2() {
+			var sd = "#rd_city_workshop_1_session_2";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_1_session_3() {
+			var rd ="#reg_event_city_workshop_1_session_3";
+			var sd = "#rd_city_workshop_1_session_3";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_1_session_3() {
+			var sd = "#rd_city_workshop_1_session_3";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function rd_city_workshop_1_session(caller) {
+
+			switch (caller)
+			{
+			  case '1':
+			  		set_rd_city_workshop_1_session_1();
+			  		unset_rd_city_workshop_1_session_2();
+			  		unset_rd_city_workshop_1_session_3();
+			  	break;
+			  case '2':
+			  		set_rd_city_workshop_1_session_2();
+			  		unset_rd_city_workshop_1_session_1();
+			  		unset_rd_city_workshop_1_session_3();
+			  	break;
+			  case '3':
+			  		set_rd_city_workshop_1_session_3();
+			  		unset_rd_city_workshop_1_session_1();
+			  		unset_rd_city_workshop_1_session_2();
+			  	break;
+
+			  default:
+			  //
+			}
+		}
+
+
+		// radio city_workshop_2
+		function set_rd_city_workshop_2_session_1() {
+			var rd ="#reg_event_city_workshop_2_session_1";
+			var sd = "#rd_city_workshop_2_session_1";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_2_session_1() {
+			var sd = "#rd_city_workshop_2_session_1";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_2_session_2() {
+			var rd ="#reg_event_city_workshop_2_session_2";
+			var sd = "#rd_city_workshop_2_session_2";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_2_session_2() {
+			var sd = "#rd_city_workshop_2_session_2";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_2_session_3() {
+			var rd ="#reg_event_city_workshop_2_session_3";
+			var sd = "#rd_city_workshop_2_session_3";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_2_session_3() {
+			var sd = "#rd_city_workshop_2_session_3";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function rd_city_workshop_2_session(caller) {
+
+			switch (caller)
+			{
+			  case '1':
+			  		set_rd_city_workshop_2_session_1();
+			  		unset_rd_city_workshop_2_session_2();
+			  		unset_rd_city_workshop_2_session_3();
+			  	break;
+			  case '2':
+			  		set_rd_city_workshop_2_session_2();
+			  		unset_rd_city_workshop_2_session_1();
+			  		unset_rd_city_workshop_2_session_3();
+			  	break;
+			  case '3':
+			  		set_rd_city_workshop_2_session_3();
+			  		unset_rd_city_workshop_2_session_1();
+			  		unset_rd_city_workshop_2_session_2();
+			  	break;
+
+			  default:
+			  //
+			}
+		}
+
+		// radio city_workshop_3
+		function set_rd_city_workshop_3_session_1() {
+			var rd ="#reg_event_city_workshop_3_session_1";
+			var sd = "#rd_city_workshop_3_session_1";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_3_session_1() {
+			var sd = "#rd_city_workshop_3_session_1";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_3_session_2() {
+			var rd ="#reg_event_city_workshop_3_session_2";
+			var sd = "#rd_city_workshop_3_session_2";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_3_session_2() {
+			var sd = "#rd_city_workshop_3_session_2";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_3_session_3() {
+			var rd ="#reg_event_city_workshop_3_session_3";
+			var sd = "#rd_city_workshop_3_session_3";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_3_session_3() {
+			var sd = "#rd_city_workshop_3_session_3";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function rd_city_workshop_3_session(caller) {
+
+			switch (caller)
+			{
+			  case '1':
+			  		set_rd_city_workshop_3_session_1();
+			  		unset_rd_city_workshop_3_session_2();
+			  		unset_rd_city_workshop_3_session_3();
+			  	break;
+			  case '2':
+			  		set_rd_city_workshop_3_session_2();
+			  		unset_rd_city_workshop_3_session_1();
+			  		unset_rd_city_workshop_3_session_3();
+			  	break;
+			  case '3':
+			  		set_rd_city_workshop_3_session_3();
+			  		unset_rd_city_workshop_3_session_1();
+			  		unset_rd_city_workshop_3_session_2();
+			  	break;
+
+			  default:
+			  //
+			}
+		}
+
+		// radio city_workshop_4
+		function set_rd_city_workshop_4_session_1() {
+			var rd ="#reg_event_city_workshop_4_session_1";
+			var sd = "#rd_city_workshop_4_session_1";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_4_session_1() {
+			var sd = "#rd_city_workshop_4_session_1";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_4_session_2() {
+			var rd ="#reg_event_city_workshop_4_session_2";
+			var sd = "#rd_city_workshop_4_session_2";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_4_session_2() {
+			var sd = "#rd_city_workshop_4_session_2";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_4_session_3() {
+			var rd ="#reg_event_city_workshop_4_session_3";
+			var sd = "#rd_city_workshop_4_session_3";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_4_session_3() {
+			var sd = "#rd_city_workshop_4_session_3";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function rd_city_workshop_4_session(caller) {
+
+			switch (caller)
+			{
+			  case '1':
+			  		set_rd_city_workshop_4_session_1();
+			  		unset_rd_city_workshop_4_session_2();
+			  		unset_rd_city_workshop_4_session_3();
+			  	break;
+			  case '2':
+			  		set_rd_city_workshop_4_session_2();
+			  		unset_rd_city_workshop_4_session_1();
+			  		unset_rd_city_workshop_4_session_3();
+			  	break;
+			  case '3':
+			  		set_rd_city_workshop_4_session_3();
+			  		unset_rd_city_workshop_4_session_1();
+			  		unset_rd_city_workshop_4_session_2();
+			  	break;
+
+			  default:
+			  //
+			}
+		}
+
+		// radio city_workshop_5
+		function set_rd_city_workshop_5_session_1() {
+			var rd ="#reg_event_city_workshop_5_session_1";
+			var sd = "#rd_city_workshop_5_session_1";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_5_session_1() {
+			var sd = "#rd_city_workshop_5_session_1";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_5_session_2() {
+			var rd ="#reg_event_city_workshop_5_session_2";
+			var sd = "#rd_city_workshop_5_session_2";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_5_session_2() {
+			var sd = "#rd_city_workshop_5_session_2";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_5_session_3() {
+			var rd ="#reg_event_city_workshop_5_session_3";
+			var sd = "#rd_city_workshop_5_session_3";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_5_session_3() {
+			var sd = "#rd_city_workshop_5_session_3";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function rd_city_workshop_5_session(caller) {
+
+			switch (caller)
+			{
+			  case '1':
+			  		set_rd_city_workshop_5_session_1();
+			  		unset_rd_city_workshop_5_session_2();
+			  		unset_rd_city_workshop_5_session_3();
+			  	break;
+			  case '2':
+			  		set_rd_city_workshop_5_session_2();
+			  		unset_rd_city_workshop_5_session_1();
+			  		unset_rd_city_workshop_5_session_3();
+			  	break;
+			  case '3':
+			  		set_rd_city_workshop_5_session_3();
+			  		unset_rd_city_workshop_5_session_1();
+			  		unset_rd_city_workshop_5_session_2();
+			  	break;
+
+			  default:
+			  //
+			}
+		}
+
+		// radio city_workshop_6
+		function set_rd_city_workshop_6_session_1() {
+			var rd ="#reg_event_city_workshop_6_session_1";
+			var sd = "#rd_city_workshop_6_session_1";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_6_session_1() {
+			var sd = "#rd_city_workshop_6_session_1";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_6_session_2() {
+			var rd ="#reg_event_city_workshop_6_session_2";
+			var sd = "#rd_city_workshop_6_session_2";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_6_session_2() {
+			var sd = "#rd_city_workshop_6_session_2";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_6_session_3() {
+			var rd ="#reg_event_city_workshop_6_session_3";
+			var sd = "#rd_city_workshop_6_session_3";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_6_session_3() {
+			var sd = "#rd_city_workshop_6_session_3";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function rd_city_workshop_6_session(caller) {
+
+			switch (caller)
+			{
+			  case '1':
+			  		set_rd_city_workshop_6_session_1();
+			  		unset_rd_city_workshop_6_session_2();
+			  		unset_rd_city_workshop_6_session_3();
+			  	break;
+			  case '2':
+			  		set_rd_city_workshop_6_session_2();
+			  		unset_rd_city_workshop_6_session_1();
+			  		unset_rd_city_workshop_6_session_3();
+			  	break;
+			  case '3':
+			  		set_rd_city_workshop_6_session_3();
+			  		unset_rd_city_workshop_6_session_1();
+			  		unset_rd_city_workshop_6_session_2();
+			  	break;
+
+			  default:
+			  //
+			}
+		}
+		
+		// radio city_workshop_7
+		function set_rd_city_workshop_7_session_1() {
+			var rd ="#reg_event_city_workshop_7_session_1";
+			var sd = "#rd_city_workshop_7_session_1";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_7_session_1() {
+			var sd = "#rd_city_workshop_7_session_1";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_7_session_2() {
+			var rd ="#reg_event_city_workshop_7_session_2";
+			var sd = "#rd_city_workshop_7_session_2";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_7_session_2() {
+			var sd = "#rd_city_workshop_7_session_2";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_7_session_3() {
+			var rd ="#reg_event_city_workshop_7_session_3";
+			var sd = "#rd_city_workshop_7_session_3";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_7_session_3() {
+			var sd = "#rd_city_workshop_7_session_3";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function rd_city_workshop_7_session(caller) {
+
+			switch (caller)
+			{
+			  case '1':
+			  		set_rd_city_workshop_7_session_1();
+			  		unset_rd_city_workshop_7_session_2();
+			  		unset_rd_city_workshop_7_session_3();
+			  	break;
+			  case '2':
+			  		set_rd_city_workshop_7_session_2();
+			  		unset_rd_city_workshop_7_session_1();
+			  		unset_rd_city_workshop_7_session_3();
+			  	break;
+			  case '3':
+			  		set_rd_city_workshop_7_session_3();
+			  		unset_rd_city_workshop_7_session_1();
+			  		unset_rd_city_workshop_7_session_2();
+			  	break;
+
+			  default:
+			  //
+			}
+		}
+		
+		// radio city_workshop_8
+		function set_rd_city_workshop_8_session_1() {
+			var rd ="#reg_event_city_workshop_8_session_1";
+			var sd = "#rd_city_workshop_8_session_1";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_8_session_1() {
+			var sd = "#rd_city_workshop_8_session_1";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_8_session_2() {
+			var rd ="#reg_event_city_workshop_8_session_2";
+			var sd = "#rd_city_workshop_8_session_2";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_8_session_2() {
+			var sd = "#rd_city_workshop_8_session_2";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_8_session_3() {
+			var rd ="#reg_event_city_workshop_8_session_3";
+			var sd = "#rd_city_workshop_8_session_3";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_8_session_3() {
+			var sd = "#rd_city_workshop_8_session_3";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function rd_city_workshop_8_session(caller) {
+
+			switch (caller)
+			{
+			  case '1':
+			  		set_rd_city_workshop_8_session_1();
+			  		unset_rd_city_workshop_8_session_2();
+			  		unset_rd_city_workshop_8_session_3();
+			  	break;
+			  case '2':
+			  		set_rd_city_workshop_8_session_2();
+			  		unset_rd_city_workshop_8_session_1();
+			  		unset_rd_city_workshop_8_session_3();
+			  	break;
+			  case '3':
+			  		set_rd_city_workshop_8_session_3();
+			  		unset_rd_city_workshop_8_session_1();
+			  		unset_rd_city_workshop_8_session_2();
+			  	break;
+
+			  default:
+			  //
+			}
+		}
+		
+		// radio city_workshop_9
+		function set_rd_city_workshop_9_session_1() {
+			var rd ="#reg_event_city_workshop_9_session_1";
+			var sd = "#rd_city_workshop_9_session_1";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_9_session_1() {
+			var sd = "#rd_city_workshop_9_session_1";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_9_session_2() {
+			var rd ="#reg_event_city_workshop_9_session_2";
+			var sd = "#rd_city_workshop_9_session_2";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_9_session_2() {
+			var sd = "#rd_city_workshop_9_session_2";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_9_session_3() {
+			var rd ="#reg_event_city_workshop_9_session_3";
+			var sd = "#rd_city_workshop_9_session_3";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_9_session_3() {
+			var sd = "#rd_city_workshop_9_session_3";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function rd_city_workshop_9_session(caller) {
+
+			switch (caller)
+			{
+			  case '1':
+			  		set_rd_city_workshop_9_session_1();
+			  		unset_rd_city_workshop_9_session_2();
+			  		unset_rd_city_workshop_9_session_3();
+			  	break;
+			  case '2':
+			  		set_rd_city_workshop_9_session_2();
+			  		unset_rd_city_workshop_9_session_1();
+			  		unset_rd_city_workshop_9_session_3();
+			  	break;
+			  case '3':
+			  		set_rd_city_workshop_9_session_3();
+			  		unset_rd_city_workshop_9_session_1();
+			  		unset_rd_city_workshop_9_session_2();
+			  	break;
+
+			  default:
+			  //
+			}
+		}
+		
+		// radio city_workshop_10
+		function set_rd_city_workshop_10_session_1() {
+			var rd ="#reg_event_city_workshop_10_session_1";
+			var sd = "#rd_city_workshop_10_session_1";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_10_session_1() {
+			var sd = "#rd_city_workshop_10_session_1";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_10_session_2() {
+			var rd ="#reg_event_city_workshop_10_session_2";
+			var sd = "#rd_city_workshop_10_session_2";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_10_session_2() {
+			var sd = "#rd_city_workshop_10_session_2";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_10_session_3() {
+			var rd ="#reg_event_city_workshop_10_session_3";
+			var sd = "#rd_city_workshop_10_session_3";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_10_session_3() {
+			var sd = "#rd_city_workshop_10_session_3";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function rd_city_workshop_10_session(caller) {
+
+			switch (caller)
+			{
+			  case '1':
+			  		set_rd_city_workshop_10_session_1();
+			  		unset_rd_city_workshop_10_session_2();
+			  		unset_rd_city_workshop_10_session_3();
+			  	break;
+			  case '2':
+			  		set_rd_city_workshop_10_session_2();
+			  		unset_rd_city_workshop_10_session_1();
+			  		unset_rd_city_workshop_10_session_3();
+			  	break;
+			  case '3':
+			  		set_rd_city_workshop_10_session_3();
+			  		unset_rd_city_workshop_10_session_1();
+			  		unset_rd_city_workshop_10_session_2();
+			  	break;
+
+			  default:
+			  //
+			}
+		}
+		
+		// radio city_workshop_11
+		function set_rd_city_workshop_11_session_1() {
+			var rd ="#reg_event_city_workshop_11_session_1";
+			var sd = "#rd_city_workshop_11_session_1";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_11_session_1() {
+			var sd = "#rd_city_workshop_11_session_1";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_11_session_2() {
+			var rd ="#reg_event_city_workshop_11_session_2";
+			var sd = "#rd_city_workshop_11_session_2";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_11_session_2() {
+			var sd = "#rd_city_workshop_11_session_2";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_11_session_3() {
+			var rd ="#reg_event_city_workshop_11_session_3";
+			var sd = "#rd_city_workshop_11_session_3";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_11_session_3() {
+			var sd = "#rd_city_workshop_11_session_3";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function rd_city_workshop_11_session(caller) {
+
+			switch (caller)
+			{
+			  case '1':
+			  		set_rd_city_workshop_11_session_1();
+			  		unset_rd_city_workshop_11_session_2();
+			  		unset_rd_city_workshop_11_session_3();
+			  	break;
+			  case '2':
+			  		set_rd_city_workshop_11_session_2();
+			  		unset_rd_city_workshop_11_session_1();
+			  		unset_rd_city_workshop_11_session_3();
+			  	break;
+			  case '3':
+			  		set_rd_city_workshop_11_session_3();
+			  		unset_rd_city_workshop_11_session_1();
+			  		unset_rd_city_workshop_11_session_2();
+			  	break;
+
+			  default:
+			  //
+			}
+		}
+		
+		// radio city_workshop_12
+		function set_rd_city_workshop_12_session_1() {
+			var rd ="#reg_event_city_workshop_12_session_1";
+			var sd = "#rd_city_workshop_12_session_1";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_12_session_1() {
+			var sd = "#rd_city_workshop_12_session_1";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_12_session_2() {
+			var rd ="#reg_event_city_workshop_12_session_2";
+			var sd = "#rd_city_workshop_12_session_2";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_12_session_2() {
+			var sd = "#rd_city_workshop_12_session_2";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_12_session_3() {
+			var rd ="#reg_event_city_workshop_12_session_3";
+			var sd = "#rd_city_workshop_12_session_3";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_12_session_3() {
+			var sd = "#rd_city_workshop_12_session_3";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function rd_city_workshop_12_session(caller) {
+
+			switch (caller)
+			{
+			  case '1':
+			  		set_rd_city_workshop_12_session_1();
+			  		unset_rd_city_workshop_12_session_2();
+			  		unset_rd_city_workshop_12_session_3();
+			  	break;
+			  case '2':
+			  		set_rd_city_workshop_12_session_2();
+			  		unset_rd_city_workshop_12_session_1();
+			  		unset_rd_city_workshop_12_session_3();
+			  	break;
+			  case '3':
+			  		set_rd_city_workshop_12_session_3();
+			  		unset_rd_city_workshop_12_session_1();
+			  		unset_rd_city_workshop_12_session_2();
+			  	break;
+
+			  default:
+			  //
+			}
+		}
+		
+		// radio city_workshop_13
+		function set_rd_city_workshop_13_session_1() {
+			var rd ="#reg_event_city_workshop_13_session_1";
+			var sd = "#rd_city_workshop_13_session_1";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_13_session_1() {
+			var sd = "#rd_city_workshop_13_session_1";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_13_session_2() {
+			var rd ="#reg_event_city_workshop_13_session_2";
+			var sd = "#rd_city_workshop_13_session_2";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_13_session_2() {
+			var sd = "#rd_city_workshop_13_session_2";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_13_session_3() {
+			var rd ="#reg_event_city_workshop_13_session_3";
+			var sd = "#rd_city_workshop_13_session_3";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_13_session_3() {
+			var sd = "#rd_city_workshop_13_session_3";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function rd_city_workshop_13_session(caller) {
+
+			switch (caller)
+			{
+			  case '1':
+			  		set_rd_city_workshop_13_session_1();
+			  		unset_rd_city_workshop_13_session_2();
+			  		unset_rd_city_workshop_13_session_3();
+			  	break;
+			  case '2':
+			  		set_rd_city_workshop_13_session_2();
+			  		unset_rd_city_workshop_13_session_1();
+			  		unset_rd_city_workshop_13_session_3();
+			  	break;
+			  case '3':
+			  		set_rd_city_workshop_13_session_3();
+			  		unset_rd_city_workshop_13_session_1();
+			  		unset_rd_city_workshop_13_session_2();
+			  	break;
+
+			  default:
+			  //
+			}
+		}
+		
+		// radio city_workshop_14
+		function set_rd_city_workshop_14_session_1() {
+			var rd ="#reg_event_city_workshop_14_session_1";
+			var sd = "#rd_city_workshop_14_session_1";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_14_session_1() {
+			var sd = "#rd_city_workshop_14_session_1";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_14_session_2() {
+			var rd ="#reg_event_city_workshop_14_session_2";
+			var sd = "#rd_city_workshop_14_session_2";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_14_session_2() {
+			var sd = "#rd_city_workshop_14_session_2";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function set_rd_city_workshop_14_session_3() {
+			var rd ="#reg_event_city_workshop_14_session_3";
+			var sd = "#rd_city_workshop_14_session_3";
+
+			$(rd).prop('checked',true);
+
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_city_workshop_14_session_3() {
+			var sd = "#rd_city_workshop_14_session_3";
+
+			$(sd).removeClass("rd-background");			
+		}
+
+		function rd_city_workshop_14_session(caller) {
+
+			switch (caller)
+			{
+			  case '1':
+			  		set_rd_city_workshop_14_session_1();
+			  		unset_rd_city_workshop_14_session_2();
+			  		unset_rd_city_workshop_14_session_3();
+			  	break;
+			  case '2':
+			  		set_rd_city_workshop_14_session_2();
+			  		unset_rd_city_workshop_14_session_1();
+			  		unset_rd_city_workshop_14_session_3();
+			  	break;
+			  case '3':
+			  		set_rd_city_workshop_14_session_3();
+			  		unset_rd_city_workshop_14_session_1();
+			  		unset_rd_city_workshop_14_session_2();
+			  	break;
+
+			  default:
+			  //
+			}
+		}
+
+
 
 
 		$(window).load( function() {
@@ -1804,6 +3293,9 @@
 			$('#cb_workshop_14').on('click', function() {
 				cb_city_workshop(14);
 			});
+			$('#cb_workshop_15').on('click', function() {
+				cb_city_workshop(15);
+			});
 				
 				
 			// var lb;
@@ -1872,10 +3364,458 @@
       			if(e.keyCode==13)
       			$('#label_city_workshop_14').click();
     		});				
+    		$('#label_city_workshop_15').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#label_city_workshop_15').click();
+    		});				
 
 			$('input:checkbox').on('change', function() {
 				validateCityWorkshop();
 			});
+				
+
+
+
+
+				
+			$("#opt_city_workshop_1_session").css ({			
+				visibility: 'hidden'
+			});
+			$("#reg_event_city_workshop_1_session_3").prop('checked',true);
+			$("#rd_city_workshop_1_session_3").addClass("rd-background");			
+
+			$("#opt_city_workshop_2_session").css ({			
+				visibility: 'hidden'
+			});
+			$("#reg_event_city_workshop_2_session_3").prop('checked',true);
+			$("#rd_city_workshop_2_session_3").addClass("rd-background");			
+
+			$("#opt_city_workshop_3_session").css ({			
+				visibility: 'hidden'
+			});
+			$("#reg_event_city_workshop_3_session_3").prop('checked',true);
+			$("#rd_city_workshop_3_session_3").addClass("rd-background");			
+
+			$("#opt_city_workshop_4_session").css ({			
+				visibility: 'hidden'
+			});
+			$("#reg_event_city_workshop_4_session_3").prop('checked',true);
+			$("#rd_city_workshop_4_session_3").addClass("rd-background");			
+
+			$("#opt_city_workshop_5_session").css ({			
+				visibility: 'hidden'
+			});
+			$("#reg_event_city_workshop_5_session_3").prop('checked',true);
+			$("#rd_city_workshop_5_session_3").addClass("rd-background");			
+
+			$("#opt_city_workshop_6_session").css ({			
+				visibility: 'hidden'
+			});
+			$("#reg_event_city_workshop_6_session_3").prop('checked',true);
+			$("#rd_city_workshop_6_session_3").addClass("rd-background");			
+
+			$("#opt_city_workshop_7_session").css ({			
+				visibility: 'hidden'
+			});
+			$("#reg_event_city_workshop_7_session_3").prop('checked',true);
+			$("#rd_city_workshop_7_session_3").addClass("rd-background");			
+
+			$("#opt_city_workshop_8_session").css ({			
+				visibility: 'hidden'
+			});
+			$("#reg_event_city_workshop_8_session_3").prop('checked',true);
+			$("#rd_city_workshop_8_session_3").addClass("rd-background");			
+
+			$("#opt_city_workshop_9_session").css ({			
+				visibility: 'hidden'
+			});
+			$("#reg_event_city_workshop_9_session_3").prop('checked',true);
+			$("#rd_city_workshop_9_session_3").addClass("rd-background");			
+
+			$("#opt_city_workshop_10_session").css ({			
+				visibility: 'hidden'
+			});
+			$("#reg_event_city_workshop_10_session_3").prop('checked',true);
+			$("#rd_city_workshop_10_session_3").addClass("rd-background");			
+
+			$("#opt_city_workshop_11_session").css ({			
+				visibility: 'hidden'
+			});
+			$("#reg_event_city_workshop_11_session_3").prop('checked',true);
+			$("#rd_city_workshop_11_session_3").addClass("rd-background");			
+
+			$("#opt_city_workshop_12_session").css ({			
+				visibility: 'hidden'
+			});
+			$("#reg_event_city_workshop_12_session_3").prop('checked',true);
+			$("#rd_city_workshop_12_session_3").addClass("rd-background");			
+
+			$("#opt_city_workshop_13_session").css ({			
+				visibility: 'hidden'
+			});
+			$("#reg_event_city_workshop_13_session_3").prop('checked',true);
+			$("#rd_city_workshop_13_session_3").addClass("rd-background");			
+
+			$("#opt_city_workshop_14_session").css ({			
+				visibility: 'hidden'
+			});
+			$("#reg_event_city_workshop_14_session_3").prop('checked',true);
+			$("#rd_city_workshop_14_session_3").addClass("rd-background");			
+
+
+
+
+			// radio workshop 1				
+			$('#rd_city_workshop_1_session_1').on('click', function() {
+				rd_city_workshop_1_session('1');
+			});
+    		$('#label_city_workshop_1_session_1').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_1_session_1').click();
+    		});				
+
+			$('#rd_city_workshop_1_session_2').on('click', function() {
+				rd_city_workshop_1_session('2');
+			});
+    		$('#label_city_workshop_1_session_2').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_1_session_2').click();
+    		});				
+
+			$('#rd_city_workshop_1_session_3').on('click', function() {
+				rd_city_workshop_1_session('3');
+			});
+    		$('#label_city_workshop_1_session_3').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_1_session_3').click();
+    		});				
+				
+			// radio workshop 2				
+			$('#rd_city_workshop_2_session_1').on('click', function() {
+				rd_city_workshop_2_session('1');
+			});
+    		$('#label_city_workshop_2_session_1').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_2_session_1').click();
+    		});				
+
+			$('#rd_city_workshop_2_session_2').on('click', function() {
+				rd_city_workshop_2_session('2');
+			});
+    		$('#label_city_workshop_2_session_2').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_2_session_2').click();
+    		});				
+
+			$('#rd_city_workshop_2_session_3').on('click', function() {
+				rd_city_workshop_2_session('3');
+			});
+    		$('#label_city_workshop_2_session_3').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_2_session_3').click();
+    		});				
+
+			// radio workshop 3				
+			$('#rd_city_workshop_3_session_1').on('click', function() {
+				rd_city_workshop_3_session('1');
+			});
+    		$('#label_city_workshop_3_session_1').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_3_session_1').click();
+    		});				
+
+			$('#rd_city_workshop_3_session_2').on('click', function() {
+				rd_city_workshop_3_session('2');
+			});
+    		$('#label_city_workshop_3_session_2').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_3_session_2').click();
+    		});				
+
+			$('#rd_city_workshop_3_session_3').on('click', function() {
+				rd_city_workshop_3_session('3');
+			});
+    		$('#label_city_workshop_3_session_3').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_3_session_3').click();
+    		});				
+
+			// radio workshop 4				
+			$('#rd_city_workshop_4_session_1').on('click', function() {
+				rd_city_workshop_4_session('1');
+			});
+    		$('#label_city_workshop_4_session_1').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_4_session_1').click();
+    		});				
+
+			$('#rd_city_workshop_4_session_2').on('click', function() {
+				rd_city_workshop_4_session('2');
+			});
+    		$('#label_city_workshop_4_session_2').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_4_session_2').click();
+    		});				
+
+			$('#rd_city_workshop_4_session_3').on('click', function() {
+				rd_city_workshop_4_session('3');
+			});
+    		$('#label_city_workshop_4_session_3').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_4_session_3').click();
+    		});				
+
+			// radio workshop 5				
+			$('#rd_city_workshop_5_session_1').on('click', function() {
+				rd_city_workshop_5_session('1');
+			});
+    		$('#label_city_workshop_5_session_1').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_5_session_1').click();
+    		});				
+
+			$('#rd_city_workshop_5_session_2').on('click', function() {
+				rd_city_workshop_5_session('2');
+			});
+    		$('#label_city_workshop_5_session_2').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_5_session_2').click();
+    		});				
+
+			$('#rd_city_workshop_5_session_3').on('click', function() {
+				rd_city_workshop_5_session('3');
+			});
+    		$('#label_city_workshop_5_session_3').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_5_session_3').click();
+    		});				
+
+			// radio workshop 6				
+			$('#rd_city_workshop_6_session_1').on('click', function() {
+				rd_city_workshop_6_session('1');
+			});
+    		$('#label_city_workshop_6_session_1').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_6_session_1').click();
+    		});				
+
+			$('#rd_city_workshop_6_session_2').on('click', function() {
+				rd_city_workshop_6_session('2');
+			});
+    		$('#label_city_workshop_6_session_2').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_6_session_2').click();
+    		});				
+
+			$('#rd_city_workshop_6_session_3').on('click', function() {
+				rd_city_workshop_6_session('3');
+			});
+    		$('#label_city_workshop_6_session_3').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_6_session_3').click();
+    		});				
+
+			// radio workshop 7				
+			$('#rd_city_workshop_7_session_1').on('click', function() {
+				rd_city_workshop_7_session('1');
+			});
+    		$('#label_city_workshop_7_session_1').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_7_session_1').click();
+    		});				
+
+			$('#rd_city_workshop_7_session_2').on('click', function() {
+				rd_city_workshop_7_session('2');
+			});
+    		$('#label_city_workshop_7_session_2').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_7_session_2').click();
+    		});				
+
+			$('#rd_city_workshop_7_session_3').on('click', function() {
+				rd_city_workshop_7_session('3');
+			});
+    		$('#label_city_workshop_7_session_3').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_7_session_3').click();
+    		});				
+
+			// radio workshop 8				
+			$('#rd_city_workshop_8_session_1').on('click', function() {
+				rd_city_workshop_8_session('1');
+			});
+    		$('#label_city_workshop_8_session_1').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_8_session_1').click();
+    		});				
+
+			$('#rd_city_workshop_8_session_2').on('click', function() {
+				rd_city_workshop_8_session('2');
+			});
+    		$('#label_city_workshop_8_session_2').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_8_session_2').click();
+    		});				
+
+			$('#rd_city_workshop_8_session_3').on('click', function() {
+				rd_city_workshop_8_session('3');
+			});
+    		$('#label_city_workshop_8_session_3').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_8_session_3').click();
+    		});				
+
+			// radio workshop 9				
+			$('#rd_city_workshop_9_session_1').on('click', function() {
+				rd_city_workshop_9_session('1');
+			});
+    		$('#label_city_workshop_9_session_1').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_9_session_1').click();
+    		});				
+
+			$('#rd_city_workshop_9_session_2').on('click', function() {
+				rd_city_workshop_9_session('2');
+			});
+    		$('#label_city_workshop_9_session_2').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_9_session_2').click();
+    		});				
+
+			$('#rd_city_workshop_9_session_3').on('click', function() {
+				rd_city_workshop_9_session('3');
+			});
+    		$('#label_city_workshop_9_session_3').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_9_session_3').click();
+    		});				
+
+			// radio workshop 10				
+			$('#rd_city_workshop_10_session_1').on('click', function() {
+				rd_city_workshop_10_session('1');
+			});
+    		$('#label_city_workshop_10_session_1').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_10_session_1').click();
+    		});				
+
+			$('#rd_city_workshop_10_session_2').on('click', function() {
+				rd_city_workshop_10_session('2');
+			});
+    		$('#label_city_workshop_10_session_2').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_10_session_2').click();
+    		});				
+
+			$('#rd_city_workshop_10_session_3').on('click', function() {
+				rd_city_workshop_10_session('3');
+			});
+    		$('#label_city_workshop_10_session_3').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_10_session_3').click();
+    		});				
+
+			// radio workshop 11				
+			$('#rd_city_workshop_11_session_1').on('click', function() {
+				rd_city_workshop_11_session('1');
+			});
+    		$('#label_city_workshop_11_session_1').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_11_session_1').click();
+    		});				
+
+			$('#rd_city_workshop_11_session_2').on('click', function() {
+				rd_city_workshop_11_session('2');
+			});
+    		$('#label_city_workshop_11_session_2').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_11_session_2').click();
+    		});				
+
+			$('#rd_city_workshop_11_session_3').on('click', function() {
+				rd_city_workshop_11_session('3');
+			});
+    		$('#label_city_workshop_11_session_3').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_11_session_3').click();
+    		});				
+
+			// radio workshop 12				
+			$('#rd_city_workshop_12_session_1').on('click', function() {
+				rd_city_workshop_12_session('1');
+			});
+    		$('#label_city_workshop_12_session_1').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_12_session_1').click();
+    		});				
+
+			$('#rd_city_workshop_12_session_2').on('click', function() {
+				rd_city_workshop_12_session('2');
+			});
+    		$('#label_city_workshop_12_session_2').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_12_session_2').click();
+    		});				
+
+			$('#rd_city_workshop_12_session_3').on('click', function() {
+				rd_city_workshop_12_session('3');
+			});
+    		$('#label_city_workshop_12_session_3').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_12_session_3').click();
+    		});				
+
+			// radio workshop 13				
+			$('#rd_city_workshop_13_session_1').on('click', function() {
+				rd_city_workshop_13_session('1');
+			});
+    		$('#label_city_workshop_13_session_1').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_13_session_1').click();
+    		});				
+
+			$('#rd_city_workshop_13_session_2').on('click', function() {
+				rd_city_workshop_13_session('2');
+			});
+    		$('#label_city_workshop_13_session_2').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_13_session_2').click();
+    		});				
+
+			$('#rd_city_workshop_13_session_3').on('click', function() {
+				rd_city_workshop_13_session('3');
+			});
+    		$('#label_city_workshop_13_session_3').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_13_session_3').click();
+    		});				
+
+			// radio workshop 14				
+			$('#rd_city_workshop_14_session_1').on('click', function() {
+				rd_city_workshop_14_session('1');
+			});
+    		$('#label_city_workshop_14_session_1').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_14_session_1').click();
+    		});				
+
+			$('#rd_city_workshop_14_session_2').on('click', function() {
+				rd_city_workshop_14_session('2');
+			});
+    		$('#label_city_workshop_14_session_2').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_14_session_2').click();
+    		});				
+
+			$('#rd_city_workshop_14_session_3').on('click', function() {
+				rd_city_workshop_14_session('3');
+			});
+    		$('#label_city_workshop_14_session_3').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_city_workshop_14_session_3').click();
+    		});				
+				
+				
 				
 			// $(window).bind("load", function() {
 			    // $('#loading').fadeOut(2000);
@@ -1883,7 +3823,7 @@
 				
 			// $("#form_signin").fadeOut();
 			
-			
+			$("#tab4").addClass("active");
 			
 		});
 	

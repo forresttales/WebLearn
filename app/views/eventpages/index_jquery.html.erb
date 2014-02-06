@@ -1,0 +1,228 @@
+<% provide(:title, 'Events') %>
+
+
+	<script src="/assets/jquery.min.js"></script>
+	<script src="../scripts/jquery-ui.js"></script>				
+
+	<style>
+		
+		.fixed-pos {
+			position: fixed;
+			top: 70px;			
+		}
+		
+		.static-pos {
+			
+		}
+		
+	    .bar-fixed {
+	    	position: fixed;
+	    	top: 90px;
+	    }
+
+	    .bar-static {
+	    	position: static;
+	    	top: auto;
+	    	
+	    	margin-left: auto;
+	    	margin-right: auto;
+	    	
+	    }
+		
+		#tabs ul li {
+			font-family: msyh;
+			font-size: 18px;
+			font-weight: 400;
+		}
+		
+		
+	</style>
+
+	<div id="knav" style="background: #fff;">
+				
+			<div id="tabs">
+				
+				<ul class="fixed-pos" id="ktop-black-bar" style="box-shadow: 1px 1px 10px #888; width: 1044px; z-index: 2000">
+					<!-- <li><a href="#tabs-A" id="tabsA">Tablets</a></li>				 -->
+										
+					<li><a href="#tabs-0" id="tabs0">EVENTS</a></li>
+					<li><a href="#tabs-1" id="tabs1">DIGITAL CURRICULUM STRATEGY DISCUSSION</a></li>
+					<li><a href="#tabs-2" id="tabs2">ANNUAL RETREAT GATHERING</a></li>
+					<li><a href="#tabs-3" id="tabs3">REGISTRATION</a></li>
+										
+					<!-- <li><a href="#tabs-0" id="tabs0">Tablet 0</a></li>				
+					<li><a href="#tabs-1" id="tabs1">Tablet 1</a></li>
+					<li><a href="#tabs-2" id="tabs2">Tablet 2</a></li>
+					<li><a href="#tabs-3" id="tabs3">Tablet 3</a></li> -->
+					
+				</ul>
+
+				<!-- <div id="tabs-A">
+					<div style="height: 800px;">Admin Tablets</div>	
+				</div> -->				
+							
+				<div id="tabs-0">
+					<div id="render0"></div>	
+				</div>			
+				<div id="tabs-1">
+					<div id="render1"></div>	
+				</div>
+				<div id="tabs-2">
+					<div id="render2"></div>	
+				</div>
+				<div id="tabs-3">
+					<div id="render3"></div>	
+				</div>
+
+			</div>	
+			
+	</div>	
+	
+					
+		<script>
+			
+			
+			function centerBar() {
+				var a = $("#knav").width();
+				var b = $("#ktop-black-bar").width();
+				var l = ((a/2) - (b/2));
+				$("#ktop-black-bar").css({
+					left : l
+				});
+				// $("#ktop-black-bar").css({
+					// 'top' : '200px'
+				// });			
+			}
+	
+			// function scrollPos() {
+				// $kel = $('#ktop-black-bar'); 
+			  	// $ktopmark = $('#ktop-black-bar-marker');
+	// 
+			  	// if ($(this).scrollTop() > $ktopmark.position().top+14 && $kel.css('position') != 'fixed'){ 
+			    	// $ktopmark.css({'height':'50px'});
+			    	// $kel.removeClass("bar-static").addClass("bar-fixed");
+			  	// } else if ($(this).scrollTop() < $ktopmark.position().top+14 && $kel.css('position') == 'fixed'){
+			  		// $ktopmark.css({'height':'50px'});
+			     	// $kel.removeClass("bar-fixed").addClass("bar-static");
+			  		// if($kel.height()<100) {
+			  			// $kel.css({'height': '45px'});
+			  		// }
+			  	// }			
+	// 		  	
+			  	// centerBar();
+			// }
+			
+			
+			
+			
+			
+			// $('#tabsA').on('click', function() {
+				// // alert('tabs1');
+			   	// //$.get("/tablets", null, null, "script");
+			// });
+
+			$('#tabs0').on('click', function() {
+				// alert('tabs1');
+			   $.get("/eventpages", null, null, "script");
+			});
+		
+			$('#tabs1').on('click', function() {
+				// alert('tabs1');
+			   $.get("/event1pages", null, null, "script");
+			});
+
+			$('#tabs2').on('click', function() {
+				//alert('tabs3');
+			   $.get("/event2pages", null, null, "script");
+			});
+
+			$('#tabs3').on('click', function() {
+				//alert('tabs3');
+			   //$.get("/RegisterEvents", null, null, "script");
+			   $.get("/EventRegistration", null, null, "script");			   
+			});
+			
+			
+			$( window ).resize(function() {
+				centerBar();
+			});			
+			
+			$(function() {
+				$( "#tabs" ).tabs({
+					ajaxOptions: { cache: true },
+					cache: true,
+					beforeLoad: function( event, ui ) {
+						ui.ajaxSettings(function() {
+						});
+						ui.jqXHR.error(function() {
+							ui.panel.html(
+							"Couldn't load this tab. We'll try to fix this as soon as possible. " +
+							"If this wouldn't be a demo." );
+						});
+					}
+				});
+				
+				centerBar();
+
+				// $('#tabs3').click();
+				$('#tabs2').click();
+				$('#tabs1').click();
+				$('#tabs0').click();
+				
+				
+				// $( "#foo" ).on( "click", function( event, param1, param2 ) {
+					// // alert( param1 + "\n" + param2 );
+					// alert('custom');
+				// });
+				
+				// $( "#foo" ).trigger( "click" );
+				
+				// fadeoutRegEventForm();
+				
+				// $( "#tabs" ).tabs({ active: 0 });
+			});			
+
+
+			// $(window).load( function() {
+			// $(document).ready(function(){
+
+			   	// $.get("/tablets0", null, null, "script");
+			   	// $.get("/tablets1", null, null, "script");
+			   	// $.get("/tablets2", null, null, "script");
+			   	// $.get("/tablets3", null, null, "script");
+			   	// $.get("/tablets4", null, null, "script");
+
+			// });
+			
+			
+
+    		// $("#tabs").tabs({ ajaxOptions: { cache: true }, cache: true });
+
+			// $( "#tabs" ).tabs({
+				// cache:true,
+				// spinner: 'Loading...'
+			// });
+
+
+
+		// $(document).on('click','#tab1lets th a, #tab1lets .pagination a',function(){
+			// alert(this.href);
+			// // http://localhost:3000/tab1lets/index?direction=desc&sort=id
+		    // $.getScript(this.href);
+		    // return false;
+		// });
+
+
+
+			// $('#tabs2').on('click', function() {
+// 				
+				// alert('tabs2');
+// 				
+			   	// $.get("/tab1lets", null, null, "script");
+// 		
+			// });
+
+
+			
+		</script>
+	

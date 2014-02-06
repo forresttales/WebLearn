@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8">
+								    	
+  		<title><%= full_title(yield(:title)) %></title> 
+
+    	<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  		
+  		
+		<!-- <script type="text/javascript" src="../scripts/jquery.js"></script> -->				
+		
+  		
+		<!-- <link rel="icon" type="image/png" href="/assets/image_fav_2.png" /> -->		
+		
+		<link rel="icon" type="image/png" href="/assets/logo-lc-round-fav.png" />
+  		
+  		
+   		 <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+   		 
+   		 
+   		     	
+  		 <!-- include_gon  -->    	
+    	
+	  	<%= csrf_meta_tags %>
+	  	<%= render 'layouts/shim' %>  
+
+
+
+
+
+
+
+
+		                		
+    </head>
+	<body>
+		
+		
+		<% if !signed_in? %> 
+		
+			<%= render 'layouts/signin' %> 
+		
+		<% else %>
+
+
+		 <!-- if !session[:admin] 	 -->		
+			<%= render 'layouts/nav_admin' %>
+		 <!-- else 
+			 render 'layouts/header_admin' 			
+		 end  -->
+		
+		<!-- <div style="background: #F1F2E1 url('../backgrounds/comp025.jpg') repeat right top;"> 		 -->			
+			
+			
+			
+		<div style="width: 1200px; margin-right: auto; margin-left: auto; background: #fff;">						
+
+			
+			<%= yield %> 
+
+		</div>
+		
+		
+		<!-- </div> -->
+		
+				
+		<%= render 'layouts/footer_admin' %>
+
+		<% end %>
+
+		<%= debug(params) if Rails.env.development? %>
+		
+	</body>
+</html>

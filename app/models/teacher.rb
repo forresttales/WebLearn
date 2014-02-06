@@ -13,7 +13,13 @@
 
 class Teacher < ActiveRecord::Base
   
-    attr_accessible :id, :name_first, :name_last, :phone
+    attr_accessible :id, 
+                    :user_id,
+                    :name_first, 
+                    :name_last, 
+                    :phone,
+                    :created_at,
+                    :updated_at
   
     belongs_to :user  
 end

@@ -1,32 +1,75 @@
-<% provide(:title, 'Home') %>
+<% provide(:title, 'Publishers Profile') %>
 
-	<div class="row" style="height: 10px"></div>
-	<div class="row-end">&nbsp;</div>										
+	<style>
+	
+		.container {
+			width: 1000px;
+			margin-left: auto;
+			margin-right: auto;
+			min-height: 800px;
+		}
 
-  
-<div class="container" style="padding: 0px 0px 0px 0px; background-color: yellow; height: 400px">
+    	.links {
+    		font-family:Arial, Helvetica, sans-serif;
+    		font-size: 16px;
+    		color: brown;    		
+    	}
 	
-	<div class="row" style="height: 20px;"></div>
-	<div class="row-end">&nbsp;</div>			
+		.normal {
+    		font-family:Arial, Helvetica, sans-serif;
+    		font-size: 16px;
+    		color: #666666;    					
+		}				
 	
-	<div class="row">
-		<div align="center">
-			<h2>Publisher's home page</h2>
-		</div>      		
-		<div class="row-end">&nbsp;</div>				
-	</div>      		
-	<div class="row">
-		<div align="center">
-			<h2><%= @info.name %></h2>
-		</div>      		
-		<div class="row-end">&nbsp;</div>				
-	</div>      		
+	</style>
+
+	<header>
+		<%= render 'share/backtotop' %>
+	</header>
+
+	<div class="container">
+		<div style="display: table;">
+			<div =style="display: table-row;">
+				
+				<div style="display: table-cell; width: 200px;" class="boxtemp-blue">
+					<div style="height: 14px;"></div>
+					<%= link_to('My Home', {:action => 'index'}, :class => 'links') %>
+					<div style="height: 14px;"></div>
+					 <%= link_to('My Profile', {:action => 'show', :id => @publisher.id}, :class => 'links') %>
+					<div style="height: 14px;"></div>
+					<%= link_to 'My Photos', image_publishers_index_path, :class => 'links' %>
+					<div style="height: 14px;"></div>
+					<%= link_to('My Settings', {:action => 'settings', :id => @publisher.id}, :class => 'links') %>
+				</div>
+				
+				<div style="display: table-cell; width: 600px;" class="boxtemp-green">
+					<span class="normal">My Profile:</span>
+					<br />
+					<br />					
+					<span class="normal">ID: <%= @publisher.id %></span>
+					<br />
+					<span class="normal">Created: <%= @publisher.created_at %></span>
+					<br />
+					<span class="normal">Updated: <%= @publisher.updated_at %></span>						
+					<br />
+					<span class="normal">Phone: <%= @publisher.phone %></span>
+					<br />
+					<br />
+		 			 <!-- button_to "Edit", {:action => 'edit', :id => @publisher.id } --> 
+		 			
+		 			<%= link_to('Edit', {:action => 'edit', :id => @publisher.id }, :class => 'links' ) %> 
+		 			 
+				</div>
+			</div>
+		</div>
+	</div>
+					
+	<script>
+
+		$(window).load( function() {
+		//$(document).ready(function(){
+
+		});
 	
-	<div class="row" style="height: 30px;"></div>
-	<div class="row-end">&nbsp;</div>			
-			
-</div>
-		
-<div class="container" style="height: 200px; background-color: green">
-</div>  		
+	</script>
 

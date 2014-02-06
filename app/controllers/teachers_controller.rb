@@ -5,53 +5,60 @@ class TeachersController < ApplicationController
   #before_filter :confirm_logged_in
   
   def index
-    #list
-    #render('list')
+    @teacher = Teacher.where(["user_id = ?", session[:user_id]]).first       
+    @username = session[:username]
   end
   
-  def home
-    
-  end
   
   def list
     # @admin_users = AdminUser.sorted
   end
 
+
   def show
-      @info = Teacher.where(["user_id = ?", session[:user_id]]).first   
+    @info = Teacher.where(["user_id = ?", session[:user_id]]).first   
   end
+
   
   def new
-    @teacher = Teacher.new
+    
+    if !(session[:username].nil? or session[:user_id].nil?)
+      @username = session[:username]
+      @teacher = Teacher.new
+    else
+      render text: 'failed sessions'
+    end
+    
   end
+
   
   def create
+
     @teacher = Teacher.new(teacher_params)
-    @teacher.user_id = session[:user_id]
-    @user = User.find(session[:user_id])
-    
-    if @user.update_attribute(:has_account, TRUE)
-      if @user.update_attribute(:account_type, "teacher")
-        if @teacher.save
-          flash[:notice] = 'Teacher account created'
-          #redirect_to(:action => 'list')
-        else
-          flash.now[:notice] = "Account create failed"
-          
-          render("new")
-        end
+    @teacher.user_id = session[:user_id]            
+    user = User.find_by_id(session[:user_id])
+
+    if user.update_columns( :has_account => true, :account_type => "teacher")
+      if @teacher.save         
+        session[:has_account] = true
+        session[:account_type] = "teacher"    
+        session[:profile] = "teachers/home"
+         
+        redirect_to(:action => 'index')
       else
-        flash[:notice] = 'User update failed'      
+        render text: 'save teacher failed'
       end
     else
-      flash[:notice] = 'User update failed'      
+      render text: 'column update user_id failed'
     end
     
   end
   
+
   def edit
     # @admin_user = AdminUser.find(params[:id])
   end
+  
   
   def update
     # @admin_user = AdminUser.find(params[:id])
@@ -63,9 +70,11 @@ class TeachersController < ApplicationController
     # end
   end
 
+
   def delete
     # @admin_user = AdminUser.find(params[:id])
   end
+
 
   def destroy
     # AdminUser.find(params[:id]).destroy
@@ -73,11 +82,20 @@ class TeachersController < ApplicationController
     # redirect_to(:action => 'list')
   end
   
+  
   private
 
     def teacher_params
-      params.require(:teacher).permit(:name_first, :name_last, :phone)
+      params.require(:teacher).permit(
+                                      :name_first, 
+                                      :name_last, 
+                                      :phone,
+                                      :created_at,
+                                      :updated_at
+                                     )
+      
     end
+  
   
   
 end

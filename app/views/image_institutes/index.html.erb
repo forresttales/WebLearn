@@ -1,0 +1,162 @@
+ <%= provide(:title, 'Institute Photos') %>
+ 
+ 				
+		<script type="text/javascript" src="/assets/entrepeneurs_jquery-1.js"></script> 		
+		
+    	<script type="text/javascript" src="../scripts/jquery.tmpl.js"></script>
+		
+		
+		<style>
+			
+	    	.main {
+	    		font-family:Arial, Helvetica, sans-serif;
+	    		font-size: 20px;
+	    		color: black;
+	    		min-height: 750px;
+	    	}
+	    	
+	    	.links {
+	    		font-family:Arial, Helvetica, sans-serif;
+	    		font-size: 16px;
+	    		color: brown;    		
+	    	}
+	    	
+	    	h1 {
+	    		font-size: 22px;
+	    	}
+	    	h2 {
+	    		font-size: 18px;
+	    	}
+	    	h4 {
+	    		font-size: 16px;
+	    		font-weight: 600;
+	    	}    	
+	    	h5 {
+	    		font-size: 12px;
+	    	}    	    	
+	    	p {
+	    		font-size: 12px;
+	    	}
+			
+			.primary {
+				
+			}
+			
+		</style>
+		
+		
+		<header>					
+
+			<%= render 'share/backtotop' %>
+			
+		</header>		
+
+		<!-- <div id="desc" style="visibility: hidden;"></div> -->
+		
+		<div class="main" style="margin-left: 20%;">		
+			<div style="height: 200px;"></div>
+	
+			<span><%= link_to 'New Photo', image_institutes_new_path, :class => 'links' %></span>
+	
+			<% if @image_institutes.any? %>				
+
+				<div style="height: 100px;"></div>
+	
+				<% for i in 0..(@image_institutes.count - 1) %>
+	
+					<div id="<%= i %>" style="display: inline-block;"></div>
+					
+				<% end %>
+
+			<% else %>
+
+				<div style="height: 20px;"></div>
+
+				<div style="color: red;">
+					<h4>No photos</h4>
+				</div>
+		
+			<% end %>
+		
+		</div>
+
+		<% if @image_institutes.any? %>
+		
+			<div style="height: 400px;"></div>
+
+			<% for i in 0..(@image_institutes.count - 1) %>
+
+				<%= @image_institutes[i].image_name %><br>
+				
+			    <script id="imageTemplate_<%= i %>" type="text/x-jQuery-tmpl">
+			    	
+			    	<table style="margin-right: 30px; margin-left: 30px;">
+			    		<tr>
+			    			<td>
+			    				<img src="../photos/<%= @image_institutes[i].image_name %>" alt="<%= @image_institutes[i].image_name %>">
+			    			</td>
+			    		</tr>
+
+						<% if @image_institutes[i].primary %>
+			    		<tr>
+			    			<td>
+			    				<h4 style="color: brown;">Primary</h4>
+			    			</td>
+			    		</tr>
+						<% else %>
+			    		<tr>
+			    			<td>
+						    	<h4>
+									 <%= button_to "Make Primary", {:action => 'set_primary', :id => @image_institutes[i].id}, :method => :post, :class => 'delete-btn' %>								
+								</h4>
+			    			</td>
+			    		</tr>
+			    		<% end %>
+			    		
+			    		<tr>
+			    			<td>
+						    	<h4>
+								   	<% delete_msg = "Delete Image ID: " + @image_institutes[i].id.to_s + " ?" %>
+									<%= button_to "Delete", {:action => 'destroy', :id => @image_institutes[i].id}, :method => :delete, :confirm => delete_msg, :class => 'delete-btn' %>
+								</h4>
+			    			</td>
+			    		</tr>
+
+			    	</table>
+			        
+		    	</script>
+		    	
+			<% end %>
+
+		<% end %>
+
+		<script>
+		  
+			//$(document).ready(function() {
+			$(window).load( function() {
+		
+				var cnt = gon.image_institutes_count;
+
+				var id = 0;
+				var container = "";
+				var ref = "";
+	
+				for( i = 0; i < cnt; i++) {
+					id = i;
+					container = "#" + id;
+					ref		  = "#imageTemplate_"  + id;
+				    $(ref).tmpl().appendTo(container);
+				}
+			});
+		  
+		</script>		
+		
+
+
+
+
+
+
+
+
+

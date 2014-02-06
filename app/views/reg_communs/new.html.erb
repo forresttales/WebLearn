@@ -1426,6 +1426,8 @@
 			
 				submitHandler: function(form) {
 
+					validatorCalled = true;
+
 					validRadio1 = validateRadio1();
 					validLevel = validateLevel();
 					selectValid1 = validateSelect1();
@@ -1450,13 +1452,13 @@
 						if ( !validLevel ) {
 							errors += 1;
 						}
-						if (!selectValid1) {
+						if ( !selectValid1 ) {
 							errors += 1;
 						}
-						if (!selectValid2) {
+						if ( !selectValid2 ) {
 							errors += 1;
 						}
-						if (!selectValid3) {
+						if ( !selectValid3 ) {
 							errors += 1;
 						}
 						if ( !validCharacterizeArea ) {
@@ -1570,9 +1572,9 @@
 					}
 				},
 				invalidHandler: function(commun, validator) {
-					validatorCalled = true;
 					val = validator;
 					var errors = validator.numberOfInvalids();
+					validatorCalled = true;										
 					
 					if ( !validateRadio1() ) {
 						errors += 1;
@@ -1708,19 +1710,19 @@
 
 				var errors = val.numberOfInvalids();
 				
-				if (!validateRadio1()) {
-					//errors += 1;
-				}
-				if (!validateLevel()) {
+				if ( !validateRadio1() ) {
 					errors += 1;
 				}
-				if (!validateSelect1()) {
+				if ( !validateLevel() ) {
 					errors += 1;
 				}
-				if (!validateSelect2()) {
+				if ( !validateSelect1() ) {
 					errors += 1;
 				}
-				if (!validateSelect3()) {
+				if ( !validateSelect2() ) {
+					errors += 1;
+				}
+				if ( !validateSelect3() ) {
 					errors += 1;
 				}
 				if ( !validateCharacterizeArea() ) {
@@ -2193,6 +2195,10 @@
 				selectValid1 = true;		
 			}
 			
+			if(validatorCalled) {
+				validateSelect1();
+			}
+			
 			updateErrorCount();			
 		}
 
@@ -2272,6 +2278,10 @@
 				selectValid2 = true;		
 			}
 			
+			if(validatorCalled) {
+				validateSelect2();
+			}
+			
 			updateErrorCount();			
 		}
 
@@ -2314,7 +2324,7 @@
 				selectValid2 = true;		
 			}
 			
-			return selectValid1;
+			return selectValid2;
 		}
 
 
@@ -2359,6 +2369,10 @@
 				selectValid3 = true;		
 			}
 			
+			if(validatorCalled) {
+				validateSelect3();
+			}
+			
 			updateErrorCount();			
 		}
 
@@ -2401,17 +2415,13 @@
 				selectValid3 = true;		
 			}
 			
-			return selectValid1;
+			return selectValid3;
 		}
 
 		$(window).load( function() {
 		//$(document).ready(function(){
 			
 			var image = '../backgrounds/comp025.jpg';
-
-			// var image = '../backgrounds/comp020.gif';
-			// var image = '../backgrounds/multi134.jpg';
-			// var image = '../backgrounds/background-image-proxy.jpeg';
 
 			img = $('<img />');
 			

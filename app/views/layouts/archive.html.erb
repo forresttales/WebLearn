@@ -5,6 +5,7 @@
 								    	
   		<title><%= full_title(yield(:title)) %></title> 
 
+		<% if false %>
 		<link rel="image_src" href="<%= @info.linkimg_url %>">
 		<meta name="original-source" content="http://thelearningcounsel.com/archives/show?id=<%= @info.article_id %>">
 		<meta property="og:title" content="<%= @info.linktitle %>">
@@ -12,9 +13,7 @@
 		<meta property="og:type" content="article">
 		<meta property="og:url" content="http://thelearningcounsel.com/archives/show?id=<%= @info.article_id %>">
 		<meta property="og:image" content="http://thelearningcounsel.com/repository/<%= @info.linkimg %>">
-
-
-
+		<% end %>
 
 
     	 <!-- stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true  -->    	

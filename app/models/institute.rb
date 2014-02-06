@@ -28,12 +28,36 @@
 
 class Institute < ActiveRecord::Base
   
-    attr_accessible :id, :name, :address, :city, :state, :country, :zip, 
-      :main_phone, :main_contact_email, :public_private, :number_students, 
-      :number_computing_devices, :post_rfp_link, 
-      :company_contact_name_first, :company_contact_name_last, :name_title, 
-      :company_contact_phone, :company_contact_email, :allow_add_products,        
-      :created_at, :updated_at            
+    attr_accessible :id, 
+                    :user_id,    
+                    :name, 
+                    :address, 
+                    :city, 
+                    :state, 
+                    :country, 
+                    :zip, 
+                    :main_phone, 
+                    :main_contact_email, 
+                    :public_private, 
+                    :number_students, 
+                    :number_computing_devices, 
+                    :post_rfp_link, 
+                    :company_contact_name_first, 
+                    :company_contact_name_last, 
+                    :name_title, 
+                    :company_contact_phone, 
+                    :company_contact_email, 
+                    :allow_add_products,        
+                    :created_at, 
+                    :updated_at            
      
     belongs_to :user  
+    
+    has_many :institute_images
+    has_many :institute_profiles
+    has_many :institute_settings
+    has_many :institute_products
+
+
+    
 end

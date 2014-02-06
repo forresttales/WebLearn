@@ -16,6 +16,8 @@ gem 'gon'
 
 gem 'friendly_id', '~> 5.0.0'
 
+gem 'tabulous'
+
 #gem 'bootstrap-sass', '2.3.2.0'
 # gem 'bootstrap-sass'
 

@@ -5,48 +5,70 @@ class StudentsController < ApplicationController
   #before_filter :confirm_logged_in
   
   def index
-    @info = Student.where(["user_id = ?", session[:user_id]]).first       
-    #list
-    #render('list')
+    @student = Student.where(["user_id = ?", session[:user_id]]).first       
+    @username = session[:username]
   end
   
-  def home
-    
-  end
   
   def list
     # @admin_users = AdminUser.sorted
   end
 
+
   def show
     @info = Student.where(["user_id = ?", session[:user_id]]).first   
   end
+
   
   def new
-    @student = Student.new
+    
+    if !(session[:username].nil? or session[:user_id].nil?)
+      @username = session[:username]
+      @student = Student.new
+    else
+      render text: 'failed sessions'
+    end
+    
   end
+
   
   def create
     @student = Student.new(student_params)
     @student.user_id = session[:user_id]
-    @user = User.find(session[:user_id])
-    
-    if @user.update_attribute(:has_account, TRUE)
-      if @user.update_attribute(:account_type, "student")
-        if @student.save
-          flash[:notice] = 'Student account created'
-          #redirect_to(:action => 'list')
-        else
-          flash.now[:notice] = "Account create failed"
-          
-          render("new")
-        end
+    user = User.find(session[:user_id])
+
+    if user.update_attributes(:has_account => true, :account_type => 'student')
+      if @student.save
+        
+        session[:has_account] = true
+        session[:account_type] = "student"    
+        session[:profile] = "students/home"
+        
+        redirect_to(:action => 'index')
       else
-        flash[:notice] = 'User update failed'      
+        render text: 'save student failed'
+        #render("new")
       end
     else
-      flash[:notice] = 'User update failed'      
+      render text: 'update user_id failed'
     end
+    
+    # if @user.update_attribute(:has_account, TRUE)
+      # if @user.update_attribute(:account_type, "student")
+        # if @student.save
+          # flash[:notice] = 'Student account created'
+          # #redirect_to(:action => 'list')
+        # else
+          # flash.now[:notice] = "Account create failed"
+#           
+          # render("new")
+        # end
+      # else
+        # flash[:notice] = 'User update failed'      
+      # end
+    # else
+      # flash[:notice] = 'User update failed'      
+    # end
     
   end
   
@@ -54,6 +76,7 @@ class StudentsController < ApplicationController
   def edit
     # @admin_user = AdminUser.find(params[:id])
   end
+  
   
   def update
     # @admin_user = AdminUser.find(params[:id])
@@ -65,9 +88,11 @@ class StudentsController < ApplicationController
     # end
   end
 
+
   def delete
     # @admin_user = AdminUser.find(params[:id])
   end
+
 
   def destroy
     # AdminUser.find(params[:id]).destroy
@@ -75,10 +100,13 @@ class StudentsController < ApplicationController
     # redirect_to(:action => 'list')
   end
   
+  
   private
 
     def student_params
-      params.require(:student).permit(:name_first, :name_last, :phone)
+      params.require(:student).permit(
+                                      :phone
+                                     )
     end
   
   

@@ -4,6 +4,8 @@ class RegEventMailer < ActionMailer::Base
  
   def welcome_email(reg_event)
     
+    @reg_event = reg_event
+    
     b_cc_1 = false
     b_cc_2 = false
     

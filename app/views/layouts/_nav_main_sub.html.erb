@@ -1,0 +1,197 @@
+
+	<style type="text/css" scoped>
+	
+		@font-face {
+		  	font-family: 'msyhb';
+		  	src: url('/assets/msyhb.eot');	  
+		  	src: url('/assets/msyhb.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'msyh';
+		    src: url('/assets/msyh.eot');	  		
+			src: url('/assets/msyh.ttf') format('truetype');
+		}
+		
+		@font-face {
+			font-family: digitgraphics;
+			src: url('/assets/digitgraphics.eot');
+		}
+	
+		@font-face {
+			font-family: KlavikaExtraLight;
+			src: url('/assets/KlavikaWebDisplayExtraLight.eot');
+		}
+			
+		
+		#knav.knavNormal #ktop-black-bar {
+			/*width: 100%;*/
+						
+			width: 970px;
+			
+			/*height: 55px;*/
+						
+			height: 55px;
+			
+			background: rgba(0, 0, 0, 0.9);			
+			
+			color: #ccc;
+			font: normal 9pt msyhb;
+			margin-top: 7px;
+			z-index: 999;
+			overflow: hidden;
+			-webkit-transform: translate3d(0, 0, 0)
+		}
+		#knav.knavNormal #ktop-black-bar a {
+			color: #ccc
+		}
+		
+		.knav-bar-black {
+			background-color: rgba(0, 0, 0, 0.9);
+			position: fixed;
+			top: 70px;
+			
+		}
+	     
+		#knav.knavNormal #kwhite-stripe-bar {
+			width: 100%;
+			height: 55px;
+			
+			/*border-bottom: #FFFFFF 2px solid*/			
+			
+		}
+	     
+		#knav.knavNormal .inner {
+			width: 970px;
+			height: 55px;
+			position: relative;
+			/*margin: 0 auto*/
+			
+		}
+				
+			     
+		#knav.knavNormal .social {
+			text-align: center;
+			/*float: right*/			
+		}
+	     
+	    .bar-fixed {
+	    	position: fixed;
+	    	top: 50px;
+	    }
+
+	    .bar-static {
+	    	position: static;
+	    	top: auto;
+	    	
+	    	margin-left: auto;
+	    	margin-right: auto;
+	    	
+	    }
+	     
+	    #ktop-black-bar-marker {
+	    	height: 0px;
+	    }
+	     
+	</style>
+
+
+
+
+	<div id="knav" class="knavNormal">
+
+	    <div id="ktop-black-bar-marker"></div> 
+
+    	<div id="ktop-black-bar" class="outer knav-bar-black boxtemp-blue">
+
+            <div class="inner">
+	            <div class="social">
+	            	<a href="/index">1</a> | 
+	            	<a href="/edmatchup">2</a> | 
+	            	<a href="/reports">3</a> 
+	            </div>	          
+            </div>
+
+    		
+	    	<!-- <div id="kwhite-stripe-bar" class="outer">
+            <div class="inner boxtemp-green">
+	            <div class="social">
+	            	<a href="/index">1</a> | 
+	            	<a href="/edmatchup">2</a> | 
+	            	<a href="/reports">3</a> 
+	            </div>	          
+            </div>
+            </div> -->            
+            
+            
+    	</div>
+    	
+    	    	    
+    </div>	
+
+
+	<script>
+		
+		function centerBar() {
+			var a = $("#knav").width();
+			var b = $("#ktop-black-bar").width();
+			var l = ((a/2) - (b/2));
+			$("#ktop-black-bar").css({
+				left : l
+			});
+			// $("#ktop-black-bar").css({
+				// 'top' : '200px'
+			// });			
+		}
+
+		function scrollPos() {
+			$kel = $('#ktop-black-bar'); 
+		  	$ktopmark = $('#ktop-black-bar-marker');
+
+		  	if ($(this).scrollTop() > $ktopmark.position().top+14 && $kel.css('position') != 'fixed'){ 
+		    	$ktopmark.css({'height':'50px'});
+		    	$kel.removeClass("bar-static").addClass("bar-fixed");
+		  	} else if ($(this).scrollTop() < $ktopmark.position().top+14 && $kel.css('position') == 'fixed'){
+		  		$ktopmark.css({'height':'50px'});
+		     	$kel.removeClass("bar-fixed").addClass("bar-static");
+		  		if($kel.height()<100) {
+		  			$kel.css({'height': '45px'});
+		  		}
+		  	}			
+		  	
+		  	centerBar();
+		}
+
+		
+		// $(window).load( function() {
+		// $(document).ready(function(){
+			// alert('ready');
+			// scrollPos();
+			// centerBar();
+		// });		
+		
+		$(window).scroll(function(e){ 
+			//alert('load');
+			
+			scrollPos();
+			centerBar();
+			
+		  // $kel = $('#ktop-black-bar'); 
+		  // $ktopmark = $('#ktop-black-bar-marker');
+// 		
+		  // if ($(this).scrollTop() > $ktopmark.position().top+14 && $kel.css('position') != 'fixed'){ 
+		    	// //$ktopmark.css({'height':'70px'});
+		    	// $kel.removeClass("bar-static").addClass("bar-fixed");
+		  // } else if ($(this).scrollTop() < $ktopmark.position().top+14 && $kel.css('position') == 'fixed'){
+		  		// //$ktopmark.css({'height':'60px'});
+		     	// $kel.removeClass("bar-fixed").addClass("bar-static");
+		  		// if($kel.height()<100) {
+		  			// $kel.css({'height': '55px'});
+		  		// }
+		  // }
+		});
+		
+	</script>
+
+
+
+

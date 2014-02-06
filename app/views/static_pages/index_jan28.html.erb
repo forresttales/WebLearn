@@ -1,0 +1,857 @@
+
+		<style type="text/css">
+		
+			@font-face {
+				font-family: KlavikaExtraLight;
+				src: url('/assets/KlavikaWebDisplayExtraLight.eot');
+				src: url('/assets/KlavikaWebDisplayExtraLight.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebDisplayExtraLight.woff') format('woff');
+			}
+			@font-face {
+				font-family: KlavikaLight;
+				src: url('/assets/KlavikaWebBasicLight.eot');
+				src: url('/assets/KlavikaWebBasicLight.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicLight.woff') format('woff');
+			}
+			@font-face {
+				font-family: KlavikaRegular;
+				src: url('/assets/KlavikaWebBasicRegular.eot');
+				src: url('/assets/KlavikaWebBasicRegular.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicRegular.woff') format('woff');
+			}		
+			@font-face {
+				font-family: KlavikaMedium;
+				src: url('/assets/KlavikaWebBasicMedium.eot');
+				src: url('/assets/KlavikaWebBasicMedium.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicMedium.woff') format('woff');
+			}
+			@font-face {
+				font-family: KlavikaBold;
+				src: url('/assets/KlavikaWebBasicBold.eot');
+				src: url('/assets/KlavikaWebBasicBold.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicBold.woff') format('woff');
+			}
+			@font-face {
+				font-family: KlavikaBlack;
+				src: url('/assets/KlavikaWebDisplayBlack.eot');
+				src: url('/assets/KlavikaWebDisplayBlack.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebDisplayBlack.woff') format('woff');
+			}
+		
+		</style>		
+			
+		<!-- <link href="/assets/entrepeneurs_screen.css" media="screen, projection" rel="stylesheet" type="text/css"> -->
+		
+		<style type="text/css">
+			@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
+		</style>
+			
+				
+		<script type="text/javascript" src="../scripts/jquery-1.4.1.min.js"></script>
+							
+		<script type="text/javascript" src="/assets/entrepeneurs_jquery-1.js"></script> 
+		<script type="text/javascript" src="/assets/entrepeneurs_jquery.js"></script>
+
+
+    	<script type="text/javascript" src="../scripts/jquery.tmpl.js"></script>
+
+
+		<style>
+			
+			.k-decorate-none {
+				text-decoration: none;
+			}
+			
+		</style>
+
+		<style>
+			
+			.nav-bar-black {
+			background-color: #41B737;
+			}
+			
+			@import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans);
+			#nav.navNormal #top-black-bar {
+			  font-family: 'Quattrocento Sans', sans-serif;
+			}
+			
+			#nav.navNormal #top-black-bar a {
+			    color: #FFFFFF;
+			}
+			
+			.katbox-article {
+			  border-left: none;
+			}
+			
+			.katcolorbox_posit {
+			/* delete the other styles for this css class*/
+			    bottom: -30px;
+			    position: absolute;
+			}
+			.katbox {
+			    position: relative;
+			    text-align: right;
+			    width: 300px;
+			}
+			
+			.katbox-article span {
+			/* add the below to this css class. You can also just delete padding-left:0; instead of making it 0*/
+			    padding-left: 0;
+				padding-right: 20px
+			}
+			
+			.kk-headlines .h1 {
+			     font-family: 'Quattrocento Sans', sans-serif;
+				 margin-top: 25px;
+			}
+			
+			@import url(http://fonts.googleapis.com/css?family=Quattrocento);
+			.kk-headlines .h2 {
+			font-family: 'Quattrocento', serif;
+			}
+			.channel-article {
+			  border-left: none;
+			  text-align: right;
+			}
+			
+			.perspective {
+			    border-top: 30px solid #808080;
+			}
+			
+			.channel-article span{
+			  right: 0;
+			  top: 0;
+			  padding: 0;
+			}
+			
+			.channel-article a {
+			  top: -25px;
+			  z-index: 2;
+			  right: 40px;
+			}
+			.header {
+			    float: right;
+			    position: relative;
+			    width: 930px;
+			}
+			
+			.idea {
+			  border-top: 30px solid #A6A6A6;
+			}
+			
+			.idea span {
+			  color: #000000;
+			}
+			
+			.tactic {
+			    border-top: 30px solid #214325;
+			}
+			
+			/* Below are just color changes for the titles under the pictures */
+			.thoughts_catbox {
+			border-top: 27px solid #37633A;
+			}
+			.coffee_chat_catbox {
+			border-top: 27px solid #3AAB48;
+			}
+			.idea_catbox  {
+			border-top: 27px solid #A6A6A6;
+			}
+			.research_catbox  {
+			border-top: 27px solid #808080;
+			}
+			.tactic_catbox {
+			border-top: 27px solid #214325;
+			}
+			.people_catbox  {
+			border-top: 27px solid #3AAB48;
+			}
+			.perspective_catbox  {
+			border-top: 27px solid #808080;
+			}
+			/* End of color title section */
+			
+			
+			.line-lead {
+			   border-top: 5px solid #41B737;
+			   padding-top: 5px;
+			}
+			
+			/* Add in the color change for background */
+			#kfooter {
+			    background-color: #214025;
+			}			
+			
+		</style>
+
+		<!-- <script type="text/javascript" src="http://www.work.ua/js/mootools_1350549978.js"></script>
+		<script type="text/javascript" src="http://www.work.ua/js/mootools-more_1380281301.js"></script> -->
+		
+				
+		<!-- <script type="text/javascript" src="http://www.work.ua/ru/js/lp_1378193134.js"></script> -->
+				
+		
+		
+		<!-- <script src="http://www.work.ua/js/cssua.min.js" type="text/javascript"></script> -->		
+		
+		
+		<!-- <link href="/assets/screen_headlines.css" media="screen, projection" rel="stylesheet" type="text/css"> -->
+		
+		<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+		
+	    <script type="text/javascript">
+	    	swfobject.embedSWF("/assets/865.swf", "myContent", "300", "120", "9.0.0");
+	    </script> -->
+
+		<div style="width: 1200px; margin-right: auto; margin-left: auto; background: #fff;">
+	    
+		<header>		
+								
+
+
+
+
+		 <!-- link_to 'archive', archives_url(:id => '@archive.id')  -->
+		 
+		 								
+			<%= render 'share/backtotop' %>
+			
+			<div class="table-main">			
+				<div class="row">
+					<div class="cell-250">
+						<div class="table-main">
+							<div class="row">
+								<div class="cell-250" style="padding-left: 24px;">
+						  			<img src="../repository/logo-icon-come-together-tag.png" alt="logo-icon-come-together.png" >
+						  		</div>
+							</div>
+							<div class="row">
+								<div class="cell-125" style="padding-left: 34px;">
+									<!-- <p style="font-family: msyh; font-size: 12px;">Research and Context for the<br>Shift to Digital Curriculum</p> -->									
+									
+						  		</div>
+							</div>							
+						</div>
+					</div>
+					<div class="cell-650">
+						<div class="table-main">
+							<div class="row">
+								<div class="cell-650" style="padding-left: 10px;">
+									
+									<a href="/Events">
+										<img src="../repository/banner-main-discussions.png" alt="banner-main-discussions.png" width="630px" >
+									</a>
+									<!-- <div id="main_header_adblock_1">									
+										<h3>Space Available</h3>
+									</div> -->									
+														
+								</div>			
+							</div>							
+						</div>
+					</div>
+					<div class="cell-100%">
+						<div class="table-main">
+							<div class="row">
+								<div class="cell-100percent">
+				 						<!-- link_to image_tag(“/assets/EdMatchUp_logo.png”, :class=>’′), :url =>{:controller=> ‘’,:action=>’’} -->															
+									<div id="edmatchuplogo">
+										<%= link_to image_tag("../repository/EdMatchUp_logo.png", :alt => 'EdMatchUp_logo.png'), '/Edmatchup' %>															
+									</div>							
+						  		</div>
+							</div>
+							<div class="row">
+								<div class="cell-100percent">
+									<div align="center">
+										<%= link_to image_tag("../repository/image_coming_soon_8k.png", :alt => 'image_coming_soon_8k.png'), '/Edmatchup' %>															
+									</div>							
+						  		</div>							
+							</div>
+						</div>
+					</div>
+				</div>					
+			</div>	
+		 					
+		</header>		
+
+		</div>
+		
+		<div style="width: 1200px; margin-right: auto; margin-left: auto; background: #fff;">
+				
+		<section>
+			
+				<div style="height: 30px;"></div>
+				
+				<div class="kontainer">
+																								
+					<script>
+						$(document).ready(function() {
+							$('#prev').hover(function() {$('#prev img').attr('src','/assets/prev-arrow-hov.png')}, function() {$('#prev img').attr('src','/assets/prev-arrow.png')})
+							$('#next').hover(function() {$('#next img').attr('src','/assets/next-arrow-hov.png')}, function() {$('#next img').attr('src','/assets/next-arrow.png')})
+						});
+					</script>
+					
+					<span id="prev" style="float:left;left:-70px;top:215px;margin-top:0px;position:absolute;display:inline;"><img src="/assets/prev-arrow.png"></span>
+					<span id="next" style="float:right;right:-70px;top:215px;margin-top:0px;position:absolute;display:inline;"><img src="/assets/next-arrow.png"></span>
+
+					<div class="cycle-slideshow" data-cycle-speed="600" data-cycle-pause-on-hover="true" data-cycle-fx="scrollHorz" data-cycle-prev="#prev" data-cycle-next="#next" data-cycle-slides="&gt; div" style="width: 970px; position: relative; height: 890px; overflow: hidden;">					
+					
+						<div style="position: absolute; top: 0px; left: 0px; z-index: 101; opacity: 1;">
+
+							<div class="k-mainfeaturerow">
+
+    							<div id="12"></div>
+						        
+					        </div>
+					        
+					    	<div class="rowfluid">					    
+					    							    
+								<div class="psubfeature">
+
+    								<div id="14"></div>
+
+								</div>								
+								
+								<div class="psubfeature">
+									
+    								<div id="15"></div>
+									
+								</div>								
+								
+								<div class="psubfeature">
+									
+    								<div id="16"></div>
+									
+								</div>								
+						
+							</div>
+												
+						</div>
+					
+						<!-- <div style="position: absolute; top: 0px; left: 0px; z-index: 100; display: none;" class="slide cycle-slide"> -->							
+							
+						<div style="position: absolute; top: 0px; left: 0px; z-index: 100; display: none;">
+							
+							
+							<div class="rowfluid k-mainfeaturerow">
+								
+    							<div id="22"></div>
+						
+					        </div>
+					        
+					    	<div class="rowfluid">
+								<div class="psubfeature">
+
+    								<div id="17"></div>
+
+								</div>					
+								<div class="psubfeature">
+
+    								<div id="20"></div>
+									
+								</div>					
+								<div class="psubfeature">
+									
+									<div id="2"></div>
+									
+								</div>								
+						
+							</div>
+						</div>
+					
+					
+					
+						<!-- <div style="position: absolute; top: 0px; left: 0px; z-index: 99; display: none;" class="slide cycle-slide"> -->							
+							
+						<div style="position: absolute; top: 0px; left: 0px; z-index: 99; display: none;">
+							
+							<div class="rowfluid k-mainfeaturerow">
+
+								<div id="3"></div>
+						
+					        </div> 
+					        
+					    	<div class="rowfluid">
+								<div class="psubfeature">
+									
+									<div id="19"></div>
+									
+								</div>					
+								
+								<div class="psubfeature">
+									
+									<div id="13"></div>
+									
+								</div>								
+																									    					    					    
+								<div class="psubfeature">
+									
+									<div id="9"></div>
+
+								</div>								
+							</div>
+					
+						</div>
+								
+					</div>
+
+					<div style="clear: both; height: 0px; font-size: 1px; line-height: 0px;"></div>
+					
+				</div>
+					
+					
+</section>
+</div>					
+					
+				
+					
+				
+<div style="width: 100%; height: 10px; background-color: #C7CED4; margin-top: 0px; margin-bottom: 0px;"></div>
+
+
+
+
+
+		
+<div style="width: 1200px; margin-right: auto; margin-left: auto; background: #fff;">
+				
+<section>			
+				<div class="kontainer">
+					
+					<div style="height: 20px;"></div>
+					
+				
+				
+
+<!-- start template single row -->
+				
+<div class="k-governcell ktop kbottom">	
+		
+	<div class="k-outercell kol3">
+		
+		<div id="7"></div>
+		
+	</div>
+		
+	<div class="k-cell-divider"></div>
+	
+	
+	<div class="k-outercell kol3">
+
+    	<div id="4"></div>
+						
+	</div>
+
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol3">
+		
+		<div id="8"></div>
+		
+	</div>
+	
+</div>
+
+<!-- end template single row -->				
+					
+<div style="height: 50px; position: relative;"></div>
+
+
+
+<!-- start template single row -->
+				
+<div class="k-governcell ktop">	
+		
+	<div class="k-outercell kol3">
+
+		<div id="10"></div>
+		
+	</div>
+		
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol3">
+
+		<div id="25"></div>
+		
+	</div>
+	
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol3 k-empty">
+		
+		<!-- <div id="ad1-upper" >
+			<div id="ad1-upper-inner">
+				Space Available
+			</div>
+		</div> -->		
+				
+	</div>
+	
+</div>
+
+<!-- end template single row -->				
+								
+
+				
+<!-- start template single row -->		
+<div class="k-governcell kbottom">			
+						
+	<div class="k-outercell kol3">
+		
+		<div class="k-cell-divider-horiz" style=""></div>
+								
+		<div id="27"></div>
+								
+	</div>
+						
+	
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol3">
+		
+		<div class="k-cell-divider-horiz"></div>
+
+		<div id="5"></div>
+						
+	</div>
+	
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell-double kol3">
+		
+		<!-- <div id="ad1-lower"></div> -->
+				
+		<a href="/papers" class="k-link-a">
+						
+			<div class="k-inner-cell">
+				<div class="k-b-container" style="padding-bottom: 0px; top: 176px;">
+					<div class="k-img-cell-single">
+						<a href="/papers">
+							<img src="../repository/banner-2.png" class="k-img" height="686px" onerror="this.src='/assets/error-300-700-blue.png'">
+						</a>
+					</div>
+				</div>
+			</div>
+			
+		</a>
+						
+	</div>
+	
+</div>
+		
+<!-- end template single row -->				
+
+
+<div style="height: 50px;"></div>
+
+
+<!-- start template double row -->
+				
+<div class="k-governcell ktop">	
+		
+	<div class="k-outercell kol3 k-empty">
+		<a href="#" class="k-link-a">
+			<div class="k-inner-cell">
+			</div>
+		</a>	
+	</div>
+		
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol3">
+		
+		<div class="k-inner-cell"  style="padding-top: 2px;">
+			<div class="text_container b_container line-grow">
+				
+				<object type="application/x-shockwave-flash" data="http://www.youtube.com/v/UZePBZ-edfE&feature=youtu.be&noredirect=1" width="300" height="200">          	
+		            <param name="wmode" value="opaque" />
+		            <param name="quality" value="high" />
+		            <param name="bgcolor" value="#E9E9E9" />
+		            <param name="allowfullscreen" value="true" />
+		         	<param name="allowscriptaccess" value="never" />
+		         </object>
+
+				<div class="headline-excelsiorcomics">
+					<span>5 Key Areas of Successful K12 Tech Integration Planning</span>
+				</div>
+			</div>
+		</div>
+			
+	</div>
+	
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol3">
+
+		<div id="1"></div>
+
+	</div>
+</div>
+
+
+<div class="k-governcell kbottom">			
+						
+	<div class="k-outercell-double kol3">
+		
+		<div id="6"></div>
+		
+	</div>
+	
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol3">
+		
+		<div class="k-cell-divider-horiz"></div>
+
+		<div id="18"></div>
+						
+	</div>
+	
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol3">
+		
+		<div class="k-cell-divider-horiz"></div>
+
+		<div id="21"></div>
+								
+	</div>
+	
+</div>
+		
+<!-- end template double row -->				
+							
+							
+<div style="height: 50px; position: relative;"></div>
+
+<!-- start template single 2 cell row -->
+				
+<div class="k-governcell ktop kbottom">	
+		
+	<div class="k-outercell kol2">
+		
+		<div id="26"></div>
+		
+	</div>
+		
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol2">
+		
+		<div id="24"></div>
+		
+	</div>
+			
+</div>
+
+<!-- end template single row -->				
+
+
+<div style="height: 30px; position: relative;"></div>
+
+
+<div class="k-governcell ktop kbottom">	
+		
+	<div class="k-outercell kol1">
+		<a href="/CommunityRegistration" class="k-link-a">
+			<div class="k-inner-cell" style="padding-top: 6px;">
+				
+				<div class="text_container b_container" style="text-align: center;">
+					
+					<img src="../repository/banner-3.png" width="850px" onerror="this.src='../altgraphics/error-300-200.png'">
+
+				</div>
+			</div>
+		</a>	
+	</div>
+					
+</div>
+
+
+<!-- <div id="ad2">
+	<div id="ad2-inner">
+		Space Available
+	</div>
+</div> -->
+
+
+
+
+
+					<!-- ><div class="container-main">
+						<div class="board">					
+							  
+						</div>
+					</div>			-->		 				
+
+					
+			<!-- <div class="container-main">
+				<div class="board"> -->					
+					
+				<!-- </div>  -->				
+				<!--end  outer container//-->
+
+
+
+
+				<!-- <div id="sfw_865" align="center" style="height:90px">&nbsp;Banner</div>
+				<script type="text/javascript">
+					// <![CDATA[
+					_wbn.push(function(){
+					var so = new SWFObject("/assets/865.swf", "swf", "728", "90", "6", "#ffffff");
+					so.addParam("quality", "best");
+					so.addParam("menu", "false");
+					so.addParam("wmode", "opaque");
+					so.addParam("allowScriptAccess", "always");
+					so.addVariable("url", "http://www.work.ua/go.php?bid=865");
+					so.addVariable("target", "_blank");
+					so.write("sfw_865");
+					});
+					// ]]>
+				</script> -->
+				
+							
+							
+								
+			<!-- </div>  -->			
+			<!--white -->
+					
+
+				<!-- <div id="sfw_866" align="center" style="height:90px">&nbsp;</div>
+					<script type="text/javascript">
+					// <![CDATA[
+					_wbn.push(function(){
+					var so = new SWFObject("http://i.work.ua/b/866.swf?941883883", "swf", "728", "90", "6", "#ffffff");
+					so.addParam("quality", "best");
+					so.addParam("menu", "false");
+					so.addParam("wmode", "opaque");
+					so.addParam("allowScriptAccess", "always");
+					so.addVariable("url", "http://www.work.ua/go.php?bid=866");
+					so.addVariable("target", "_blank");
+					so.write("sfw_866");
+					});
+					// ]]>
+					</script> -->
+
+					
+				<div style="height: 100px;"></div>
+					
+			</div>			    
+			
+ <%= render 'archives/article' %>
+			
+			
+		</section>
+		</div>
+		
+		<div style="height: 10px;"></div>
+		
+    <script>
+                
+		$(window).load( function() {
+						
+			var j;
+			var k;
+			var l;
+			var m;
+			var n;
+			var p;
+			var t;
+			var jj;
+			var kk;
+			var ll;
+			var mm;
+			var nn;
+
+			var upperCell;			
+
+			$('.k-governcell').each( function() {
+				
+				j = 0;
+				k = 0;
+				l = 0;
+				m = 0;
+				n = 0;
+				p = 0;
+				s = 0;
+				t = 0;
+				jj = 0;
+				kk = 0;	
+				ll = 0;	
+				mm = 0;
+
+				$(this).children().each( function() {
+					
+					if ($(this).hasClass('k-outercell')) {
+						if (!(jj = $(this).find("img").attr("height"))) {
+							jj = 0;
+						}
+						console.log('jj = ' + jj);
+						j = j >= jj ? j : jj;
+						n = parseInt(j);																		
+					}
+				});
+
+				n += 6;
+				upperCell = $(this).find('.k-b-container');
+				upperCell.height(n);
+				
+				console.log('n = ' + $(this).find('.k-b-container').height());
+
+				$(this).children().each( function() {
+					
+					if ($(this).hasClass('k-outercell')) {
+						kk = $(this).height();
+						if (!(kk = $(this).height())) {
+							kk = 0;
+						}
+						k = k >= kk ? k : kk;
+						t = k;
+					}
+					if ($(this).hasClass('k-outercell-double')) {
+						kk = $(this).height();
+						if (!(kk = $(this).height())) {
+							kk = 0;
+						}
+						k = k >= kk ? k : kk;
+						s = k;
+					}
+					if ($(this).hasClass('k-outercell-double')) {
+						kk = $(this).height();
+						if (!(kk = $(this).height())) {
+							kk = 0;
+						}
+						k = k >= kk ? k : kk;
+						s = k;
+					}
+				});
+				
+				m = s >= t ? s : t;
+
+				m += 2;
+				m = m <= 1000 ? m : 1000;
+				
+				$(this).height(m);
+				$(this).children($('.k-cell-divider')).height(m);
+			});
+		});
+
+
+	// var get_file = "../archives/article.htm";
+// 
+	// $.get( get_file, function( data ) {
+		// $( "#render" ).html( data );
+	// });
+
+		
+	</script>
+
+
+<!-- <script>
+  
+	// var get_file = "../archives/article.htm";
+// 
+	// $(document).ready(function() {
+	// //$(window).load( function() {
+// 
+			// $.get( get_file, function( data ) {
+				// $( "#render" ).html( data );
+			// });
+// 		
+	// });
+  
+</script>		 -->

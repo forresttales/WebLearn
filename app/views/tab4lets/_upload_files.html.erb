@@ -1,0 +1,384 @@
+
+
+	<div class="main">
+	
+		<div id="scroll1" class="scrollbox-both" onscroll="scrollPos();">	
+			
+			<% if @tab4lets.any? %>
+				
+				<%= hidden_field_tag :direction, params[:direction] %>
+				<%= hidden_field_tag :sort, params[:sort] %>	
+				<%= hidden_field_tag :pos, params[:pos] %>	
+				
+				<h5>Record Count: <%= @tab4lets.count %></h5>
+				
+				<table id="tbltablets" title="Tablets" >    	  
+					  	
+			       <colgroup>
+				       <col class="member-table"></col> <!-- 1 -->
+				       <col class="member-table"></col> <!-- 2 -->
+				       <col class="member-table"></col> <!-- 3 -->
+				       <col class="member-table"></col> <!-- 4 -->
+				       <col class="member-table"></col> <!-- 5 -->
+				       <col class="member-table"></col> <!-- 6 -->
+				       <col class="member-table"></col> <!-- 7 -->
+				       <col class="member-table"></col> <!-- 8 -->
+				       <col class="member-table"></col> <!-- 9 -->
+				       <col class="member-table"></col> <!-- 10 -->
+				       <col class="member-table"></col> <!-- 11 -->
+				       <col class="member-table"></col> <!-- 12 -->
+				       <col class="member-table"></col> <!-- 13 -->
+				       <col class="member-table"></col> <!-- 14 -->
+				       <col class="member-table"></col> <!-- 15 -->
+				       <col class="member-table"></col> <!-- 16 -->
+				       <col class="member-table"></col> <!-- 17 -->
+				       <col class="member-table"></col> <!-- 18 -->
+				       <col class="member-table"></col> <!-- 19 -->
+				       <col class="member-table"></col> <!-- 20 -->
+				       <col class="member-table"></col> <!-- 21 -->
+				       <col class="member-table"></col> <!-- 22 -->
+				       <col class="member-table"></col> <!-- 23 -->
+				       <col class="member-table"></col> <!-- 24 -->
+				       <col class="member-table"></col> <!-- 25 -->
+				       <col class="member-table"></col> <!-- 26 -->
+				       <col class="member-table"></col> <!-- 27 -->
+				       <col class="member-table"></col> <!-- 28 -->
+			       </colgroup>
+
+				  <tr align="left">
+				    <th class="member-table" id="th_view" field="view" style="width: 50px"><div class="header-shift"><h4></h4></div></th>
+				    <th class="member-table" id="th_delete" field="delete" style="width: 50px;"><div class="header-shift"><h4></h4></div></th>
+				  	
+				    <th class="member-table" id="th_id" field="id" style="width: 50px"><div id="id" class="header-shift"><h4><%= sortable "id", "ID" %></div></th>
+				    <!-- <th field="created_at" width = "20">created_at</th>
+				    <th field="updated_at" width = "20">updated_at</th> -->    
+				    <th class="member-table" id="th_col_1" field="col_1" style="width: 100px"><div id="col_1" class="header-shift"><h4><%= sortable "col_1", "Col 1" %></h4></div></th>
+				    <th class="member-table" id="th_col_2" field="col_2" style="width: 100px"><div id="col_2" class="header-shift"><h4><%= sortable "col_2", "Col 2" %></h4></div></th>
+				    <th class="member-table" id="th_col_3" field="col_3" style="width: 100px"><div id="col_3" class="header-shift"><h4><%= sortable "col_3", "Col 3" %></h4></div></th>
+				    <th class="member-table" id="th_col_4" field="col_4" style="width: 100px"><div id="col_4" class="header-shift"><h4><%= sortable "col_4", "Col 4" %></h4></div></th>
+				    <th class="member-table" id="th_col_5" field="col_5" style="width: 100px"><div id="col_5" class="header-shift"><h4><%= sortable "col_5", "Col 5" %></h4></div></th>
+				    <th class="member-table" id="th_col_6" field="col_6" style="width: 100px"><div id="col_6" class="header-shift"><h4><%= sortable "col_6", "Col 6" %></h4></div></th>
+				    <th class="member-table" id="th_col_7" field="col_7" style="width: 100px"><div id="col_7" class="header-shift"><h4><%= sortable "col_7", "Col 7" %></h4></div></th>
+				    <th class="member-table" id="th_col_8" field="col_8" style="width: 100px"><div id="col_8" class="header-shift"><h4><%= sortable "col_8", "Col 8" %></h4></div></th>
+				    <th class="member-table" id="th_col_9" field="col_9" style="width: 100px"><div id="col_9" class="header-shift"><h4><%= sortable "col_9", "Col 9" %></h4></div></th>
+				    <th class="member-table" id="th_col_10" field="col_10" style="width: 100px"><div id="col_10" class="header-shift"><h4><%= sortable "col_10", "Col 10" %></h4></div></th>
+				    <th class="member-table" id="th_col_11" field="col_11" style="width: 100px"><div id="col_11" class="header-shift"><h4><%= sortable "col_11", "Col 11" %></h4></div></th>
+				    <th class="member-table" id="th_col_12" field="col_12" style="width: 100px"><div id="col_12" class="header-shift"><h4><%= sortable "col_12", "Col 12" %></h4></div></th>
+				    <th class="member-table" id="th_col_13" field="col_13" style="width: 100px"><div id="col_13" class="header-shift"><h4><%= sortable "col_13", "Col 13" %></h4></div></th>
+				    <th class="member-table" id="th_col_14" field="col_14" style="width: 100px"><div id="col_14" class="header-shift"><h4><%= sortable "col_14", "Col 14" %></h4></div></th>
+				    <th class="member-table" id="th_col_15" field="col_15" style="width: 100px"><div id="col_15" class="header-shift"><h4><%= sortable "col_15", "Col 15" %></h4></div></th>
+				    <th class="member-table" id="th_col_16" field="col_16" style="width: 100px"><div id="col_16" class="header-shift"><h4><%= sortable "col_16", "Col 16" %></h4></div></th>
+				    <th class="member-table" id="th_col_17" field="col_17" style="width: 100px"><div id="col_17" class="header-shift"><h4><%= sortable "col_17", "Col 17" %></h4></div></th>
+				    <th class="member-table" id="th_col_18" field="col_18" style="width: 100px"><div id="col_18" class="header-shift"><h4><%= sortable "col_18", "Col 18" %></h4></div></th>
+				    <th class="member-table" id="th_col_19" field="col_19" style="width: 100px"><div id="col_19" class="header-shift"><h4><%= sortable "col_19", "Col 19" %></h4></div></th>
+				    <th class="member-table" id="th_col_20" field="col_20" style="width: 100px"><div id="col_20" class="header-shift"><h4><%= sortable "col_20", "Col 20" %></h4></div></th>
+				    <th class="member-table" id="th_col_21" field="col_21" style="width: 100px"><div id="col_21" class="header-shift"><h4><%= sortable "col_21", "Col 21" %></h4></div></th>
+				    <th class="member-table" id="th_col_22" field="col_22" style="width: 100px"><div id="col_22" class="header-shift"><h4><%= sortable "col_22", "Col 22" %></h4></div></th>
+				    <th class="member-table" id="th_col_23" field="col_23" style="width: 100px"><div id="col_23" class="header-shift"><h4><%= sortable "col_23", "Col 23" %></h4></div></th>
+				    <th class="member-table" id="th_col_24" field="col_24" style="width: 100px"><div id="col_24" class="header-shift"><h4><%= sortable "col_24", "Col 24" %></h4></div></th>
+				    <th class="member-table" id="th_col_25" field="col_25" style="width: 100px"><div id="col_25" class="header-shift"><h4><%= sortable "col_25", "Col 25" %></h4></div></th>
+
+				  </tr>
+				<% @tab4lets.each do |tab4let| %>
+				  <tr align="left" class="tr-tab4lets">
+				  	
+				    <td><h5><%= link_to('View', {:action => 'show', :id => tab4let.id, :class => 'member-table'}) %></h5></td>
+	
+				    <td>
+				    	<div style="position: relative; bottom: -2px">
+					    	<h5>
+							   	<% delete_msg = "Delete ID: " + tab4let.id.to_s + " ?" %>
+								<%= button_to "Delete", {:action => 'destroy', :id => tab4let.id}, :method => :delete, :confirm => delete_msg, :class => 'delete-btn' %>
+							</h5>
+						</div>
+					</td>
+				  	
+				  	
+				    <td><h5 class="member-table"><%= tab4let.id %></h5></td>
+				    <!-- <td> tab4let.created_at.strftime("%B %e, %Y") </td>
+				    <td> tab4let.updated_at.strftime("%B %e, %Y") </td> -->    
+				    <td><h5 class="member-table"><%= tab4let.col_1 %></h5></td>
+				    <td><h5 class="member-table"><%= tab4let.col_2 %></h5></td>
+				    <td><h5 class="member-table"><%= tab4let.col_3 %></h5></td>
+				    <td><h5 class="member-table"><%= tab4let.col_4 %></h5></td>
+				    <td><h5 class="member-table"><%= tab4let.col_5 %></h5></td>
+				    <td><h5 class="member-table"><%= tab4let.col_6 %></h5></td>
+				    <td><h5 class="member-table"><%= tab4let.col_7 %></h5></td>
+				    <td><h5 class="member-table"><%= tab4let.col_8 %></h5></td>
+				    <td><h5 class="member-table"><%= tab4let.col_9 %></h5></td>
+				    <td><h5 class="member-table"><%= tab4let.col_10 %></h5></td>
+				    <td><h5 class="member-table"><%= tab4let.col_11 %></h5></td>
+				    <td><h5 class="member-table"><%= tab4let.col_12 %></h5></td>
+				    <td><h5 class="member-table"><%= tab4let.col_13 %></h5></td>
+				    <td><h5 class="member-table"><%= tab4let.col_14 %></h5></td>
+				    <td><h5 class="member-table"><%= tab4let.col_15 %></h5></td>
+				    <td><h5 class="member-table"><%= tab4let.col_16 %></h5></td>
+				    <td><h5 class="member-table"><%= tab4let.col_17 %></h5></td>
+				    <td><h5 class="member-table"><%= tab4let.col_18 %></h5></td>
+				    <td><h5 class="member-table"><%= tab4let.col_19 %></h5></td>
+				    <td><h5 class="member-table"><%= tab4let.col_20 %></h5></td>
+				    <td><h5 class="member-table"><%= tab4let.col_21 %></h5></td>
+				    <td><h5 class="member-table"><%= tab4let.col_22 %></h5></td>
+				    <td><h5 class="member-table"><%= tab4let.col_23 %></h5></td>
+				    <td><h5 class="member-table"><%= tab4let.col_24 %></h5></td>
+				    <td><h5 class="member-table"><%= tab4let.col_25 %></h5></td>
+				    			      
+				  </tr>
+				<% end %>
+
+				</table>			
+							
+				  <%= will_paginate @tab4lets %>							
+							
+			<% else %>
+						
+				<h3>No record for Tablets 4</h3>
+				
+			<% end %>
+			
+		</div>
+		
+	</div>
+
+   
+	<script>
+		
+        function scrollPos() {
+        	// alert('scrollPos');
+            // var div = document.getElementById("scroll1").scrollLeft;
+            // document.getElementById("pos").innerHTML = div;
+            $("#pos").html($("#scroll1").scrollLeft());
+        }
+		
+		function moveScroll() {
+			// alert('moveScroll');
+			$("#scroll1").scrollLeft($("#pos").html());
+		}
+				
+				
+		$(function() {
+		
+			 // $('#loading').fadeOut(1000);
+		
+			// img = $('<img />');
+//  			
+			// img.bind('loading_import', function() {
+// 				
+				// $('#join_image').css({
+					// visibility: 'visible'
+				// })
+// 				
+			    // $('#loading').fadeOut(1000);
+// 
+				// // // setTimeout( function(){
+					// // // centerSignin();
+					// // // showSignin();
+					// // // formValidate();
+				// // // }, 1000);
+			// });
+		
+		
+			// $("#get-import").on('click', function() {
+			    // $.post({
+			    	// //type: "POST",
+			      	// url: "/tab4lets/import"
+			    // });			
+			// });
+		
+		
+    		var $cols = $('colgroup');
+
+			$("table#tbltablets tr:nth-child(even)").addClass('gray');
+			$("table#tbltablets tr:nth-child(odd)").addClass('white');
+
+			var cell;
+			var cellIndex;
+			var row;
+			var rowIndex;
+			var header;
+			var cellTh;
+			var cellIndexTh;
+			
+			$("table#tbltablets th").mouseover ( function () {
+
+				cellTh = $(this).closest('th');
+				cellIndexTh = cellTh[0].cellIndex;
+				cellIndexTh += 1;
+				
+				$("table#tbltablets td:nth-child(" + cellIndexTh + ")").addClass('hover-col');
+				$(this).addClass('hover-col');
+				
+			}).mouseout ( function() {
+				
+				$("table#tbltablets td:nth-child(" + cellIndexTh + ")").removeClass('hover-col');				
+				$(this).removeClass('hover-col');
+				
+			});
+			
+			$("table#tbltablets td").mouseover ( function () {
+				
+				cell = $(this).closest('td');
+				cellIndex = cell[0].cellIndex;
+				cellIndex += 1;
+				row = cell.closest('tr');
+				rowIndex = row[0].rowIndex;
+				
+				switch(cellIndex)
+				{
+				case 1:
+					header = "th_view"	  
+				  break;
+				case 2:
+					header = "th_delete"	  
+				  break;
+				case 3:
+					header = "#th_id"	  
+				  break;
+				case 4:
+					header = "#th_col_1"	  
+				  break;				  
+				case 5:
+					header = "#th_col_2"	  
+				  break;
+				case 6:
+					header = "#th_col_3"	  
+				  break;
+				case 7:
+					header = "#th_col_4"	  
+				  break;
+				case 8:
+					header = "#th_col_5"	  
+				  break;
+				case 9:
+					header = "#th_col_6"	  
+				  break;
+				case 10:
+					header = "#th_col_7"	  
+				  break;
+				case 11:
+					header = "#th_col_8"	  
+				  break;
+				case 12:
+					header = "#th_col_9"	  
+				  break;
+				case 13:
+					header = "#th_col_10"	  
+				  break;
+				case 14:
+					header = "#th_col_11"	  
+				  break;
+				case 15:
+					header = "#th_col_12"	  
+				  break;
+				case 16:
+					header = "#th_col_13"	  
+				  break;
+				case 17:
+					header = "#th_col_14"	  
+				  break;
+				case 18:
+					header = "#th_col_15"	  
+				  break;
+				case 19:
+					header = "#th_col_16"	  
+				  break;
+				case 20:
+					header = "#th_col_17"	  
+				  break;
+				case 21:
+					header = "#th_col_18"	  
+				  break;
+				case 22:
+					header = "#th_col_19"	  
+				case 23:
+					header = "#th_col_20"	  
+				case 24:
+					header = "#th_col_21"	  
+				case 25:
+					header = "#th_col_22"	  
+				case 26:
+					header = "#th_col_23"	  
+				case 27:
+					header = "#th_col_24"	  
+				case 28:
+					header = "#th_col_25"	  
+				  break;
+
+				default:
+					//
+				}				
+
+				$(header).addClass('hover-col');
+		
+				if (rowIndex % 2 === 0) {
+					$("table#tbltablets td:nth-child(" + cellIndex + ")").addClass('hover-col');
+					row.removeClass('gray').addClass('hover-row');					
+				}
+				else {
+					$("table#tbltablets td:nth-child(" + cellIndex + ")").addClass('hover-col');
+					row.removeClass('white').addClass('hover-row');										
+				}		
+			}).mouseout( function(){
+
+				$(header).removeClass('hover-col');
+				
+				if (rowIndex % 2 === 0) {
+					$("table#tbltablets td:nth-child(" + cellIndex + ")").removeClass('hover-col');
+					row.removeClass('hover-row').addClass('gray');					
+				}
+				else {
+					$("table#tbltablets td:nth-child(" + cellIndex + ")").removeClass('hover-col');
+					row.removeClass('hover-row').addClass('gray');					
+				}		
+			});
+			
+			var rowSelect = -1;			
+			
+			$("table#tbltablets td").on('click', function () {
+	
+				cell = $(this).closest('td');
+				btn_delete = $(this).closest('form');
+				row = cell.closest('tr');
+				rowIndex = row[0].rowIndex;
+
+				if (rowSelect !== -1) {
+					$("table#tbltablets tr").removeClass('row-select');
+				}
+				
+				rowSelect = rowIndex;
+				row.addClass('row-select');
+				btn_delete.removeClass('btn-color').addClass('btn-color-select');
+			});
+	
+	
+			
+			$(document).on('click', function(tablet) {
+				// alert(tablet.target);
+				elem = tablet.target.className;
+				if ((elem === 'hover-col') || (elem === 'delete-btn') || (elem === 'member-table')) {
+					//
+				}
+				else {
+					$("table#tbltablets tr").removeClass('row-select');					
+				}
+			});
+		});
+
+		// $(document).on('click', function() {
+			// if ((rowSelect !== -1)) {
+				// //$("table#tbltablets tr").removeClass('row-select');
+			// }
+			// rowSelect = -1;
+			// tableClicked = false;
+		// })
+
+		//$(document).ready(function () {
+			// $('*[data-confirm]').click(function(){
+				// // alert('delete clicked');				
+		    	// return confirm($(this).attr('data-confirm'));
+		  	// });
+		//});
+			
+	</script>
+
+

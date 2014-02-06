@@ -9,22 +9,16 @@ module SessionsHelper
     
     session[:username] = user.username
     session[:user_id] = user.id
-    session[:has_account] = user.has_account
     session[:signed_in] = true
-    
-    
-    # if user.admin
-      # session[:admin] = true
-    # else
-      # session[:admin] = nil            
-    # end
-#       
-    # flash[:login] = 'Logged In'
 
-    # respond_to do |format|
-      # format.html
-      # format.js      
-    # end
+    if user.has_account    
+      session[:has_account] = user.has_account
+      session[:account_type] = user.account_type    
+      session[:profile] = "/" + user.account_type + "s/home"
+    else
+      session[:profile] = "users/show"      
+    end
+
     
   end
 
@@ -62,6 +56,17 @@ module SessionsHelper
     session[:has_account] = nil
     session[:user_id] = nil
     session[:signed_in] = nil
+    session[:account_type] = nil
+    session[:profile] = nil
+    
+    session[:institute_id] = nil        
+    session[:publisher_id] = nil
+    session[:recruiter_id] = nil
+    session[:student_id] = nil
+    session[:teacher_id] = nil
+        
+        
+    # session[:return_to] = nil    
     
     # if user.admin
       # session[:admin] = true
@@ -77,13 +82,32 @@ module SessionsHelper
   def redirect_back_or(default)
     # redirect_to(session[:return_to] || default)
     # session.delete(:return_to)
+
+    controller_action = ":controller => 'users', :action => 'show'"
     
     if session[:has_account]
-      redirect_to(:controller => 'students')
+
+      account_type = session[:account_type] 
+
+      case account_type  
+        when "institute"
+          redirect_to '/Institutes'          
+        when "publisher"
+          redirect_to '/Publishers'          
+          # redirect_to(:controller => 'publishers', :action => 'index')          
+        when "recruiter"
+          redirect_to(:controller => 'recruiters', :action => 'index')          
+        when "teacher"
+          redirect_to(:controller => 'teachers', :action => 'index')          
+        when "student"
+          redirect_to(:controller => 'students', :action => 'index')          
+        else
+          #        
+      end
+       
     else
       redirect_to(:controller => 'users', :action => 'show')      
     end
-    
     
     
   end

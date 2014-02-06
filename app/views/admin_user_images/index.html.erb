@@ -1,0 +1,170 @@
+ <%= provide(:title, 'Admin User Photos') %>
+ 
+ 				
+		<script type="text/javascript" src="/assets/entrepeneurs_jquery-1.js"></script> 		
+		
+    	<script type="text/javascript" src="../scripts/jquery.tmpl.js"></script>
+		
+		
+		<style>
+			
+	    	.main {
+	    		font-family:Arial, Helvetica, sans-serif;
+	    		font-size: 20px;
+	    		color: black;
+	    		height: 500px;
+	    	}
+	    	
+	    	.links {
+	    		font-family:Arial, Helvetica, sans-serif;
+	    		font-size: 13px;
+	    		color: brown;    		
+	    	}
+	    	
+	    	h1 {
+	    		font-size: 22px;
+	    	}
+	    	h2 {
+	    		font-size: 18px;
+	    	}
+	    	h4 {
+	    		font-size: 16px;
+	    		font-weight: 600;
+	    	}    	
+	    	h5 {
+	    		font-size: 12px;
+	    	}    	    	
+	    	p {
+	    		font-size: 12px;
+	    	}
+			
+			.primary {
+				
+			}
+			
+		</style>
+		
+		
+		<header>					
+
+			<%= render 'share/backtotop' %>
+			
+		</header>		
+
+		<!-- <div id="desc" style="visibility: hidden;"></div> -->
+		
+		<div class="main" style="margin-left: 20%;">		
+			<div style="height: 200px;"></div>
+	
+			<p><%= link_to 'New', admin_user_images_new_path %></p>
+	
+			<div style="height: 100px;"></div>
+	
+			<!-- <img id="render" src="" alt="image">		                 -->		
+			
+			<!-- <div id="render"></div>		 -->		
+		
+
+				<!-- <div id="primary" style="display: inline-block;"></div> -->
+				
+			<% for i in 0..(@admin_user_images.count - 1) %>
+
+				<div id="<%= i %>" style="display: inline-block;"></div>
+				
+			<% end %>
+				
+		
+		</div>
+		
+		<div style="height: 400px;"></div>
+
+
+			<% for i in 0..(@admin_user_images.count - 1) %>
+
+				<%= @admin_user_images[i].image_name %><br>
+				
+			    <script id="imageTemplate_<%= i %>" type="text/x-jQuery-tmpl">
+			    	
+			    	<table style="margin-right: 30px; margin-left: 30px;">
+			    		<tr>
+			    			<td>
+			    				<img src="../photos/<%= @admin_user_images[i].image_name %>" alt="<%= @admin_user_images[i].image_name %>">
+			    			</td>
+			    		</tr>
+
+						<% if @admin_user_images[i].primary %>
+			    		<tr>
+			    			<td>
+			    				<h4 style="color: brown;">Primary</h4>
+			    			</td>
+			    		</tr>
+						<% else %>
+			    		<tr>
+			    			<td>
+						    	<h4>
+									 <%= button_to "Make Primary", {:action => 'set_primary', :id => @admin_user_images[i].id}, :method => :post, :class => 'delete-btn' %>								
+								</h4>
+			    			</td>
+			    		</tr>
+			    		<% end %>
+			    		
+			    		<tr>
+			    			<td>
+						    	<h4>
+								   	<% delete_msg = "Delete Image ID: " + @admin_user_images[i].id.to_s + " ?" %>
+									<%= button_to "Delete", {:action => 'destroy', :id => @admin_user_images[i].id}, :method => :delete, :confirm => delete_msg, :class => 'delete-btn' %>
+								</h4>
+			    			</td>
+			    		</tr>
+
+			    	</table>
+			        
+		    	</script>
+		    	
+			<% end %>
+
+
+		<script>
+		  
+			//$(document).ready(function() {
+			$(window).load( function() {
+		
+				var cnt = gon.admin_user_images_count;
+
+				var id = 0;
+				var container = "";
+				var ref = "";
+	
+				for( i = 0; i < cnt; i++) {
+					id = i;
+					container = "#" + id;
+					ref		  = "#imageTemplate_"  + id;
+				    $(ref).tmpl().appendTo(container);
+				}
+				
+				// var prim_index = gon.prim_index;
+				// var prim_id = gon.prim_id;
+				
+				// alert('prim_index = ' + prim_index);
+				// alert('prim_id = ' + prim_id);
+									
+			    // var aimage_count = gon.aimage_count;
+			    // var aimage_prim_count = gon.aimage_prim_count;
+
+				// alert('aimage_count = ' + aimage_count);
+				// alert('aimage_prim_count = ' + aimage_prim_count);
+									
+		
+			});
+		  
+		</script>		
+		
+
+
+
+
+
+
+
+
+

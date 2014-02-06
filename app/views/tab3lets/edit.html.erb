@@ -1,0 +1,450 @@
+<% @title = "Tablets 3 Edit" %>
+
+	<style>
+	
+		#signin-page {
+			/*height: 800px;*/			
+		}
+	
+		#signin-page #signin-page-inner {
+		    width: 60%;
+		    margin: 0 auto;
+		}	
+
+		div .table-signin {
+			display: table;
+			background-color: #BFBD47;
+			width: 700px;
+			border-radius: 20px;
+			border:2px solid #254520;
+			box-shadow: 1px 1px 10px #888888;
+			padding-top: 40px;
+			padding-bottom: 40px;
+			padding-left: 40px;
+		}
+	
+		.input-signin {
+			font-family: Arial, Helvetica, sans-serif;
+			color: #000;			
+			font-size: 16px;
+			width: 300px;
+			height: 24px;
+			border-style:solid;
+			border-radius: 4px;
+			background-color: #fff;
+			border-color: #000;
+			border-width: 1px;
+			padding-left: 6px;
+		}
+	
+		.input-signin:focus {
+			border-color: #3949C4;
+			color: #000;
+			-webkit-box-shadow: 0 0 10px #3949C4;
+			-moz-box-shadow: 0 0 10px #3949C4;
+			box-shadow: 0 0 10px #3949C4;
+		}
+
+		.input-signin:disabled {
+			border-color: #523401;
+			color: #523401;
+			background-color:#CCCBC8;
+		}
+			
+		.input-label-signin {
+			font-family: Arial, Helvetica, sans-serif;
+			color: #000;
+			font-size: 16px;
+			width: 220px;
+			height: 18px;
+		}
+
+		.input-label-signin:disabled {
+			font-family: Arial, Helvetica, sans-serif;
+			color: #523401;
+		}
+			
+		.input-signin-spacer {
+			height: 16px;
+		}
+			
+		div .cell-right-signin {
+			display: table-cell;
+			width: 50%;
+			text-align: left;
+			align: top;		
+		}
+	
+		div .cell-left-signin {
+			display: table-cell;
+			width: 36%;	
+			align: top;
+			text-align: right;		
+			padding-right: 20px;
+		}
+		
+		div .cell-submit-signin {
+			display: table-cell;
+			width: 50%;
+			text-align: left;
+			align: top;		
+			padding-left: 0px;
+		}
+		
+		.signin-btn {
+		  
+		  	display: inline-block;
+		  	text-decoration: none; 
+		  	width: 308px;
+		  	height: 30px;
+		  	background: linear-gradient(#000, #000);
+		  	text-shadow: 1px 1px 1px #0E86B2; 
+		  	border-radius: 6px;
+		}
+	
+		.signin-btn:focus {
+		  background: #CCC; 
+		  color: #5F7A2A;
+		  box-shadow: inset 0 1px 0 rgba(200,200,200,0.2);
+		}
+		
+		.signin-btn:hover { 
+		  box-shadow: inset 0 1px 1px rgba(255,255,255,0.2), 
+		  inset 0 1.5em 1em rgba(255,255,255,0.3);
+		}
+		
+		.signin-btn:active { 
+		  box-shadow: inset 0 1px 1px rgba(255,255,255,0.2), 
+		  inset 0 1.5em 1em rgba(0,0,0,0.3); 
+		}
+		
+	</style>
+
+
+	<div id="signin-page">
+		
+		<header>
+	
+			<%= render 'share/backtotop' %>
+			
+			<div style="height: 40px;"></div>
+			
+		</header>
+		
+		
+		<div id="signin-page-inner">
+			
+			<div class="table-signin">
+				<div class="row">
+					
+					<div class="cell-100percent">
+
+  						<%= form_for(:tab3let, :url => {:action => 'update', :id => @tab3let.id}) do |f| %>
+					
+						<!-- 
+						#  id               :integer          not null, primary key
+						#  created_at       :datetime
+						#  updated_at       :datetime
+						#  name_type    	:string(50)
+						#  salutation   	:string(50)
+						#  name_first       :string(50)
+						#  name_last        :string(50)
+						#  name_title       :string(50)
+						#  institute        :string(100)
+						#  department       :string(100)
+						#  address_1        :string(100)
+						#  address_2        :string(100)
+						#  city             :string(50)
+						#  state 			:string(50)
+						#  zip              :string(50)
+						#  country          :string(100)
+						#  phone            :string(50)
+						#  fax              :string(50)
+						#  phone_direct     :string(50)
+						#  phone_mobile     :string(50)
+						#  email    		:string(100)
+						#  website    		:string(100)  
+						-->
+					
+						<div style="height: 17px;"></div>
+					
+						<div class="row">
+							<div class="cell-left-signin">
+								<%= f.label(:id, 'ID', class: 'input-signin-label') %>							
+							</div>
+							<div class="cell-right-signin">
+								<%= f.text_field :id, :class => "input-signin", :disabled => true %>	
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin">
+								<%= f.label(:created_at, 'Created', class: 'input-signin-label') %>							
+							</div>
+							<div class="cell-right-signin">
+								<%= f.text_field :created_at, :class => "input-signin", :disabled => true %>	
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin">
+								<%= f.label(:updated_at, 'Updated', class: 'input-signin-label') %>							
+							</div>
+							<div class="cell-right-signin">
+								<%= f.text_field :updated_at, :class => "input-signin", :disabled => true %>	
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin">
+								<%= f.label(:col_1, 'Col 1', class: 'input-signin-label') %>							
+							</div>
+							<div class="cell-right-signin">
+								<%= f.text_field :col_1, :class => "input-signin", :disabled => false %>	
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin">
+								<%= f.label(:col_2, 'Col 2', class: 'input-signin-label') %>							
+							</div>
+							<div class="cell-right-signin">
+								<%= f.text_field :col_2, :class => "input-signin", :disabled => false %>	
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin">
+								<%= f.label(:col_3, 'Col 3', class: 'input-signin-label') %>							
+							</div>
+							<div class="cell-right-signin">
+								<%= f.text_field :col_3, :class => "input-signin", :disabled => false %>	
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin">
+								<%= f.label(:col_4, 'Col 4', class: 'input-signin-label') %>							
+							</div>
+							<div class="cell-right-signin">
+								<%= f.text_field :col_4, :class => "input-signin", :disabled => false %>	
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin">
+								<%= f.label(:col_5, 'Col 5', class: 'input-signin-label') %>							
+							</div>
+							<div class="cell-right-signin">
+								<%= f.text_field :col_5, :class => "input-signin", :disabled => false %>	
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin">
+								<%= f.label(:col_6, 'Col 6', class: 'input-signin-label') %>							
+							</div>
+							<div class="cell-right-signin">
+								<%= f.text_field :col_6, :class => "input-signin", :disabled => false %>	
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin">
+								<%= f.label(:col_7, 'Col 7', class: 'input-signin-label') %>							
+							</div>
+							<div class="cell-right-signin">
+								<%= f.text_field :col_7, :class => "input-signin", :disabled => false %>	
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin">
+								<%= f.label(:col_8, 'Col 8', class: 'input-signin-label') %>							
+							</div>
+							<div class="cell-right-signin">
+								<%= f.text_field :col_8, :class => "input-signin", :disabled => false %>	
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin">
+								<%= f.label(:col_9, 'Col 9', class: 'input-signin-label') %>							
+							</div>
+							<div class="cell-right-signin">
+								<%= f.text_field :col_9, :class => "input-signin", :disabled => false %>	
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin">
+								<%= f.label(:col_10, 'Col 10', class: 'input-signin-label') %>							
+							</div>
+							<div class="cell-right-signin">
+								<%= f.text_field :col_10, :class => "input-signin", :disabled => false %>	
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin">
+								<%= f.label(:col_11, 'Col 11', class: 'input-signin-label') %>							
+							</div>
+							<div class="cell-right-signin">
+								<%= f.text_field :col_11, :class => "input-signin", :disabled => false %>	
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin">
+								<%= f.label(:col_12, 'Col 12', class: 'input-signin-label') %>							
+							</div>
+							<div class="cell-right-signin">
+								<%= f.text_field :col_12, :class => "input-signin", :disabled => false %>	
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin">
+								<%= f.label(:col_13, 'Col 13', class: 'input-signin-label') %>							
+							</div>
+							<div class="cell-right-signin">
+								<%= f.text_field :col_13, :class => "input-signin", :disabled => false %>	
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin">
+								<%= f.label(:col_14, 'Col 14', class: 'input-signin-label') %>							
+							</div>
+							<div class="cell-right-signin">
+								<%= f.text_field :col_14, :class => "input-signin", :disabled => false %>	
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin">
+								<%= f.label(:col_15, 'Col 15', class: 'input-signin-label') %>							
+							</div>
+							<div class="cell-right-signin">
+								<%= f.text_field :col_15, :class => "input-signin", :disabled => false %>	
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin">
+								<%= f.label(:col_16, 'Col 16', class: 'input-signin-label') %>							
+							</div>
+							<div class="cell-right-signin">
+								<%= f.text_field :col_16, :class => "input-signin", :disabled => false %>	
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin">
+								<%= f.label(:col_17, 'Col 17', class: 'input-signin-label') %>							
+							</div>
+							<div class="cell-right-signin">
+								<%= f.text_field :col_17, :class => "input-signin", :disabled => false %>	
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin">
+								<%= f.label(:col_18, 'Col 18', class: 'input-signin-label') %>							
+							</div>
+							<div class="cell-right-signin">
+								<%= f.text_field :col_18, :class => "input-signin", :disabled => false %>	
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin">
+								<%= f.label(:col_19, 'Col 19', class: 'input-signin-label') %>							
+							</div>
+							<div class="cell-right-signin">
+								<%= f.text_field :col_19, :class => "input-signin", :disabled => false %>	
+							</div>      	
+						</div>
+
+						<div class="input-signin-spacer"></div>
+
+						<div class="row">
+							<div class="cell-left-signin">
+								<%= f.label(:col_20, 'Col 20', class: 'input-signin-label') %>							
+							</div>
+							<div class="cell-right-signin">
+								<%= f.text_field :col_20, :class => "input-signin", :disabled => false %>	
+							</div>      	
+						</div>
+
+
+						<div class="input-signin-spacer"></div>
+						<div class="input-signin-spacer"></div>
+						      		
+						<div class="row">
+							<div class="cell-left-signin">
+							</div>
+							<div class="cell-right-signin">
+								<div style="height: 30px;"></div>
+								<%= f.submit "Update", class: 'signin-btn' %>
+							</div>      	
+						</div>      		
+											
+						<% end %>
+						
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</div>	
+		
+	</div>
+	
+	<div style="height: 100px;"></div>
+
+
+

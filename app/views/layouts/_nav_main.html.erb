@@ -1,6 +1,6 @@
 <style type="text/css" scoped>
 
-	@font-face {
+	/*@font-face {
 	  	font-family: 'msyhb';
 	  	src: url('/assets/msyhb.eot');	  
 	  	src: url('/assets/msyhb.ttf') format('truetype');
@@ -19,8 +19,14 @@
 	@font-face {
 		font-family: KlavikaExtraLight;
 		src: url('/assets/KlavikaWebDisplayExtraLight.eot');
+	}*/		
+	
+	
+	@import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans);
+	
+	#nav.navNormal #top-black-bar {
+	  font-family: 'Quattrocento Sans', sans-serif;
 	}
-		
 	
 	#nav.navNormal #top-black-bar {
 		width: 100%;
@@ -29,11 +35,18 @@
 		
 		/*height: 55px;*/
 		/*background-color: black;*/		
+
+	  	font-family: 'Quattrocento Sans', sans-serif;
 		
-		color: #ccc;
+		font-size: 11pt;
+		
+		/*color: #ccc;*/
+		color: #fff;
+		
+		
 		/*font: normal 9pt KlavikaLight;*/
 				
-		font: normal 9pt msyhb;
+		/*font: normal 9pt msyhb;*/
 		
 		
 		margin-top: 7px;
@@ -42,11 +55,13 @@
 		-webkit-transform: translate3d(0, 0, 0)
 	}
 	#nav.navNormal #top-black-bar a {
-		color: #ccc
+		color: #fff;
 	}
 	
 	.nav-bar-black {
-		background-color: rgba(0, 0, 0, 0.9);
+		/*background-color: rgba(0, 0, 0, 0.9);*/
+		background-color: rgba( 65, 183, 55, 0.92);
+		/*background-color: #41B737;*/		
 		position: fixed;
 		top: -7px;
 	}
@@ -64,9 +79,9 @@
 		margin: 0 auto
 	}
      
-#nav.navNormal .social {
-	float: right
-}
+	#nav.navNormal .social {
+		float: right
+	}
      
 </style>
 
@@ -96,12 +111,12 @@
 	    
 	    
 	                <div id="s-links" class="social">
-	                	<a href="/index">Home</a> | 
-	                	<a href="/edmatchup">Edmatchup</a> | 
-	                	<a href="/reports">Reports</a> | 
-	                	<a href="/events">Events</a> |
-	                	<a href="/papers">Papers</a> |	                	 
-	                	<a href="/about">About</a> 
+	                	<a href="/">Home</a> | 
+	                	<a href="/Edmatchup">Edmatchup</a> | 
+	                	<a href="/Reports">Reports</a> | 
+	                	<a href="/Events">Events</a> |
+	                	<a href="/Papers">Papers</a> |	                	 
+	                	<a href="/About">About</a> 
 	                </div>	          
 	          
 	            </div>
@@ -114,11 +129,44 @@
             
 				        <div style="display: block;" id="welcome_loggedout">
 				        	
-				        	<a id="signup" style="font-family: msyh; font-size: 13px;" href="/reg_letters/new">Join eNewsletter</a>
+				        	<a id="signup" style="font-family: msyh; font-size: 13px;" href="/LetterRegistration">Join eNewsletter</a>
 				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				        	<a style="font-family: msyh; font-size: 13px;" href="/contacts/new">Contact Us</a>
+				        	<a style="font-family: msyh; font-size: 13px;" href="/ContactUs">Contact Us</a>
 				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				        	<a style="font-family: msyh; font-size: 13px;" href="/reg_communs/new">Join Our Community</a>
+				        	<a style="font-family: msyh; font-size: 13px;" href="/CommunityRegistration">Join Our Community</a>
+				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				        	
+<%= link_to 'Tablet', '/tablets/index' %>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				        	
+				        	<% if session[:username].nil? %>
+				        	<a style="font-family: msyh; font-size: 13px;" href="/Signup">Sign Up</a>
+				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				        	<a style="font-family: msyh; font-size: 13px;" href="/Signin">Sign In</a>
+				        	<% else %>
+				        	<a style="font-family: msyh; font-size: 13px;" href="/Signout">Sign Out</a>
+				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				        	
+        					<% if !( current_page?(controller: 'institutes', action: 'index') or %>
+        					      <% current_page?(controller: 'publishers', action: 'index') or %>
+        					      <% current_page?(controller: 'recruiters', action: 'index') or %>
+        					      <% current_page?(controller: 'students',   action: 'index') or %>
+        					      <% current_page?(controller: 'teachers',   action: 'index') )  %>
+				        	
+				        	<a style="font-family: msyh; font-size: 13px;" href="<%= session[:profile] %>">My Profile</a>
+				        	<% end %>
+				        	
+				        	<% end %>
+				        	
 				        	
 				        </div>
 				        

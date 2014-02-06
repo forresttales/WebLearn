@@ -4,7 +4,9 @@ class StaticPagesController < ApplicationController
   
   def index
     
-    @archives = Archive.friendly.all
+    # @archives = Archive.friendly.all
+
+    @archives = Archive.all
     
     # gon.archives = @archives
     

@@ -1,0 +1,57 @@
+<% provide(:title, 'Create Student Account') %>
+		
+		
+	<header>
+		<div style="height: 200px;background-color: white;">
+			<div style="height: 70px"></div>
+			<h1 align="center">Create Student Account</h1>			
+		</div>      		
+	</header>
+
+	<div class="table-yellow">
+		<div style="padding-top: 80px"></div>
+
+
+	<%= form_for(@student) do |f| %>
+	<!-- = render 'shared/error_messages', object: f.object -->			
+
+		<div class="row">
+			<div class="cell-left-signin">
+				<%= f.label(:name_first, "First Name") %>
+			</div>
+			<div class="cell-right-signin">
+				<%= f.text_field(:name_first, :class => "input-form", :autofocus => true) %>
+			</div>      	
+		</div>      		
+		
+		<div class="row">
+			<div class="cell-left-signin">
+				<%= f.label(:name_last, "Last Name") %>
+			</div>
+			<div class="cell-right-signin">
+				<%= f.text_field(:name_last, :class => "input-form") %>
+			</div>      	
+		</div>
+		
+		<div class="row">
+			<div class="cell-left-signin">
+				<%= f.label(:phone, "Phone") %>
+			</div>
+			<div class="cell-right-signin">
+				<%= f.text_field(:phone, :class => "input-form") %>
+			</div>      	
+		</div>      		
+
+	</div>
+	
+	<div class="table-yellow">
+		<div style="height: 30px;"></div>			
+		<div class="row">
+			<div class="cell-submit-signin">		
+				<%= f.submit "Create Account" %>
+			</div>
+		</div>
+		<div style="height: 140px;"></div>	
+	</div>
+
+		<% end %>

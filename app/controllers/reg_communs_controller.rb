@@ -176,20 +176,20 @@ class RegCommunsController < ApplicationController
 # <option value="6">Greater than 10,000 students</option>
 # <option value="7">Don’t know</option># 
 
-    if reg_commun.institution_size == 1
+    if reg_commun.institution_size == '1'
       reg_commun.institution_size_text = "Less than 2,000 students"
-    elsif reg_commun.institution_size == 2
+    elsif reg_commun.institution_size == '2'
       reg_commun.institution_size_text = "2,000-3,999 students"
-    elsif reg_commun.institution_size == 3
+    elsif reg_commun.institution_size == '3'
       reg_commun.institution_size_text = "4,000-5,999 students"      
-    elsif reg_commun.institution_size == 4
+    elsif reg_commun.institution_size == '4'
       reg_commun.institution_size_text = "6,000-7,999 students"      
-    elsif reg_commun.institution_size == 5
+    elsif reg_commun.institution_size == '5'
       reg_commun.institution_size_text = "8,000-10,000 students"      
-    elsif reg_commun.institution_size == 6
+    elsif reg_commun.institution_size == '6'
       reg_commun.institution_size_text = "Greater than 10,000 students"      
-    elsif reg_commun.institution_size == 7
-      reg_commun.institution_size_text = "Dont't know"                  
+    elsif reg_commun.institution_size == '7'
+      reg_commun.institution_size_text = "Don't know"                  
     end 
 
 
@@ -202,17 +202,17 @@ class RegCommunsController < ApplicationController
 # <option value="5">6,000-8,999 employees</option>
 # <option value="6">9,000+ employees</option>
 
-    if reg_commun.employee_number == 1
+    if reg_commun.employee_number == '1'
       reg_commun.employee_number_text = "Less than 500 employees"
-    elsif reg_commun.employee_number == 2
+    elsif reg_commun.employee_number == '2'
       reg_commun.employee_number_text = "500-999 employees"
-    elsif reg_commun.employee_number == 3
+    elsif reg_commun.employee_number == '3'
       reg_commun.employee_number_text = "1,000-2,999 employees"      
-    elsif reg_commun.employee_number == 4
+    elsif reg_commun.employee_number == '4'
       reg_commun.employee_number_text = "3,000-5,999 employees"      
-    elsif reg_commun.employee_number == 5
+    elsif reg_commun.employee_number == '5'
       reg_commun.employee_number_text = "6,000-8,999 employees"      
-    elsif reg_commun.employee_number == 6
+    elsif reg_commun.employee_number == '6'
       reg_commun.employee_number_text = "9,000+ employees"      
     end 
 
@@ -224,15 +224,15 @@ class RegCommunsController < ApplicationController
 # <option value="4">Budget Officer</option>
 # <option value="5">None of the above</option>
 
-    if reg_commun.characterize_decision == 1
+    if reg_commun.characterize_decision == '1'
       reg_commun.characterize_decision_text = "Influencer"
-    elsif reg_commun.characterize_decision == 2
+    elsif reg_commun.characterize_decision == '2'
       reg_commun.characterize_decision_text = "Recommender"
-    elsif reg_commun.characterize_decision == 3
+    elsif reg_commun.characterize_decision == '3'
       reg_commun.characterize_decision_text = "Decision Maker"      
-    elsif reg_commun.characterize_decision == 4
+    elsif reg_commun.characterize_decision == '4'
       reg_commun.characterize_decision_text = "Budget Officer"      
-    elsif reg_commun.characterize_decision == 5
+    elsif reg_commun.characterize_decision == '5'
       reg_commun.characterize_decision_text = "None of the above"      
     end 
 
@@ -305,10 +305,13 @@ class RegCommunsController < ApplicationController
                                           :level_5_text,
                                           :level_6_text,
                                           :level_7_text,
-                                          :level_other,                                          
+                                          :level_other,          
                                           :institution_size,
+                                          :institution_size_text,
                                           :employee_number,
+                                          :employee_number_text,
                                           :characterize_decision, 
+                                          :characterize_decision_text,
                                           :characterize_area_1,
                                           :characterize_area_2,
                                           :characterize_area_3,

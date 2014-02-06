@@ -876,9 +876,15 @@ a.print-article {
 .line-grow {
 	border-top: #F6861F 5px solid !important
 }
+
 .line-lead {
-	border-top: #009CD8 5px solid !important
+   border-top: 5px solid #41B737;
+   padding-top: 5px;
 }
+/*.line-lead {
+	border-top: #009CD8 5px solid !important
+}*/
+
 .line-innovate {
 	border-top: #9DC786 5px solid !important
 }
