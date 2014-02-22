@@ -14,7 +14,27 @@ module SessionsHelper
     if user.has_account    
       session[:has_account] = user.has_account
       session[:account_type] = user.account_type    
-      session[:profile] = "/" + user.account_type + "s/home"
+      
+      account_type = session[:account_type] 
+      case account_type  
+        when "institute"
+          session[:profile] = "/Institutes"          
+        when "publisher"
+          session[:profile] = "/Publishers"          
+        when "recruiter"
+          # session[:profile] = "/Recruiters"          
+          redirect_to(:controller => 'recruiters', :action => 'index')          
+        when "teacher"
+          # session[:profile] = "/Teachers"          
+          redirect_to(:controller => 'teachers', :action => 'index')          
+        when "student"
+          # session[:profile] = "/Students"                      
+          redirect_to(:controller => 'students', :action => 'index')          
+        else
+          #        
+      end
+      
+      # session[:profile] = "/" + user.account_type + "s/home"
     else
       session[:profile] = "users/show"      
     end

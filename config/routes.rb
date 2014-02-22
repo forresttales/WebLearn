@@ -220,6 +220,35 @@ Weblearn::Application.routes.draw do
 
 
 
+  #get "publisher_images/index"
+  get "publisher_product_logos/show"
+  match '/PublisherLogos/:id', to: 'publisher_product_logos#index', via: 'get'
+  match '/publisher_product_logos/upload', to: 'publisher_product_logos#upload', via: 'post'
+  match '/PublisherNewLogo', to: 'publisher_product_logos#new', via: 'get'
+  match "/publisher_product_logos/:id/edit" => "publisher_product_logos#edit", via: 'post'
+  match "/publisher_product_logos/:id" => "publisher_product_logos#update", via: 'get'
+
+  # resources :publisher_product_logos do
+    # collection { post :set_primary }
+  # end
+
+  resources :publisher_product_logos
+
+
+
+  #get "publisher_images/index"
+  get "publisher_product_metadatatags/show"
+  match '/PublisherMetadata/:id', to: 'publisher_product_metadatatags#index', via: 'get'
+  match '/publisher_product_metadatatags/upload', to: 'publisher_product_metadatatags#upload', via: 'post'
+  match '/PublisherNewMetadata', to: 'publisher_product_metadatatags#new', via: 'get'
+  match "/publisher_product_metadatatags/:id/edit" => "publisher_product_metadatatags#edit", via: 'post'
+  match "/publisher_product_metadatatags/:id" => "publisher_product_metadatatags#update", via: 'post'
+
+  # resources :publisher_product_metadatatags do
+    # collection { post :set_primary }
+  # end
+
+  resources :publisher_product_metadatatags
 
 
 
@@ -339,6 +368,12 @@ Weblearn::Application.routes.draw do
   match '/InstituteAddQueryDetails', to: 'institute_query_results#new', via: 'get'
   match "/institute_query_results/:id/edit" => "institute_query_results#edit", via: 'post'
   match "/institute_query_results/:id" => "institute_query_results#update", via: 'post'
+
+  resources :institute_query_results do
+    member do
+      post :execute
+    end
+  end
 
   resources :institute_query_results
 

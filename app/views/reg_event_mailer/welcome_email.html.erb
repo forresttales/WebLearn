@@ -261,22 +261,6 @@
 	  			</td>
 	  		</tr>  		
 	  		<% end %>
-	  		<% if @reg_event.city_workshop_3 %>
-	  		<tr>
-	  			<td>
-	    			<span class="workshop-1">Workshop:</span>
-	  			</td>
-	  			<td>
-	    			<span class="workshop-2"><%= @reg_event.city_workshop_3_text %></span>
-	  			</td>
-	  			<td class="workshop-3">
-	  				<span>April 15, 2014</span>
-	  			</td>
-	  			<td>
-	    			<span class="workshop-4"><%= @reg_event.city_workshop_3_session_text %></span>
-	  			</td>
-	  		</tr>  		
-	  		<% end %>
 	  		<% if @reg_event.city_workshop_4 %>
 	  		<tr>
 	  			<td>
@@ -290,6 +274,22 @@
 	  			</td>
 	  			<td>
 	    			<span class="workshop-4"><%= @reg_event.city_workshop_4_session_text %></span>
+	  			</td>
+	  		</tr>  		
+	  		<% end %>
+	  		<% if @reg_event.city_workshop_3 %>
+	  		<tr>
+	  			<td>
+	    			<span class="workshop-1">Workshop:</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-2"><%= @reg_event.city_workshop_3_text %></span>
+	  			</td>
+	  			<td class="workshop-3">
+	  				<span>April 15, 2014</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-4"><%= @reg_event.city_workshop_3_session_text %></span>
 	  			</td>
 	  		</tr>  		
 	  		<% end %>

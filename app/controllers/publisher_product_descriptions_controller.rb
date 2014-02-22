@@ -15,6 +15,20 @@ class PublisherProductDescriptionsController < ApplicationController
     @publisher_product_has_description = publisher_product.has_description
     @publisher_product_id = @@publisher_product_id
     
+    @has_product_logo = publisher_product.has_product_logo
+    @has_product_metadata = publisher_product.has_product_metadata
+    
+    if @has_product_logo
+      gon.image_name = publisher_product.product_logo
+    else
+      gon.image_name = ''
+    end
+
+    @product_metadata = ''
+    if @has_product_metadata
+      @product_metadata = publisher_product.product_metadata
+    end
+    
   end
   
   
@@ -71,6 +85,7 @@ class PublisherProductDescriptionsController < ApplicationController
         publisher_product_description.type_content = ""
     end
 
+
     subject_category_index = publisher_product_description.subject_category_index
     case subject_category_index.to_s  
       when "1"
@@ -90,6 +105,72 @@ class PublisherProductDescriptionsController < ApplicationController
       else
         publisher_product_description.subject_category = ""
     end
+
+
+
+    age_appropriate_index = publisher_product_description.age_appropriate_index
+    case age_appropriate_index.to_s  
+      when "1"
+        publisher_product_description.age_appropriate = "2 to 5"
+      when "2"
+        publisher_product_description.age_appropriate = "5 to 10"
+      when "3"
+        publisher_product_description.age_appropriate = "10 to 15"
+      when "4"
+        publisher_product_description.age_appropriate = "15 to 18"
+      else
+        publisher_product_description.age_appropriate = ""
+    end
+
+
+    grade_index = publisher_product_description.grade_index
+    case grade_index.to_s  
+      when "1"
+        publisher_product_description.grade = "1"
+      when "2"
+        publisher_product_description.grade = "2"
+      when "3"
+        publisher_product_description.grade = "3"
+      when "4"
+        publisher_product_description.grade = "4"
+      else
+        publisher_product_description.grade = ""
+    end
+
+
+    platform_index = publisher_product_description.platform_index
+    case platform_index.to_s  
+      when "1"
+        publisher_product_description.platform = "Apple iOS"
+      when "2"
+        publisher_product_description.platform = "Kindle Android"
+      when "3"
+        publisher_product_description.platform = "Google Android"
+      when "4"
+        publisher_product_description.platform = "Linux"
+      when "5"
+        publisher_product_description.platform = "Microsoft"
+      when "6"
+        publisher_product_description.platform = "HTML"
+      when "7"
+        publisher_product_description.platform = "Nook"
+      when "8"
+        publisher_product_description.platform = "Other"
+      else
+        publisher_product_description.platform = ""
+    end
+
+
+    pricing_model_index = publisher_product_description.pricing_model_index
+    case pricing_model_index.to_s  
+      when "1"
+        publisher_product_description.pricing_model = "Free"
+      when "2"
+        publisher_product_description.pricing_model = "Premium"
+      else
+        publisher_product_description.pricing_model = ""
+    end
+
 
     if publisher_product.update_columns( :has_description => true)      
       if publisher_product_description.save
@@ -187,6 +268,32 @@ class PublisherProductDescriptionsController < ApplicationController
   end
   
   
+  def upload
+    
+    render text: 'upload'
+    
+    # uploaded_io = params[:upload_file]
+    # render text: params[:upload_file]
+
+    # File.open(Rails.root.join('public', 'images_publisher_product_logo', uploaded_io.original_filename), 'wb') do |file|
+      # file.write(uploaded_io.read)
+    # end
+
+    # publisher_product = PublisherProduct.find( @@publisher_product_id )
+    # publisher_product.product_logo = uploaded_io.original_filename
+    # publisher_product.has_product_logo = true
+    
+    # h_update = Hash.new
+    # h_update = { :product_logo => '', :has_product_logo => false }
+    # h_update['product_logo'] = uploaded_io.original_filename
+    # h_update['has_product_logo'] = true
+    
+    # if publisher_product.update_columns( h_update )
+      # redirect_to '/PublisherProductDescription?id=' + @@publisher_product_id.to_s
+    # else
+      # render text: 'Product Logo save failed'
+    # end      
+  end
   
   
   private
@@ -201,7 +308,23 @@ class PublisherProductDescriptionsController < ApplicationController
                                                             :subject_category_index,                                    
                                                             :type_content,
                                                             :subject_category,
-                                                            :word_description
+                                                            :word_description,
+                                                            :name_product,
+                                                            :core_supplemental, 
+                                                            :source_url, 
+                                                            :topic,
+                                                            :lesson_plan_subject, 
+                                                            :word_description, 
+                                                            :age_appropriate, 
+                                                            :age_appropriate_index, 
+                                                            :grade, 
+                                                            :grade_index, 
+                                                            :metadata,  
+                                                            :platform, 
+                                                            :platform_index,
+                                                            :versions, 
+                                                            :pricing_model, 
+                                                            :pricing_model_index 
                                                            )
 
     end

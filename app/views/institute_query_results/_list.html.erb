@@ -26,13 +26,19 @@
 				       <col class="member-table"></col>
 			       </colgroup>
 
+                  <!-- 
+                  description
+                  price
+      			  institute_query_id
+      			  publisher_product_description_id  
+      			  -->
+      			  
 				  <tr align="left">
 				    <th class="member-table" id="th_view" field="view" style="width: 50px"><div class="header-shift"><h4></h4></div></th>
 				    <th class="member-table" id="th_delete" field="delete" style="width: 50px;"><div class="header-shift"><h4></h4></div></th>
 				    <th class="member-table" id="th_id" field="id" style="width: 50px"><div id="id" class="header-shift"><h4><%= sortable "id", "ID" %></div></th>
-				    <th class="member-table" id="th_created_at" field="created_at" style="width: 100px"><div id="created_at" class="header-shift"><h4><%= sortable "created_at", "Created" %></h4></div></th>
-				    <th class="member-table" id="th_updated_at" field="updated_at" style="width: 100px"><div id="updated_at" class="header-shift"><h4><%= sortable "updated_at", "Updated" %></h4></div></th>
-				    <th class="member-table" id="th_name_result" field="name_result" style="width: 100px"><div id="name_result" class="header-shift"><h4><%= sortable "name_result", "Result" %></h4></div></th>
+				    <th class="member-table" id="th_description" field="description" style="width: 50px"><div id="description" class="header-shift"><h4><%= sortable "description", "Description" %></div></th>
+				    <th class="member-table" id="th_price" field="price" style="width: 50px"><div id="price" class="header-shift"><h4><%= sortable "price", "Price" %></div></th>
 				  </tr>
 				<% @institute_query_results.each do |institute_query_result| %>
 				  <tr align="left" class="tr-events">
@@ -49,9 +55,8 @@
 					</td>
 				  	
 				    <td><h5 class="member-table"><%= institute_query_result.id %></h5></td>
-				    <td><h5 class="member-table"><%= institute_query_result.created_at %></h5></td>
-				    <td><h5 class="member-table"><%= institute_query_result.updated_at %></h5></td>
-				    <td><h5 class="member-table"><%= institute_query_result.name_result %></h5></td>
+				    <td><h5 class="member-table"><%= institute_query_result.description %></h5></td>
+				    <td><h5 class="member-table"><%= institute_query_result.price %></h5></td>
 				  </tr>
 				<% end %>
 
@@ -232,10 +237,10 @@
 					header = "#th_id"	  
 				  break;
 				case 4:
-					header = "#th_name_product"	  
+					header = "#th_description"	  
 				  break;				  
 				case 5:
-					header = "#th_has_description"	  
+					header = "#th_price"	  
 				  break;
 
 				default:

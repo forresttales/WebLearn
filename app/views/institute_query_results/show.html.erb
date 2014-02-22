@@ -1,50 +1,80 @@
-<% provide(:title, 'Publishers Profile') %>
+<% provide(:title, 'Institute Query Result') %>
 
+	<script type="text/javascript" src="../scripts/jquery.js"></script>	
 
 	<header>
 		<%= render 'share/backtotop' %>
 	</header>
 
 	<div class="container">
-		<div style="display: table;">
-			<div =style="display: table-row;">
+		<div class="table-profile">
+			<div class="row-profile">
 				
+				<div class="col-left">
+					<%= render 'share/dir_institutes_left'%>
+				</div>
+				
+				<div class="col-midd">
+					<div class="line-space-20"></div>
+
 					<div style="text-align: left;">
-						<span class="normal pad-left-20">Publisher Product: </span>
+						<span class="normal pad-left-20">Product Details:</span>
 					</div>
 
 					<div class="line-space-20"></div>
 
-<% if false %>				
-				<div style="display: table-cell; width: 600px;" class="boxtemp-green">
-					<span class="normal">My Profile:</span>
-					<br />
-					<br />					
-					<span class="normal">ID: <%= @publisher.id %></span>
-					<br />
-					<span class="normal">Created: <%= @publisher.created_at %></span>
-					<br />
-					<span class="normal">Updated: <%= @publisher.updated_at %></span>						
-					<br />
-					<span class="normal">Phone: <%= @publisher.phone %></span>
-					<br />
-					<br />
-		 			 <!-- button_to "Edit", {:action => 'edit', :id => @publisher.id } --> 
-		 			
-		 			<%= link_to('Edit', {:action => 'edit', :id => @publisher.id }, :class => 'links' ) %> 
-<% end %>
-		 			 
+					<div id="render"></div>		
+
+					<div class="line-space-20"></div>
+
+				 	<table>
+				 		<tr>
+				 			<td>
+				 				<span class="small pad-left-20">Description:</span></div>
+				 			</td>
+				 			<td>
+				 				<span class="small pad-left-20"><%= @publisher_product_description.description %></span></div>
+				 			</td>
+				 		</tr>
+				 		<tr><td style="height: 10px;"></td><td></td></tr>					 		
+				 		<tr>
+				 			<td>
+				 				<span class="small pad-left-20">Price:</span></div>
+				 			</td>
+				 			<td>
+				 				<span class="small pad-left-20"><%= @publisher_product_description.price %></span></div>
+				 			</td>
+				 		</tr>
+				 	</table>
 				</div>
+				
+				<div class="col-right">
+					<%= render 'share/dir_institutes_right' %>
+				</div>								
 			</div>
 		</div>
 	</div>
-					
+
 	<script>
-
+	  
 		$(window).load( function() {
-		//$(document).ready(function(){
-
-		});
+		//$(document).ready(function () {				
 	
-	</script>
+				var cnt = 1;
+				var cells = "";
+				
+				// alert(gon.image_name);
+	
+				if (gon.image_name !== '') {								
+					cells += "</td><td style='width: 10px;'></td><td><img src='../images_publisher_product_logo/" + gon.image_name + "' alt='image'>";
+					var tbl = "<table><tr>" + cells + "</tr></table>";
+					$( "#render" ).html( tbl);
+				}
+				else {
+					var tbl = "<table><tr><td><span class='normal-red pad-left-20'>No photo</span><td></tr></table>";
+					$( "#render" ).html( tbl);				
+				}
+		});
+	  
+	</script>		
 

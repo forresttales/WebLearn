@@ -17,11 +17,26 @@ class InstituteQueriesController < ApplicationController
   
   def execute
     
-    render text: params[:id]
+    institute_query = InstituteQuery.find(params[:id])
+    
+    # type_content
+    # subject_category
+    # word_description
+    
+    type_content = institute_query.type_content
+    
+    result_type_contents = PublisherProductDescription.where("type_content LIKE ?", type_content)  
+     
+    # render text: result_type_contents.count.to_s
+    render text: result_type_contents[0].id.to_s
+
+
+
     
     # publisher_product_descriptions id=15
+
+
     
-    result = ""
     
   end
   

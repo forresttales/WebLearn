@@ -107,7 +107,11 @@ class PublisherProductsController < ApplicationController
     def publisher_product_params
       params.require(:publisher_product).permit(      
                                                 :publisher_id, 
-                                                :name_product
+                                                :name_product,
+                                                :product_logo,
+                                                :has_product_logo,
+                                                :product_metadata,
+                                                :has_product_metadata                                                
                                               )
                                         
     end

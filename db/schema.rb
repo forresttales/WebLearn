@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140205100109) do
+ActiveRecord::Schema.define(version: 20140214171658) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -191,9 +191,12 @@ ActiveRecord::Schema.define(version: 20140205100109) do
   create_table "institute_query_results", force: true do |t|
     t.integer  "institute_id"
     t.integer  "institute_query_id"
-    t.string   "name_result",        limit: 100
+    t.string   "name_result",                      limit: 100
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "publisher_product_description_id"
+    t.string   "description",                      limit: 200
+    t.decimal  "price",                                        precision: 8, scale: 2
   end
 
   add_index "institute_query_results", ["institute_id"], name: "index_institute_query_results_on_institute_id", using: :btree
@@ -289,20 +292,62 @@ ActiveRecord::Schema.define(version: 20140205100109) do
     t.datetime "updated_at"
     t.string   "type_content",           limit: 50
     t.string   "subject_category",       limit: 50
-    t.string   "word_description",       limit: 1000
     t.integer  "type_content_index"
     t.integer  "subject_category_index"
+    t.string   "name_product",           limit: 100
+    t.string   "core_supplemental",      limit: 50
+    t.string   "source_url",             limit: 300
+    t.string   "topic",                  limit: 200
+    t.string   "lesson_plan_subject",    limit: 300
+    t.text     "word_description"
+    t.string   "age_appropriate",        limit: 50
+    t.integer  "age_appropriate_index"
+    t.string   "grade",                  limit: 50
+    t.integer  "grade_index"
+    t.text     "metadata"
+    t.string   "platform",               limit: 50
+    t.integer  "platform_index"
+    t.string   "versions",               limit: 300
+    t.string   "pricing_model",          limit: 50
+    t.integer  "pricing_model_index"
   end
 
   add_index "publisher_product_descriptions", ["publisher_id"], name: "index_publisher_product_descriptions_on_publisher_id", using: :btree
   add_index "publisher_product_descriptions", ["publisher_product_id"], name: "index_publisher_product_descriptions_on_publisher_product_id", using: :btree
 
-  create_table "publisher_products", force: true do |t|
+  create_table "publisher_product_logos", force: true do |t|
     t.integer  "publisher_id"
-    t.string   "name_product",    limit: 100
+    t.integer  "publisher_product_id"
+    t.string   "image_name",           limit: 100
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "has_description",             default: false
+  end
+
+  add_index "publisher_product_logos", ["publisher_id"], name: "index_publisher_product_logos_on_publisher_id", using: :btree
+  add_index "publisher_product_logos", ["publisher_product_id"], name: "index_publisher_product_logos_on_publisher_product_id", using: :btree
+
+  create_table "publisher_product_metadatatags", force: true do |t|
+    t.integer  "publisher_id"
+    t.integer  "publisher_product_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name_metadata",        limit: 100
+    t.text     "text_metadata"
+  end
+
+  add_index "publisher_product_metadatatags", ["publisher_id"], name: "index_publisher_product_metadatatags_on_publisher_id", using: :btree
+  add_index "publisher_product_metadatatags", ["publisher_product_id"], name: "index_publisher_product_metadatatags_on_publisher_product_id", using: :btree
+
+  create_table "publisher_products", force: true do |t|
+    t.integer  "publisher_id"
+    t.string   "name_product",         limit: 100
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "has_description",                  default: false
+    t.string   "product_logo",         limit: 100
+    t.boolean  "has_product_logo",                 default: false
+    t.string   "product_metadata",     limit: 100
+    t.boolean  "has_product_metadata",             default: false
   end
 
   add_index "publisher_products", ["publisher_id"], name: "index_publisher_products_on_publisher_id", using: :btree
@@ -420,6 +465,14 @@ ActiveRecord::Schema.define(version: 20140205100109) do
     t.string   "institution_size_text",      limit: 100
     t.string   "employee_number_text",       limit: 100
     t.string   "characterize_decision_text", limit: 100
+  end
+
+  create_table "reg_event_itins", force: true do |t|
+    t.string   "city_state", limit: 50
+    t.date     "date_event"
+    t.text     "address"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "reg_events", force: true do |t|

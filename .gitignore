@@ -22,7 +22,7 @@
 /public/assets
 /public/journalscripts
 /public/pdfs
-/config/locales/database.yml
+/config/database.yml
 /config/environments/production.rb
 
 

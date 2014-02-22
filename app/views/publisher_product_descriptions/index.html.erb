@@ -9,6 +9,9 @@
 		.form-display-col2 {
 			width: 400px;
 		}
+		.form-display-separator {
+			height: 10px;
+		}
 		
 	</style>
 
@@ -48,8 +51,34 @@
 
 					<div class="line-space-20"></div>
 
+					<% if @has_product_logo %>
+						<div class="pad-left-20"><a id="render" href="/PublisherLogos/<%= @publisher_product_id %>"></a></div>		
+					<% else %>
+						<div class="pad-left-20">
+							<span class="normal">
+								<%= link_to 'Upload Logo Image', '/PublisherLogos/' + @publisher_product_id, :class => 'links' %>
+							</span>
+						</div>					
+					<% end %>
+
+					<div class="line-space-20"></div>
+
+					<% if @has_product_metadata %>
+						<div class="pad-left-20"><a id="render" class="links" href="/PublisherMetadata/<%= @publisher_product_id %>"><%= @product_metadata %></a></div>		
+					<% else %>
+						<div class="pad-left-20">
+							<span class="normal">
+								<%= link_to 'Upload Product Metadata', '/PublisherMetadata/' + @publisher_product_id, :class => 'links' %>
+							</span>
+						</div>					
+					<% end %>
 			
-					 <% if @publisher_product_descriptions.any? %>
+					<div class="line-space-20"></div>
+			
+					<% if @publisher_product_descriptions.any? %>
+					 
+		                  <!-- 
+		                  -->					 		
 					 
 					 	<table>
 					 		<tr>
@@ -60,7 +89,7 @@
 					 				<span class="small pad-left-20"><%= @publisher_product_descriptions[0].created_at.to_s(:long) %></span></div>
 					 			</td>
 					 		</tr>
-					 		<tr><td style="height: 10px;"></td><td></td></tr>
+					 		<tr><td class="form-display-separator"></td><td></td></tr>
 					 		<tr>
 					 			<td>
 					 				<span class="small pad-left-20">Updated:</span></div>
@@ -69,26 +98,7 @@
 					 				<span class="small pad-left-20"><%= @publisher_product_descriptions[0].updated_at.to_s(:long) %></span></div>
 					 			</td>
 					 		</tr>
-					 		<tr><td style="height: 10px;"></td><td></td></tr>
-					 		<tr>
-					 			<td>
-					 				<span class="small pad-left-20">Description:</span></div>
-					 			</td>
-					 			<td>
-					 				<span class="small pad-left-20"><%= @publisher_product_descriptions[0].description %></span></div>
-					 			</td>
-					 		</tr>
-					 		<tr><td style="height: 10px;"></td><td></td></tr>					 		
-					 		<tr>
-					 			<td>
-					 				<span class="small pad-left-20">Price:</span></div>
-					 			</td>
-					 			<td>
-					 				<span class="small pad-left-20"><%= @publisher_product_descriptions[0].price %></span></div>
-					 			</td>
-					 		</tr>
-
-					 		<tr><td style="height: 10px;"></td><td></td></tr>
+					 		<tr><td class="form-display-separator"></td><td></td></tr>
 					 		<tr>
 					 			<td>
 					 				<span class="small pad-left-20">Type of Content or Curriculum:</span></div>
@@ -97,7 +107,7 @@
 					 				<span class="small pad-left-20"><%= @publisher_product_descriptions[0].type_content %></span></div>
 					 			</td>
 					 		</tr>
-					 		<tr><td style="height: 10px;"></td><td></td></tr>
+					 		<tr><td class="form-display-separator"></td><td></td></tr>
 					 		<tr>
 					 			<td>
 					 				<span class="small pad-left-20">Subject Category:</span></div>
@@ -106,13 +116,112 @@
 					 				<span class="small pad-left-20"><%= @publisher_product_descriptions[0].subject_category %></span></div>
 					 			</td>
 					 		</tr>
-					 		<tr><td style="height: 10px;"></td><td></td></tr>
+					 		<tr><td class="form-display-separator"></td><td></td></tr>
 					 		<tr>
 					 			<td>
-					 				<span class="small pad-left-20">Key Word Description:</span></div>
+					 				<span class="small pad-left-20">30 Word Description:</span></div>
 					 			</td>
 					 			<td>
 					 				<span class="small pad-left-20"><%= @publisher_product_descriptions[0].word_description %></span></div>
+					 			</td>
+					 		</tr>
+					 		<tr><td class="form-display-separator"></td><td></td></tr>					 		
+					 		<tr>
+					 			<td>
+					 				<span class="small pad-left-20">Product Name:</span></div>
+					 			</td>
+					 			<td>
+					 				<span class="small pad-left-20"><%= @publisher_product_descriptions[0].name_product %></span></div>
+					 			</td>
+					 		</tr>
+					 		<tr><td class="form-display-separator"></td><td></td></tr>					 		
+					 		<tr>
+					 			<td>
+					 				<span class="small pad-left-20">Core or Supplemental:</span></div>
+					 			</td>
+					 			<td>
+					 				<span class="small pad-left-20"><%= @publisher_product_descriptions[0].core_supplemental %></span></div>
+					 			</td>
+					 		</tr>
+					 		<tr><td class="form-display-separator"></td><td></td></tr>					 		
+					 		<tr>
+					 			<td>
+					 				<span class="small pad-left-20">Source URL:</span></div>
+					 			</td>
+					 			<td>
+					 				<span class="small pad-left-20"><%= @publisher_product_descriptions[0].source_url %></span></div>
+					 			</td>
+					 		</tr>
+					 		<tr><td class="form-display-separator"></td><td></td></tr>					 		
+					 		<tr>
+					 			<td>
+					 				<span class="small pad-left-20">Topic:</span></div>
+					 			</td>
+					 			<td>
+					 				<span class="small pad-left-20"><%= @publisher_product_descriptions[0].topic %></span></div>
+					 			</td>
+					 		</tr>
+					 		<tr><td class="form-display-separator"></td><td></td></tr>					 		
+					 		<tr>
+					 			<td>
+					 				<span class="small pad-left-20">Lesson Plan Subject:</span></div>
+					 			</td>
+					 			<td>
+					 				<span class="small pad-left-20"><%= @publisher_product_descriptions[0].lesson_plan_subject %></span></div>
+					 			</td>
+					 		</tr>
+					 		<tr><td class="form-display-separator"></td><td></td></tr>					 		
+					 		<tr>
+					 			<td>
+					 				<span class="small pad-left-20">Age Appropriate:</span></div>
+					 			</td>
+					 			<td>
+					 				<span class="small pad-left-20"><%= @publisher_product_descriptions[0].age_appropriate %></span></div>
+					 			</td>
+					 		</tr>
+					 		<tr><td class="form-display-separator"></td><td></td></tr>					 		
+					 		<tr>
+					 			<td>
+					 				<span class="small pad-left-20">Grade:</span></div>
+					 			</td>
+					 			<td>
+					 				<span class="small pad-left-20"><%= @publisher_product_descriptions[0].grade %></span></div>
+					 			</td>
+					 		</tr>
+					 		<tr><td class="form-display-separator"></td><td></td></tr>					 		
+					 		<tr>
+					 			<td>
+					 				<span class="small pad-left-20">Metadata:</span></div>
+					 			</td>
+					 			<td>
+					 				<span class="small pad-left-20"><%= @publisher_product_descriptions[0].metadata %></span></div>
+					 			</td>
+					 		</tr>
+					 		<tr><td class="form-display-separator"></td><td></td></tr>					 		
+					 		<tr>
+					 			<td>
+					 				<span class="small pad-left-20">Platform:</span></div>
+					 			</td>
+					 			<td>
+					 				<span class="small pad-left-20"><%= @publisher_product_descriptions[0].platform %></span></div>
+					 			</td>
+					 		</tr>
+					 		<tr><td class="form-display-separator"></td><td></td></tr>					 		
+					 		<tr>
+					 			<td>
+					 				<span class="small pad-left-20">Versions:</span></div>
+					 			</td>
+					 			<td>
+					 				<span class="small pad-left-20"><%= @publisher_product_descriptions[0].versions %></span></div>
+					 			</td>
+					 		</tr>
+					 		<tr><td class="form-display-separator"></td><td></td></tr>					 		
+					 		<tr>
+					 			<td>
+					 				<span class="small pad-left-20">Pricing Model:</span></div>
+					 			</td>
+					 			<td>
+					 				<span class="small pad-left-20"><%= @publisher_product_descriptions[0].pricing_model %></span></div>
 					 			</td>
 					 		</tr>
 					 	</table>
@@ -136,7 +245,7 @@
 						</div>
 				
 					<% end %>
-			
+
 				</div>
 				
 				<div class="col-right">
@@ -148,8 +257,27 @@
 
 	<script>
 	  
-		//$(window).load( function() {
+		$(window).load( function() {
+		//$(document).ready(function () {				
 	
-		//});
+				var cnt = 1;
+				var cells = "";
+				
+				// alert(gon.image_name);
+	
+				if (gon.image_name !== '') {								
+					//cells += "</td><td style='width: 10px;'></td><td><img src='../images_publisher_product_logo/" + gon.image_name + "' alt='image'>";
+					cells += "<img src='../images_publisher_product_logo/" + gon.image_name + "' alt='image'>";
+
+					// var tbl = "<table><tr>" + cells + "</tr></table>";
+					var tbl = cells;
+
+					$( "#render" ).html( tbl);
+				}
+				else {
+					var tbl = "<table><tr><td><span class='normal-red pad-left-20'>No photo</span><td></tr></table>";
+					$( "#render" ).html( tbl);				
+				}
+		});
 	  
 	</script>		

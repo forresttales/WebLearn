@@ -2,12 +2,16 @@
 #
 # Table name: publisher_products
 #
-#  id              :integer          not null, primary key
-#  publisher_id    :integer
-#  name_product    :string(100)
-#  created_at      :datetime
-#  updated_at      :datetime
-#  has_description :boolean          default(FALSE)
+#  id                   :integer          not null, primary key
+#  publisher_id         :integer
+#  name_product         :string(100)
+#  created_at           :datetime
+#  updated_at           :datetime
+#  has_description      :boolean          default(FALSE)
+#  product_logo         :string(100)
+#  has_product_logo     :boolean          default(FALSE)
+#  product_metadata     :string(100)
+#  has_product_metadata :boolean          default(FALSE)
 #
 
 class PublisherProduct < ActiveRecord::Base
@@ -16,12 +20,18 @@ class PublisherProduct < ActiveRecord::Base
                   :publisher_id,
                   :name_product,
                   :has_description,
+                  :product_logo,
+                  :has_product_logo,
+                  :product_metadata,
+                  :has_product_metadata,
                   :created_at,
                   :updated_at 
   
   
   belongs_to :publisher
   has_one :publisher_product_description
+  has_one :publisher_product_logo
+  has_one :publisher_product_metadatatag
 
 
 

@@ -19,6 +19,8 @@ class PublisherProfile < ActiveRecord::Base
                   :created_at,
                   :updated_at 
   
+                  # pricing_model_index   dd pricing_model
+
   
   belongs_to :publisher
 

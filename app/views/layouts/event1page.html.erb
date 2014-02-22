@@ -9,12 +9,13 @@
   		
 		<link rel="icon" type="image/png" href="/assets/logo-lc-round-fav.png" />
   		
-   		 <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-   		 
-  		 <!-- include_gon  -->    	
+   		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     	
 	  	<%= csrf_meta_tags %>
 	  	<%= render 'layouts/shim' %>  
+
+
+  		<%= include_gon %>    	
 
     </head>
 	<body>
