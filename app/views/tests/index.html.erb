@@ -1,45 +1,171 @@
+	
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!-- <link rel="stylesheet" href="http://jquery.malsup.com/cycle2/css.css"> -->
+<!-- <link rel="stylesheet" href="http://jquery.malsup.com/cycle2/site.css"> -->
+<link rel="stylesheet" href="http://jquery.malsup.com/cycle2/demo/demo-slideshow.css">
+
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script> -->
+
+<script src="/assets/jquery.min.js"></script>
+<script src="http://malsup.github.io/jquery.cycle2.js"></script>
+<script src="http://malsup.github.io/jquery.cycle2.tile.js"></script>
+
+
+
+
+       <style type="text/css">
+            .social-button-container {
+                background-color: red;
+
+                /** 
+                 * This is a nice CSS trick that allows you to clear an element
+                 * without having to add extra elements to your HTML. This helps
+                 * seperate content from design, which should always be an architectural
+                 * goal.
+                 */
+                overflow: hidden; 
+            }
+
+            .social-button {
+                float: left;
+                width: 100px;
+                height: 20px;
+            }
+        </style>
+
+
+</head>
+<body>
+
+<div id="main">
+
+<!-- <script src="Cycle2%20Tile_files/jquery.js"></script> -->
+
+<style>
+.cycle-slideshow img { margin: 0; padding: 0 }
+span.title { padding: 0 20px; font-size: 16px }
+</style>
+
+
+
+<div class="cycle-slideshow" 
+    data-cycle-timeout="0"
+    data-cycle-next="#next2"
+    data-cycle-prev="#prev2"
+    data-cycle-fx="tileBlind"
+    >
+    <img src="http://jquery.malsup.com/cycle2/images/p1.jpg">
+    <img src="http://jquery.malsup.com/cycle2/images/p2.jpg">
+    <img src="http://jquery.malsup.com/cycle2/images/p3.jpg">
+    <img src="http://jquery.malsup.com/cycle2/images/p4.jpg">
+</div>
+
+<div class="center">
+    <a href="#" id="prev2">&lt;&lt; Prev </a>
+    <span class="title">tileBlind</span>
+    <a href="#" id="next2"> Next &gt;&gt; </a>
+</div>    
     
     
-    <div id="pageContent">
- 
-        <h1>ASP.NET Bookstore</h1>
- 
-        <div id="bookContainer"></div>
- 
-    </div>    
-    
-    <script id="bookTemplate" type="text/x-jQuery-tmpl">
-        <div>
-            <img src="../repository/${picture}" alt="" />
-            <h2>${title}</h2>
-            price: ${formatPrice(price)}
-        </div>
-    </script>
- 
-    <!-- <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.4.js"></script> -->    
-    
-    
-    
-    <script type="text/javascript" src="../scripts/jquery.tmpl.js"></script>
+<!-- <img class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 100; opacity: 1; display: none;" src="Cycle2Tile_files/p1.jpg">
+<img class="cycle-slide cycle-slide-active" style="position: absolute; top: 0px; left: 0px; z-index: 99; display: block; opacity: 1;" src="Cycle2%20Tile_files/p2.jpg">
+<img class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 97; display: none; opacity: 1;" src="Cycle2%20Tile_files/p3.jpg">
+<img class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 96; display: none; opacity: 1;" src="Cycle2%20Tile_files/p4.jpg">
+</div>
+<div class="center">
+    <a href="#" id="prev1">&lt;&lt; Prev </a>
+    <span class="title">tileSlide</span>
+    <a href="#" id="next1"> Next &gt;&gt; </a>
+</div>
+
+<div class="cycle-slideshow" style="margin-top: 40px; overflow: hidden;" data-cycle-timeout="0" data-cycle-next="#next2" data-cycle-prev="#prev2" data-cycle-fx="tileBlind"><img class="cycle-slide cycle-sentinel" style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1; visibility: hidden; display: block;" src="Cycle2%20Tile_files/p1.jpg">
     
     
     
     
- 
-    <script type="text/javascript">
-        // Create an array of books
-        var books = [
-            { title: "ASP.NET 4 Unleashed", price: 37.79, picture: "article-icon-1-w-blond.png" },
-            { title: "ASP.NET MVC Unleashed", price: 44.99, picture: "article-icon-1-w-blond.png" },
-            { title: "ASP.NET Kick Start", price: 4.00, picture: "article-icon-1-w-blond.png" },
-            { title: "ASP.NET MVC Unleashed iPhone", price: 44.99, picture: "article-icon-1-w-blond.png" },
-        ];
- 
-        // Render the books using the template
-        $("#bookTemplate").tmpl(books).appendTo("#bookContainer");
- 
-        function formatPrice(price) {
-            return "$" + price.toFixed(2);
-        }
- 
-    </script>
+<img class="cycle-slide cycle-slide-active" style="position: absolute; top: 0px; left: 0px; z-index: 99; opacity: 1; display: block;" src="Cycle2%20Tile_files/p1.jpg"><img class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 97; display: none; opacity: 1;" src="Cycle2%20Tile_files/p2.jpg"><img class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 96; display: none; opacity: 1;" src="Cycle2%20Tile_files/p3.jpg"><img class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 100; display: none; opacity: 1;" src="Cycle2%20Tile_files/p4.jpg"></div>
+<div class="center">
+    <a href="#" id="prev2">&lt;&lt; Prev </a>
+    <span class="title">tileBlind</span>
+    <a href="#" id="next2"> Next &gt;&gt; </a>
+</div> -->
+
+
+<div style ="height: 200px;"></div>
+
+
+           <div class="social-button-container">
+                <!-- <div class="social-button">
+                    <div class="fb-like" data-href="#" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+                </div> -->
+
+                <div class="social-button">
+					<a 	id="btn-twitter"
+						href="https://twitter.com/share" 
+						class="twitter-share-button" 
+						data-lang="en"
+						data-url=""
+						data-text=""
+						data-count="none"
+						>Tweet
+					</a>
+				</div>                
+
+                <div class="social-button">
+					<script type="IN/Share" data-counter="right">
+					</script>
+				</div>                
+                
+                <!-- <div class="social-button">
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="#" data-text="Social Buttons!">Tweet</a>
+                </div>
+                <div class="social-button">
+                    <div class="g-plusone" data-size="medium" data-width="100" data-href="#"></div>
+                </div> -->
+
+                <!-- 
+                    I would normally have to put something like <div class="clear"></div> here
+                    if I was not using overflow: hidden on the .social-button-container. See
+                    the note in the CSS.
+                -->
+            </div>
+
+
+			<script>
+			
+				!function(d,s,id) {
+					var js,fjs=d.getElementsByTagName(s)[0];
+					if(!d.getElementById(id)) {
+						js=d.createElement(s);
+						js.id=id;
+						js.src="https://platform.twitter.com/widgets.js";
+						fjs.parentNode.insertBefore(js,fjs);
+					}
+				}(document,"script","twitter-wjs");
+		
+				var datatext = document.getElementById("desc").innerHTML + "\n";
+				var dataurl = document.URL;				
+				document.getElementById("btn-twitter").setAttribute("data-text", datatext);
+				document.getElementById("btn-twitter").setAttribute("data-url", dataurl);
+					 		
+			</script>			 						
+        
+			<script src="//platform.linkedin.com/in.js" type="text/javascript">
+			 lang: en_US
+			</script>	
+        
+        
+
+
+</div> <!-- #main -->
+
+
+
+
+</body>
+

@@ -1,0 +1,52 @@
+
+
+
+<% @eventnews.each do |eventnew| %>
+
+
+
+
+
+		<% if eventnew.id == 7 %>
+
+		    <script id="articleTemplate_7" type="text/x-jQuery-tmpl">
+					
+				<%= link_to eventnew, :class => 'k-link-a' do %>
+				
+					<div class="k-inner-cell">
+						<div class="k-b-container">
+							<div class="k-img-cell-single">
+								<img src="../event_news_images/SCpic1.jpg" class="k-img" height="180" onerror="this.src='../altgraphics/error-260-180.png'">
+							</div>
+							<div class="katcolorbox_posit">
+			            		<div class="katbox-article katbox thoughts_catbox">
+			            			<span>THOUGHTS</span>
+			            		</div>
+			        		</div>																								
+						</div>
+						<div class="k-b-headline">
+							Facing Down the Learning Content Disruption 
+							<span class="kbyline">by&nbsp<span class="k-b-link">David Kafitz</span></span>											
+						</div>
+					</div>
+					
+				<% end %>
+						        
+	    	</script>
+
+			<script type="text/javascript">
+				id = "7"
+				var container = "#" + id;
+				var ref		  = "#articleTemplate_"  + id;
+			    $(ref).tmpl().appendTo(container);
+			</script>
+		
+		<% end %>
+
+
+
+
+
+<% end %>
+
+

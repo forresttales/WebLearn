@@ -1,0 +1,126 @@
+<% provide(:title, 'Test Optouts') %>
+
+
+	<script type="text/javascript" src="/assets/entrepeneurs_jquery-1.js"></script>
+
+    <style>
+    	
+    	.main {
+    		font-family:Arial, Helvetica, sans-serif;
+    		font-size: 20px;
+    		color: black;
+    		min-height: 700px;
+    	}
+    	
+    	.links {
+    		font-family:Arial, Helvetica, sans-serif;
+    		font-size: 16px;
+    		color: brown;    		
+    	}
+    	
+    	h1 {
+    		font-size: 22px;
+    	}
+    	p {
+    		font-size: 16px;
+    	}
+    	
+		.input-upload {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 12px;
+			width: 340px;
+			height: 22px;
+			border-style:solid;
+			background-color: #fff;
+			border-color: #000;
+			border-width: 1px;
+			padding-left: 6px;
+			color: #888;
+		}
+    	
+    	.submit-upload {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 12px;
+    		height: 22px;
+    	}
+    	
+    </style>
+
+
+	<header>
+		<%= render 'share/backtotop' %>
+	</header>
+
+	<div class="container">
+		<div class="table-profile">
+			<div class="row-profile">
+				
+				<div class="col-left">
+				</div>
+				
+				<div class="col-midd">
+
+					<div class="line-space-20"></div>
+					<div class="line-space-20"></div>
+					<div class="line-space-20"></div>
+
+					<div style="text-align: left;">
+						<span class="normal pad-left-20">Test Optouts</span>
+					</div>
+
+					<div class="line-space-20"></div>
+
+					<div style="text-align: left;">
+						<span class="normal pad-left-20"><%= @test_optout.col_3 %></span>
+					</div>
+
+					<div class="table-form" style="width: 600px;">
+						<div class="row">
+							<div class="cell-100percent" tabindex="1">
+								
+						    	<%= form_for @test_optout do |f| %>	
+
+								<%= f.hidden_field :col_id, :value => @test_optout.col_id %>
+
+								<% if false %>
+								<div class="input-form-spacer"></div>
+								<div class="row">
+									<div class="cell-left-form">
+										<%= f.label(:name_product, 'Product Name', class: 'input-label-form') %>							
+									</div>
+									<div class="cell-right-form">
+										<%= f.text_field :name_product, :class => 'input-form', :tabindex => '2', :autofocus => true %>	
+									</div>
+									<div class="cell-error" id="state_name_product"><p id="error_name_product"></p></div>      					   							 								      	
+								</div>
+								<% end %>
+		
+								<div class="input-form-spacer"></div>
+								<div class="input-form-spacer"></div>
+		
+								<div class="row">
+									<div style="width: 600px; text-align: center;">
+									<%= f.submit 'Submit', class: 'form-btn', :tabindex => '16' %>
+									</div>      					   							 	
+								</div>      		
+													
+								<% end %>
+								
+							</div>
+							
+						</div>
+						
+					</div>
+			
+			
+			
+				</div>
+				
+				<div class="col-right">
+				</div>												
+			</div>
+		</div>
+	</div>
+
+
+					

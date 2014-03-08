@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140214171658) do
+ActiveRecord::Schema.define(version: 20140306175731) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -106,6 +106,24 @@ ActiveRecord::Schema.define(version: 20140214171658) do
   end
 
   create_table "edmatchups", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "eventnews", force: true do |t|
+    t.integer  "article_id"
+    t.string   "name_url",     limit: 100
+    t.string   "name_file",    limit: 50
+    t.string   "name_author",  limit: 50
+    t.string   "name_admin",   limit: 50
+    t.text     "key_words"
+    t.date     "date_article"
+    t.string   "article_type", limit: 20
+    t.string   "description",  limit: 200
+    t.string   "linkimg",      limit: 50
+    t.string   "linkimg_url",  limit: 100
+    t.string   "linktitle",    limit: 200
+    t.string   "slug",         limit: 200
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -243,6 +261,502 @@ ActiveRecord::Schema.define(version: 20140214171658) do
     t.string   "name",       limit: 100
     t.string   "email",      limit: 100
     t.string   "company",    limit: 100
+  end
+
+  create_table "mtab1lets", force: true do |t|
+    t.string   "col_1",      limit: 300
+    t.string   "col_2",      limit: 300
+    t.string   "col_3",      limit: 300
+    t.string   "col_4",      limit: 300
+    t.string   "col_5",      limit: 300
+    t.string   "col_6",      limit: 300
+    t.string   "col_7",      limit: 300
+    t.string   "col_8",      limit: 300
+    t.string   "col_9",      limit: 300
+    t.string   "col_10",     limit: 300
+    t.string   "col_11",     limit: 300
+    t.string   "col_12",     limit: 300
+    t.string   "col_13",     limit: 300
+    t.string   "col_14",     limit: 300
+    t.string   "col_15",     limit: 300
+    t.string   "col_16",     limit: 300
+    t.string   "col_17",     limit: 300
+    t.string   "col_18",     limit: 300
+    t.string   "col_19",     limit: 300
+    t.string   "col_20",     limit: 300
+    t.string   "col_21",     limit: 300
+    t.string   "col_22",     limit: 300
+    t.string   "col_23",     limit: 300
+    t.string   "col_24",     limit: 300
+    t.string   "col_25",     limit: 300
+    t.string   "col_26",     limit: 300
+    t.string   "col_27",     limit: 300
+    t.string   "col_28",     limit: 300
+    t.string   "col_29",     limit: 300
+    t.string   "col_30",     limit: 300
+    t.string   "col_31",     limit: 300
+    t.string   "col_32",     limit: 300
+    t.string   "col_33",     limit: 300
+    t.string   "col_34",     limit: 300
+    t.string   "col_35",     limit: 300
+    t.string   "col_36",     limit: 300
+    t.string   "col_37",     limit: 300
+    t.string   "col_38",     limit: 300
+    t.string   "col_39",     limit: 300
+    t.string   "col_40",     limit: 300
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "col_41",                 default: 0
+    t.integer  "col_42",                 default: 0
+    t.integer  "col_43",                 default: 0
+    t.integer  "col_44",                 default: 0
+    t.integer  "col_45",                 default: 0
+    t.integer  "col_46",                 default: 0
+    t.integer  "col_47",                 default: 0
+    t.integer  "col_48",                 default: 0
+    t.integer  "col_49",                 default: 0
+    t.integer  "col_50",                 default: 0
+  end
+
+  create_table "mtab2lets", force: true do |t|
+    t.string   "col_1",      limit: 300
+    t.string   "col_2",      limit: 300
+    t.string   "col_3",      limit: 300
+    t.string   "col_4",      limit: 300
+    t.string   "col_5",      limit: 300
+    t.string   "col_6",      limit: 300
+    t.string   "col_7",      limit: 300
+    t.string   "col_8",      limit: 300
+    t.string   "col_9",      limit: 300
+    t.string   "col_10",     limit: 300
+    t.string   "col_11",     limit: 300
+    t.string   "col_12",     limit: 300
+    t.string   "col_13",     limit: 300
+    t.string   "col_14",     limit: 300
+    t.string   "col_15",     limit: 300
+    t.string   "col_16",     limit: 300
+    t.string   "col_17",     limit: 300
+    t.string   "col_18",     limit: 300
+    t.string   "col_19",     limit: 300
+    t.string   "col_20",     limit: 300
+    t.string   "col_21",     limit: 300
+    t.string   "col_22",     limit: 300
+    t.string   "col_23",     limit: 300
+    t.string   "col_24",     limit: 300
+    t.string   "col_25",     limit: 300
+    t.string   "col_26",     limit: 300
+    t.string   "col_27",     limit: 300
+    t.string   "col_28",     limit: 300
+    t.string   "col_29",     limit: 300
+    t.string   "col_30",     limit: 300
+    t.string   "col_31",     limit: 300
+    t.string   "col_32",     limit: 300
+    t.string   "col_33",     limit: 300
+    t.string   "col_34",     limit: 300
+    t.string   "col_35",     limit: 300
+    t.string   "col_36",     limit: 300
+    t.string   "col_37",     limit: 300
+    t.string   "col_38",     limit: 300
+    t.string   "col_39",     limit: 300
+    t.string   "col_40",     limit: 300
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "col_41",                 default: 0
+    t.integer  "col_42",                 default: 0
+    t.integer  "col_43",                 default: 0
+    t.integer  "col_44",                 default: 0
+    t.integer  "col_45",                 default: 0
+    t.integer  "col_46",                 default: 0
+    t.integer  "col_47",                 default: 0
+    t.integer  "col_48",                 default: 0
+    t.integer  "col_49",                 default: 0
+    t.integer  "col_50",                 default: 0
+  end
+
+  create_table "mtab3lets", force: true do |t|
+    t.string   "col_1",      limit: 300
+    t.string   "col_2",      limit: 300
+    t.string   "col_3",      limit: 300
+    t.string   "col_4",      limit: 300
+    t.string   "col_5",      limit: 300
+    t.string   "col_6",      limit: 300
+    t.string   "col_7",      limit: 300
+    t.string   "col_8",      limit: 300
+    t.string   "col_9",      limit: 300
+    t.string   "col_10",     limit: 300
+    t.string   "col_11",     limit: 300
+    t.string   "col_12",     limit: 300
+    t.string   "col_13",     limit: 300
+    t.string   "col_14",     limit: 300
+    t.string   "col_15",     limit: 300
+    t.string   "col_16",     limit: 300
+    t.string   "col_17",     limit: 300
+    t.string   "col_18",     limit: 300
+    t.string   "col_19",     limit: 300
+    t.string   "col_20",     limit: 300
+    t.string   "col_21",     limit: 300
+    t.string   "col_22",     limit: 300
+    t.string   "col_23",     limit: 300
+    t.string   "col_24",     limit: 300
+    t.string   "col_25",     limit: 300
+    t.string   "col_26",     limit: 300
+    t.string   "col_27",     limit: 300
+    t.string   "col_28",     limit: 300
+    t.string   "col_29",     limit: 300
+    t.string   "col_30",     limit: 300
+    t.string   "col_31",     limit: 300
+    t.string   "col_32",     limit: 300
+    t.string   "col_33",     limit: 300
+    t.string   "col_34",     limit: 300
+    t.string   "col_35",     limit: 300
+    t.string   "col_36",     limit: 300
+    t.string   "col_37",     limit: 300
+    t.string   "col_38",     limit: 300
+    t.string   "col_39",     limit: 300
+    t.string   "col_40",     limit: 300
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "col_41",                 default: 0
+    t.integer  "col_42",                 default: 0
+    t.integer  "col_43",                 default: 0
+    t.integer  "col_44",                 default: 0
+    t.integer  "col_45",                 default: 0
+    t.integer  "col_46",                 default: 0
+    t.integer  "col_47",                 default: 0
+    t.integer  "col_48",                 default: 0
+    t.integer  "col_49",                 default: 0
+    t.integer  "col_50",                 default: 0
+  end
+
+  create_table "mtab4lets", force: true do |t|
+    t.string   "col_1",      limit: 300
+    t.string   "col_2",      limit: 300
+    t.string   "col_3",      limit: 300
+    t.string   "col_4",      limit: 300
+    t.string   "col_5",      limit: 300
+    t.string   "col_6",      limit: 300
+    t.string   "col_7",      limit: 300
+    t.string   "col_8",      limit: 300
+    t.string   "col_9",      limit: 300
+    t.string   "col_10",     limit: 300
+    t.string   "col_11",     limit: 300
+    t.string   "col_12",     limit: 300
+    t.string   "col_13",     limit: 300
+    t.string   "col_14",     limit: 300
+    t.string   "col_15",     limit: 300
+    t.string   "col_16",     limit: 300
+    t.string   "col_17",     limit: 300
+    t.string   "col_18",     limit: 300
+    t.string   "col_19",     limit: 300
+    t.string   "col_20",     limit: 300
+    t.string   "col_21",     limit: 300
+    t.string   "col_22",     limit: 300
+    t.string   "col_23",     limit: 300
+    t.string   "col_24",     limit: 300
+    t.string   "col_25",     limit: 300
+    t.string   "col_26",     limit: 300
+    t.string   "col_27",     limit: 300
+    t.string   "col_28",     limit: 300
+    t.string   "col_29",     limit: 300
+    t.string   "col_30",     limit: 300
+    t.string   "col_31",     limit: 300
+    t.string   "col_32",     limit: 300
+    t.string   "col_33",     limit: 300
+    t.string   "col_34",     limit: 300
+    t.string   "col_35",     limit: 300
+    t.string   "col_36",     limit: 300
+    t.string   "col_37",     limit: 300
+    t.string   "col_38",     limit: 300
+    t.string   "col_39",     limit: 300
+    t.string   "col_40",     limit: 300
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "col_41",                 default: 0
+    t.integer  "col_42",                 default: 0
+    t.integer  "col_43",                 default: 0
+    t.integer  "col_44",                 default: 0
+    t.integer  "col_45",                 default: 0
+    t.integer  "col_46",                 default: 0
+    t.integer  "col_47",                 default: 0
+    t.integer  "col_48",                 default: 0
+    t.integer  "col_49",                 default: 0
+    t.integer  "col_50",                 default: 0
+  end
+
+  create_table "mtab5lets", force: true do |t|
+    t.string   "col_1",      limit: 300
+    t.string   "col_2",      limit: 300
+    t.string   "col_3",      limit: 300
+    t.string   "col_4",      limit: 300
+    t.string   "col_5",      limit: 300
+    t.string   "col_6",      limit: 300
+    t.string   "col_7",      limit: 300
+    t.string   "col_8",      limit: 300
+    t.string   "col_9",      limit: 300
+    t.string   "col_10",     limit: 300
+    t.string   "col_11",     limit: 300
+    t.string   "col_12",     limit: 300
+    t.string   "col_13",     limit: 300
+    t.string   "col_14",     limit: 300
+    t.string   "col_15",     limit: 300
+    t.string   "col_16",     limit: 300
+    t.string   "col_17",     limit: 300
+    t.string   "col_18",     limit: 300
+    t.string   "col_19",     limit: 300
+    t.string   "col_20",     limit: 300
+    t.string   "col_21",     limit: 300
+    t.string   "col_22",     limit: 300
+    t.string   "col_23",     limit: 300
+    t.string   "col_24",     limit: 300
+    t.string   "col_25",     limit: 300
+    t.string   "col_26",     limit: 300
+    t.string   "col_27",     limit: 300
+    t.string   "col_28",     limit: 300
+    t.string   "col_29",     limit: 300
+    t.string   "col_30",     limit: 300
+    t.string   "col_31",     limit: 300
+    t.string   "col_32",     limit: 300
+    t.string   "col_33",     limit: 300
+    t.string   "col_34",     limit: 300
+    t.string   "col_35",     limit: 300
+    t.string   "col_36",     limit: 300
+    t.string   "col_37",     limit: 300
+    t.string   "col_38",     limit: 300
+    t.string   "col_39",     limit: 300
+    t.string   "col_40",     limit: 300
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "col_41",                 default: 0
+    t.integer  "col_42",                 default: 0
+    t.integer  "col_43",                 default: 0
+    t.integer  "col_44",                 default: 0
+    t.integer  "col_45",                 default: 0
+    t.integer  "col_46",                 default: 0
+    t.integer  "col_47",                 default: 0
+    t.integer  "col_48",                 default: 0
+    t.integer  "col_49",                 default: 0
+    t.integer  "col_50",                 default: 0
+  end
+
+  create_table "mtab6lets", force: true do |t|
+    t.string   "col_1",      limit: 300
+    t.string   "col_2",      limit: 300
+    t.string   "col_3",      limit: 300
+    t.string   "col_4",      limit: 300
+    t.string   "col_5",      limit: 300
+    t.string   "col_6",      limit: 300
+    t.string   "col_7",      limit: 300
+    t.string   "col_8",      limit: 300
+    t.string   "col_9",      limit: 300
+    t.string   "col_10",     limit: 300
+    t.string   "col_11",     limit: 300
+    t.string   "col_12",     limit: 300
+    t.string   "col_13",     limit: 300
+    t.string   "col_14",     limit: 300
+    t.string   "col_15",     limit: 300
+    t.string   "col_16",     limit: 300
+    t.string   "col_17",     limit: 300
+    t.string   "col_18",     limit: 300
+    t.string   "col_19",     limit: 300
+    t.string   "col_20",     limit: 300
+    t.string   "col_21",     limit: 300
+    t.string   "col_22",     limit: 300
+    t.string   "col_23",     limit: 300
+    t.string   "col_24",     limit: 300
+    t.string   "col_25",     limit: 300
+    t.string   "col_26",     limit: 300
+    t.string   "col_27",     limit: 300
+    t.string   "col_28",     limit: 300
+    t.string   "col_29",     limit: 300
+    t.string   "col_30",     limit: 300
+    t.string   "col_31",     limit: 300
+    t.string   "col_32",     limit: 300
+    t.string   "col_33",     limit: 300
+    t.string   "col_34",     limit: 300
+    t.string   "col_35",     limit: 300
+    t.string   "col_36",     limit: 300
+    t.string   "col_37",     limit: 300
+    t.string   "col_38",     limit: 300
+    t.string   "col_39",     limit: 300
+    t.string   "col_40",     limit: 300
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "col_41",                 default: 0
+    t.integer  "col_42",                 default: 0
+    t.integer  "col_43",                 default: 0
+    t.integer  "col_44",                 default: 0
+    t.integer  "col_45",                 default: 0
+    t.integer  "col_46",                 default: 0
+    t.integer  "col_47",                 default: 0
+    t.integer  "col_48",                 default: 0
+    t.integer  "col_49",                 default: 0
+    t.integer  "col_50",                 default: 0
+  end
+
+  create_table "mtab7lets", force: true do |t|
+    t.string   "col_1",      limit: 300
+    t.string   "col_2",      limit: 300
+    t.string   "col_3",      limit: 300
+    t.string   "col_4",      limit: 300
+    t.string   "col_5",      limit: 300
+    t.string   "col_6",      limit: 300
+    t.string   "col_7",      limit: 300
+    t.string   "col_8",      limit: 300
+    t.string   "col_9",      limit: 300
+    t.string   "col_10",     limit: 300
+    t.string   "col_11",     limit: 300
+    t.string   "col_12",     limit: 300
+    t.string   "col_13",     limit: 300
+    t.string   "col_14",     limit: 300
+    t.string   "col_15",     limit: 300
+    t.string   "col_16",     limit: 300
+    t.string   "col_17",     limit: 300
+    t.string   "col_18",     limit: 300
+    t.string   "col_19",     limit: 300
+    t.string   "col_20",     limit: 300
+    t.string   "col_21",     limit: 300
+    t.string   "col_22",     limit: 300
+    t.string   "col_23",     limit: 300
+    t.string   "col_24",     limit: 300
+    t.string   "col_25",     limit: 300
+    t.string   "col_26",     limit: 300
+    t.string   "col_27",     limit: 300
+    t.string   "col_28",     limit: 300
+    t.string   "col_29",     limit: 300
+    t.string   "col_30",     limit: 300
+    t.string   "col_31",     limit: 300
+    t.string   "col_32",     limit: 300
+    t.string   "col_33",     limit: 300
+    t.string   "col_34",     limit: 300
+    t.string   "col_35",     limit: 300
+    t.string   "col_36",     limit: 300
+    t.string   "col_37",     limit: 300
+    t.string   "col_38",     limit: 300
+    t.string   "col_39",     limit: 300
+    t.string   "col_40",     limit: 300
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "col_41",                 default: 0
+    t.integer  "col_42",                 default: 0
+    t.integer  "col_43",                 default: 0
+    t.integer  "col_44",                 default: 0
+    t.integer  "col_45",                 default: 0
+    t.integer  "col_46",                 default: 0
+    t.integer  "col_47",                 default: 0
+    t.integer  "col_48",                 default: 0
+    t.integer  "col_49",                 default: 0
+    t.integer  "col_50",                 default: 0
+  end
+
+  create_table "mtab8lets", force: true do |t|
+    t.string   "col_1",      limit: 300
+    t.string   "col_2",      limit: 300
+    t.string   "col_3",      limit: 300
+    t.string   "col_4",      limit: 300
+    t.string   "col_5",      limit: 300
+    t.string   "col_6",      limit: 300
+    t.string   "col_7",      limit: 300
+    t.string   "col_8",      limit: 300
+    t.string   "col_9",      limit: 300
+    t.string   "col_10",     limit: 300
+    t.string   "col_11",     limit: 300
+    t.string   "col_12",     limit: 300
+    t.string   "col_13",     limit: 300
+    t.string   "col_14",     limit: 300
+    t.string   "col_15",     limit: 300
+    t.string   "col_16",     limit: 300
+    t.string   "col_17",     limit: 300
+    t.string   "col_18",     limit: 300
+    t.string   "col_19",     limit: 300
+    t.string   "col_20",     limit: 300
+    t.string   "col_21",     limit: 300
+    t.string   "col_22",     limit: 300
+    t.string   "col_23",     limit: 300
+    t.string   "col_24",     limit: 300
+    t.string   "col_25",     limit: 300
+    t.string   "col_26",     limit: 300
+    t.string   "col_27",     limit: 300
+    t.string   "col_28",     limit: 300
+    t.string   "col_29",     limit: 300
+    t.string   "col_30",     limit: 300
+    t.string   "col_31",     limit: 300
+    t.string   "col_32",     limit: 300
+    t.string   "col_33",     limit: 300
+    t.string   "col_34",     limit: 300
+    t.string   "col_35",     limit: 300
+    t.string   "col_36",     limit: 300
+    t.string   "col_37",     limit: 300
+    t.string   "col_38",     limit: 300
+    t.string   "col_39",     limit: 300
+    t.string   "col_40",     limit: 300
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "col_41",                 default: 0
+    t.integer  "col_42",                 default: 1
+    t.integer  "col_43",                 default: 1
+    t.integer  "col_44",                 default: 1
+    t.integer  "col_45",                 default: 1
+    t.integer  "col_46",                 default: 1
+    t.integer  "col_47",                 default: 1
+    t.integer  "col_48",                 default: 0
+    t.integer  "col_49",                 default: 0
+    t.integer  "col_50",                 default: 0
+  end
+
+  create_table "mtablets", force: true do |t|
+    t.integer  "col_id"
+    t.string   "col_1",      limit: 300
+    t.string   "col_2",      limit: 300
+    t.string   "col_3",      limit: 300
+    t.string   "col_4",      limit: 300
+    t.string   "col_5",      limit: 300
+    t.string   "col_6",      limit: 300
+    t.string   "col_7",      limit: 300
+    t.string   "col_8",      limit: 300
+    t.string   "col_9",      limit: 300
+    t.string   "col_10",     limit: 300
+    t.string   "col_11",     limit: 300
+    t.string   "col_12",     limit: 300
+    t.string   "col_13",     limit: 300
+    t.string   "col_14",     limit: 300
+    t.string   "col_15",     limit: 300
+    t.string   "col_16",     limit: 300
+    t.string   "col_17",     limit: 300
+    t.string   "col_18",     limit: 300
+    t.string   "col_19",     limit: 300
+    t.string   "col_20",     limit: 300
+    t.string   "col_21",     limit: 300
+    t.string   "col_22",     limit: 300
+    t.string   "col_23",     limit: 300
+    t.string   "col_24",     limit: 300
+    t.string   "col_25",     limit: 300
+    t.string   "col_26",     limit: 300
+    t.string   "col_27",     limit: 300
+    t.string   "col_28",     limit: 300
+    t.string   "col_29",     limit: 300
+    t.string   "col_30",     limit: 300
+    t.string   "col_31",     limit: 300
+    t.string   "col_32",     limit: 300
+    t.string   "col_33",     limit: 300
+    t.string   "col_34",     limit: 300
+    t.string   "col_35",     limit: 300
+    t.string   "col_36",     limit: 300
+    t.string   "col_37",     limit: 300
+    t.string   "col_38",     limit: 300
+    t.string   "col_39",     limit: 300
+    t.string   "col_40",     limit: 300
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "col_41",                 default: 0
+    t.integer  "col_42",                 default: 0
+    t.integer  "col_43",                 default: 0
+    t.integer  "col_44",                 default: 0
+    t.integer  "col_45",                 default: 0
+    t.integer  "col_46",                 default: 0
+    t.integer  "col_47",                 default: 0
+    t.integer  "col_48",                 default: 0
+    t.integer  "col_49",                 default: 0
+    t.integer  "col_50",                 default: 0
   end
 
   create_table "pages", force: true do |t|
@@ -468,15 +982,17 @@ ActiveRecord::Schema.define(version: 20140214171658) do
   end
 
   create_table "reg_event_itins", force: true do |t|
-    t.string   "city_state", limit: 50
+    t.string   "city_state",      limit: 50
     t.date     "date_event"
     t.text     "address"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "date_event_text", limit: 50
+    t.integer  "order_display",              default: 0
   end
 
   create_table "reg_events", force: true do |t|
-    t.string   "name_first",                    limit: 50
+    t.string   "name_first",                    limit: 100
     t.string   "name_last",                     limit: 50
     t.string   "name_title",                    limit: 50
     t.string   "type_affiliation",              limit: 50
@@ -776,6 +1292,12 @@ ActiveRecord::Schema.define(version: 20140214171658) do
     t.string   "col_20",     limit: 300
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "col_21",     limit: 300
+    t.string   "col_22",     limit: 300
+    t.string   "col_23",     limit: 300
+    t.string   "col_24",     limit: 300
+    t.string   "col_25",     limit: 300
+    t.integer  "col_id"
   end
 
   create_table "teachers", force: true do |t|
@@ -785,6 +1307,62 @@ ActiveRecord::Schema.define(version: 20140214171658) do
     t.string   "name_last",  limit: 50
     t.string   "phone",      limit: 50
     t.integer  "user_id"
+  end
+
+  create_table "test_optouts", force: true do |t|
+    t.string   "col_1",      limit: 300
+    t.string   "col_2",      limit: 300
+    t.string   "col_3",      limit: 300
+    t.string   "col_4",      limit: 300
+    t.string   "col_5",      limit: 300
+    t.string   "col_6",      limit: 300
+    t.string   "col_7",      limit: 300
+    t.string   "col_8",      limit: 300
+    t.string   "col_9",      limit: 300
+    t.string   "col_10",     limit: 300
+    t.string   "col_11",     limit: 300
+    t.string   "col_12",     limit: 300
+    t.string   "col_13",     limit: 300
+    t.string   "col_14",     limit: 300
+    t.string   "col_15",     limit: 300
+    t.string   "col_16",     limit: 300
+    t.string   "col_17",     limit: 300
+    t.string   "col_18",     limit: 300
+    t.string   "col_19",     limit: 300
+    t.string   "col_20",     limit: 300
+    t.string   "col_21",     limit: 300
+    t.string   "col_22",     limit: 300
+    t.string   "col_23",     limit: 300
+    t.string   "col_24",     limit: 300
+    t.string   "col_25",     limit: 300
+    t.string   "col_26",     limit: 300
+    t.string   "col_27",     limit: 300
+    t.string   "col_28",     limit: 300
+    t.string   "col_29",     limit: 300
+    t.string   "col_30",     limit: 300
+    t.string   "col_31",     limit: 300
+    t.string   "col_32",     limit: 300
+    t.string   "col_33",     limit: 300
+    t.string   "col_34",     limit: 300
+    t.string   "col_35",     limit: 300
+    t.string   "col_36",     limit: 300
+    t.string   "col_37",     limit: 300
+    t.string   "col_38",     limit: 300
+    t.string   "col_39",     limit: 300
+    t.string   "col_40",     limit: 300
+    t.integer  "col_41",                 default: 0
+    t.integer  "col_42",                 default: 0
+    t.integer  "col_43",                 default: 0
+    t.integer  "col_44",                 default: 0
+    t.integer  "col_45",                 default: 0
+    t.integer  "col_46",                 default: 0
+    t.integer  "col_47",                 default: 0
+    t.integer  "col_48",                 default: 0
+    t.integer  "col_49",                 default: 0
+    t.integer  "col_50",                 default: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "col_id",     limit: 50
   end
 
   create_table "uploads", force: true do |t|

@@ -1,7 +1,8 @@
 
 	div .table-form {
 		display: table;
-		background-color: #C1D4D9;
+		/*background-color: #C1D4D9;*/
+		background-color: #D1D1D1;
 		/*width: 100%;*/
 		border-radius: 0px;
 		/*border:2px solid #254520;*/
@@ -15,7 +16,7 @@
 		font-family: Arial, Helvetica, sans-serif;
 		color: #404040;			
 		font-size: 14px;
-		width: 400px;
+		width: 320px;
 		height: 22px;
 		border-style:solid;
 		border-radius: 4px;
@@ -23,14 +24,22 @@
 		border-color: #000;
 		border-width: 1px;
 		padding-left: 6px;
+		margin-right: 6px;
 	}
 
 	.input-form:focus {
-		border-color: #3949C4;
+		
+		border-color: #478A3E;
+		color: #000;
+		-webkit-box-shadow: 0 0 10px #88E87B;
+		-moz-box-shadow: 0 0 10px #88E87B;
+		box-shadow: 0 0 10px #88E87B;
+		
+		/*border-color: #3949C4;
 		color: #000;
 		-webkit-box-shadow: 0 0 10px #3949C4;
 		-moz-box-shadow: 0 0 10px #3949C4;
-		box-shadow: 0 0 10px #3949C4;
+		box-shadow: 0 0 10px #3949C4;*/
 	}
 
 	.input-form-short {
@@ -71,11 +80,18 @@
 	}		
 		
 	.input-form-word-description-1:focus {		
-		border-color: #3949C4;
+		
+		border-color: #478A3E;
+		color: #000;
+		-webkit-box-shadow: 0 0 10px #88E87B;
+		-moz-box-shadow: 0 0 10px #88E87B;
+		box-shadow: 0 0 10px #88E87B;
+		
+		/*border-color: #3949C4;
 		color: #000;
 		-webkit-box-shadow: 0 0 10px #3949C4;
 		-moz-box-shadow: 0 0 10px #3949C4;
-		box-shadow: 0 0 10px #3949C4;
+		box-shadow: 0 0 10px #3949C4;*/
 	}
 
 
@@ -135,7 +151,8 @@
 		width: 220px;
 		align: top;
 		text-align: right;		
-		padding-right: 10px;
+		padding-right: 4px;
+		padding-left: 28px;		
 	}
 	
 	div .cell-submit-form {
@@ -177,7 +194,7 @@
 		font-family: Arial, Helvetica, sans-serif;
 		color: #404040;			
 		font-size: 14px;
-		width: 408px;
+		width: 328px;
 		height: 22px;
 		border-style:solid;
 		border-radius: 4px;
@@ -187,6 +204,20 @@
 		padding-left: 6px;
 	}
 	
+	.form-select:focus {
+		
+		border-color: #478A3E;
+		color: #000;
+		-webkit-box-shadow: 0 0 10px #88E87B;
+		-moz-box-shadow: 0 0 10px #88E87B;
+		box-shadow: 0 0 10px #88E87B;
+		
+		/*border-color: #3949C4;
+		color: #000;
+		-webkit-box-shadow: 0 0 10px #3949C4;
+		-moz-box-shadow: 0 0 10px #3949C4;
+		box-shadow: 0 0 10px #3949C4;*/
+	}
 	
 	
 	

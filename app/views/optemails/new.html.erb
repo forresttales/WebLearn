@@ -1,0 +1,687 @@
+<% @title = "Email Preferences" %>
+
+	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> -->
+	<script type="text/javascript" src="/assets/entrepeneurs_jquery-1.js"></script>
+	<script src="/assets/jquery.validate.js"></script>
+	
+	<style>
+		
+		.margin-right-input {
+			margin-left: 30px;
+		}
+		.select-label {
+			font-family:Arial, Helvetica, sans-serif;
+			font-size: 16px;
+			color: #000;    		
+		}
+		.text-green {
+			/*color: #22572A;*/
+			color: green;
+		}
+		
+		div .error_label {
+		    display: none;
+			font-family: msyh;
+			font-size: 12px;
+			color: #851717;		    
+		}
+	
+		div .errors {
+			font-family: msyh;
+			font-size: 16px;
+			/*color: #851717;*/
+			color: #FC7777;		
+		}
+	
+		.input-label {
+			font-family: msyh;
+			font-size: 16px;
+			width: 220px;
+			height: 18px;
+		}
+	
+		.success {
+			color: #ACDDE3;		
+		}		
+		
+		.error {
+			color: #FC7777;
+		}
+	
+		.required {
+			color: #000;		
+		}
+		
+		.error-label {
+			/*color: #851717;*/		
+			color: #FC7777;
+		}
+	
+		.required-label {
+			color: #000;		
+		}
+	
+		
+	</style>
+
+	<header>
+		<%= render 'share/backtotop' %>
+	</header>
+
+	<div class="container">
+		<div class="table-profile">
+			<div class="row-profile">
+				
+				<div class="col-left">
+				</div>
+				
+				<div class="col-midd">
+
+					<div class="table-form" style="width: 800px; background-color: #D1D1D1;">
+						<div class="row">
+							<div class="cell-100percent" tabindex="1">
+								
+								<div class="errors"><p></p></div>
+								
+								 <!-- 
+								 :description
+								 :price 
+								 -->
+								 								
+								<!-- = render 'shared/error_messages', object: f.object -->			
+								
+						    	<%= form_for @optemail, :html => {:id => 'form-optemail' } do |f| %>	
+								
+								<div class="input-form-spacer"></div>
+				
+								<div class="row">
+									<div class="cell-left-form">
+										<%= f.label(:col_40, 'Please enter your Email address', class: 'input-label-form') %>							
+									</div>
+									<div class="cell-right-form">
+										<%= f.text_field :col_40, :class => 'input-form margin-right-input', :tabindex => '2', :autofocus => true %>
+									</div>
+									<div class="cell-error" id="state_col_40"><p id="error_optemail_col_40"></p></div>      					   							 								      	
+								</div>
+		
+								<div class="input-form-spacer"></div>
+		
+								<div class="row">
+									<div class="cell-left-form">
+										<label class="input-label-form pad-left-20">Preferred geography<br>(National or by State)</label>
+										 <!-- f.label(:col_42, "Preferred geography(National or by State)", class: 'input-label-form') --> 							
+									</div>
+									<div class="cell-right-form">
+
+								   		<%= f.select(:col_41,
+								   				[['National', '0'],		
+												 # 1  Alabama
+												 # 2  Alaska 
+												 # 3  Arizona
+												 # 4  Arkansas
+												 # 5  California
+												 # 6  Colorado 
+												 # 7  Connecticut
+												 # 8  Delaware 	
+												 # 9  DC
+												 # 10 Florida 	
+								   				['Alabama', '1'],								   		
+								   				['Alaska', '2'],								   		
+								   				['Arizona', '3'],								   		
+								   				['Arkansas', '4'],								   		
+								   				['California', '5'],								   		
+								   				['Colorado', '6'],								   		
+								   				['Connecticut', '7'],								   		
+								   				['Delaware', '8'],								   		
+								   				['District of Columbia', '9'],								   		
+								   				['Florida', '10'],			
+												 # 11 Georgia 	
+												 # 12 Hawaii 
+												 # 13 Idaho 	
+												 # 14 Illinois
+												 # 15 Indiana 
+												 # 16 Iowa 	
+												 # 17 Kansas 	
+												 # 18 Kentucky
+												 # 19 Louisiana 
+												 # 20 Maine 
+								   				['Georgia', '11'],								   		
+								   				['Hawaii', '12'],								   		
+								   				['Idaho', '13'],								   		
+								   				['Illinois', '14'],								   		
+								   				['Indiana', '15'],								   		
+								   				['Iowa', '16'],								   		
+								   				['Kansas', '17'],								   		
+								   				['Kentucky', '18'],								   		
+								   				['Louisiana', '19'],								   		
+								   				['Maine', '20'],		
+												 # 21 Maryland 
+												 # 22 Massachusetts
+												 # 23 Michigan 
+												 # 24 Minnesota
+												 # 25 Mississippi 
+												 # 26 Missouri 	
+												 # 27 Montana 	
+												 # 28 Nebraska 	
+												 # 29 Nevada 
+												 # 30 New Hampshire 
+								   				['Maryland', '21'],								   		
+								   				['Massachusetts', '22'],								   		
+								   				['Michigan', '23'],								   		
+								   				['Minnesota', '24'],								   		
+								   				['Mississippi', '25'],								   		
+								   				['Missouri', '26'],								   		
+								   				['Montana', '27'],								   		
+								   				['Nebraska', '28'],								   		
+								   				['Nevada', '29'],								   		
+								   				['New Hampshire', '30'],		
+												 # 31 New Jersey 	
+												 # 32 New Mexico 	
+												 # 33 New York 	
+												 # 34 North Carolina 
+												 # 35 North Dakota 	
+												 # 36 Ohio 	
+												 # 37 Oklahoma 
+												 # 38 Oregon 
+												 # 39 Pennsylvania
+												 # 40 Rhode Island
+								   				['New Jersey', '31'],								   		
+								   				['New Mexico', '32'],								   		
+								   				['New York', '33'],								   		
+								   				['North Carolina', '34'],								   		
+								   				['North Dakota', '35'],								   		
+								   				['Ohio', '36'],								   		
+								   				['Oklahoma', '37'],								   		
+								   				['Oregon', '38'],								   		
+								   				['Pennsylvania', '39'],								   		
+								   				['Rhode Island', '40'],
+												 # 41 South Carolina
+												 # 42 South Dakota 
+												 # 43 Tennessee 	
+												 # 44 Texas 	
+												 # 45 Utah 	
+												 # 46 Vermont 
+												 # 47 Virginia
+												 # 48 Washington
+												 # 49 West Virginia
+												 # 50 Wisconsin 
+												 # 51 Wyoming 	 
+								   				['South Carolina', '41'],			
+								   				['South Dakota', '42'],								   		
+								   				['Tennessee', '43'],								   		
+								   				['Texas', '44'],								   		
+								   				['Utah', '45'],								   		
+								   				['Vermont', '46'],								   		
+								   				['Virginia', '47'],								   		
+								   				['Washington', '48'],								   		
+								   				['West Virginia', '49'],								   		
+								   				['Wisconsin', '50'],								   		
+								   				['Wyoming','51']],
+								   				{}, 
+								   				{ :class => 'form-select margin-right-input', :id => 'select_col_41', :tabindex => '3' } ) %>
+
+									</div>
+									<div class="cell-error" id="state_type_content_index"><p id="error_type_content_index"></p></div>      					   							 								      	
+								</div>
+
+								<div class="input-form-spacer"></div>
+								<div class="input-form-spacer"></div>
+
+								<label class="input-label-form pad-left-20">
+									<span style="font-size: 18px; font-weight: bold;">Educators/K12 & Higher Ed + Technology Industry/Vendors</span>  
+								</label>
+
+								<div class="input-form-spacer"></div>
+
+								<table>
+									<tr>
+										<td style="width: 20px;"></td>
+										<td>
+											<table width="400px">
+												<tr>
+													<td class="pad-left-20">
+														<label class="input-label-form">
+															<span style="font-weight: bold;">The Learning Counsel Newsletter</span><br>
+															frequency: Twice Monthly<br>
+															sent from:  subscriptions@learningcounsel.com<br>  
+															<span class="text-green"><em>
+																Research, digital curriculum industry news and editorial,<br>
+																internet seminar and live event announcements.<br>
+															</em></span>  
+														</label>
+													</td>
+												</tr>
+											</table>
+										</td>
+										<td style="vertical-align: top;">
+											<table>
+												<tr>
+													<td style="width: 120px;"></td>
+													<td style="width: 80px">
+														<div id="rd_col_42_yes" class="rd-button"></div>
+														<%= f.radio_button(:col_42, 1) %>
+														<label id="label_col_42_yes" class="input-label required-label select-label" for="col_42_yes" onclick="rd_col_42('yes');" tabindex="4">Yes</label>
+													</td>
+													<td style="width: 80px">		 
+														<div id="rd_col_42_no" class="rd-button"></div>						
+														<%= f.radio_button(:col_42, 0) %>
+														<label id="label_col_42_no" class="input-label required-label select-label" for="col_42_no" onclick="rd_col_42('no');" tabindex="5">No</label>
+													</td>									
+												</tr>												
+											</table>
+										</td>
+									</tr>
+								</table>
+
+								<div class="input-form-spacer"></div>
+
+								<table>
+									<tr>
+										<td style="width: 20px;"></td>
+										<td>
+											<table width="400px">
+												<tr>
+													<td class="pad-left-20">
+														<label class="input-label-form">
+															<span style="font-weight: bold;">The Learning Counsel JOURNAL</span><br>
+															frequency: Semi-Annual<br>
+															sent from: friends@learningcounsel.com<br>
+															<span class="text-green"><em>  
+																Digital Magazine featuring research, stories, infographics,<br>
+																And highlights of digital curriculum.<br> 
+															</em></span>
+														</label>
+													</td>
+												</tr>
+											</table>
+										</td>
+										<td style="vertical-align: top;">
+											<table>
+												<tr>
+													<td style="width: 120px;"></td>
+													<td style="width: 80px">
+														<div id="rd_col_43_yes" class="rd-button"></div>
+														<%= f.radio_button(:col_43, 1) %>
+														<label id="label_col_43_yes" class="input-label required-label select-label" for="col_43_yes" onclick="rd_col_43('yes');" tabindex="6">Yes</label>
+													</td>
+													<td style="width: 80px">		 
+														<div id="rd_col_43_no" class="rd-button"></div>						
+														<%= f.radio_button(:col_43, 0) %>
+														<label id="label_col_43_no" class="input-label required-label select-label" for="col_43_no" onclick="rd_col_43('no');" tabindex="7">No</label>
+													</td>									
+												</tr>												
+											</table>
+										</td>
+									</tr>
+								</table>
+
+								<div class="input-form-spacer"></div>
+								<div class="input-form-spacer"></div>
+
+								<label class="input-label-form pad-left-20">
+									<span style="font-size: 18px; font-weight: bold;">ONLY Educators/K12 & Higher Ed</span>  
+								</label>
+
+								<div class="input-form-spacer"></div>
+
+								<table>
+									<tr>
+										<td style="width: 20px;"></td>
+										<td>
+											<table width="400px">
+												<tr>
+													<td class="pad-left-20">
+														<label class="input-label-form">
+															<span style="font-weight: bold;">Events Announcements & Recaps</span><br>
+															frequency: Weekly/Geographic<br>
+															sent from: friendsof@learningcounsel.com<br>  
+															<span class="text-green"><em>
+																Invitation and announcement emails 8-10 weeks prior to<br>
+																any event to be held in that general geography, plus recaps<br>
+																post the event. No emails for that geography if outside the<br> 
+																event-date promotion window.<br>
+															</em></span>  
+														</label>
+													</td>
+												</tr>
+											</table>
+										</td>
+										<td style="vertical-align: top;">
+											<table>
+												<tr>
+													<td style="width: 120px;"></td>
+													<td style="width: 80px">
+														<div id="rd_col_44_yes" class="rd-button"></div>
+														<%= f.radio_button(:col_44, 1) %>
+														<label id="label_col_44_yes" class="input-label required-label select-label" for="col_44_yes" onclick="rd_col_44('yes');" tabindex="8">Yes</label>
+													</td>
+													<td style="width: 80px">		 
+														<div id="rd_col_44_no" class="rd-button"></div>						
+														<%= f.radio_button(:col_44, 0) %>
+														<label id="label_col_44_no" class="input-label required-label select-label" for="col_44_no" onclick="rd_col_44('no');" tabindex="9">No</label>
+													</td>									
+												</tr>												
+											</table>
+										</td>
+									</tr>
+								</table>
+
+								<div class="input-form-spacer"></div>
+
+								<table>
+									<tr>
+										<td style="width: 20px;"></td>
+										<td>
+											<table width="400px">
+												<tr>
+													<td class="pad-left-20">
+														<label class="input-label-form">
+															<span style="font-weight: bold;">The Learning Counsel Community</span><br>
+															frequency: Infrequent, based on projects<br>
+															sent from: community@learningcounsel.com<br>
+															<span class="text-green"><em>
+																Research response and special national retreat event invitations.<br>
+															</em></span>
+														</label>
+													</td>
+												</tr>
+											</table>
+										</td>
+										<td style="vertical-align: top;">
+											<table>
+												<tr>
+													<td style="width: 120px;"></td>
+													<td style="width: 80px">
+														<div id="rd_col_45_yes" class="rd-button"></div>
+														<%= f.radio_button(:col_45, 1) %>
+														<label id="label_col_45_yes" class="input-label required-label select-label" for="col_45_yes" onclick="rd_col_45('yes');" tabindex="10">Yes</label>
+													</td>
+													<td style="width: 80px">		 
+														<div id="rd_col_45_no" class="rd-button"></div>						
+														<%= f.radio_button(:col_45, 0) %>
+														<label id="label_col_45_no" class="input-label required-label select-label" for="col_45_no" onclick="rd_col_45('no');" tabindex="11">No</label>
+													</td>									
+												</tr>												
+											</table>
+										</td>
+									</tr>
+								</table>
+
+								<div class="input-form-spacer"></div>
+								<div class="input-form-spacer"></div>
+
+								<label class="input-label-form pad-left-20">
+									<span style="font-size: 18px; font-weight: bold;">ONLY Technology Industry/Vendors</span>  
+								</label>
+
+								<div class="input-form-spacer"></div>
+
+								<table>
+									<tr>
+										<td style="width: 20px;"></td>
+										<td>
+											<table width="400px">
+												<tr>
+													<td class="pad-left-20">
+														<label class="input-label-form">
+															<span style="font-weight: bold;">Events Announcements & Recaps</span><br>
+															frequency: Intermittent National or Geographic<br>
+															sent from: marketing@learningcounsel.com<br>
+															<span class="text-green"><em>
+																Invitation emails weekly 8-10 weeks prior to any event to<br>
+																be held in that general geography, plus one recap post the<br>
+																event date. Announcement mails about all regional events<br>
+																and nationally-in-scope attended events several times a year.<br>
+															</em></span>  
+														</label>
+													</td>
+												</tr>
+											</table>
+										</td>
+										<td style="vertical-align: top;">
+											<table>
+												<tr>
+													<td style="width: 120px;"></td>
+													<td style="width: 80px">
+														<div id="rd_col_46_yes" class="rd-button"></div>
+														<%= f.radio_button(:col_46, 1) %>
+														<label id="label_col_46_yes" class="input-label required-label select-label" for="col_46_yes" onclick="rd_col_46('yes');" tabindex="12">Yes</label>
+													</td>
+													<td style="width: 80px">		 
+														<div id="rd_col_46_no" class="rd-button"></div>						
+														<%= f.radio_button(:col_46, 0) %>
+														<label id="label_col_46_no" class="input-label required-label select-label" for="col_46_no" onclick="rd_col_46('no');" tabindex="13">No</label>
+													</td>									
+												</tr>												
+											</table>
+										</td>
+									</tr>
+								</table>
+
+								<div class="input-form-spacer"></div>
+
+								<table>
+									<tr>
+										<td style="width: 20px;"></td>
+										<td>
+											<table width="400px">
+												<tr>
+													<td class="pad-left-20">
+														<label class="input-label-form">
+															<span style="font-weight: bold;">Learning Counsel Industry News</span><br>
+															frequency: Weekly<br>
+															sent from: marketing@learningcounsel.com<br>  
+															<span class="text-green"><em>
+																Industry News, research project announcements, funding<br>
+																updates, invitations to advertise or sponsor papers or<br>
+																events. Tips and Trends in the industry.<br> 
+															</em></span>  
+														</label>
+													</td>
+												</tr>
+											</table>
+										</td>
+										<td style="vertical-align: top;">
+											<table>
+												<tr>
+													<td style="width: 120px;"></td>
+													<td style="width: 80px">
+														<div id="rd_col_47_yes" class="rd-button"></div>
+														<%= f.radio_button(:col_47, 1) %>
+														<label id="label_col_47_yes" class="input-label required-label select-label" for="col_47_yes" onclick="rd_col_47('yes');" tabindex="14">Yes</label>
+													</td>
+													<td style="width: 80px">		 
+														<div id="rd_col_47_no" class="rd-button"></div>						
+														<%= f.radio_button(:col_47, 0) %>
+														<label id="label_col_47_no" class="input-label required-label select-label" for="col_47_no" onclick="rd_col_47('no');" tabindex="15">No</label>
+													</td>									
+												</tr>												
+											</table>
+										</td>
+									</tr>
+								</table>
+
+								<div class="input-form-spacer"></div>
+
+								 <!-- f.hidden_field :type_content --> 
+
+								<div class="input-form-spacer"></div>
+								<div class="input-form-spacer"></div>
+		
+								<div class="row">
+									<div style="width: 800px; text-align: center;">
+									<%= f.submit 'Submit', :id => 'form-submit', :class => 'form-btn', :tabindex => '16' %>
+									</div>      					   							 	
+								</div>      		
+													
+								<% end %>
+								
+							</div>
+							
+						</div>
+						
+					</div>
+
+				</div>
+				
+				<div class="col-right">
+				</div>												
+			</div>
+		</div>
+	</div>
+
+	<script>
+		
+		function formValidate() {
+ 
+			$("#form-optemail").validate({
+ 						
+				submitHandler: function(form) {
+					form.submit();
+				},
+ 						
+ 						
+				//alert('form validate');
+						
+				// debug: true,
+				// onkeyup: false,
+				// focusCleanup: true,
+				// focusInvalid: false,
+				rules: {
+					'optemail[col_40]': {
+						required: true,
+						maxlength: 100,
+						email: true
+					}
+				},
+				// invalidHandler: function(event, validator) {
+					// var errors = validator.numberOfInvalids();
+					// if (errors) {
+						// var message = errors == 1
+						// ? '1 required field missed'
+						// : errors + ' required fields missed';
+						// $("div.errors p").html(message);
+						// $("div.errors").show();
+						// // $("#form-submit").blur();
+						// // $("#form-optemail").focus();		
+						// // scrollToAnchor('anchor1');										
+					// } else {
+						// $("div.errors").hide();
+					// }
+					// // // //<div class="cell-error" id="state_col_40"><p id="error_col_40"></p></div>      					   							 								      	
+				// },			
+				messages: {
+					'optemail[col_40]': {
+						required: "*",
+						maxlength: "Email address exceeds 100 characters",
+						email: "Invalid form on email address"
+					}
+				}
+				// errorContainer: $(".error-label"),				
+// 
+            	// errorPlacement: function(error, element){
+                	// var errorClone = error.clone();
+        			// $(".error-label").append(errorClone);
+					// error.insertAfter(element)				
+            	// }				
+				// errorPlacement: function(error, element) {
+					// error.insertAfter('#error_' + element.attr('id'));
+					// $('#' + element.attr('id')).removeClass('required').removeClass('success').addClass('error');
+					// //$('#label_' + element.attr('id')).removeClass('required-label').addClass('error-label');
+				// },
+				// // invalid: function(element) {
+				// // },
+				// // highlight: function(element) {
+					// // $('#' + element.attr('id')).removeClass('required').removeClass('success').addClass('error');
+					// // //$('#label_' + element.attr('id')).removeClass('required-label').addClass('error-label');
+				// // },
+				// // unhighlight: function(element) {
+					// // //$('#' + element.attr('id')).removeClass('required').removeClass('success').addClass('error');
+					// // //$('#label_' + element.attr('id')).removeClass('required-label').addClass('error-label');
+				// // },
+				// error: function(label) {
+					// $('#' + label.attr('for')).removeClass('required').removeClass('success').addClass('error');
+					// $('#label_' + label.attr('for')).removeClass('required-label').addClass('error-label');
+// 					
+				// },
+				// success: function(label) {
+					// $('#' + label.attr('for')).removeClass('required').removeClass('error').addClass('success');
+					// $('#label_' + label.attr('for')).removeClass('error-label').addClass('required-label');
+				// }				
+			});
+		}
+		
+		
+		
+		// $(document).ready(function () {				
+			
+		$(function() {
+		// $(window).load( function() {
+
+			// alert('load 2');
+
+			formValidate();
+    		
+    		// $('#label_city_workshop_1').keypress(function(e){
+      			// if(e.keyCode==13)
+      			// $('#label_city_workshop_1').click();
+    		// });				
+ 		
+		});		
+		
+	</script>
+
+												<!-- 
+												 1  Alabama
+												 2  Alaska 
+												 3  Arizona
+												 4  Arkansas
+												 5  California
+												 6  Colorado 
+												 7  Connecticut
+												 8  Delaware 	
+												 9  DC
+												 10 Florida 	
+												 11 Georgia 	
+												 12 Hawaii 
+												 13 Idaho 	
+												 14 Illinois
+												 15 Indiana 
+												 16 Iowa 	
+												 17 Kansas 	
+												 18 Kentucky
+												 19 Louisiana 
+												 20 Maine 
+												 21 Maryland 
+												 22 Massachusetts
+												 23 Michigan 
+												 24 Minnesota
+												 25 Mississippi 
+												 26 Missouri 	
+												 27 Montana 	
+												 28 Nebraska 	
+												 29 Nevada 
+												 30 New Hampshire 
+												 31 New Jersey 	
+												 32 New Mexico 	
+												 33 New York 	
+												 34 North Carolina 
+												 35 North Dakota 	
+												 36 Ohio 	
+												 37 Oklahoma 
+												 38 Oregon 
+												 39 Pennsylvania
+												 40 Rhode Island
+												 41 South Carolina
+												 42 South Dakota 
+												 43 Tennessee 	
+												 44 Texas 	
+												 45 Utah 	
+												 46 Vermont 
+												 47 Virginia
+												 48 Washington
+												 49 West Virginia
+												 50 Wisconsin 
+												 51 Wyoming 	 
+												 -->										
+

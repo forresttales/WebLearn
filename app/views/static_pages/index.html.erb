@@ -59,26 +59,80 @@
 		</style>
 
 
-		<!-- <script type="text/javascript" src="http://www.work.ua/js/mootools_1350549978.js"></script>
-		<script type="text/javascript" src="http://www.work.ua/js/mootools-more_1380281301.js"></script> -->
-		
-				
-		<!-- <script type="text/javascript" src="http://www.work.ua/ru/js/lp_1378193134.js"></script> -->
-				
-		
-		
-		<!-- <script src="http://www.work.ua/js/cssua.min.js" type="text/javascript"></script> -->		
-		
-		
-		<!-- <link href="/assets/screen_headlines.css" media="screen, projection" rel="stylesheet" type="text/css"> -->
-		
-		<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
-		
-	    <script type="text/javascript">
-	    	swfobject.embedSWF("/assets/865.swf", "myContent", "300", "120", "9.0.0");
-	    </script> -->
+
+<!-- <style>
+	
+.cykle-slideshow, .cykle-slideshow * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.cykle-slideshow { width: 45%; min-width: 200px; max-width: 500px; margin: 10px auto; padding: 0; position: relative;
+    background: url(http://malsup.github.com/images/spinner.gif) 50% 50% no-repeat;
+ }
+.cykle-slideshow img { 
+    position: absolute; top: 0; left: 0;
+    width: 100%; padding: 0; display: block;
+}
+.cykle-slideshow img:first-child {
+    position: static; z-index: 100;
+}
+.cykle-pager { 
+    text-align: center; width: 100%; z-index: 500; position: absolute; top: 10px; overflow: hidden;
+}
+.cykle-pager span { 
+    font-family: arial; font-size: 50px; width: 16px; height: 16px; 
+    display: inline-block; color: #ddd; cursor: pointer; 
+}
+.cykle-pager span.cykle-pager-active { color: #D69746;}
+.cykle-pager > * { cursor: pointer;}
+.cykle-caption { position: absolute; color: white; bottom: 15px; right: 15px; z-index: 700; }
+.cykle-overlay { 
+    font-family: tahoma, arial;
+    position: absolute; bottom: 0; width: 100%; z-index: 600;
+    background: black; color: white; padding: 15px; opacity: .5;
+}
+.cykle-prev, .cykle-next { position: absolute; top: 0; width: 30%; opacity: 0; filter: alpha(opacity=0); z-index: 800; height: 100%; cursor: pointer; }
+.cykle-prev { left: 0;  background: url(http://malsup.github.com/images/left.png) 50% 50% no-repeat;}
+.cykle-next { right: 0; background: url(http://malsup.github.com/images/right.png) 50% 50% no-repeat;}
+.cykle-prev:hover, .cykle-next:hover { opacity: .7; filter: alpha(opacity=70) }
+.disabled { opacity: .5; filter:alpha(opacity=50); }
+.cykle-paused:after {
+    content: 'Paused'; color: white; background: black; padding: 10px;
+    z-index: 500; position: absolute; top: 10px; right: 10px;
+    border-radius: 10px;
+    opacity: .5; filter: alpha(opacity=50);
+}
+
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+    .cykle-slideshow { width: 200px;}
+    .cykle-overlay { padding: 4px }
+    .cykle-caption { bottom: 4px; right: 4px }
+}
+	
+</style> -->
+
+<!-- <link rel="stylesheet" href="http://jquery.malsup.com/cycle2/css.css"> -->
+<!-- <link rel="stylesheet" href="http://jquery.malsup.com/cycle2/site.css"> -->
+<!-- <link rel="stylesheet" href="http://jquery.malsup.com/cycle2/demo/demo-slideshow.css"> -->
+
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script> -->
+<!-- <script src="http://malsup.github.io/jquery.cycle2.js"></script> -->
+<!-- <script src="http://malsup.github.io/jquery.cycle2.tile.js"></script> -->
+
+
+		<style>
+			
+			.kontainer-top {
+				position: relative;
+				/*margin: 0 auto;*/
+				margin-left: 10%;
+				clear: both;
+				width: 1200px;
+				background-color: #fff;
+			}
+			
+		</style>
+
 
 		<div style="width: 1200px; margin-right: auto; margin-left: auto; background: #fff;">
+	    
 	    
 		<header>		
 
@@ -151,121 +205,146 @@
 		<section>
 
 					
-				<div style="float: right;">
-					<!-- <div>
+				<!-- <div style="float: right;">
+					<div>
 						<span onclick="scrollToAnchor('anchor2');">
 							<a style="font-family: KlavikaMedium; font-size: 18px; font-weight: 300; color: #555;">Articles</a>
 						</span>
 					</div>
-					<br> -->					
-					
+					<br>					
 					<div>
 						<span onclick="scrollToAnchor('anchor1');">
 							<a style="font-family: KlavikaMedium; font-size: 18px; font-weight: 300; color: #555;">Industry News&raquo;</a>
 						</span>
 					</div>
-				</div>
+				</div> -->
 				
-				<div style="height: 30px;"></div>
+				<div style="height: 50px;"></div>
 				
-				<div class="kontainer">
-																								
-					<script>
-						$(document).ready(function() {
-							$('#prev').hover(function() {$('#prev img').attr('src','/assets/prev-arrow-hov.png')}, function() {$('#prev img').attr('src','/assets/prev-arrow.png')})
-							$('#next').hover(function() {$('#next img').attr('src','/assets/next-arrow-hov.png')}, function() {$('#next img').attr('src','/assets/next-arrow.png')})
-						});
-					</script>
+				<div class="kontainer-top">
 					
-					<span id="prev" style="float:left;left:-70px;top:215px;margin-top:0px;position:absolute;display:inline;"><img src="/assets/prev-arrow.png"></span>
-					<span id="next" style="float:right;right:-70px;top:215px;margin-top:0px;position:absolute;display:inline;"><img src="/assets/next-arrow.png"></span>
-
-					<div class="cycle-slideshow" data-cycle-speed="600" data-cycle-pause-on-hover="true" data-cycle-fx="scrollHorz" data-cycle-prev="#prev" data-cycle-next="#next" data-cycle-slides="&gt; div" style="width: 970px; position: relative; height: 700px; overflow: hidden;">					
+				
+				<!-- <table style="width: 970px;">	
+					<tr>
+						<td>
+							<table style="width: 800px;">
+								<tr>
+									<td>		 -->
+										
+																				
+									<div style="display: inline-block; width: 700px;">		
+														
+										<script>
+											$(document).ready(function() {
+												$('#prev').hover(function() {$('#prev img').attr('src','/assets/prev-arrow-hov.png')}, function() {$('#prev img').attr('src','/assets/prev-arrow.png')})
+												$('#next').hover(function() {$('#next img').attr('src','/assets/next-arrow-hov.png')}, function() {$('#next img').attr('src','/assets/next-arrow.png')})
+											});
+										</script>
+										
+										<span id="prev" style="left:-70px;top:215px;margin-top:0px;position:absolute;display:inline;"><img src="/assets/prev-arrow.png"></span>
+										<span id="next" style="left:626px;top:215px;margin-top:0px;position:absolute;display:inline;"><img src="/assets/next-arrow.png"></span>
 					
-						<div style="position: absolute; top: 0px; left: 0px; z-index: 101; opacity: 1;">
-
-							<div class="k-mainfeaturerow">
-
-    							<div id="12"></div>
-						        
-					        </div>
-					        
-					    	<!-- <div class="rowfluid">					    
-								<div class="psubfeature">
-    								<div id="14"></div>
-								</div>								
-								<div class="psubfeature">
-    								<div id="15"></div>
-								</div>								
-								<div class="psubfeature">
-    								<div id="16"></div>
-								</div>								
-							</div> -->
-																			
-						</div>
+										<div class="cycle-slideshow" data-cycle-speed="500" data-cycle-pause-on-hover="true" data-cycle-fx="scrollHorz" data-cycle-prev="#prev" data-cycle-next="#next" data-cycle-slides="&gt; div" style="width: 604px; position: relative; height: 650px; overflow: hidden;">					
+										
+											<div style="position: absolute; top: 0px; left: 0px; z-index: 101; opacity: 1;">
+												<div class="k-mainfeaturerow">
+					    							<div id="12"></div>
+										        </div>
+											</div>
+											<div style="position: absolute; top: 0px; left: 0px; z-index: 100; display: none;">
+												<div class="rowfluid k-mainfeaturerow">
+					    							<div id="22"></div>
+										        </div>
+											</div>
+											<div style="position: absolute; top: 0px; left: 0px; z-index: 99; display: none;">
+												<div class="rowfluid k-mainfeaturerow">
+													<div id="3"></div>
+										        </div> 
+											</div>
+													
+										</div>
 					
-						<!-- <div style="position: absolute; top: 0px; left: 0px; z-index: 100; display: none;" class="slide cycle-slide"> -->							
-							
-						<div style="position: absolute; top: 0px; left: 0px; z-index: 100; display: none;">
-							
-							
-							<div class="rowfluid k-mainfeaturerow">
-								
-    							<div id="22"></div>
-						
-					        </div>
-					        
-					    	<!-- <div class="rowfluid">
-								<div class="psubfeature">
-    								<div id="17"></div>
-								</div>					
-								<div class="psubfeature">
-    								<div id="20"></div>
-								</div>					
-								<div class="psubfeature">
-									<div id="2"></div>
-								</div>								
-							</div> -->							
-							
-						</div>
-					
-					
-					
-						<!-- <div style="position: absolute; top: 0px; left: 0px; z-index: 99; display: none;" class="slide cycle-slide"> -->							
-							
-						<div style="position: absolute; top: 0px; left: 0px; z-index: 99; display: none;">
-							
-							<div class="rowfluid k-mainfeaturerow">
-
-								<div id="3"></div>
-						
-					        </div> 
-					        
-					    	<!-- <div class="rowfluid">
-								<div class="psubfeature">
-									<div id="19"></div>
-								</div>					
-								<div class="psubfeature">
-									<div id="13"></div>
-								</div>								
-								<div class="psubfeature">
-									<div id="9"></div>
-								</div>								
-							</div> -->
-												
-						</div>
-								
-					</div>
-
-					<div style="clear: both; height: 0px; font-size: 1px; line-height: 0px;"></div>
-					
+										<div style="clear: both; height: 0px; font-size: 1px; line-height: 0px;"></div>
+										
+									</div>
+									
+									<div style="display: inline-block; width: 400px; vertical-align: top; padding-left: 50px;">
+										<table>
+											<tr>
+												<td>
+														<span style="font-family: KlavikaRegular; color: brown; font-size: 18px;">
+															February 27th&nbsp;&nbsp;&nbsp;Columbia, SC
+														</span>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div>
+														<a href="/Event-News/Columbia-South-Carolina-March-5">
+															<img src="../event_news_images/SCpic6-h180.png" class="k-img" width="300" onerror="this.src='../altgraphics/error-260-180.png'">
+														</a>
+													</div>											
+												</td>
+												<td>
+													
+												</td>
+											</tr>											
+											<tr>
+												<td style="text-align: center">
+													<a href="/Event-News/Columbia-South-Carolina-March-5" style="color: brown;">
+														<span style="font-family: KlavikaRegular; font-size: 18px;">
+															&raquo;&nbsp;&raquo;&nbsp;&raquo;&nbsp;&nbsp;Photos&nbsp;&nbsp;&raquo;&nbsp;&raquo;&nbsp;&raquo;
+														</span>
+													</a>
+												</td>
+											</tr>											
+										</table>
+									</div>
+									
+										
+									<!-- </td>
+								</tr>
+							</table>			
+						</td>
+						<td>
+							<table style="width: 100px;" class="boxtemp-green">
+								<tr>
+									<td>
+										second table
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table> -->
+									
 				</div>
 					
 					
 </section>
 </div>					
 					
-				
+
+
+
+
+
+<!-- <div class="cycle-slideshow" data-cycle-timeout="0" data-cycle-next="#next5" data-cycle-prev="#prev5">
+	<img class="cycle-slide cycle-sentinel" style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1; visibility: hidden; display: block;" src="Cycle2%20Tile_files/p1.jpg" data-cycle-fx="tileSlide" data-cycle-tile-vertical="false">
+	<img class="cycle-slide cycle-slide-active" style="position: absolute; top: 0px; left: 0px; z-index: 100; opacity: 1;" src="Cycle2%20Tile_files/p1.jpg" data-cycle-fx="tileSlide" data-cycle-tile-vertical="false">
+	<img class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 99; display: none;" src="Cycle2%20Tile_files/p2.jpg" data-cycle-fx="tileBlind" data-cycle-tile-count="12">
+	<img class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 97; display: none;" src="Cycle2%20Tile_files/p3.jpg" data-cycle-fx="tileSlide" data-cycle-tile-count="4">
+	<img class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 96; display: none;" src="Cycle2%20Tile_files/p4.jpg" data-cycle-fx="tileBlind" data-cycle-tile-vertical="false">
+</div>
+<div class="center">
+    <a href="#" id="prev5">&lt;&lt; Prev </a>
+    <a href="#" id="next5"> Next &gt;&gt; </a>
+</div> -->
+
+
+
+
+
 					
 				
 <div style="width: 100%; height: 10px; background-color: #C7CED4; margin-top: 0px; margin-bottom: 0px;"></div>
@@ -287,6 +366,46 @@
 
 <a name="anchor2"></a>    		      		     		
 				
+
+<!-- start template single row -->
+				
+<div class="k-governcell ktop kbottom">	
+		
+	<div class="k-outercell kol3">
+		
+		<div id="32"></div>
+		
+	</div>
+		
+	<div class="k-cell-divider"></div>
+	
+	
+	<div class="k-outercell kol3">
+
+    	<div id="33"></div>
+						
+	</div>
+
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol3">
+		
+		<!-- <div id="8"></div> -->
+		
+	</div>
+	
+</div>
+
+<!-- end template single row -->				
+
+
+
+
+
+
+
+
+
 
 <!-- start template single row -->
 				

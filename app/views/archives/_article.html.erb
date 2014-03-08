@@ -8,10 +8,10 @@
 
 		    <script id="articleTemplate_12" type="text/x-jQuery-tmpl">
 					
-				<div style="margin-left: 10%;">
+				<div style="margin-left: 0%;">
 					
 			 		<%= link_to( archive ) do %>
-			 			<img src="../repository/article-k12-digital.png" class="mainfeatureimage" height="450">
+			 			<img src="../repository/article-k12-digital-h300.png" class="mainfeatureimage" height="300">
 			 		<% end %>
 				</div>
 
@@ -137,9 +137,9 @@
 
 		    <script id="articleTemplate_22" type="text/x-jQuery-tmpl">
 					
-				<div style="margin-left: 14%;">
+				<div style="margin-left: 0%;">
 		 			<%= link_to archive do %>
-		 				<img src="../repository/article-we-need.png" class="mainfeatureimage" height="450">
+		 				<img src="../repository/article-we-need-h300.png" class="mainfeatureimage" height="300">
 		 			<% end %>
 				</div>
 		 		
@@ -266,9 +266,9 @@
 
 		    <script id="articleTemplate_3" type="text/x-jQuery-tmpl">
 					
-				<div style="margin-left: 16%;">
+				<div style="margin-left: 0%;">
 			 		<%= link_to archive do %>
-			 			<img src="../repository/article-checklist-of-top-10.png" class="mainfeatureimage" height="450">
+			 			<img src="../repository/article-checklist-of-top-10-h300.png" class="mainfeatureimage" height="300">
 			 		<% end %>
 				</div>
 		 		
@@ -853,6 +853,82 @@
 		
 		<% end %>
 
+
+
+
+		<% if archive.id == 32 %>
+
+		    <script id="articleTemplate_32" type="text/x-jQuery-tmpl">
+					
+				<%= link_to archive, :class => 'k-link-a' do %>
+				
+					<div class="k-inner-cell">
+						<div class="k-b-container">
+							<div class="k-img-cell-single">
+								<img src="../event_news_images/SCpic1-h180.png" class="k-img" height="180" onerror="this.src='../altgraphics/error-260-180.png'">
+							</div>
+							<div class="katcolorbox_posit">
+			            		<div class="katbox-article katbox thoughts_catbox">
+			            			<span>EVENT NEWS</span>
+			            		</div>
+			        		</div>																								
+						</div>
+						<div class="k-b-headline">
+							A Day of Discussions on Digital Curriculum in Columbia, SC<br>
+							<span class="kbyline"><span class="k-b-link">March 5, 2014</span></span><br> 
+							<span class="kbyline">by&nbsp<span class="k-b-link">LeiLani Cauthen</span></span>											
+						</div>
+					</div>
+					
+				<% end %>
+						        
+	    	</script>
+
+			<script type="text/javascript">
+				id = "32"
+				var container = "#" + id;
+				var ref		  = "#articleTemplate_"  + id;
+			    $(ref).tmpl().appendTo(container);
+			</script>
+		
+		<% end %>
+
+		<% if archive.id == 33 %>
+
+		    <script id="articleTemplate_33" type="text/x-jQuery-tmpl">
+					
+				<%= link_to archive, :class => 'k-link-a' do %>
+				
+					<div class="k-inner-cell">
+						<div class="k-b-container">
+							<div class="k-img-cell-single">
+								<img src="../event_news_images/SCpic12-h180.png" class="k-img" height="180" onerror="this.src='../altgraphics/error-260-180.png'">
+							</div>
+							<div class="katcolorbox_posit">
+			            		<div class="katbox-article katbox thoughts_catbox">
+			            			<span>EVENT NEWS</span>
+			            		</div>
+			        		</div>																								
+						</div>
+						<div class="k-b-headline">
+							South Carolina Districts Executive Panel Speaks Out about Digital Curriculum Strategies<br>
+							<span class="kbyline"><span class="k-b-link">March 5, 2014</span></span><br> 
+							<span class="kbyline">by&nbsp<span class="k-b-link">LeiLani Cauthen</span></span>											
+						</div>
+					</div>
+					
+				<% end %>
+						        
+	    	</script>
+
+			<script type="text/javascript">
+				id = "33"
+				var container = "#" + id;
+				var ref		  = "#articleTemplate_"  + id;
+			    $(ref).tmpl().appendTo(container);
+			</script>
+		
+		<% end %>
 
 <% end %>
 

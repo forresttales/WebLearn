@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    
+    <style>
+    	
+    	.main {
+    		font-family:Arial, Helvetica, sans-serif;
+    		font-size: 20px;
+    		color: black;
+    	}
+
+    	p {
+    		font-family:Arial, Helvetica, sans-serif;
+    		font-size: 16px;
+    		color: black;
+    	}
+    	
+    	.links {
+    		font-family:Arial, Helvetica, sans-serif;
+    		font-size: 13px;
+    		color: brown;    		
+    	}
+
+		div.table-info {
+			padding-left: 30px;
+		}    	
+		
+    	table#tbl-main {
+    	}
+    	table#tbl-main td.left {
+    		width: 220px;
+    		vertical-align: top;
+    	}
+    	table#tbl-main td.right {
+    		width: 400px;
+    		vertical-align: top;    		
+    	}
+    	    	
+    	table#workshop {
+    		width: 
+    	}
+    	table#workshop td.left {
+    		width: 220px;
+    		vertical-align: top;
+    	}    	
+    	table#workshop td.right-workshop {
+    		width: 250px;
+    		vertical-align: top;    		
+    	}
+    	table#workshop td.right-workshop-2 {
+    		width: 100px;
+    		vertical-align: top;    	
+    		color: red;	
+    	}
+
+    	.right-workshop-2 {
+    		width: 100px;
+    		vertical-align: top;    	
+    		color: red;	
+    	}
+    	
+    	span.workshop-1 {
+			display: inline-block;
+			width: 100px;
+    		font-family:Arial, Helvetica, sans-serif;			
+			font-size: 16px;    		
+    	}
+    	span.workshop-2 {
+			display: inline-block;
+			width: 200px;
+    		font-family:Arial, Helvetica, sans-serif;			
+			font-size: 16px;    		
+    	}
+    	span.workshop-3 {
+			display: inline-block;
+			width: 150px;
+    		font-family:Arial, Helvetica, sans-serif;			
+			font-size: 16px;    		
+    	}
+    	span.workshop-4 {
+			display: inline-block;
+			width: 150px;
+    		font-family:Arial, Helvetica, sans-serif;			
+			font-size: 16px;    		
+    	}
+    	
+    </style>
+    
+  </head>
+  <body>
+  	<br>
+  	<br>
+  	 <!-- image_tag attachments['logo-icon-come-together.png'].url, :alt => ''  -->
+  	<br>
+  	<br>
+    <span class="main">
+		THANK YOU for registering to attend a Learning Counsel event!  
+		<br>
+		You will receive another email confirming the details of the event venue 
+		<br>
+		you’ve signed up for, agenda, and what to expect.      	
+    	<br>
+    	We’re so exciting you’re attending!  See you there!
+    </span>
+  	<br>
+  	<br>
+  	<p>To update the information you gave us, please first use our 'Cancel Attendance' link below and then resubmit our Events form.</p>
+  	<br>
+  	<br>
+  	<p>The information you provided:</p>
+  	<br>  	
+	<div class="table-info">
+	  	<table id="tbl-main">
+	  		<tr>
+	  			<td class="left">
+	    			<p>First Name:</p>
+	  			</td>
+	  			<td class="right">
+	    			<!-- <p> @reg_event.name_first </p> -->
+	  			</td>
+	  		</tr>
+	  	</table>
+	</div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="mailto:forresttales@hotmail.com?Subject=Cancel Event Attendance" target="_top"><span class="links">To Cancel Attendance</span></a>
+   	<br>
+   	<br>
+    <a href="<%= @url %>"><span class="links">Manage Email Preferences</span></a>
+
+   	<br>
+    <a href="thelearningcounsel.com/privacy"><span class="links">Privacy Policy</span></a>
+
+  </body>
+</html>

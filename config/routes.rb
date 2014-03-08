@@ -20,9 +20,13 @@ Weblearn::Application.routes.draw do
   match '/privacy', to: 'static_pages#privacy', via: 'get'
   match '/about', to: 'static_pages#about', via: 'get'
 
+
+  match '/test', to: 'tests#index', via: 'get'
+  match '/gallery', to: 'tests#gallery', via: 'get'
+
   # match '/Events', to: 'events#index', via: 'get'
 
-
+  
 
    
   # get "landings/index"
@@ -47,6 +51,12 @@ Weblearn::Application.routes.draw do
 
   # aliases
   get "pages/events_agenda"
+
+  match '/Columbia-1', to: 'pages#event1a', via: 'get'
+  
+  
+  
+  
   match 'Schedule', to: 'pages#events_agenda', via: ['get']
   match 'EventRegistration', to: 'reg_events#new', via: ['get']
 
@@ -102,7 +112,15 @@ Weblearn::Application.routes.draw do
   # get "archives/index"
   # get "archives/new"
   get "archives/show"  
+  match '/:id', to: 'archives#show', via: 'get'
   resources :archives
+  #match ':controller(/:action(/:id(.:format)))'
+
+
+
+
+  match '/EventNews', to: 'eventnews#show', via: 'get'
+  match '/Event-News/Columbia-South-Carolina-March-5', to: 'eventnews#event_1_photos', via: 'get'
 
   
   
@@ -644,10 +662,68 @@ Weblearn::Application.routes.draw do
   
   
   
+  match "/optemails/edit/:id" => "optemails#edit", via: 'post'
+  match "/EmailPreferences" => "optemails#new", via: 'get'  
+  # match "/EmailPreferences/:id" => "optemails#edit", via: 'get'
+  # match "/EmailPreferencesSaved/:id" => "optemails#show", via: 'get'
+  match "/optemails/:id" => "optemails#update", via: 'post'
+  match "/EmailPreferencesSaved" => "optemails#create_success", via: 'get'
+
+  resources :optemails
   
   
   
   
+  
+  
+  
+  
+  
+  
+  # get "mtab1lets/index"
+  # get "mtab1lets/update_show"
+  # match "/mtab1lets/show/:id" => "mtab1lets#show", via: 'get'
+  # match '/mtab1lets/new', to: 'mtab1lets#new', via: 'get'
+  # match "/mtab1lets/:id/edit" => "mtab1lets#edit", via: 'post'
+  # match '/mtab1lets/upload', to: 'mtab1lets#upload', via: 'post'
+#   
+  # resources :mtab1lets do
+    # collection { post :import }
+  # end
+# 
+  # resources :mtab1lets do
+    # member do
+      # get 'export'
+    # end
+  # end
+# 
+  # resources :mtab1lets do
+    # collection { post :exec_sql }
+  # end
+# 
+  # resources :mtab1lets do
+    # collection do
+      # post :dbclear
+    # end
+  # end
+# 
+  # resources :mtab1lets do
+    # collection do
+      # post :dbdelete
+    # end
+  # end
+# 
+  # match "/mtab1lets/:id" => "mtab1lets#update", via: 'post'
+# 
+  # resources :mtab1lets
+
+
+  match "/TestOptouts" => "test_optouts#edit", via: 'get'
+  # match "/test_optouts/:id" => "mtab1lets#update", via: 'post'
+  
+  # match '/TestOptouts', to: 'test_optouts#new', via: 'get'
+  resources :test_optouts
+
   
   # match '/:id', :to => proc { |env|
 #   

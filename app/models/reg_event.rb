@@ -3,7 +3,7 @@
 # Table name: reg_events
 #
 #  id                            :integer          not null, primary key
-#  name_first                    :string(50)
+#  name_first                    :string(100)
 #  name_last                     :string(50)
 #  name_title                    :string(50)
 #  type_affiliation              :string(50)

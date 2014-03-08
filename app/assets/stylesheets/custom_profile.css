@@ -1,6 +1,6 @@
 
 	.container {
-		width: 1000px;
+		width: 1400px;
 		margin-left: auto;
 		margin-right: auto;
 		min-height: 800px;
@@ -16,7 +16,7 @@
 		display: table-cell; width: 200px;	
 	}
 	.col-midd {
-		display: table-cell; width: 600px;			
+		display: table-cell; width: 800px;			
 		border-left: 2px #41B737 solid;
 		border-right: 2px #41B737 solid;
 		height: 800px;		

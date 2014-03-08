@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8">
+								    	
+  		<title><%= full_title(yield(:title)) %></title> 
+
+    	 <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>    	
+    	
+		<!-- <link href="/assets/custom_nav.css" media="all" rel="stylesheet">
+		<link href="/assets/ink_screen_2.css" media="all" rel="stylesheet">    	
+		<link href="/assets/custom.css" media="all" rel="stylesheet">    	
+		<link href="/assets/custom_page_layout.css" media="all" rel="stylesheet"> -->    	
+  		
+		<!-- <link rel="icon" type="image/png" href="/assets/image_fav_2.png" /> -->		
+		
+		<link rel="icon" type="image/png" href="/assets/logo-lc-round-fav.png">
+  		
+				  		
+   		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>    		   		
+    	
+  		<%= include_gon %>
+    	
+    	
+	  	<%= csrf_meta_tags %>
+	  	<%= render 'layouts/shim' %>  
+
+		<!-- <link href="css/custom-theme/jquery-ui-1.10.3.custom.css" rel="stylesheet"> -->
+		
+		
+		<!-- <script src="js/jquery-1.9.1.js"></script>
+		<script src="js/jquery-ui-1.10.3.custom.js"></script> -->
+		
+		
+
+		
+		                		
+    </head>
+    
+	<body>
+		
+		 <!-- if !session[:admin] 	 -->		
+			<%= render 'layouts/header' %>
+		 <!-- else 
+			 render 'layouts/header_admin' 			
+		 end  -->
+		 		
+		<!-- <div style="width: 1200px; margin-right: auto; margin-left: auto; background: #fff;"> -->
+									
+			<%= yield %> 
+
+
+		<!-- </div> -->
+
+
+			<%= render 'layouts/footer' %>
+
+
+		
+		<%= debug(params) if Rails.env.development? %>
+		
+	</body>
+	
+</html>
+
+

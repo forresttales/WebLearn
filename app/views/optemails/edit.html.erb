@@ -1,0 +1,140 @@
+<% @title = "Email Preferences" %>
+
+
+	<script src="/assets/jquery.validate.js"></script>
+	<script type="text/javascript" src="/assets/entrepeneurs_jquery-1.js"></script>
+	
+	
+
+	<header>
+		<%= render 'share/backtotop' %>
+	</header>
+
+	<div class="container">
+		<div class="table-profile">
+			<div class="row-profile">
+				
+				<div class="col-left">
+				</div>
+				
+				<div class="col-midd">
+
+					<div class="line-space-20"></div>
+					<div class="line-space-20"></div>
+					<div class="line-space-20"></div>
+
+					<span class="normal pad-left-20">ID Sent: <%= @id_sent %></span>
+					<div class="line-space-20"></div>
+					<span class="normal pad-left-20">First Name: <%= @optemail.col_3 %></span>
+					<div class="line-space-20"></div>
+					<span class="normal pad-left-20">Last Name: <%= @optemail.col_4 %></span>
+					<div class="line-space-20"></div>
+					<span class="normal pad-left-20">Email: <%= @optemail.col_18 %></span>
+
+					<div class="table-form" style="width: 600px;">
+						<div class="row">
+							<div class="cell-100percent" tabindex="1">
+								
+								 <!-- 
+								 :description
+								 :price 
+								 -->
+								 								
+								<!-- = render 'shared/error_messages', object: f.object -->			
+								<%= form_for(:optemail, :html => { :id => 'opt-email'}, :url => {:action => 'update', :id => @optemail.id}) do |f| %>
+								
+								<div class="input-form-spacer"></div>
+				
+								<div class="row">
+									<div class="cell-left-form">
+										<%= f.label(:col_40, 'Col 40', class: 'input-label-form') %>							
+									</div>
+									<div class="cell-right-form">
+										<%= f.text_field :col_40, :class => 'input-form', :tabindex => '2', :autofocus => false %>	
+									</div>
+									<div class="cell-error" id="state_price"><p id="error_price"></p></div>      					   							 								      	
+								</div>
+		
+								<div class="input-form-spacer"></div>
+
+								<table>
+									<tr>
+										<td style="width: 131px;"></td>
+										<td style="width: 200px"><label class="input-label-form">Col 41</label></td>
+										<td style="width: 100px">
+											<div id="rd_col_41_yes" class="rd-button"></div>
+											<%= f.radio_button(:col_41, 1) %>
+											<label id="label_col_41_yes" class="input-label required-label" for="col_41_yes" onclick="rd_col_41('yes');" tabindex="3">Yes</label>
+										</td>
+										<td style="width: 100px">		 
+											<div id="rd_col_41_no" class="rd-button"></div>						
+											<%= f.radio_button(:col_41, 0) %>
+											<label id="label_col_41_no" class="input-label required-label" for="col_41_no" onclick="rd_col_41('no');" tabindex="4">No</label>
+										</td>									
+									</tr>
+								</table>
+
+								<div class="input-form-spacer"></div>
+		
+								<div class="row">
+									<div class="cell-left-form">
+										<%= f.label(:col_42, "Col 42", class: 'input-label-form') %>							
+									</div>
+									<div class="cell-right-form">
+										
+								   		<%= f.select(:col_42,
+								   				[['No', '0'],								   		
+								   				['Yes','1']],
+								   				{}, 
+								   				{ :class => 'form-select', :id => 'select_col_42', :tabindex => '5' } ) %>
+
+									</div>
+									<div class="cell-error" id="state_type_content_index"><p id="error_type_content_index"></p></div>      					   							 								      	
+								</div>
+
+
+								<div class="input-form-spacer"></div>
+		
+
+								 <!-- f.hidden_field :type_content --> 
+
+								<div class="input-form-spacer"></div>
+								<div class="input-form-spacer"></div>
+		
+								<div class="row">
+									<div style="width: 600px; text-align: center;">
+									<%= f.submit 'Submit', :id => 'form-submit-edit', :class => 'form-btn', :tabindex => '6' %>
+									</div>      					   							 	
+								</div>      		
+													
+								<% end %>
+								
+							</div>
+							
+						</div>
+						
+					</div>
+
+				</div>
+				
+				<div class="col-right">
+				</div>												
+			</div>
+		</div>
+	</div>
+
+	<script>
+		
+		// $(document).ready(function () {				
+		// $(function() {
+		// $(window).load( function() {
+// 		
+			// $("#publisher-product").submit(function() {	
+// 				
+				// var hidden1 = "<" + "% f.hidden_field :type_content, :value => '" + $("#select_type_content").val() + "'%" + ">";
+				// $( "#render-select-type-content" ).html( hidden1 );				
+			    // return false;
+			// });
+		// });		
+		
+	</script>

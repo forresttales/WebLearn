@@ -1,0 +1,63 @@
+
+<% provide(:title, 'Email Preferences') %>
+
+	<script type="text/javascript" src="/assets/entrepeneurs_jquery-1.js"></script>
+
+	<style type="text/css">
+										
+		@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
+											
+	</style>
+
+	<div style="width: 1200px; margin-right: auto; margin-left: auto; background: #fff;">
+
+		<header>				
+				
+			<%= render 'share/backtotop' %>
+			
+		</header>		
+		
+		<section>
+			
+			<div class="kontainer">
+				
+				<div class="kontainer-space-1"></div>
+				
+					<div id="mainkolumn" class="withsidebar">
+						<div id="k-articlecontent">
+								
+							<bodycopy id="bodykopy">
+
+								<% if session[:optemail_saved] %>
+									<%= render 'optemail_success'%>
+								<% else %>
+									<%= render 'optemail_failure'%>
+								<% end %>
+																
+							</bodycopy>
+							
+								
+						</div>
+						
+						<br clear="all">
+						
+					</div>
+	
+					<div id="k-sidebar">
+						<div id="k-sidebar_inner">
+
+							
+						</div>
+					</div>
+
+					<br clear="all">
+			
+				<div style="height: 700px;"></div>
+					
+			</div>
+			
+		</section>
+
+	</div>
+
+

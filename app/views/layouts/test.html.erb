@@ -5,62 +5,16 @@
 								    	
   		<title><%= full_title(yield(:title)) %></title> 
 
+    	 <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>    	
 
-    	 <!-- stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true  -->    	
     	
-		<link href="/assets/custom_nav.css" media="all" rel="stylesheet">
-		<link href="/assets/ink_screen_2.css" media="all" rel="stylesheet">    	
-		<link href="/assets/custom.css" media="all" rel="stylesheet">    	
-		<link href="/assets/custom_page_layout.css" media="all" rel="stylesheet">    	
-
-		
-		<!-- <link rel="icon" type="image/png" href="/assets/logo-lc-round-fav.png"> -->
-		
-   		 <%= javascript_include_tag "application", "data-turbolinks-track" => true %>     		   		
-    	
-		
-		<script src="js/jquery-1.9.1.js"></script>
-		
-		<!-- <script src="js/jquery-ui-1.10.3.custom.js"></script> -->		
-				
-		
-	<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/default/easyui.css">
-		
-		
-	<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/icon.css">
-	
-	
-	
-	<!-- <link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/demo/demo.css"> -->
-	
-	
-	
-	
-	
-	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
-	<script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>		 -->
-	
-			                		
     </head>
     
 	<body>
 		
-			 <%= render 'layouts/header' %>
-			 
-			 		 		
-		<!-- <div style="width: 1200px; margin-right: auto; margin-left: auto; background: #fff;"> -->
+		<%= render 'layouts/header' %>
 									
-			<%= yield %> 
-
-
-		<!-- </div> -->
-
-
-			 <!-- render 'layouts/footer'  -->
-
-
-
-
+		<%= yield %> 
 		
 		<%= debug(params) if Rails.env.development? %>
 		
