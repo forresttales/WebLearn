@@ -23,6 +23,7 @@ Weblearn::Application.routes.draw do
 
   match '/test', to: 'tests#index', via: 'get'
   match '/gallery', to: 'tests#gallery', via: 'get'
+  match '/overlay', to: 'tests#overlay', via: 'get'
 
   # match '/Events', to: 'events#index', via: 'get'
 
@@ -112,7 +113,7 @@ Weblearn::Application.routes.draw do
   # get "archives/index"
   # get "archives/new"
   get "archives/show"  
-  match '/:id', to: 'archives#show', via: 'get'
+  # match '/:id', to: 'archives#show', via: 'get'
   resources :archives
   #match ':controller(/:action(/:id(.:format)))'
 

@@ -43,8 +43,8 @@
 				
 		<script type="text/javascript" src="../scripts/jquery-1.4.1.min.js"></script>
 							
-		<script type="text/javascript" src="/assets/entrepeneurs_jquery-1.js"></script> 
-		<script type="text/javascript" src="/assets/entrepeneurs_jquery.js"></script>
+		<!-- <script type="text/javascript" src="/assets/entrepeneurs_jquery-1.js"></script> 
+		<script type="text/javascript" src="/assets/entrepeneurs_jquery.js"></script> -->
 
 
     	<script type="text/javascript" src="../scripts/jquery.tmpl.js"></script>
@@ -60,53 +60,6 @@
 
 
 
-<!-- <style>
-	
-.cykle-slideshow, .cykle-slideshow * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-.cykle-slideshow { width: 45%; min-width: 200px; max-width: 500px; margin: 10px auto; padding: 0; position: relative;
-    background: url(http://malsup.github.com/images/spinner.gif) 50% 50% no-repeat;
- }
-.cykle-slideshow img { 
-    position: absolute; top: 0; left: 0;
-    width: 100%; padding: 0; display: block;
-}
-.cykle-slideshow img:first-child {
-    position: static; z-index: 100;
-}
-.cykle-pager { 
-    text-align: center; width: 100%; z-index: 500; position: absolute; top: 10px; overflow: hidden;
-}
-.cykle-pager span { 
-    font-family: arial; font-size: 50px; width: 16px; height: 16px; 
-    display: inline-block; color: #ddd; cursor: pointer; 
-}
-.cykle-pager span.cykle-pager-active { color: #D69746;}
-.cykle-pager > * { cursor: pointer;}
-.cykle-caption { position: absolute; color: white; bottom: 15px; right: 15px; z-index: 700; }
-.cykle-overlay { 
-    font-family: tahoma, arial;
-    position: absolute; bottom: 0; width: 100%; z-index: 600;
-    background: black; color: white; padding: 15px; opacity: .5;
-}
-.cykle-prev, .cykle-next { position: absolute; top: 0; width: 30%; opacity: 0; filter: alpha(opacity=0); z-index: 800; height: 100%; cursor: pointer; }
-.cykle-prev { left: 0;  background: url(http://malsup.github.com/images/left.png) 50% 50% no-repeat;}
-.cykle-next { right: 0; background: url(http://malsup.github.com/images/right.png) 50% 50% no-repeat;}
-.cykle-prev:hover, .cykle-next:hover { opacity: .7; filter: alpha(opacity=70) }
-.disabled { opacity: .5; filter:alpha(opacity=50); }
-.cykle-paused:after {
-    content: 'Paused'; color: white; background: black; padding: 10px;
-    z-index: 500; position: absolute; top: 10px; right: 10px;
-    border-radius: 10px;
-    opacity: .5; filter: alpha(opacity=50);
-}
-
-@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
-    .cykle-slideshow { width: 200px;}
-    .cykle-overlay { padding: 4px }
-    .cykle-caption { bottom: 4px; right: 4px }
-}
-	
-</style> -->
 
 <!-- <link rel="stylesheet" href="http://jquery.malsup.com/cycle2/css.css"> -->
 <!-- <link rel="stylesheet" href="http://jquery.malsup.com/cycle2/site.css"> -->
@@ -115,6 +68,20 @@
 <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script> -->
 <!-- <script src="http://malsup.github.io/jquery.cycle2.js"></script> -->
 <!-- <script src="http://malsup.github.io/jquery.cycle2.tile.js"></script> -->
+
+
+		<style>
+		.cycle-overlay.custom { text-align: right; }
+		button { margin-top: 40px }
+		</style>
+	
+	
+		<!-- <link rel="stylesheet" href="../Cycle2_Overlays_files/css.css"> -->
+		<!-- <link rel="stylesheet" href="../Cycle2_Overlays_files/site.css"> -->
+		<link rel="stylesheet" href="../styles/slideshow.css">
+		<!-- <script src="../Cycle2_Overlays_files/jquery_002.js"></script>
+		<script src="../Cycle2_Overlays_files/jquery.js"></script> -->
+
 
 
 		<style>
@@ -200,6 +167,7 @@
 
 		</div>
 		
+		
 		<div style="width: 1200px; margin-right: auto; margin-left: auto; background: #fff;">
 				
 		<section>
@@ -220,6 +188,7 @@
 				</div> -->
 				
 				<div style="height: 50px;"></div>
+
 				
 				<div class="kontainer-top">
 					
@@ -231,7 +200,6 @@
 								<tr>
 									<td>		 -->
 										
-																				
 									<div style="display: inline-block; width: 700px;">		
 														
 										<script>
@@ -272,36 +240,62 @@
 										<table>
 											<tr>
 												<td>
-														<span style="font-family: KlavikaRegular; color: brown; font-size: 18px;">
-															February 27th&nbsp;&nbsp;&nbsp;Columbia, SC
-														</span>
+													<div style="height: 340px;"></div>
 												</td>
 											</tr>
 											<tr>
 												<td>
-													<div>
+													<a href="/Event-News/Columbia-South-Carolina-March-5">
+														<div class="cycle-slideshow" style="width: 270px; height: 180px; border: 4px solid #000;" 
+														    data-cycle-fx=scrollHorz
+														    data-cycle-timeout=2000
+														    >
+														    <div class="cycle-overlay"></div>
+														
+														    <img src="../event_news_images/SCpic2-h180.png" 
+														        data-cycle-title="Digital Curriculum Strategy Discussion" 
+														        data-cycle-desc="Columbia, SC, Feb 27, 2014" />
+	
+														    <img src="../event_news_images/SCpic6-h180.png" 
+														        data-cycle-title="Photo Montage&nbsp;&raquo;"
+														        data-cycle-desc="" />
+	
+														    <img src="../event_news_images/SCpic12-h180.png" 
+														        data-cycle-title="Digital Curriculum Strategy Discussion" 
+														        data-cycle-desc="Columbia, SC, Feb 27, 2014" />
+	
+														    <img src="../event_news_images/SCpic10-h180.png" 
+														        data-cycle-title="Photo Montage&nbsp;&raquo;"
+														        data-cycle-desc="" />
+	
+														</div>										
+													</a>
+													<!-- <div style="width: 300px; height: 200px; border: 4px solid #000;">
 														<a href="/Event-News/Columbia-South-Carolina-March-5">
 															<img src="../event_news_images/SCpic6-h180.png" class="k-img" width="300" onerror="this.src='../altgraphics/error-260-180.png'">
 														</a>
-													</div>											
+													</div> -->											
 												</td>
 												<td>
 													
 												</td>
 											</tr>											
-											<tr>
+											<!-- <tr>
 												<td style="text-align: center">
 													<a href="/Event-News/Columbia-South-Carolina-March-5" style="color: brown;">
-														<span style="font-family: KlavikaRegular; font-size: 18px;">
-															&raquo;&nbsp;&raquo;&nbsp;&raquo;&nbsp;&nbsp;Photos&nbsp;&nbsp;&raquo;&nbsp;&raquo;&nbsp;&raquo;
+														<span style="font-family: KlavikaRegular; font-size: 16px;">
+															Photo Montage
 														</span>
 													</a>
 												</td>
-											</tr>											
+											</tr> -->											
 										</table>
 									</div>
 									
-										
+
+
+
+
 									<!-- </td>
 								</tr>
 							</table>			
@@ -328,7 +322,6 @@
 
 
 
-
 <!-- <div class="cycle-slideshow" data-cycle-timeout="0" data-cycle-next="#next5" data-cycle-prev="#prev5">
 	<img class="cycle-slide cycle-sentinel" style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1; visibility: hidden; display: block;" src="Cycle2%20Tile_files/p1.jpg" data-cycle-fx="tileSlide" data-cycle-tile-vertical="false">
 	<img class="cycle-slide cycle-slide-active" style="position: absolute; top: 0px; left: 0px; z-index: 100; opacity: 1;" src="Cycle2%20Tile_files/p1.jpg" data-cycle-fx="tileSlide" data-cycle-tile-vertical="false">
@@ -340,7 +333,6 @@
     <a href="#" id="prev5">&lt;&lt; Prev </a>
     <a href="#" id="next5"> Next &gt;&gt; </a>
 </div> -->
-
 
 
 
