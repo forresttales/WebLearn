@@ -843,11 +843,12 @@
 								<tr class="cb-spacer"></tr>								
 								<tr>
 									<td>
-										<div id="cb_workshop_1" class="cb-button cb-valign"></div>
-										<%= f.check_box :city_workshop_1 %>
+										<div id="cb_workshop_1_legacy" class="cb-button cb-valign"></div>
+										 <!-- f.check_box :city_workshop_1 --> 
 									</td>
 									<td style="width: 200px;">
-										<label id="label_city_workshop_1" class="input-label required-label label_cb" for="city_workshop_1" onclick="cb_city_workshop('1');" tabindex="15">Columbia, SC</label>
+										<!-- <label id="label_city_workshop_1" class="input-label required-label label_cb" for="city_workshop_1" onclick="cb_city_workshop('1');" tabindex="15" >Columbia, SC</label> -->
+										<label id="label_city_workshop_1" class="input-label required-label label_cb" for="city_workshop_1" tabindex="15" style="text-decoration: line-through">Columbia, SC</label>
 									</td>
 									<td class="cb-margin"></td>
 									<td class="cb-col-2" style="width: 170px;">
@@ -923,7 +924,7 @@
 										<%= f.check_box :city_workshop_4 %>
 									</td>
 									<td>
-										<label id="label_city_workshop_4" class="input-label required-label label_cb" for="city_workshop_4" onclick="cb_city_workshop('4');" tabindex="27">Houston, TX</label>
+										<label id="label_city_workshop_4" class="input-label required-label label_cb" for="city_workshop_4" onclick="cb_city_workshop('4');" tabindex="23">Houston, TX</label>
 									</td>
 									<td class="cb-margin"></td>									
 									<td class="cb-col-2">
@@ -934,21 +935,21 @@
 										<div style="display: inline-block; width: 40px;"></div>						
 										<div id="rd_city_workshop_4_session_1" class="rd-button"></div>
 										<%= f.radio_button(:city_workshop_4_session, '1') %>
-										<label id="label_city_workshop_4_session_1" class="input-label required-label" for="city_workshop_4_session_1" onclick="rd_city_workshop_4_session('1');" tabindex="28">
+										<label id="label_city_workshop_4_session_1" class="input-label required-label" for="city_workshop_4_session_1" onclick="rd_city_workshop_4_session('1');" tabindex="24">
 											<span class="sessions">8:30am-3:30pm</span>
 										</label>
 											 
 										<div style="display: inline-block; width: 30px;"></div>
 										<div id="rd_city_workshop_4_session_2" class="rd-button"></div>						
 										<%= f.radio_button(:city_workshop_4_session, '2') %>
-										<label id="label_city_workshop_4_session_2" class="input-label required-label" for="city_workshop_4_session_2" onclick="rd_city_workshop_4_session('2');" tabindex="29">
+										<label id="label_city_workshop_4_session_2" class="input-label required-label" for="city_workshop_4_session_2" onclick="rd_city_workshop_4_session('2');" tabindex="25">
 											<span class="sessions">4-6:30pm</span>
 										</label>
 										
 										<div style="display: inline-block; width: 40px;"></div>						
 										<div id="rd_city_workshop_4_session_3" class="rd-button"></div>
 										<%= f.radio_button(:city_workshop_4_session, '3') %>
-										<label id="label_city_workshop_4_session_3" class="input-label required-label" for="city_workshop_4_session_3" onclick="rd_city_workshop_4_session('3');" tabindex="30">
+										<label id="label_city_workshop_4_session_3" class="input-label required-label" for="city_workshop_4_session_3" onclick="rd_city_workshop_4_session('3');" tabindex="26">
 											<span class="sessions">Both</span>											
 										</label>
 									</td>									
@@ -961,7 +962,7 @@
 										<%= f.check_box :city_workshop_3 %>
 									</td>
 									<td>
-										<label id="label_city_workshop_3" class="input-label required-label label_cb" for="city_workshop_3" onclick="cb_city_workshop('3');" tabindex="23">Chicago, IL</label>
+										<label id="label_city_workshop_3" class="input-label required-label label_cb" for="city_workshop_3" onclick="cb_city_workshop('3');" tabindex="27">Chicago, IL</label>
 									</td>					
 									<td class="cb-margin"></td>									
 									<td class="cb-col-2">
@@ -972,21 +973,21 @@
 										<div style="display: inline-block; width: 40px;"></div>						
 										<div id="rd_city_workshop_3_session_1" class="rd-button"></div>
 										<%= f.radio_button(:city_workshop_3_session, '1') %>
-										<label id="label_city_workshop_3_session_1" class="input-label required-label" for="city_workshop_3_session_1" onclick="rd_city_workshop_3_session('1');" tabindex="24">
+										<label id="label_city_workshop_3_session_1" class="input-label required-label" for="city_workshop_3_session_1" onclick="rd_city_workshop_3_session('1');" tabindex="28">
 											<span class="sessions">8:30am-3:30pm</span>
 										</label>
 											 
 										<div style="display: inline-block; width: 30px;"></div>
 										<div id="rd_city_workshop_3_session_2" class="rd-button"></div>						
 										<%= f.radio_button(:city_workshop_3_session, '2') %>
-										<label id="label_city_workshop_3_session_2" class="input-label required-label" for="city_workshop_3_session_2" onclick="rd_city_workshop_3_session('2');" tabindex="25">
+										<label id="label_city_workshop_3_session_2" class="input-label required-label" for="city_workshop_3_session_2" onclick="rd_city_workshop_3_session('2');" tabindex="29">
 											<span class="sessions">4-6:30pm</span>
 										</label>
 										
 										<div style="display: inline-block; width: 40px;"></div>						
 										<div id="rd_city_workshop_3_session_3" class="rd-button"></div>
 										<%= f.radio_button(:city_workshop_3_session, '3') %>
-										<label id="label_city_workshop_3_session_3" class="input-label required-label" for="city_workshop_3_session_3" onclick="rd_city_workshop_3_session('3');" tabindex="26">
+										<label id="label_city_workshop_3_session_3" class="input-label required-label" for="city_workshop_3_session_3" onclick="rd_city_workshop_3_session('3');" tabindex="30">
 											<span class="sessions">Both</span>											
 										</label>
 									</td>									

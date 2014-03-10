@@ -1,7 +1,10 @@
 <% @title = "Email Preferences" %>
 
 	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> -->
-	<script type="text/javascript" src="/assets/entrepeneurs_jquery-1.js"></script>
+	<!-- <script type="text/javascript" src="/assets/entrepeneurs_jquery-1.js"></script> -->
+
+	<script type="text/javascript" src="../scripts/jquery-2.1.2.js"></script>
+
 	<script src="/assets/jquery.validate.js"></script>
 	
 	<style>
@@ -99,7 +102,7 @@
 										<%= f.label(:col_40, 'Please enter your Email address', class: 'input-label-form') %>							
 									</div>
 									<div class="cell-right-form">
-										<%= f.text_field :col_40, :class => 'input-form margin-right-input', :tabindex => '2', :autofocus => true %>
+										<%= f.text_field :col_40, :class => 'input-form-green margin-right-input', :tabindex => '2', :autofocus => true %>
 									</div>
 									<div class="cell-error" id="state_col_40"><p id="error_optemail_col_40"></p></div>      					   							 								      	
 								</div>
