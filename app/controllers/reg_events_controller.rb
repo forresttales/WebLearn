@@ -129,7 +129,7 @@ class RegEventsController < ApplicationController
 
 
     if reg_event.city_workshop_5
-      reg_event.city_workshop_5_text = 'San Bernadino, CA'
+      reg_event.city_workshop_5_text = 'Los Angeles / San Bernadino, CA'
       
           case reg_event.city_workshop_5_session
             when 1
@@ -389,7 +389,8 @@ class RegEventsController < ApplicationController
           :city, 
           :state, 
           :zip, 
-          :phone, 
+          :phone,
+          :phone_mobile, 
           :email, 
           :email_cc_1, 
           :email_cc_2, 

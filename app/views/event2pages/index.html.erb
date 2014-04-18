@@ -249,20 +249,13 @@
 
 <%= render 'share/backtotop_2' %>
 
+<ul class="lc-inline">
+<li>
+<%= render 'share/eventpages_tabs' %>
+<li>
 
+<li>
 <div id="tab-container">
-
-
-<%= render 'share/eventpages_tabs'%>
-
-<script>
-	
-		$(window).load( function() {
-		//$(document).ready(function(){
-			$("#tab3").addClass("active");
-		});
-	
-</script>
 
 
 <div id="lc-landing">
@@ -513,4 +506,22 @@
 
 </div>
 
+<li>
+
+</ul>
+
+<script>
+		
+		var offset_top = 0;
+		jQuery(window).scroll(function() {
+			offset_top = $(window).scrollTop()
+			$('#eventstabs').css('top', offset_top);
+		});
+	
+		$(window).load( function() {
+		//$(document).ready(function(){
+			$("#tab3").addClass("active");
+		});
+	
+</script>
 

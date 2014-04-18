@@ -200,6 +200,10 @@
 		color: orange;		
 		background: url("/assets/submit_form_asterisk_orange.png") no-repeat 278px 7px;
 	}
+	.not-required {
+		color: #ACDDE3;		
+		background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;
+	}
 	
 	/*.focus {
 		color: #fff;
@@ -429,6 +433,30 @@
 					</div>
 				</div>
 			</div>			 -->
+							
+			<div class="row">
+				<div class="cell-left-contact">
+					<%= f.label(:phone, "Phone", :class => 'input-label required-label', :id => 'label_contact_phone') %>
+				</div>
+				<div class="cell-right-contact">
+					<!-- <input type="text" id="name_first" name="contact_name_first" placeholder="first name" class="input-form" /> -->
+					<!-- <label for="name" class="error_label" generated="true"></label>				 -->																
+					 <%= f.text_field(:phone, :class => "input-form not-required", :placeholder => 'Phone', :tabindex => '4') %>					 
+				</div>
+				<div class="cell-error-contact"><p id="error_contact_phone"></p></div>      					   
+			</div>      		
+
+			<div class="input-form-spacer"></div>
+
+			<!-- <div class="error_label">
+				<div class="row">
+					<div class="cell-left-contact" style="width: 190px;"></div>
+					<div class="cell-right-contact" style="width: 300px;">
+						<p id="error_contact_name_affiliation"></p>
+					</div>
+				</div>
+			</div> -->
+							
 																					
 			<div class="row">
 				<div class="cell-left-contact">
@@ -437,7 +465,7 @@
 				<div class="cell-right-contact">
 					<!-- <input type="text" id="name_first" name="contact_name_first" placeholder="first name" class="input-form" /> -->
 					<!-- <label for="name" class="error_label" generated="true"></label>				 -->																
-					 <%= f.text_field(:subject, :class => "input-form required", :placeholder => 'Subject', :tabindex => '4') %>					 
+					 <%= f.text_field(:subject, :class => "input-form required", :placeholder => 'Subject', :tabindex => '5') %>					 
 				</div>
 				<div class="cell-error-contact"><p id="error_contact_subject"></p></div>      					   
 			</div>      		
@@ -458,7 +486,7 @@
 					<%= f.label(:message, "Message", :class => 'input-label required-label', :id => 'label_contact_message') %>
 				</div>
 				<div class="cell-right-contact">
-					<%= f.text_area(:message, :class => "input-form required message", :spellcheck => 'false', :placeholder => 'Message', :tabindex => '5') %>
+					<%= f.text_area(:message, :class => "input-form required message", :spellcheck => 'false', :placeholder => 'Message', :tabindex => '6') %>
 				</div>      
 				<div class="cell-error-contact" style="top: 0px;"><p id="error_contact_message"></p></div>      	
 			</div>
@@ -471,7 +499,7 @@
 				<div class="cell-left-contact">
 				</div>
 				<div class="cell-submit-contact" style="padding-left: 0px;">
-					<%= f.submit "Submit", :id => 'btn_submit', :class => 'btn submitcontact', :tabindex => '6' %>
+					<%= f.submit "Submit", :id => 'btn_submit', :class => 'btn submitcontact', :tabindex => '7' %>
 				</div>      	
 			</div>      		
 
@@ -636,22 +664,27 @@
 					'contact[name]': {
 						required: true,
 						minlength: 1,						
-						maxlength: 50						
+						maxlength: 100						
 					},
 					'contact[email]': {
 						required: true,
-						maxlength: 50,
+						maxlength: 100,
 						email: true
+					},
+					'contact[phone]': {
+						required: false,
+						minlength: 1,						
+						maxlength: 100						
 					},
 					'contact[subject]': {
 						required: true,
 						minlength: 1,						
-						maxlength: 50						
+						maxlength: 200						
 					},
 					'contact[message]': {
 						required: true,
 						minlength: 1,						
-						maxlength: 2000						
+						maxlength: 4000						
 					}																																			
 				},
 				invalidHandler: function(event, validator) {
@@ -673,20 +706,24 @@
 				messages: {
 					'contact[name]': {
 						required: "*",
-						maxlength: "Name exceeds 50 characters"							
+						maxlength: "Exceeds 255 characters"							
 					},
 					'contact[email]': {
 						required: "*",
-						maxlength: "Email address exceeds 40 characters",
+						maxlength: "Exceeds 255 characters",
 						email: "Please enter a valid email address"
 					},					
 					'contact[subject]': {
 						required: "*",
-						maxlength: "Subject exceeds 100 characters"							
+						maxlength: "Exceeds 255 characters"							
+					},
+					'contact[subject]': {
+						required: "*",
+						maxlength: "Exceeds 255 characters"							
 					},
 					'contact[message]': {
 						required: "*",
-						maxlength: "Message exceeds 2000 characters"							
+						maxlength: "Exceeds 4000 characters"							
 					}																																			
 				},
 				errorContainer: $("div .error_label"),				
@@ -784,6 +821,10 @@
 
 		$("#contact_email").on("blur", function () {
 			errorMessageUpdate('contact_email');
+		});
+
+		$("#contact_phone").on("blur", function () {
+			errorMessageUpdate('contact_phone');
 		});
 
 		$("#contact_subject").on("blur", function () {

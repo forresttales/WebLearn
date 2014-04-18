@@ -9,6 +9,7 @@
 #  message    :text
 #  created_at :datetime
 #  updated_at :datetime
+#  phone      :string(100)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html

@@ -164,15 +164,15 @@
 		}
 	
 	#lc-landing ul li {
-		color: #000;
+		color: #333;
 		
-		font-family: msyhb;
+		/*font-family: msyhb;*/
 		
 		/*font-family: KlavikaMedium;*/		
-		/*font-family: "Quattrocento";*/	
-		font-size: 20px;
+		font-family: "Quattrocento";	
+		font-size: 16px;
 		margin-left: 30px;
-		font-weight: 200;
+		font-weight: 400;
 		line-height: 1.2em;		
 		}
 			
@@ -251,14 +251,13 @@
 
 <%= render 'share/backtotop_2' %>
 
+<ul class="lc-inline">
+<li>
+<%= render 'share/eventpages_tabs' %>
+<li>
 
+<li>
 <div id="tab-container">
-
-
-<%= render 'share/eventpages_tabs'%>
-	
-
-
 
 <div id="lc-landing">
 		
@@ -280,24 +279,18 @@
 <div class="spacer"></div>
 <div class="spacer"></div>
 
+<div style="width: 100%; height: 370px; border-top: 2px solid #000; border-bottom: 2px solid #000;">
+	
+<img src="../repository/events/little-girl-w400-h267.png" alt="little-girl-w400-h267.png" width="400px">
+
+<div class="spacer"></div>
 
 <ul>
 	<li>
-		<span>February 19th &ndash; 2014 Market Briefing: Digital Curriculum & Devices, 11am PST / 1pm CST/ 2pm EST</span>
+		<span>Stay tuned to email announcements for upcoming events.</span>
+		<!-- <span>February 19th &ndash; 2014 Market Briefing: Digital Curriculum & Devices, 11am PST / 1pm CST/ 2pm EST</span> -->
 	</li>
 </ul>
-
-<div class="spacer"></div>
-
-<p><strong>Sign up to attend</strong> an upcoming Internet seminar with The Learning Counsel for an update 
-	on the size of the IT spend in the K12 and Higher Education markets, the spend on digital curriculum versus 
-	traditional instructional materials and a discussion of trends.
-</p>
-
-
-<div class="spacer"></div>
-
-<img src="../repository/events/market-briefing-1.png" alt="market-briefing-1.png" width="600px">
 
 <div class="spacer"></div>
 
@@ -305,6 +298,113 @@
 	<a href="/SeminarRegistration" class="k-link"><strong>Click here to Register</strong></a>	
 </p>
 
+</div>
+
+<div class="spacer"></div>
+<div class="spacer"></div>
+
+<span style="color: #3D3D3D; font-family: 'Quattrocento Sans', sans-serif; font-size: 26px; font-weight: bold;">PAST EVENTS</span>
+
+<div class="spacer"></div>
+
+<ul>
+	<li>
+		<span>VIEW RECORDING - February 19th – 2014 Market Briefing: Digital Curriculum & Devices, 11am PST / 1pm CST/ 2pm EST   -- Our apologies 
+			for a couple of sound and technical slows during this event, while even so unprecedented demand for review of our data has prompted us to 
+			put the recording up as is and as soon as possible.</span>
+	</li>
+</ul>
+
+
+<!-- <p><strong>Sign up to attend</strong> an upcoming Internet seminar with The Learning Counsel for an update 
+	on the size of the IT spend in the K12 and Higher Education markets, the spend on digital curriculum versus 
+	traditional instructional materials and a discussion of trends.
+</p> -->
+
+
+<div class="spacer"></div>
+
+
+		<!-- width="525" 
+		height="325" -->
+
+<iframe title="YouTube video player" 
+		width="800"
+		height="495" 
+		src="http://www.youtube.com/embed/QyQZwP0jYl0?wmode=transparent" 
+		frameborder="0" 
+		allowfullscreen>
+</iframe>
+
+<!-- http://youtu.be/QyQZwP0jYl0 -->
+<!-- http://www.youtube.com/watch?v=QyQZwP0jYl0&feature=youtu.be -->
+
+	
+<div class="spacer"></div>
+<div class="spacer"></div>
+
+<!-- <div id="render_links"></div>
+<script type="text/javascript" src="../journalscripts/links.js"></script> --> 
+
+	   	<style type="text/css">
+	    	.social-button-container {
+	            background-color: #DCE3DD;
+	            width: 132px;
+	            height: 63px;
+	        }
+	        .social-button {
+	        	text-align: left;
+	        	display: inline;
+	        }
+			.IN-widget {
+				position: relative;
+				left: 70px;
+				top: -65px;
+			}	        
+	    </style>
+	  	<div class="social-button-container">
+	        <div class="social-button">
+				<a 	id="btn-twitter"
+					href="https://twitter.com/share" 
+					class="twitter-share-button" 
+					data-lang="en"
+					data-url=""
+					data-text=""
+					data-count="vertical"
+					>Tweet
+				</a>
+			</div>                
+	        <div>
+				<script type="IN/Share" data-counter="top">
+				</script>
+			</div>                
+	  	</div>
+		<script>
+			!function(d,s,id) {
+				var js,fjs=d.getElementsByTagName(s)[0];
+				if(!d.getElementById(id)) {
+					js=d.createElement(s);
+					js.id=id;
+					js.src="https://platform.twitter.com/widgets.js";
+					fjs.parentNode.insertBefore(js,fjs);
+				}
+			}(document,"script","twitter-wjs");
+			var datatext = document.getElementById("desc").innerHTML + "\n";
+			var dataurl = document.URL;				
+			document.getElementById("btn-twitter").setAttribute("data-text", datatext);
+			document.getElementById("btn-twitter").setAttribute("data-url", dataurl);
+		</script>			 						
+		<script src="//platform.linkedin.com/in.js" type="text/javascript">
+		 lang: en_US
+		</script>	
+
+
+<div class="spacer"></div>
+
+
+<!-- <p>
+	<a href="/SeminarRegistration" class="k-link"><strong>Click here to Register</strong></a>	
+</p> -->
 
 </div>
 
@@ -322,12 +422,23 @@
 
 </div>
 
+<li>
+
+</ul>
+
 <script>
-	
+		
+		var offset_top = 0;
+		jQuery(window).scroll(function() {
+			offset_top = $(window).scrollTop()
+			$('#eventstabs').css('top', offset_top);
+		});
+
 		$(window).load( function() {
 		//$(document).ready(function(){
 			$("#tab5").addClass("active");
 		});
+		
 	
 </script>
 

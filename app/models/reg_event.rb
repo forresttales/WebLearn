@@ -77,6 +77,7 @@
 #  city_workshop_12_session_text :string(50)
 #  city_workshop_13_session_text :string(50)
 #  city_workshop_14_session_text :string(50)
+#  phone_mobile                  :string(100)
 #
 
 class RegEvent < ActiveRecord::Base
@@ -92,6 +93,7 @@ class RegEvent < ActiveRecord::Base
                   :state, 
                   :zip, 
                   :phone, 
+                  :phone_mobile,
                   :email, 
                   :email_cc_1, 
                   :email_cc_2, 

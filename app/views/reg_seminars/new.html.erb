@@ -11,7 +11,7 @@
 	/*@import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans);*/
 	
 	#join-image {
-		height: 1100px;
+		height: 900px;
 	}
 	
 	.form-reg-seminar {
@@ -516,9 +516,15 @@
 					
 					<div class="cell-700" style="padding-left: 32px;">
 						<h2 class="text-form-top">
+							
+							<a href="/ContactUs">
 							<img src="../repository/events/events-reg-form-1.png" alt="events-reg-form-1.png" height="150px" align="left" style="margin-right: 30px;" >
-							<strong>REGISTER </strong>for events with existing venues below or     
-								PRE-REGISTER for upcoming events and we'll keep you posted on dates and final venues via email.
+							</a>
+							<strong>By registering</strong> here, we can keep you posted on dates and final venues via email.
+
+							<!-- <strong>REGISTER </strong>for events with existing venues below or     
+								PRE-REGISTER for upcoming events and we'll keep you posted on dates and final venues via email. -->
+
  						</h2>
 					</div>
 					<!-- <p>
@@ -744,6 +750,7 @@
 			<div class="input-form-spacer"></div>
 			
 			
+<% if false %>			
 			<!-- seminar start -->
 			<div class="input-form-spacer"></div>
 			<div class="input-form-spacer"></div>
@@ -830,6 +837,8 @@
 				
 			</div>      		
 			<!-- city_workshop end -->
+
+<% end %>
 
 			<div class="input-form-spacer"></div>
 			<div class="input-form-spacer"></div>
@@ -985,42 +994,44 @@
 					//form.submit();
 					
 					// selectValid1 = validateSelect1();
-					selectValid2 = validateSelect2();
-					validSeminar = validateSeminar();
+					
+					//selectValid2 = validateSelect2();
+					//validSeminar = validateSeminar();
 					
 					
 					//var s = 'selectValid1 = ' + selectValid1 + ' selectValid2 = ' + selectValid2;
 					//alert(s);
 					
 					// if ( selectValid1 && selectValid2 ) {
-					if ( selectValid2 && validSeminar ) {						
+					// if ( selectValid2 && validSeminar ) {						
 						form.submit();
-					}
-					else
-					{
-						var errors = 0;
-						// if (!selectValid1) {
-							// errors += 1;
+					// }
+					// else
+					// {
+						// var errors = 0;
+						// // if (!selectValid1) {
+							// // errors += 1;
+						// // }
+						// // if (!selectValid2) {
+							// // errors += 1;
+						// // }			
+						// // if ( !validSeminar ) {
+							// // errors += 1;
+						// // }					
+// 						
+						// if (errors) {
+							// var message = errors == 1
+							// ? '1 required field missed'
+							// : errors + ' required fields missed';
+							// $("div.errors p").html(message);
+							// $("div.errors").show();
+							// $("#btn_submit").blur();
+							// $("#form_reg_seminar").focus();		
+							// scrollToAnchor('anchor1');											
+						// } else {
+							// $("div.errors").hide();
 						// }
-						if (!selectValid2) {
-							errors += 1;
-						}			
-						if ( !validSeminar ) {
-							errors += 1;
-						}					
-						if (errors) {
-							var message = errors == 1
-							? '1 required field missed'
-							: errors + ' required fields missed';
-							$("div.errors p").html(message);
-							$("div.errors").show();
-							$("#btn_submit").blur();
-							$("#form_reg_seminar").focus();		
-							scrollToAnchor('anchor1');											
-						} else {
-							$("div.errors").hide();
-						}
-					}
+					// }
 				},
 			
 				debug: true,
@@ -1041,42 +1052,42 @@
 						maxlength: 50						
 					},
 					'reg_seminar[name_title]': {
-						required: true,
+						required: false,
 						minlength: 1,						
 						maxlength: 50						
 					},
 					'reg_seminar[type_affiliation]': {
-						required: true,
+						required: false,
 						minlength: 1,						
 						maxlength: 50						
 					},
 					'reg_seminar[name_affiliation]': {
-						required: true,
+						required: false,
 						minlength: 1,						
 						maxlength: 50						
 					},
 					'reg_seminar[address]': {
-						required: true,
+						required: false,
 						minlength: 1,						
 						maxlength: 50						
 					},
 					'reg_seminar[city]': {
-						required: true,
+						required: false,
 						minlength: 1,						
 						maxlength: 50						
 					},
 					'reg_seminar[state]': {
-						required: true,
+						required: false,
 						minlength: 1,						
 						maxlength: 50						
 					},
 					'reg_seminar[zip]': {
-						required: true,
+						required: false,
 						minlength: 1,						
 						maxlength: 50						
 					},
 					'reg_seminar[phone]': {
-						required: true,
+						required: false,
 						minlength: 1,						
 						maxlength: 50						
 					},
@@ -1110,12 +1121,13 @@
 					// if (!validateSelect1()) {
 						// errors += 1;
 					// }
-					if (!validateSelect2()) {
-						errors += 1;
-					}		
-					if ( !validateSeminar() ) {
-						errors += 1;
-					}													
+					// if (!validateSelect2()) {
+						// errors += 1;
+					// }		
+					// if ( !validateSeminar() ) {
+						// errors += 1;
+					// }													
+					
 					if (errors) {
 						var message = errors == 1
 						? '1 required field missed'
@@ -1250,12 +1262,12 @@
 				// if (!validateSelect1()) {
 					// errors += 1;
 				// }
-				if (!validateSelect2()) {
-					errors += 1;
-				}
-				if ( !validateSeminar() ) {
-					errors += 1;
-				}					
+				// if (!validateSelect2()) {
+					// errors += 1;
+				// }
+				// if ( !validateSeminar() ) {
+					// errors += 1;
+				// }					
 				
 				if (errors) {
 					var message = errors == 1
@@ -1367,157 +1379,157 @@
 		});
 
 
-		var selectValid2 = false;
-
-		function selectStatus2() {
-			
-			if ($("#reg_seminar_type_affiliation option:selected").val() == '0') {
-				$('#state_reg_seminar_type_affiliation').css ({			
-					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
-				});
-				
-				$('.dropdown2').css ({			
-					color: '#838383'
-				});
-				
-				selectValid2 = false;						
-			}
-			else {
-				$('#state_reg_seminar_type_affiliation').css ({			
-					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 5px'
-				});
-				
-				$('.dropdown2').css ({			
-					color: '#ACDDE3'
-				});			
-		
-				if( !selectValid2 ) {
-					$('.dropdown2').css ({			
-						'border-color' : '#005C9E'
-					});
-					
-					$('.dropdown2 > .selected i').css ({			
-						'color' : '#005C9E',
-						'border-left-color' : '#005C9E' 
-					});
-					
-					$('#error_reg_seminar_type_affiliation').html("");					
-				}
-				
-				selectValid2 = true;		
-			}
-			
-			if(validatorCalled) {
-				validateSelect2();
-			}
-			
-			updateErrorCount();			
-		}
-
-
-		function validateSelect2() {
-			
-			if ($("#reg_seminar_type_affiliation option:selected").val() == '0') {
-				$('.dropdown2').css ({			
-					'border-color' : '#851717'
-				});
-				
-				$('.dropdown2 > .selected i').css ({			
-					'color' : '#851717',
-					'border-left-color' : '#851717' 
-				});
-		
-				$('#error_reg_seminar_type_affiliation').html("*");
-		
-				selectValid2 = false;
-			}
-			else {
-				$('.dropdown2').css ({			
-					'border-color' : '#005C9E'
-				});
-				
-				$('.dropdown2 > .selected i').css ({			
-					'color' : '#005C9E',
-					'border-left-color' : '#005C9E' 
-				});
-
-				$('#error_reg_seminar_type_affiliation').html("");
-				
-				selectValid2 = true;		
-			}
-			
-			return selectValid2;
-		}
-
-
-		function cb_seminar(caller) {
-			
-			// var rd = "#opt_city_workshop_" + caller + "_session";
-			
-			var cb = "#reg_seminar_seminar_" + caller;
-			var sb = "#cb_seminar_" + caller;
-			if($(cb).is(':checked')) {
-				$(cb).prop('checked', false);
-				$(sb).removeClass("cb-background");
-				// $(rd).css ({			
-					// visibility: 'hidden'
-				// });							
-			}
-			else {
-				$(cb).prop('checked', true);
-				$(sb).addClass("cb-background");
-				// $(rd).css ({			
-					// visibility: 'visible'
+		// var selectValid2 = false;
+// 
+		// function selectStatus2() {
+// 			
+			// if ($("#reg_seminar_type_affiliation option:selected").val() == '0') {
+				// $('#state_reg_seminar_type_affiliation').css ({			
+					// background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
 				// });
-			}
-			validateSeminar();			
-		}
-
-
-
-		function validateSeminar() {
-
-			var isChecked = false;
-			var cb;
-			for (var i = 1; i < 2; i++ ) {
-				cb = "#reg_seminar_seminar_" + i;
-				if($(cb).is(':checked')) {
-					isChecked = true;
-				}
-			}
-			
-			if ( !isChecked ) {
-				if (validatorCalled ) {
-					$("#border_seminar").css ({
-						'border-color' : '#851717'
-					});
-					
-					$('#error_reg_seminar_seminar').html("* Select");
-				}
-	
-				$("#state_reg_seminar_seminar").css ({			
-					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
-				});				
-			}
-			else {								
-				$("#border_seminar").css ({
-					'border-color' : '#005C9E'
-				});
-				
-				$('#error_reg_seminar_seminar').html("");
-				
-				$("#state_reg_seminar_seminar").css ({			
-					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 5px'
-				});
-			}
-
-			// if ( validatorCalled ) {
-				// updateErrorCount();
+// 				
+				// $('.dropdown2').css ({			
+					// color: '#838383'
+				// });
+// 				
+				// selectValid2 = false;						
 			// }
+			// else {
+				// $('#state_reg_seminar_type_affiliation').css ({			
+					// background: 'url("/assets/submit_form_tick.png") no-repeat 0px 5px'
+				// });
+// 				
+				// $('.dropdown2').css ({			
+					// color: '#ACDDE3'
+				// });			
+// 		
+				// if( !selectValid2 ) {
+					// $('.dropdown2').css ({			
+						// 'border-color' : '#005C9E'
+					// });
+// 					
+					// $('.dropdown2 > .selected i').css ({			
+						// 'color' : '#005C9E',
+						// 'border-left-color' : '#005C9E' 
+					// });
+// 					
+					// $('#error_reg_seminar_type_affiliation').html("");					
+				// }
+// 				
+				// selectValid2 = true;		
+			// }
+// 			
+			// if(validatorCalled) {
+				// validateSelect2();
+			// }
+// 			
+			// updateErrorCount();			
+		// }
 
-			
-			return isChecked;
-		}
+
+		// function validateSelect2() {
+// 			
+			// if ($("#reg_seminar_type_affiliation option:selected").val() == '0') {
+				// $('.dropdown2').css ({			
+					// 'border-color' : '#851717'
+				// });
+// 				
+				// $('.dropdown2 > .selected i').css ({			
+					// 'color' : '#851717',
+					// 'border-left-color' : '#851717' 
+				// });
+// 		
+				// $('#error_reg_seminar_type_affiliation').html("*");
+// 		
+				// selectValid2 = false;
+			// }
+			// else {
+				// $('.dropdown2').css ({			
+					// 'border-color' : '#005C9E'
+				// });
+// 				
+				// $('.dropdown2 > .selected i').css ({			
+					// 'color' : '#005C9E',
+					// 'border-left-color' : '#005C9E' 
+				// });
+// 
+				// $('#error_reg_seminar_type_affiliation').html("");
+// 				
+				// selectValid2 = true;		
+			// }
+// 			
+			// return selectValid2;
+		// }
+
+
+		// function cb_seminar(caller) {
+// 			
+			// // var rd = "#opt_city_workshop_" + caller + "_session";
+// 			
+			// var cb = "#reg_seminar_seminar_" + caller;
+			// var sb = "#cb_seminar_" + caller;
+			// if($(cb).is(':checked')) {
+				// $(cb).prop('checked', false);
+				// $(sb).removeClass("cb-background");
+				// // $(rd).css ({			
+					// // visibility: 'hidden'
+				// // });							
+			// }
+			// else {
+				// $(cb).prop('checked', true);
+				// $(sb).addClass("cb-background");
+				// // $(rd).css ({			
+					// // visibility: 'visible'
+				// // });
+			// }
+			// validateSeminar();			
+		// }
+
+
+
+		// function validateSeminar() {
+// 
+			// var isChecked = false;
+			// var cb;
+			// for (var i = 1; i < 2; i++ ) {
+				// cb = "#reg_seminar_seminar_" + i;
+				// if($(cb).is(':checked')) {
+					// isChecked = true;
+				// }
+			// }
+// 			
+			// if ( !isChecked ) {
+				// if (validatorCalled ) {
+					// $("#border_seminar").css ({
+						// 'border-color' : '#851717'
+					// });
+// 					
+					// $('#error_reg_seminar_seminar').html("* Select");
+				// }
+// 	
+				// $("#state_reg_seminar_seminar").css ({			
+					// background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
+				// });				
+			// }
+			// else {								
+				// $("#border_seminar").css ({
+					// 'border-color' : '#005C9E'
+				// });
+// 				
+				// $('#error_reg_seminar_seminar').html("");
+// 				
+				// $("#state_reg_seminar_seminar").css ({			
+					// background: 'url("/assets/submit_form_tick.png") no-repeat 0px 5px'
+				// });
+			// }
+// 
+			// // if ( validatorCalled ) {
+				// // updateErrorCount();
+			// // }
+// 
+// 			
+			// return isChecked;
+		// }
 
 
 

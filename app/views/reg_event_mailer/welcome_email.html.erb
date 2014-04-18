@@ -39,7 +39,7 @@
     	}
     	    	
     	table#workshop {
-    		width: 
+    		/*width:*/ 
     	}
     	table#workshop td.left {
     		width: 220px;
@@ -69,19 +69,12 @@
     	}
     	span.workshop-2 {
 			display: inline-block;
-			width: 200px;
+			width: 300px;
     		font-family:Arial, Helvetica, sans-serif;			
 			font-size: 16px;    		
     	}
     	span.workshop-3 {
 			display: inline-block;
-			width: 150px;
-    		font-family:Arial, Helvetica, sans-serif;			
-			font-size: 16px;    		
-    	}
-    	span.workshop-4 {
-			display: inline-block;
-			width: 150px;
     		font-family:Arial, Helvetica, sans-serif;			
 			font-size: 16px;    		
     	}
@@ -102,7 +95,7 @@
 		<br>
 		you’ve signed up for, agenda, and what to expect.      	
     	<br>
-    	We’re so exciting you’re attending!  See you there!
+    	We’re so excited you’re attending!  See you there!
     </span>
   	<br>
   	<br>
@@ -195,6 +188,14 @@
 	  		</tr>
 	  		<tr>
 	  			<td class="left">
+	    			<p>Mobile Phone:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event.phone_mobile %></p>
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="left">
 	    			<p>Email:</p>
 	  			</td>
 	  			<td class="right">
@@ -225,26 +226,20 @@
 		</table>
 			
 			
-		<table style="width: 650px;">
+		<table style="width: 800px;">
 	  		<% if @reg_event.city_workshop_1 %>
 	  		<tr>
-	  			<td>
+	  			<td style="width: 100px;">
 	    			<span class="workshop-1">Workshop:</span>
 	  			</td>
-	  			<td>
+	  			<td style="width: 300px;">
 	    			<span class="workshop-2"><%= @reg_event.city_workshop_1_text %></span>
 	  			</td>
 	  			<td class="workshop-3">
 	  				<span>February 27, 2014</span>
 	  			</td>
-	  			<td>
-	    			<span class="workshop-4"><%= @reg_event.city_workshop_1_session_text %></span>
-	  			</td>
 	  		</tr>  		
 	  		<% end %>
-	  		
-	  		
-	  		
 	  		<% if @reg_event.city_workshop_2 %>
 	  		<tr>
 	  			<td>
@@ -254,10 +249,7 @@
 	    			<span class="workshop-2"><%= @reg_event.city_workshop_2_text %></span>
 	  			</td>
 	  			<td class="workshop-3">
-	  				<span>March 17, 2014</span>
-	  			</td>
-	  			<td>
-	    			<span class="workshop-4"><%= @reg_event.city_workshop_2_session_text %></span>
+	  				<span>April 2, 2014</span>
 	  			</td>
 	  		</tr>  		
 	  		<% end %>
@@ -270,10 +262,7 @@
 	    			<span class="workshop-2"><%= @reg_event.city_workshop_4_text %></span>
 	  			</td>
 	  			<td class="workshop-3">
-	  				<span>April 10 (tentative), 2014</span>
-	  			</td>
-	  			<td>
-	    			<span class="workshop-4"><%= @reg_event.city_workshop_4_session_text %></span>
+	  				<span>April 10, 2014</span>
 	  			</td>
 	  		</tr>  		
 	  		<% end %>
@@ -288,9 +277,6 @@
 	  			<td class="workshop-3">
 	  				<span>April 15, 2014</span>
 	  			</td>
-	  			<td>
-	    			<span class="workshop-4"><%= @reg_event.city_workshop_3_session_text %></span>
-	  			</td>
 	  		</tr>  		
 	  		<% end %>
 	  		<% if @reg_event.city_workshop_5 %>
@@ -302,10 +288,7 @@
 	    			<span class="workshop-2"><%= @reg_event.city_workshop_5_text %></span>
 	  			</td>
 	  			<td class="workshop-3">
-	  				<span>April 24, 2014</span>
-	  			</td>
-	  			<td>
-	    			<span class="workshop-4"><%= @reg_event.city_workshop_5_session_text %></span>
+	  				<span>May 22, 2014</span>
 	  			</td>
 	  		</tr>  		
 	  		<% end %>
@@ -320,9 +303,6 @@
 	  			<td class="workshop-3">
 	  				<span>May 6, 2014</span>
 	  			</td>
-	  			<td>
-	    			<span class="workshop-4"><%= @reg_event.city_workshop_6_session_text %></span>
-	  			</td>
 	  		</tr>  		
 	  		<% end %>
 	  		<% if @reg_event.city_workshop_7 %>
@@ -335,9 +315,6 @@
 	  			</td>
 	  			<td class="workshop-3">
 	  				<span>June TBD, 2014</span>
-	  			</td>
-	  			<td>
-	    			<span class="workshop-4"><%= @reg_event.city_workshop_7_session_text %></span>
 	  			</td>
 	  		</tr>  		
 	  		<% end %>
@@ -352,9 +329,6 @@
 	  			<td class="workshop-3">
 	  				<span>June TBD, 2014</span>
 	  			</td>
-	  			<td>
-	    			<span class="workshop-4"><%= @reg_event.city_workshop_8_session_text %></span>
-	  			</td>
 	  		</tr>  		
 	  		<% end %>
 	  		<% if @reg_event.city_workshop_9 %>
@@ -367,9 +341,6 @@
 	  			</td>
 	  			<td class="workshop-3">
 	  				<span>September TBD, 2014</span>
-	  			</td>
-	  			<td>
-	    			<span class="workshop-4"><%= @reg_event.city_workshop_9_session_text %></span>
 	  			</td>
 	  		</tr>  		
 	  		<% end %>
@@ -384,9 +355,6 @@
 	  			<td class="workshop-3">
 	  				<span>September TBD, 2014</span>
 	  			</td>
-	  			<td>
-	    			<span class="workshop-4"><%= @reg_event.city_workshop_10_session_text %></span>
-	  			</td>
 	  		</tr>  		
 	  		<% end %>
 	  		<% if @reg_event.city_workshop_11 %>
@@ -399,9 +367,6 @@
 	  			</td>
 	  			<td class="workshop-3">
 	  				<span>September TBD, 2014</span>
-	  			</td>
-	  			<td>
-	    			<span class="workshop-4"><%= @reg_event.city_workshop_11_session_text %></span>
 	  			</td>
 	  		</tr>  		
 	  		<% end %>
@@ -416,9 +381,6 @@
 	  			<td class="workshop-3">
 	  				<span>September TBD, 2014</span>
 	  			</td>
-	  			<td>
-	    			<span class="workshop-4"><%= @reg_event.city_workshop_12_session_text %></span>
-	  			</td>
 	  		</tr>  		
 	  		<% end %>
 	  		<% if @reg_event.city_workshop_13 %>
@@ -431,9 +393,6 @@
 	  			</td>
 	  			<td class="workshop-3">
 	  				<span>October TBD, 2014</span>
-	  			</td>
-	  			<td>
-	    			<span class="workshop-4"><%= @reg_event.city_workshop_13_session_text %></span>
 	  			</td>
 	  		</tr>  		
 	  		<% end %>
@@ -448,9 +407,6 @@
 	  			<td class="workshop-3">
 	  				<span>October TBD, 2014</span>
 	  			</td>
-	  			<td>
-	    			<span class="workshop-4"><%= @reg_event.city_workshop_14_session_text %></span>
-	  			</td>
 	  		</tr>  		
 	  		<% end %>
 	  		<% if @reg_event.city_workshop_15 %>
@@ -464,8 +420,6 @@
 	  			<td class="workshop-3">
 	  				<span>November 3-4, 2014</span>
 	  			</td>
-	  			<td>
-	  			</td>
 	  		</tr>  		
 	  		<% end %>
 	  		
@@ -473,8 +427,8 @@
 	</div>
     <br>
     <br>
-    <p>If we have not posted a venue for the event you have pre-registered for, 
-    	please note that we will be sending you updated data via email as we get closer 
+    <p>If we have not posted a venue for the event for which you have pre-registered, 
+    	please note that we will be sending you updates via email as we draw closer 
     	to the event.</p>   
     <p>Please also feel free to call David Kafitz at (888) 611-7709 ext. 11.</p>
     <br>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140306175731) do
+ActiveRecord::Schema.define(version: 20140318103905) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -86,28 +86,12 @@ ActiveRecord::Schema.define(version: 20140306175731) do
 
   create_table "contacts", force: true do |t|
     t.string   "name",       limit: 50
-    t.string   "email",                 default: "", null: false
+    t.string   "email",                  default: "", null: false
     t.string   "subject",    limit: 50
     t.text     "message"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "data_files", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "edmatchs", force: true do |t|
-    t.integer  "institute_id"
-    t.text     "result"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "edmatchups", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "phone",      limit: 100
   end
 
   create_table "eventnews", force: true do |t|
@@ -141,35 +125,6 @@ ActiveRecord::Schema.define(version: 20140306175731) do
   add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
-
-  create_table "image_institutes", force: true do |t|
-    t.integer  "institute_id"
-    t.string   "image_name",   limit: 100
-    t.boolean  "primary",                  default: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "image_institutes", ["institute_id"], name: "index_image_institutes_on_institute_id", using: :btree
-
-  create_table "image_publishers", force: true do |t|
-    t.integer  "publisher_id"
-    t.string   "image_name",   limit: 100
-    t.boolean  "primary",                  default: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "image_publishers", ["publisher_id"], name: "index_image_publishers_on_publisher_id", using: :btree
-
-  create_table "images", force: true do |t|
-    t.integer  "admin_user_id"
-    t.string   "image_name",    limit: 100
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "images", ["admin_user_id"], name: "index_images_on_admin_user_id", using: :btree
 
   create_table "institute_images", force: true do |t|
     t.integer  "institute_id"
@@ -1066,6 +1021,7 @@ ActiveRecord::Schema.define(version: 20140306175731) do
     t.string   "city_workshop_12_session_text", limit: 50
     t.string   "city_workshop_13_session_text", limit: 50
     t.string   "city_workshop_14_session_text", limit: 50
+    t.string   "phone_mobile",                  limit: 100
   end
 
   create_table "reg_letters", force: true do |t|

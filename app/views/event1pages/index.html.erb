@@ -141,11 +141,11 @@
 		color: #333;
 		/*font-family: "Quattrocento";*/
 		font-family: KlavikaLight;
-		font-size: 13px;
+		/*font-size: 11px;*/
 		width: 800px;
 		line-height: 1.2em;	
-	  	font-size: 1.15em;
-		
+	  	/*font-size: 1.15em;*/
+		font-size: 1.0em;		
 		}
 	
 	#lc-landing a {
@@ -253,7 +253,7 @@
 		
 		color: #000;
 		font-family: KlavikaRegular;
-		font-size: 22px;
+		font-size: 1.0em;
 		font-weight: 400;
 		line-height: 1.2em;		
 		
@@ -264,13 +264,13 @@
 
 <%= render 'share/backtotop_2' %>
 
+<ul class="lc-inline">
+<li>
+<%= render 'share/eventpages_tabs' %>
+<li>
 
+<li>
 <div id="tab-container">
-
-
-<%= render 'share/eventpages_tabs'%>
-
-
 
 <div id="lc-landing">
 		
@@ -283,7 +283,8 @@
 
 <% if @reg_event_itins.any? %>
 
-	<table width="800px" style="font-size:1.15em;">
+	<!-- <table width="800px" style="font-size:1.15em;"> -->
+	<table width="800px" style="font-size:1.0em;">
 
 	<% i = 0 %>
 	<% @reg_event_itins.each do |reg_event_itin| %>
@@ -430,9 +431,10 @@
 <div class="spacer"></div>
 
 <div>
-	<p><img src="../repository/events/david-small.png" alt="david-small.png" align="left" width="140px" style="margin-right: 10px;">
+	<p style="font-size: "><img src="../repository/events/david-small.png" alt="david-small.png" align="left" width="140px" style="margin-right: 10px;">
 	<em>Host:</em>  David Kafitz, VP School Relations, The Learning Counsel</br>
-	Expert and charismatic change-agent helping schools move forward with a well-reasoned strategy for digital content and curriculum with complementary personnel and IT strategy.  Former Superintendent, Watauga County Schools, Boone, NC, and former Director Technology Services, Union County Public Schools.</p>  
+	Expert and charismatic change-agent helping schools move forward with a well-reasoned strategy for digital content and curriculum, professional development and IT strategy. Former Superintendent, Director of Technology Services, Principal, and Teacher in North Carolina Public Schools.
+	</p>  
 </div>
 
 <div class="spacer"></div>
@@ -441,7 +443,7 @@
 
 <div>
 	<p><img src="../repository/events/lani-small.jpg" alt="lani-small.jpg" align="left" width="140px" style="margin-right: 10px;">
-	Digital Curriculum Trends Speaker:  LeiLani Cauthen, CEO & Publisher, The Learning Counsel</br>
+	<em>Digital Curriculum Trends Speaker:</em>  LeiLani Cauthen, CEO & Publisher, The Learning Counsel</br>
 	A Research Publisher and Media personality for 10 years, LeiLani will share the trends in schools for digital curriculum, insight into the future, and best practices.</p>  
 </div>
 
@@ -475,24 +477,32 @@
 <div class="spacer"></div>
 
 <p>
+    <strong>Agenda</strong>
+</p>
+
+<div class="spacer"></div>
+
+<table>
+	<tr>
+		<td style="padding-left: 0px;">
+			<img src="../repository/events/agenda-w763-h424.png" alt="agenda-w763-h424.png">
+		</td>
+	</tr>
+</table>
+<!-- <div class="spacer"></div>
+<p>
     &ndash; 4pm<strong> Local Executive Panel </strong>to brief the industry and additional district staff. Schools are invited to send additional interested teachers and other administration executives to hear the panel from 4-5pm, which is usually good timing post the school day.  Non-sponsoring companies may pay to send attendees to the Panel and Reception.
 </p>
-
 <div class="spacer"></div>
-
 <p>
     &ndash; 5&ndash;6:30 pm<strong> Reception </strong>for one and all!
-</p>
-
-
+</p> -->
 <div class="spacer"></div>
 <div class="spacer"></div>
-
 <p>
-    <strong style="color: #96328E">SPONSORS (As of January 20, 2014)</strong>
+    <strong style="color: #96328E">SPONSORS (As of March 21, 2014)</strong>
 </p>
 
-<div class="spacer"></div>
 <div class="spacer"></div>
 
 <table>
@@ -539,6 +549,23 @@
 			<img src="../logosponsor/compass-learning-w360.png" alt="compass-learning-w360.png">
 		</td>
 	</tr>
+	<tr><td style="height: 30px;"></td><td></td></tr>
+	<tr>
+		<td style="width: 380px; height: 160px; padding-top: 30px;">
+			<img src="../logosponsor/mcgraw-hill-w360.png" alt="mcgraw-hill-w360.png">
+		</td>
+		<td style="width: 380px; height: 160px; padding-top: 0px;">
+			<img src="../logosponsor/myon-w360.png" alt="myon-w360.png">
+		</td>
+	</tr>
+	<tr><td style="height: 30px;"></td><td></td></tr>
+	<tr>
+		<td style="width: 380px; height: 160px; padding-top: 0px;">
+			<img src="../logosponsor/pearson-w360.png" alt="pearson-w360.png">
+		</td>
+		<td style="width: 380px; height: 160px; padding-top: 0px;">
+		</td>
+	</tr>
 	
 </table>
 
@@ -575,8 +602,18 @@
 
 </div>
 
+<li>
+
+</ul>
+
 
 <script>
+
+		var offset_top = 0;
+		jQuery(window).scroll(function() {
+			offset_top = $(window).scrollTop()
+			$('#eventstabs').css('top', offset_top);
+		});
 
 		function resizeArea(){
 

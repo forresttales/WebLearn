@@ -1,25 +1,37 @@
 
-<div class="tabs">
-  <ul>
-    <li id="tab1">
-    	<a href="/Events" class="tab tab-blue" onclick="make_active(1);">Events</a>
-    </li>
-    <li id="tab2" >
-    	<a href="/Discussions" class="tab tab-blue" onclick="make_active(2);">Discussions</a>
-    </li>
-    <li id="tab3" >
-    	<a href="Gathering" class="tab tab-blue" onclick="make_active(3);">Gathering</a>
-    </li>
-    <li id="tab4">
-    	<a href="EventRegistration" class="tab tab-blue" onclick="make_active(4);">Register</a>
-    </li>
-    <li id="tab5">
-    	<a href="InternetSeminars" class="tab tab-yellow" onclick="make_active(5);">Internet Seminars</a>
-    </li>
-    <li id="tab6">
-    	<a href="SeminarRegistration" class="tab tab-yellow" onclick="make_active(6);">Register</a>
-    </li>
-  </ul>
+<div class="tabs" id="eventstabs" style="text-align: center;">
+	<ul class="tall">
+	</ul>
+  	<ul class="tall">
+	    <li id="tab1">
+	    	<a href="/Events" class="tab" onclick="make_active(1);">Events</a>
+	    </li>
+	</ul>
+	<ul class="short"></ul>
+	<ul class="tall"> 	   
+	    <li id="tab2" >
+	    	<a href="/Schedule" class="tab" onclick="make_active(2);">Schedule</a>
+	    </li>
+	</ul>
+	<ul class="short"></ul>
+	<ul class="tall"> 	   	    
+	    <li id="tab3">
+	    	<a href="/SpecialGathering" class="tab" onclick="make_active(3);">Special Gathering</a>
+	    </li>
+	</ul>
+	<ul class="short"></ul>	
+	<ul class="tall"> 	   
+	    <li id="tab4">
+	    	<a href="/EventRegistration" class="tab" onclick="make_active(4);">Register</a>
+	    </li>
+	</ul>
+	<ul class="short"></ul>	
+	<ul class="tall"> 	   	    
+	    <li id="tab5">
+	    	<a href="/InternetSeminars" class="tab" onclick="make_active(5);">Internet Seminars</a>	    	
+	    </li>
+	</ul>
+	<ul class="tall">
 </div>
 
 <script>
@@ -33,7 +45,7 @@
 		  		$("#tab3").removeClass("active");
 		  		$("#tab4").removeClass("active");
 		  		$("#tab5").removeClass("active");
-		  		$("#tab6").removeClass("active");			  		
+		  		//$("#tab6").removeClass("active");			  		
 		  	break;
 		  case 2:
 		  		$("#tab1").removeClass("active");
@@ -41,7 +53,7 @@
 		  		$("#tab3").removeClass("active");
 		  		$("#tab4").removeClass("active");
 		  		$("#tab5").removeClass("active");
-		  		$("#tab6").removeClass("active");			  					  
+		  		//$("#tab6").removeClass("active");			  					  
 		  	break;
 		  case 3:
 		  		$("#tab1").removeClass("active");
@@ -49,28 +61,31 @@
 		  		$("#tab3").addClass("active");
 		  		$("#tab4").removeClass("active");
 		  		$("#tab5").removeClass("active");
-		  		$("#tab6").removeClass("active");			  		
+		  		//$("#tab6").removeClass("active");
+		  	break;			  		
 		  case 4:
 		  		$("#tab1").removeClass("active");
 		  		$("#tab2").removeClass("active");
 		  		$("#tab3").removeClass("active");
 		  		$("#tab4").addClass("active");
 		  		$("#tab5").removeClass("active");
-		  		$("#tab6").removeClass("active");			  		
+		  		//$("#tab6").removeClass("active");
+		  	break;			  		
 		  case 5:
 		  		$("#tab1").removeClass("active");
 		  		$("#tab2").removeClass("active");
 		  		$("#tab3").removeClass("active");
 		  		$("#tab4").removeClass("active");
 		  		$("#tab5").addClass("active");
-		  		$("#tab6").removeClass("active");			  		
+		  		//$("#tab6").removeClass("active");
+		  	break;			  		
 		  case 6:
 		  		$("#tab1").removeClass("active");
 		  		$("#tab2").removeClass("active");
 		  		$("#tab3").removeClass("active");
 		  		$("#tab4").removeClass("active");
 		  		$("#tab5").removeClass("active");
-		  		//$("#tab6").addClass("active");			  		
+		  		///$("#tab6").addClass("active");			  		
 		  	break;
 
 		  default:

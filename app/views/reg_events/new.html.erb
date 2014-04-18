@@ -8,45 +8,32 @@
 					
 	<style>
 	
-	#join-image {
-		height: 1900px;
-	}
+	/*@import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans);*/
 	
+	#join-image {
+		height: 1990px;
+	}
 	.form-reg-event {
-		
 		width: 960px;
 		height: auto;
 		display: none;
-						
-		/*background-color: rgba(180, 180, 180, 0.94);*/
-		
 		background-color: rgba(0, 0, 0, 0.8);
-
-		/*-moz-box-shadow:5px 5px 40px #fff;
-		-webkit-box-shadow:5px 40px 5px #fff;
-		box-shadow:5px 5px 40px #CCAE37;*/
-	   		   		    
 	    transition: box-shadow 3s ease-in-out;				
-			
 		border-top-left-radius: 10px;
    		border-top-right-radius: 10px;		
 		border-bottom-left-radius: 10px;
    		border-bottom-right-radius: 10px;
-   		
 		position: relative;
 		text-align: center;			
 		padding-top: 20px;	   			   	
-		padding-bottom: 20px;	
+		padding-bottom: 20px;
 	}
-	
 	#loading {
 		background:url("/assets/icon_loading.gif") no-repeat center center;
 		height: 100px; width: 100px;
 		position: fixed; left: 47%; top: 50%; z-index: 1000;
 		margin: -25px 0 0 -25px;
 	}				
-				
-	
 	.input-form {
 		font-family: msyh;
 		font-size: 16px;
@@ -55,23 +42,17 @@
 		border-style:solid;
 		border-radius: 6px;
 		border-color: #005C9E; /*blue*/
-		
 		border-width: 2px;
 		padding-left: 6px;
-		
 		-webkit-transition: all 0.5s ease-in-out;
 		-moz-transition: all 0.5s ease-in-out;
 		-o-transition: all 0.5s ease-in-out;
 		-ms-transition: all 0.5s ease-in-out;
 		transition: all 0.5s ease-in-out;
 	}
-
 	.input-form:focus {
-		
 		color: #fff;
-						
 		background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;						
-				
 		-webkit-box-shadow: 0 0 25px #ccc;
 		-moz-box-shadow: 0 0 25px #ccc;
 		box-shadow: 0 0 25px #ccc;
@@ -91,7 +72,6 @@
 		-ms-transform: scale(1.05);
 		transform: scale(1.05);
 	}
-
 	.input-form-dropdown {
 		font-family: msyh;
 		font-size: 16px;
@@ -100,25 +80,18 @@
 		border-style:solid;
 		border-radius: 6px;
 		border-color: #005C9E; /*blue*/
-		
 		border-width: 2px;
 		padding-left: 6px;
-		
 		-webkit-transition: all 0.5s ease-in-out;
 		-moz-transition: all 0.5s ease-in-out;
 		-o-transition: all 0.5s ease-in-out;
 		-ms-transition: all 0.5s ease-in-out;
 		transition: all 0.5s ease-in-out;
-		
 		text-decoration: none;
 	}
-
 	.input-form-dropdown:focus {
-		
 		color: #fff;
-						
 		background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;						
-				
 		-webkit-box-shadow: 0 0 25px #ccc;
 		-moz-box-shadow: 0 0 25px #ccc;
 		box-shadow: 0 0 25px #ccc;
@@ -137,111 +110,92 @@
 		-o-transform: scale(1.05);
 		-ms-transform: scale(1.05);
 		transform: scale(1.05);
-		
 		text-decoration: none;		
-		
 		outline: 0;
-		
 	}
-
 	div .error_label {
 	    display: none;
 		font-family: msyh;
 		font-size: 12px;
 		color: #851717;		    
 	}
-
 	div .errors {
 		font-family: msyh;
 		font-size: 16px;
 		color: #FC7777;		
 	}
-
 	.select-errors {
 		color: #FC7777;
 	}
-
-
 	.input-label {
 		font-family: msyh;
 		font-size: 16px;
 		width: 220px;
 		height: 18px;
 	}
-
-		
 	.success {
 		color: #ACDDE3;		
 		background: url("/assets/submit_form_empty.png") no-repeat 278px 1px;		
 	}		
-
 	.error {
 		color: #FC7777;
 		background: url("/assets/submit_form_empty.png") no-repeat 278px 1px;		
 		border-color: #851717; 						
 	}
-
 	.required {
 		background: url("/assets/submit_form_empty.png") no-repeat 278px 1px;		
 	}
-	
 	.error-label {
 		/*color: #851717;*/		
 		color: #FC7777;
 	}
-
 	.required-label {
 		color: orange;
 	}
-	
 	.input-form-spacer {
 		height: 16px;
 	}
-
 	.input-search-1 {
 		background-color: white;
 		color: black;
 		font-family: Arial;
 		width: 200px;
 	}
-				
 	div .cell-right-reg-event {
 		display: table-cell;
+		/*width: 330px;*/
 		width: 330px;
 		text-align: left;
 		align: top;		
 	}
-
 	div .cell-left-reg-event {
 		display: table-cell;
-		width: 280px;	
+		/*width: 280px;*/
+		width: 350px;	
 		align: top;
 		text-align: right;		
 		padding-right: 20px;
 	}
-	
 	div .cell-submit-reg-event {
 		display: table-cell;
 		width: 330px;
 		text-align: left;
 		align: top;		
 	}
-		
 	div .cell-error-reg-event {
 		display: inline-block;
-		width: 300px;
+		/*width: 300px;*/
+		width: 230px;
 		height: 18px;
 		vertical-align: bottom;
 		text-align: left;
 	}
-		
 	div .cell-right-reg-event-cb {
 		display: table-cell;
 		width: 430px;
 		text-align: left;
 		align: top;		
 	}
-
 	div .cell-error-reg-event-cb {
 		display: inline-block;
 		width: 200px;
@@ -249,9 +203,8 @@
 		vertical-align: bottom;
 		text-align: left;
 	}
-		
 	.button-border {
-		width: 480px; 
+		width: 480px;
 		border-style: solid; 
 		border-width: 2px; 
 		border-color: #005C9E; 
@@ -260,9 +213,6 @@
 		padding-top: 6px; 
 		padding-bottom: 6px;
 	}
-		
-		
-		
 	#label_cb {
 		text-decoration: none;
 	}		
@@ -272,23 +222,18 @@
 		color: #FFF480;		
 		outline: none;
 	}		
-		
 	.cb-errors {
 		color: #FC7777;
 		font-family: msyh;
 		font-size: 14px;
 		font-weight: 400;
 	}
-
-			
 	input[type=checkbox] {
 	    display:none;
 	}			
-	
 	input[type=radio] {
 	    display:none;
 	}			
-	
 	.cb-button {
 		width: 20px;
 		height: 21px; 
@@ -300,7 +245,6 @@
 		display: inline-block;
 		margin-right: 6px;
 	}
-			
 	.cb-background {
 		background-image: url("/assets/checkbox_tick.png");		
 		background-repeat: no-repeat;
@@ -312,11 +256,19 @@
 	.cb-pad {
 		padding-top: 5px;		
 	}
-	.cb-margin {
-		width: 40px;		
+	.cb-col-1 {
+		width: 0px;
 	}
 	.cb-col-2 {
+		width: 200px;
 		color: orange;		
+	}
+	.cb-col-3 {
+		width: 80px;
+	}
+	.cb-col-4 {
+		width: 200px;
+		color: orange;				
 	}
 	.cb-valign {
 		margin-bottom: 1px;
@@ -324,25 +276,20 @@
 	.cb-spacer {
 		height: 20px;
 	}
-	
-	
-	
-	
-	div .cell-right-reg-event-wide {
+	/*div .cell-right-reg-event-wide {
 		display: table-cell;
 		width: 500px;
 		text-align: left;
 		align: top;		
-	}
-
+	}*/
 	div .cell-left-reg-event-narrow {
 		display: table-cell;
-		width: 100px;	
+		/*width: 100px;*/
+		width: 170px;	
 		align: top;
 		text-align: right;		
 		padding-right: 20px;
 	}
-	
 	div .cell-center-reg-event {
 		display: table-cell;
 		width: 700px;	
@@ -350,29 +297,18 @@
 		text-align: right;		
 		padding-right: 20px;
 	}
-			
 	div .cell-right-reg-event-cb-wide {
 		display: table-cell;
 		width: 800px;
 		text-align: left;
 		align: top;		
 	}
-			
 	.input-label-wide {
 		font-family: msyh;
 		font-size: 16px;
 		width: 700px;
 		height: 18px;
 	}
-
-	.cb-margin {
-		width: 20px;		
-	}
-
-	.cb-margin-2 {
-		width: 20px;		
-	}
-			
 	.rd-button {
 		width: 18px;
 		height: 18px; 
@@ -384,79 +320,76 @@
 		display: inline-block;
 		margin-right: 0px;
 	}
-
 	.rd-background {
 		background-image: url("/assets/radio_tick.png");		
 		background-repeat: no-repeat;
 		background-position: 1px 1px;
 	}	
-		
 	.sessions {
 		font-size: 12px;	
 	}
-	
 	.text-form-top {
 		color: #023363;
 		font-family: msyh;
 		font-size: 16px;
 		line-height: 1.1em;
 	}
+	.submitregevent.btn {
+		background-color: inherit;
+		color: #3A8EC9;
+		font-family: msyh;
+		font-size: 16px;
+		width: 310px;
+		height: 30px;
+		border-style:solid;
+		border-radius: 6px;
+		border-color: #005C9E;
+		border-width: 2px;
+		-webkit-transition: all 0.5s ease-in-out;
+		-moz-transition: all 0.5s ease-in-out;
+		-o-transition: all 0.5s ease-in-out;
+		-ms-transition: all 0.5s ease-in-out;
+		transition: all 0.5s ease-in-out;		
+	}
+	.submitregevent.btn:focus {
+		border-color: #47FFFF;
+		color: #18C9C9;
+		-webkit-box-shadow: 0 0 25px #ccc;
+		-moz-box-shadow: 0 0 25px #ccc;
+		box-shadow: 0 0 25px #ccc;
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		transform: scale(1.05)
+	}		
+	h2.form-header {
+		/*font-family: msyh;*/
+		font-family: 'QuattrocentoSans-Regular', sans-serif;		
+		font-size: 20px;
+		color: #555;	
+	}
+	
 	
 	</style>					
 					
-					
-	<!-- <script id="dropdown-data-selected" type="text/x-dot-template">
-		{{=it.label}}
-		<span class="people">{{=it.people}}<br /><span class="desc">People</span></span>
-		<i>&darr;</i>
-	</script>
 	
-			
-	<script id="dropdown-data" type="text/x-dot-template">
-		<div class="dropdown" tabindex="13">
-		    <div class="selected">
-		      {{=it.selected.label}}
-		      
-		      <span class="people">{{=it.selected.people}}
-		      	<br />
-		      	<span class="desc">People</span>			      
-		      </span>			      
-		      
-		      <i>&darr;</i>
-		    </div>
-		    <ul>
-		        {{~it.items :item:index}}
-		        
-		        
-		        <li data-index="{{=index}}">{{=item.label}}<span class="people">{{=item.people}}</span></li>			        
-		        
-		        {{~}}
-		    </ul>
-		</div>
-	</script> -->		
-					
-	<!-- <script id="dropdown-data1-selected" type="text/x-dot-template">
+	<script id="dropdown-data1-selected" type="text/x-dot-template">
 		{{=it.label}}<i>&darr;</i>
 	</script>
 	
 	<script id="dropdown-data1" type="text/x-dot-template">
-		<div class="dropdown1" id="dropdown1" tabindex="15">
-		    <div class="selected">{{=it.selected.label}}<i>&darr;</i></div>
-		    <ul>
-		        {{~it.items :item:index}}
-		        <li data-index="{{=index}}">{{=item.label}}</li>
-		        {{~}}
-		    </ul>
-		</div>
-	</script>		 -->
-	
-	
-	<script id="dropdown-data2-selected" type="text/x-dot-template">
-		{{=it.label}}<i>&darr;</i>
-	</script>
-					
-	<script id="dropdown-data2" type="text/x-dot-template">
-		<div class="dropdown2" id="dropdown2" tabindex="5">
+		<div class="dropdown1" id="dropdown1" tabindex="5">
 		    <div class="selected">{{=it.selected.label}}<i>&darr;</i></div>
 		    <ul>
 		        {{~it.items :item:index}}
@@ -467,13 +400,13 @@
 	</script>		
 
 
+<ul class="lc-inline">
+<li>
+<%= render 'share/eventpages_tabs' %>
+<li>
 
+<li>
 <div id="tab-container">
-
-
-<%= render 'share/eventpages_tabs'%>
-
-
 
 <div style="width: 1000px; margin-right: auto; margin-left: auto; background: #fff;">
 
@@ -482,24 +415,10 @@
 
 			<%= render 'share/backtotop_2' %>
     	     	
-    	     	
-    	<!-- <div class="shadow" style="position: relative; z-index: +2;"> -->    		
-			
-			<!-- <div style="height: 20px;"></div> -->
-															
 			<div class="table-white">
 
-				<!-- <div class="row" style="height: 50px;">
-					<div class="cell-100percent">
-						<div id="errorContainer">
-						    
-						</div>		
-					</div>
-				</div>				 -->
-		
 				<div class="row">
 					<div class="cell-800">
-						<!-- <div style="background: #41B737; width: 100%; text-align: center;"> -->
 						<div style="background: #3D3D3D; width: 100%; text-align: center; height: 40px; padding-top: 15px; border: 4px solid #41B737;">
 							<span style="font-family: msyhb; font-size: 22px; font-weight: 400; color: #41B737;">LIVE EVENTS REGISTRATION</span>
 						</div>						
@@ -511,37 +430,23 @@
 				<div class="row">
 					
 					<div class="cell-700" style="padding-left: 32px;">
-						<h2 class="text-form-top">
-							<img src="../repository/events/events-reg-form-1.png" alt="events-reg-form-1.png" height="150px" align="left" >
-							<strong>REGISTER </strong>for events with existing venues below or PRE-REGISTER for upcoming events and we&apos;ll keep you 
-							posted on dates and final venues via email. Once you have registered an email will remind you of the event 
-							time and location the week prior and day prior. 
+						<h2 class="form-header">
+							<a href="/ContactUs"><img src="../repository/events/events-reg-form-1.png" alt="events-reg-form-1.png" height="150px" align="left" ></a>
+							<strong>WELCOME to REGISTRATION </strong>for Learning Counsel events! School executives and educators are welcome to attend
+							 in any city FREE of charge representing their institution.  
 						</h2>
 						<br>
-						<h2 class="text-form-top">
-							<span style="color: #000"><strong>Schools & Districts: </strong></span>School executives and educators are welcome to attend 
-							in any city free of charge representing their institution.
+						<h2 class="form-header">
+							<!-- <span style="color: #000"><strong>Schools & Districts: </strong></span> --> 
+							Register for upcoming events and we'll keep you posted on any changes, dates and final venues via email. 
+							You must be present at the event to win any drawing. 							
 						</h2>
 						<br>						
-						<h2 class="text-form-top">
-							<span style="color: #000"><strong>Private sector industry: </strong></span>The 14-city Digital Curriculum Strategy Discussion 
-							events have an attendance fee for company representatives who are not sponsors.  It is<span style="color: #026326;"> $125 </span> 
-							per person per city for the Panel and Reception. Only a handful of sponsors can attend during the early part of the day. 
-							If you mark you are with a company and not an institution (School or District), we will check if your company is already 
-							sponsoring, and if not, send you a credit card form to fill out for processing.
-
-						</h2>
-						<br>						
-						<h2 class="text-form-top">
-							The annual national Gathering event is invitation only and private industry attendees must be sponsors to attend.
+						<h2 class="form-header">
+							If you are a private sector registrant, please note that there is an attendance fee for you unless your company is already sponsoring. 
+							We will contact you after your registration.  
 						</h2>
 					</div>
-					<!-- <p>
-						<button class="btn blue small">Join</button>
-					</p>
-					<p>
-						<button class="btn blue small">Cancel</button>
-					</p> -->											
 				</div>
 
 				<a name="anchor1"></a>    		      		     		
@@ -549,13 +454,8 @@
 				<div class="row" style="height: 30px;"></div>
 				
 			</div>
-			
-			
-		<!-- </div>	 -->
-				
 		
 		<!-- <div id="loading"> </div> -->
-		
 						
 	</header>		
 	
@@ -571,23 +471,13 @@
 		
 		<div id="form_reg_event" class="form-reg-event" tabindex="1">
 			
-			<!-- <a id="joinClose" class="btn-joinClose" onclick="hideSignin();"><img src="/assets/submit_form_close.png" width="20" alt="" /></a> --> 			
-
-			<!-- <a id="joinClose" class="btn-joinClose" onclick=""><img src="/assets/submit_form_close.png" width="20" alt="" /></a> -->
- 			
-    		  <!-- form_for(@user, :id => "join_form", :url => {:controller => "users", :action => "create"}) do |f|  -->
-    		      		     		
 			<%= form_for( @reg_event, :html => {:id => "form_join"}) do |f| %> 
 			  			 
-			<!-- = render 'shared/error_messages', object: f.object -->
-			 <!-- hidden_field_tag :account_type, @account_type  -->
-			 	
-			<div class="errors" style="height: 30px;">
+			<div class="errors" style="height: 50px;">
 				<div class="row">
 					<div class="cell-left-reg-event"></div>
-					<div class="cell-right-reg-event">
-						<p></p>
-					</div>
+					<div class="cell-right-reg-event"></div>
+					<div class="cell-error-reg-event"></div>					
 				</div>
 			</div>			
 
@@ -635,14 +525,12 @@
 				</div>
 				<div class="cell-right-reg-event">
 					
-					<select name="reg_event[type_affiliation]" id="reg_event_type_affiliation" class="" style="display: none;" data-template="#dropdown-data2">
+					<select name="reg_event[type_affiliation]" id="reg_event_type_affiliation" class="" style="display: none;" data-template="#dropdown-data1">
 					    <option value="0" selected="selected" id="option-default">-Institution or Company?-</option>	
 					    <option value="1">Institution</option>
 					    <option value="2">Company</option>
 					    <option value="3">OTHER</option>
 					</select>										
-					
-					 <!-- f.text_field(:type_affiliation, :class => "input-form required", :placeholder => 'Institution or Company?', :tabindex => '5') -->
 					 					 					 
 				</div>
 				<div class="cell-error-reg-event" id="state_reg_event_type_affiliation"><p id="error_reg_event_type_affiliation" class="select-errors"></p></div>     
@@ -721,13 +609,25 @@
 			</div>      		
 
 			<div class="input-form-spacer"></div>
+			<!--phone_mobile-->
+			<div class="row">
+				<div class="cell-left-reg-event">
+					<%= f.label(:phone_mobile, "(*optional) Mobile Phone<br>for a text reminder<br>before the Event".html_safe, :class => 'input-label required-label', :id => 'label_reg_event_phone_mobile') %>
+				</div>
+				<div class="cell-right-reg-event">
+					 <%= f.text_field(:phone_mobile, :class => "input-form required", :placeholder => 'Mobile Phone', :tabindex => '12') %>					 
+				</div>
+				<div class="cell-error-reg-event" id="state_reg_event_phone_mobile"><p id="error_reg_event_phone_mobile"></p></div>      					   
+			</div>      		
+
+			<div class="input-form-spacer"></div>
 			<!--email-->
 			<div class="row">
 				<div class="cell-left-reg-event">
 					<%= f.label(:email, "Email", :class => 'input-label required-label', :id => 'label_reg_event_email') %>
 				</div>
 				<div class="cell-right-reg-event">
-					<%= f.text_field(:email, :class => "input-form required", :placeholder => 'email@example.com', :tabindex => '12' ) %>
+					<%= f.text_field(:email, :class => "input-form required", :placeholder => 'email@example.com', :tabindex => '13' ) %>
 				</div>
 				<div class="cell-error-reg-event" id="state_reg_event_email"><p id="error_reg_event_email"></p></div>      	
 			</div>      		
@@ -739,7 +639,7 @@
 					<%= f.label(:email_cc_1, "(*optional) cc Email", :class => 'input-label required-label', :id => 'label_reg_event_email_cc_1') %>
 				</div>
 				<div class="cell-right-reg-event">
-					<%= f.text_field(:email_cc_1, :class => "input-form required", :placeholder => 'email@example.com', :tabindex => '13' ) %>
+					<%= f.text_field(:email_cc_1, :class => "input-form required", :placeholder => 'email@example.com', :tabindex => '14' ) %>
 				</div>
 				<div class="cell-error-reg-event" id="state_reg_event_email_cc_1"><p id="error_reg_event_email_cc_1"></p></div>      	
 			</div>      		
@@ -751,23 +651,22 @@
 					<%= f.label(:email_cc_2, "(*optional) cc Email", :class => 'input-label required-label', :id => 'label_reg_event_email_cc_2') %>
 				</div>
 				<div class="cell-right-reg-event">
-					<%= f.text_field(:email_cc_2, :class => "input-form required", :placeholder => 'email@example.com', :tabindex => '14' ) %>
+					<%= f.text_field(:email_cc_2, :class => "input-form required", :placeholder => 'email@example.com', :tabindex => '15' ) %>
 				</div>
 				<div class="cell-error-reg-event" id="state_reg_event_email_cc_2"><p id="error_reg_event_email_cc_2"></p></div>      	
 			</div>      		
 
 			<div class="input-form-spacer"></div>
 			
-			
 			<!-- city_workshop start -->
 			<div class="input-form-spacer"></div>
 			<div class="input-form-spacer"></div>
 			
-			<div style="padding-left: 116px; text-align: left;">
+			<div style="padding-left: 244px; text-align: left;">
 				<label class="input-label-wide required-label">
 					Workshops
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					Select all that apply</label>								
 			</div>
 
@@ -777,30 +676,9 @@
 
 				<div class="cell-left-reg-event-narrow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 				
-				<div id="border_city_workshop" class="button-border" style="width: 800px;">
+				<div id="border_city_workshop" class="button-border">
 					
 					<div class="input-form-spacer"></div>
-					<div style="text-align: left; color: #2B95A6; padding-left: 50px; width: 700px;">
-						For each workshop you select, please also indicate the sessions you plan to attend.
-						
-					</div>
-					<div class="input-form-spacer"></div>
-					<div style="text-align: left; color: #2B95A6; padding-left: 50px; width: 700px;">
-						<ul>
-							<li>
-								<span style="color: #2B95A6; display: inline-block; width: 140px">8:30am-3:30pm</span> - Morning national state-of-the-market briefing and discussion meeting
-							</li>
-							<li> 
-								<span style="color: #2B95A6; display: inline-block; width: 140px">4-6:30pm</span> - Panel and Reception
-							</li>
-							<li> 
-								<span style="color: #2B95A6; display: inline-block; width: 140px"></span> - Both
-							</li>
-						</ul>
-					</div>
-					<div class="input-form-spacer"></div>
-					<div class="input-form-spacer"></div>
-					
 					
 					<div class="cell-right-reg-event-cb-wide">
 
@@ -824,569 +702,244 @@
 						    <option value="14">Tampa, FL</option>
 						    -->							
 					    
-							<table id="table1" class="cb-table">
+							<table id="table1">
 
-								<tr class="cb-spacer"></tr>								
+								<tr class="cb-spacer"><td></td><td></td><td></td><td></td></tr>
 								<tr>
-									<td>
-										<div></div>
+									<td class="cb-col-1">
 									</td>
-									<td>
+									<td class="cb-col-2">
 										<label class="input-label required-label label_cb"></label>
 									</td>
-									<td class="cb-margin"></td>
-									<td class="cb-col-2">
+									<td class="cb-col-3"></td>
+									<td class="cb-col-4">
 										<span>2014</span>
 									</td>									
 								</tr>
-
 								<tr class="cb-spacer"></tr>								
 								<tr>
-									<td>
+									<td class="cb-col-1">
 										<div id="cb_workshop_1_legacy" class="cb-button cb-valign"></div>
 										 <!-- f.check_box :city_workshop_1 --> 
 									</td>
-									<td style="width: 200px;">
+									<td class="cb-col-2">
 										<!-- <label id="label_city_workshop_1" class="input-label required-label label_cb" for="city_workshop_1" onclick="cb_city_workshop('1');" tabindex="15" >Columbia, SC</label> -->
-										<label id="label_city_workshop_1" class="input-label required-label label_cb" for="city_workshop_1" tabindex="15" style="text-decoration: line-through">Columbia, SC</label>
+										<label id="label_city_workshop_1" class="input-label required-label label_cb" for="city_workshop_1" tabindex="" style="text-decoration: line-through">Columbia, SC</label>
 									</td>
-									<td class="cb-margin"></td>
-									<td class="cb-col-2" style="width: 170px;">
+									<td class="cb-col-3"></td>
+									<td class="cb-col-4">
 										<span>Feb 27</span>
 									</td>
-									<td class="cb-margin-2"></td>
-									<td id="opt_city_workshop_1_session" class="cb-col-2" style="width: 500px;">
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_1_session_1" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_1_session, '1') %>
-										<label id="label_city_workshop_1_session_1" class="input-label required-label" for="city_workshop_1_session_1" onclick="rd_city_workshop_1_session('1');" tabindex="16">
-											<span class="sessions">8:30am-3:30pm</span>
-										</label>
-											 
-										<div style="display: inline-block; width: 30px;"></div>
-										<div id="rd_city_workshop_1_session_2" class="rd-button"></div>						
-										<%= f.radio_button(:city_workshop_1_session, '2') %>
-										<label id="label_city_workshop_1_session_2" class="input-label required-label" for="city_workshop_1_session_2" onclick="rd_city_workshop_1_session('2');" tabindex="17">
-											<span class="sessions">4-6:30pm</span>
-										</label>
-										
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_1_session_3" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_1_session, '3') %>
-										<label id="label_city_workshop_1_session_3" class="input-label required-label" for="city_workshop_1_session_3" onclick="rd_city_workshop_1_session('3');" tabindex="18">
-											<span class="sessions">Both</span>											
-										</label>
-									</td>									
-
 								</tr>
 								<tr class="cb-spacer"></tr>
 								<tr>
-									<td>
-										<div id="cb_workshop_2" class="cb-button cb-valign"></div>							
-										<%= f.check_box :city_workshop_2 %>
+									<td class="cb-col-1">
+										<div id="cb_workshop_2_legacy" class="cb-button cb-valign"></div>							
+										 <!-- f.check_box :city_workshop_2 --> 
 									</td>
-									<td>
-										<label id="label_city_workshop_2" class="input-label required-label label_cb" for="city_workshop_2" onclick="cb_city_workshop('2');" tabindex="19">Fresno, CA (Central)</label>
-									</td>
-									<td class="cb-margin"></td>										
 									<td class="cb-col-2">
-										<span>March 17</span>
+										<!-- <label id="label_city_workshop_2" class="input-label required-label label_cb" for="city_workshop_2" onclick="cb_city_workshop('2');" tabindex=""  style="text-decoration: line-through">Fresno, CA (Central)</label> -->
+										<label id="label_city_workshop_2" class="input-label required-label label_cb" for="city_workshop_2" tabindex="" style="text-decoration: line-through">Fresno, CA (Central)</label>
+									</td>
+									<td class="cb-col-3"></td>										
+									<td class="cb-col-4">
+										<span>April 2</span>
 									</td>	
-									<td class="cb-margin-2"></td>
-									<td id="opt_city_workshop_2_session" class="cb-col-2" style="width: 500px;">
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_2_session_1" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_2_session, '1') %>
-										<label id="label_city_workshop_2_session_1" class="input-label required-label" for="city_workshop_2_session_1" onclick="rd_city_workshop_2_session('1');" tabindex="20">
-											<span class="sessions">8:30am-3:30pm</span>
-										</label>
-											 
-										<div style="display: inline-block; width: 30px;"></div>
-										<div id="rd_city_workshop_2_session_2" class="rd-button"></div>						
-										<%= f.radio_button(:city_workshop_2_session, '2') %>
-										<label id="label_city_workshop_2_session_2" class="input-label required-label" for="city_workshop_2_session_2" onclick="rd_city_workshop_2_session('2');" tabindex="21">
-											<span class="sessions">4-6:30pm</span>
-										</label>
-										
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_2_session_3" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_2_session, '3') %>
-										<label id="label_city_workshop_2_session_3" class="input-label required-label" for="city_workshop_2_session_3" onclick="rd_city_workshop_2_session('3');" tabindex="22">
-											<span class="sessions">Both</span>											
-										</label>
-									</td>									
-																																		
 								</tr>
 								<tr class="cb-spacer"></tr>
 								<tr>
-									<td>
-										<div id="cb_workshop_4" class="cb-button cb-valign"></div>							
-										<%= f.check_box :city_workshop_4 %>
+									<td class="cb-col-1">
+										<div id="cb_workshop_4_legacy" class="cb-button cb-valign"></div>							
+										 <!-- f.check_box :city_workshop_4  -->
 									</td>
-									<td>
-										<label id="label_city_workshop_4" class="input-label required-label label_cb" for="city_workshop_4" onclick="cb_city_workshop('4');" tabindex="23">Houston, TX</label>
-									</td>
-									<td class="cb-margin"></td>									
 									<td class="cb-col-2">
+										<!-- <label id="label_city_workshop_4" class="input-label required-label label_cb" for="city_workshop_4" onclick="cb_city_workshop('4');" tabindex="24">Houston, TX</label> -->
+										<label id="label_city_workshop_4" class="input-label required-label label_cb" for="city_workshop_4" tabindex="" style="text-decoration: line-through">Houston, TX</label>
+									</td>
+									<td class="cb-col-3"></td>									
+									<td class="cb-col-4">
 										<span>April 10</span>
 									</td>	
-									<td class="cb-margin-2"></td>
-									<td id="opt_city_workshop_4_session" class="cb-col-2" style="width: 500px;">
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_4_session_1" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_4_session, '1') %>
-										<label id="label_city_workshop_4_session_1" class="input-label required-label" for="city_workshop_4_session_1" onclick="rd_city_workshop_4_session('1');" tabindex="24">
-											<span class="sessions">8:30am-3:30pm</span>
-										</label>
-											 
-										<div style="display: inline-block; width: 30px;"></div>
-										<div id="rd_city_workshop_4_session_2" class="rd-button"></div>						
-										<%= f.radio_button(:city_workshop_4_session, '2') %>
-										<label id="label_city_workshop_4_session_2" class="input-label required-label" for="city_workshop_4_session_2" onclick="rd_city_workshop_4_session('2');" tabindex="25">
-											<span class="sessions">4-6:30pm</span>
-										</label>
-										
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_4_session_3" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_4_session, '3') %>
-										<label id="label_city_workshop_4_session_3" class="input-label required-label" for="city_workshop_4_session_3" onclick="rd_city_workshop_4_session('3');" tabindex="26">
-											<span class="sessions">Both</span>											
-										</label>
-									</td>									
-																																																
 								</tr>
 								<tr class="cb-spacer"></tr>
 								<tr>
-									<td>
-										<div id="cb_workshop_3" class="cb-button cb-valign"></div>							
-										<%= f.check_box :city_workshop_3 %>
+									<td class="cb-col-1">
+										<div id="cb_workshop_3_legacy" class="cb-button cb-valign"></div>							
+										 <!-- f.check_box :city_workshop_3  -->
 									</td>
-									<td>
-										<label id="label_city_workshop_3" class="input-label required-label label_cb" for="city_workshop_3" onclick="cb_city_workshop('3');" tabindex="27">Chicago, IL</label>
-									</td>					
-									<td class="cb-margin"></td>									
 									<td class="cb-col-2">
+										<!-- <label id="label_city_workshop_3" class="input-label required-label label_cb" for="city_workshop_3" onclick="cb_city_workshop('3');" tabindex="28">Chicago, IL</label> -->
+										<label id="label_city_workshop_3" class="input-label required-label label_cb" for="city_workshop_3" tabindex="" style="text-decoration: line-through">Chicago, IL</label>
+									</td>					
+									<td class="cb-col-3"></td>									
+									<td class="cb-col-4">
 										<span>April 15</span>
 									</td>	
-									<td class="cb-margin-2"></td>
-									<td id="opt_city_workshop_3_session" class="cb-col-2" style="width: 500px;">
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_3_session_1" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_3_session, '1') %>
-										<label id="label_city_workshop_3_session_1" class="input-label required-label" for="city_workshop_3_session_1" onclick="rd_city_workshop_3_session('1');" tabindex="28">
-											<span class="sessions">8:30am-3:30pm</span>
-										</label>
-											 
-										<div style="display: inline-block; width: 30px;"></div>
-										<div id="rd_city_workshop_3_session_2" class="rd-button"></div>						
-										<%= f.radio_button(:city_workshop_3_session, '2') %>
-										<label id="label_city_workshop_3_session_2" class="input-label required-label" for="city_workshop_3_session_2" onclick="rd_city_workshop_3_session('2');" tabindex="29">
-											<span class="sessions">4-6:30pm</span>
-										</label>
-										
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_3_session_3" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_3_session, '3') %>
-										<label id="label_city_workshop_3_session_3" class="input-label required-label" for="city_workshop_3_session_3" onclick="rd_city_workshop_3_session('3');" tabindex="30">
-											<span class="sessions">Both</span>											
-										</label>
-									</td>									
-																														
 								</tr>
 								<tr class="cb-spacer"></tr>
 								<tr>
-									<td>
+									<td class="cb-col-1">
 										<div id="cb_workshop_5" class="cb-button cb-valign"></div>							
 										<%= f.check_box :city_workshop_5 %>
 									</td>
-									<td>
-										<label id="label_city_workshop_5" class="input-label required-label label_cb" for="city_workshop_5" onclick="cb_city_workshop('5');" tabindex="31">San Bernadino, CA</label>
-									</td>				
-									<td class="cb-margin"></td>									
 									<td class="cb-col-2">
-										<span>April 23 (tentative)</span>
+										<label id="label_city_workshop_5" class="input-label required-label label_cb" for="city_workshop_5" onclick="cb_city_workshop('5');" tabindex="32">Los Angeles /<br>San Bernadino, CA</label>
+									</td>				
+									<td class="cb-col-3"></td>									
+									<td class="cb-col-4">
+										<span>May 22</span>
 									</td>	
-									<td class="cb-margin-2"></td>
-									<td id="opt_city_workshop_5_session" class="cb-col-2" style="width: 500px;">
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_5_session_1" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_5_session, '1') %>
-										<label id="label_city_workshop_5_session_1" class="input-label required-label" for="city_workshop_5_session_1" onclick="rd_city_workshop_5_session('1');" tabindex="32">
-											<span class="sessions">8:30am-3:30pm</span>
-										</label>
-											 
-										<div style="display: inline-block; width: 30px;"></div>
-										<div id="rd_city_workshop_5_session_2" class="rd-button"></div>						
-										<%= f.radio_button(:city_workshop_5_session, '2') %>
-										<label id="label_city_workshop_5_session_2" class="input-label required-label" for="city_workshop_5_session_2" onclick="rd_city_workshop_5_session('2');" tabindex="33">
-											<span class="sessions">4-6:30pm</span>
-										</label>
-										
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_5_session_3" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_5_session, '3') %>
-										<label id="label_city_workshop_5_session_3" class="input-label required-label" for="city_workshop_5_session_3" onclick="rd_city_workshop_5_session('3');" tabindex="34">
-											<span class="sessions">Both</span>											
-										</label>
-									</td>									
-																																												
 								</tr>
 								<tr class="cb-spacer"></tr>
 								<tr>
-									<td>
+									<td class="cb-col-1">
 										<div id="cb_workshop_6" class="cb-button cb-valign"></div>							
 										<%= f.check_box :city_workshop_6 %>
 									</td>
-									<td>
-										<label id="label_city_workshop_6" class="input-label required-label label_cb" for="city_workshop_6" onclick="cb_city_workshop('6');" tabindex="35">Richmond, VA</label>									
-									</td>					
-									<td class="cb-margin"></td>									
 									<td class="cb-col-2">
+										<label id="label_city_workshop_6" class="input-label required-label label_cb" for="city_workshop_6" onclick="cb_city_workshop('6');" tabindex="36">Richmond, VA</label>									
+									</td>					
+									<td class="cb-col-3"></td>									
+									<td class="cb-col-4">
 										<span>May 6</span>
 									</td>		
-									<td class="cb-margin-2"></td>
-									<td id="opt_city_workshop_6_session" class="cb-col-2" style="width: 500px;">
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_6_session_1" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_6_session, '1') %>
-										<label id="label_city_workshop_6_session_1" class="input-label required-label" for="city_workshop_6_session_1" onclick="rd_city_workshop_6_session('1');" tabindex="36">
-											<span class="sessions">8:30am-3:30pm</span>
-										</label>
-											 
-										<div style="display: inline-block; width: 30px;"></div>
-										<div id="rd_city_workshop_6_session_2" class="rd-button"></div>						
-										<%= f.radio_button(:city_workshop_6_session, '2') %>
-										<label id="label_city_workshop_6_session_2" class="input-label required-label" for="city_workshop_6_session_2" onclick="rd_city_workshop_6_session('2');" tabindex="37">
-											<span class="sessions">4-6:30pm</span>
-										</label>
-										
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_6_session_3" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_6_session, '3') %>
-										<label id="label_city_workshop_6_session_3" class="input-label required-label" for="city_workshop_6_session_3" onclick="rd_city_workshop_6_session('3');" tabindex="38">
-											<span class="sessions">Both</span>											
-										</label>
-									</td>									
-																																										
 								</tr>
 								<tr class="cb-spacer"></tr>
 								<tr>
-									<td>
+									<td class="cb-col-1">
 										<div id="cb_workshop_7" class="cb-button cb-valign"></div>							
 										<%= f.check_box :city_workshop_7 %>
 									</td>
-									<td>
-										<label id="label_city_workshop_7" class="input-label required-label label_cb" for="city_workshop_7" onclick="cb_city_workshop('7');" tabindex="39">Minneapolis, MN</label>
-									</td>		
-									<td class="cb-margin"></td>									
 									<td class="cb-col-2">
+										<label id="label_city_workshop_7" class="input-label required-label label_cb" for="city_workshop_7" onclick="cb_city_workshop('7');" tabindex="40">Minneapolis, MN</label>
+									</td>		
+									<td class="cb-col-3"></td>									
+									<td class="cb-col-4">
 										<span>June TBD</span>
 									</td>		
-									<td class="cb-margin-2"></td>
-									<td id="opt_city_workshop_7_session" class="cb-col-2" style="width: 500px;">
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_7_session_1" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_7_session, '1') %>
-										<label id="label_city_workshop_7_session_1" class="input-label required-label" for="city_workshop_7_session_1" onclick="rd_city_workshop_7_session('1');" tabindex="40">
-											<span class="sessions">8:30am-3:30pm</span>
-										</label>
-											 
-										<div style="display: inline-block; width: 30px;"></div>
-										<div id="rd_city_workshop_7_session_2" class="rd-button"></div>						
-										<%= f.radio_button(:city_workshop_7_session, '2') %>
-										<label id="label_city_workshop_7_session_2" class="input-label required-label" for="city_workshop_7_session_2" onclick="rd_city_workshop_7_session('2');" tabindex="41">
-											<span class="sessions">4-6:30pm</span>
-										</label>
-										
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_7_session_3" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_7_session, '3') %>
-										<label id="label_city_workshop_7_session_3" class="input-label required-label" for="city_workshop_7_session_3" onclick="rd_city_workshop_7_session('3');" tabindex="42">
-											<span class="sessions">Both</span>											
-										</label>
-									</td>									
-																																													
 								</tr>
 								<tr class="cb-spacer"></tr>
 								<tr>
-									<td>
+									<td class="cb-col-1">
 										<div id="cb_workshop_8" class="cb-button cb-valign"></div>							
 										<%= f.check_box :city_workshop_8 %>
 									</td>
-									<td>
-										<label id="label_city_workshop_8" class="input-label required-label label_cb" for="city_workshop_8" onclick="cb_city_workshop('8');" tabindex="43">Detroit, MI</label>
-									</td>
-									<td class="cb-margin"></td>									
 									<td class="cb-col-2">
+										<label id="label_city_workshop_8" class="input-label required-label label_cb" for="city_workshop_8" onclick="cb_city_workshop('8');" tabindex="44">Detroit, MI</label>
+									</td>
+									<td class="cb-col-3"></td>									
+									<td class="cb-col-4">
 										<span>June TBD</span>
 									</td>	
-									<td class="cb-margin-2"></td>
-									<td id="opt_city_workshop_8_session" class="cb-col-2" style="width: 500px;">
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_8_session_1" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_8_session, '1') %>
-										<label id="label_city_workshop_8_session_1" class="input-label required-label" for="city_workshop_8_session_1" onclick="rd_city_workshop_8_session('1');" tabindex="44">
-											<span class="sessions">8:30am-3:30pm</span>
-										</label>
-											 
-										<div style="display: inline-block; width: 30px;"></div>
-										<div id="rd_city_workshop_8_session_2" class="rd-button"></div>						
-										<%= f.radio_button(:city_workshop_8_session, '2') %>
-										<label id="label_city_workshop_8_session_2" class="input-label required-label" for="city_workshop_8_session_2" onclick="rd_city_workshop_8_session('2');" tabindex="45">
-											<span class="sessions">4-6:30pm</span>
-										</label>
-										
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_8_session_3" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_8_session, '3') %>
-										<label id="label_city_workshop_8_session_3" class="input-label required-label" for="city_workshop_8_session_3" onclick="rd_city_workshop_8_session('3');" tabindex="46">
-											<span class="sessions">Both</span>											
-										</label>
-									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>
 								<tr>
-									<td>
+									<td class="cb-col-1">
 										<div id="cb_workshop_9" class="cb-button cb-valign"></div>							
 										<%= f.check_box :city_workshop_9 %>
 									</td>
-									<td>
-										<label id="label_city_workshop_9" class="input-label required-label label_cb" for="city_workshop_9" onclick="cb_city_workshop('9');" tabindex="47">Denver, CO</label>
-									</td>		
-									<td class="cb-margin"></td>									
 									<td class="cb-col-2">
+										<label id="label_city_workshop_9" class="input-label required-label label_cb" for="city_workshop_9" onclick="cb_city_workshop('9');" tabindex="48">Denver, CO</label>
+									</td>		
+									<td class="cb-col-3"></td>									
+									<td class="cb-col-4">
 										<span>Sept TBD</span>
 									</td>
-									<td class="cb-margin-2"></td>
-									<td id="opt_city_workshop_9_session" class="cb-col-2" style="width: 500px;">
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_9_session_1" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_9_session, '1') %>
-										<label id="label_city_workshop_9_session_1" class="input-label required-label" for="city_workshop_9_session_1" onclick="rd_city_workshop_9_session('1');" tabindex="48">
-											<span class="sessions">8:30am-3:30pm</span>
-										</label>
-											 
-										<div style="display: inline-block; width: 30px;"></div>
-										<div id="rd_city_workshop_9_session_2" class="rd-button"></div>						
-										<%= f.radio_button(:city_workshop_9_session, '2') %>
-										<label id="label_city_workshop_9_session_2" class="input-label required-label" for="city_workshop_9_session_2" onclick="rd_city_workshop_9_session('2');" tabindex="49">
-											<span class="sessions">4-6:30pm</span>
-										</label>
-										
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_9_session_3" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_9_session, '3') %>
-										<label id="label_city_workshop_9_session_3" class="input-label required-label" for="city_workshop_9_session_3" onclick="rd_city_workshop_9_session('3');" tabindex="50">
-											<span class="sessions">Both</span>											
-										</label>
-									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>
 								<tr>
-									<td>
+									<td class="cb-col-1">
 										<div id="cb_workshop_10" class="cb-button cb-valign"></div>							
 										<%= f.check_box :city_workshop_10 %>
 									</td>
-									<td>
-										<label id="label_city_workshop_10" class="input-label required-label label_cb" for="city_workshop_10" onclick="cb_city_workshop('10');" tabindex="51">Dallas, TX</label>
-									</td>		
-									<td class="cb-margin"></td>									
 									<td class="cb-col-2">
+										<label id="label_city_workshop_10" class="input-label required-label label_cb" for="city_workshop_10" onclick="cb_city_workshop('10');" tabindex="52">Dallas, TX</label>
+									</td>		
+									<td class="cb-col-3"></td>									
+									<td class="cb-col-4">
 										<span>Sept TBD</span>
 									</td>
-									<td class="cb-margin-2"></td>
-									<td id="opt_city_workshop_10_session" class="cb-col-2" style="width: 500px;">
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_10_session_1" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_10_session, '1') %>
-										<label id="label_city_workshop_10_session_1" class="input-label required-label" for="city_workshop_10_session_1" onclick="rd_city_workshop_10_session('1');" tabindex="52">
-											<span class="sessions">8:30am-3:30pm</span>
-										</label>
-											 
-										<div style="display: inline-block; width: 30px;"></div>
-										<div id="rd_city_workshop_10_session_2" class="rd-button"></div>						
-										<%= f.radio_button(:city_workshop_10_session, '2') %>
-										<label id="label_city_workshop_10_session_2" class="input-label required-label" for="city_workshop_10_session_2" onclick="rd_city_workshop_10_session('2');" tabindex="53">
-											<span class="sessions">4-6:30pm</span>
-										</label>
-										
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_10_session_3" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_10_session, '3') %>
-										<label id="label_city_workshop_10_session_3" class="input-label required-label" for="city_workshop_10_session_3" onclick="rd_city_workshop_10_session('3');" tabindex="54">
-											<span class="sessions">Both</span>											
-										</label>
-									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>
 								<tr>
-									<td>
+									<td class="cb-col-1">
 										<div id="cb_workshop_11" class="cb-button cb-valign"></div>							
 										<%= f.check_box :city_workshop_11 %>
 									</td>
-									<td>
-										<label id="label_city_workshop_11" class="input-label required-label label_cb" for="city_workshop_11" onclick="cb_city_workshop('11');" tabindex="55">Newark, NJ</label>
-									</td>	
-									<td class="cb-margin"></td>									
 									<td class="cb-col-2">
+										<label id="label_city_workshop_11" class="input-label required-label label_cb" for="city_workshop_11" onclick="cb_city_workshop('11');" tabindex="56">Newark, NJ</label>
+									</td>	
+									<td class="cb-col-3"></td>									
+									<td class="cb-col-4">
 										<span>Sept TBD</span>
 									</td>
-									<td class="cb-margin-2"></td>
-									<td id="opt_city_workshop_11_session" class="cb-col-2" style="width: 500px;">
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_11_session_1" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_11_session, '1') %>
-										<label id="label_city_workshop_11_session_1" class="input-label required-label" for="city_workshop_11_session_1" onclick="rd_city_workshop_11_session('1');" tabindex="56">
-											<span class="sessions">8:30am-3:30pm</span>
-										</label>
-											 
-										<div style="display: inline-block; width: 30px;"></div>
-										<div id="rd_city_workshop_11_session_2" class="rd-button"></div>						
-										<%= f.radio_button(:city_workshop_11_session, '2') %>
-										<label id="label_city_workshop_11_session_2" class="input-label required-label" for="city_workshop_11_session_2" onclick="rd_city_workshop_11_session('2');" tabindex="57">
-											<span class="sessions">4-6:30pm</span>
-										</label>
-										
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_11_session_3" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_11_session, '3') %>
-										<label id="label_city_workshop_11_session_3" class="input-label required-label" for="city_workshop_11_session_3" onclick="rd_city_workshop_11_session('3');" tabindex="58">
-											<span class="sessions">Both</span>											
-										</label>
-									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>
 								<tr>
-									<td>
+									<td class="cb-col-1">
 										<div id="cb_workshop_12" class="cb-button cb-valign"></div>							
 										<%= f.check_box :city_workshop_12 %>
 									</td>
-									<td>
-										<label id="label_city_workshop_12" class="input-label required-label label_cb" for="city_workshop_12" onclick="cb_city_workshop('12');" tabindex="59">San Jose, CA</label>
-									</td>	
-									<td class="cb-margin"></td>									
 									<td class="cb-col-2">
+										<label id="label_city_workshop_12" class="input-label required-label label_cb" for="city_workshop_12" onclick="cb_city_workshop('12');" tabindex="60">San Jose, CA</label>
+									</td>	
+									<td class="cb-col-3"></td>									
+									<td class="cb-col-4">
 										<span>Sept TBD</span>
 									</td>	
-									<td class="cb-margin-2"></td>
-									<td id="opt_city_workshop_12_session" class="cb-col-2" style="width: 500px;">
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_12_session_1" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_12_session, '1') %>
-										<label id="label_city_workshop_12_session_1" class="input-label required-label" for="city_workshop_12_session_1" onclick="rd_city_workshop_12_session('1');" tabindex="60">
-											<span class="sessions">8:30am-3:30pm</span>
-										</label>
-											 
-										<div style="display: inline-block; width: 30px;"></div>
-										<div id="rd_city_workshop_12_session_2" class="rd-button"></div>						
-										<%= f.radio_button(:city_workshop_12_session, '2') %>
-										<label id="label_city_workshop_12_session_2" class="input-label required-label" for="city_workshop_12_session_2" onclick="rd_city_workshop_12_session('2');" tabindex="61">
-											<span class="sessions">4-6:30pm</span>
-										</label>
-										
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_12_session_3" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_12_session, '3') %>
-										<label id="label_city_workshop_12_session_3" class="input-label required-label" for="city_workshop_12_session_3" onclick="rd_city_workshop_12_session('3');" tabindex="62">
-											<span class="sessions">Both</span>											
-										</label>
-									</td>																																																								
 								</tr>
 								<tr class="cb-spacer"></tr>
 								<tr>
-									<td>
+									<td class="cb-col-1">
 										<div id="cb_workshop_13" class="cb-button cb-valign"></div>							
 										<%= f.check_box :city_workshop_13 %>
 									</td>
-									<td>
-										<label id="label_city_workshop_13" class="input-label required-label label_cb" for="city_workshop_13" onclick="cb_city_workshop('13');" tabindex="63">Las Vegas, CA</label>
-									</td>	
-									<td class="cb-margin"></td>									
 									<td class="cb-col-2">
+										<label id="label_city_workshop_13" class="input-label required-label label_cb" for="city_workshop_13" onclick="cb_city_workshop('13');" tabindex="64">Las Vegas, CA</label>
+									</td>	
+									<td class="cb-col-3"></td>									
+									<td class="cb-col-4">
 										<span>Oct TBD</span>
 									</td>
-									<td class="cb-margin-2"></td>
-									<td id="opt_city_workshop_13_session" class="cb-col-2" style="width: 500px;">
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_13_session_1" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_13_session, '1') %>
-										<label id="label_city_workshop_13_session_1" class="input-label required-label" for="city_workshop_13_session_1" onclick="rd_city_workshop_13_session('1');" tabindex="64">
-											<span class="sessions">8:30am-3:30pm</span>
-										</label>
-											 
-										<div style="display: inline-block; width: 30px;"></div>
-										<div id="rd_city_workshop_13_session_2" class="rd-button"></div>						
-										<%= f.radio_button(:city_workshop_13_session, '2') %>
-										<label id="label_city_workshop_13_session_2" class="input-label required-label" for="city_workshop_13_session_2" onclick="rd_city_workshop_13_session('2');" tabindex="65">
-											<span class="sessions">4-6:30pm</span>
-										</label>
-										
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_13_session_3" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_13_session, '3') %>
-										<label id="label_city_workshop_13_session_3" class="input-label required-label" for="city_workshop_13_session_3" onclick="rd_city_workshop_13_session('3');" tabindex="66">
-											<span class="sessions">Both</span>											
-										</label>
-									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>
 								<tr>
-									<td>
+									<td class="cb-col-1">
 										<div id="cb_workshop_14" class="cb-button cb-valign"></div>							
 										<%= f.check_box :city_workshop_14 %>
 									</td>
-									<td>
-										<label id="label_city_workshop_14" class="input-label required-label label_cb" for="city_workshop_14" onclick="cb_city_workshop('14');" tabindex="67">Tampa, FL</label>
-									</td>	
-									<td class="cb-margin"></td>									
 									<td class="cb-col-2">
+										<label id="label_city_workshop_14" class="input-label required-label label_cb" for="city_workshop_14" onclick="cb_city_workshop('14');" tabindex="68">Tampa, FL</label>
+									</td>	
+									<td class="cb-col-3"></td>									
+									<td class="cb-col-4">
 										<span>Oct TBD</span>
 									</td>	
-									<td class="cb-margin-2"></td>
-									<td id="opt_city_workshop_14_session" class="cb-col-2" style="width: 500px;">
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_14_session_1" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_14_session, '1') %>
-										<label id="label_city_workshop_14_session_1" class="input-label required-label" for="city_workshop_14_session_1" onclick="rd_city_workshop_14_session('1');" tabindex="68">
-											<span class="sessions">8:30am-3:30pm</span>
-										</label>
-											 
-										<div style="display: inline-block; width: 30px;"></div>
-										<div id="rd_city_workshop_14_session_2" class="rd-button"></div>						
-										<%= f.radio_button(:city_workshop_14_session, '2') %>
-										<label id="label_city_workshop_14_session_2" class="input-label required-label" for="city_workshop_14_session_2" onclick="rd_city_workshop_14_session('2');" tabindex="69">
-											<span class="sessions">4-6:30pm</span>
-										</label>
-										
-										<div style="display: inline-block; width: 40px;"></div>						
-										<div id="rd_city_workshop_14_session_3" class="rd-button"></div>
-										<%= f.radio_button(:city_workshop_14_session, '3') %>
-										<label id="label_city_workshop_14_session_3" class="input-label required-label" for="city_workshop_14_session_3" onclick="rd_city_workshop_14_session('3');" tabindex="70">
-											<span class="sessions">Both</span>											
-										</label>
-									</td>									
 								</tr>
 							</table>
 								
-								
-							<table id="table2" class="cb-table">
+							<table id="table2">
 								<tr class="cb-spacer"></tr>
 								<tr>
-									<td style="width: 150px"></td>
-									<td>
+									<td style="width: 80px;"></td>
+									<td style="color: orange;">
 										<div id="cb_workshop_15" class="cb-button cb-valign"></div>							
 										<%= f.check_box :city_workshop_15 %>
 									</td>
-									<td>
-										<label id="label_city_workshop_15" class="input-label required-label label_cb" for="city_workshop_15" onclick="cb_city_workshop('15');" tabindex="71">National "The Gathering" Event</label>
-									</td>	
-									<td class="cb-margin"></td>									
-									<td class="cb-col-2">
+									<td style="width: 300px; color: orange;">
+										<label id="label_city_workshop_15" class="input-label required-label label_cb" for="city_workshop_15" onclick="cb_city_workshop('15');" tabindex="72">National "The Gathering" Event</label>
+									</td>
+								</tr>
+								<tr style="height: 15px;"></tr>
+								<tr>	
+									<td style="width: 80px;"></td>
+									<td></td>									
+									<td style="color: orange; padding-left: 60px;">
 										<span>November 3-4</span>
 									</td>	
 								</tr>
 							</table>
-							
+
 							<div style="height: 24px;"></div>
 
 						</div>
@@ -1419,12 +972,14 @@
 				<div class="cell-left-reg-event">
 				</div>
 				<div class="cell-submit-reg-event" style="padding-left: 0px;">
-					<%= f.submit "Submit", :id => 'btn_submit', :class => 'btn submitregevent', :tabindex => '72' %>
+					<%= f.submit "Submit", :id => 'btn_submit', :class => 'btn submitregevent', :tabindex => '73' %>
 				</div>      	
 			</div>      		
 
 			<!-- <div class="space-150"></div> -->
 				
+		<!-- </div> -->
+		
 		<!-- </div> -->
 		
 		<% end %>
@@ -1450,6 +1005,9 @@
 
 </div>
 
+<li>
+
+</ul>
 
     <!-- <script src="../scripts/jquery.js"></script> -->
 
@@ -1469,6 +1027,12 @@
     </script> -->
     
 	<script>
+
+		var offset_top = 0;
+		jQuery(window).scroll(function() {
+			offset_top = $(window).scrollTop()
+			$('#eventstabs').css('top', offset_top);
+		});
 
 		function scrollToAnchor(aid) {
 			var a = $("a[name='" + aid + "']");
@@ -1551,7 +1115,7 @@
 
 			// var h1 = 2000;
 			
-			var h2 = (h1 * (0.95));
+			var h2 = (h1 * (0.96));
 			
 			$("#form_reg_event").css({
 				height : h2
@@ -1604,7 +1168,7 @@
 					//form.submit();
 					
 					// selectValid1 = validateSelect1();
-					selectValid2 = validateSelect2();
+					// selectValid2 = validateSelect2();
 					validCityWorkshop = validateCityWorkshop();
 					
 					
@@ -1612,7 +1176,8 @@
 					//alert(s);
 					
 					// if ( selectValid1 && selectValid2 ) {
-					if ( selectValid2 && validCityWorkshop ) {						
+					// if ( selectValid2 && validCityWorkshop ) {						
+					if ( validCityWorkshop ) {						
 						form.submit();
 					}
 					else
@@ -1621,9 +1186,9 @@
 						// if (!selectValid1) {
 							// errors += 1;
 						// }
-						if (!selectValid2) {
-							errors += 1;
-						}			
+						// if (!selectValid2) {
+							// errors += 1;
+						// }			
 						if ( !validCityWorkshop ) {
 							errors += 1;
 						}					
@@ -1699,6 +1264,11 @@
 						minlength: 1,						
 						maxlength: 50						
 					},
+					'reg_event[phone_mobile]': {
+						required: false,
+						minlength: 1,						
+						maxlength: 100						
+					},					
 					'reg_event[email]': {
 						required: true,
 						maxlength: 100,
@@ -1751,57 +1321,61 @@
 				messages: {
 					'reg_event[name_first]': {
 						required: "*",
-						maxlength: "Name exceeds 100 characters"							
+						maxlength: "Exceeds 100 characters"							
 					},
 					'reg_event[name_last]': {
 						required: "*",
-						maxlength: "Name exceeds 100 characters"							
+						maxlength: "Exceeds 100 characters"							
 					},
 					'reg_event[name_title]': {
 						required: "*",
-						maxlength: "Name exceeds 200 characters"							
+						maxlength: "Exceeds 200 characters"							
 					},
 					'reg_event[type_affiliation]': {
 						required: "*",
-						maxlength: "Name exceeds 200 characters"							
+						maxlength: "Exceeds 200 characters"							
 					},
 					'reg_event[name_affiliation]': {
 						required: "*",
-						maxlength: "Name exceeds 100 characters"							
+						maxlength: "Exceeds 100 characters"							
 					},
 					'reg_event[address]': {
 						required: "*",
-						maxlength: "Name exceeds 100 characters"							
+						maxlength: "Exceeds 100 characters"							
 					},
 					'reg_event[city]': {
 						required: "*",
-						maxlength: "Name exceeds 100 characters"							
+						maxlength: "Exceeds 100 characters"							
 					},
 					'reg_event[state]': {
 						required: "*",
-						maxlength: "Name exceeds 50 characters"							
+						maxlength: "Exceeds 50 characters"							
 					},
 					'reg_event[zip]': {
 						required: "*",
-						maxlength: "Name exceeds 50 characters"							
+						maxlength: "Exceeds 50 characters"							
 					},
 					'reg_event[phone]': {
 						required: "*",
-						maxlength: "Name exceeds 50 characters"							
+						maxlength: "Exceeds 100 characters"							
 					},
+					'reg_event[phone]': {
+						required: "*",
+						maxlength: "Exceeds 100 characters"							
+					},					
 					'reg_event[email]': {
 						required: "*",
-						maxlength: "Email address exceeds 100 characters",
+						maxlength: "Exceeds 100 characters",
 						email: "Invalid form on email address"
 					},
 					'reg_event[email_cc_1]': {
 						required: "*",
-						maxlength: "Email address exceeds 100 characters",
+						maxlength: "Exceeds 100 characters",
 						email: "Invalid form on email address"
 					},					
 					'reg_event[email_cc_2]': {
 						required: "*",
-						maxlength: "Email address exceeds 100 characters",
+						maxlength: "Exceeds 100 characters",
 						email: "Invalid form on email address"
 					}					
 										
@@ -1869,9 +1443,9 @@
 				// if (!validateSelect1()) {
 					// errors += 1;
 				// }
-				if (!validateSelect2()) {
-					errors += 1;
-				}
+				// if (!validateSelect2()) {
+					// errors += 1;
+				// }
 				if ( !validateCityWorkshop() ) {
 					errors += 1;
 				}					
@@ -1971,6 +1545,10 @@
 
 		$("#reg_event_phone").on("blur", function () {
 			errorMessageUpdate('reg_event_phone');
+		});
+
+		$("#reg_event_phone_mobile").on("blur", function () {
+			errorMessageUpdate('reg_event_phone_mobile');
 		});
 
 		$("#reg_event_email").on("blur", function () {

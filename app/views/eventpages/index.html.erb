@@ -1,8 +1,8 @@
 <% provide(:title, 'Events') %>
 
 
-<style>
 	
+<style>
 	
 	#lc-landing {
 	}	
@@ -239,8 +239,11 @@
 		color: #1B237A;	
 	}
 	
-</style>	
 	
+</style>
+
+
+<!-- <script type="text/javascript" src="../scripts/jquery.tmpl.js"></script> -->
 
 <!-- <div class="tabs">
   <ul>
@@ -261,12 +264,13 @@
 
 <%= render 'share/backtotop_2' %>
 
+<ul class="lc-inline">
+<li>
+<%= render 'share/eventpages_tabs' %>
+<li>
 
+<li>
 <div id="tab-container">
-
-
-<%= render 'share/eventpages_tabs'%>
-
 
 
 <div id="lc-landing">
@@ -277,7 +281,7 @@
 
 	
 <div id="page">
-
+	
 <img src="../repository/events/conference.jpg" alt="conference.jpg" width="800px">
 
 <div class="spacer"></div>
@@ -371,12 +375,22 @@
 
 </div>
 
+<li>
+
+</ul>
 
 <script>
+		
+		var offset_top = 0;
+		jQuery(window).scroll(function() {
+			offset_top = $(window).scrollTop()
+			$('#eventstabs').css('top', offset_top);
+		});
 	
 		$(window).load( function() {
 		//$(document).ready(function(){
 			$("#tab1").addClass("active");
 		});
+		
 	
 </script>
