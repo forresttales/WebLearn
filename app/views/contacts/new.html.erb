@@ -1,275 +1,222 @@
 <% provide(:title, 'Contact Us') %>
 
-<!-- <script src='js/jquery.min.js' type='text/javascript'></script> -->
 
-<!-- <script src="http://jquery.bassistance.de/validate/lib/jquery.js"></script> -->
-	
-	
-<!-- <script src="http://jquery.bassistance.de/validate/jquery.validate.js"></script> -->
-
-<!-- <script src="/assets/jquery.js"></script> -->
-<script src="/assets/jquery.validate.js"></script>
-
-<!-- <script src="//code.jquery.com/jquery-1.9.1.js"></script> -->
-
-  <!-- <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.4/jquery.validate.min.js"></script> -->
-  
-  
-
-
-	<!-- <div id="join_image" style="background: #F1F2E1 url('/assets/background_cambridge_garden.jpg') no-repeat right top;"> -->
-					
+	<!-- <script src='js/jquery.min.js' type='text/javascript'></script> -->
+	<script src="/assets/jquery.validate.js"></script>
 					
 	<style>
 	
-	.form-contact {
-		
-		width: 960px;
-		height: auto;
-		display: none;
-						
-		/*background-color: rgba(180, 180, 180, 0.94);*/
-		
-		background-color: rgba(0, 0, 0, 0.8);
-
-		
-		/*-moz-box-shadow:5px 5px 40px #fff;
-		-webkit-box-shadow:5px 40px 5px #fff;
-		box-shadow:5px 5px 40px #CCAE37;*/
-	   		   		    
-	    transition: box-shadow 3s ease-in-out;				
-			
-		border-top-left-radius: 10px;
-   		border-top-right-radius: 10px;		
-		border-bottom-left-radius: 10px;
-   		border-bottom-right-radius: 10px;
-   		
-		position: relative;
-		text-align: center;			
-		padding-top: 20px;	   			   	
-		padding-bottom: 20px;	
-	}
-	
-	#joinClose {
-		right: 6px;
-		top: 6px;
-		position: absolute;
-		display: block
-	}
-	
-	/**:focus {
-		outline: none
-	}*/
-	
-	#loading {
-		background:url("/assets/icon_loading.gif") no-repeat center center;
-		height: 100px; width: 100px;
-		position: fixed; left: 47%; top: 50%; z-index: 1000;
-		margin: -25px 0 0 -25px;
-	}				
-				
-	
-	.input-form {
-		font-family: msyh;
-		font-size: 16px;
-		width: 300px;
-		height: 24px;
-		border-style:solid;
-		border-radius: 6px;
-		/*border-color: #13571F; green*/		
-		border-color: #005C9E; /*blue*/
-		
-		
-		border-width: 2px;
-		padding-left: 6px;
-		
-		-webkit-transition: all 0.5s ease-in-out;
-		-moz-transition: all 0.5s ease-in-out;
-		-o-transition: all 0.5s ease-in-out;
-		-ms-transition: all 0.5s ease-in-out;
-		transition: all 0.5s ease-in-out;
-	}
-
-	.input-form:focus {
-		/*border-color: #97FF47;*/
-		
-		color: #fff;
-						
-		background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;						
-				
-		-webkit-box-shadow: 0 0 25px #ccc;
-		-moz-box-shadow: 0 0 25px #ccc;
-		box-shadow: 0 0 25px #ccc;
-		-webkit-transform: scale(1.05);
-		-moz-transform: scale(1.05);
-		-webkit-transform: scale(1.05);
-		-moz-transform: scale(1.05);
-		-o-transform: scale(1.05);
-		-ms-transform: scale(1.05);
-		-webkit-transform: scale(1.05);
-		-moz-transform: scale(1.05);
-		-o-transform: scale(1.05);
-		-ms-transform: scale(1.05);
-		-webkit-transform: scale(1.05);
-		-moz-transform: scale(1.05);
-		-o-transform: scale(1.05);
-		-ms-transform: scale(1.05);
-		transform: scale(1.05);
-	}
-
-	div .error_label {
-	    display: none;
-		font-family: msyh;
-		font-size: 12px;
-		color: #851717;		    
-	}
-
-	div .errors {
-		font-family: msyh;
-		font-size: 16px;
-		
-		/*color: #851717;*/
-				
-		color: #FC7777;		
-	}
-
-	/*.input-form:invalid {
-		color: #851717;
-		background: url("/assets/submit_form_cancel.png") no-repeat 216px 7px;									
-	}
-
-	.input-form:error {
-		color: #851717;
-		background: url("/assets/submit_form_cancel.png") no-repeat 216px 7px;									
-	}
-
-	.input-form:required {
-		color: orange;		
-		background: url("/assets/submit_form_asterisk_orange.png") no-repeat 218px 7px;
-	}
-
-	.input-form:success {
-		color: #ACDDE3;		
-		background: url("/assets/submit_form_tick.png") no-repeat 218px 5px;
-	}
-	
-	.input-form:valid {
-		color: #ACDDE3;		
-		background: url("/assets/submit_form_tick.png") no-repeat 218px 5px;
-	}*/	
-	
-	.input-label {
-		font-family: msyh;
-		font-size: 16px;
-		width: 220px;
-		height: 18px;
-	}
-
-	/*.input-label:focus {
-		color: #43B557;
-	}
-
-	.input-label:error {
-		color: #851717;
-	}
-
-	.input-label:required {
-		color: orange;		
-	}
-
-	.input-label:success {
-		color: orange;		
-	}*/		
-		
-		
-		
-		
-	.success {
-		color: #ACDDE3;		
-		background: url("/assets/submit_form_tick.png") no-repeat 278px 5px;		
-	}		
-	
-	.error {
-		/*color: #851717;*/		
-		color: #FC7777;
-		background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;		
-		border-color: #851717; 						
-	}
-
-	.required {
-		color: orange;		
-		background: url("/assets/submit_form_asterisk_orange.png") no-repeat 278px 7px;
-	}
-	.not-required {
-		color: #ACDDE3;		
-		background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;
-	}
-	
-	/*.focus {
-		color: #fff;
-	}*/
-	
-	.error-label {
-		/*color: #851717;*/		
-		color: #FC7777;
-	}
-
-	.required-label {
-		color: orange;		
-	}
-	
-	.input-form-spacer {
-		height: 16px;
-	}
-
-	.input-search-1 {
-		background-color: white;
-		color: black;
-		font-family: Arial;
-		width: 200px;
-	}
-		
-		
-	#join-image {
-		height: 550px;
-	}
-		
-	div .cell-right-contact {
-		display: table-cell;
-		width: 330px;
-		text-align: left;
-		align: top;		
-	}
-
-	div .cell-left-contact {
-		display: table-cell;
-		width: 280px;	
-		align: top;
-		text-align: right;		
-		padding-right: 20px;
-	}
-	
-	div .cell-submit-contact {
-		display: table-cell;
-		width: 330px;
-		text-align: left;
-		align: top;		
-	}
-		
-	div .cell-error-contact {
-		display: inline-block;
-		width: 300px;
-		height: 18px;
-		vertical-align: bottom;
-		text-align: left;
-	}
-		
-	.message {
-		height: 120px;
-	}
+		.form-contact {
+			width: 960px;
+			height: auto;
+			display: none;
+			/*background-color: rgba(180, 180, 180, 0.94);*/
+			background-color: rgba(0, 0, 0, 0.8);
+			/*-moz-box-shadow:5px 5px 40px #fff;
+			-webkit-box-shadow:5px 40px 5px #fff;
+			box-shadow:5px 5px 40px #CCAE37;*/
+		    transition: box-shadow 3s ease-in-out;				
+			border-top-left-radius: 10px;
+	   		border-top-right-radius: 10px;		
+			border-bottom-left-radius: 10px;
+	   		border-bottom-right-radius: 10px;
+			position: relative;
+			text-align: center;			
+			padding-top: 20px;	   			   	
+			padding-bottom: 20px;	
+		}
+		#join-image {
+			height: 740px;
+		}		
+		#joinClose {
+			right: 6px;
+			top: 6px;
+			position: absolute;
+			display: block
+		}
+		/**:focus {
+			outline: none
+		}*/
+		#loading {
+			background:url("/assets/icon_loading.gif") no-repeat center center;
+			height: 100px; width: 100px;
+			position: fixed; left: 47%; top: 50%; z-index: 1000;
+			margin: -25px 0 0 -25px;
+		}				
+		.input-form {
+			font-family: msyh;
+			font-size: 16px;
+			width: 300px;
+			height: 24px;
+			border-style:solid;
+			border-radius: 6px;
+			/*border-color: #13571F; green*/		
+			border-color: #005C9E; /*blue*/
+			border-width: 2px;
+			padding-left: 6px;
+			-webkit-transition: all 0.5s ease-in-out;
+			-moz-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
+			-ms-transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease-in-out;
+		}
+		.input-form:focus {
+			/*border-color: #97FF47;*/
+			color: #fff;
+			background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;						
+			-webkit-box-shadow: 0 0 25px #ccc;
+			-moz-box-shadow: 0 0 25px #ccc;
+			box-shadow: 0 0 25px #ccc;
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			transform: scale(1.05);
+		}
+		div .error_label {
+		    display: none;
+			font-family: msyh;
+			font-size: 12px;
+			color: #851717;		    
+		}
+		div .errors {
+			font-family: msyh;
+			font-size: 16px;
+			/*color: #851717;*/
+			color: #FC7777;		
+		}
+		/*.input-form:invalid {
+			color: #851717;
+			background: url("/assets/submit_form_cancel.png") no-repeat 216px 7px;									
+		}
+		.input-form:error {
+			color: #851717;
+			background: url("/assets/submit_form_cancel.png") no-repeat 216px 7px;									
+		}
+		.input-form:required {
+			color: orange;		
+			background: url("/assets/submit_form_asterisk_orange.png") no-repeat 218px 7px;
+		}
+		.input-form:success {
+			color: #ACDDE3;		
+			background: url("/assets/submit_form_tick.png") no-repeat 218px 5px;
+		}
+		.input-form:valid {
+			color: #ACDDE3;		
+			background: url("/assets/submit_form_tick.png") no-repeat 218px 5px;
+		}*/	
+		.input-label {
+			font-family: msyh;
+			font-size: 16px;
+			width: 220px;
+			height: 18px;
+		}
+		/*.input-label:focus {
+			color: #43B557;
+		}
+		.input-label:error {
+			color: #851717;
+		}
+		.input-label:required {
+			color: orange;		
+		}
+		.input-label:success {
+			color: orange;		
+		}*/		
+		.success {
+			color: #ACDDE3;		
+			background: url("/assets/submit_form_tick.png") no-repeat 278px 5px;		
+		}		
+		.error {
+			/*color: #851717;*/		
+			color: #FC7777;
+			background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;		
+			border-color: #851717; 						
+		}
+		.required {
+			color: orange;		
+			background: url("/assets/submit_form_asterisk_orange.png") no-repeat 278px 7px;
+		}
+		.not-required {
+			color: #ACDDE3;		
+			background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;
+		}
+		/*.focus {
+			color: #fff;
+		}*/
+		.error-label {
+			/*color: #851717;*/		
+			color: #FC7777;
+		}
+		.required-label {
+			color: orange;		
+		}
+		.input-form-spacer {
+			height: 16px;
+		}
+		.input-search-1 {
+			background-color: white;
+			color: black;
+			font-family: Arial;
+			width: 200px;
+		}
+		div .cell-right-contact {
+			display: table-cell;
+			width: 330px;
+			text-align: left;
+			align: top;		
+		}
+		div .cell-left-contact {
+			display: table-cell;
+			width: 280px;	
+			align: top;
+			text-align: right;		
+			padding-right: 20px;
+		}
+		div .cell-submit-contact {
+			display: table-cell;
+			width: 330px;
+			text-align: left;
+			align: top;		
+		}
+		div .cell-error-contact {
+			display: inline-block;
+			width: 300px;
+			height: 18px;
+			vertical-align: bottom;
+			text-align: left;
+		}
+		.message {
+			height: 120px;
+		}
+		.prep-required {		
+			font-family: msyh;
+			font-size: 12px;
+			color: orange;
+		}
 		
 	</style>					
 					
+	<style>
+		
+		.alert {
+			font-family: Arial, Helvetica, sans-serif;
+			color: #8C0303;
+			font-size: 18px;
+		}
+		
+	</style>		                		
+
 
 <div style="width: 1000px; margin-right: auto; margin-left: auto; background: #fff;">
 		
@@ -277,12 +224,7 @@
     	     	
 			<%= render 'share/backtotop_2' %>
     	     	
-    	<!-- <div class="shadow" style="position: relative; z-index: +2;"> -->    		
-			
-			<!-- <div style="height: 40px;"> -->
-												
 			<div class="table-white">
-
 				<!-- <div class="row" style="height: 50px;">
 					<div class="cell-100percent">
 						<div id="errorContainer">
@@ -290,8 +232,6 @@
 						</div>		
 					</div>
 				</div>				 -->
-				
-								
 				<div class="row">
 					
 					<div class="cell-100" style="padding-left: 24px;">
@@ -321,25 +261,25 @@
 							888-611-7709							
 						</p>
 					</div>
-					<!-- <p>
-						<button class="btn blue small">Join</button>
-					</p>
-					<p>
-						<button class="btn blue small">Cancel</button>
-					</p> -->											
 				</div>
 
+				<div class="row" style="height: 20px;"></div>
+				
 				<div class="row" style="height: 30px;">
+					<div class="cell-100">
+			  		</div>
+					<div class="cell-600" style="padding-left: 150px;">
+			    		<% unless flash[:captcha].nil? %>
+						<div class="alert"><%= flash[:captcha] %></div>
+			      		<% end %>
+					</div>
 				</div>
+
+				<div class="row" style="height: 20px;"></div>
 				
 			</div>
-			
-			
-		<!-- </div>	 -->
-				
 		
 		<!-- <div id="loading"> </div> -->
-		
 						
 	</header>		
 	
@@ -348,17 +288,23 @@
 
 <div style="width: 1000px; margin-right: auto; margin-left: auto;">
 	
-	<section>
-
 	<div id="join-image" class="shadow-inset">
-
 		
 		<div id="form_contact" class="form-contact" tabindex="1">
 			
+			<div style="width: 100%; text-align: right;">
+				<div style="display: inline-block">
+					<img src="/assets/submit_form_asterisk_orange.png">
+				</div>
+				<div style="display: inline-block">
+					<span class="prep-required"> required fields</span>
+				</div>
+				<div style="display: inline-block; width: 100px;">
+				</div>				
+			</div>
+			
 			<!-- <a id="joinClose" class="btn-joinClose" onclick="hideSignin();"><img src="/assets/submit_form_close.png" width="20" alt="" /></a> --> 			
-
 			<!-- <a id="joinClose" class="btn-joinClose" onclick=""><img src="/assets/submit_form_close.png" width="20" alt="" /></a> -->
- 			
     		  <!-- form_for(@user, :id => "join_form", :url => {:controller => "users", :action => "create"}) do |f|  -->
     		      		     		
 			<%= form_for( @contact, :html => {:id => "form_join"}) do |f| %> 
@@ -366,7 +312,7 @@
 			<!-- = render 'shared/error_messages', object: f.object -->
 			 <!-- hidden_field_tag :account_type, @account_type  -->
 			 	
-			<div class="errors" style="height: 30px;">
+			<div class="errors" style="height: 20px;">
 				<div class="row">
 					<div class="cell-left-contact"></div>
 					<div class="cell-right-contact">
@@ -374,8 +320,6 @@
 					</div>
 				</div>
 			</div>			
-
-
 
 			<div class="input-form-spacer"></div>
 
@@ -493,19 +437,26 @@
 
 			<div class="input-form-spacer"></div>
 			<div class="input-form-spacer"></div>
+
+			<div class="row">
+				<div class="cell-left-contact">
+				</div>
+				<div id="id_recaptcha" class="cell-submit-contact" style="padding-left: 0px;">
+					<%= recaptcha_tags %>	
+				</div>      	
+			</div>      		
+
+			<div class="input-form-spacer"></div>
+			<div class="input-form-spacer"></div>
 			<div class="input-form-spacer"></div>
 	
 			<div class="row">
 				<div class="cell-left-contact">
 				</div>
 				<div class="cell-submit-contact" style="padding-left: 0px;">
-					<%= f.submit "Submit", :id => 'btn_submit', :class => 'btn submitcontact', :tabindex => '7' %>
+					<%= f.submit "Submit", :id => 'btn_submit', :class => 'btn submitcontact', :tabindex => '8' %>
 				</div>      	
 			</div>      		
-
-			<!-- <div class="space-150"></div> -->
-				
-		<!-- </div> -->
 		
 		<% end %>
 
@@ -520,8 +471,6 @@
 	
 	
 	</div>
-	
-	</section>
 	
 </div>
 
@@ -606,7 +555,8 @@
 
 			var h1 = $("#join-image").height();
 			
-			var h2 =  (h1 * (0.86));
+			// var h2 =  (h1 * (0.86));
+			var h2 =  (h1 * (0.89));
 			
 			//var d = $("#form_contact").height();
 			
@@ -679,7 +629,7 @@
 					'contact[subject]': {
 						required: true,
 						minlength: 1,						
-						maxlength: 200						
+						maxlength: 254						
 					},
 					'contact[message]': {
 						required: true,
@@ -713,7 +663,7 @@
 						maxlength: "Exceeds 255 characters",
 						email: "Please enter a valid email address"
 					},					
-					'contact[subject]': {
+					'contact[phone]': {
 						required: "*",
 						maxlength: "Exceeds 255 characters"							
 					},
@@ -770,6 +720,7 @@
 
 		var error_name = null;
 		var error_email = null;
+		var error_phone = null;
 		var error_subject = null;
 		var error_message = null;
 		
@@ -836,25 +787,18 @@
 		});
 
 
-
 		$(window).load( function() {
 		//$(document).ready(function(){
 			
 			var image = '../backgrounds/comp025.jpg';
 
 			// var image = '../backgrounds/comp020.gif';
-
 			// var image = '../backgrounds/multi134.jpg';
-
 			// var image = '../backgrounds/background-image-proxy.jpeg';
 
-
 			img = $('<img />');
-			
 			img.bind('load', function() {
-				
 			    // $('#loading').fadeOut(1000);
-
 				setTimeout( function(){
 					centerSignin();
 					showSignin();
@@ -869,7 +813,12 @@
 				background: '#F1F2E1 url(' + image + ') repeat right top'
 				
 			})
-				
+
+			// $('td[name=tcol1]') // matches exactly 'tcol1'
+			// $('td[name^=tcol]') // matches those that begin with 'tcol'
+			
+			$("input[name=recaptcha_response_field]").attr("tabindex","7");
+							
 			// $(window).bind("load", function() {
 			    // $('#loading').fadeOut(2000);
 			// });

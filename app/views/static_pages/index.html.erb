@@ -100,7 +100,7 @@
 				line-height: 16px;
 				color: #8A5A0C;
 				font-family: KlavikaBlack, Arial, sans-serif;
-				text-shadow: 2px 2px #F5DDB8;
+				/*text-shadow: 2px 2px #F5DDB8;*/
 				margin-left: 0px;
 			}
 			.title-galler-table {
@@ -132,7 +132,14 @@
 			.slider-border-1:hover {
 				 border: 6px solid orange;
 			}
-			
+			.slider-border-2 {
+				 width: 270px; 
+				 height: 152px; 
+				 border: 6px solid #000;
+			}
+			.slider-border-2:hover {
+				 border: 6px solid orange;
+			}
 			.video-bytes {
 				font-family: bytes;
 				font-size: 40px;
@@ -160,6 +167,12 @@
 			}
 			.line-empty {
 				border-top: #fff 5px solid !important;
+			}
+			.visibility-hidden {
+				visibility: hidden;	
+			}
+			.display-none {
+				display: none;	
 			}
 			
 		</style>
@@ -222,7 +235,7 @@
 							<div class="row">
 								<div class="cell-100percent">
 									<div align="center">
-										<%= link_to image_tag("../repository/image_coming_soon_8k.png", :alt => 'image_coming_soon_8k.png'), '/Edmatchup' %>															
+										<%= link_to image_tag("../repository/image_coming_soon_8k.png", :alt => 'image_coming_soon_8k.png'), '/KnowStory' %>															
 									</div>							
 						  		</div>							
 							</div>
@@ -282,29 +295,38 @@
 					
 										<div class="cycle-slideshow" data-cycle-speed="500" data-cycle-pause-on-hover="true" data-cycle-fx="scrollHorz" data-cycle-prev="#prev" data-cycle-next="#next" data-cycle-slides="&gt; div" style="width: 604px; position: relative; height: 650px; overflow: hidden;">					
 										
-											<div style="position: absolute; top: 0px; left: 0px; z-index: 101; opacity: 1;">
-												<div class="k-mainfeaturerow">
-					    							<div id="12"></div>
-										        </div>
-											</div>
-											<div style="position: absolute; top: 0px; left: 0px; z-index: 100; display: none;">
+											<div style="position: absolute; top: 0px; left: 0px; z-index: 97; display: none;">
 												<div class="rowfluid k-mainfeaturerow">
-					    							<div id="22"></div>
-										        </div>
-											</div>
-											<div style="position: absolute; top: 0px; left: 0px; z-index: 99; display: none;">
-												<div class="rowfluid k-mainfeaturerow">
-													<div id="3"></div>
+					    							<div id="49"></div>
 										        </div> 
 											</div>
-													
+											<div style="position: absolute; top: 0px; left: 0px; z-index: 99; opacity: 1;">
+												<div class="k-mainfeaturerow">
+					    							<div id="50"></div>
+										        </div>
+											</div>
+											<div style="position: absolute; top: 0px; left: 0px; z-index: 98; display: none;">
+												<div class="rowfluid k-mainfeaturerow">
+					    							<div id="47"></div>
+										        </div> 
+											</div>
+											<div style="position: absolute; top: 0px; left: 0px; z-index: 96; display: none;">
+												<div class="rowfluid k-mainfeaturerow">
+					    							<div id="48"></div>
+										        </div> 
+											</div>
+											<!-- <div style="position: absolute; top: 0px; left: 0px; z-index: 99; display: none;">
+												<div class="rowfluid k-mainfeaturerow">
+					    							<div id="3"></div>
+										        </div> 
+											</div> -->
 										</div>
 					
 										<div style="clear: both; height: 0px; font-size: 1px; line-height: 0px;"></div>
 										
 									</div>
 									
-									<div style="display: inline-block; width: 320px; vertical-align: top; padding-left: 50px;">
+									<div id="div-top-right" class="visibility-hidden" style="display: inline-block; width: 320px; vertical-align: top; padding-left: 50px;">
 
 										<table width="316px">
 											<tr>
@@ -327,8 +349,7 @@
 														<table class="title-galler-table">
 															<tr>
 																<td class="title-galler-table-col1">
-																	Digital Curriculum Strategy Discussion<br>
-																	Fresno, CA, Mar 17, 2014				
+																	Past Event Photos
 																</td>
 															</tr>
 														</table>
@@ -367,28 +388,36 @@
 
 											<tr>
 												<td style="text-align: right; padding-left: 40px;">
-													<a href="/Event-News/California-Fresno-March-17">
-														<div class="cycle-slideshow slider-border-1"
+													<a href="/Event-News">
+														<div id="small-slider-top" class="cycle-slideshow slider-border-1 display-none"
 														    data-cycle-fx=scrollHorz
 														    data-cycle-timeout=2000
 														    >
 														    <div class="cycle-overlay"></div>
+
+														    <img src="../event_news_images_3/logo_houston_002.JPG" 
+														        data-cycle-title="Digital Curriculum Strategy Discussion" 
+														        data-cycle-desc="Richmond, VA, May 6, 2014" />
 														
-														    <img src="../event_news_images_2/Fresno-0-h180.png" 
+														    <img src="../event_news_images_7/logo_IMG_57.JPG" 
 														        data-cycle-title="Digital Curriculum Strategy Discussion" 
-														        data-cycle-desc="Fresno, CA, March 17, 2014" />
-	
-														    <img src="../event_news_images_2/Fresno-3-h180.png" 
+														        data-cycle-desc="Minneapolis, MN, June 17, 2014" />
+
+														    <img src="../event_news_images_3/logo_houston_006.JPG" 
 														        data-cycle-title="Photo Montage&nbsp;&raquo;"
-														        data-cycle-desc="" />
+														        data-cycle-desc="Los Angeles, CA, May 22, 2014" />
 	
-														    <img src="../event_news_images_2/Fresno-pic11-h180.png" 
+														    <!-- <img src="../event_news_images_3/logo_houston_006.JPG" 
+														        data-cycle-title="Photo Montage&nbsp;&raquo;"
+														        data-cycle-desc="Fresno, CA, April 2, 2014" /> -->
+	
+														    <img src="../event_news_images_3/logo_houston_018.JPG" 
 														        data-cycle-title="Digital Curriculum Strategy Discussion" 
-														        data-cycle-desc="Fresno, CA, March 17, 2014" />
+														        data-cycle-desc="Houston, TX, April 10, 2014" />
 	
-														    <img src="../event_news_images_2/Fresno-pic07-h180.png" 
+														    <img src="../event_news_images_3/logo_houston_026.JPG" 
 														        data-cycle-title="Photo Montage&nbsp;&raquo;"
-														        data-cycle-desc="" />
+														        data-cycle-desc="Chicago, IL, April 15, 2014" />
 	
 														</div>										
 													</a>
@@ -452,6 +481,51 @@
 
 <a name="anchor2"></a>    		      		     		
 				
+
+
+<!-- start template single row -->
+				
+<div class="k-governcell ktop kbottom">	
+		
+	<div class="k-outercell kol3">
+		
+		<div id="12"></div>
+		
+	</div>
+		
+	<div class="k-cell-divider"></div>
+	
+	
+	<div class="k-outercell kol3">
+
+		<div id="43"></div>
+    	<!-- <div id="38"></div> -->
+						
+	</div>
+
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol3">
+		
+		<div id="39"></div>		
+		<!-- <div id="8"></div> -->
+		
+	</div>
+	
+</div>
+
+<!-- end template single row -->				
+
+
+
+
+
+
+
+
+
+
+
 				
 <!-- start template single row -->
 				
@@ -468,7 +542,42 @@
 	
 	<div class="k-outercell kol3">
 
-    	<div id="38"></div>
+		<div id="32"></div>
+    	<!-- <div id="38"></div> -->
+						
+	</div>
+
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol3">
+		
+		<div id="33"></div>		
+		<!-- <div id="8"></div> -->
+		
+	</div>
+	
+</div>
+
+<!-- end template single row -->				
+
+
+
+<!-- start template single row -->
+				
+<div class="k-governcell ktop kbottom">	
+		
+	<div class="k-outercell kol3">
+		<div id="3"></div>		
+		<!-- <div id="32"></div> -->
+		
+	</div>
+		
+	<div class="k-cell-divider"></div>
+	
+	
+	<div class="k-outercell kol3">
+
+    	<div id="22"></div>
 						
 	</div>
 
@@ -497,7 +606,18 @@
 			</div>
 		</div>
 		
-		<!-- <div id="8"></div> -->
+		<!-- <div class="k-inner-cell"  style="padding-top: 2px;">
+			<div class="text_container b_container line-empty">
+				<a href="/Event-News/Illinois-Chicago-April-15">
+					<div class="slider-border-2">
+						<img src="../event_news_images_4/logo_chicago_02.jpg" alt="logo_chicago_02.jpg" />
+					</div>
+				</a>
+			</div>
+			<div class="k-b-headline">
+				Chicago, IL, April 15<br>Photo Montage
+			</div>			
+		</div> -->
 		
 	</div>
 	
@@ -506,30 +626,12 @@
 <!-- end template single row -->				
 
 
-
 <!-- start template single row -->
 				
-<div class="k-governcell ktop kbottom">	
+<!-- <div class="k-governcell ktop kbottom">	
 		
-	<div class="k-outercell kol3">
-		
-		<div id="32"></div>
-		
-	</div>
-		
-	<div class="k-cell-divider"></div>
-	
-	
 	<div class="k-outercell kol3">
 
-    	<div id="33"></div>
-						
-	</div>
-
-	<div class="k-cell-divider"></div>
-	
-	<div class="k-outercell kol3">
-		
 		<div class="k-inner-cell"  style="padding-top: 2px;">
 			<div class="text_container b_container line-empty">
 				<a href="/Event-News/Columbia-South-Carolina-March-5">
@@ -540,26 +642,54 @@
 			</div>
 			<div class="k-b-headline">
 				Columbia, SC, Feb 27<br>Photo Montage
-				<!-- <span class="kbyline"><span class="k-b-link">March 5, 2014</span></span><br> 
-				<span class="kbyline">by&nbsp<span class="k-b-link">LeiLani Cauthen</span></span> -->											
+				<span class="kbyline"><span class="k-b-link">March 5, 2014</span></span><br> 
+				<span class="kbyline">by&nbsp<span class="k-b-link">LeiLani Cauthen</span></span>											
 			</div>			
 		</div>
 		
-		<!-- <div id="8"></div> -->
+	</div>
+		
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol3">
+
+		<div class="k-inner-cell"  style="padding-top: 2px;">
+			<div class="text_container b_container line-empty">
+				<a href="/Event-News/California-Fresno-April-2">
+					<div class="slider-border-1">
+						<img src="../event_news_images_2/Fresno-0-w270-h180.png" alt="Fresno-0-w270-h180.png" />
+					</div>
+				</a>
+			</div>
+			<div class="k-b-headline">
+				Fresno, CA, April 2<br>Photo Montage
+			</div>			
+		</div>
+						
+	</div>
+
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol3">
+
+		<div class="k-inner-cell"  style="padding-top: 2px;">
+			<div class="text_container b_container line-empty">
+				<a href="/Event-News/Texas-Houston-April-10">
+					<div class="slider-border-1">
+						<img src="../event_news_images_3/logo_houston_001.JPG" alt="logo_houston_001.JPG" />
+					</div>
+				</a>
+			</div>
+			<div class="k-b-headline">
+				Houston, TX, April 10<br>Photo Montage
+			</div>			
+		</div>
 		
 	</div>
 	
-</div>
+</div> -->
 
 <!-- end template single row -->				
-
-
-
-
-
-
-
-
 
 
 <!-- start template single row -->
@@ -599,7 +729,7 @@
 
 <!-- start template single row -->
 				
-<div class="k-governcell ktop">	
+<div class="k-governcell ktop" id="alter-k-governcell-1">	
 		
 	<div class="k-outercell kol3">
 
@@ -607,7 +737,7 @@
 		
 	</div>
 		
-	<div class="k-cell-divider"></div>
+	<div class="k-cell-divider" id="alter-k-cell-divider-1"></div>
 	
 	<div class="k-outercell kol3">
 
@@ -615,7 +745,7 @@
 		
 	</div>
 	
-	<div class="k-cell-divider"></div>
+	<div class="k-cell-divider" id="alter-k-cell-divider-2"></div>
 	
 	<div class="k-outercell kol3 k-empty">
 		
@@ -638,7 +768,7 @@
 						
 	<div class="k-outercell kol3">
 		
-		<div class="k-cell-divider-horiz" style=""></div>
+		<div class="k-cell-divider-horiz"></div>
 								
 		<div id="27"></div>
 								
@@ -661,13 +791,13 @@
 		
 		<!-- <div id="ad1-lower"></div> -->
 				
-		<a href="/papers" class="k-link-a">
+		<a href="https://www.readingkingdom.com/signup" class="k-link-a">
 						
 			<div class="k-inner-cell">
-				<div class="k-b-container" style="padding-bottom: 0px; top: 176px;">
+				<div class="k-b-container" style="padding-bottom: 0px; top: 110px;">
 					<div class="k-img-cell-single">
-						<a href="/papers">
-							<img src="../repository/banner-2.png" class="k-img" height="686px" onerror="this.src='/assets/error-300-700-blue.png'">
+						<a href="https://www.readingkingdom.com/signup">
+							<img src="../repository/banners/banner-reading-kingdom-2-w317-h686.png" class="k-img" height="686px" onerror="this.src='/assets/error-300-700-blue.png'">
 						</a>
 					</div>
 				</div>
@@ -723,7 +853,20 @@
 	
 	<div class="k-outercell kol3">
 
-		<div id="1"></div>
+		<!-- <div id="1"></div> -->
+
+		<a href="#blogs">
+			<div class="k-inner-cell" style="padding-top: 2px;">
+				<div class="text_container b_container line-blog">
+					<img src="../repository/article-blogs-and-links.png" alt="article-blogs-and-links.png" onerror="this.src='../altgraphics/error-300-200.png'">
+					<div class="headline-junebug">
+						<span class="gold">Blogs</span>
+						<span class="red">&amp;</span>
+						<span class="blue">Links</span>														
+					</div>
+				</div>
+			</div>
+		</a>
 
 	</div>
 </div>
@@ -784,9 +927,9 @@
 			
 </div>
 
-<!-- end template single row -->				
+<!-- end template single row -->
+<div id="blogs"></div>				
 <div style="height: 20px;"></div>
-
 <a name="anchor1"></a>    		      		     		
 
 <div style="height: 50px; position: relative;"></div>
@@ -866,12 +1009,112 @@ Jacob Hanson, Contributor
 -->
 
 
+
+<div class="news-header">Blogs and Commentaries</div>
+<div style="height: 10px; position: relative;"></div>
+
+<div class="k-governcell ktop kbottom">	
+	<div class="k-outercell kol2">
+		<div class="news-list">		
+			<div id="31"></div>
+			<br>
+			<div id="11"></div>
+			<br>
+			<div id="52"></div>
+		</div>
+	</div>
+	<div class="k-cell-divider"></div>
+	<div class="k-outercell kol2">
+		<div class="news-list">
+		</div>
+	</div>
+</div>
+
+
+
+<div style="height: 50px; position: relative;"></div>
+
+
+
 <div class="news-header">News</div>
 
 <div style="height: 10px; position: relative;"></div>
-				
-<div class="k-governcell ktop kbottom">	
 
+<div class="k-governcell ktop kbottom">	
+	<div class="k-outercell kol2">
+		<div class="news-list">		
+			<div id="40"></div>
+			<br>
+			<div id="41"></div>
+			<br>
+			<div id="42"></div>
+			<br>			
+			<div id="34"></div>
+			<br>
+			<div id="35"></div>
+			<br>
+			<div id="36"></div>
+			<br>
+			<div id="14"></div>
+			<br>
+			<div id="15"></div> 
+			<br>
+			<div id="16"></div>
+		</div>
+	</div>
+	<div class="k-cell-divider"></div>
+	<div class="k-outercell kol2">
+		<div class="news-list">
+			<div id="44"></div>
+			<br>
+			<div id="45"></div> 
+			<br>
+			<div id="46"></div>
+			<br>
+			<div id="17"></div>
+			<br>
+			<div id="20"></div>
+			<br>					
+			<div id="2"></div>			
+			<br>
+			<div id="19"></div>
+			<br>
+			<div id="13"></div>
+			<br>
+			<div id="9"></div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+				
+<!-- <div class="k-governcell ktop kbottom">	
+	<div class="k-outercell kol2">
+		<div class="news-list">		
+			<div id="40"></div>
+			<br>
+			<div id="41"></div>
+			<br>
+			<div id="42"></div>
+		</div>
+	</div>
+	<div class="k-cell-divider"></div>
+	<div class="k-outercell kol2">
+		<div class="news-list">
+			<div id="44"></div>
+			<br>
+			<div id="45"></div> 
+			<br>
+			<div id="46"></div>
+		</div>
+	</div>
+</div>
+<div style="height: 10px; position: relative;"></div>
+<div style="height: 10px; position: relative;"></div>
+<div class="k-governcell ktop kbottom">	
 	<div class="k-outercell kol2">
 		<div class="news-list">		
 			<div id="34"></div>
@@ -882,16 +1125,13 @@ Jacob Hanson, Contributor
 			<br>
 			<div id="14"></div>
 			<br>
-			<div id="15"></div>
+			<div id="15"></div> 
 			<br>
 			<div id="16"></div>
 		</div>
 	</div>
-
 	<div class="k-cell-divider"></div>
-	
 	<div class="k-outercell kol2">
-		
 		<div class="news-list">
 			<div id="17"></div>
 			<br>
@@ -905,10 +1145,8 @@ Jacob Hanson, Contributor
 			<br>
 			<div id="9"></div>
 		</div>
-		
 	</div>
-			
-</div>
+</div> -->
 
 <!-- end template single row -->				
 
@@ -1058,24 +1296,34 @@ Jacob Hanson, Contributor
 				kk = 0;	
 				ll = 0;	
 				mm = 0;
-
+				dj = 0;
+				djj = 0;
 				$(this).children().each( function() {
 					
 					if ($(this).hasClass('k-outercell')) {
 						if (!(jj = $(this).find("img").attr("height"))) {
 							jj = 0;
 						}
-						console.log('jj = ' + jj);
+						// console.log('jj = ' + jj);
 						j = j >= jj ? j : jj;
 						n = parseInt(j);																		
 					}
+					if ($(this).hasClass('k-outercell-double')) {
+						if (!(djj = $(this).find("img").attr("height"))) {
+							djj = 0;
+						}
+						// console.log('djj = ' + djj);
+						dj = dj >= djj ? dj : djj;
+						dn = parseInt(dj);																		
+					}
+					
 				});
 
 				n += 6;
 				upperCell = $(this).find('.k-b-container');
 				upperCell.height(n);
 				
-				console.log('n = ' + $(this).find('.k-b-container').height());
+				// console.log('n = ' + $(this).find('.k-b-container').height());
 
 				$(this).children().each( function() {
 					
@@ -1095,25 +1343,75 @@ Jacob Hanson, Contributor
 						k = k >= kk ? k : kk;
 						s = k;
 					}
-					if ($(this).hasClass('k-outercell-double')) {
-						kk = $(this).height();
-						if (!(kk = $(this).height())) {
-							kk = 0;
-						}
-						k = k >= kk ? k : kk;
-						s = k;
-					}
 				});
 				
 				m = s >= t ? s : t;
 
 				m += 2;
 				m = m <= 1000 ? m : 1000;
+
+				// console.log('m = ' + m);
 				
 				$(this).height(m);
 				$(this).children($('.k-cell-divider')).height(m);
 			});
+			
+			
+			$("#alter-k-governcell-1").height(342);
+			$("#alter-k-cell-divider-1").height(342);
+			$("#alter-k-cell-divider-2").height(342);
+			$("#10").css({ 'padding-top' : 20 });
+			$("#25").css({ 'padding-top' : 20 });
+			
+			
+			
+			
+			
+			$('a[href*=#]:not([href=#])').click(function() {
+			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+			        || location.hostname == this.hostname) {
+			        var target = $(this.hash);
+			        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		           	if (target.length) {
+		             	$('html,body').animate({
+		                	scrollTop: target.offset().top
+		            	}, 750);
+		            	// return false;
+		        	}
+			    }
+			});
+			
+			
+			
 		});
+
+
+		$(window).bind('load', function() {
+			// $("#small-slider-top").removeClass("display-none");
+			setTimeout( function(){
+				$("#small-slider-top").removeClass("display-none");
+			}, 1000);
+		});
+
+		$("#div-top-right").removeClass("visibility-hidden");
+		// $("#small-slider-top").removeClass("display-none");
+
+
+		// var image = '../backgrounds/comp025.jpg';
+		// img = $('<img />');
+		// img.bind('load', function() {
+		    // $('#loading').fadeOut(1000);
+			// setTimeout( function(){
+				// centerSignin();
+				// showSignin();
+				// formValidate();
+			// }, 500);
+		// });
+		// img.attr('src', image);
+		// $('#join-image').css({
+			// background: '#F1F2E1 url(' + image + ') repeat right top'
+		// })
+
 
 
 	// var get_file = "../archives/article.htm";

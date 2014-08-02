@@ -1,0 +1,622 @@
+
+		<script type="text/javascript" src="/assets/jquery.min.js"></script>
+		<!-- <script type="/assets/javascript" src="/assets/entrepeneurs_jquery-1.js"></script> -->		
+	    <!-- <script src="../scripts/dot.js"></script>    
+	    <script src="../scripts/jquery-dropdown-dot.js"></script> -->
+		
+
+		<!-- <link rel="stylesheet" href="/gallery/styles/elegant-press.css" type="text/css" /> -->
+		<!-- <script src="/gallery/scripts/elegant-press.js" type="text/javascript"></script> -->
+
+	    <!-- <script src="../scripts/dot.js"></script>    
+	    <script src="../scripts/jquery-dropdown-dot.js"></script> -->
+
+	    <!-- <script src="/assets/dot.js"></script>    
+	    <script src="/assets/jquery-dropdown-dot.js"></script> -->
+
+
+<script>
+	
+// Laura Doktorova https://github.com/olado/doT
+(function() {
+	function o() {
+		var b = {
+			"&" : "&#38;",
+			"<" : "&#60;",
+			">" : "&#62;",
+			'"' : "&#34;",
+			"'" : "&#39;",
+			"/" : "&#47;"
+		}, a = /&(?!#?\w+;)|<|>|"|'|\//g;
+		return function(f) {
+			return f ? f.toString().replace(a, function(g) {
+				return b[g] || g
+			}) : f
+		}
+	}
+
+	function p(b, a, f) {
+		return ( typeof a === "string" ? a : a.toString()).replace(b.define || h, function(g, e, c, i) {
+			if (e.indexOf("def.") === 0)
+				e = e.substring(4);
+			if (!( e in f))
+				if (c === ":")
+					f[e] = i;
+				else
+					eval("def['" + e + "']=" + i);
+			return ""
+		}).replace(b.use || h, function(g, e) {
+			var c = eval(e);
+			return c ? p(b, c, f) : c
+		})
+	}
+
+	function l(b) {
+		return b.replace(/\\('|\\)/g, "$1").replace(/[\r\t\n]/g, " ")
+	}
+
+	var j = {
+		version : "0.2.0",
+		templateSettings : {
+			evaluate : /\{\{([\s\S]+?)\}\}/g,
+			interpolate : /\{\{=([\s\S]+?)\}\}/g,
+			encode : /\{\{!([\s\S]+?)\}\}/g,
+			use : /\{\{#([\s\S]+?)\}\}/g,
+			define : /\{\{##\s*([\w\.$]+)\s*(\:|=)([\s\S]+?)#\}\}/g,
+			conditional : /\{\{\?(\?)?\s*([\s\S]*?)\s*\}\}/g,
+			iterate : /\{\{~\s*(?:\}\}|([\s\S]+?)\s*\:\s*([\w$]+)\s*(?:\:\s*([\w$]+))?\s*\}\})/g,
+			varname : "it",
+			strip : true,
+			append : true,
+			selfcontained : false
+		},
+		template : undefined,
+		compile : undefined
+	}, m = function() {
+		return this || (0, eval)("this")
+	}();
+	if ( typeof module !== "undefined" && module.exports)
+		module.exports = j;
+	else if ( typeof define === "function" && define.amd)
+		define(function() {
+			return j
+		});
+	else
+		m.doT = j;
+	m.encodeHTML = o();
+	var q = {
+		append : {
+			start : "'+(",
+			end : ")+'",
+			startencode : "'+encodeHTML("
+		},
+		split : {
+			start : "';out+=(",
+			end : ");out+='",
+			startencode : "';out+=encodeHTML("
+		}
+	}, h = /$^/;
+	j.template = function(b, a, f) {
+		a = a || j.templateSettings;
+		var g = a.append ? q.append : q.split, e, c = 0, i;
+		if (a.use || a.define) {
+			var r = m.def;
+			m.def = f || {};
+			b = p(a, b, m.def);
+			m.def = r
+		}
+		b = ("var out='" + (a.strip ? b.replace(/(^|\r|\n)\t* +| +\t*(\r|\n|$)/g, " ").replace(/\r|\n|\t|\/\*[\s\S]*?\*\//g, "") : b).replace(/'|\\/g, "\\$&").replace(a.interpolate || h, function(n, d) {
+			return g.start + l(d) + g.end
+		}).replace(a.encode || h, function(n, d) {
+			e = true;
+			return g.startencode + l(d) + g.end
+		}).replace(a.conditional || h, function(n, d, k) {
+			return d ? k ? "';}else if(" + l(k) + "){out+='" : "';}else{out+='" : k ? "';if(" + l(k) + "){out+='" : "';}out+='"
+		}).replace(a.iterate || h, function(n, d, k, s) {
+			if (!d)
+				return "';} } out+='";
+			c += 1;
+			i = s || "i" + c;
+			d = l(d);
+			return "';var arr" + c + "=" + d + ";if(arr" + c + "){var " + k + "," + i + "=-1,l" + c + "=arr" + c + ".length-1;while(" + i + "<l" + c + "){" + k + "=arr" + c + "[" + i + "+=1];out+='"
+		}).replace(a.evaluate || h, function(n, d) {
+			return "';" + l(d) + "out+='"
+		}) + "';return out;").replace(/\n/g, "\\n").replace(/\t/g, "\\t").replace(/\r/g, "\\r").replace(/(\s|;|}|^|{)out\+='';/g, "$1").replace(/\+''/g, "").replace(/(\s|;|}|^|{)out\+=''\+/g, "$1out+=");
+		if (e && a.selfcontained)
+			b = "var encodeHTML=(" + o.toString() + "());" + b;
+		try {
+			return new Function(a.varname, b)
+		} catch(t) {
+			typeof console !== "undefined" && console.log("Could not create a template function: " + b);
+			throw t;
+		}
+	};
+	j.compile = function(b, a) {
+		return j.template(b, null, a)
+	}
+})(); 	
+</script>
+
+<script>
+	
+/**
+ * dropdown.dot.js
+ *
+ * A super-flexible and clean JQuery Dropdown Plugin based on dot.js Templates.
+ *
+ * @author Roger Dudler <roger.dudler@gmail.com>
+ */
+(function ($) {
+    $.fn.dropdown = function(options) {
+
+        // Default settings
+        var settings = $.extend({
+            'selected': '.selected',
+            'items': 'ul',
+            'item': 'li',
+            'openClass': 'open',
+            'changed': function(data) {}
+        }, options);
+
+        return this.each(function() {
+
+            var $this = $(this);
+
+            // hide select element
+            $this.hide();
+
+            // prepare dropdown template
+            var template = doT.template($($this.data('template')).text());
+            var templateSelected = doT.template($($this.data('template') + '-selected').text());
+            var data = { "selected": null, "items": [], "classes": $this.data('classes') };
+            var selectedIndex = 0;
+
+            // parse data for dropdown items
+            $.each($this.find('option'), function(key, option) {
+                var $option = $(option);
+                var item = {
+                    'value': $option.attr('value'),
+                    'label': $option.text(),
+                    'selected': $option.is(':selected')
+                };
+
+                // read data attributes
+                var dataAttributes = $option.data();
+                $.each(dataAttributes, function(name, value) {
+                    item[name] = value;
+                });
+
+                if ($option.is(':selected')) {
+                    data.selected = item;
+                    selectedIndex = key;
+                }
+                data.items.push(item);
+            });
+
+            // render dropdown
+            var $dropdown = $(template(data));
+            var $items = $dropdown.find(settings.items);
+            var $selected = $dropdown.find('> ' + settings.selected);
+
+            // handle dropdown toggling
+            $selected.on('mousedown', function() {
+                $dropdown.focus();
+                if ($items.is(':visible')) {
+                    _closeDropdown();
+                } else {
+                    _openDropdown();
+                }
+                return false;
+            });
+            
+            $dropdown.on('focus', function() {
+                $this.addClass('focus');
+            });
+
+            $dropdown.on('blur', function() {
+                $this.removeClass('focus');
+                _closeDropdown();
+            });
+
+            $dropdown.on('keydown', function(e) {
+                var next = null;
+                switch (e.keyCode) {
+                    case 40: // down
+                        if (!$dropdown.hasClass(settings.openClass)) {
+                            _openDropdown();
+                            next = $items.find('.selected');
+                        } else {
+                            next = $items.find('.hover').next(settings.item).first();
+                            if (!next.length) {
+                                next = $items.find(settings.item).first();
+                            }
+                        }
+                        _selectItem(next, true);
+                        e.preventDefault();
+                        break;
+
+                    case 38: // up
+                        if (!$dropdown.hasClass(settings.openClass)) {
+                            _openDropdown();
+                            next = $items.find('.selected');
+                        } else {
+                            next = $items.find('.hover').prev(settings.item).first();
+                            if (!next.length) {
+                                next = $items.find(settings.item).last();
+                            }
+                        }
+                        _selectItem(next, true);
+                        e.preventDefault();
+                        break;
+
+                    case 13:
+                        if (!$dropdown.hasClass(settings.openClass)) {
+                            _openDropdown();
+                        } else {
+                            var item = $items.find('.hover').first();
+                            if (item) {
+                                _chooseItem(item);
+                            }
+                        }
+                        e.preventDefault();
+                        break;
+                }
+            });
+
+            // hide selected item from list
+            $items.find('[data-index=' + selectedIndex + ']').addClass('selected');
+
+            // handle clicks on items
+            $items.on('mousedown', settings.item, function() {
+                _chooseItem(this);
+                return false;
+            });
+
+            $items.on('mouseover', settings.item, function() {
+                _selectItem(this, false);
+            });
+
+            function _selectItem(option, reveal) {
+                var $option = $(option);
+                $items.find(settings.item).removeClass('hover');
+                $option.addClass('hover');
+                if (reveal) {
+                    $option.parent().scrollTop($option.position().top-$option.height());
+                }
+            }
+
+            function _chooseItem(option) {
+                var index = $(option).data('index');
+                var item = data.items[index];
+                $dropdown.find('> ' + settings.selected).html(templateSelected(item));
+                $items.find('[data-index=' + selectedIndex + ']').removeClass('selected');
+                selectedIndex = index;
+                $(option).addClass('selected');
+                $this.val(item.value);
+                settings.changed(item);
+                _closeDropdown();
+            }
+
+            function _openDropdown() {
+                $items.show();
+                $dropdown.addClass(settings.openClass);
+            }
+
+            function _closeDropdown() {
+                $items.hide();
+                $dropdown.removeClass(settings.openClass);
+            }
+            
+            // insert dropdown into dom tree
+            return $this.before($dropdown);
+        });
+    };
+})(jQuery);
+	
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- <style type="text/css">
+		
+			@font-face {
+				font-family: KlavikaExtraLight;
+				src: url('/assets/KlavikaWebDisplayExtraLight.eot');
+				src: url('/assets/KlavikaWebDisplayExtraLight.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebDisplayExtraLight.woff') format('woff');
+			}
+			@font-face {
+				font-family: KlavikaLight;
+				src: url('/assets/KlavikaWebBasicLight.eot');
+				src: url('/assets/KlavikaWebBasicLight.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicLight.woff') format('woff');
+			}
+			@font-face {
+				font-family: KlavikaRegular;
+				src: url('/assets/KlavikaWebBasicRegular.eot');
+				src: url('/assets/KlavikaWebBasicRegular.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicRegular.woff') format('woff');
+			}		
+			@font-face {
+				font-family: KlavikaMedium;
+				src: url('/assets/KlavikaWebBasicMedium.eot');
+				src: url('/assets/KlavikaWebBasicMedium.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicMedium.woff') format('woff');
+			}
+			@font-face {
+				font-family: KlavikaBold;
+				src: url('/assets/KlavikaWebBasicBold.eot');
+				src: url('/assets/KlavikaWebBasicBold.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicBold.woff') format('woff');
+			}
+			@font-face {
+				font-family: KlavikaBlack;
+				src: url('/assets/KlavikaWebDisplayBlack.eot');
+				src: url('/assets/KlavikaWebDisplayBlack.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebDisplayBlack.woff') format('woff');
+			}
+		
+		</style>		
+		
+		<style type="text/css">
+			@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
+		</style> -->
+
+
+	<!-- <script type="/assets/javascript" src="/assets/entrepeneurs_jquery-1.js"></script>
+	<script src="/assets/jquery.validate.js"></script> -->
+	<!-- <link href="/assets/custom_sign_form.css" rel="stylesheet"> -->
+
+
+				
+		<!-- <script type="text/javascript" src="../scripts/jquery-1.4.1.min.js"></script>
+		<script type="text/javascript" src="/assets/entrepeneurs_jquery-1.js"></script> 
+		<script type="text/javascript" src="/assets/entrepeneurs_jquery.js"></script>
+    	<script type="text/javascript" src="../scripts/jquery.tmpl.js"></script> -->
+
+
+		<style>
+		
+			body {
+				/*margin-top: 30px;
+				font-size: 13px;
+				font-family: Tahoma, Georgia, "Times New Roman", Times, serif;
+				font-family: Century Gothic, sans-serif;
+				color: #000;
+				padding: 0;
+				text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2)*/
+				background: #eee url(/assets/comp025.jpg) repeat;				
+			}
+
+			/*select {
+			    display:none;
+			}*/			
+		
+			.k-decorate-none {
+				text-decoration: none;
+			}
+			
+			.kbyline-none-caps {
+				/*line-height: 14px;*/
+				white-space: nowrap;
+				/*text-transform: uppercase;*/
+				font-family: KlavikaMedium, Arial, sans-serif;
+				font-size: 12px;
+			}
+			.k-b-headline-gallery {
+				/*font-size: 20px;*/
+				line-height: 14px;
+				color: #000;
+				font-family: KlavikaBlack, Arial, sans-serif;
+				margin-top: 6px;
+				margin-left: 6px;
+				width: 260px;
+				position: relative;
+				height: auto;
+			}
+
+			.title-gallery {
+				font-size: 26px;
+				line-height: 20px;
+				color: #8A5A0C;
+				font-family: KlavikaBlack, Arial, sans-serif;
+				text-shadow: 2px 2px #F5DDB8;
+				margin-left: 0px;
+			}
+			.title-galler-table {
+				width: 100%;	
+			}
+			.title-galler-table-col1 {
+				text-align: left;
+				padding-left: 70px;				
+			}
+			.title-galler-table-col2 {
+				text-align: right;
+				padding-right: 70px;												
+			}
+
+			
+			
+			
+			
+.dropdown {
+    position: relative;
+    width: 300px;
+    outline: none;
+}
+.dropdown > .selected {
+    position: relative;
+}
+.dropdown.focus > .selected,
+.dropdown:focus > .selected {
+    outline: none;
+}
+
+.dropdown > .selected:hover,
+.dropdown > .selected:focus {
+    cursor: pointer;
+}
+.dropdown > .selected i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40px;
+    line-height: 40px;
+}
+.dropdown.open > .selected {
+
+}
+.dropdown ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    z-index: 10;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    line-height: 1;
+    max-height: 300px;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+}
+.dropdown ul li {
+    display: block;
+    cursor: pointer;
+}
+.dropdown ul li.selected {
+    
+}
+.dropdown ul li:last-child.selected {
+
+}
+.dropdown ul li {
+    position: relative;
+    display: block;
+}
+
+.dropdown ul li.hover { 
+
+}			
+			
+			
+		</style>
+
+		<!-- <script id="dropdown-data1-selected" type="text/x-dot-template">
+			{{=it.label}}<div class="down-caret">&#9660;</div>
+		</script>
+		<script id="dropdown-data1" type="text/x-dot-template">
+			<div class="dropdown dropdown-1" id="dropdown1" tabindex="">
+			    <div class="selected">{{=it.selected.label}}<div class="down-caret">&#9660;</div></div>
+			    <ul>
+			        {{~it.items :item:index}}
+			        <li data-index="{{=index}}">{{=item.label}}</li>
+			        {{~}}
+			    </ul>
+			</div>
+		</script> -->		
+
+
+<script id="dropdown-selected" type="text/x-dot-template">
+{{=it.label}}<div class="arrow"><i></i></div>
+</script>
+<script id="dropdown" type="text/x-dot-template">
+<div class="dropdown" tabindex="1">
+    <div class="selected">{{=it.selected.label}}</div>
+    <ul>
+        {{~it.items :item:index}}
+        <li data-index="{{=index}}">{{=item.label}}</li>
+        {{~}}
+    </ul>
+</div>
+</script>
+
+
+
+	<div style="width: 1200px; margin-right: auto; margin-left: auto; background: #fff;">
+	    
+	    
+		<header>		
+		 								
+			<!-- <#%= render 'share/backtotop' %#> -->
+		 					
+		</header>		
+
+		<div style="height: 70px;"></div>
+
+		
+<select data-template="#dropdown">
+    <option value="1" selected="selected">Super</option>
+    <option value="2">Awesome</option>
+    <option value="3">Dropdown</option>
+</select>		
+		
+			<!-- <select id="event_photos_montage" name="event_photos[montage]" data-template="#dropdown-data1" tabindex="">
+				<option value="0">-Month-</option>
+				<option value="1">Jan</option>
+				<option value="2">Feb</option>
+				<option value="3">Mar</option>
+				<option value="4">Apr</option>
+				<option value="5">May</option>
+				<option value="6">Jun</option>
+				<option value="7">Jul</option>
+				<option value="8">Aug</option>
+				<option value="9">Sep</option>
+				<option value="10">Oct</option>
+				<option value="11">Nov</option>
+				<option value="12">Dec</option>
+			</select> -->		
+		
+
+		<!-- <#%= render 'eventnews/event_photos_1' %#> -->
+			
+		<div style="height: 50px;"></div>
+			
+	</div>
+
+	<div style="height: 50px;"></div>
+
+
+	<style>
+		
+		.k-cell-divider-none {
+			border-right: 1px solid #fff;
+			width: 1px;
+			display: inline-block;
+		}
+		.ktop-none {
+			border-top: 1px solid #fff;
+		}
+		.kbottom-none {
+			border-top: 1px solid #fff;
+		}
+				
+	</style>
+		
+    <script>
+                
+		//$(window).load( function() {
+		$(document).ready(function() {
+					
+			alert('ready');
+					
+			// $("#id_select_montage").dropdown({
+			$("#event_photos_montage").on('change', function() {
+
+				alert('change');
+			    // 'changed': function(data) {
+					// alert('dropdown');
+			        // // selectStatus1();
+			        // // selectStatus2();	
+			    // }
+			});	    
+					
+		});
+
+	</script>
+

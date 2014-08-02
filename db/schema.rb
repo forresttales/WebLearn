@@ -85,13 +85,13 @@ ActiveRecord::Schema.define(version: 20140318103905) do
   add_index "archives", ["slug"], name: "index_archives_on_slug", unique: true, using: :btree
 
   create_table "contacts", force: true do |t|
-    t.string   "name",       limit: 50
-    t.string   "email",                  default: "", null: false
-    t.string   "subject",    limit: 50
+    t.string   "name",       default: ""
+    t.string   "email",      default: "", null: false
+    t.string   "subject",    default: ""
     t.text     "message"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "phone",      limit: 100
+    t.string   "phone",      default: ""
   end
 
   create_table "eventnews", force: true do |t|

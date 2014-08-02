@@ -14,4 +14,6 @@ class RegLetter < ActiveRecord::Base
   
   attr_accessible :id, :email, :name_title, :name_affiliation, :created_at, :updated_at
   
+  # after_validation :on => :create 
+  
 end

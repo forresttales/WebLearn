@@ -241,7 +241,7 @@
 		
 		
 	#join-image {
-		height: 2460px;
+		height: 2660px;
 	}
 		
 	div .cell-right-reg-commun {
@@ -423,6 +423,19 @@
 		
 	</style>
 					
+	<style>
+		
+		.alert {
+			font-family: Arial, Helvetica, sans-serif;
+			color: #8C0303;
+			font-size: 16px;
+		}
+		
+	</style>		                		
+					
+					
+					
+					
 	<script id="dropdown-data1-selected" type="text/x-dot-template">
 		{{=it.label}}<i>&darr;</i>
 	</script>
@@ -578,9 +591,17 @@
 					</p> -->											
 				</div>
 
+				<div class="row" style="height: 30px;">
+					<div  class="cell-100percent" style="padding-left: 300px;">
+			    		<% unless flash[:captcha].nil? %>
+						<div class="alert"><%= flash[:captcha] %></div>
+			      		<% end %>
+					</div>
+				</div>
+
 				<a name="anchor1"></a>    		      		     		
 
-				<div class="row" style="height: 30px;"></div>
+				<div class="row" style="height: 10px;"></div>
 				
 			</div>
 			
@@ -1303,7 +1324,24 @@
 
 			<!-- survey preferences end -->
 
+			<div class="input-form-spacer"></div>
+			<div class="input-form-spacer"></div>
 
+
+
+			<div class="input-form-spacer"></div>
+			<div class="input-form-spacer"></div>
+
+			<div class="row">
+				<div class="cell-left-reg-commun">
+				</div>
+				<div class="cell-submit-contact" style="padding-left: 0px;">
+					<%= recaptcha_tags %>	
+				</div>      	
+			</div>      		
+
+
+			<div class="input-form-spacer"></div>
 			<div class="input-form-spacer"></div>
 			<div class="input-form-spacer"></div>
 			<div class="input-form-spacer"></div>
@@ -1312,7 +1350,7 @@
 				<div class="cell-left-reg-commun">
 				</div>
 				<div class="cell-submit-reg-commun" style="padding-left: 0px;">
-					<%= f.submit "Submit", :id => 'btn_submit', :class => 'btn submitregcommun', :tabindex => '41' %>
+					<%= f.submit "Submit", :id => 'btn_submit', :class => 'btn submitregcommun', :tabindex => '42' %>
 				</div>      	
 			</div>      		
 
@@ -1384,7 +1422,7 @@
 
 			var h1 = $("#join-image").height();
 			
-			var h2 = (h1 * (0.96));
+			var h2 = (h1 * (0.97));
 			
 			$("#form_reg_commun").css({
 				height : h2
@@ -2649,6 +2687,59 @@
 			       	selectStatus3();			        
 			    }
 			});	    
+
+
+
+			$("input[name=recaptcha_response_field]").attr("tabindex","41");
+
+			// $('#btn_submit').on('click', function( event ) {
+				// event.preventDefault();
+				// // alert(event);
+				// // return false;
+			// });
+
+			$(document).ready(function(){
+				$('#reportform').on('ajax:success',function(data, status, xhr){
+			    	// $('#reportalert').text('Done.');
+			    	alert('done');
+			    }).on('ajax:error',function(xhr, status, error){
+			    	alert('error');
+			      	// $('#reportalert').text('Failed.');
+			    });
+			});
+
+			// $("#btn_submit").on('click', function( event ) {
+				// event.preventDefault();
+			  	// var obj = '';                  
+			  	// $.ajax({
+			    	// type: 'POST',
+			    	// data : obj,
+			    	// url: '/reg_communs/verify_recaptcha',			    	
+			    	// dataType: "json",
+			    	// contentType: "application/json",
+			    	// processData: false,
+			    	// beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+	            	// statusCode: {
+	            	// },
+	            	// success: function(data) {
+	            		// alert("success");
+	            		// alert(data.b_verify_recaptcha);
+	            	// },
+	            	// error: function(xhr){  alert("error: " + xhr.statusText); }        
+			  	// });
+		  		// return false;
+			// });
+
+
+
+
+
+
+
+
+
+
+
 
 
 			// $(window).bind("load", function() {

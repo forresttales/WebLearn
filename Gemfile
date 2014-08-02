@@ -19,6 +19,8 @@ gem 'turbolinks'
 gem 'jquery-turbolinks'
 gem 'jbuilder'
 gem 'json'
+gem 'recaptcha'
+
 
 group :doc do
   gem 'sdoc', require: false

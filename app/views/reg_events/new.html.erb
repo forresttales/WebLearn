@@ -246,9 +246,11 @@
 		margin-right: 6px;
 	}
 	.cb-background {
-		background-image: url("/assets/checkbox_tick.png");		
+		/*background-color: #ACDDE3;*/
+		background-color: #0FEAFF;
+		/*background-image: url("/assets/checkbox_tick.png");		
 		background-repeat: no-repeat;
-		background-position: 2px 3px;
+		background-position: 2px 3px;*/
 	}	
 	.cb-align {
 		vertical-align: top;
@@ -455,7 +457,7 @@
 				
 			</div>
 		
-		<!-- <div id="loading"> </div> -->
+		<div id="loading"> </div>
 						
 	</header>		
 	
@@ -779,25 +781,12 @@
 								<tr class="cb-spacer"></tr>
 								<tr>
 									<td class="cb-col-1">
-										<div id="cb_workshop_5" class="cb-button cb-valign"></div>							
-										<%= f.check_box :city_workshop_5 %>
+										<div id="cb_workshop_6_legacy" class="cb-button cb-valign"></div>							
+										 <!-- f.check_box :city_workshop_6  -->
 									</td>
 									<td class="cb-col-2">
-										<label id="label_city_workshop_5" class="input-label required-label label_cb" for="city_workshop_5" onclick="cb_city_workshop('5');" tabindex="32">Los Angeles /<br>San Bernadino, CA</label>
-									</td>				
-									<td class="cb-col-3"></td>									
-									<td class="cb-col-4">
-										<span>May 22</span>
-									</td>	
-								</tr>
-								<tr class="cb-spacer"></tr>
-								<tr>
-									<td class="cb-col-1">
-										<div id="cb_workshop_6" class="cb-button cb-valign"></div>							
-										<%= f.check_box :city_workshop_6 %>
-									</td>
-									<td class="cb-col-2">
-										<label id="label_city_workshop_6" class="input-label required-label label_cb" for="city_workshop_6" onclick="cb_city_workshop('6');" tabindex="36">Richmond, VA</label>									
+										<!-- <label id="label_city_workshop_6" class="input-label required-label label_cb" for="city_workshop_6" onclick="cb_city_workshop('6');" tabindex="36">Richmond, VA</label> -->									
+										<label id="label_city_workshop_6" class="input-label required-label label_cb" for="city_workshop_6" tabindex="" style="text-decoration: line-through">Richmond, VA</label>									
 									</td>					
 									<td class="cb-col-3"></td>									
 									<td class="cb-col-4">
@@ -807,15 +796,31 @@
 								<tr class="cb-spacer"></tr>
 								<tr>
 									<td class="cb-col-1">
+										<div id="cb_workshop_5_legacy" class="cb-button cb-valign"></div>							
+										<!-- f.check_box :city_workshop_5 -->
+									</td>
+									<td class="cb-col-2">
+										<!-- <label id="label_city_workshop_5" class="input-label required-label label_cb" for="city_workshop_5" onclick="cb_city_workshop('5');" tabindex="32">Los Angeles /<br>San Bernadino, CA</label> -->
+										<label id="label_city_workshop_5" class="input-label required-label label_cb" for="city_workshop_5" tabindex="" style="text-decoration: line-through">LA/San Bernadino, CA</label>
+									</td>				
+									<td class="cb-col-3"></td>									
+									<td class="cb-col-4">
+										<span>May 22</span>
+									</td>	
+								</tr>
+								<tr class="cb-spacer"></tr>
+								<tr>
+									<td class="cb-col-1">
 										<div id="cb_workshop_7" class="cb-button cb-valign"></div>							
 										<%= f.check_box :city_workshop_7 %>
 									</td>
 									<td class="cb-col-2">
-										<label id="label_city_workshop_7" class="input-label required-label label_cb" for="city_workshop_7" onclick="cb_city_workshop('7');" tabindex="40">Minneapolis, MN</label>
+										<!-- <label id="label_city_workshop_7" class="input-label required-label label_cb" for="city_workshop_7" onclick="cb_city_workshop('7');" tabindex="40">Minneapolis, MN</label> -->
+										<label id="label_city_workshop_7" class="input-label required-label label_cb" for="city_workshop_7" tabindex="" style="text-decoration: line-through">Minneapolis, MN</label>
 									</td>		
 									<td class="cb-col-3"></td>									
 									<td class="cb-col-4">
-										<span>June TBD</span>
+										<span>June 17</span>
 									</td>		
 								</tr>
 								<tr class="cb-spacer"></tr>
@@ -825,11 +830,12 @@
 										<%= f.check_box :city_workshop_8 %>
 									</td>
 									<td class="cb-col-2">
-										<label id="label_city_workshop_8" class="input-label required-label label_cb" for="city_workshop_8" onclick="cb_city_workshop('8');" tabindex="44">Detroit, MI</label>
+										<!-- <label id="label_city_workshop_8" class="input-label required-label label_cb" for="city_workshop_8" onclick="cb_city_workshop('8');" tabindex="44">Detroit, MI</label> -->
+										<label id="label_city_workshop_8" class="input-label required-label label_cb" for="city_workshop_8" tabindex="" style="text-decoration: line-through">Detroit, MI</label>
 									</td>
 									<td class="cb-col-3"></td>									
 									<td class="cb-col-4">
-										<span>June TBD</span>
+										<span>June 24</span>
 									</td>	
 								</tr>
 								<tr class="cb-spacer"></tr>
@@ -843,7 +849,7 @@
 									</td>		
 									<td class="cb-col-3"></td>									
 									<td class="cb-col-4">
-										<span>Sept TBD</span>
+										<span>Sept 9</span>
 									</td>
 								</tr>
 								<tr class="cb-spacer"></tr>
@@ -857,7 +863,7 @@
 									</td>		
 									<td class="cb-col-3"></td>									
 									<td class="cb-col-4">
-										<span>Sept TBD</span>
+										<span>Sept 18</span>
 									</td>
 								</tr>
 								<tr class="cb-spacer"></tr>
@@ -871,7 +877,7 @@
 									</td>	
 									<td class="cb-col-3"></td>									
 									<td class="cb-col-4">
-										<span>Sept TBD</span>
+										<span>Sept 25</span>
 									</td>
 								</tr>
 								<tr class="cb-spacer"></tr>
@@ -885,7 +891,21 @@
 									</td>	
 									<td class="cb-col-3"></td>									
 									<td class="cb-col-4">
-										<span>Sept TBD</span>
+										<span>Sept 30</span>
+									</td>	
+								</tr>
+								<tr class="cb-spacer"></tr>
+								<tr>
+									<td class="cb-col-1">
+										<div id="cb_workshop_14" class="cb-button cb-valign"></div>							
+										<%= f.check_box :city_workshop_14 %>
+									</td>
+									<td class="cb-col-2">
+										<label id="label_city_workshop_14" class="input-label required-label label_cb" for="city_workshop_14" onclick="cb_city_workshop('14');" tabindex="64">Tampa, FL</label>
+									</td>	
+									<td class="cb-col-3"></td>									
+									<td class="cb-col-4">
+										<span>Oct 16</span>
 									</td>	
 								</tr>
 								<tr class="cb-spacer"></tr>
@@ -895,26 +915,12 @@
 										<%= f.check_box :city_workshop_13 %>
 									</td>
 									<td class="cb-col-2">
-										<label id="label_city_workshop_13" class="input-label required-label label_cb" for="city_workshop_13" onclick="cb_city_workshop('13');" tabindex="64">Las Vegas, CA</label>
+										<label id="label_city_workshop_13" class="input-label required-label label_cb" for="city_workshop_13" onclick="cb_city_workshop('13');" tabindex="68">Boston, MA</label>
 									</td>	
 									<td class="cb-col-3"></td>									
 									<td class="cb-col-4">
-										<span>Oct TBD</span>
+										<span>Oct 28</span>
 									</td>
-								</tr>
-								<tr class="cb-spacer"></tr>
-								<tr>
-									<td class="cb-col-1">
-										<div id="cb_workshop_14" class="cb-button cb-valign"></div>							
-										<%= f.check_box :city_workshop_14 %>
-									</td>
-									<td class="cb-col-2">
-										<label id="label_city_workshop_14" class="input-label required-label label_cb" for="city_workshop_14" onclick="cb_city_workshop('14');" tabindex="68">Tampa, FL</label>
-									</td>	
-									<td class="cb-col-3"></td>									
-									<td class="cb-col-4">
-										<span>Oct TBD</span>
-									</td>	
 								</tr>
 							</table>
 								
@@ -935,7 +941,7 @@
 									<td style="width: 80px;"></td>
 									<td></td>									
 									<td style="color: orange; padding-left: 60px;">
-										<span>November 3-4</span>
+										<span>November 2-3</span>
 									</td>	
 								</tr>
 							</table>
@@ -2804,7 +2810,7 @@
 			
 			img.bind('load', function() {
 				
-			    // $('#loading').fadeOut(1000);
+			    $('#loading').fadeOut(1000);
 
 				setTimeout( function(){
 					centerSignin();

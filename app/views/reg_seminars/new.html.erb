@@ -405,6 +405,45 @@
 		font-size: 16px;
 		line-height: 1.1em;
 	}
+	.submitregevent.btn {
+		background-color: inherit;
+		color: #3A8EC9;
+		font-family: msyh;
+		font-size: 16px;
+		width: 310px;
+		height: 30px;
+		border-style:solid;
+		border-radius: 6px;
+		border-color: #005C9E;
+		border-width: 2px;
+		-webkit-transition: all 0.5s ease-in-out;
+		-moz-transition: all 0.5s ease-in-out;
+		-o-transition: all 0.5s ease-in-out;
+		-ms-transition: all 0.5s ease-in-out;
+		transition: all 0.5s ease-in-out;		
+	}
+	.submitregevent.btn:focus {
+		border-color: #47FFFF;
+		color: #18C9C9;
+		-webkit-box-shadow: 0 0 25px #ccc;
+		-moz-box-shadow: 0 0 25px #ccc;
+		box-shadow: 0 0 25px #ccc;
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		transform: scale(1.05)
+	}		
 	
 	</style>					
 					
@@ -471,13 +510,14 @@
 	</script>		
 
 
+<ul class="lc-inline">
+<li>
+<%= render 'share/eventpages_tabs' %>
+<li>
+
+<li>
 
 <div id="tab-container">
-
-
-<%= render 'share/eventpages_tabs'%>
-
-
 
 <div style="width: 1000px; margin-right: auto; margin-left: auto; background: #fff;">
 
@@ -878,6 +918,9 @@
 
 </div>
 
+<li>
+
+</ul>
 
     <!-- <script src="../scripts/jquery.js"></script> -->
 

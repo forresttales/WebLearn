@@ -289,7 +289,8 @@ class RegEventsController < ApplicationController
 
 
     if reg_event.city_workshop_13
-      reg_event.city_workshop_13_text = 'Las Vegas, NV'
+      # reg_event.city_workshop_13_text = 'Las Vegas, NV'
+      reg_event.city_workshop_13_text = 'Boston, MA'
       
           case reg_event.city_workshop_13_session
             when 1

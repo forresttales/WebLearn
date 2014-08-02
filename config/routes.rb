@@ -108,8 +108,14 @@ Weblearn::Application.routes.draw do
   resources :edmatchups
   resources :reg_letters
   resources :reg_events
-  resources :reg_communs
   resources :reg_seminars
+  resources :reg_communs
+
+
+
+
+
+
 
   # get "archives/index"
   # get "archives/new"
@@ -121,10 +127,36 @@ Weblearn::Application.routes.draw do
 
 
 
-  match '/EventNews', to: 'eventnews#show', via: 'get'
-  match '/Event-News/Columbia-South-Carolina-March-5', to: 'eventnews#event_1_photos', via: 'get'
-  match '/Event-News/California-Fresno-March-17', to: 'eventnews#event_2_photos', via: 'get'
+  # match '/EventNews', to: 'eventnews#show', via: 'get'
+  # match '/Event-News/Columbia-South-Carolina-March-5', to: 'eventnews#event_1_photos', via: 'get'
+  # match '/Event-News/California-Fresno-April-2', to: 'eventnews#event_2_photos', via: 'get'
+  # match '/Event-News/Texas-Houston-April-10', to: 'eventnews#event_3_photos', via: 'get'
+  # match '/Event-News/Illinois-Chicago-April-15', to: 'eventnews#event_4_photos', via: 'get'
+  # match '/Event-News/Virginia-Richmond-May-6', to: 'eventnews#event_5_photos', via: 'get'
+  match '/Event-News', to: 'eventnews#event_photos', via: 'get'
+  #match '/Event-News/photos_1', to: 'eventnews#photos_1', via: 'get'
 
+  get "eventnews/photos_1"
+  get "eventnews/photos_2"
+  get "eventnews/photos_3"
+  get "eventnews/photos_4"
+  get "eventnews/photos_5"
+  get "eventnews/photos_6"
+  get "eventnews/photos_7"
+  
+  # resources :eventnews do
+    # member do
+      # get 'photos1'
+    # end
+  # end
+
+  # resources :eventnews do
+    # collection do
+      # post :photos1
+    # end
+  # end
+
+  # resources :eventnews
   
   
   get "test/basic"

@@ -1,0 +1,83 @@
+//gathering css
+
+// variables, etc.
+
+	$lcgray: #A6A6A6; // gray
+	$dgreen: #376340;//11520b; //dark green
+	$ksgreen: #49853F; // knowstory green
+
+// page rules
+#page {
+	width: 800px;
+}
+
+.head {
+img {width:800px; margin:0 auto;}
+h1, h2 {color: $ksgreen;}
+h3, .dgreen {color: $dgreen; }
+h1, h3 {margin-left: 50px;}
+h2 {margin-left: 100px;}
+}
+
+.main {
+	.gray {color: $lcgray; margin-left: 50px;}
+	position:relative;
+}
+.building-img {
+	float: right;
+  position: relative;
+  top: -60px;
+  width: 440px;
+  border:3px solid $lcgray;
+  z-index:1;
+}
+
+.orleans-img {
+	position:absolute;
+	border:3px solid $lcgray;
+	top: 100px;
+}
+
+.theme {float: right; clear:both; color: $dgreen;}
+
+//info
+
+.info {clear:both; 
+	position: relative; 
+	top: 130px; 
+	text-align: left;
+	h3 {text-align: center; color: $dgreen;}
+	p {color: $dgreen;}
+}
+
+.right {margin-left:15px; }
+.left, .right {
+  display: inline-block;
+	float:left;
+  width:365px;
+  padding:0px;
+	// width:375px;
+	// padding:8px;
+}
+
+.invite-list {
+	list-style-type: square;
+	color: $ksgreen;
+	span {color: $dgreen;}
+}
+
+//agenda
+
+.agenda {
+	 background: none #c0e7bd;
+    border: 3px solid $dgreen;
+    clear: both;
+    position: relative;
+    top: 200px;
+    width: 790px;
+    h2 {color:$ksgreen;}
+    td {
+    	padding-top:2px;
+    }
+
+}

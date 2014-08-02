@@ -20,20 +20,20 @@ class ContactsController < ApplicationController
 
   
   def create
-    @contact = Contact.new(params[:contact])
-
-    if @contact.save
-
-      session[:contact_saved] = true
-      
-      # mail = RegLetterMailer.welcome_email(@reg_letter)
-      # mail.deliver
-      
-    else
-      
-      session[:contact_saved] = nil
-      
-    end
+    
+      if verify_recaptcha(:message => "reCAPTCHA erro")
+          @contact = Contact.new(params[:contact])
+          if @contact.save
+            session[:contact_saved] = true
+            # mail = RegLetterMailer.welcome_email(@reg_letter)
+            # mail.deliver
+          else
+            session[:contact_saved] = nil
+          end
+      else
+        flash[:captcha] = '* reCAPTCHA entry failed. Please try, again.'
+        redirect_to :action => 'new'
+      end
     
   end
 

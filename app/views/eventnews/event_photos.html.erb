@@ -1,0 +1,313 @@
+<% provide(:title, 'Event Photos') %>
+
+	
+	<script type="text/javascript" src="/assets/jquery.min.js"></script>
+    <!-- <script src="../scripts/dot.js"></script>    
+    <script src="../scripts/jquery-dropdown-dot.js"></script> -->
+
+	<!-- <link rel="stylesheet" type="text/css" href="../styles/dropdown.css"/> -->
+
+	<!-- <link rel="stylesheet" href="/gallery/styles/elegant-press.css" type="text/css" />
+	<script src="/gallery/scripts/elegant-press.js" type="text/javascript"></script> -->
+
+				
+	<style type="text/css">
+	
+		@font-face {
+			font-family: KlavikaExtraLight;
+			src: url('/assets/KlavikaWebDisplayExtraLight.eot');
+			src: url('/assets/KlavikaWebDisplayExtraLight.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebDisplayExtraLight.woff') format('woff');
+		}
+		@font-face {
+			font-family: KlavikaLight;
+			src: url('/assets/KlavikaWebBasicLight.eot');
+			src: url('/assets/KlavikaWebBasicLight.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicLight.woff') format('woff');
+		}
+		@font-face {
+			font-family: KlavikaRegular;
+			src: url('/assets/KlavikaWebBasicRegular.eot');
+			src: url('/assets/KlavikaWebBasicRegular.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicRegular.woff') format('woff');
+		}		
+		@font-face {
+			font-family: KlavikaMedium;
+			src: url('/assets/KlavikaWebBasicMedium.eot');
+			src: url('/assets/KlavikaWebBasicMedium.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicMedium.woff') format('woff');
+		}
+		@font-face {
+			font-family: KlavikaBold;
+			src: url('/assets/KlavikaWebBasicBold.eot');
+			src: url('/assets/KlavikaWebBasicBold.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicBold.woff') format('woff');
+		}
+		@font-face {
+			font-family: KlavikaBlack;
+			src: url('/assets/KlavikaWebDisplayBlack.eot');
+			src: url('/assets/KlavikaWebDisplayBlack.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebDisplayBlack.woff') format('woff');
+		}
+	
+	</style>		
+	
+	<style type="text/css">
+		@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
+	</style>
+
+
+	<style>
+	
+		body {
+			/*margin-top: 30px;
+			font-size: 13px;
+			font-family: Tahoma, Georgia, "Times New Roman", Times, serif;
+			font-family: Century Gothic, sans-serif;
+			color: #000;
+			padding: 0;
+			text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2)*/
+			background: #eee url(/assets/comp025.jpg) repeat;				
+		}
+		/*select {
+		    display:none;
+		}*/			
+		.k-decorate-none {
+			text-decoration: none;
+		}
+		.kbyline-none-caps {
+			/*line-height: 14px;*/
+			white-space: nowrap;
+			/*text-transform: uppercase;*/
+			font-family: KlavikaMedium, Arial, sans-serif;
+			font-size: 12px;
+		}
+		.k-b-headline-gallery {
+			/*font-size: 20px;*/
+			line-height: 14px;
+			color: #000;
+			font-family: KlavikaBlack, Arial, sans-serif;
+			margin-top: 6px;
+			margin-left: 6px;
+			width: 260px;
+			position: relative;
+			height: auto;
+		}
+		.title-gallery {
+			font-size: 26px;
+			line-height: 20px;
+			color: #8A5A0C;
+			font-family: KlavikaBlack, Arial, sans-serif;
+			/*text-shadow: 2px 2px #F5DDB8;*/
+			margin-left: 0px;
+		}
+		.title-galler-table {
+			width: 100%;	
+		}
+		.title-galler-table-col1 {
+			text-align: left;
+			padding-left: 70px;				
+		}
+		.title-galler-table-col2 {
+			text-align: right;
+			padding-right: 70px;												
+		}
+
+		
+		.search-by-tab-btn {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 12px; 
+			background-color: #8A5A0C;
+			color: #fff;
+		  	width: 400px;
+		  	height: 20px;
+		}
+		.search-by-tab-btn ul li:{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 12px; 
+			background-color: #8A5A0C;
+			color: #fff;
+		  	width: 400px;
+		  	height: 20px;
+		}
+		
+		
+		
+		.k-cell-divider-none {
+			border-right: 1px solid #fff;
+			width: 1px;
+			display: inline-block;
+		}
+		.ktop-none {
+			border-top: 1px solid #fff;
+		}
+		.kbottom-none {
+			border-top: 1px solid #fff;
+		}
+				
+	</style>
+					
+
+  	<link rel="stylesheet" href="../chosen/chosen.css">
+  	<script src="../chosen/chosen.jquery.js" type="text/javascript"></script>
+
+
+	<div id="id_default" style="width: 1200px; margin-right: auto; margin-left: auto; background: #fff; min-height: 800px;">
+	    
+	    
+		<header>		
+		 								
+			<%= render 'share/backtotop' %>
+		 					
+		</header>		
+
+		<div style="height: 70px;"></div>
+
+			<!-- 
+			Columbia, SC, Feb 27
+			Fresno, CA, April 2
+			Houston, TX, April 10, 2014 
+			Chicago, IL, April 15
+			Richmond, VA, May 6
+			Los Angeles, CA, May 22 
+			-->
+
+			<div style="margin-left: 70px;">
+          		<select id="event_photos_montage" data-placeholder="Choose a City" class="chosen-select" style="width:400px;" tabindex="2">
+            		<option value="0"></option>
+            		<option value="1">Columbia, SC, Feb 27, 2014</option>
+            		<option value="2">Fresno, CA, April 2, 2014</option>
+            		<option value="3">Houston, TX, April 10, 2014</option>
+            		<option value="4">Chicago, IL, April 15, 2014</option>
+            		<option value="5">Richmond, VA, May 6, 2014</option>
+            		<option value="6">Los Angeles, CA, May 22, 2014</option>
+            		<option value="7">Minneapolis, MN, June 17, 2014</option>
+          		</select>
+			</div>
+			
+		  	<script type="text/javascript">
+		    	var config = {
+		      	'.chosen-select'           : {},
+		      	'.chosen-select-deselect'  : {allow_single_deselect:true},
+		      	'.chosen-select-no-single' : {disable_search_threshold:10},
+		      	'.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+		      	'.chosen-select-width'     : {width:"95%"}
+		    	}
+		    	for (var selector in config) {
+		      		$(selector).chosen(config[selector]);
+		    	}
+		  	</script>
+
+
+		<div id="render"></div>
+
+		
+			
+		<div style="height: 50px;"></div>
+			
+	</div>
+
+	<div style="height: 70px;"></div>
+
+
+					
+					
+	<script>
+
+		function init(montage_start) {
+
+			$("#event_photos_montage").val(montage_start);
+			$("#event_photos_montage").trigger('chosen:updated');
+			// $("#event_photos_montage option").each(function(){
+			    // if ($(this).val() == "6") {
+			        // $(this).attr("selected",true);
+			    // } else {
+			        // $(this).removeAttr("selected");
+			    // }
+			// });
+			$("#event_photos_montage").trigger('change');
+
+			// $("#event_photos_montage").find('option[value="6"]').attr("selected",true);
+			// var obj = $("select[id='event_photos_montage']").find('option[value="6"]').attr("selected", "selected");
+			
+			// var insert_url = "/eventnews/photos_" + montage_start + ".js";
+		  	// $.ajax({
+		    	// type: 'GET',
+		    	// url: insert_url,
+            	// statusCode: {
+            	// },
+            	// success: function(data) {
+            	// },
+            	// error: function(xhr){
+            	// }
+		  	// });
+		  	
+		}
+
+		$(window).load( function() {
+		// $(document).ready(function(){
+			
+			
+			$("#event_photos_montage").chosen({
+
+			}).change(function(event){
+				
+				// alert($(this).val());
+			
+			     if(event.target == this){
+
+					var valu = $(this).val();
+					var insert_url = "/eventnews/photos_1.js";
+					switch (valu)
+					{
+					  case '1':
+					  	insert_url = "/eventnews/photos_1.js";
+					  	break;
+					  case '2':
+					  	insert_url = "/eventnews/photos_2.js";
+					  	break;
+					  case '3':
+					  	insert_url = "/eventnews/photos_3.js";
+					  	break;
+					  case '4':
+					  	insert_url = "/eventnews/photos_4.js";
+					  	break;
+					  case '5':
+					  	insert_url = "/eventnews/photos_5.js";
+					  	break;
+					  case '6':
+					  	insert_url = "/eventnews/photos_6.js";
+					  	break;
+					  case '7':
+					  	insert_url = "/eventnews/photos_7.js";
+					  	break;
+		
+					  default:
+					  //
+					}
+					
+				  	$.ajax({
+				    	type: 'GET',
+				    	url: insert_url,
+				    	// contentType: "application/js",
+				    	// processData: false,
+				    	// beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+		            	statusCode: {
+		                	// 200:function() { alert("200"); },
+		                	// 202:function() { alert("202"); }
+		            	},
+		            	success: function(data) {
+		            	  // alert("success"); 
+		            	}
+		            	// error: function(xhr){  alert("error: " + xhr.statusText); }
+		            	// error: function(xhr, status){  alert(xhr.status); }
+				  	});
+				  	
+					// $( document ).ajaxComplete(function() {
+						// $("#event_photos_montage").blur();
+						// // alert('complete');
+					// });
+			     }
+			});			
+
+			init(gon.montage_start);
+
+
+		});
+	
+	</script>
+

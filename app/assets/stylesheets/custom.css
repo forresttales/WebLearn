@@ -583,6 +583,12 @@
 		vertical-align: top;		
 	}
 
+	div .cell-450 {
+		display: table-cell;
+		width: 450px;
+		vertical-align: top;		
+	}
+
 	div .cell-400 {
 		display: table-cell;
 		width: 400px;
@@ -616,6 +622,12 @@
 	div .cell-200 {
 		display: table-cell;
 		width: 200px;
+		vertical-align: top;		
+	}
+
+	div .cell-180 {
+		display: table-cell;
+		width: 180px;
 		vertical-align: top;		
 	}
 	
@@ -1450,6 +1462,9 @@ border-top: 27px solid #214325;
 }
 .people_catbox  {
 border-top: 27px solid #3AAB48;
+}
+.spotlight_catbox {/* green */
+	border-top: 27px solid #9DC786
 }
 
 

@@ -142,7 +142,7 @@
 		/*font-family: "Quattrocento";*/
 		font-family: KlavikaLight;
 		/*font-size: 11px;*/
-		width: 800px;
+		width: 820px;
 		line-height: 1.2em;	
 	  	/*font-size: 1.15em;*/
 		font-size: 1.0em;		
@@ -237,29 +237,10 @@
 		vertical-align: top;
 	}			
 	
-	.city-color {
-		color: #1B237A;	
-	}
-	
 </style>	
 	
-<style>
-	
-	.txtarea {
-		border: none;
-		background-color: #fff;
-		resize: none;	
-		height: 140px;
-		
-		color: #000;
-		font-family: KlavikaRegular;
-		font-size: 1.0em;
-		font-weight: 400;
-		line-height: 1.2em;		
-		
-	}
-	
-</style>
+
+
 
 
 <%= render 'share/backtotop_2' %>
@@ -267,9 +248,9 @@
 <ul class="lc-inline">
 <li>
 <%= render 'share/eventpages_tabs' %>
+</li>
 <li>
-
-<li>
+	
 <div id="tab-container">
 
 <div id="lc-landing">
@@ -281,116 +262,71 @@
 <div class="spacer"></div>
 <div class="spacer"></div>
 
+<style>
+	
+	#tbl-event-schedule {
+	}
+	#tbl-event-schedule .sched-1 {
+		font-family: Arial, Helvetica, sans-serif;
+		color: #555;
+		font-size: 18px;
+		line-height: 1.0em;
+		font-weight: 400;
+		width: 230px; 
+		text-align: left; 
+		padding-top: 4px;
+	}
+	#tbl-event-schedule .sched-2 {
+		font-family: Arial, Helvetica, sans-serif;
+		color: #1B237A;
+		font-size: 18px;
+		line-height: 1.0em;
+		font-weight: 400;
+		width: 170px; 
+		text-align: left; 
+		padding-top: 4px;
+	}
+	#tbl-event-schedule .sched-3 {
+		width: 350px;
+		text-align: right;
+	}
+	#tbl-event-schedule .txtarea {
+		border: none;
+		background-color: #fff;
+		resize: none;	
+		height: 160px;
+		color: #555;
+		/*font-family: KlavikaRegular;*/
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 1.0em;	
+		padding: 0;
+		margin: 0;
+	}
+	
+	/*element.style {
+	    height: 90px;
+	}*/
+	
+</style>
+
 <% if @reg_event_itins.any? %>
-
-	<!-- <table width="800px" style="font-size:1.15em;"> -->
-	<table width="800px" style="font-size:1.0em;">
-
+	<table id="tbl-event-schedule" width="800px" style="font-size:1.0em;">
 	<% i = 0 %>
 	<% @reg_event_itins.each do |reg_event_itin| %>
-		<% i = i + 1 %>
-			
+		<% i += 1 %>
 		<tr>
-			<td style="width: 150px; text-align: left; padding-top: 4px;"><%= reg_event_itin.date_event_text %></td>
-			<td class="city-color" style="width: 250px; text-align: left; padding-top: 4px;"><%= reg_event_itin.city_state %></td>
-			<td style="width: 350px; text-align: left;">
+			<td class="sched-1"><%= reg_event_itin.date_event_text %></td>
+			<td class="sched-2"><%= reg_event_itin.city_state %></td>
+			<td class="sched-3">
 				<textarea id="txtarea_<%= i %>" class="txtarea" cols="28" disabled="disabled"><%= reg_event_itin.address %></textarea>
 			</td>
 		</tr>
 		<tr><td><div style="height: 20px;"></td><td></td><td></td></div></tr>
-	
-	
 	<% end %>
-
 	</table>
-
 <% end %>
-
-<!-- <table width="800px" style="font-size:1.15em;">
-	<tr>
-		<td style="width: 150px;">Feb. 27</td>
-		<td class="city-color" style="width: 200px">Columbia, SC</td>
-		<td style="width: 500px">Columbia Marriott, 1200 Hampton Street,<br>Columbia, SC, 29201-2826 (803) 771-7000</td>
-	</tr>
-	<tr><td><div style="height: 20px;"></td><td></td><td></td></div></tr>
-	<tr>
-		<td>March 17</td>
-		<td class="city-color">Fresno (Central), CA</td>
-		<td>Radisson Hotel Fresno 2233 Ventura St,<br>Fresno, CA, 93721 ‎(866) 539-8430</td>
-	</tr>
-	<tr><td><div style="height: 20px;"></td><td></td><td></td></div></tr>
-	<tr>
-		<td>April 10</td>
-		<td class="city-color">Houston, TX</td>
-		<td>TBD</td>
-	</tr>
-	<tr><td><div style="height: 20px;"></td><td></td><td></td></div></tr>
-	<tr>
-		<td>April 15</td>
-		<td class="city-color">Chicago, IL</td>
-		<td>Forest View Education Center<br>Township High School District 214<br>2121 S. Goebbert Road<br>Arlington Heights, IL 60005</td>
-	</tr>
-	<tr><td><div style="height: 20px;"></td><td></td><td></td></div></tr>
-	<tr>
-		<td>April 23</td>
-		<td class="city-color">San Bernardino, CA</td>
-		<td>On Campus - TBD</td>
-	</tr>
-	<tr><td><div style="height: 20px;"></td><td></td><td></td></div></tr>
-	<tr>
-		<td>May 6</td>
-		<td class="city-color">Richmond, VA</td>
-		<td>TBD</td>
-	</tr>
-	<tr><td><div style="height: 20px;"></td><td></td><td></td></div></tr>
-	<tr>
-		<td>June TBD</td>
-		<td class="city-color">Minneapolis, MN</td>
-		<td>TBD</td>
-	</tr>
-	<tr><td><div style="height: 20px;"></td><td></td><td></td></div></tr>
-	<tr>
-		<td>June TBD</td>
-		<td class="city-color">Detroit, MI</td>
-		<td>TBD</td>		
-	</tr>
-	<tr><td><div style="height: 20px;"></td><td></td><td></td></div></tr>
-	<tr>
-		<td>Sept. TBD</td>
-		<td class="city-color">Denver, CO</td>
-		<td>TBD</td>		
-	</tr>
-	<tr><td><div style="height: 20px;"></td><td></td><td></td></div></tr>
-	<tr>
-		<td>Sept. TBD</td>
-		<td class="city-color">Dallas, TX</td>
-		<td>TBD</td>		
-	</tr>
-	<tr><td><div style="height: 20px;"></td><td></td><td></td></div></tr>
-	<tr>
-		<td>Sept. TBD</td>
-		<td class="city-color">Newark, NJ</td>
-		<td>TBD</td>		
-	</tr>
-	<tr><td><div style="height: 20px;"></td><td></td><td></td></div></tr>
-	<tr>
-		<td>Sept. TBD</td>
-		<td class="city-color">San Jose, CA</td>
-		<td>TBD</td>		
-	</tr>
-	<tr><td><div style="height: 20px;"></td><td></td><td></td></div></tr>
-	<tr>
-		<td>Oct. TBD</td>
-		<td class="city-color">Las Vegas, NV</td>
-		<td>TBD</td>		
-	</tr>
-	<tr><td><div style="height: 20px;"></td><td></td><td></td></div></tr>
-	<tr>
-		<td>Oct. TBD</td>
-		<td class="city-color">Tampa, FL</td>
-		<td>TBD</td>		
-	</tr>
-</table> -->
 
 <div style="height: 20px;"></div>
 
@@ -425,14 +361,23 @@
 <div class="spacer"></div>
 
 <p>
-    <strong>Discussion Agenda – 8:30am – 3:30pm</strong>
+    <strong>Discussion Agenda – 7:30am – 4:00pm</strong>
 </p>
+
+<table>
+	<tr>
+		<td style="padding-left: 0px;">
+			<img src="../repository/events/agenda-3-w600-h686.png" alt="agenda-3-w600-h686.png">
+		</td>
+	</tr>
+</table>
+
 
 <div class="spacer"></div>
 
 <div>
-	<p style="font-size: "><img src="../repository/events/david-small.png" alt="david-small.png" align="left" width="140px" style="margin-right: 10px;">
-	<em>Host:</em>  David Kafitz, VP School Relations, The Learning Counsel</br>
+	<p style="font-size: "><img src="../repository/events/david-w140-h140.png" alt="david-w140-h140.png" align="left" style="margin-right: 10px;">
+	<em>Host:</em>  Dr. David Kafitz, EdD., VP School Relations, The Learning Counsel</br></br>
 	Expert and charismatic change-agent helping schools move forward with a well-reasoned strategy for digital content and curriculum, professional development and IT strategy. Former Superintendent, Director of Technology Services, Principal, and Teacher in North Carolina Public Schools.
 	</p>  
 </div>
@@ -442,11 +387,13 @@
 <div class="spacer"></div>
 
 <div>
-	<p><img src="../repository/events/lani-small.jpg" alt="lani-small.jpg" align="left" width="140px" style="margin-right: 10px;">
-	<em>Digital Curriculum Trends Speaker:</em>  LeiLani Cauthen, CEO & Publisher, The Learning Counsel</br>
+	<p><img src="../repository/events/lani-w140-h140.png" alt="lani-w140-h140.png" align="left" style="margin-right: 10px;">
+	<em>Digital Curriculum Trends Speaker:</em>  LeiLani Cauthen, CEO & Publisher, The Learning Counsel</br></br>
 	A Research Publisher and Media personality for 10 years, LeiLani will share the trends in schools for digital curriculum, insight into the future, and best practices.</p>  
 </div>
 
+<div class="spacer"></div>
+<div class="spacer"></div>
 <div class="spacer"></div>
 <div class="spacer"></div>
 <div class="spacer"></div>
@@ -476,27 +423,7 @@
 
 <div class="spacer"></div>
 
-<p>
-    <strong>Agenda</strong>
-</p>
 
-<div class="spacer"></div>
-
-<table>
-	<tr>
-		<td style="padding-left: 0px;">
-			<img src="../repository/events/agenda-w763-h424.png" alt="agenda-w763-h424.png">
-		</td>
-	</tr>
-</table>
-<!-- <div class="spacer"></div>
-<p>
-    &ndash; 4pm<strong> Local Executive Panel </strong>to brief the industry and additional district staff. Schools are invited to send additional interested teachers and other administration executives to hear the panel from 4-5pm, which is usually good timing post the school day.  Non-sponsoring companies may pay to send attendees to the Panel and Reception.
-</p>
-<div class="spacer"></div>
-<p>
-    &ndash; 5&ndash;6:30 pm<strong> Reception </strong>for one and all!
-</p> -->
 <div class="spacer"></div>
 <div class="spacer"></div>
 <p>
@@ -564,6 +491,7 @@
 			<img src="../logosponsor/pearson-w360.png" alt="pearson-w360.png">
 		</td>
 		<td style="width: 380px; height: 160px; padding-top: 0px;">
+			<img src="../logosponsor/amplify-w360.png" alt="amplify-w360.png">
 		</td>
 	</tr>
 	
@@ -591,7 +519,14 @@
 
 </div>
 
-<div style="height: 200px;"></div>
+<div style="height: 100px;"></div>
+
+</div>
+
+</li>
+
+</ul>
+
 	
 <div id="bottom-graphic">
 <img src="../repository/lc-box-cloud.png"/>
@@ -600,11 +535,6 @@
 
 <div style="clear: both;"></div>
 
-</div>
-
-<li>
-
-</ul>
 
 
 <script>
@@ -663,7 +593,18 @@
 	
 		$(window).load( function() {
 		//$(document).ready(function(){
+
 			$("#tab2").addClass("active");
+
+			
+			// var s = "txtarea_<#%= i %#>"
+			// <#% i = 0 %#>
+			// <#% @reg_event_itins.each do |reg_event_itin| %#>
+				// <#% i = i + 1 %#>
+				// s = "#txtarea_<#%= i %#>";
+				// $(s).elastic();			
+			// <#% end %#>
+			
 			
 			resizeArea();
 			// alert(gon.cnt);
