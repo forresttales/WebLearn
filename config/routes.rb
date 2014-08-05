@@ -28,7 +28,8 @@ Weblearn::Application.routes.draw do
 
   # match '/Events', to: 'events#index', via: 'get'
 
-  
+  match '/archives/show?id=2020', to: 'archives#Revising-Adoption-of-Curriculum-Materials-and-the-Hidden-Inequity', via: 'get'
+  # /archives/Revising-Adoption-of-Curriculum-Materials-and-the-Hidden-Inequity
 
    
   # get "landings/index"

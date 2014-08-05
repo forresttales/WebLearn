@@ -12,11 +12,19 @@ class ArchivesController < ApplicationController
   def show
 
     # @info = Slug.find_by_slug('6').target
-    
-
     # @info = Archive.find_by_id()       
 
-    @info = Archive.friendly.find(params[:id])       
+    id = params[:id]
+
+    case id.to_s
+      when "2020"
+        id = "Revising-Adoption-of-Curriculum-Materials-and-the-Hidden-Inequity"         
+      else
+       # 
+    end
+
+    # @info = Archive.friendly.find(params[:id])       
+    @info = Archive.friendly.find(id)       
      
     if request.path != archive_path(@info)
       redirect_to @info, status: :moved_permanently

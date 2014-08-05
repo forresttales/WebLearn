@@ -7,11 +7,13 @@
 
 		<% if false %>
 		<link rel="image_src" href="<%= @info.linkimg_url %>">
-		<meta name="original-source" content="http://thelearningcounsel.com/archives/show?id=<%= @info.article_id %>">
+		<!-- <meta name="original-source" content="http://thelearningcounsel.com/archives/show?id=<#%= @info.article_id %#>"> -->
+		<meta name="original-source" content="http://thelearningcounsel.com/archives/<%= @info.slug %>">
 		<meta property="og:title" content="<%= @info.linktitle %>">
 		<meta property="og:description" content="<%= @info.description %>" >
 		<meta property="og:type" content="article">
-		<meta property="og:url" content="http://thelearningcounsel.com/archives/show?id=<%= @info.article_id %>">
+		<!-- <meta property="og:url" content="http://thelearningcounsel.com/archives/show?id=<#%= @info.article_id %#>"> -->
+		<meta property="og:url" content="http://thelearningcounsel.com/archives/<%= @info.slug %>">
 		<meta property="og:image" content="http://thelearningcounsel.com/repository/<%= @info.linkimg %>">
 		<% end %>
 

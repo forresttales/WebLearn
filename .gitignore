@@ -15,7 +15,7 @@
 /log/*.log 
 /tmp
 /test
-/public/repository
+# /public/repository
 /public/journal
 /public/fonts
 /public/altgraphic
