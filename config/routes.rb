@@ -11,6 +11,7 @@ Weblearn::Application.routes.draw do
   match '/Papers', to: 'static_pages#papers', via: 'get'
   match '/Advertise', to: 'static_pages#advertise', via: 'get'  
   match '/Sponsor', to: 'static_pages#sponsor', via: 'get'
+  match '/Survey', to: 'static_pages#survey', via: 'get'
 
   match '/events', to: 'eventpages#index', via: 'get'
   match '/index', to: 'static_pages#index', via: 'get'
@@ -25,6 +26,8 @@ Weblearn::Application.routes.draw do
   match '/test', to: 'tests#index', via: 'get'
   match '/gallery', to: 'tests#gallery', via: 'get'
   match '/overlay', to: 'tests#overlay', via: 'get'
+
+  get "static_pages/new"
 
   # match '/Events', to: 'events#index', via: 'get'
 
@@ -709,6 +712,13 @@ Weblearn::Application.routes.draw do
   
   
   
+  
+  resources :dl_contacts do
+    collection do
+      post :create_dl
+    end
+  end
+
   
   
   

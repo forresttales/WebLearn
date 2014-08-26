@@ -499,13 +499,31 @@
 			<!--name_last-->
 			<div class="row">
 				<div class="cell-left-reg-event">
-					<%= f.label(:name_last, "Last Name, Mr, Mrs, Ms, Dr", :class => 'input-label required-label', :id => 'label_reg_event_name_last') %>
+					<%= f.label(:name_last, "Last Name", :class => 'input-label required-label', :id => 'label_reg_event_name_last') %>
 				</div>
 				<div class="cell-right-reg-event">
 					 <%= f.text_field(:name_last, :class => "input-form required", :placeholder => 'Last Name', :tabindex => '3') %>					 
 				</div>
 				<div class="cell-error-reg-event" id="state_reg_event_name_last"><p id="error_reg_event_name_last"></p></div>      					   
 			</div>      		
+
+
+
+
+			<div class="input-form-spacer"></div>
+			<!--name_title_sir-->
+			<div class="row">
+				<div class="cell-left-reg-event">
+					<%= f.label(:name_title_sir, "Mr, Mrs, Ms, Dr", :class => 'input-label required-label', :id => 'label_reg_event_name_title') %>
+				</div>
+				<div class="cell-right-reg-event">
+					 <%= f.text_field(:name_title_sir, :class => "input-form required", :placeholder => 'Mr, Mrs, Ms, Dr', :tabindex => '4') %>					 
+				</div>
+				<div class="cell-error-reg-event" id="state_reg_event_name_title_sir"><p id="error_reg_event_name_title"></p></div>      					   
+			</div>      		
+
+
+
 
 			<div class="input-form-spacer"></div>
 			<!--name_title-->
@@ -514,7 +532,7 @@
 					<%= f.label(:name_title, "Position Title", :class => 'input-label required-label', :id => 'label_reg_event_name_title') %>
 				</div>
 				<div class="cell-right-reg-event">
-					 <%= f.text_field(:name_title, :class => "input-form required", :placeholder => 'Title', :tabindex => '4') %>					 
+					 <%= f.text_field(:name_title, :class => "input-form required", :placeholder => 'Title', :tabindex => '5') %>					 
 				</div>
 				<div class="cell-error-reg-event" id="state_reg_event_name_title"><p id="error_reg_event_name_title"></p></div>      					   
 			</div>      		

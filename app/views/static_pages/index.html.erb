@@ -107,7 +107,7 @@
 				width: 100%;	
 			}
 			.title-galler-table-col1 {
-				text-align: left;
+				text-align: center;
 				padding-left: 0px;				
 			}
 			.title-galler-table-col2 {
@@ -115,14 +115,6 @@
 				padding-right: 0px;												
 			}
 			
-			.div-link-1 {
-				box-shadow: 4px 4px 20px #888888;
-				width: 270px;
-				height: 347px;
-			}
-			.div-link-1:hover {
-				box-shadow: 4px 4px 20px #786011;
-			}
 			
 			.slider-border-1 {
 				 width: 270px; 
@@ -158,12 +150,13 @@
 				text-decoration: none;
 			}
 			a.video-text:hover {
-				color: #181873;
+				color: #41b737;
 				text-shadow: 2px 2px #ccc;
 			}
 			
 			.line-video {
 				border-top: #181873 5px solid !important;
+				width: 300px;
 			}
 			.line-empty {
 				border-top: #fff 5px solid !important;
@@ -175,6 +168,62 @@
 				display: none;	
 			}
 			
+			.past-event-phots-h {
+				height:27px;
+				background:#214025;
+				color: #FFF;
+				text-align:center;
+				width: 300px;
+				text-transform: uppercase;
+			}
+
+			a.past-event-a:hover {
+				opacity: .6;
+				text-decoration:none;
+				color:#FFF;
+			}
+			.past-event-a .k-inner-cell {
+				border:2px solid #34633a;
+				box-shadow: 0 3px 3px #6f6f6f;
+				width:300px;
+			}
+
+			.search-function {
+				background: none repeat scroll 0 0 #f7f7f7;
+   				 border: 1px solid #41b737;
+    			color: #9e9e9e;
+    			font-size: 18px;
+    			height: 25px;
+    			text-align: left;
+   				 width: 270px;
+			}
+
+			.sub {
+				border: 2px solid #f7f7f7;
+    			border-radius: 8px;
+    			font-size: 20px;
+   				height: 30px;
+    			margin: 20px 0 10px;
+    			padding: 7px 0 0;
+    			text-align: center;
+    			width: 270px;
+    			background: #f7f7f7;
+    			box-shadow: 0 3px 6px #6f6f6f;
+			}
+			div.sub:hover {
+				box-shadow: 0 3px 6px #34633a;
+			}
+			.sub a {
+				color: gray; 
+				padding: 5px 35px;
+			}
+			.sub a:hover {
+				background: #fff;
+    			/*border: 1px solid #214025;*/
+    			color: #41b737;
+    			text-decoration: none;
+    		}
+
 		</style>
 
 
@@ -187,91 +236,7 @@
 		 								
 			<%= render 'share/backtotop' %>
 
-			
-			<div class="table-main">			
-				<div class="row">
-					<div class="cell-250">
-						<div class="table-main">
-							<div class="row">
-								<div class="cell-250" style="padding-left: 24px;">
-						  			<img src="../repository/logo-icon-come-together-tag.png" alt="logo-icon-come-together.png" >
-						  		</div>
-							</div>
-							<div class="row">
-								<div class="cell-125" style="padding-left: 34px;">
-									<!-- <p style="font-family: msyh; font-size: 12px;">Research and Context for the<br>Shift to Digital Curriculum</p> -->									
-									
-						  		</div>
-							</div>							
-						</div>
-					</div>
-					<div class="cell-650">
-						<div class="table-main">
-							<div class="row">
-								<div class="cell-650" style="padding-left: 10px;">
-									
-									<a href="/Events">
-										<img src="../repository/banner-main-discussions.png" alt="banner-main-discussions.png" width="630px" >
-									</a>
-									<!-- <div id="main_header_adblock_1">									
-										<h3>Space Available</h3>
-									</div> -->									
-														
-								</div>			
-							</div>							
-						</div>
-					</div>
-					<div class="cell-100%">
-						<div class="table-main">
-							<div class="row">
-								<div class="cell-100percent">
-				 						<!-- link_to image_tag(“/assets/EdMatchUp_logo.png”, :class=>’′), :url =>{:controller=> ‘’,:action=>’’} -->															
-									<div id="edmatchuplogo">
-										<%= link_to image_tag("../assets_knowstory/logo-knowstory-1-w300-h102.png", :alt => 'logo-knowstory-1-w300-h102.png', :width => '170'), '/KnowStory' %>															
-										 <!-- link_to image_tag("../repository/EdMatchUp_logo.png", :alt => 'EdMatchUp_logo.png'), '/Edmatchup'  -->															
-									</div>							
-						  		</div>
-							</div>
-							<div class="row">
-								<div class="cell-100percent">
-									<div align="center">
-										<%= link_to image_tag("../repository/image_coming_soon_8k.png", :alt => 'image_coming_soon_8k.png'), '/KnowStory' %>															
-									</div>							
-						  		</div>							
-							</div>
-						</div>
-					</div>
-				</div>					
-			</div>	
-		 					
-		</header>		
-
-		</div>
-		
-		
-		<div style="width: 1200px; margin-right: auto; margin-left: auto; background: #fff;">
-				
-		<section>
-
-					
-				<!-- <div style="float: right;">
-					<div>
-						<span onclick="scrollToAnchor('anchor2');">
-							<a style="font-family: KlavikaMedium; font-size: 18px; font-weight: 300; color: #555;">Articles</a>
-						</span>
-					</div>
-					<br>					
-					<div>
-						<span onclick="scrollToAnchor('anchor1');">
-							<a style="font-family: KlavikaMedium; font-size: 18px; font-weight: 300; color: #555;">Industry News&raquo;</a>
-						</span>
-					</div>
-				</div> -->
-				
-				<div style="height: 50px;"></div>
-
-				
-				<div class="kontainer-top">
+							<div class="kontainer-top">
 					
 				
 				<!-- <table style="width: 970px;">	
@@ -293,7 +258,7 @@
 										<span id="prev" style="left:-70px;top:215px;margin-top:0px;position:absolute;display:inline;"><img src="/assets/prev-arrow.png"></span>
 										<span id="next" style="left:626px;top:215px;margin-top:0px;position:absolute;display:inline;"><img src="/assets/next-arrow.png"></span>
 					
-										<div class="cycle-slideshow" data-cycle-speed="500" data-cycle-pause-on-hover="true" data-cycle-fx="scrollHorz" data-cycle-prev="#prev" data-cycle-next="#next" data-cycle-slides="&gt; div" style="width: 604px; position: relative; height: 650px; overflow: hidden;">					
+										<div class="cycle-slideshow" data-cycle-speed="500" data-cycle-pause-on-hover="true" data-cycle-fx="scrollHorz" data-cycle-prev="#prev" data-cycle-next="#next" data-cycle-slides="&gt; div" style="width: 604px; position: relative; height: 550px; overflow: hidden;">					
 										
 											<div style="position: absolute; top: 0px; left: 0px; z-index: 97; display: none;">
 												<div class="rowfluid k-mainfeaturerow">
@@ -328,35 +293,45 @@
 									
 									<div id="div-top-right" class="visibility-hidden" style="display: inline-block; width: 320px; vertical-align: top; padding-left: 50px;">
 
-										<table width="316px">
-											<tr>
+										<table width="316px" class="right-table">
+
+											<tr class="right-tr">
+												<td style="padding-left: 40px;">
+													<!-- <div class="search-function">
+														Search Function Coming Soon
+													</div> -->
+													<div class="sub"><a href="/LetterRegistration">Subscribe for Updates</a></div>
+												</td>
+											</tr>
+
+											<tr class="right-tr">
 												<td style="padding-left: 40px;">
 													<div class="div-link-1">
-														<a href="/CommunityRegistration">
-															<img src="../repository/image-journal-1-w270-h347.png" alt="image-journal-1.jpg" />
+														<a href="/Events">
+			<!--Was image-journal-1-w270-h347.png--> 	<img src="../repository/web-banner3.jpg" alt="image-journal-1.jpg" />
 														</a>
 													</div>
 												</td>
 											</tr>
-											<tr>
+											<tr class="right-tr">
 												<td>
 													<div style="height: 20px;"></div>
 												</td>
 											</tr>
-											<tr>
+											<tr class="right-tr">
 												<td style="padding-left: 40px;">
 													<div class="title-gallery">
-														<table class="title-galler-table">
+														<!--<table class="title-galler-table">
 															<tr>
 																<td class="title-galler-table-col1">
-																	Past Event Photos
+												<a href="/Event-News">Past Event Photos</a>
 																</td>
 															</tr>
 														</table>
 													</div>
 												</td>
 											</tr>
-											<!-- <tr>
+											<!-- Previos pos for past event photos <tr>
 												<td style="text-align: right; padding-left: 40px;">
 													<a href="/Event-News/Columbia-South-Carolina-March-5">
 														<div class="slider-border-1">
@@ -384,22 +359,22 @@
 												</td>
 												<td>
 												</td>
-											</tr> -->											
+											</tr> -//											
 
-											<tr>
+											<tr class="right-tr">
 												<td style="text-align: right; padding-left: 40px;">
 													<a href="/Event-News">
-														<div id="small-slider-top" class="cycle-slideshow slider-border-1 display-none"
+														<!-- <div id="small-slider-top" class="cycle-slideshow slider-border-1 display-none"
 														    data-cycle-fx=scrollHorz
-														    data-cycle-timeout=2000
+														    data-cycle-timeout=2000 
 														    >
-														    <div class="cycle-overlay"></div>
+														    <div class="cycle-overlay"></div> -//
 
 														    <img src="../event_news_images_3/logo_houston_002.JPG" 
 														        data-cycle-title="Digital Curriculum Strategy Discussion" 
 														        data-cycle-desc="Richmond, VA, May 6, 2014" />
 														
-														    <img src="../event_news_images_7/logo_IMG_57.JPG" 
+														  <!--  <img src="../event_news_images_7/logo_IMG_57.JPG" 
 														        data-cycle-title="Digital Curriculum Strategy Discussion" 
 														        data-cycle-desc="Minneapolis, MN, June 17, 2014" />
 
@@ -409,7 +384,7 @@
 	
 														    <!-- <img src="../event_news_images_3/logo_houston_006.JPG" 
 														        data-cycle-title="Photo Montage&nbsp;&raquo;"
-														        data-cycle-desc="Fresno, CA, April 2, 2014" /> -->
+														        data-cycle-desc="Fresno, CA, April 2, 2014" /> 
 	
 														    <img src="../event_news_images_3/logo_houston_018.JPG" 
 														        data-cycle-title="Digital Curriculum Strategy Discussion" 
@@ -417,14 +392,14 @@
 	
 														    <img src="../event_news_images_3/logo_houston_026.JPG" 
 														        data-cycle-title="Photo Montage&nbsp;&raquo;"
-														        data-cycle-desc="Chicago, IL, April 15, 2014" />
+														        data-cycle-desc="Chicago, IL, April 15, 2014" /> 
 	
 														</div>										
 													</a>
 												</td>
 												<td>
 												</td>
-											</tr>											
+											</tr>	End previous past event photos-->										
 
 
 
@@ -467,7 +442,7 @@
 </section>
 </div>					
 					
-<div style="width: 100%; height: 10px; background-color: #C7CED4; margin-top: 0px; margin-bottom: 0px;"></div>
+<div class="seperator"></div>
 		
 <div style="width: 1200px; margin-right: auto; margin-left: auto; background: #fff;">
 				
@@ -795,7 +770,7 @@
 						
 			<div class="k-inner-cell">
 				<div class="k-b-container" style="padding-bottom: 0px; top: 110px;">
-					<div class="k-img-cell-single">
+					<div class="k-img-cell-single-long">
 						<a href="https://www.readingkingdom.com/signup">
 							<img src="../repository/banners/banner-reading-kingdom-2-w317-h686.png" class="k-img" height="686px" onerror="this.src='/assets/error-300-700-blue.png'">
 						</a>
@@ -833,7 +808,7 @@
 		<div class="k-inner-cell"  style="padding-top: 2px;">
 			<div class="text_container b_container line-grow">
 				
-				<object type="application/x-shockwave-flash" data="http://www.youtube.com/v/UZePBZ-edfE&feature=youtu.be&noredirect=1" width="300" height="200">          	
+				<object type="application/x-shockwave-flash" data="http://www.youtube.com/v/UZePBZ-edfE&feature=youtu.be&noredirect=1" width="315" height="200">          	
 		            <param name="wmode" value="opaque" />
 		            <param name="quality" value="high" />
 		            <param name="bgcolor" value="#E9E9E9" />
@@ -854,8 +829,18 @@
 	<div class="k-outercell kol3">
 
 		<!-- <div id="1"></div> -->
+		<!-- New spot for past event photos -->
+		<a class="past-event-a" href="/Event-News">
 
-		<a href="#blogs">
+			<div class="k-inner-cell" style="">
+				<img  width="300" src="../event_news_images_3/logo_houston_002.JPG" data-cycle-title="Digital Curriculum Strategy Discussion" data-cycle-desc="Richmond, VA, May 6, 2014" />
+				<div class="past-event-phots-h">
+					Past Event Photos
+				</div>
+			</div>
+		</a>
+
+		<!--<a href="#blogs">  //Used to be blog link
 			<div class="k-inner-cell" style="padding-top: 2px;">
 				<div class="text_container b_container line-blog">
 					<img src="../repository/article-blogs-and-links.png" alt="article-blogs-and-links.png" onerror="this.src='../altgraphics/error-300-200.png'">
@@ -866,7 +851,7 @@
 					</div>
 				</div>
 			</div>
-		</a>
+		</a>-->
 
 	</div>
 </div>

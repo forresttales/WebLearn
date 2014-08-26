@@ -1,0 +1,131 @@
+// New Home page styles
+
+
+// Variables & FONTS
+$green: #41b737;
+$midgreen: #34633a;
+$dgreen: #214025;
+$grey: #808080;
+
+@font-face {
+				font-family: KlavikaExtraLight;
+				src: url('/assets/KlavikaWebDisplayExtraLight.eot');
+				src: url('/assets/KlavikaWebDisplayExtraLight.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebDisplayExtraLight.woff') format('woff');
+			}
+			@font-face {
+				font-family: KlavikaLight;
+				src: url('/assets/KlavikaWebBasicLight.eot');
+				src: url('/assets/KlavikaWebBasicLight.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicLight.woff') format('woff');
+			}
+			@font-face {
+				font-family: KlavikaRegular;
+				src: url('/assets/KlavikaWebBasicRegular.eot');
+				src: url('/assets/KlavikaWebBasicRegular.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicRegular.woff') format('woff');
+			}		
+			@font-face {
+				font-family: KlavikaMedium;
+				src: url('/assets/KlavikaWebBasicMedium.eot');
+				src: url('/assets/KlavikaWebBasicMedium.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicMedium.woff') format('woff');
+			}
+			@font-face {
+				font-family: KlavikaBold;
+				src: url('/assets/KlavikaWebBasicBold.eot');
+				src: url('/assets/KlavikaWebBasicBold.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicBold.woff') format('woff');
+			}
+			@font-face {
+				font-family: KlavikaBlack;
+				src: url('/assets/KlavikaWebDisplayBlack.eot');
+				src: url('/assets/KlavikaWebDisplayBlack.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebDisplayBlack.woff') format('woff');
+			}
+
+//End Vari
+
+.logo {
+	height: 60px;
+    position: absolute;
+    top: -10px;
+    }
+
+
+#nav.navNormal #top-black-bar {
+	height: 55px;
+}
+
+.nav-bar-black {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #cdcdcd;
+    box-shadow: 0 -6px 9px -8px #214025 inset;
+   /*box-shadow: 0 1px 4px $dgreen;*/
+    }
+
+#nav.navNormal #top-black-bar a {
+		color: $grey;
+	}
+
+#nav.navNormal #welcome, #nav.navNormal #welcome_loggedout {
+	float: left;
+	margin-top: 3px;
+	display: none;
+	font-family: KlavikaLight;
+	margin-left: 10px;
+	color: $grey;
+}
+#nav.navNormal #welcome a, #nav.navNormal #welcome_loggedout a {
+	color: $grey;
+}
+#nav.navNormal #s-icons {
+	margin-top: 5px;
+	margin-right: 8px
+}
+#nav.navNormal #s-links {
+	margin-right: 10px;
+	margin-top: 20px;
+	text-transform: uppercase;
+	color: $grey;
+	a {
+		padding: 20px 15px;
+		border:1px solid transparent;
+		&:hover {background:#FFF; 
+			color:$green; 
+			text-decoration:none;
+			border: 1px solid $dgreen;}
+	}
+}
+
+.div-link-1 {
+				box-shadow: 4px 4px 20px #888888;
+				/*width: 270px;*/
+				height: 400px;
+			}
+.div-link-1:hover {
+				box-shadow: 4px 4px 20px $midgreen;
+			}
+.right-table {border: none;}
+.right-tr td {border-right: none;}
+.title-galler-table-col1 {
+	color: $dgreen;
+	a {text-decoration: none; color: $dgreen; 
+		font-family: quattrocento sans;
+    	font-size: 20px;
+		&:hover { text-decoration:underline; color: $midgreen;}
+	}
+}
+
+.right-tr img {
+	border: 2px solid $midgreen;
+    box-shadow: 0 3px 3px #6f6f6f;
+    &:hover {opacity: .6;}
+}
+
+//PAGE MAIN
+
+.seperator {
+	width: 100%; height: 3px; 
+	background-color: #f7f7f7; 
+	margin-top: 5px; margin-bottom: 5px;
+	border-top: 1px solid #cdcdcd;
+    /*box-shadow: 0 1px 4px $dgreen;*/
+}
+
+.img300 {width: 300px;}
+.left65 {margin-left: 65px;}

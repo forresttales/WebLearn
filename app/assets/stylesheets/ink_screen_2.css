@@ -880,6 +880,8 @@ a.print-article {
 .line-lead {
    border-top: 5px solid #41B737;
    padding-top: 5px;
+   width: 400px;
+   
 }
 /*.line-lead {
 	border-top: #009CD8 5px solid !important

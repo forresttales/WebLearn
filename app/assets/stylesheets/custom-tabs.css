@@ -41,7 +41,8 @@
         }
 		.tabs ul.short {
 			height: 20px;
-			background-color: #3D3D3D;			
+			/*background-color: #3D3D3D;*/		
+			background-color: #f7f7f7;	
 		}
 		.tabs ul.tall {
 			height: 34px;
@@ -51,7 +52,8 @@
 	        font-size: 1.2em;
 	        width: 230px;
 	        list-style-type: none;
-	        background-color: #3D3D3D;
+	        /*background-color: #3D3D3D;*/
+	        background-color: #f7f7f7;
 	    	color: #222222;
 	    	font-weight: bold;
         }
@@ -67,13 +69,16 @@
 		    text-shadow: 1px 1px #34922C;
 		}
 		.tabs ul li:hover {
-		    background-color: #ccc;
+		    /*background-color: #ccc;*/
+		    background-color: #ffffff;
 		}
 		.tabs ul li:hover a {
 		    color: #214025;		    
 		}
 		.tabs ul li a:hover {
-		    text-decoration: none;
+    		color: #41b737;
+    		text-shadow: none;
+		    /*text-decoration: none;*/
 		}
 		.tabs ul li.active a {
 			color: #fff;
@@ -86,7 +91,32 @@
         }
 		.tabs ul li {
 			padding-top: 12px;
-		    background-color: #FFFFFF;			
+		    /*background-color: #FFFFFF;*/	
+		    background-color: #f7f7f7;		
 			width: 230px;
 			height: 34px;
 		}
+
+
+		#events-tabs {
+			box-shadow: 0 3px 4px #6f6f6f;
+		}
+		/*.tabs ul {
+		    background-color: #f7f7f7;
+		}
+		.tabs ul li {
+		    background-color: #f7f7f7;
+		}
+		.tabs ul li:hover {
+		    background-color: #ffffff;
+		}
+		.tabs ul.short {
+		    background-color: #f7f7f7;
+		}
+		.tabs ul li:hover a {
+		    color: #41b737;
+		}
+		.tabs ul li a:hover {
+		    color: #41b737;
+		    text-shadow: none;
+		}*/

@@ -78,6 +78,7 @@
 #  city_workshop_13_session_text :string(50)
 #  city_workshop_14_session_text :string(50)
 #  phone_mobile                  :string(100)
+#  name_title_sir                :string(100)
 #
 
 class RegEvent < ActiveRecord::Base
@@ -85,6 +86,7 @@ class RegEvent < ActiveRecord::Base
   attr_accessible :id, 
                   :name_first, 
                   :name_last, 
+                  :name_title_sir,
                   :name_title, 
                   :type_affiliation, 
                   :name_affiliation, 

@@ -383,6 +383,7 @@ class RegEventsController < ApplicationController
       params.require(:reg_event).permit(
           :name_first, 
           :name_last, 
+          :name_title_sir,
           :name_title, 
           :type_affiliation, 
           :name_affiliation, 

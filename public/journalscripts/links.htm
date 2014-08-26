@@ -1,0 +1,135 @@
+
+		<div style="height: 50px;">
+		
+	   	<style type="text/css">
+	    	.social-button-container {
+	            background-color: #DCE3DD;
+	            width: 132px;
+	            height: 63px;
+	            /*overflow: hidden;*/
+	            /*padding-left: 20px;*/ 
+	        }
+	        .social-button {
+	        	text-align: left;
+	        	display: inline;
+	            /*float: left;*/
+	            /*width: 70px;
+	            height: 63px;*/
+	        }
+
+			/*.lkdn {
+				position: relative;
+				top: -30px;
+				left: -10px;
+				left: 100px;	
+			}*/	
+			        
+			/*#lkdn .IN-right {
+				position: relative;
+				top: -2px;
+			}*/	        
+
+			.IN-widget {
+				position: relative;
+				left: 70px;
+				top: -50px;
+			}	        
+
+	    </style>
+		
+		
+		
+		
+	  	<div class="social-button-container">
+	
+
+	        <!-- <div class="social-button" style="paddin-top: 10px;">
+	        	<div id="fb-root"></div>
+				<div id="btn-fb-like" class="fb-like" data-href="http://thelearningcounsel.com" data-layout="box_count" data-action="like" data-show-faces="false" data-share="share"></div>
+			</div> -->
+	
+	        <div class="social-button">
+				<a 	id="btn-twitter"
+					href="https://twitter.com/share" 
+					class="twitter-share-button" 
+					data-lang="en"
+					data-url=""
+					data-text=""
+					data-count="vertical"
+					>Tweet
+				</a>
+			</div>                
+	
+	        <div>
+				<script type="IN/Share" data-counter="top">
+				</script>
+			</div>                
+
+	        <!-- <div class="social-button">
+	            <div class="fb-like" data-href="#" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+	        </div> -->
+	
+				
+	        <!-- <div class="social-button">
+				<input type="button" value="Share in Linkedin" id="sharetoLinkedin"/>
+			</div> -->                
+
+	                
+	        <!-- <div class="social-button">
+	            <a href="https://twitter.com/share" class="twitter-share-button" data-url="#" data-text="Social Buttons!">Tweet</a>
+	        </div>
+	        <div class="social-button">
+	            <div class="g-plusone" data-size="medium" data-width="100" data-href="#"></div>
+	        </div> -->
+	
+	        <!-- 
+	            <div class="clear"></div> if I was not using overflow: hidden
+	        -->
+	
+	  	</div>
+	
+	
+		<script>
+		
+			!function(d,s,id) {
+				var js,fjs=d.getElementsByTagName(s)[0];
+				if(!d.getElementById(id)) {
+					js=d.createElement(s);
+					js.id=id;
+					js.src="https://platform.twitter.com/widgets.js";
+					fjs.parentNode.insertBefore(js,fjs);
+				}
+			}(document,"script","twitter-wjs");
+	
+			var datatext = document.getElementById("desc").innerHTML + "\n";
+			var dataurl = document.URL;				
+			document.getElementById("btn-twitter").setAttribute("data-text", datatext);
+			document.getElementById("btn-twitter").setAttribute("data-url", dataurl);
+				 		
+		</script>			 						
+	
+		<script src="//platform.linkedin.com/in.js" type="text/javascript">
+		 lang: en_US
+		</script>	
+
+		
+		<!-- <script>
+		
+			(function(d, s, id) {
+		  		var js, fjs = d.getElementsByTagName(s)[0];
+		  		if (d.getElementById(id)) return;
+		  		js = d.createElement(s); js.id = id;
+		  		js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		  		fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+			
+			var dataurl = document.URL;
+			document.getElementById("btn-fb-like").setAttribute("data-href", dataurl);
+			
+		</script> -->
+		
+		<!-- <script>	                
+			$('#sharetoLinkedin').click(function() {
+				$('.IN-widget a').parent().click();
+			});	                
+		</script> -->

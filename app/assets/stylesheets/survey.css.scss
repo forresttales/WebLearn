@@ -1,0 +1,135 @@
+// New Home page styles
+
+
+// Variables & FONTS
+$green: #41b737;
+$midgreen: #34633a;
+$dgreen: #214025;
+$grey: #808080;
+
+
+
+// End Variables
+
+.kontainer {width: 100%;}
+#mainkolumn.withsidebar {
+    width: 100%;
+}
+
+#survey-top {width: 960px; margin:0 auto; clear:both; position: relative; height: 300px;
+
+	h1 {color: $dgreen;
+    float: right;
+    font-family: Quattrocento Sans;
+    font-size: 30px;
+    margin-bottom: 100px;
+    margin-right: 50px;
+}
+  p.survey-title {color: $dgreen;
+    float: right;
+    font-family: Quattrocento Sans;
+    font-size: 30px;
+    margin-bottom: 100px;
+    margin-right: 50px;
+}
+
+	a {margin-right: 50px; float:right; color:$green; text-decoration: underline; font-size: 20px;
+		font-family: Quattrocento Sans;
+		&:hover {color:$midgreen; text-decoration: none;}
+		&:visited, &:active {color: $green; text-decoration: underline;}
+	}
+
+	img {
+	width: 370px;
+	border: 2px solid $midgreen;
+	float:left;
+	}
+
+}
+
+
+.mid-bar {
+    background: none repeat scroll 0 0 #a8a8a8;
+    border: 2px solid #000;
+    clear: both;
+    color: #fff;
+    font-family: Quattrocento Sans;
+    font-size: 25px;
+    font-weight: bold;
+    height: 40px;
+    margin: 20px auto;
+    min-width: 960px;
+    padding-top: 15px;
+    position: relative;
+    text-align: center;
+}
+
+.content { width: 960px; margin: 0 auto;
+	h1 {color: $midgreen; font-size: 25px; text-align: center; margin: 10px;}
+	a{color:$green; text-decoration: underline; font-size: 20px;
+		font-family: Quattrocento Sans;
+		&:hover {color:$midgreen; text-decoration: none;}
+		&:visited, &:active {color: $green; text-decoration: underline;}
+	}
+	p {font-size:20px; font-family: Quattrocento Sans;}
+.left {width: 520px;}
+.right {width: 390px;
+	background: #e0eade;
+	border: 1px solid $dgreen;
+	text-align: center;
+	padding: 0 10px;
+	}
+
+	ul {margin: 15px 0;
+		li {list-style: square; color: $green; font-size: 20px; padding: 5px 0;
+			span {color: #000}
+		}
+	}
+}
+
+//Specific rules for survey report page
+
+
+#survey-top2 {
+	width: 496px;
+	margin: 0 auto;
+	img {
+	border: 2px solid $midgreen;
+	}
+
+}
+
+.content { width: 960px; margin: 0 auto;
+	h1 {color: $midgreen; font-size: 25px; text-align: center; margin: 10px;}
+	a{color:$green; text-decoration: underline; font-size: 20px;
+		font-family: Quattrocento Sans;
+		&:hover {color:$midgreen; text-decoration: none;}
+		&:visited, &:active {color: $green; text-decoration: underline;}
+	}
+	
+.left2 {width: 670px; float: left; p {font-size:20px; font-family: Quattrocento Sans;}
+	h1 {color: $green;} h2 {font-size:20px; margin: 10px 0;}
+	.indent {width: 600px; margin-left: 50px;}
+}
+
+.right2 {width: 190px; float: left; margin: 125px 0 0 50px;
+	h2.midgreen {font-size: 20px; margin: 10px 0;}
+	h2.green {font-size:20px; text-align: right;}
+	p {font-size:15px; font-family: Quattrocento Sans; margin: 5px;}
+	border: 1px solid $green;
+	text-align: left;
+	
+	.tlc-logo {width: 150px;}
+	
+	img {width: 190px;}
+	}
+
+	ul {margin: 15px 0;
+		li {list-style: square; color: $green; font-size: 20px; padding: 5px 0;
+			span {color: #000}
+		}
+	}
+}
+
+.green {color: $green;}
+.midgreen {color: $midgreen;}

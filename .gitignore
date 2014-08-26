@@ -16,12 +16,12 @@
 /tmp
 /test
 # /public/repository
-/public/journal
-/public/fonts
-/public/altgraphic
-/public/assets
-/public/journalscripts
-/public/pdfs
+# /public/journal
+# /public/fonts
+# /public/altgraphic
+# /public/assets
+# /public/journalscripts
+# /public/pdfs
 /config/database.yml
 /config/environments/production.rb
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140318103905) do
+ActiveRecord::Schema.define(version: 20140816141150) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,20 +65,20 @@ ActiveRecord::Schema.define(version: 20140318103905) do
 
   create_table "archives", force: true do |t|
     t.integer  "article_id"
-    t.string   "name_url",     limit: 100
-    t.string   "name_file",    limit: 50
-    t.string   "name_author",  limit: 50
-    t.string   "name_admin",   limit: 50
+    t.string   "name_url"
+    t.string   "name_file"
+    t.string   "name_author"
+    t.string   "name_admin"
     t.text     "key_words"
     t.date     "date_article"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "article_type", limit: 20
-    t.string   "description",  limit: 200
-    t.string   "linkimg",      limit: 50
-    t.string   "linkimg_url",  limit: 100
-    t.string   "linktitle",    limit: 200
-    t.string   "slug",         limit: 200
+    t.string   "article_type"
+    t.string   "description"
+    t.string   "linkimg"
+    t.string   "linkimg_url"
+    t.string   "linktitle"
+    t.string   "slug"
   end
 
   add_index "archives", ["article_id"], name: "index_archives_on_article_id", using: :btree
@@ -92,6 +92,19 @@ ActiveRecord::Schema.define(version: 20140318103905) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "phone",      default: ""
+  end
+
+  create_table "dl_contacts", force: true do |t|
+    t.string   "name_first",     default: "", null: false
+    t.string   "name_last",      default: "", null: false
+    t.string   "name_title",     default: "", null: false
+    t.string   "position_title", default: "", null: false
+    t.string   "email",          default: "", null: false
+    t.string   "phone",          default: "", null: false
+    t.string   "name_pdf",       default: "", null: false
+    t.integer  "int_pdf",        default: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "eventnews", force: true do |t|
@@ -1022,6 +1035,7 @@ ActiveRecord::Schema.define(version: 20140318103905) do
     t.string   "city_workshop_13_session_text", limit: 50
     t.string   "city_workshop_14_session_text", limit: 50
     t.string   "phone_mobile",                  limit: 100
+    t.string   "name_title_sir",                limit: 100
   end
 
   create_table "reg_letters", force: true do |t|

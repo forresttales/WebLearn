@@ -236,7 +236,7 @@
 
 	/* fonts */
 
-	.headline-excelsiorcomics {
+	/*.headline-excelsiorcomics {
 		font-size: 36px;
 		color: #000;
 		font-family: excelsiorcomics;
@@ -244,7 +244,17 @@
 		margin-left: 4px;
 		padding-bottom: 4px;
 		position: relative;	
-	}	
+	}*/	
+	.headline-excelsiorcomics {
+		color: #000;
+		font-family: QuattrocentoSans-Regular; /*Quattrocento sans;*/
+		font-size: 22px;	
+		font-size: 20px; /*Was 6px;*/
+		margin-left: 4px;
+		margin-top: 18px;
+		padding-bottom: 4px;
+		position: relative;
+	}
 
 	.headline-JandaCheerfulScript {
 		font-size: 36px;
@@ -658,6 +668,18 @@
 	div .cell-80 {
 		display: table-cell;
 		width: 80px;
+		vertical-align: top;		
+	}
+
+	div .cell-50 {
+		display: table-cell;
+		width: 50px;
+		vertical-align: top;		
+	}
+
+	div .cell-30 {
+		display: table-cell;
+		width: 30px;
 		vertical-align: top;		
 	}
 
@@ -1816,14 +1838,25 @@ h3 {
 	margin-bottom: 0.8em
 }
 
-.kontainer {
+/*.kontainer {
 	position: relative;
 	margin: 0 auto;
 	clear: both;
 	width: 970px;
 	background-color: #fff;
+}*/
+.kontainer {
+     position: relative;
+     margin: 0 auto;
+     clear: both;
+     /*width: 950px;*/
+     width: 970px;
+     padding-left: 20px;
+     background-color: #fff;
+     border:2px solid #f7f7f7;
+     box-shadow: 4px 4px 4px #CCC;
 }
-
+ 
 .kontainer-space-1 {
 	height: 30px;
 }
@@ -1892,7 +1925,7 @@ h3 {
 bodykopy p {
 	margin-top: 0px;
 	margin-bottom: 0.9em;
-	font-family: Vollkorn, "Times New Roman";
+	font-family: QuattrocentoSans-Regular; /*Vollkorn, "Times New Roman";*/
 	font-size: 16px;
 	color: #000000;
 	line-height: 1.5em;
@@ -1904,11 +1937,12 @@ bodykopy ol, #bodykopy ul {
 }
 
 #bodykopy strong, #bodykopy b {
-	font-family: KlavikaBlack;
+	font-family: QuattrocentoSans-Regular;
+	/*font-family: KlavikaBlack;*/
 	font-size: 18px;
 	margin-top: 0px;
 	margin-bottom: 0.8em;
-	font-weight: normal;
+	font-weight: bold;
 	letter-spacing: 0
 }
 

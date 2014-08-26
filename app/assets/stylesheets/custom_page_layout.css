@@ -500,6 +500,7 @@
 	width: 315px;
 	position: relative;
 	display: inline-block;
+
 }
 .kol-619 {
 	width: 619px;
@@ -551,14 +552,17 @@
 }
 .k-img-cell-single {
 	position: absolute;
-	bottom: 0px;	
-	
+	/*bottom: 0px;	*/
+	top: 35px;
 	text-align: center;
 }
 .k-empty {
 	height: 0px;
 }
-
+.k-img-cell-single-long {
+	bottom: 0;
+	position:absolute;
+}
 
 
 
@@ -571,11 +575,11 @@
 
 
 .katbox {
-	width: 240px;
-	position: relative;
+	width: 300px; /*was 240*/
+	/*position: relative;*/
 	/*top: -10px;*/
-	top: 11px;
-	text-align: left;
+	/*top: 11px;*/
+	text-align: center; /*left;*/
 }
 
 
@@ -589,9 +593,10 @@
 
 .katcolorbox_posit {
 /* delete the other styles for this css class*/
-    bottom: -30px;
+   /* bottom: -30px;*/
     position: absolute;
 }
+.posit2 {top:-190px;}
 
 /*.katcolorbox_posit {
 	position: absolute;
@@ -616,9 +621,10 @@
 	padding-right: 20px
 }
 .katbox-article span {
-	font-family: KlavikaBold;
+	/*font-family:     KlavikaBold; */
+	font-family: 'Quattrocento Sans',sans-serif;
 	text-transform: uppercase;
-	font-size: 9pt;	
+	font-size: 16px;	
 	color: #fff;
 	padding-left: 20px;
 	position: relative;
@@ -631,9 +637,9 @@
 
 
 
-
 .k-link-a:hover {
 	text-decoration: none;
+	opacity: .6;
 }
 .katbox-article span:hover {
 	color: #fff;
@@ -642,7 +648,7 @@
 	font-size: 20px;
 	line-height: 20px;
 	color: #000;
-	font-family: KlavikaBlack, Arial, sans-serif;
+	font-family: 'Quattrocento Sans',sans-serif; /*KlavikaBlack, Arial, sans-serif;*/
 	margin-top: 30px;
 	margin-left: 0px;
 	width: 290px;
@@ -653,7 +659,8 @@
 	font-size: 20px;
 	line-height: 20px;
 	color: #000;
-	font-family: KlavikaBlack, Arial, sans-serif;
+	/*font-family: KlavikaBlack, Arial, sans-serif;*/
+	font-family: 'Quattrocento Sans',sans-serif;	
 	margin-top: 20px;
 	margin-left: 0px;
 	width: 400px;

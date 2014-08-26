@@ -54,23 +54,14 @@
 		overflow: hidden;
 		-webkit-transform: translate3d(0, 0, 0)
 	}
-	#nav.navNormal #top-black-bar a {
-		color: #fff;
-	}
 	
-	.nav-bar-black {
-		/*background-color: rgba(0, 0, 0, 0.9);*/
-		background-color: rgba( 65, 183, 55, 0.92);
-		/*background-color: #41B737;*/		
+	
+	.nav-bar-black {	
 		position: fixed;
 		top: -7px;
 	}
      
-	#nav.navNormal #white-stripe-bar {
-		width: 100%;
-		height: 32px;
-		border-bottom: #FFFFFF 2px solid
-	}
+
 	
      
 	#nav.navNormal .inner {
@@ -82,6 +73,7 @@
 	#nav.navNormal .social {
 		float: right
 	}
+
      
 </style>
 
@@ -97,84 +89,26 @@
     	<div id="top-black-bar" class="outer nav-bar-black">
 
             
-	    	<div id="white-stripe-bar" class="outer">
+	    	
 	            <div class="inner">
 	    
-	                <!-- <div id="s-icons" class="social">
-	                    <ul>
-	                        <li class="linkedin"><a href="http://www.linkedin.com/today/inc.com" target="_blank"></a></li>
-	                        <li class="twitter"><a href="http://www.twitter.com/inc" target="_blank"></a></li>
-	                        <li class="google"><a href="https://plus.google.com/+incmagazine" target="_blank"></a></li>
-	                        <li class="facebook"><a href="http://www.facebook.com/inc" target="_blank"></a></li>
-	                    </ul>
-	                </div> -->	    
+	                <a href="/"><img class="logo" src="../repository/logo-icon-come-together.png"></a>    
 	    
 	    
 	                <div id="s-links" class="social">
-	                	<a href="/">Home</a> | 
-	                	<a href="/KnowStory">KnowStory</a> | 
-	                	<a href="/Events">Events</a> |
-	                	<a href="/Papers">Papers</a> |	                	 
-	                	<a href="/About">About</a> |
-	                	<a href="/Advertise">Advertise</a> 	                	 
+	                	 
+	                	<a href="/Events">Events</a> 
+	                	<a href="/Papers">Papers</a> 	                	 
+	                	<a href="/KnowStory">KnowStory</a>  
+	                	<a href="/Survey">Survey</a>  
+
+	                	<!-- <a href="/About">About</a> 
+	                	<a href="/Advertise">Advertise</a> --> 	                	 
 	                </div>	          
 	          
 	            </div>
-	        </div>
-        
-			<div id="lower-bar">
+	      
 
-        		<div class="inner">
-        			<div id="member_container">
-            
-				        <div style="display: block;" id="welcome_loggedout">
-				        	
-				        	<a id="signup" style="font-family: msyh; font-size: 13px;" href="/LetterRegistration">Join eNewsletter</a>
-				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				        	<a style="font-family: msyh; font-size: 13px;" href="/ContactUs">Contact Us</a>
-				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				        	<a style="font-family: msyh; font-size: 13px;" href="/CommunityRegistration">Join Our Community</a>
-				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				        	
-<%= link_to 'Tablet', '/tablets/index' %>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				        	
-				        	<% if session[:username].nil? %>
-				        	<a style="font-family: msyh; font-size: 13px;" href="/Signup">Sign Up</a>
-				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				        	<a style="font-family: msyh; font-size: 13px;" href="/Signin">Sign In</a>
-				        	<% else %>
-				        	<a style="font-family: msyh; font-size: 13px;" href="/Signout">Sign Out</a>
-				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				        	
-        					<% if !( current_page?(controller: 'institutes', action: 'index') or %>
-        					      <% current_page?(controller: 'publishers', action: 'index') or %>
-        					      <% current_page?(controller: 'recruiters', action: 'index') or %>
-        					      <% current_page?(controller: 'students',   action: 'index') or %>
-        					      <% current_page?(controller: 'teachers',   action: 'index') )  %>
-				        	
-				        	<a style="font-family: msyh; font-size: 13px;" href="<%= session[:profile] %>">My Profile</a>
-				        	<% end %>
-				        	
-				        	<% end %>
-				        	
-				        	
-				        </div>
-				        
-        			</div>
-
-        		</div>
-
-        	</div>
 
             <div id="theajaxregpull" style="margin-top:-32px;"></div>
         
@@ -203,7 +137,7 @@
     	</div>
     </div>	
 
-
+<!--SCRIPTS-->
 	<script>
 		
 			function dropdown() {
