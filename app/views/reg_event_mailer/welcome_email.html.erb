@@ -89,13 +89,19 @@
   	<br>
   	<br>
     <span class="main">
-		THANK YOU for registering to attend a Learning Counsel event!  
+		THANK YOU for registering to attend a Learning Counsel event!
+		<br>
+		You will receive another email confirming the details of the event venue
+		<br>
+		you’ve signed up for, agenda for the day, and map link.     	
+    	
+		<!-- THANK YOU for registering to attend a Learning Counsel event!  
 		<br>
 		You will receive another email confirming the details of the event venue 
 		<br>
 		you’ve signed up for, agenda, and what to expect.      	
     	<br>
-    	We’re so excited you’re attending!  See you there!
+    	We’re so excited you’re attending!  See you there! -->
     </span>
   	<br>
   	<br>
@@ -140,7 +146,7 @@
 	  		</tr>
 	  		<tr>
 	  			<td class="left">
-	    			<p>Institution or Company:</p>
+	    			<p>School/District or Company:</p>
 	  			</td>
 	  			<td class="right">
 	    			<p><%= @reg_event.type_affiliation %></p>
@@ -148,7 +154,7 @@
 	  		</tr>
 	  		<tr>
 	  			<td class="left">
-	    			<p>Institution or Company Name:</p>
+	    			<p>School/District or Company Name:</p>
 	  			</td>
 	  			<td class="right">
 	    			<p><%= @reg_event.name_affiliation %></p>
@@ -252,23 +258,34 @@
 		-->
 
 
+
+
+
+		<!-- 
+	    1  Phoenix, AZ        Jan 14 
+	    2  Seattle, WA        Jan 27
+	    3  Atlanta, GA        Feb 10
+	    4  Denver, CO         Feb 19
+	    5  Fresno, CA         Mar 4
+	    6  Minneapolis, MN    Mar 11
+	    7  Los Angeles, CA    Mar 24
+	    8  Charlotte, NC      Apr 16
+	    9  Chicago, IL        Apr 23
+	    10 Houston, TX        Apr 29
+	    11 Richmond, VA       May 14
+	    12 Memphis, TN        May TBD
+	    13 Tampa, FL          Sep 17
+	    14 Dallas, TX         Sep 19
+	    15 Newark, NJ         Sep 23
+	    16 San Jose, CA       Sep 30
+	    17 Kansas City, MO    Oct 7		(IA, NE, KS)
+	    18 Boston, MA         Oct 15
+	    19 Santa Fe, NM       Oct 26-27
+		-->
+
 			
 		<table style="width: 800px;">
-			<!-- 1  Columbia, SC			Feb 27 -->
-	  		<% if @reg_event.city_workshop_1 %>
-	  		<tr>
-	  			<td style="width: 100px;">
-	    			<span class="workshop-1">Workshop:</span>
-	  			</td>
-	  			<td style="width: 300px;">
-	    			<span class="workshop-2"><%= @reg_event.city_workshop_1_text %></span>
-	  			</td>
-	  			<td class="workshop-3">
-	  				<span>February 27, 2014</span>
-	  			</td>
-	  		</tr>  		
-	  		<% end %>
-	  		<!-- 2  Fresno, CA (Central) 	April 2 -->
+	  		<!-- 2  Seattle, WA        Jan 28 -->
 	  		<% if @reg_event.city_workshop_2 %>
 	  		<tr>
 	  			<td>
@@ -278,25 +295,25 @@
 	    			<span class="workshop-2"><%= @reg_event.city_workshop_2_text %></span>
 	  			</td>
 	  			<td class="workshop-3">
-	  				<span>April 2, 2014</span>
+	  				<span>January 27, 2015</span>
 	  			</td>
 	  		</tr>  		
 	  		<% end %>
-	  		<!-- 4  Houston, TX				April 10 -->
-	  		<% if @reg_event.city_workshop_4 %>
+			<!-- 1  Phoenix, AZ        Jan 14 -->
+	  		<% if @reg_event.city_workshop_1 %>
 	  		<tr>
-	  			<td>
+	  			<td style="width: 100px;">
 	    			<span class="workshop-1">Workshop:</span>
 	  			</td>
-	  			<td>
-	    			<span class="workshop-2"><%= @reg_event.city_workshop_4_text %></span>
+	  			<td style="width: 300px;">
+	    			<span class="workshop-2"><%= @reg_event.city_workshop_1_text %></span>
 	  			</td>
 	  			<td class="workshop-3">
-	  				<span>April 10, 2014</span>
+	  				<span>January 29, 2015</span>
 	  			</td>
 	  		</tr>  		
 	  		<% end %>
-	  		<!-- 3  Chicago, IL				April 15 -->
+	  		<!-- 3  Atlanta, GA        Feb 10 -->
 	  		<% if @reg_event.city_workshop_3 %>
 	  		<tr>
 	  			<td>
@@ -306,25 +323,25 @@
 	    			<span class="workshop-2"><%= @reg_event.city_workshop_3_text %></span>
 	  			</td>
 	  			<td class="workshop-3">
-	  				<span>April 15, 2014</span>
+	  				<span>February 10, 2015</span>
 	  			</td>
 	  		</tr>  		
 	  		<% end %>
-	  		<!-- 6  Richmond, VA				May 6 -->
-	  		<% if @reg_event.city_workshop_6 %>
+	  		<!-- 4  Denver, CO         Feb 19 -->
+	  		<% if @reg_event.city_workshop_4 %>
 	  		<tr>
 	  			<td>
 	    			<span class="workshop-1">Workshop:</span>
 	  			</td>
 	  			<td>
-	    			<span class="workshop-2"><%= @reg_event.city_workshop_6_text %></span>
+	    			<span class="workshop-2"><%= @reg_event.city_workshop_4_text %></span>
 	  			</td>
 	  			<td class="workshop-3">
-	  				<span>May 6, 2014</span>
+	  				<span>February 19, 2015</span>
 	  			</td>
 	  		</tr>  		
 	  		<% end %>
-	  		<!-- 5  LA/San Bernadino, CA		May 22 -->
+	  		<!-- 5  Fresno, CA         Mar 4 -->
 	  		<% if @reg_event.city_workshop_5 %>
 	  		<tr>
 	  			<td>
@@ -334,11 +351,25 @@
 	    			<span class="workshop-2"><%= @reg_event.city_workshop_5_text %></span>
 	  			</td>
 	  			<td class="workshop-3">
-	  				<span>May 22, 2014</span>
+	  				<span>March 4, 2015</span>
 	  			</td>
 	  		</tr>  		
 	  		<% end %>
-	  		<!-- 7  Minneapolis, MN			June 17 -->
+	  		<!-- 6  Minneapolis, MN    Mar 12 -->
+	  		<% if @reg_event.city_workshop_6 %>
+	  		<tr>
+	  			<td>
+	    			<span class="workshop-1">Workshop:</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-2"><%= @reg_event.city_workshop_6_text %></span>
+	  			</td>
+	  			<td class="workshop-3">
+	  				<span>March 11, 2015</span>
+	  			</td>
+	  		</tr>  		
+	  		<% end %>
+	  		<!-- 7  Los Angeles, CA    Mar 24 -->
 	  		<% if @reg_event.city_workshop_7 %>
 	  		<tr>
 	  			<td>
@@ -348,11 +379,11 @@
 	    			<span class="workshop-2"><%= @reg_event.city_workshop_7_text %></span>
 	  			</td>
 	  			<td class="workshop-3">
-	  				<span>June 17, 2014</span>
+	  				<span>March 25, 2015</span>
 	  			</td>
 	  		</tr>  		
 	  		<% end %>
-	  		<!-- 8  Detroit, MI				June 24 -->
+	  		<!-- 8  Charlotte, NC      Apr 16 -->
 	  		<% if @reg_event.city_workshop_8 %>
 	  		<tr>
 	  			<td>
@@ -362,11 +393,11 @@
 	    			<span class="workshop-2"><%= @reg_event.city_workshop_8_text %></span>
 	  			</td>
 	  			<td class="workshop-3">
-	  				<span>June 24, 2014</span>
+	  				<span>April 16, 2015</span>
 	  			</td>
 	  		</tr>  		
 	  		<% end %>
-	  		<!-- 9  Denver, CO				Sep 9 -->
+	  		<!-- 9  Chicago, IL        Apr 23 -->
 	  		<% if @reg_event.city_workshop_9 %>
 	  		<tr>
 	  			<td>
@@ -376,11 +407,11 @@
 	    			<span class="workshop-2"><%= @reg_event.city_workshop_9_text %></span>
 	  			</td>
 	  			<td class="workshop-3">
-	  				<span>September 9, 2014</span>
+	  				<span>April 23, 2015</span>
 	  			</td>
 	  		</tr>  		
 	  		<% end %>
-	  		<!-- 10 Dallas, TX				Sep 18 -->
+	  		<!-- 10 Houston, TX        Apr 29 -->
 	  		<% if @reg_event.city_workshop_10 %>
 	  		<tr>
 	  			<td>
@@ -390,11 +421,11 @@
 	    			<span class="workshop-2"><%= @reg_event.city_workshop_10_text %></span>
 	  			</td>
 	  			<td class="workshop-3">
-	  				<span>September 18, 2014</span>
+	  				<span>April 29, 2015</span>
 	  			</td>
 	  		</tr>  		
 	  		<% end %>
-	  		<!-- 11 Newark, NJ				Sep 25 -->
+	  		<!-- 11 Richmond, VA       May 14 -->
 	  		<% if @reg_event.city_workshop_11 %>
 	  		<tr>
 	  			<td>
@@ -404,11 +435,11 @@
 	    			<span class="workshop-2"><%= @reg_event.city_workshop_11_text %></span>
 	  			</td>
 	  			<td class="workshop-3">
-	  				<span>September 25, 2014</span>
+	  				<span>May 14, 2015</span>
 	  			</td>
 	  		</tr>  		
 	  		<% end %>
-	  		<!-- 12 San Jose, CA				Sep 30 -->
+	  		<!-- 12 Memphis, TN        May TBD -->
 	  		<% if @reg_event.city_workshop_12 %>
 	  		<tr>
 	  			<td>
@@ -418,11 +449,11 @@
 	    			<span class="workshop-2"><%= @reg_event.city_workshop_12_text %></span>
 	  			</td>
 	  			<td class="workshop-3">
-	  				<span>September 30, 2014</span>
+	  				<span>May 27, 2015</span>
 	  			</td>
 	  		</tr>  		
 	  		<% end %>
-	  		<!-- 14 Tampa, FL				Oct 16 -->
+	  		<!-- 14 Dallas, TX         Sep 19 -->
 	  		<% if @reg_event.city_workshop_14 %>
 	  		<tr>
 	  			<td>
@@ -432,11 +463,11 @@
 	    			<span class="workshop-2"><%= @reg_event.city_workshop_14_text %></span>
 	  			</td>
 	  			<td class="workshop-3">
-	  				<span>October 16, 2014</span>
+	  				<span>September 10, 2015</span>
 	  			</td>
 	  		</tr>  		
 	  		<% end %>
-	  		<!-- 13 Boston, MA				Oct 28 -->
+	  		<!-- 13 Tampa, FL          Sep 17 -->
 	  		<% if @reg_event.city_workshop_13 %>
 	  		<tr>
 	  			<td>
@@ -446,11 +477,11 @@
 	    			<span class="workshop-2"><%= @reg_event.city_workshop_13_text %></span>
 	  			</td>
 	  			<td class="workshop-3">
-	  				<span>October 28, 2014</span>
+	  				<span>September 17, 2015</span>
 	  			</td>
 	  		</tr>  		
 	  		<% end %>
-	  		<!-- 15 National Event			Nov 3 - 4 -->
+	  		<!-- 15 Newark, NJ         Sep 23 -->
 	  		<% if @reg_event.city_workshop_15 %>
 	  		<tr>
 	  			<td>
@@ -460,7 +491,105 @@
 	    			<span class="workshop-2"><%= @reg_event.city_workshop_15_text %></span>
 	  			</td>
 	  			<td class="workshop-3">
-	  				<span>November 3-4, 2014</span>
+	  				<span>September 23, 2015</span>
+	  			</td>
+	  		</tr>  		
+	  		<% end %>
+	  		<!-- 16 San Jose, CA       Sep 30 -->
+	  		<% if @reg_event.city_workshop_16 %>
+	  		<tr>
+	  			<td>
+	    			<span class="workshop-1">Workshop:</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-2"><%= @reg_event.city_workshop_16_text %></span>
+	  			</td>
+	  			<td class="workshop-3">
+	  				<span>September 30, 2015</span>
+	  			</td>
+	  		</tr>  		
+	  		<% end %>
+	  		<!-- 17 Kansas City, MO    Oct 7 (IA, NE, KS)-->
+	  		<% if @reg_event.city_workshop_17 %>
+	  		<tr>
+	  			<td>
+	    			<span class="workshop-1">Workshop:</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-2"><%= @reg_event.city_workshop_17_text %></span>
+	  			</td>
+	  			<td class="workshop-3">
+	  				<span>October 7, 2015</span>
+	  			</td>
+	  		</tr>  		
+	  		<% end %>
+	  		<!-- 20 Baltimore, MD       Oct 26-27 -->
+	  		<% if @reg_event.city_workshop_20 %>
+	  		<tr>
+	  			<td>
+	    			<span class="workshop-1">Workshop:</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-2"><%= @reg_event.city_workshop_20_text %></span>
+	  			</td>
+	  			<td class="workshop-3">
+	  				<span>October 13, 2015</span>
+	  			</td>
+	  		</tr>  		
+	  		<% end %>
+	  		<!-- 18 Boston, MA         Oct 15 -->
+	  		<% if @reg_event.city_workshop_18 %>
+	  		<tr>
+	  			<td>
+	    			<span class="workshop-1">Workshop:</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-2"><%= @reg_event.city_workshop_18_text %></span>
+	  			</td>
+	  			<td class="workshop-3">
+	  				<span>October 15, 2015</span>
+	  			</td>
+	  		</tr>  		
+	  		<% end %>
+	  		<!-- 19 Albuquerque, NM -->
+	  		<% if @reg_event.city_workshop_19 %>
+	  		<tr>
+	  			<td>
+	    			<span class="workshop-1">Workshop:</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-2"><%= @reg_event.city_workshop_19_text %></span>
+	  			</td>
+	  			<td class="workshop-3">
+	  				<span>October 26-27, 2015</span>
+	  			</td>
+	  		</tr>  		
+	  		<% end %>
+	  		<!-- 21 Sacramento, CA-->
+	  		<% if @reg_event.city_workshop_21 %>
+	  		<tr>
+	  			<td>
+	    			<span class="workshop-1">Workshop:</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-2"><%= @reg_event.city_workshop_21_text %></span>
+	  			</td>
+	  			<td class="workshop-3">
+	  				<span>October 29, 2015</span>
+	  			</td>
+	  		</tr>  		
+	  		<% end %>
+	  		<!-- 22 San Diego -->
+	  		<% if @reg_event.city_workshop_22 %>
+	  		<tr>
+	  			<td>
+	    			<span class="workshop-1">Workshop:</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-2"><%= @reg_event.city_workshop_22_text %></span>
+	  			</td>
+	  			<td class="workshop-3">
+	  				<span>November 5, 2015</span>
 	  			</td>
 	  		</tr>  		
 	  		<% end %>

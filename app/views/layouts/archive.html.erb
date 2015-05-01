@@ -5,54 +5,57 @@
 								    	
   		<title><%= full_title(yield(:title)) %></title> 
 
-		<% if false %>
 		<link rel="image_src" href="<%= @info.linkimg_url %>">
-		<!-- <meta name="original-source" content="http://thelearningcounsel.com/archives/show?id=<#%= @info.article_id %#>"> -->
+		<!--<meta name="original-source" content="http://thelearningcounsel.com/archives/show?id=<#%= @info.article_id %#>">-->
 		<meta name="original-source" content="http://thelearningcounsel.com/archives/<%= @info.slug %>">
 		<meta property="og:title" content="<%= @info.linktitle %>">
 		<meta property="og:description" content="<%= @info.description %>" >
 		<meta property="og:type" content="article">
-		<!-- <meta property="og:url" content="http://thelearningcounsel.com/archives/show?id=<#%= @info.article_id %#>"> -->
+		<!--<meta property="og:url" content="http://thelearningcounsel.com/archives/show?id=<#%= @info.article_id %#>">-->
 		<meta property="og:url" content="http://thelearningcounsel.com/archives/<%= @info.slug %>">
 		<meta property="og:image" content="http://thelearningcounsel.com/repository/<%= @info.linkimg %>">
-		<% end %>
 
-
-    	 <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>    	
-    	
-		<!-- <link href="/assets/custom_nav.css" media="all" rel="stylesheet">
-		<link href="/assets/ink_screen_2.css" media="all" rel="stylesheet">    	
-		<link href="/assets/custom.css" media="all" rel="stylesheet">    	
-		<link href="/assets/custom_page_layout.css" media="all" rel="stylesheet"> -->    	
-
-    	
-
-
-
-  		
-		<!-- <link rel="icon" type="image/png" href="/assets/image_fav_2.png" /> -->		
-		
-		<link rel="icon" type="image/png" href="/assets/logo-lc-round-fav.png">
-  		
-				  		
-   		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>    		   		
-    	
+    	<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => false %>
+  		<%= javascript_include_tag "application", "data-turbolinks-track" => false %>
+		<%= favicon_link_tag source='fav-lc-2-w16-h14.png' %>
   		<%= include_gon %>
-    	
-    	
 	  	<%= csrf_meta_tags %>
 	  	<%= render 'layouts/shim' %>  
 
-		<!-- <link href="css/custom-theme/jquery-ui-1.10.3.custom.css" rel="stylesheet"> -->
 		
-		
-		<!-- <script src="../scripts/jquery-2.1.2.js"></script> -->
-		<!-- <script src="../scripts/jquery_002.js"></script> -->
-		
-		
-		<!-- <script src="js/jquery-1.9.1.js"></script> -->
-		<!-- <script src="js/jquery-ui-1.10.3.custom.js"></script> -->
-		
+		<!-- <style type="text/css">
+			@font-face {
+				font-family: KlavikaExtraLight;
+				src: url('/assets/KlavikaWebDisplayExtraLight.eot');
+				src: url('/assets/KlavikaWebDisplayExtraLight.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebDisplayExtraLight.woff') format('woff');
+			}
+			@font-face {
+				font-family: KlavikaLight;
+				src: url('/assets/KlavikaWebBasicLight.eot');
+				src: url('/assets/KlavikaWebBasicLight.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicLight.woff') format('woff');
+			}
+			@font-face {
+				font-family: KlavikaRegular;
+				src: url('/assets/KlavikaWebBasicRegular.eot');
+				src: url('/assets/KlavikaWebBasicRegular.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicRegular.woff') format('woff');
+			}		
+			@font-face {
+				font-family: KlavikaMedium;
+				src: url('/assets/KlavikaWebBasicMedium.eot');
+				src: url('/assets/KlavikaWebBasicMedium.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicMedium.woff') format('woff');
+			}
+			@font-face {
+				font-family: KlavikaBold;
+				src: url('/assets/KlavikaWebBasicBold.eot');
+				src: url('/assets/KlavikaWebBasicBold.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicBold.woff') format('woff');
+			}
+			@font-face {
+				font-family: KlavikaBlack;
+				src: url('/assets/KlavikaWebDisplayBlack.eot');
+				src: url('/assets/KlavikaWebDisplayBlack.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebDisplayBlack.woff') format('woff');
+			}
+			@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
+		</style> -->
 		
 		                		
     </head>
@@ -60,13 +63,20 @@
 	<body>
 		
 		<%= render 'layouts/nav_main' %>
-									
 		<%= yield %> 
-		
+
 		<%= debug(params) if Rails.env.development? %>
+		
+		<!-- <script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		  ga('create', 'UA-57340003-1', 'auto');
+		  ga('send', 'pageview');
+		</script> -->		
 		
 	</body>
 	
 </html>
-
 

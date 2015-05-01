@@ -88,7 +88,7 @@ body {
 	font-family: Tahoma, Georgia, "Times New Roman", Times, serif;
 	font-family: Century Gothic, sans-serif;
 	color: #000;
-	background: #eee url(/assets/comp025.jpg) repeat;
+	/*background: #eee url(/assets/comp025.jpg) repeat;*/
 	padding: 0;
 	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2)
 }

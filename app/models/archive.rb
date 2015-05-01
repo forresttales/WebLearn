@@ -18,12 +18,30 @@
 #  linkimg_url  :string(255)
 #  linktitle    :string(255)
 #  slug         :string(255)
+#  subtitle_1   :string(255)
+#  subtitle_2   :string(255)
+#  img_height   :integer          default(300)
 #
 
 class Archive < ActiveRecord::Base
   
-  attr_accessible :id, :article_id, :type, :name_url, :name_file, :name_author, :name_admin, :key_words, :date_article, :created_at, :updated_at, :description,
-                  :linkimg, :linkimg_url, :linktitle
+  attr_accessible :id, 
+                  :article_id, 
+                  :name_url, 
+                  :name_file, 
+                  :name_author, 
+                  :name_admin, 
+                  :key_words, 
+                  :date_article, 
+                  :article_type, 
+                  :description,
+                  :linkimg, 
+                  :img_height,
+                  :linkimg_url, 
+                  :linktitle,
+                  :subtitle_1,
+                  :subtitle_2,
+                  :slug                  
     
   extend FriendlyId
   friendly_id :name_file, use: [:slugged, :history]

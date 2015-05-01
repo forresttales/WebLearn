@@ -36,7 +36,8 @@
                 var item = {
                     'value': $option.attr('value'),
                     'label': $option.text(),
-                    'selected': $option.is(':selected')
+                    'selected': $option.is(':selected'),
+                    'select_id': $this.attr('id')
                 };
 
                 // read data attributes

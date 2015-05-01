@@ -7,7 +7,23 @@
  *
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
- *= require_self
- *= require_tree .
+ *= require 'custom'
+ *= require 'custom_form'
+ *= require 'custom_nav'
+ *= require 'custom_page_layout'
+ *= require 'custom_profile'
+ *= require 'event_news'
+ *= require 'eventpages'
+ *= require 'gathering'
+ *= require 'landing-style'
+ *= require 'papers'
+ *= require 'reg_contact'
+ *= require 'reg_events'
+ *= require 'schedule'
+ *= require 'slideshow'
+ *= require 'static_pages_index'
+ *= require 'survey'
+ *= require 'template_styles'
+ *= require 'back_to_top' 
  */
 

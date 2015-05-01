@@ -1,0 +1,757 @@
+<% provide(:title, 'Colorado Blended and Online Learning Materials') %>
+
+<style>
+	
+	.note {
+		clear: both;
+    margin-bottom: 100px;
+    position: relative;
+    top: 200px;
+	}
+	
+	#lc-landing {
+		
+	}	
+		
+	#lc-landing #page {
+	  width: 800px;
+	  /*margin-left: 235px;*/
+	 	  
+	  margin-left: auto;
+	  margin-right: auto;
+	  
+	  
+	  /*margin-right: auto;*/  
+	  
+	}
+	
+	#lc-landing #subscribe-box  {
+	float: right; 
+	margin-left: 20px;
+	}
+	
+	#lc-landing #subscribe-box .form {   
+		width: 255px;
+		height: 289px;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		border-radius: 4px; /* border radius */
+		-moz-background-clip: padding;
+		-webkit-background-clip: padding-box;
+		background-clip: padding-box; /* prevents bg color from leaking outside the border */
+		background-color: #eaeaea; /* layer fill content */
+		-moz-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+		-webkit-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+		box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+	}
+	
+	#lc-landing #subscribe-box .label { 
+		height: 35px;
+	    width: 240px;
+		background-color: #414141; /* layer fill content */
+		-moz-border-radius: 4px 4px 0 0;
+		-webkit-border-radius: 4px 4px 0 0;
+		border-radius: 4px 4px 0 0; /* border radius */
+		-moz-background-clip: padding;
+		-webkit-background-clip: padding-box;
+		background-clip: padding-box; /* prevents bg color from leaking outside the border */
+		-moz-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+		-webkit-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+		box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+		}
+	
+	#lc-landing #subscribe-box h3 {  
+		color: #ebeff1; /* text color */
+		/*KlavikaMedium*/
+		font-family: KlavikaMedium;
+		/*font-family: "Quattrocento Sans", sans-serif;*/
+		font-size: 15px;
+		margin:0;
+		padding-left: 15px;
+	    padding-top: 15px;
+		}
+	#lc-landing #subscribe-box img {
+	  float:left;
+	  position: relative;
+	  left: 116px;
+	}
+
+	#lc-landing .services-ov {
+	    background-clip: padding-box;
+		
+		
+	  width: 232px;
+		height: 22px;
+		border: 1px solid #999;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
+		-moz-background-clip: padding;
+		-webkit-background-clip: padding-box;
+		background-clip: padding-box;
+		background-color: #999;
+		margin-left: auto;
+	    margin-right: auto;
+	    margin-top: 30px;
+	}
+	
+	#lc-landing .services-ov a:link {
+ 	
+		color: #f2f2f2;
+		font-family: "Quattrocento Sans", sans-serif;
+		font-size: 13px;
+		text-decoration: none;
+		padding: 2px 2px 3px;	
+		position: abolute;
+		margin-left: 8px;
+	}
+	
+	
+	
+	
+	.services-ov a:hover {color: #f2f2f2; text-decoration: none; background-color: #6a6a6a;}
+	.services-ov a:active {color: #f2f2f2; text-decoration: none; background-color: #535353; /* layer fill content */
+		-moz-box-shadow: inset 1px 2px 0 rgba(3,4,4,.4); /* inner shadow */
+		-webkit-box-shadow: inset 1px 2px 0 rgba(3,4,4,.4); /* inner shadow */
+		box-shadow: inset 1px 2px 0 rgba(3,4,4,.4); /* inner shadow */}
+	.services-ov a:visited {color: #f2f2f2; text-decoration: none;}
+	
+	#lc-landing p {
+		color: #333;
+		/*font-family: "Quattrocento";*/
+		font-family: KlavikaLight;
+		font-size: 13px;
+		width: 800px;
+		line-height: 1.2em;	
+	  	font-size: 1.15em;
+		
+		}
+	
+	#lc-landing a {
+		color: #C4740C;
+		}
+	
+	#lc-landing .table p {
+		color: #333;
+		/*font-family: "Quattrocento";*/
+		font-family: KlavikaLight;
+		font-size: 13px;
+		/*width: 400px;*/
+		line-height: 1.2em;	
+	  	font-size: 1.15em;
+		}
+	
+	#lc-landing ul li {
+		color: #000;
+		
+		font-family: msyhb;
+		
+		/*font-family: KlavikaMedium;*/		
+		/*font-family: "Quattrocento";*/	
+		font-size: 20px;
+		margin-left: 30px;
+		font-weight: 200;
+		line-height: 1.2em;		
+		}
+		
+	#lc-landing .page-title {
+	  font-size: 35px;
+	  color: #808080;
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 580px;
+	}
+	
+	#lc-landing .page-title-centered {
+	  font-size: 40px;
+	  color: #808080;
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 580px;
+	}
+	
+	#lc-landing .center {
+		text-align: center;
+		margin-right: 17%;
+	}
+	
+	#lc-landing .sub-title {
+	  font-size: 30px;
+	  color: #34633A;
+	  margin-left: auto;
+	  margin-right: auto;
+	  /*width: 500px;*/  
+	  width: 470px;
+	  
+	}
+	
+	#lc-landing .green-this {
+	    color: #41b737;
+		font-style: bold;
+		}
+		
+	#lc-landing .bold-close {	
+		color: #34633a;
+		size: 22px;
+		font-weight: bold;
+		}
+	
+	
+	#lc-landing #bottom-graphic img {
+	  bottom: 220px;
+	  position: relative;
+	  float:left;
+	}
+	
+	/*#lc-landing .box-row {*/	
+	.lc-landing-box-row {
+	  background: url(../repository/lc-boxes.png) white repeat-x;
+	  height: 59px;
+	  margin-left: 440px;
+	  margin-top: 30px;
+	}
+	
+	.spacer {
+		height: 20px;
+	}
+			
+	#lc-landing table tr td {
+		vertical-align: top;
+	}			
+	
+	.city-color {
+		color: #1B237A;	
+	}
+
+	#produced-by {width: 220px; margin-top: 30px; padding-right: 10px; border-right: 1px solid gray;}
+	#produced-by h2 {font-size: 24px;}
+	#produced-by img {width: 220px;}
+	#produced-by p {text-align: justify; font-size: 14px;}
+	
+</style>	
+	
+
+<%= render 'share/backtotop_2' %>
+
+<ul class="lc-inline" style="width: 1200px; margin: 0 auto; padding-right: 20px; vertical-align: top;">
+<li style="margin: 0 auto; padding-right: 20px; vertical-align: top; display: inline-block;">
+	<%= render 'share/eventpages_tabs' %>
+
+</li>
+<li style="margin: 0 auto; padding-right: 20px; vertical-align: top; display: inline-block;">
+
+
+
+<div id="tab-container">
+
+
+<style>
+h1, h2, h3, h4, p, li, a {font-family: Arial;}
+	#page {width: 900px;}
+  .head .banner {margin: 0; width: 900px;}
+  .flip-img-row {width: 900px; position: relative;}
+  .flip-img-row img {width:260px; margin:5px 18px;}
+  #blue-goal {border-left: 2px solid #227c82; padding-left: 20px;
+  		width: 400px; float: right; margin: 75px 0 0 20px;}
+  #blue-goal p {color:gray; text-align: right; font-size: 23px;} #blue-goal h2 {color: #227c82; text-align: right; font-size: 28px;}
+  .blue-quote {color: #227c82; font-size: 24px; text-align: center; margin-top: 40px; text-decoration: underline;}
+  .blue-it {color: #227c82;} .green-it {color: #41b737;}
+  p {color: #000;}
+  .register-link {color: #227c82; font-size: 24px; text-decoration: underline;}
+  .mini-arrows {width:70px; float:left;}
+
+  .track-table {border:2.5px solid #41b737;}
+  .track-table h3 {color: #000; text-align: center; font-size: 15px;} 
+  .track-table td {color: #000; padding: 7px; width: 250px; vertical-align: top;}
+  .track1 {background: #c9c9c9;} .track2 {background: #78afb3;}
+  .track3 {background: #fcbd60;} .track4 {background: #8bd385;}
+  .track-table ul {color: #000; margin-left:15px;}
+  	#susan-row img { height: 220px; margin-top: 50px;}
+	#susan-row {text-align: justify; margin-top: 50px; vertical-align: top;}
+	#susan-row td {text-align: justify; vertical-align: top;}
+	#top-links {width: 615px; margin:0 auto; font-weight: bold;}
+	.agenda-link {color: #fff; background: #41b737; padding: 5px 60px; border-radius: 15px;}
+	.reg-link {color: #fff; background: #227c82; padding: 5px 60px; border-radius: 15px;
+		margin:0 30px 0 30px;}
+	.speaker-link {color: #fff; background: #fbb040; padding: 5px 60px; border-radius: 15px;}
+</style>
+
+
+<div id="page">
+    <div class="head">
+		<div id="blue-goal">
+			<h2>Event Goal</h2>
+			<p>Experience <span class="blue-it">flipped sessions</span>; discuss <span class="green-it">new leadership issues</span>; create <span class="blue-it">curriculum and IT
+			synergies</span>; get PD for <span class="green-it">blended</span> and <span class="blue-it">online learning</span>; inspect <span class="green-it">up-and-coming</span> industry dynamics like <span class="blue-it">gamification.</span></p>
+		</div>
+
+		<img src="/repository/schedule/colorado/co-final-logo-lg.jpg" style="width: 300px;">
+ 
+    </div>
+
+    	
+	<div class="spacer"></div>
+	   
+	   <h2 style="color: gray; font-size: 52px; margin: 20px 0;">
+	   Agenda Details and Materials List
+		</h2>
+	
+		<p style="margin-top: 30px">
+			CBOL was born out of a partnership with the Colorado eLearning Collaborative and the Aurora Public Schools. The “Flippeds” are events custom designed to give all attendees an experience similar to that of the flipped-classroom ideal. Each Flipped Conference has a Goal and each track has a Learning Objective. The “Prework” listed below will provide a sneak preview of the topic the speaker will be presenting. Familiarity with the topics will provide way more time for open discussion and projects at the event.</p>
+
+</div>
+<!-- </div> -->
+</div>
+</li>
+
+
+      	<style>
+  #breakout-table {width: 1110px; margin: 0 auto 30px;}
+  .breakout-table {width: 1110px;}
+  .time-left-box {width: 145px; float: left; border-left: 1px solid gray; border-right: 1px solid gray; color: #000; text-align: center; font-weight: bold;}
+  #breakout-table table {table-layout: fixed;}
+  #breakout-table td {color: #000; padding:4px; text-align: left; width:25%; vertical-align: top; position: relative;}
+  .td1 {background: #e6e6e6;} .td1 .prestudy-link {background: #808080;}
+  .td2 {background: #78afb3;} .td2 .prestudy-link {background: #227c82;}
+  .td3 {background: #fcbd60;} .td3 .prestudy-link {background: #f26729;}
+  .td4 {background: #8bd387;} .td4 .prestudy-link {background: #41b73a;}
+  .td-title {text-align: center; height: 50px; border: 1px solid black; color: #fff; margin-bottom: 10px; padding:2px 5px; font-size: 17px;}
+  .td1 .td-title {background: #808080;}.td2 .td-title {background: #227c82;}
+  .td3 .td-title {background: #f26729;}.td4 .td-title {background: #41b73a;}
+  .pre-links strong {font-size: 15px;}
+  a.prestudy-link {color: #fff;
+  	padding:2px 5px; border:1px solid black; float:left; margin:0px 3px 2px; text-align: center;} 
+  a.prestudy-link:visited {color: #fff;}
+</style>
+      		<div id="breakout-table">
+      		<h2 style="color: #227c82; margin:10px 0; font-size: 23px; text-align: center;">Venue: Aurora Public Schools<br/>
+			Educational Services Center 1<br/>
+			15701 E. 1st Ave.<br/>
+			Aurora, CO 80011</h2> 
+      		<p style="font-size: 22px; margin: 40px 0 20px 0;">
+      			Agenda:</p>
+
+   			<img class="breakout-table" alt="breakout-table" src="../repository/schedule/colorado/materials-agenda-1.jpg">
+   			<div class="time-left-box" style="height:530px;">9:10 - 9:50</div>
+   			<table style="border-right: 2px solid gray;"><tr>
+   				<td class="td1">
+   					<div class="td-title">Title: Strategy versus Tactics</div>
+   					<strong>Session Presenter:</strong><br/>
+					Dr. David Kafitz is the VP School Relationships & Consulting for Learning Counsel and Former Superintendent, Director of Technology, Principal and Teacher in North Carolina Public Schools.
+   					<br/><br/>
+   					<strong>Session Description:</strong><br/>
+   					To cause change in education environments, knowing how to develop strategy and then deploy tactics is a necessity. Understanding which is which will affect planning for execution towards change and accomplishing goals. Know the difference in order to be an effective change agent.<br/><br/>
+   					<div class="pre-links" style="margin-top:78px;">
+   					<strong>Pre-study Elements for this Session</strong><br/><br/>	
+   					<a style="text-decoration: underline; border-color: #fff;" href="/CBOL-LCstudy" class="prestudy-link">Click here for the list of links for pre-study</a>
+   					</div>
+   				</td>
+
+   				<td class="td2">
+   					<div class="td-title">Title: Student Outcomes</div>
+   					<strong>Session Presenter:</strong><br/>
+					John Watson is the Chief Executive Officer for the Evergreen Education Group. Susan Patrick is the President and Chief Executive Officer of the International Association for K-12 Online Learning (iNACOL).
+   					<br/><br/>
+   					<strong>Session Description:</strong><br/>
+   					The field of online and blended programs lacks good data regarding student outcomes. This session will explore the data that is being generated. Please join us if you have outcomes data to share, or can discuss your challenges in generating and reporting on such data.
+   					<br/><br/>   					
+   					<div class="pre-links" style="margin-top:62px;">
+   					<strong>Pre-study Elements for this Session</strong><br/><br/>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track2/s1-1.pdf" class="prestudy-link">Issue<br/> 1</a>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track2/s1-2.pdf" class="prestudy-link">Issue<br/> 2</a>
+   					</div>
+   				</td>
+
+   				<td class="td3">
+   					<div class="td-title">Title: PD is Over! − The Case for Personalized Professional Learning</div>
+   					<strong>Session Presenter:</strong><br/>
+					Ben Wilkoff is the Director of Personalized Professional Learning in Denver Public Schools. He is passionate about personalized learning, using technology with purpose, and creating at least one new thing every day.
+   					<br/><br/>
+   					<strong>Session Description:</strong><br/>
+   					This session focuses on how Personalized Professional Learning is changing the ways in which educators grow by aligning support to the Strengths, Needs, Interests, and Constraints of each adult learner. We will dig in to creating learning plans filled with Choice, Transparency and Reflection. We will also look at examples of classroom video, online communities of practice and digital micro-credentials.
+   					<br/><br/>
+   					<div class="pre-links">
+   					<strong>Pre-study Elements for this Session</strong><br/><br/>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track3/s1-1.pdf" class="prestudy-link">Issue<br/> 1</a>
+   					</div>
+   				</td>
+
+   				<td class="td4">
+   					<div class="td-title">Title: Online School Accreditation Plan and Annual Performance Report</div>
+   					<strong>Session Presenter:</strong><br/>
+					Kim McClelland is the Executive Director of Colorado Digital BOCES.
+   					<br/><br/>
+   					<strong>Session Description:</strong><br/>
+   					The Colorado Digital BOCES holds its schools to a high standard of accountability and quality. CD BOCES has created its own accreditation plan that exceeds that of what is expected in the state for multi-district online schools. The CD BOCES’ Annual Performance Report is provided yearly to the CD BOCES Board. Our presentation will offer an explanation of the process that our online schools go through and how this helps them toward continuous improvement
+   					<br/><br/>   					
+   					<div class="pre-links" style="margin-top:48px;">
+   					<strong>Pre-study Elements for this Session</strong><br/><br/>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track4/s1-1.pdf" class="prestudy-link">Issue<br/> 1</a>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track4/s1-2.pdf" class="prestudy-link">Issue<br/> 2</a>
+   					</div>
+   				</td>	
+   			</tr></table>
+
+
+
+   			<img style="clear: both;" class="breakout-table" alt="breakout-table" src="../repository/schedule/colorado/materials-agenda-2.jpg">
+   			<div class="time-left-box" style="height:483px;">10:15 - 10:55</div>
+   			<table style="border-right: 2px solid gray;"><tr>
+   				<td class="td1">
+   					<div class="td-title">Title: Brick-by-Br ick: Key Insights from Year 1 of Greeley-Evans District BL Transformation</div>
+   					<strong>Session Presenters:</strong><br/>
+					Deagan Andrews is Director of eLearning Services and supports Blended Learning in all schools across Greeley and Evans.<br/> Jonathan Cooney is Principal of The Bella Romero Academy 4-8 Campus in Greeley.
+   					<br/><br/>
+   					<strong>Session Description:</strong><br/>
+   					1) Scalable strategies to employ at the district, school and classroom level; 2) Truths about the sacred cows that must be tipped to make headway; 3) Small but deep pitfalls to avoid; and 4) How partnerships can transform.
+   					<br/><br/>
+   					<div class="pre-links" style="margin-top:48px;">
+   					<strong>Pre-study Elements for this Session</strong><br/><br/>	
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track1/s2-1.pdf" class="prestudy-link">Issue<br/> 1</a>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track1/s2-2.pdf" class="prestudy-link">Issue<br/> 2</a>
+   					</div>
+   				</td>
+
+   				<td class="td2">
+   					<div class="td-title">Title: Take Charge of Your Resources</div>
+   					<strong>Session Presenter:</strong><br/>
+					Leilani Cauthen is the CEO of Learning Counsel, proiding Research &amp; Context on the Shift to Digital Curriculum.
+   					<br/><br/>
+   					<strong>Session Description:</strong><br/>
+   					Procurement of curriculum and content can lead to large inventories of resources that over time become expansive. Do you know what you have, especially if digital resources are being acquired? Taking inventory system wide all the way down to the classroom can be informative and help drive the process of bringing
+   					<br/><br/>   					
+   					<div class="pre-links" style="margin-top:48px;">
+   					<strong>Pre-study Elements for this Session</strong><br/><br/>
+   					<a style="text-decoration: underline; border-color: #fff;" href="/CBOL-LCstudy#lani-study-links" class="prestudy-link">Click here for the list of links for pre-study</a>
+   					</div>
+   				</td>
+
+   				<td class="td3">
+   					<div class="td-title">Title: What Comes After Professional Development: Online Communities of Practice</div>
+   					<strong>Session Presenter:</strong><br/>
+					Jessica Raleigh is a Personalized Professional Learning Program Manager in Denver Public Schools, passionate about ensuring every learner has access to tools and opportunities to take ownership of and be excited about their learning.
+   					<br/><br/>
+   					<strong>Session Description:</strong><br/>
+   					Does learning end at the end of your PD? It shouldn’t! We will learn how to create, cultivate, and engage teachers and leaders in Online Communities of Practice by engaging in one ourselves. We will use tools like Google+, Twitter, and Voxer to ensure we are active learners and connect with educators from around the world.
+   					<br/><br/>
+   					<div class="pre-links">
+   					<strong>Pre-study Elements for this Session</strong><br/><br/>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track3/s2-1.pdf" class="prestudy-link">Issue<br/> 1</a>
+   					</div>
+   				</td>
+
+   				<td class="td4">
+   					<div class="td-title">Title: Engaging Middle School Students</div>
+   					<strong>Session Presenters:</strong><br/>
+					Adrianne Ryland and Josh Wixom teach Middle School with Falco Virtual Academy in Colorado Springs. They embrace meaningful relationships and lessons with their students while having a blast!
+   					<br/><br/>
+   					<strong>Session Description:</strong><br/>
+   					This session will discuss how over 90% of our students voluntarily come to class at Falcon Virtual Academy. We will cover relational capacity, project-based learning, and making learning fun for middle school students. We are passionate about creating excited students in our classrooms.
+   					<br/><br/>   					
+   					<div class="pre-links" style="margin-top:31px;">
+   					<strong>Pre-study Elements for this Session</strong><br/><br/>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track4/s2-1.pdf" class="prestudy-link">Issue<br/> 1</a>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track4/s2-2.pdf" class="prestudy-link">Issue<br/> 2</a>
+   				</td>	
+   			</tr></table>
+
+
+
+
+   			<img style="clear: both;" class="breakout-table" alt="breakout-table" src="../repository/schedule/colorado/materials-agenda-show.jpg">
+   			<div class="time-left-box" style="height:515px;">11:10 - 11:40</div>
+   			<table style="border-right: 2px solid gray;"><tr>
+   				<td class="td1">
+   					<div class="td-title">Title: Online to Hybrid−Evolution &amp; Success Stories</div>
+   					<strong>Session Presenter:</strong><br/>
+					Heather Hiebsch is the Principal at Poudre School District Global Academy.
+   					<br/><br/>
+   					<strong>Session Description:</strong><br/>
+   					Over 6 years, the PSD Global Academy evolved from a fully online school to a hybrid and blended model. Driven by student data and stakeholder input, PGA is now one of the top 5% schools in the state of CO for student growth (TCAP) and received some of the highest achievement scores in the state (CMAS). Learn about this successful transition in education.
+   					<br/><br/>
+   					<div class="pre-links" style="margin-top:80px;">
+   					<strong>Pre-study Elements for this Session</strong><br/><br/>	
+   					<a class="prestudy-link">No additional materials available at this time.</a>
+   					</div>
+   				</td>
+
+   				<td class="td2">
+   					<div class="td-title">Title: Sustainability… for Real</div>
+   					<strong>Session Presenter:</strong><br/>
+					Noah Geisel was recognized as the 2013 ACTFL National Language Teacher of the Year. He is a Language and EdTech consultant and speaker passionate about helping teachers make awesome happen.
+   					<br/><br/>
+   					<strong>Session Description:</strong><br/>
+   					In this session, we will introduce solutions for leaders to reduce email reliance by employing other digital tools to better meet their needs and then provide "work time" for them to implement the solutions they believe will work for them.  We will focus on two areas: social content curation and project management software.
+   					<br/><br/>   					
+   					<div class="pre-links" style="margin-top: 32px;">
+   					<strong>Pre-study Elements for this Session</strong><br/><br/>
+   					<a class="prestudy-link">No additional materials available at this time.</a>
+   					<!--<a target="_blank" href="/pdfs/CBOL-tracks/track2/s3-1.pdf" class="prestudy-link">Issue<br/> 1</a>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track2/s3-2.pdf" class="prestudy-link">Issue<br/> 2</a>-->
+   					</div>
+   				</td>
+
+   				<td class="td3">
+   					<div class="td-title">Title: Panel Discussion − Blended Learning in Practice</div>
+   					<strong>Session Presenter:</strong><br/>
+					Lynée Zajac-Beck teaches science at Jeffco Virtual Academy and is an instructional design consultant. She has been teaching since 1997, her experience ranging from elementary to college level courses.
+   					<br/><br/>
+   					<strong>Session Description:</strong><br/>
+   					Panelists will include a group of 3-5 teachers that have experience using blended learning in their classrooms. Each teacher’s method will be identified on a “blended learning continuum” for comparison - the end goal is to demonstrate that a variety of methods and techniques will qualify as “blended learning”.
+   					<br/><br/>
+   					<div class="pre-links" style="margin-top:32px;">
+   					<strong>Pre-study Elements for this Session</strong><br/><br/>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track3/s3-1.pdf" class="prestudy-link">Issue<br/> 1</a>
+					<a target="_blank" href="https://todaysmeet.com/CBOLBlendedLearningPanel " class="prestudy-link">TodaysMeet<br/>Link</a>
+   					</div>
+   				</td>
+
+   				<td class="td4">
+   					<div class="td-title">Title: Responsible Innovation</div>
+   					<strong>Session Presenters:</strong><br/>
+					Gretchen Morgan is the author of Innovative Educators: An Action Plan for Teachers, in which she shows teachers how to adapt existing practices and how to invent new ones that foster a proactive mindset. She is currently the Executive Director of Choice and Innovation at the Colorado Department of Education (CDE).
+   					<br/><br/>
+   					<strong>Session Description:</strong><br/>
+   					In this session, school leaders will be introduced to a method of short cycle inquiry and innovation, and given the chance to practice designing innovation processes they may want to try in their schools.
+   					<br/><br/>   					
+   					<div class="pre-links" style="margin-top:31px;">
+   					<strong>Pre-study Elements for this Session</strong><br/><br/>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track4/s3-1.pdf" class="prestudy-link">Issue<br/> 1</a>
+   				</td>	
+   			</tr></table>
+
+
+
+   			<img style="clear: both;" class="breakout-table" alt="breakout-table" src="../repository/schedule/colorado/materials-agenda-lunch.jpg">
+			<div class="time-left-box" style="height:581px;">12:40 - 1:20</div>
+   			<table style="border-right: 2px solid gray;"><tr>
+   				<td class="td1">
+   					<div class="td-title">Title: Innovation to Scale: The Role of the State Agency Seeking to Level the Digital Playing Field</div>
+   					<strong>Session Presenter:</strong><br/>
+					Takecia Saylor is the Director of School Innovation, New Jersey Department of Education.
+   					<br/><br/>
+   					<strong>Session Description:</strong><br/>
+   					This session will discuss the New Jersey Department of Education’s innovateNJ Initiative. Designed to identify and strategically scale innovative next generation instructional and programmatic practices statewide, innovateNJ has empowered school district partnerships that are created to increase access and equity for all students, regardless of their zip code.
+   					<br/><br/>
+   					<div class="pre-links" style="margin-top:128px;">
+   					<strong>Pre-study Elements for this Session</strong><br/><br/>	
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track1/s4-1.pdf" class="prestudy-link">Issue<br/> 1</a>
+   					</div>
+   				</td>
+
+   				<td class="td2">
+   					<div class="td-title">Title: Designing &amp; Implementing Sustainable Blended/Online Programs</div>
+   					<strong>Session Presenter:</strong><br/>
+					Dr. Christopher Harrington currently serves as President of eLearn Institute, Inc. He has experience assisting dozens of schools in the design / implementation of blended learning programs, including the nationally-recognized Quakertown Schools.
+   					<br/><br/>
+   					<strong>Session Description:</strong><br/>
+   					The session will focus on program design, short-term and long-term planning, development and support for teachers and administrators, and technology infrastructure needs. Specific topics include: 1. Strategic planning/program design 2. Professional development 3. LMS/Content selection 4. Quality assurance (course development and teaching) 5. Technology infrastructure 6. Program evaluation.
+   					<br/><br/>   					
+   					<div class="pre-links">
+   					<strong>Pre-study Elements for this Session</strong><br/><br/>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track2/s4-1.pdf" class="prestudy-link">Issue<br/> 1</a>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track2/s4-2.pdf" class="prestudy-link">Issue<br/> 2</a>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track2/s4-3.pdf" class="prestudy-link">Issue<br/> 3</a>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track2/s4-4.pdf" class="prestudy-link">Issue<br/> 4</a>
+   					</div>
+   				</td>
+
+   				<td class="td3">
+   					<div class="td-title">Title: Digital Tools for Student Collaboration &amp; Presentation</div>
+   					<strong>Session Presenter:</strong><br/>
+					Tammy Hermance is a Teacher at Greeley Evans School District 6.
+   					<br/><br/>
+   					<strong>Session Description:</strong><br/>
+   					Elementary math students can learn a lot from each other as they collaborate and justify their solutions. In this session we will look at some of the digital tools students can use for collaboration as they work on Messy Math Problems as well as the digital tools they can use to present their solutions to their classmates.
+   					<br/><br/>
+   					<div class="pre-links" style="margin-top:178px;">
+   					<strong>Pre-study Elements for this Session</strong><br/><br/>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track3/s4-1.pdf" class="prestudy-link">Issue<br/> 1</a>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track3/s4-2.pdf" class="prestudy-link">Issue<br/> 2</a>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track3/s4-vid.wmv" class="prestudy-link">Issue<br/> 3</a>
+   					</div>
+   				</td>
+
+   				<td class="td4">
+   					<div class="td-title">Title: Student Panel of Blended Learners</div>
+   					<strong>Session Presenters:</strong><br/>
+					Student Panel of Blended Learners
+   					<br/><br/>
+   					<strong>Session Description:</strong><br/>
+   					Students will describe the models of blended learning they are participating in and will share their experiences as blended learners. They will explain their reasons for choosing blended learning. Successes and challenges will be shared. Models of blended learning that will be represented include self-blend, flex, and rotation models.
+   					<br/><br/>   					
+   					<div class="pre-links" style="margin-top:178px;">
+   					<strong>Pre-study Elements for this Session</strong><br/><br/>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track4/s4-1.pdf" class="prestudy-link">Issue<br/> 1</a>
+   				</td>	
+   			</tr></table>
+
+
+   			<img style="clear: both;" class="breakout-table" alt="breakout-table" src="../repository/schedule/colorado/materials-agenda-show2.jpg">
+   			<div class="time-left-box" style="height:547px;">1:35 - 2:15</div>
+   			<table style="border-right: 2px solid gray;"><tr>
+   				<td class="td1">
+   					<div class="td-title">Title: Student Measures in Online and Blended Settings</div>
+   					<strong>Session Presenters:</strong><br/>
+					Sed Keller is an Educator Effectiveness Assessment Specialist for the Colorado Department of Education.<br/>
+					Renee Martinez is the Lead Administrator for Blended and Online Learning at the Colorado Department of Education.
+   					<br/><br/>
+   					<strong>Session Description:</strong><br/>
+   					Participants will have the opportunity to practice creating measures of student learning that are applicable to their environment as well as ask questions and provide feedback to CDE staff regarding the 50% portion of SB-10-191.  CDE is extremely interested in learning about innovative ideas you have in this arena.
+   					<br/><br/>
+   					<div class="pre-links" style="margin-top:32px;">
+   					<strong>Pre-study Elements for this Session</strong><br/><br/>	
+   					<a class="prestudy-link">No additional materials available at this time.</a>
+   					</div>
+   				</td>
+
+   				<td class="td2">
+   					<div class="td-title">Title: FVA−to Infinity &amp; Beyond Boring</div>
+   					<strong>Session Presenter:</strong><br/>
+					Dave Knoche is the Principal at Falcon Virtual Academy in Colorado Springs, CO. His leadership has transformed FVA into a blended academy focused on rigor, post-secondary readiness and fun.
+   					<br/><br/>
+   					<strong>Session Description:</strong><br/>
+   					Breaking through the online/blended secondary achievement ceiling requires authentic leadership, nurturing creative teachers and keeping it weird! Is FVA sustainable light-years beyond the current buzz of blended learning’s potential?
+   					<br/><br/>   					
+   					<div class="pre-links" style="margin-top:96px;">
+   					<strong>Pre-study Elements for this Session</strong><br/><br/>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track2/s5-1.pdf" class="prestudy-link">Issue<br/> 1</a>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track2/s5-2.pdf" class="prestudy-link">Issue<br/> 2</a>
+   					</div>
+   				</td>
+
+   				<td class="td3">
+   					<div class="td-title" style="font-size: 14px;">Title: Aha! Network Offers Innovative Virtual &amp; Blended Professional Learning Opportunities</div>
+   					<strong>Session Presenter:</strong><br/>
+					Brian Green is an Online Professional Learning Specialist in Falcon School District 49. In his 28th year as an educator, Brian is working to modernize PD by providing full virtual &amp; hybridized learning opportunities for educators.
+   					<br/><br/>
+   					<strong>Session Description:</strong><br/>
+   					District 49 is engaging teachers and leaders in innovative &amp; creative ways to improve instruction. Aha! Network is District 49 PD hub created to facilitate the Model Classroom Project, Online &amp; Blended PD Courses, Coursera, Schoology, Collaboration and other PD opportunities. We will share how we use these projects and resources to leverage time, talent, teaching and resources in this region.
+   					<br/><br/>
+   					<div class="pre-links">
+   					<strong>Pre-study Elements for this Session</strong><br/><br/>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track3/s5-1.pdf" class="prestudy-link">Issue<br/> 1</a>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track3/s5-2.pdf" class="prestudy-link">Issue<br/> 2</a>
+   					</div>
+   				</td>
+
+   				<td class="td4">
+   					<div class="td-title">Title: The In-Class Flip</div>
+   					<strong>Session Presenter:</strong><br/>
+					Kevin Croghan is the Site Director of Blended Learning &amp; Learning Environments at Grant Beacon Middle School in the Denver Public School District.
+   					<br/><br/>
+   					<strong>Session Description:</strong><br/>
+   					Flipping your class is a great way to provide asynchronous access to the great content you have developed and curated. The In-Class Flip is a modified version of this technique that's great for helping folks get started in Blended Learning but it also has huge potential for teachers that have concerns around access, support and equity of their students. This session will be so hot, it may actually melt your face off.
+   					<br/><br/>   					
+   					<div class="pre-links" style="margin-top:32px;">
+   					<strong>Pre-study Elements for this Session</strong><br/><br/>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track4/s5-1.pdf" class="prestudy-link">Issue<br/> 1</a>
+   				</td>	
+   			</tr></table>
+
+
+
+   			<img style="clear: both;" class="breakout-table" alt="breakout-table" src="../repository/schedule/colorado/materials-agenda-show3.jpg">
+   			<div class="time-left-box" style="height:530px;">2:30 - 3:30</div>
+   			<table style="border-right: 2px solid gray;"><tr>
+   				<td class="td1">
+   					<div class="td-title">Title: Panel Discussion</div>					
+   					<strong>Panel:</strong><br/>
+					Deagan Andrews, Director eLearning, Weld County School District 6<br/><br/>
+Tod Lockey, Director of Online Learning, Southwest eSchool/San Juan BOCES<br/><br/>
+Heather Hiebsch, Principal, Poudre Global Academy<br/><br/>
+Dave Knoche, Principal, Falcon Virtual Academy<br/><br/>
+Wendy Doran, Principal, APS Online  
+
+   					<br/><br/>
+   					<strong>Session Description:</strong><br/>
+   					Group Panel Discussion on Leadership and the Transition to Digital Curriculum and Blended/Online Learning
+   					<br/><br/>
+   					<div class="pre-links">
+   					<strong>Pre-study Elements for this Session</strong><br/><br/>	
+   					<a class="prestudy-link">No additional materials available at this time.</a>
+   					</div>
+   				</td>
+
+   				<td class="td2">
+   					<div class="td-title">Title: Promising Practices in Online Course Development</div>
+   					<strong>Session Presenter:</strong><br/>
+					Susan Elliott and Brittany Scritchfield are Instructors with the Aurora Public School District's Online School.
+   					<br/><br/>
+   					<strong>Session Description:</strong><br/>
+   					Participants will learn about promising practices in online course design. Participants will understand how to design an effective course to create an online environment that is better suited to help students’ access content and learning. Participants will also learn about key features to help promote student completion and engagement.
+   					<br/><br/>   					
+   					<div class="pre-links" style="margin-top:79px;">
+   					<strong>Pre-study Elements for this Session</strong><br/><br/>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track2/s6-1.pdf" class="prestudy-link">Issue<br/> 1</a>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track2/s6-2.pdf" class="prestudy-link">Issue<br/> 2</a>
+   					</div>
+   				</td>
+
+   				<td class="td3">
+   					<div class="td-title">Title: Personalized Learning</div>
+   					<strong>Session Presenter:</strong><br/>
+					Erin Gilmore, Jessy Lloyd, and Jennifer Beckers are teachers at the Poudre School District Global Academy.
+   					<br/><br/>
+   					<strong>Session Description:</strong><br/>
+   					Using various blended learning components including a station rotation model, digital content, and student selfmonitoring to personalize learning for each child. Specifically geared toward grades K-5 but all are welcome!
+   					<br/><br/>
+   					<div class="pre-links" style="margin-top:144px;">
+   					<strong>Pre-study Elements for this Session</strong><br/><br/>
+   					<a class="prestudy-link">No additional materials available at this time.</a>
+   					</div>
+   				</td>
+
+   				<td class="td4">
+   					<div class="td-title" style="font-size: 14px;">Title: Wind Chimes &amp; Steel Footings: National Insights for Compelling Blended Learning Architectural Plans</div>
+   					<strong>Session Presenter:</strong><br/>
+					John Branam is a Partner with The Learning Accelerator. In prior roles John served as the Deputy Director of Grantmakers for Education, a district administrator and a teacher.
+   					<br/><br/>
+   					<strong>Session Description:</strong><br/>
+   					This session will provide insights from regarding next-generation blended learning implementation efforts. 1) quick-hit, top-line BL trends from across the country; 2) essential elements of the next gen. BL teacher competencies; 3) the importance of rethinking how we measure impact as we transition our learning and teaching model; and 4) why competency-based progression an essential element of all high-quality BL efforts.
+   					<br/><br/>   					
+   					<div class="pre-links">
+   					<strong>Pre-Study Elements for this Session</strong><br/><br/>
+   					<a target="_blank" href="/pdfs/CBOL-tracks/track4/s6-1.pdf" class="prestudy-link">Issue<br/> 1</a>
+   				</td>	
+   			</tr></table>
+
+   			<img class="breakout-table" alt="breakout-table" src="../repository/schedule/colorado/materials-agenda-final.jpg">
+
+   			<div style="text-align: center; color:#227c82; font-size: 22px; clear: both; margin-top: 35px;">
+			4:00pm - 6:00 pm Off Campus Reception & Networking at:<br/> 
+			BJ's Restaurant & Brewhouse<br/> 
+			14442 E. Cedar Avenue<br/> 
+			Aurora, CO 80012<br/>
+			</div>
+
+   		</div> <!-- End Breakout table -->
+
+</ul>
+
+<div style="height: 200px;"></div>
+	
+<div id="bottom-graphic">
+<img src="../repository/lc-box-cloud.png"/>
+<div class="lc-landing-box-row"></div>
+</div>
+
+<div style="clear: both;"></div>
+
+
+
+<script>
+		
+		//var offset_top = 0;
+		//jQuery(window).scroll(function() {
+			//offset_top = $(window).scrollTop()
+			//$('#eventstabs').css('top', offset_top);
+		//});
+	
+		$(window).load( function() {
+		//$(document).ready(function(){
+			$("#tab7").addClass("active");
+		});
+	
+</script>
+

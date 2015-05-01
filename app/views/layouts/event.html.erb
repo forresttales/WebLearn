@@ -5,9 +5,10 @@
 								    	
   		<title><%= full_title(yield(:title)) %></title> 
 
-    	  <!-- stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => false  -->
+    	<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   		
-		<link rel="icon" type="image/png" href="/assets/logo-lc-round-fav.png" />
+		<!-- <link rel="icon" type="image/png" href="/assets/logo-lc-round-fav.png" /> -->
+		<link rel="icon" type="image/png" href="/assets/fav-lc-2-w16-h14.png" />
 				  		
    		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>    		   		
     	
@@ -15,27 +16,6 @@
     	
 	  	<%= csrf_meta_tags %>
 	  	<%= render 'layouts/shim' %>  
-
-		
-		<!-- <link rel="stylesheet" href="../styles/styles_old/custom_form.css"> -->
-		<!-- <link rel="stylesheet" href="../styles/styles_old/custom_nav.css"> -->
-		<!-- <link rel="stylesheet" href="../styles/styles_old/custom_page_layout.css"> -->
-		<!-- <link rel="stylesheet" href="../styles/styles_old/custom_profile.css"> -->
-		<!-- <link rel="stylesheet" href="../styles/styles_old/custom.css"> -->
-		<!-- <link rel="stylesheet" href="../styles/styles_old/ink_screen_2.css"> -->
-		<!-- <link rel="stylesheet" href="../styles/styles_old/jquery-custom-tabs.css"> -->
-		<!-- <link rel="stylesheet" href="../styles/styles_old/jquery-ui.css"> -->
-		<!-- <link rel="stylesheet" href="../styles/styles_old/landing-style.css"> -->
-
-		<link rel="stylesheet" href="/assets/custom_form.css">
-		<link rel="stylesheet" href="/assets/custom_nav.css">
-		<link rel="stylesheet" href="/assets/custom_page_layout.css">
-		<link rel="stylesheet" href="/assets/custom_profile.css">
-		<link rel="stylesheet" href="/assets/custom.css">
-		<link rel="stylesheet" href="/assets/ink_screen_2.css">
-		<link rel="stylesheet" href="/assets/jquery-custom-tabs.css">
-		<link rel="stylesheet" href="/assets/jquery-ui.css">
-		<link rel="stylesheet" href="/assets/landing-style.css">
 
 		                		
     </head>

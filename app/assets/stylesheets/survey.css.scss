@@ -11,8 +11,8 @@ $grey: #808080;
 
 // End Variables
 
-.kontainer {width: 100%;}
-#mainkolumn.withsidebar {
+.kontainer2 {width: 100%;}
+#mainkolumn.withsidebar2 {
     width: 100%;
 }
 
@@ -20,21 +20,22 @@ $grey: #808080;
 
 	h1 {color: $dgreen;
     float: right;
-    font-family: Quattrocento Sans;
+    font-family: 'Quattrocento';
     font-size: 30px;
     margin-bottom: 100px;
     margin-right: 50px;
 }
   p.survey-title {color: $dgreen;
     float: right;
-    font-family: Quattrocento Sans;
+    font-family: 'Quattrocento';
     font-size: 30px;
     margin-bottom: 100px;
-    margin-right: 50px;
+	text-align: center;
+    /*margin-right: 50px;*/
 }
 
-	a {margin-right: 50px; float:right; color:$green; text-decoration: underline; font-size: 20px;
-		font-family: Quattrocento Sans;
+	a {margin-right: 50px; float:right; color:$green; text-decoration: underline; font-size: 23px; text-align: center;
+		font-family: 'Quattrocento';
 		&:hover {color:$midgreen; text-decoration: none;}
 		&:visited, &:active {color: $green; text-decoration: underline;}
 	}
@@ -53,7 +54,7 @@ $grey: #808080;
     border: 2px solid #000;
     clear: both;
     color: #fff;
-    font-family: Quattrocento Sans;
+    font-family: 'Quattrocento';
     font-size: 25px;
     font-weight: bold;
     height: 40px;
@@ -65,13 +66,13 @@ $grey: #808080;
 }
 
 .content { width: 960px; margin: 0 auto;
-	h1 {color: $midgreen; font-size: 25px; text-align: center; margin: 10px;}
+	h1 {color: $midgreen; font-size: 22px; text-align: center; margin: 10px;}
 	a{color:$green; text-decoration: underline; font-size: 20px;
-		font-family: Quattrocento Sans;
+		font-family: 'Quattrocento';
 		&:hover {color:$midgreen; text-decoration: none;}
 		&:visited, &:active {color: $green; text-decoration: underline;}
 	}
-	p {font-size:20px; font-family: Quattrocento Sans;}
+	p {font-size:20px; font-family: 'Quattrocento';}
 .left {width: 520px;}
 .right {width: 390px;
 	background: #e0eade;
@@ -102,12 +103,12 @@ $grey: #808080;
 .content { width: 960px; margin: 0 auto;
 	h1 {color: $midgreen; font-size: 25px; text-align: center; margin: 10px;}
 	a{color:$green; text-decoration: underline; font-size: 20px;
-		font-family: Quattrocento Sans;
+		font-family: 'Quattrocento';
 		&:hover {color:$midgreen; text-decoration: none;}
 		&:visited, &:active {color: $green; text-decoration: underline;}
 	}
 	
-.left2 {width: 670px; float: left; p {font-size:20px; font-family: Quattrocento Sans;}
+.left2 {width: 670px; float: left; p {font-size:20px; font-family: 'Quattrocento';}
 	h1 {color: $green;} h2 {font-size:20px; margin: 10px 0;}
 	.indent {width: 600px; margin-left: 50px;}
 }
@@ -115,7 +116,7 @@ $grey: #808080;
 .right2 {width: 190px; float: left; margin: 125px 0 0 50px;
 	h2.midgreen {font-size: 20px; margin: 10px 0;}
 	h2.green {font-size:20px; text-align: right;}
-	p {font-size:15px; font-family: Quattrocento Sans; margin: 5px;}
+	p {font-size:15px; font-family: 'Quattrocento'; margin: 5px;}
 	border: 1px solid $green;
 	text-align: left;
 	

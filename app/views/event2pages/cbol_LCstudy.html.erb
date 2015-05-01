@@ -1,0 +1,366 @@
+<% provide(:title, 'CBOL Learning Counsel Pre-Study') %>
+
+<style>
+	
+	.note {
+		clear: both;
+    margin-bottom: 100px;
+    position: relative;
+    top: 200px;
+	}
+	
+	#lc-landing {
+		
+	}	
+		
+	#lc-landing #page {
+	  width: 800px;
+	  /*margin-left: 235px;*/
+	 	  
+	  margin-left: auto;
+	  margin-right: auto;
+	  
+	  
+	  /*margin-right: auto;*/  
+	  
+	}
+	
+	#lc-landing #subscribe-box  {
+	float: right; 
+	margin-left: 20px;
+	}
+	
+	#lc-landing #subscribe-box .form {   
+		width: 255px;
+		height: 289px;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		border-radius: 4px; /* border radius */
+		-moz-background-clip: padding;
+		-webkit-background-clip: padding-box;
+		background-clip: padding-box; /* prevents bg color from leaking outside the border */
+		background-color: #eaeaea; /* layer fill content */
+		-moz-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+		-webkit-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+		box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+	}
+	
+	#lc-landing #subscribe-box .label { 
+		height: 35px;
+	    width: 240px;
+		background-color: #414141; /* layer fill content */
+		-moz-border-radius: 4px 4px 0 0;
+		-webkit-border-radius: 4px 4px 0 0;
+		border-radius: 4px 4px 0 0; /* border radius */
+		-moz-background-clip: padding;
+		-webkit-background-clip: padding-box;
+		background-clip: padding-box; /* prevents bg color from leaking outside the border */
+		-moz-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+		-webkit-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+		box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+		}
+	
+	#lc-landing #subscribe-box h3 {  
+		color: #ebeff1; /* text color */
+		/*KlavikaMedium*/
+		font-family: KlavikaMedium;
+		/*font-family: "Quattrocento Sans", sans-serif;*/
+		font-size: 15px;
+		margin:0;
+		padding-left: 15px;
+	    padding-top: 15px;
+		}
+	#lc-landing #subscribe-box img {
+	  float:left;
+	  position: relative;
+	  left: 116px;
+	}
+
+	#lc-landing .services-ov {
+	    background-clip: padding-box;
+		
+		
+	  width: 232px;
+		height: 22px;
+		border: 1px solid #999;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
+		-moz-background-clip: padding;
+		-webkit-background-clip: padding-box;
+		background-clip: padding-box;
+		background-color: #999;
+		margin-left: auto;
+	    margin-right: auto;
+	    margin-top: 30px;
+	}
+	
+	#lc-landing .services-ov a:link {
+ 	
+		color: #f2f2f2;
+		font-family: "Quattrocento Sans", sans-serif;
+		font-size: 13px;
+		text-decoration: none;
+		padding: 2px 2px 3px;	
+		position: abolute;
+		margin-left: 8px;
+	}
+	
+	
+	
+	
+	.services-ov a:hover {color: #f2f2f2; text-decoration: none; background-color: #6a6a6a;}
+	.services-ov a:active {color: #f2f2f2; text-decoration: none; background-color: #535353; /* layer fill content */
+		-moz-box-shadow: inset 1px 2px 0 rgba(3,4,4,.4); /* inner shadow */
+		-webkit-box-shadow: inset 1px 2px 0 rgba(3,4,4,.4); /* inner shadow */
+		box-shadow: inset 1px 2px 0 rgba(3,4,4,.4); /* inner shadow */}
+	.services-ov a:visited {color: #f2f2f2; text-decoration: none;}
+	
+	#lc-landing p {
+		color: #333;
+		/*font-family: "Quattrocento";*/
+		font-family: KlavikaLight;
+		font-size: 13px;
+		width: 800px;
+		line-height: 1.2em;	
+	  	font-size: 1.15em;
+		
+		}
+	
+	#lc-landing a {
+		color: #C4740C;
+		}
+	
+	#lc-landing .table p {
+		color: #333;
+		/*font-family: "Quattrocento";*/
+		font-family: KlavikaLight;
+		font-size: 13px;
+		/*width: 400px;*/
+		line-height: 1.2em;	
+	  	font-size: 1.15em;
+		}
+	
+	#lc-landing ul li {
+		color: #000;
+		
+		font-family: msyhb;
+		
+		/*font-family: KlavikaMedium;*/		
+		/*font-family: "Quattrocento";*/	
+		font-size: 20px;
+		margin-left: 30px;
+		font-weight: 200;
+		line-height: 1.2em;		
+		}
+		
+	#lc-landing .page-title {
+	  font-size: 35px;
+	  color: #808080;
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 580px;
+	}
+	
+	#lc-landing .page-title-centered {
+	  font-size: 40px;
+	  color: #808080;
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 580px;
+	}
+	
+	#lc-landing .center {
+		text-align: center;
+		margin-right: 17%;
+	}
+	
+	#lc-landing .sub-title {
+	  font-size: 30px;
+	  color: #34633A;
+	  margin-left: auto;
+	  margin-right: auto;
+	  /*width: 500px;*/  
+	  width: 470px;
+	  
+	}
+	
+	#lc-landing .green-this {
+	    color: #41b737;
+		font-style: bold;
+		}
+		
+	#lc-landing .bold-close {	
+		color: #34633a;
+		size: 22px;
+		font-weight: bold;
+		}
+	
+	
+	#lc-landing #bottom-graphic img {
+	  bottom: 220px;
+	  position: relative;
+	  float:left;
+	}
+	
+	/*#lc-landing .box-row {*/	
+	.lc-landing-box-row {
+	  background: url(../repository/lc-boxes.png) white repeat-x;
+	  height: 59px;
+	  margin-left: 440px;
+	  margin-top: 30px;
+	}
+	
+	.spacer {
+		height: 20px;
+	}
+			
+	#lc-landing table tr td {
+		vertical-align: top;
+	}			
+	
+	.city-color {
+		color: #1B237A;	
+	}
+
+	#produced-by {width: 220px; margin-top: 30px; padding-right: 10px; border-right: 1px solid gray;}
+	#produced-by h2 {font-size: 24px;}
+	#produced-by img {width: 220px;}
+	#produced-by p {text-align: justify; font-size: 14px;}
+	
+</style>	
+	
+
+<%= render 'share/backtotop_2' %>
+
+<ul class="lc-inline" style="width: 1200px; margin: 0 auto; padding-right: 20px; vertical-align: top;">
+<li style="margin: 0 auto; padding-right: 20px; vertical-align: top; display: inline-block;">
+	<%= render 'share/eventpages_tabs' %>
+
+</li>
+<li style="margin: 0 auto; padding-right: 20px; vertical-align: top; display: inline-block;">
+
+
+
+<div id="tab-container">
+
+
+<style>
+h1, h2, h3, h4, p, li, a {font-family: Arial;}
+	#page {width: 900px;}
+  .head .banner {margin: 0; width: 900px;}
+  .flip-img-row {width: 900px; position: relative;}
+  .flip-img-row img {width:260px; margin:5px 18px;}
+  #blue-goal {border-left: 2px solid #227c82; padding-left: 20px;
+  		width: 400px; float: right; margin: 75px 0 0 20px;}
+  #blue-goal p {color:gray; text-align: right; font-size: 23px;} #blue-goal h2 {color: #227c82; text-align: right; font-size: 28px;}
+  .blue-quote {color: #227c82; font-size: 24px; text-align: center; margin-top: 40px; text-decoration: underline;}
+  .blue-it {color: #227c82;} .green-it {color: #41b737;}
+  p {color: #000;}
+  .register-link {color: #227c82; font-size: 24px; text-decoration: underline;}
+  .mini-arrows {width:70px; float:left;}
+
+  .track-table {border:2.5px solid #41b737;}
+  .track-table h3 {color: #000; text-align: center; font-size: 15px;} 
+  .track-table td {color: #000; padding: 7px; width: 250px; vertical-align: top;}
+  .track1 {background: #c9c9c9;} .track2 {background: #78afb3;}
+  .track3 {background: #fcbd60;} .track4 {background: #8bd385;}
+  .track-table ul {color: #000; margin-left:15px;}
+  	#susan-row img { height: 220px; margin-top: 50px;}
+	#susan-row {text-align: justify; margin-top: 50px; vertical-align: top;}
+	#susan-row td {text-align: justify; vertical-align: top;}
+	#top-links {width: 615px; margin:0 auto; font-weight: bold;}
+	.agenda-link {color: #fff; background: #41b737; padding: 5px 60px; border-radius: 15px;}
+	.reg-link {color: #fff; background: #227c82; padding: 5px 60px; border-radius: 15px;
+		margin:0 30px 0 30px;}
+	.speaker-link {color: #fff; background: #fbb040; padding: 5px 60px; border-radius: 15px;}
+</style>
+
+
+<div id="page">
+    <div class="head">
+		<div id="blue-goal">
+			<h2>Event Goal</h2>
+			<p>Experience <span class="blue-it">flipped sessions</span>; discuss <span class="green-it">new leadership issues</span>; create <span class="blue-it">curriculum and IT
+			synergies</span>; get PD for <span class="green-it">blended</span> and <span class="blue-it">online learning</span>; inspect <span class="green-it">up-and-coming</span> industry dynamics like <span class="blue-it">gamification.</span></p>
+		</div>
+
+		<img src="/repository/schedule/colorado/co-final-logo-lg.jpg" style="width: 300px;">
+ 
+    </div>
+
+    	
+	<div class="spacer"></div>
+	   
+	   <h2 style="color: gray; font-size: 52px; margin: 20px 0;">
+	   CBOL Pre-Study links from Learning Counsel Staff
+		</h2>
+	<a href="/CBOL-Materials" style="color: #fb8440;"><<<< Back to Materials Page</a>
+		<p style="margin: 30px 0 50px;">
+			Below you will find links to the pre-study elements from Learning Counsel staff who are presenting at CBOL:</p>
+<style>
+	#study-link h3 {font-size: 24px;}
+	#study-link a {font-size: 20px; color:#41b737; line-height: 1.5em;}
+</style>
+	<div id="study-link">
+		<h3><span style="color: #41b737;">Track 1:</span><span style="color:gray;"> Leadership - Session 1</span></h3>
+		<h3><span style="color: #41b737;">Presenter:</span><span style="color:gray;"> Dr. David Kafitz, VP School Relations &amp; Consulting</span></h3>
+		<a target="_blank" href="/pdfs/CBOL-tracks/workbook2015.pdf">Issue 1: Workbook 2015</a><br/>
+		<a target="_blank" href="/pdfs/CBOL-tracks/dig-curr-brief-web.pdf">Issue 2: Digital Curriculum Brief</a><br/>
+		<a target="_blank" href="/archives/facing-down-disruption">Issue 3: Facing Down Disruption </a><br/>
+		<a target="_blank" href="/archives/The-End-Point-Education-Transformation">Issue 4: The End Point of Education Transformation</a><br/>
+		<a target="_blank" href="/archives/k12-digital-market">Issue 5: K-12 Digital Curriculum Market</a><br/>
+		<a target="_blank" href="/archives/amazon">Issue 6: Amazon &amp; Education Apps</a><br/>
+
+		<div id="lani-study-links" style="margin-bottom:35px;"></div>
+		<div style="height: 5px; border-bottom: 2px solid #41b737; margin: 20px 0;"></div>
+		
+		<h3><span style="color: #41b737;">Track 2:</span><span style="color:gray;"> IT, Curriculum &amp; Instruction - Session 2</span></h3>
+		<h3><span style="color: #41b737;">Presenter:</span><span style="color:gray;"> Leilani Cauthen, CEO</span></h3>
+		<a target="_blank" href="/pdfs/CBOL-tracks/workbook2015.pdf">Issue 1: Workbook 2015</a><br/>
+		<a target="_blank" href="/pdfs/CBOL-tracks/dig-curr-brief-web.pdf">Issue 2: Digital Curriculum Brief</a><br/>
+		<a target="_blank" href="/pdfs/CBOL-tracks/netop-brief-web.pdf">Issue 3: App Planning for Instant Classroom Teaching and Learning</a><br/>
+		<a target="_blank" href="/archives/five-types">Issue 4: Five types of Curriculum "things"</a><br/>
+		<a target="_blank" href="/archives/to-solution">Issue 5: To Solution or Element - That is the Question</a><br/>
+		<a target="_blank" href="/archives/whats-so-hard">Issue 6: What's so Hard About Choosing Digital Curriculum</a><br/>
+
+	</div> <!-- End study link -->
+
+
+</div>
+<!-- </div> -->
+</div>
+</li>
+
+
+      	
+      		<!-- End Breakout table -->
+
+</ul>
+
+<div style="height: 200px;"></div>
+	
+<div id="bottom-graphic">
+<img src="../repository/lc-box-cloud.png"/>
+<div class="lc-landing-box-row"></div>
+</div>
+
+<div style="clear: both;"></div>
+
+
+
+<script>
+		
+		var offset_top = 0;
+		jQuery(window).scroll(function() {
+			offset_top = $(window).scrollTop()
+			$('#eventstabs').css('top', offset_top);
+		});
+	
+		$(window).load( function() {
+		//$(document).ready(function(){
+			$("#tab7").addClass("active");
+		});
+	
+</script>
+

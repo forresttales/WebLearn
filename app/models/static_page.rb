@@ -18,6 +18,9 @@
 #  linkimg_url  :string(255)
 #  linktitle    :string(255)
 #  slug         :string(255)
+#  subtitle_1   :string(255)
+#  subtitle_2   :string(255)
+#  img_height   :integer          default(300)
 #
 
 class StaticPage < Archive

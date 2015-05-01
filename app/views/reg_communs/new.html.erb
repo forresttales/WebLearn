@@ -1,424 +1,368 @@
-
 <% provide(:title, 'Community Registration') %>
 
 	<script src="/assets/jquery.validate.js"></script>
+    <script src="/assets/dot.js"></script>    
+    <script src="/assets/jquery-dropdown-dot.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="../styles/dropdown.css"/>
+	<!-- <link rel="stylesheet" type="text/css" href="../styles/dropdown.css"/> -->
 					
 	<style>
 	
-	.form-reg-commun {
-		
-		width: 960px;
-		height: auto;
-		display: none;
-						
-		/*background-color: rgba(180, 180, 180, 0.94);*/
-		
-		background-color: rgba(0, 0, 0, 0.8);
-
-		
-		/*-moz-box-shadow:5px 5px 40px #fff;
-		-webkit-box-shadow:5px 40px 5px #fff;
-		box-shadow:5px 5px 40px #CCAE37;*/
-	   		   		    
-	    transition: box-shadow 3s ease-in-out;				
-			
-		border-top-left-radius: 10px;
-   		border-top-right-radius: 10px;		
-		border-bottom-left-radius: 10px;
-   		border-bottom-right-radius: 10px;
-   		
-		position: relative;
-		text-align: center;			
-		padding-top: 20px;	   			   	
-		padding-bottom: 20px;	
-	}
-	
-	#joinClose {
-		right: 6px;
-		top: 6px;
-		position: absolute;
-		display: block
-	}
-	
-	/**:focus {
-		outline: none
-	}*/
-	
-	#loading {
-		background:url("/assets/icon_loading.gif") no-repeat center center;
-		height: 100px; width: 100px;
-		position: fixed; left: 47%; top: 50%; z-index: 1000;
-		margin: -25px 0 0 -25px;
-	}				
-				
-	
-	.input-form {
-		font-family: msyh;
-		font-size: 16px;
-		width: 300px;
-		height: 24px;
-		border-style:solid;
-		border-radius: 6px;
-		/*border-color: #13571F; green*/		
-		border-color: #005C9E; /*blue*/
-		
-		
-		border-width: 2px;
-		padding-left: 6px;
-		
-		-webkit-transition: all 0.5s ease-in-out;
-		-moz-transition: all 0.5s ease-in-out;
-		-o-transition: all 0.5s ease-in-out;
-		-ms-transition: all 0.5s ease-in-out;
-		transition: all 0.5s ease-in-out;
-	}
-
-	.input-form:focus {
-		/*border-color: #97FF47;*/
-		
-		color: #fff;
-						
-		background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;						
-				
-		-webkit-box-shadow: 0 0 25px #ccc;
-		-moz-box-shadow: 0 0 25px #ccc;
-		box-shadow: 0 0 25px #ccc;
-		-webkit-transform: scale(1.05);
-		-moz-transform: scale(1.05);
-
-		/*-webkit-transform: scale(1.05);
-		-moz-transform: scale(1.05);*/
-		
-		-o-transform: scale(1.05);
-		-ms-transform: scale(1.05);
-		
-		/*-webkit-transform: scale(1.05);
-		-moz-transform: scale(1.05);
-		-o-transform: scale(1.05);
-		-ms-transform: scale(1.05);
-		-webkit-transform: scale(1.05);
-		-moz-transform: scale(1.05);
-		-o-transform: scale(1.05);
-		-ms-transform: scale(1.05);*/		
-		
-		transform: scale(1.05);
-	}
-
-	.input-form-dropdown {
-		font-family: msyh;
-		font-size: 16px;
-		width: 310px;
-		height: 30px;
-		border-style:solid;
-		border-radius: 6px;
-		/*border-color: #13571F; green*/		
-		border-color: #005C9E; /*blue*/
-		
-		
-		border-width: 2px;
-		padding-left: 6px;
-		
-		-webkit-transition: all 0.5s ease-in-out;
-		-moz-transition: all 0.5s ease-in-out;
-		-o-transition: all 0.5s ease-in-out;
-		-ms-transition: all 0.5s ease-in-out;
-		transition: all 0.5s ease-in-out;
-		
-		text-decoration: none;
-	}
-
-	.input-form-dropdown:focus {
-		/*border-color: #97FF47;*/
-		
-		color: #fff;
-						
-		background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;						
-				
-		-webkit-box-shadow: 0 0 25px #ccc;
-		-moz-box-shadow: 0 0 25px #ccc;
-		box-shadow: 0 0 25px #ccc;
-		-webkit-transform: scale(1.05);
-		-moz-transform: scale(1.05);
-		-webkit-transform: scale(1.05);
-		-moz-transform: scale(1.05);
-		-o-transform: scale(1.05);
-		-ms-transform: scale(1.05);
-		-webkit-transform: scale(1.05);
-		-moz-transform: scale(1.05);
-		-o-transform: scale(1.05);
-		-ms-transform: scale(1.05);
-		-webkit-transform: scale(1.05);
-		-moz-transform: scale(1.05);
-		-o-transform: scale(1.05);
-		-ms-transform: scale(1.05);
-		transform: scale(1.05);
-		
-		text-decoration: none;		
-		
-		outline: 0;
-		
-	}
-
-
-
-
-	div .error_label {
-	    display: none;
-		font-family: msyh;
-		font-size: 12px;
-		color: #851717;		    
-	}
-
-	div .errors {
-		font-family: msyh;
-		font-size: 16px;
-		
-		/*color: #851717;*/
-				
-		color: #FC7777;		
-	}
-
-	.select-errors {
-		color: #FC7777;
-	}
-
-	.input-label {
-		font-family: msyh;
-		font-size: 16px;
-		width: 220px;
-		height: 18px;
-	}
-
-		
-	.success {
-		color: #ACDDE3;		
-		background: url("/assets/submit_form_empty.png") no-repeat 278px 1px;		
-	}		
-
-	.error {
-		color: #FC7777;
-		border-color: #851717; 								
-		background: url("/assets/submit_form_empty.png") no-repeat 278px 1px;		
-	}
-
-	.required {
-		background: url("/assets/submit_form_empty.png") no-repeat 278px 1px;		
-	}
-	
-	.focus {
-		color: #fff;
-		border-color: #005C9E;						
-		background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;								
-	}
-	
-	
-		
-	.unrequired {
-		background: url("/assets/submit_form_empty.png") no-repeat 278px 1px;		
-	}
-	
-	.error-label {
-		/*color: #851717;*/		
-		color: #FC7777;
-	}
-
-	.required-label {
-		color: orange;		
-	}
-	
-	.input-form-spacer {
-		height: 16px;
-	}
-
-	.input-search-1 {
-		background-color: white;
-		color: black;
-		font-family: Arial;
-		width: 200px;
-	}
-		
-		
-	#join-image {
-		height: 2660px;
-	}
-		
-	div .cell-right-reg-commun {
-		display: table-cell;
-		width: 330px;
-		text-align: left;
-		align: top;		
-	}
-
-	div .cell-left-reg-commun {
-		display: table-cell;
-		width: 280px;	
-		align: top;
-		text-align: right;		
-		padding-right: 20px;
-	}
-	
-	div .cell-submit-reg-commun {
-		display: table-cell;
-		width: 330px;
-		text-align: left;
-		align: top;		
-	}
-		
-	div .cell-error-reg-commun {
-		display: inline-block;
-		width: 300px;
-		height: 18px;
-		vertical-align: bottom;
-		text-align: left;
-	}
-
-
-	div .cell-right-reg-commun-cb {
-		display: table-cell;
-		width: 430px;
-		text-align: left;
-		align: top;		
-	}
-
-	div .cell-error-reg-commun-cb {
-		display: inline-block;
-		width: 200px;
-		height: 18px;
-		vertical-align: bottom;
-		text-align: left;
-	}
-		
-	.message {
-		height: 120px;
-	}
-		
-	.button-border {
-		width: 480px; 
-		border-style: solid; 
-		border-width: 2px; 
-		border-color: #005C9E; 
-		border-radius: 6px; 
-		padding-right: 6px; 
-		padding-top: 6px; 
-		padding-bottom: 6px;
-	}
-		
-		
-		
-	#label_cb {
-		text-decoration: none;
-	}		
-	#label_cb:focus {
-		text-decoration: underline;
-		/*color:#FF9900;*/		
-		color: #FFF480;		
-		outline: none;
-	}		
-	
-	.radio-errors {
-		color: #FC7777;
-	}
-	.cb-errors {
-		color: #FC7777;
-		font-family: msyh;
-		font-size: 14px;
-		font-weight: 400;
-	}
-
-	div .cell-error-reg-commun {
-		display: inline-block;
-		width: 300px;
-		height: 18px;
-		vertical-align: bottom;
-		text-align: left;
-	}
-
-	input[type=checkbox] {
-	    display:none;
-	}			
-	input[type=radio] {
-	    display:none;
-	}			
-
-	.rd-button {
-		width: 20px;
-		height: 20px; 
-		border-style: solid; 
-		border-width: 2px; 
-		border-color: #005C9E; 
-		border-radius: 20px;		
-		margin-bottom: -4px;
-		display: inline-block;
-		margin-right: 6px;
-	}
-	
-	.cb-button {
-		width: 20px;
-		height: 21px; 
-		border-style: solid; 
-		border-width: 2px; 
-		border-color: #005C9E; 
-		border-radius: 6px;		
-		margin-bottom: -4px;
-		display: inline-block;
-		margin-right: 6px;
-	}
-
-	.cb-button-test {
-		width: 20px;
-		height: 21px; 
-		border-style: solid; 
-		border-width: 2px; 
-		border-color: #005C9E; 
-		border-radius: 6px;		
-		margin-bottom: -4px;
-		margin-right: 6px;
-	}
-
-	.rd-background {
-		background-image: url("/assets/radio_tick.png");		
-		background-repeat: no-repeat;
-		background-position: 2px 2px;
-	}	
-
-	.cb-background {
-		background-image: url("/assets/checkbox_tick.png");		
-		background-repeat: no-repeat;
-		background-position: 2px 3px;
-	}	
-				
-	.cb-spacer {
-		height: 20px;
-	}
-
-	.cb-align {
-		vertical-align: top;
-	}		
-	
-	.cb-pad {
-		padding-top: 5px;		
-	}
-
+		.form-reg-commun {
+			width: 970px;
+			height: auto;
+			/*isplay: none;*/
+			/*background-color: rgba(180, 180, 180, 0.94);*/
+			/*background-color: rgba(0, 0, 0, 0.8);*/
+			/*-moz-box-shadow:5px 5px 40px #fff;
+			-webkit-box-shadow:5px 40px 5px #fff;
+			box-shadow:5px 5px 40px #CCAE37;*/
+		    /*transition: box-shadow 3s ease-in-out;	*/			
+			/*border-top-left-radius: 10px;
+	   		border-top-right-radius: 10px;		
+			border-bottom-left-radius: 10px;
+	   		border-bottom-right-radius: 10px;*/
+			position: relative;
+			text-align: center;			
+			padding-top: 20px;	   			   	
+			padding-bottom: 20px;	
+		}
+		#joinClose {
+			right: 6px;
+			top: 6px;
+			position: absolute;
+			display: block
+		}
+		/**:focus {
+			outline: none
+		}*/
+		#loading {
+			background:url("/assets/icon_loading.gif") no-repeat center center;
+			height: 100px; width: 100px;
+			position: fixed; left: 47%; top: 50%; z-index: 1000;
+			margin: -25px 0 0 -25px;
+		}				
+		.input-form {
+			font-family: msyh;
+			font-size: 16px;
+			width: 300px;
+			height: 24px;
+			border-style:solid;
+			/*border-radius: 6px;*/
+			/*border-color: #13571F; green*/		
+			border-color: #41b737;/* #005C9E blue */
+			border-width: 2px;
+			padding-left: 6px;
+			/*-webkit-transition: all 0.5s ease-in-out;
+			-moz-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
+			-ms-transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease-in-out;*/
+		}
+		.input-form:focus {
+			/*border-color: #97FF47;*/
+			color: #000;
+			background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;						
+			/*-webkit-box-shadow: 0 0 25px #ccc;
+			-moz-box-shadow: 0 0 25px #ccc;
+			box-shadow: 0 0 25px #ccc;
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);*/
+			/*-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);*/
+		/*	-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);*/
+			/*-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);*/		
+		/*	transform: scale(1.05);*/
+		}
+		.input-form-dropdown {
+			font-family: msyh;
+			font-size: 16px;
+			width: 310px;
+			height: 30px;
+			border-style:solid;
+			border-radius: 6px;
+			/*border-color: #13571F; green*/		
+			border-color: #41b737;/*#005C9E*/ 
+			border-width: 2px;
+			padding-left: 6px;
+			/*-webkit-transition: all 0.5s ease-in-out;
+			-moz-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
+			-ms-transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease-in-out;*/
+			text-decoration: none;
+		}
+		.input-form-dropdown:focus {
+			/*border-color: #97FF47;*/
+			color: #fff;
+			background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;						
+			-webkit-box-shadow: 0 0 25px #ccc;
+			-moz-box-shadow: 0 0 25px #ccc;
+			box-shadow: 0 0 25px #ccc;
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			transform: scale(1.05);
+			text-decoration: none;		
+			outline: 0;
+		}
+		div .error_label {
+		    display: none;
+			font-family: msyh;
+			font-size: 12px;
+			color: #851717;		    
+		}
+		div .errors {
+			font-family: msyh;
+			font-size: 16px;
+			/*color: #851717;*/
+			color: #FC7777;		
+		}
+		div .errors p {
+			font-family: msyh;
+			/*font-family: Arial, Helvetica, sans-serif;*/
+			font-size: 16px;
+			color: #FC7777;		
+		}				
+		.select-errors {
+			color: #FC7777;
+		}
+		.input-label {
+			font-family: msyh;
+			font-size: 16px;
+			width: 220px;
+			height: 18px;
+		}
+		.success {
+			color: #41b737; /*#ACDDE3;*/		
+			/*background: url("/assets/submit_form_empty.png") no-repeat 278px 1px;*/		
+			background-color: #fff;		
+		}		
+		.error {
+			color: #FC7777;
+			border-color: #851717; 			
+			background-color: #fff;					
+			/*background: url("/assets/submit_form_empty.png") no-repeat 278px 1px;*/		
+		}
+		.required {
+			background: #f5f5f5; /*url("/assets/submit_form_empty.png") no-repeat 278px 1px;	*/	
+		}
+		.focus {
+			color: #fff;
+			border-color: #41b737;						
+			/*background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;*/								
+		}
+		.unrequired {
+			background: #f5f5f5;
+			/*background: url("/assets/submit_form_empty.png") no-repeat 278px 1px;*/		
+		}
+		.error-label {
+			/*color: #851717;*/		
+			color: #FC7777;
+		}
+		.required-label {
+			/*color: orange;*/	
+			color: #376340;	
+		}
+		.input-form-spacer {
+			height: 16px;
+		}
+		.input-search-1 {
+			background-color: white;
+			color: black;
+			font-family: Arial;
+			width: 200px;
+		}
+		#join-image {
+			height: 2500px;
+			border: 2px solid #376340;
+	    	width: 1010px;
+		}
+		div .cell-right-reg-commun {
+			display: table-cell;
+			width: 330px;
+			text-align: left;
+			align: top;		
+		}
+		div .cell-left-reg-commun {
+			display: table-cell;
+			width: 280px;	
+			align: top;
+			text-align: right;		
+			padding-right: 20px;
+		}
+		div .cell-submit-reg-commun {
+			display: table-cell;
+			width: 330px;
+			text-align: left;
+			align: top;		
+		}
+		div .cell-error-reg-commun {
+			display: inline-block;
+			width: 300px;
+			height: 18px;
+			vertical-align: bottom;
+			text-align: left;
+		}
+		div .cell-right-reg-commun-cb {
+			display: table-cell;
+			width: 430px;
+			text-align: left;
+			align: top;		
+		}
+		div .cell-error-reg-commun-cb {
+			display: inline-block;
+			width: 200px;
+			height: 18px;
+			vertical-align: bottom;
+			text-align: left;
+		}
+		.message {
+			height: 120px;
+		}
+		.button-border {
+			background: #f5f5f5;
+			width: 480px; 
+			border-style: solid; 
+			border-width: 2px; 
+			border-color: #41b737;/*#005C9E*/ 
+			/*border-radius: 6px; */
+			padding-right: 6px; 
+			padding-top: 6px; 
+			padding-bottom: 6px;
+		}
+		#label_cb {
+			text-decoration: none;
+		}		
+		#label_cb:focus {
+			text-decoration: underline;
+			/*color:#FF9900;*/		
+			color: #FFF480;		
+			outline: none;
+		}		
+		.radio-errors {
+			color: #FC7777;
+		}
+		.cb-errors {
+			color: #FC7777;
+			font-family: msyh;
+			font-size: 14px;
+			font-weight: 400;
+		}
+		div .cell-error-reg-commun {
+			display: inline-block;
+			width: 300px;
+			height: 18px;
+			vertical-align: bottom;
+			text-align: left;
+		}
+		input[type=checkbox] {
+		    display:none;
+		}			
+		input[type=radio] {
+		    display:none;
+		}			
+		.rd-button {
+			width: 20px;
+			height: 20px; 
+			border-style: solid; 
+			border-width: 2px; 
+			border-color: #41b737; 
+			/*border-radius: 20px;	*/	
+			margin-bottom: -4px;
+			display: inline-block;
+			margin-right: 6px;
+		}
+		.rd-button:hover {
+			cursor: pointer;
+		}	
+		.cb-button {
+			width: 20px;
+			height: 21px; 
+			border-style: solid; 
+			border-width: 2px; 
+			border-color: #41b737; 
+			/*border-radius: 6px;	*/	
+			margin-bottom: -4px;
+			display: inline-block;
+			margin-right: 6px;
+		}
+		.cb-button {
+			cursor: pointer;
+		}
+		.cb-button-test {
+			width: 20px;
+			height: 21px; 
+			border-style: solid; 
+			border-width: 2px; 
+			border-color: #41b737; 
+			/*border-radius: 6px;	*/	
+			margin-bottom: -4px;
+			margin-right: 6px;
+		}
+		.rd-background {
+			/*background-image: url("/assets/radio_tick.png");		
+			background-repeat: no-repeat;
+			background-position: 2px 2px;*/
+			/*background-color: #0FEAFF;*/		
+			background-color: #5BED4E;			
+		}	
+		.cb-background {
+			/*background-image: url("/assets/checkbox_tick.png");		
+			background-repeat: no-repeat;
+			background-position: 2px 3px;*/
+			/*background-color: #0FEAFF;*/		
+			background-color: #5BED4E;			
+		}	
+		.cb-spacer {
+			height: 20px;
+		}
+		.cb-align {
+			vertical-align: top;
+		}		
+		.cb-pad {
+			padding-top: 5px;		
+		}
 
 	</style>					
 					
 	<style type="text/css">
+
 		/*#cb-align-1 {
 			vertical-align: top !important;
 		}*/
-		
-				
 				
 	</style>					
 					
 	<style>
-		
+
+		.commun-inside {
+			border:2px solid #376340;
+			padding: 5px 20px;
+		}
 		.commun p {
-			font-family: msyh; 
-			font-size: 16px;
-			color: #005187;"
+			font-family: Quatrocento, sans; 
+			font-size: 20px;
+			color: #376340;"
 		}
 		
 	</style>
@@ -430,10 +374,454 @@
 			color: #8C0303;
 			font-size: 16px;
 		}
-		
+		.seperator-commun {
+			font-family: quattrocento, sans;
+			text-align: right;
+			vertical-align: middle;
+			padding-right: 15px;
+			padding-top:5px;
+			font-size: 35px;
+			width: 1000px; 
+			margin: 5px auto;
+			height:40px;
+			color: #FFF;
+		    background: -webkit-linear-gradient(left, #ffffff 25%, #cacaca 55% , #47b64a 90%); /* For Safari 5.1 to 6.0 */
+		  	background: -o-linear-gradient(right, #ffffff 25%, #cacaca 55% , #47b64a 90%); /* For Opera 11.1 to 12.0 */
+		  	background: -moz-linear-gradient(right, #ffffff 25%, #cacaca 55% , #47b64a 90%); /* For Firefox 3.6 to 15 */
+		 	background: linear-gradient(to right, #ffffff 25%, #cacaca 55% , #47b64a 90%); /* Standard syntax */
+		}
+		.seperator-commun img { float:left; position: relative; top: -5px; height: 100px;
+			border-left: 2px solid #376340; background: #FFF;
+		}
+		.bottom-commun-squares {background: url('/repository/lc-boxes.jpg') #FFF no-repeat right;
+			float: right;
+		    height: 39px;
+		    position: relative;
+		    top: -14px;
+		    right: -24px;
+		    width: 210px;
+		}
+		.top-commun-squares {background: url('/repository/lc-boxes.jpg') #FFF no-repeat left;
+			float: left;
+		    height: 39px;
+		    position: relative;
+		    top: -17px;
+		    left: 0px;
+		    width: 210px;
+		}
+		.submit-button-commun {
+			width: 300px;
+			float:right;
+			position: relative;
+			background: #ffffff;
+			top: -40px;
+			left: 45px;
+			padding: 20px 0 0 20px;
+		}
+
 	</style>		                		
-					
-					
+
+	<style>
+		
+		/* start - dropdown1 */
+		div .dropdown1 {
+		background: #f5f5f5;
+	  		font:18px/2.0 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+			width: 300px;
+			height: 40px;
+			border-style:solid;
+			/*border-radius: 6px;*/
+			border-color: #41b737;
+			color: #838383;				
+	    	position: relative;
+			border-width: 2px;
+			padding-left: 6px;
+			/*-webkit-transition: all 0.5s ease-in-out;
+			-moz-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
+			-ms-transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease-in-out;*/
+			text-decoration: none;
+			outline: none;
+		}
+		div .dropdown1 > .selected {
+	  		font:18px/2.0 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+			width: 310px;
+			height: 40px;
+			border-style:solid;
+			border-radius: 6px;
+			border-color: #005C9E; /*blue*/
+	    	position: relative;
+			/*-webkit-transition: all 0.5s ease-in-out;
+			-moz-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
+			-ms-transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease-in-out;*/
+			outline: none;	
+		}
+		div .dropdown1:focus {
+			color: #ACDDE3;
+			-webkit-box-shadow: 0 0 25px #ccc;
+			-moz-box-shadow: 0 0 25px #ccc;
+			box-shadow: 0 0 25px #ccc;
+			/*-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			transform: scale(1.05);*/
+			outline: none;
+		}
+		/*div .dropdown1.focus > .selected,*/
+		div .dropdown1:focus > .selected {
+	    	outline: none;
+		}
+		div .dropdown1 > .selected:hover,
+		div .dropdown1 > .selected:focus {
+		}
+		div .dropdown1 > .selected i {
+	    	position: absolute;
+	    	top: -2px;
+	    	right: 8px;
+	    	bottom: 0;
+	    	width: 40px;
+	    	line-height: 40px;
+	    	border-left: 2px solid #41b737;
+	    	text-align: center;
+	    	color: #41b737;	    	
+		}
+		div .dropdown1.open > .selected {
+		    -webkit-border-radius: 4px 4px 0px 0px;
+		    border-radius: 4px 4px 0px 0px;
+		}
+		div .dropdown1 ul {
+		    display: none;
+		    position: absolute;
+		    left: 0;
+		    top: 100%;
+		    width: 100%;
+		    background: #2B333B;
+		    border: 1px solid #333;
+		    border-top: none;
+		    -webkit-border-radius: 0px 0px 4px 4px;
+		    border-radius: 0px 0px 4px 4px;
+		    box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    line-height: 1;
+		    -webkit-box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.2);
+		    box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.2);
+		    height: auto;    
+		    overflow: auto;
+		    margin: 0;
+		    padding-left: 6px;
+		}
+		div .dropdown1 ul li.selected {
+		    color: #ACDDE3;
+		    background: #005C9E;
+		}
+		div .dropdown1 ul li:last-child.selected {
+		    -webkit-border-radius: 0px 0px 4px 4px;
+		    border-radius: 0px 0px 4px 4px;
+		}
+		div .dropdown1 ul li {
+		    position: relative;
+		    display: block;
+		    text-decoration: none;    
+		    color: #ACDDE3;
+		    padding-left: 4px;
+		}
+		div .dropdown1 ul li:first-child {
+		    color: #838383;
+		}
+		div .dropdown1 ul li:first-child.selected {
+		    color: #838383;
+		}
+		div .dropdown1 ul li.hover {
+		    background: #fff;
+		    color: #000;
+		}
+		/* end - dropdown1 */
+	
+		/* start - dropdown2 */
+		div .dropdown2 {
+		background: #f5f5f5;
+	  		font:18px/2.0 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+			width: 300px;
+			height: 40px;
+			border-style:solid;
+			/*border-radius: 6px;*/
+			border-color: #41b737;/*#005C9E;*/
+			color: #838383;				
+	    	position: relative;
+			border-width: 2px;
+			padding-left: 6px;
+			/*-webkit-transition: all 0.5s ease-in-out;
+			-moz-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
+			-ms-transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease-in-out;*/
+			text-decoration: none;
+			outline: none;
+		}
+		div .dropdown2 > .selected {
+	  		font:18px/2.0 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+			width: 310px;
+			height: 40px;
+			border-style:solid;
+			border-radius: 6px;
+			border-color: #005C9E; /*blue*/
+	    	position: relative;
+			/*-webkit-transition: all 0.5s ease-in-out;
+			-moz-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
+			-ms-transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease-in-out;*/
+			outline: none;	
+		}
+		div .dropdown2:focus {
+			color: #ACDDE3;
+			-webkit-box-shadow: 0 0 25px #ccc;
+			-moz-box-shadow: 0 0 25px #ccc;
+			box-shadow: 0 0 25px #ccc;
+			/*-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			transform: scale(1.05);*/
+			outline: none;
+		}
+		/*div .dropdown2.focus > .selected,*/
+		div .dropdown2:focus > .selected {
+	    	outline: none;
+		}
+		div .dropdown2 > .selected:hover,
+		div .dropdown2 > .selected:focus {
+		}
+		div .dropdown2 > .selected i {
+	    	position: absolute;
+	    	top: -2px;
+	    	right: 8px;
+	    	bottom: 0;
+	    	width: 40px;
+	    	line-height: 40px;
+	    	border-left: 2px solid #41b737;
+	    	text-align: center;
+	    	color: #41b737;	    	
+		}
+		div .dropdown2.open > .selected {
+		    -webkit-border-radius: 4px 4px 0px 0px;
+		    border-radius: 4px 4px 0px 0px;
+		}
+		div .dropdown2 ul {
+		    display: none;
+		    position: absolute;
+		    left: 0;
+		    top: 100%;
+		    width: 100%;
+		    background: #2B333B;
+		    border: 1px solid #333;
+		    border-top: none;
+		    -webkit-border-radius: 0px 0px 4px 4px;
+		    border-radius: 0px 0px 4px 4px;
+		    box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    line-height: 1;
+		    -webkit-box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.2);
+		    box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.2);
+		    height: auto;    
+		    overflow: auto;
+		    margin: 0;
+		    padding-left: 6px;
+		}
+		div .dropdown2 ul li.selected {
+		    color: #ACDDE3;
+		    background: #005C9E;
+		}
+		div .dropdown2 ul li:last-child.selected {
+		    -webkit-border-radius: 0px 0px 4px 4px;
+		    border-radius: 0px 0px 4px 4px;
+		}
+		div .dropdown2 ul li {
+		    position: relative;
+		    display: block;
+		    text-decoration: none;    
+		    color: #ACDDE3;
+		    padding-left: 4px;
+		}
+		div .dropdown2 ul li:first-child {
+		    color: #838383;
+		}
+		div .dropdown2 ul li:first-child.selected {
+		    color: #838383;
+		}
+		div .dropdown2 ul li.hover {
+		    background: #fff;
+		    color: #000;
+		}
+		/* end - dropdown2 */
+	
+		/* start - dropdown3 */
+		div .dropdown3 {
+		background: #f5f5f5;
+	  		font:18px/2.0 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+			width: 300px;
+			height: 40px;
+			border-style:solid;
+			/*border-radius: 6px;*/
+			border-color: #41b737;/*#005C9E;*/
+			color: #838383;				
+	    	position: relative;
+			border-width: 2px;
+			padding-left: 6px;
+			/*-webkit-transition: all 0.5s ease-in-out;
+			-moz-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
+			-ms-transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease-in-out;*/
+			text-decoration: none;
+			outline: none;
+		}
+		div .dropdown3 > .selected {
+	  		font:18px/2.0 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+			width: 310px;
+			height: 40px;
+			border-style:solid;
+			border-radius: 6px;
+			border-color: #005C9E; /*blue*/
+	    	position: relative;
+			/*-webkit-transition: all 0.5s ease-in-out;
+			-moz-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
+			-ms-transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease-in-out;*/
+			outline: none;	
+		}
+		div .dropdown3:focus {
+			color: #ACDDE3;
+			-webkit-box-shadow: 0 0 25px #ccc;
+			-moz-box-shadow: 0 0 25px #ccc;
+			box-shadow: 0 0 25px #ccc;
+			/*-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			transform: scale(1.05);*/
+			outline: none;
+		}
+		/*div .dropdown3.focus > .selected,*/
+		div .dropdown3:focus > .selected {
+	    	outline: none;
+		}
+		div .dropdown3 > .selected:hover,
+		div .dropdown3 > .selected:focus {
+		}
+		div .dropdown3 > .selected i {
+	    	position: absolute;
+	    	top: -2px;
+	    	right: 8px;
+	    	bottom: 0;
+	    	width: 40px;
+	    	line-height: 40px;
+	    	border-left: 2px solid #41b737;
+	    	text-align: center;
+	    	color: #41b737;	    	
+		}
+		div .dropdown3.open > .selected {
+		    -webkit-border-radius: 4px 4px 0px 0px;
+		    border-radius: 4px 4px 0px 0px;
+		}
+		div .dropdown3 ul {
+		    display: none;
+		    position: absolute;
+		    left: 0;
+		    top: 100%;
+		    width: 100%;
+		    background: #2B333B;
+		    border: 1px solid #333;
+		    border-top: none;
+		    -webkit-border-radius: 0px 0px 4px 4px;
+		    border-radius: 0px 0px 4px 4px;
+		    box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    line-height: 1;
+		    -webkit-box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.2);
+		    box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.2);
+		    height: auto;    
+		    overflow: auto;
+		    margin: 0;
+		    padding-left: 6px;
+		}
+		div .dropdown3 ul li.selected {
+		    color: #ACDDE3;
+		    background: #005C9E;
+		}
+		div .dropdown3 ul li:last-child.selected {
+		    -webkit-border-radius: 0px 0px 4px 4px;
+		    border-radius: 0px 0px 4px 4px;
+		}
+		div .dropdown3 ul li {
+		    position: relative;
+		    display: block;
+		    text-decoration: none;    
+		    color: #ACDDE3;
+		    padding-left: 4px;
+		}
+		div .dropdown3 ul li:first-child {
+		    color: #838383;
+		}
+		div .dropdown3 ul li:first-child.selected {
+		    color: #838383;
+		}
+		div .dropdown3 ul li.hover {
+		    background: #fff;
+		    color: #000;
+		}
+		/* end - dropdown3 */
+		
+	</style>
+						
+	<style>
+		
+		.dropdown1:hover {
+			cursor: pointer;
+		}
+		.dropdown2:hover {
+			cursor: pointer;
+		}
+		.dropdown3:hover {
+			cursor: pointer;
+		}
+		
+	</style>					
 					
 					
 	<script id="dropdown-data1-selected" type="text/x-dot-template">
@@ -559,26 +947,31 @@
 				<div class="row">
 					
 					<div class="cell-100percent">
-						<div class="commun">							
-							<p>
-								HELLO!  You are at this page to opt-in to be a part of making all things about digital curriculum better.  
+						<div class="commun">
+							<div style="margin-top:50px;" class="seperator-commun"><img src="/repository/logo-icon-come-together.png">COMMUNITY</div>
+							<div class="commun-inside">
+							<p style="clear:both;">
+								HELLO!<br/><br/>
+								  You are at this page to opt-in to be a part of making all things about digital curriculum better.  
 								By opting in you agree that we can send you our Journal (magazine) and special emails to periodically survey you about things happening 
 								in the education industry, your opinions on best approaches, and more.  We'll share a cut of the data back with you in a 
 								report via email.  That way you also know what hundreds of your peers are thinking about the same things.  
 							</p>
 							<br>
-							<img src="../repository/form-welcome.png" alt="form-welcome.png" height="164px" style="float: left;" >
+							<!--img src="../repository/form-welcome.png" alt="form-welcome.png" height="164px" style="float: left;" -->
 							<p>
 								The LC Community membership is restricted to 18 years and older. All personally 
 								identifiable information that you provide will be kept strictly confidential and used only for legitimate 
 								research purposes. 
 							</p>
 							<br>
-							<p>
+							<p style="padding-bottom: 20px;">
 								Occasionally there may be a Survey that offers some sort of give-away.  You can tell us your options on how 
 								you would like that or opt out.  You'll also be our special invite to our annual Gathering event, our invitation-only 
 								premier national get-together for members of this community where you can see each other face to face!
 							</p>
+							<div class="bottom-commun-squares">&nbsp;</div>
+						</div><!--End commun-inside-->
 						</div>
 					</div>
 					<!-- <p>
@@ -589,6 +982,8 @@
 					</p> -->											
 				</div>
 
+				<a name="anchor1"></a>    		      		     		
+
 				<div class="row" style="height: 30px;">
 					<div  class="cell-100percent" style="padding-left: 300px;">
 			    		<% unless flash[:captcha].nil? %>
@@ -596,8 +991,6 @@
 			      		<% end %>
 					</div>
 				</div>
-
-				<a name="anchor1"></a>    		      		     		
 
 				<div class="row" style="height: 10px;"></div>
 				
@@ -616,11 +1009,11 @@
 
 
 <div style="width: 1000px; margin-right: auto; margin-left: auto;">
-	
+	<div class="top-commun-squares">&nbsp;</div>
 	<section>
 
 
-	<div id="join-image" class="shadow-inset">
+	<div id="join-image" class="">
 
 		
 		<div id="form_reg_commun" class="form-reg-commun" tabindex="1">
@@ -637,23 +1030,20 @@
 			<!-- = render 'shared/error_messages', object: f.object -->
 			 <!-- hidden_field_tag :account_type, @account_type  -->
 			 	
-			<div class="errors" style="height: 30px;">
-				<div class="row">
-					<div class="cell-left-reg-commun"></div>
-					<div class="cell-right-reg-commun">
-						<p></p>
-					</div>
-				</div>
+			<div class="errors" style="height: 30px; text-align: left; padding-left: 300px;">
+				<p></p>
 			</div>			
+			 	
 
 			<div class="input-form-spacer"></div>
+
 			<!--name_first-->
 			<div class="row">
 				<div class="cell-left-reg-commun">
 					<%= f.label(:name_first, "First Name", :class => 'input-label required-label', :id => 'label_reg_commun_name_first') %>
 				</div>
 				<div class="cell-right-reg-commun">
-					 <%= f.text_field(:name_first, :class => "input-form required", :placeholder => 'First Name', :tabindex => '2') %>					 
+					 <%= f.text_field(:name_first, :class => "input-form required", :placeholder => 'First Name', :tabindex => '2', :autofocus => true) %>					 
 				</div>
 				<div class="cell-error-reg-commun" id="state_reg_commun_name_first"><p id="error_reg_commun_name_first"></p></div>      					   
 			</div>      		
@@ -711,25 +1101,16 @@
 					<div class="cell-right-reg-commun">
 
 						<div style="display: inline-block; width: 40px;"></div>						
-							<div id="rd_public_private_public" class="rd-button"></div>
-							<%= f.radio_button(:public_private, 'public') %>
-							<label id="label_public_private_public" class="input-label required-label" for="public_private_public" onclick="rd_public_private('public');" tabindex="6">Public</label>
-							 
-							 <!-- f.label(:public_private_public, "Public", :id => 'label_public', :class => "input-label required-label", :tabindex => '6')  -->
+						<div id="rd_public_private_public" class="rd-button"></div>
+						<%= f.radio_button(:public_private, 'public') %>
+						<!-- <label id="label_public_private_public" class="input-label required-label" for="public_private_public" onclick="rd_public_private('public');" tabindex="6">Public</label> -->
+						<span id="label_public_private_public" class="input-label required-label" for="public_private_public" onclick="rd_public_private('public');" tabindex="6">Public</span>
 							 
 						<div style="display: inline-block; width: 30px;"></div>
-							<div id="rd_public_private_private" class="rd-button"></div>						
-							<%= f.radio_button(:public_private, 'private') %>
-							<label id="label_public_private_private" class="input-label required-label" for="public_private_private" onclick="rd_public_private('private');" tabindex="7">Private</label>
-
-							 <!-- f.label(:public_private_private, "Private", :id => 'label_private', :class => "input-label required-label", :tabindex => '7')  -->
-						
-							<!-- <input checked="checked" id="public_private_public" name="public_private" type="radio" value="public" />
-							<label id="label_public" class="input-label required-label" for="public_private_public" onclick="radio_public();" tabindex="6">Public</label>
-							<div style="display: inline-block; width: 30px;"></div>
-							<input checked="checked" id="public_private_private" name="public_private" type="radio" value="private" />
-							<label id="label_private" class="input-label required-label" for="public_private_private" onclick="radio_private();" tabindex="7">Private</label>						 -->
-												 					 
+						<div id="rd_public_private_private" class="rd-button"></div>						
+						<%= f.radio_button(:public_private, 'private') %>
+						<!-- <label id="label_public_private_private" class="input-label required-label" for="public_private_private" onclick="rd_public_private('private');" tabindex="7">Private</label> -->
+						<span id="label_public_private_private" class="input-label required-label" for="public_private_private" onclick="rd_public_private('private');" tabindex="7">Private</span>
 					</div>
 					
 				</div>
@@ -849,7 +1230,8 @@
 										<%= f.check_box :level_1 %>
 									</td>
 									<td>
-										<label id="label_level_1" class="input-label required-label label_cb" for="level_1" onclick="cb_level('1');" tabindex="14">Federal level</label>
+										<!-- <label id="label_level_1" class="input-label required-label label_cb" for="level_1" onclick="cb_level('1');" tabindex="14">Federal level</label> -->
+										<span id="label_level_1" class="input-label required-label label_cb" for="level_1" onclick="cb_level('1');" tabindex="14">Federal level</span>
 									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>
@@ -859,7 +1241,8 @@
 										<%= f.check_box :level_2 %>
 									</td>
 									<td>
-										<label id="label_level_2" class="input-label required-label label_cb" for="level_2" onclick="cb_level('2');" tabindex="15">State level</label>
+										<!-- <label id="label_level_2" class="input-label required-label label_cb" for="level_2" onclick="cb_level('2');" tabindex="15">State level</label> -->
+										<span id="label_level_2" class="input-label required-label label_cb" for="level_2" onclick="cb_level('2');" tabindex="15">State level</span>
 									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>
@@ -869,7 +1252,8 @@
 										<%= f.check_box(:level_3) %>
 									</td>
 									<td>
-										<label id="label_level_3" class="input-label required-label label_cb" for="level_3" onclick="cb_level('3');" tabindex="16">Regional Authority level</label>
+										<!-- <label id="label_level_3" class="input-label required-label label_cb" for="level_3" onclick="cb_level('3');" tabindex="16">Regional Authority level</label> -->
+										<span id="label_level_3" class="input-label required-label label_cb" for="level_3" onclick="cb_level('3');" tabindex="16">Regional Authority level</span>
 									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>
@@ -879,7 +1263,8 @@
 										<%= f.check_box(:level_4) %>
 									</td>
 									<td>
-										<label id="label_level_4" class="input-label required-label label_cb" for="level_4" onclick="cb_level('4');" tabindex="17">District or Campus level senior management</label>
+										<!-- <label id="label_level_4" class="input-label required-label label_cb" for="level_4" onclick="cb_level('4');" tabindex="17">District or Campus level senior management</label> -->
+										<span id="label_level_4" class="input-label required-label label_cb" for="level_4" onclick="cb_level('4');" tabindex="17">District or Campus level senior management</span>
 									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>
@@ -889,7 +1274,8 @@
 										<%= f.check_box(:level_5) %>
 									</td>
 									<td>
-										<label id="label_level_5" class="input-label required-label label_cb" for="level_5" onclick="cb_level('5');" tabindex="18">Department level within managment offices</label>
+										<!-- <label id="label_level_5" class="input-label required-label label_cb" for="level_5" onclick="cb_level('5');" tabindex="18">Department level within managment offices</label> -->
+										<span id="label_level_5" class="input-label required-label label_cb" for="level_5" onclick="cb_level('5');" tabindex="18">Department level within managment offices</span>
 									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>
@@ -899,7 +1285,8 @@
 										<%= f.check_box(:level_6) %>
 									</td>
 									<td>
-										<label id="label_level_6" class="input-label required-label label_cb" for="level_6" onclick="cb_level('6');" tabindex="19">School level senior management</label>
+										<!-- <label id="label_level_6" class="input-label required-label label_cb" for="level_6" onclick="cb_level('6');" tabindex="19">School level senior management</label> -->
+										<span id="label_level_6" class="input-label required-label label_cb" for="level_6" onclick="cb_level('6');" tabindex="19">School level senior management</span>
 									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>
@@ -909,7 +1296,8 @@
 										<%= f.check_box(:level_7) %>
 									</td>
 									<td>
-										<label id="label_level_7" class="input-label required-label label_cb" for="level_7" onclick="cb_level('7');" tabindex="20">Department within School or Classroom level</label>
+										<!-- <label id="label_level_7" class="input-label required-label label_cb" for="level_7" onclick="cb_level('7');" tabindex="20">Department within School or Classroom level</label> -->
+										<span id="label_level_7" class="input-label required-label label_cb" for="level_7" onclick="cb_level('7');" tabindex="20">Department within School or Classroom level</span>
 									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>
@@ -1081,7 +1469,8 @@
 										<%= f.check_box :characterize_area_1 %>
 									</td>
 									<td>
-										<label id="label_characterize_area_1" class="input-label required-label label_cb" for="characterize_area_1" onclick="cb_characterize_area('1');" tabindex="25">Mostly overall administration</label>
+										<!-- <label id="label_characterize_area_1" class="input-label required-label label_cb" for="characterize_area_1" onclick="cb_characterize_area('1');" tabindex="25">Mostly overall administration</label> -->
+										<span id="label_characterize_area_1" class="input-label required-label label_cb" for="characterize_area_1" onclick="cb_characterize_area('1');" tabindex="25">Mostly overall administration</span>
 									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>
@@ -1091,7 +1480,8 @@
 										<%= f.check_box :characterize_area_2 %>
 									</td>
 									<td>
-										<label id="label_characterize_area_2" class="input-label required-label label_cb" for="characterize_area_2" onclick="cb_characterize_area('2');" tabindex="26">Some overall administration</label>
+										<!-- <label id="label_characterize_area_2" class="input-label required-label label_cb" for="characterize_area_2" onclick="cb_characterize_area('2');" tabindex="26">Some overall administration</label> -->
+										<span id="label_characterize_area_2" class="input-label required-label label_cb" for="characterize_area_2" onclick="cb_characterize_area('2');" tabindex="26">Some overall administration</span>
 									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>
@@ -1101,7 +1491,8 @@
 										<%= f.check_box :characterize_area_3 %>
 									</td>
 									<td>
-										<label id="label_characterize_area_3" class="input-label required-label label_cb" for="characterize_area_3" onclick="cb_characterize_area('3');" tabindex="27">Mostly curriculum management</label>
+										<!-- <label id="label_characterize_area_3" class="input-label required-label label_cb" for="characterize_area_3" onclick="cb_characterize_area('3');" tabindex="27">Mostly curriculum management</label> -->
+										<span id="label_characterize_area_3" class="input-label required-label label_cb" for="characterize_area_3" onclick="cb_characterize_area('3');" tabindex="27">Mostly curriculum management</span>
 									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>								
@@ -1111,7 +1502,8 @@
 										<%= f.check_box :characterize_area_4 %>
 									</td>
 									<td>
-										<label id="label_characterize_area_4" class="input-label required-label label_cb" for="characterize_area_4" onclick="cb_characterize_area('4');" tabindex="28">Some overall curriculum management</label>
+										<!-- <label id="label_characterize_area_4" class="input-label required-label label_cb" for="characterize_area_4" onclick="cb_characterize_area('4');" tabindex="28">Some overall curriculum management</label> -->
+										<span id="label_characterize_area_4" class="input-label required-label label_cb" for="characterize_area_4" onclick="cb_characterize_area('4');" tabindex="28">Some overall curriculum management</span>
 									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>								
@@ -1121,9 +1513,12 @@
 										<%= f.check_box :characterize_area_5 %>
 									</td>
 									<td class="cb-pad">
-										<label id="label_characterize_area_5" class="input-label required-label label_cb" for="characterize_area_5" onclick="cb_characterize_area('5');" tabindex="29">
+										<!-- <label id="label_characterize_area_5" class="input-label required-label label_cb" for="characterize_area_5" onclick="cb_characterize_area('5');" tabindex="29">
 											Mostly technical management (devices, networks, programming, storage, back-end system maintenance, telecom services, etc.)
-										</label>
+										</label> -->
+										<span id="label_characterize_area_5" class="input-label required-label label_cb" for="characterize_area_5" onclick="cb_characterize_area('5');" tabindex="29">
+											Mostly technical management (devices, networks, programming, storage, back-end system maintenance, telecom services, etc.)
+										</span>										
 									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>								
@@ -1133,7 +1528,8 @@
 										<%= f.check_box :characterize_area_6 %>
 									</td>
 									<td>
-										<label id="label_characterize_area_6" class="input-label required-label label_cb" for="characterize_area_6" onclick="cb_characterize_area('6');" tabindex="30">Some technical management</label>
+										<!-- <label id="label_characterize_area_6" class="input-label required-label label_cb" for="characterize_area_6" onclick="cb_characterize_area('6');" tabindex="30">Some technical management</label> -->
+										<span id="label_characterize_area_6" class="input-label required-label label_cb" for="characterize_area_6" onclick="cb_characterize_area('6');" tabindex="30">Some technical management</span>
 									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>								
@@ -1143,7 +1539,8 @@
 										<%= f.check_box :characterize_area_7 %>
 									</td>
 									<td>
-										<label id="label_characterize_area_7" class="input-label required-label label_cb" for="characterize_area_7" onclick="cb_characterize_area('7');" tabindex="31">Mostly instructional design</label>
+										<!-- <label id="label_characterize_area_7" class="input-label required-label label_cb" for="characterize_area_7" onclick="cb_characterize_area('7');" tabindex="31">Mostly instructional design</label> -->
+										<span id="label_characterize_area_7" class="input-label required-label label_cb" for="characterize_area_7" onclick="cb_characterize_area('7');" tabindex="31">Mostly instructional design</span>
 									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>								
@@ -1153,7 +1550,8 @@
 										<%= f.check_box :characterize_area_8 %>
 									</td>
 									<td>
-										<label id="label_characterize_area_8" class="input-label required-label label_cb" for="characterize_area_8" onclick="cb_characterize_area('8');" tabindex="32">Some instructional design</label>
+										<!-- <label id="label_characterize_area_8" class="input-label required-label label_cb" for="characterize_area_8" onclick="cb_characterize_area('8');" tabindex="32">Some instructional design</label> -->
+										<span id="label_characterize_area_8" class="input-label required-label label_cb" for="characterize_area_8" onclick="cb_characterize_area('8');" tabindex="32">Some instructional design</span>
 									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>								
@@ -1163,7 +1561,8 @@
 										<%= f.check_box :characterize_area_9 %>
 									</td>
 									<td>
-										<label id="label_characterize_area_9" class="input-label required-label label_cb" for="characterize_area_9" onclick="cb_characterize_area('9');" tabindex="33">Mostly procurement</label>
+										<!-- <label id="label_characterize_area_9" class="input-label required-label label_cb" for="characterize_area_9" onclick="cb_characterize_area('9');" tabindex="33">Mostly procurement</label> -->
+										<span id="label_characterize_area_9" class="input-label required-label label_cb" for="characterize_area_9" onclick="cb_characterize_area('9');" tabindex="33">Mostly procurement</span>
 									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>								
@@ -1173,7 +1572,8 @@
 										<%= f.check_box :characterize_area_10 %>
 									</td>
 									<td>
-										<label id="label_characterize_area_10" class="input-label required-label label_cb" for="characterize_area_10" onclick="cb_characterize_area('10');" tabindex="34">Some procurement</label>
+										<!-- <label id="label_characterize_area_10" class="input-label required-label label_cb" for="characterize_area_10" onclick="cb_characterize_area('10');" tabindex="34">Some procurement</label> -->
+										<span id="label_characterize_area_10" class="input-label required-label label_cb" for="characterize_area_10" onclick="cb_characterize_area('10');" tabindex="34">Some procurement</span>
 									</td>									
 								</tr>
 							</table>
@@ -1243,7 +1643,8 @@
 										<%= f.check_box :survey_preferences_1 %>
 									</td>
 									<td>
-										<label id="label_survey_preferences_1" class="input-label required-label label_cb" for="survey_preferences_1" onclick="cb_survey_preferences('1');" tabindex="36">Individual Amazon or iTunes gift cards</label>
+										<!-- <label id="label_survey_preferences_1" class="input-label required-label label_cb" for="survey_preferences_1" onclick="cb_survey_preferences('1');" tabindex="36">Individual Amazon or iTunes gift cards</label> -->
+										<span id="label_survey_preferences_1" class="input-label required-label label_cb" for="survey_preferences_1" onclick="cb_survey_preferences('1');" tabindex="36">Individual Amazon or iTunes gift cards</span>
 									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>								
@@ -1253,7 +1654,8 @@
 										<%= f.check_box :survey_preferences_2 %>
 									</td>
 									<td>
-										<label id="label_survey_preferences_2" class="input-label required-label label_cb" for="survey_preferences_2" onclick="cb_survey_preferences('2');" tabindex="37">Institutional Amazon or iTunes gift cards</label>
+										<!-- <label id="label_survey_preferences_2" class="input-label required-label label_cb" for="survey_preferences_2" onclick="cb_survey_preferences('2');" tabindex="37">Institutional Amazon or iTunes gift cards</label> -->
+										<span id="label_survey_preferences_2" class="input-label required-label label_cb" for="survey_preferences_2" onclick="cb_survey_preferences('2');" tabindex="37">Institutional Amazon or iTunes gift cards</span>
 									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>								
@@ -1263,7 +1665,8 @@
 										<%= f.check_box :survey_preferences_3 %>
 									</td>
 									<td>
-										<label id="label_survey_preferences_3" class="input-label required-label label_cb" for="survey_preferences_3" onclick="cb_survey_preferences('3');" tabindex="38">Institution named-charity</label>
+										<!-- <label id="label_survey_preferences_3" class="input-label required-label label_cb" for="survey_preferences_3" onclick="cb_survey_preferences('3');" tabindex="38">Institution named-charity</label> -->
+										<span id="label_survey_preferences_3" class="input-label required-label label_cb" for="survey_preferences_3" onclick="cb_survey_preferences('3');" tabindex="38">Institution named-charity</span>
 									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>								
@@ -1273,9 +1676,12 @@
 										<%= f.check_box :survey_preferences_4 %>
 									</td>
 									<td class="cb-pad">
-										<label id="label_survey_preferences_4" class="input-label required-label label_cb" for="survey_preferences_4" onclick="cb_survey_preferences('4');" tabindex="39">
+										<!-- <label id="label_survey_preferences_4" class="input-label required-label label_cb" for="survey_preferences_4" onclick="cb_survey_preferences('4');" tabindex="39">
 											Accrue my give-away for the LC's scholarship fund for poorer schools or districts to be able to travel and attend the Gathering annual event
-										</label>
+										</label> -->
+										<span id="label_survey_preferences_4" class="input-label required-label label_cb" for="survey_preferences_4" onclick="cb_survey_preferences('4');" tabindex="39">
+											Accrue my give-away for the LC's scholarship fund for poorer schools or districts to be able to travel and attend the Gathering annual event
+										</span>
 									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>								
@@ -1285,7 +1691,8 @@
 										<%= f.check_box :survey_preferences_5 %>
 									</td>
 									<td>
-										<label id="label_survey_preferences_5" class="input-label required-label label_cb" for="survey_preferences_5" onclick="cb_survey_preferences('5');" tabindex="40">Opt-out of any contests or give-aways</label>
+										<!-- <label id="label_survey_preferences_5" class="input-label required-label label_cb" for="survey_preferences_5" onclick="cb_survey_preferences('5');" tabindex="40">Opt-out of any contests or give-aways</label> -->
+										<span id="label_survey_preferences_5" class="input-label required-label label_cb" for="survey_preferences_5" onclick="cb_survey_preferences('5');" tabindex="40">Opt-out of any contests or give-aways</span>
 									</td>									
 								</tr>
 								<tr class="cb-spacer"></tr>								
@@ -1344,13 +1751,16 @@
 			<div class="input-form-spacer"></div>
 			<div class="input-form-spacer"></div>
 	
-			<div class="row">
+			<!-- Old Way: <div class="row">
 				<div class="cell-left-reg-commun">
 				</div>
 				<div class="cell-submit-reg-commun" style="padding-left: 0px;">
 					<%= f.submit "Submit", :id => 'btn_submit', :class => 'btn submitregcommun', :tabindex => '42' %>
 				</div>      	
-			</div>      		
+			</div>  : End old Way-->  
+			<div class="submit-button-commun">
+					<%= f.submit "Submit and Download", :id => 'btn_submit', :class => 'btn submitregcommun', :tabindex => '42' %>
+			</div>   		
 
 			<!-- <div class="space-150"></div> -->
 				
@@ -1370,8 +1780,8 @@
 <div style="height: 300px;"></div>
 
 
-    <script src="../scripts/dot.js"></script>    
-    <script src="../scripts/jquery-dropdown-dot.js"></script>
+    <!-- <script src="../scripts/dot.js"></script>    
+    <script src="../scripts/jquery-dropdown-dot.js"></script> -->
 
 
 	<script>
@@ -1383,74 +1793,53 @@
 		}
 
 
-		function showSignin() {
-	
-			$("#form_reg_commun").fadeIn(1000);
-
-			loadSignin();
-			
-		}
-	
-		function loadSignin() {
-			glowBoxGold();
-
-			$("#form_reg_commun").fadeIn( "slow", function(){$("#form_reg_commun").css({'boxShadow': '0 0 30px #0800FA'}) } );
-
-			setTimeout( function(){
-				glowBoxBlack();
-			}, 2500);
-			
-			setTimeout( function(){$("#reg_commun_name_first").focus();}, 1000);
-		}
-		
-		function disableSignin() {
-			$("#form_reg_commun").fadeOut("slow");
-		}
-		
-		function centerSignin() {
-			
-			var a = $("#join-image").width();
-			var b = $("#form_reg_commun").width();
-			
-			var l = ((a/2) - (b/2));
-			
-			$("#form_reg_commun").css({
-				left : l
-			})
-
-			var h1 = $("#join-image").height();
-			
-			var h2 = (h1 * (0.97));
-			
-			$("#form_reg_commun").css({
-				height : h2
-			})			
-
-			var t = ((h1/2) - (h2/2)) * (0.5)
-
-			$("#form_reg_commun").css({
-				top : t
-			})			
-			
-		}
-
-		function glowBoxGold() {
-			$("#form_reg_commun").css({
-				'boxShadow': '0 0 30px #CCAE37'
-			})
-		}
-
-		function glowBoxBlack() {
-			$("#form_reg_commun").css({
-				'boxShadow': '0 0 30px #000'
-			})
-		}
-
-		function glowBoxBlue() {
-			$("#form_reg_commun").css({				
-				'boxShadow': '0 0 5px #ACDDE3'
-			})
-		}
+		// function showSignin() {
+			// $("#form_reg_commun").fadeIn(1000);
+			// loadSignin();
+		// }
+		// function loadSignin() {
+			// glowBoxGold();
+			// $("#form_reg_commun").fadeIn( "slow", function(){$("#form_reg_commun").css({'boxShadow': '0 0 30px #0800FA'}) } );
+			// setTimeout( function(){
+				// glowBoxBlack();
+			// }, 2500);
+			// setTimeout( function(){$("#reg_commun_name_first").focus();}, 1000);
+		// }
+		// function disableSignin() {
+			// $("#form_reg_commun").fadeOut("slow");
+		// }		
+		// function centerSignin() {
+			// var a = $("#join-image").width();
+			// var b = $("#form_reg_commun").width();
+			// var l = ((a/2) - (b/2));
+			// $("#form_reg_commun").css({
+				// left : l
+			// })
+			// var h1 = $("#join-image").height();
+			// var h2 = (h1 * (0.97));
+			// $("#form_reg_commun").css({
+				// height : h2
+			// })			
+			// var t = ((h1/2) - (h2/2)) * (0.5)
+			// $("#form_reg_commun").css({
+				// top : t
+			// })			
+		// }
+		// function glowBoxGold() {
+			// $("#form_reg_commun").css({
+				// 'boxShadow': '0 0 30px #CCAE37'
+			// })
+		// }
+		// function glowBoxBlack() {
+			// $("#form_reg_commun").css({
+				// 'boxShadow': '0 0 30px #000'
+			// })
+		// }
+		// function glowBoxBlue() {
+			// $("#form_reg_commun").css({				
+				// 'boxShadow': '0 0 5px #ACDDE3'
+			// })
+		// }
 		
 
 		validatorCalled = false;
@@ -1509,13 +1898,14 @@
 							? '1 required field missed'
 							: errors + ' required fields missed';
 							$("div.errors p").html(message);
-							$("div.errors").show();
+							// $("div.errors").show();
 							$("#btn_submit").blur();
 							$("#form_reg_commun").focus();
 							scrollToAnchor('anchor1');
 							// jQuery('html, body').animate({scrollTop: 100}, 1000);				
 						} else {
-							$("div.errors").hide();
+							// $("div.errors").hide();
+							$("div.errors p").html("");
 						}
 					}
 				},
@@ -1639,13 +2029,14 @@
 						? '1 required field missed'
 						: errors + ' required fields missed';
 						$("div.errors p").html(message);
-						$("div.errors").show();
+						// $("div.errors").show();
 						$("#btn_submit").blur();
 						$("#form_reg_commun").focus();			
 						scrollToAnchor('anchor1');
 						// jQuery('html, body').animate({scrollTop: 0}, 1000);			
 					} else {
-						$("div.errors").hide();
+						// $("div.errors").hide();
+						$("div.errors p").html("");
 					}
 				},				
 				messages: {
@@ -1717,7 +2108,7 @@
 					$('#label_' + label.attr('for')).removeClass('error-label').addClass('required-label');
 					
 					$('#state_' + label.attr('for')).css ({			
-						background: 'url("/assets/submit_form_tick.png") no-repeat 0px 5px'
+						background: 'url("/assets/submit_form_tick.png") no-repeat 0px 0px'
 					});
 
 					$('#error_' + label.attr('for')).html("");
@@ -1736,7 +2127,7 @@
 			// });
 		}
 		
-		function updateErrorCount () {
+		function updateErrorCount() {
 
 			//val = formval.validator;
 			
@@ -1773,9 +2164,10 @@
 					? '1 required field missed'
 					: errors + ' required fields missed';
 					$("div.errors p").html(message);
-					$("div.errors").show();
+					// $("div.errors").show();
 				} else {
-					$("div.errors").hide();
+					// $("div.errors").hide();
+					$("div.errors p").html("");
 				}
 				
 				val.reset();
@@ -1810,7 +2202,7 @@
 					$('#label_' + element).removeClass('error-label').addClass('required-label');
 					
 					$('#' + element).css ({			
-						'border-color' : '#005C9E'
+						'border-color' : '#41b737'
 					});					
 				}
 				else {
@@ -1870,10 +2262,12 @@
 
 		$("#reg_commun_level_other").on("blur", function () {
 			validateLevel();
+			updateErrorCount();
 		});
 
 		$("#reg_commun_characterize_area_other").on("blur", function () {
 			validateCharacterizeArea();
+			updateErrorCount();
 		});
 
 		// $("#reg_commun_survey_preferences_other").on("blur", function () {
@@ -1921,20 +2315,20 @@
 				$('#error_reg_commun_public_private').html("*");
 				
 				$("#state_reg_commun_public_private").css ({			
-					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
+					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 0px'
 				});				
 				
 				
 			}
 			else {
 				$("#border_public_private").css ({
-					'border-color' : '#005C9E'
+					'border-color' : '#41b737'
 				});
 				
 				$('#error_reg_commun_public_private').html("");
 				
 				$("#state_reg_commun_public_private").css ({			
-					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 5px'
+					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 0px'
 				});																
 			}
 			
@@ -1992,6 +2386,8 @@
 				validateRadio1();
 				rd_public_private_clicked = true;
 			}
+			
+			updateErrorCount();
 		}
 				
 				
@@ -2010,6 +2406,7 @@
 				$(sb).addClass("cb-background");			
 			}
 			validateLevel();			
+			updateErrorCount();
 		}
 				
 		function cb_characterize_area(caller) {
@@ -2026,6 +2423,7 @@
 				$(sb).addClass("cb-background");			
 			}
 			validateCharacterizeArea();			
+			updateErrorCount();
 		}
 
 		function cb_survey_preferences(caller) {
@@ -2041,7 +2439,8 @@
 
 				$(sb).addClass("cb-background");			
 			}
-			validateSurveyPreferences();			
+			validateSurveyPreferences();		
+			updateErrorCount();	
 		}
 
 
@@ -2072,18 +2471,18 @@
 				}
 	
 				$("#state_reg_commun_level").css ({			
-					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
+					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 0px'
 				});				
 			}
 			else {
 				$("#border_level").css ({
-					'border-color' : '#005C9E'
+					'border-color' : '#41b737'
 				});
 				
 				$('#error_reg_commun_level').html("");
 				
 				$("#state_reg_commun_level").css ({			
-					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 5px'
+					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 0px'
 				});
 			}
 
@@ -2122,18 +2521,18 @@
 				}
 	
 				$("#state_reg_commun_characterize_area").css ({			
-					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
+					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 0px'
 				});				
 			}
 			else {
 				$("#border_characterize_area").css ({
-					'border-color' : '#005C9E'
+					'border-color' : '#41b737'
 				});
 				
 				$('#error_reg_commun_characterize_area').html("");
 				
 				$("#state_reg_commun_characterize_area").css ({			
-					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 5px'
+					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 0px'
 				});
 			}
 
@@ -2167,18 +2566,18 @@
 				}
 	
 				$("#state_reg_commun_survey_preferences").css ({			
-					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
+					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 0px'
 				});				
 			}
 			else {
 				$("#border_survey_preferences").css ({
-					'border-color' : '#005C9E'
+					'border-color' : '#41b737'
 				});
 				
 				$('#error_reg_commun_survey_preferences').html("");
 				
 				$("#state_reg_commun_survey_preferences").css ({			
-					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 5px'
+					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 0px'
 				});
 			}
 
@@ -2197,7 +2596,7 @@
 			
 			if ($("#reg_commun_institution_size option:selected").val() == '0') {
 				$('#state_reg_commun_institution_size').css ({			
-					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
+					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 0px'
 				});
 				
 				$('.dropdown1').css ({			
@@ -2208,7 +2607,7 @@
 			}
 			else {
 				$('#state_reg_commun_institution_size').css ({			
-					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 5px'
+					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 0px'
 				});
 				
 				$('.dropdown1').css ({			
@@ -2217,12 +2616,12 @@
 		
 				if( !selectValid1 ) {
 					$('.dropdown1').css ({			
-						'border-color' : '#005C9E'
+						'border-color' : '#41b737'
 					});
 					
 					$('.dropdown1 > .selected i').css ({			
-						'color' : '#005C9E',
-						'border-left-color' : '#005C9E' 
+						'color' : '#41b737',
+						'border-left-color' : '#41b737' 
 					});
 					
 					$('#error_reg_commun_institution_size').html("");					
@@ -2257,12 +2656,12 @@
 			}
 			else {
 				$('.dropdown1').css ({			
-					'border-color' : '#005C9E'
+					'border-color' : '#41b737'
 				});
 				
 				$('.dropdown1 > .selected i').css ({			
-					'color' : '#005C9E',
-					'border-left-color' : '#005C9E' 
+					'color' : '#41b737',
+					'border-left-color' : '#41b737' 
 				});
 
 				$('#error_reg_commun_institution_size').html("");
@@ -2280,7 +2679,7 @@
 			
 			if ($("#reg_commun_employee_number option:selected").val() == '0') {
 				$('#state_reg_commun_employee_number').css ({			
-					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
+					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 0px'
 				});
 				
 				$('.dropdown2').css ({			
@@ -2291,7 +2690,7 @@
 			}
 			else {
 				$('#state_reg_commun_employee_number').css ({			
-					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 5px'
+					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 0px'
 				});
 				
 				$('.dropdown2').css ({			
@@ -2300,12 +2699,12 @@
 		
 				if( !selectValid2 ) {
 					$('.dropdown2').css ({			
-						'border-color' : '#005C9E'
+						'border-color' : '#41b737'
 					});
 					
 					$('.dropdown2 > .selected i').css ({			
-						'color' : '#005C9E',
-						'border-left-color' : '#005C9E' 
+						'color' : '#41b737',
+						'border-left-color' : '#41b737' 
 					});
 					
 					$('#error_reg_commun_employee_number').html("");					
@@ -2325,7 +2724,7 @@
 			
 			if ($("#reg_commun_employee_number option:selected").val() == '0') {
 				// $('#state_reg_event_city_workshop').css ({			
-					// background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
+					// background: 'url("/assets/submit_form_empty.png") no-repeat 0px 0px'
 				// });
 // 				
 				// $('.dropdown').css ({			
@@ -2347,12 +2746,12 @@
 			}
 			else {
 				$('.dropdown2').css ({			
-					'border-color' : '#005C9E'
+					'border-color' : '#41b737'
 				});
 				
 				$('.dropdown2 > .selected i').css ({			
-					'color' : '#005C9E',
-					'border-left-color' : '#005C9E' 
+					'color' : '#41b737',
+					'border-left-color' : '#41b737' 
 				});
 
 				$('#error_reg_commun_employee_number').html("");
@@ -2371,7 +2770,7 @@
 			
 			if ($("#reg_commun_characterize_decision option:selected").val() == '0') {
 				$('#state_reg_commun_characterize_decision').css ({			
-					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
+					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 0px'
 				});
 				
 				$('.dropdown3').css ({			
@@ -2382,7 +2781,7 @@
 			}
 			else {
 				$('#state_reg_commun_characterize_decision').css ({			
-					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 5px'
+					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 0px'
 				});
 				
 				$('.dropdown3').css ({			
@@ -2391,12 +2790,12 @@
 		
 				if( !selectValid1 ) {
 					$('.dropdown3').css ({			
-						'border-color' : '#005C9E'
+						'border-color' : '#41b737'
 					});
 					
 					$('.dropdown3 > .selected i').css ({			
-						'color' : '#005C9E',
-						'border-left-color' : '#005C9E' 
+						'color' : '#41b737',
+						'border-left-color' : '#41b737' 
 					});
 					
 					$('#error_reg_commun_characterize_decision').html("");					
@@ -2416,7 +2815,7 @@
 			
 			if ($("#reg_commun_characterize_decision option:selected").val() == '0') {
 				// $('#state_reg_event_city_workshop').css ({			
-					// background: 'url("/assets/submit_form_empty.png") no-repeat 0px 5px'
+					// background: 'url("/assets/submit_form_empty.png") no-repeat 0px 0px'
 				// });
 // 				
 				// $('.dropdown').css ({			
@@ -2438,12 +2837,13 @@
 			}
 			else {
 				$('.dropdown3').css ({			
-					'border-color' : '#005C9E'
+					'border-color' : '#41b737'//'#005C9E'
 				});
 				
 				$('.dropdown3 > .selected i').css ({			
-					'color' : '#005C9E',
-					'border-left-color' : '#005C9E' 
+					'color' : '#41b737', //was #005C9E
+					//'border-left-color' : '#005C9E'  
+					'border-left-color' : '#41b737'
 				});
 
 				$('#error_reg_commun_characterize_decision').html("");
@@ -2457,27 +2857,97 @@
 		$(window).load( function() {
 		//$(document).ready(function(){
 			
-			var image = '../backgrounds/comp025.jpg';
-
-			img = $('<img />');
+			formValidate();			
 			
-			img.bind('load', function() {
-				
-			    // $('#loading').fadeOut(1000);
-
-				setTimeout( function(){
-					centerSignin();
-					showSignin();
-					formValidate();
-				}, 500);
-			});
- 			
-			img.attr('src', image);
- 			
-			$('#join-image').css({
-				//background: '#F1F2E1 url(' + image + ') no-repeat right top'
-				background: '#F1F2E1 url(' + image + ') repeat right top'
-			})
+    		$("#reg_commun_name_first").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#reg_commun_name_last").focus();
+      			}
+    		});				
+    		$("#reg_commun_name_last").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#reg_commun_name_title").focus();
+      			}
+    		});				
+    		$("#reg_commun_name_title").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#reg_commun_name_affiliation").focus();
+      			}
+    		});				
+    		$("#reg_commun_name_affiliation").keypress(function(e){
+      			if(e.keyCode==13) {
+      				e.preventDefault();
+      				$("#label_public_private_public").focus();
+      			}
+    		});				
+    		$("#reg_commun_address").keypress(function(e){
+      			if(e.keyCode==13) {
+      				e.preventDefault();
+      				$("#reg_commun_city").focus();
+      			}
+    		});				
+    		$("#reg_commun_city").keypress(function(e){
+      			if(e.keyCode==13) {
+      				e.preventDefault();
+      				$("#reg_commun_state").focus();
+      			}
+    		});				
+    		$("#reg_commun_state").keypress(function(e){
+      			if(e.keyCode==13) {
+      				e.preventDefault();
+      				$("#reg_commun_zip").focus();
+      			}
+    		});				
+    		$("#reg_commun_zip").keypress(function(e){
+      			if(e.keyCode==13) {
+      				e.preventDefault();
+      				$("#reg_commun_phone").focus();
+      			}
+    		});				
+    		$("#reg_commun_phone").keypress(function(e){
+      			if(e.keyCode==13) {
+      				e.preventDefault();
+      				$("#reg_commun_email").focus();
+      			}
+    		});				
+    		$("#reg_commun_email").keypress(function(e){
+      			if(e.keyCode==13) {
+      				e.preventDefault();
+      				$("#label_level_1").focus();
+      			}
+    		});				
+    		$('#reg_commun_level_other').keypress(function(e){
+      			if(e.keyCode==13) {
+      				e.preventDefault();
+      				// $("#focus_point").attr("tabindex",-1).focus();
+      				$("#dropdown1").attr("tabindex", 22).focus();
+      			}
+    		});				
+    		$('#dropdown1').keypress(function(e){
+      			if(e.keyCode==13)
+      			$("#dropdown2").focus();
+    		});				
+			
+			
+			
+			// var image = '../backgrounds/.jpg';
+			// img = $('<img />');
+			// img.bind('load', function() {
+			    // // $('#loading').fadeOut(1000);
+				// setTimeout( function(){
+					// centerSignin();
+					// showSignin();
+					// formValidate();
+				// }, 500);
+			// });
+			// img.attr('src', image);
+			// $('#join-image').css({
+				// //background: '#F1F2E1 url(' + image + ') no-repeat right top'
+				// background: '#FFFFFF url(' + image + ') no-repeat'
+			// })
 				
 			
 			
@@ -2568,12 +3038,16 @@
 				
 				
     		$('#label_public_private_public').keypress(function(e){
-      			if(e.keyCode==13)
-      			$('#rd_public_private_public').click();
+      			if(e.keyCode==13) {
+      				$('#rd_public_private_public').click();
+      				$("#reg_commun_address").focus();
+      			}
     		});				
     		$('#label_public_private_private').keypress(function(e){
-      			if(e.keyCode==13)
-      			$('#label_public_private_private').click();
+      			if(e.keyCode==13) {
+      				$('#label_public_private_private').click();
+      				$("#reg_commun_address").focus();
+      			}      			
     		});				
 
 
@@ -2582,94 +3056,146 @@
 
 
     		$('#label_level_1').keypress(function(e){
-      			if(e.keyCode==13)
-      			$('#label_level_1').click();
+      			if(e.keyCode==13) {
+      				$('#label_level_1').click();
+      				$("#label_level_2").focus();
+      			}
     		});				
     		$('#label_level_2').keypress(function(e){
-      			if(e.keyCode==13)
-      			$('#label_level_2').click();
+      			if(e.keyCode==13) {
+      				$('#label_level_2').click();
+      				$("#label_level_3").focus();
+      			}
     		});				
     		$('#label_level_3').keypress(function(e){
-      			if(e.keyCode==13)
-      			$('#label_level_3').click();
+      			if(e.keyCode==13) {
+      				$('#label_level_3').click();
+      				$("#label_level_4").focus();
+      			}
     		});				
     		$('#label_level_4').keypress(function(e){
-      			if(e.keyCode==13)
-      			$('#label_level_4').click();
+      			if(e.keyCode==13) {
+      				$('#label_level_4').click();
+      				$("#label_level_5").focus();
+      			}
     		});				
     		$('#label_level_5').keypress(function(e){
-      			if(e.keyCode==13)
-      			$('#label_level_5').click();
+      			if(e.keyCode==13) {
+      				$('#label_level_5').click();
+      				$("#label_level_6").focus();
+      			}      			
     		});				
     		$('#label_level_6').keypress(function(e){
-      			if(e.keyCode==13)
-      			$('#label_level_6').click();
+      			if(e.keyCode==13) {
+      				$('#label_level_6').click();
+      				$("#label_level_7").focus();
+      			}      			
     		});				
     		$('#label_level_7').keypress(function(e){
-      			if(e.keyCode==13)
-      			$('#label_level_7').click();
+      			if(e.keyCode==13) {
+      				$('#label_level_7').click();
+      				$("#reg_commun_level_other").focus();
+      			}      			
     		});				
 				
     		$('#label_characterize_area_1').keypress(function(e){
-      			if(e.keyCode==13)
-      			$('#label_characterize_area_1').click();
+      			if(e.keyCode==13) {
+	      			$('#label_characterize_area_1').click();
+	      			$('#label_characterize_area_2').focus();
+      			}      			
     		});				
     		$('#label_characterize_area_2').keypress(function(e){
-      			if(e.keyCode==13)
-      			$('#label_characterize_area_2').click();
+      			if(e.keyCode==13) {
+	      			$('#label_characterize_area_2').click();
+	      			$('#label_characterize_area_3').focus();
+      			}      			      			
     		});				
     		$('#label_characterize_area_3').keypress(function(e){
-      			if(e.keyCode==13)
-      			$('#label_characterize_area_3').click();
+      			if(e.keyCode==13) {
+	      			$('#label_characterize_area_3').click();
+	      			$('#label_characterize_area_4').focus();
+      			}      			      			
     		});				
     		$('#label_characterize_area_4').keypress(function(e){
-      			if(e.keyCode==13)
-      			$('#label_characterize_area_4').click();
+      			if(e.keyCode==13) {
+	      			$('#label_characterize_area_4').click();
+	      			$('#label_characterize_area_5').focus();
+      			}      			      			
     		});				
     		$('#label_characterize_area_5').keypress(function(e){
-      			if(e.keyCode==13)
-      			$('#label_characterize_area_5').click();
+      			if(e.keyCode==13) {
+	      			$('#label_characterize_area_5').click();
+	      			$('#label_characterize_area_6').focus();
+      			}      			      			
     		});				
     		$('#label_characterize_area_6').keypress(function(e){
-      			if(e.keyCode==13)
-      			$('#label_characterize_area_6').click();
+      			if(e.keyCode==13) {
+	      			$('#label_characterize_area_6').click();
+	      			$('#label_characterize_area_7').focus();
+      			}      			      			
     		});				
     		$('#label_characterize_area_7').keypress(function(e){
-      			if(e.keyCode==13)
-      			$('#label_characterize_area_7').click();
+      			if(e.keyCode==13) {
+	      			$('#label_characterize_area_7').click();
+	      			$('#label_characterize_area_8').focus();
+      			}      			      			
     		});				
     		$('#label_characterize_area_8').keypress(function(e){
-      			if(e.keyCode==13)
-      			$('#label_characterize_area_8').click();
+      			if(e.keyCode==13) {
+	      			$('#label_characterize_area_8').click();
+	      			$('#label_characterize_area_9').focus();
+      			}      			      			
     		});				
     		$('#label_characterize_area_9').keypress(function(e){
-      			if(e.keyCode==13)
-      			$('#label_characterize_area_9').click();
+      			if(e.keyCode==13) {
+	      			$('#label_characterize_area_9').click();
+	      			$('#label_characterize_area_10').focus();
+      			}      			      			
     		});				
     		$('#label_characterize_area_10').keypress(function(e){
-      			if(e.keyCode==13)
-      			$('#label_characterize_area_10').click();
+      			if(e.keyCode==13) {
+	      			$('#label_characterize_area_10').click();
+	      			$('#reg_commun_characterize_area_other').focus();
+      			}      			      			
+    		});				
+    		$('#reg_commun_characterize_area_other').keypress(function(e){
+      			if(e.keyCode==13) {
+      				e.preventDefault();
+	      			$('#label_survey_preferences_1').focus();
+      			}      			      			
     		});				
 
+
     		$('#label_survey_preferences_1').keypress(function(e){
-      			if(e.keyCode==13)
-      			$('#label_survey_preferences_1').click();
+      			if(e.keyCode==13) {
+	      			$('#label_survey_preferences_1').click();
+	      			$('#label_survey_preferences_2').focus();
+      			}      			      			
     		});				
     		$('#label_survey_preferences_2').keypress(function(e){
-      			if(e.keyCode==13)
-      			$('#label_survey_preferences_2').click();
+      			if(e.keyCode==13) {
+	      			$('#label_survey_preferences_2').click();
+	      			$('#label_survey_preferences_3').focus();
+      			}      			      			      			
     		});				
     		$('#label_survey_preferences_3').keypress(function(e){
-      			if(e.keyCode==13)
-      			$('#label_survey_preferences_3').click();
+      			if(e.keyCode==13) {
+	      			$('#label_survey_preferences_3').click();
+	      			$('#label_survey_preferences_4').focus();
+      			}      			      			      			
     		});				
     		$('#label_survey_preferences_4').keypress(function(e){
-      			if(e.keyCode==13)
-      			$('#label_survey_preferences_4').click();
+      			if(e.keyCode==13) {
+	      			$('#label_survey_preferences_4').click();
+	      			$('#label_survey_preferences_5').focus();
+      			}      			      			      			
     		});				
     		$('#label_survey_preferences_5').keypress(function(e){
-      			if(e.keyCode==13)
-      			$('#label_survey_preferences_5').click();
+      			if(e.keyCode==13) {
+	      			$('#label_survey_preferences_5').click();
+	      			// $("input[name=recaptcha_response_field]").attr("tabindex","41").focus();
+	      			$("#recaptcha_response_field").attr("tabindex","41").focus();
+      			}      			      			      			
     		});				
 				
 			$('input:checkbox').on('change', function() {
@@ -2678,17 +3204,38 @@
 				validateSurveyPreferences();
 			});
 
+
+
 			$('select').dropdown({
 			    'changed': function(data) {
-			        selectStatus1();
-			        selectStatus2();
-			       	selectStatus3();			        
+			    	// console.log(data.select_id);
+					// reg_commun_institution_size
+					// reg_commun_employee_number
+					// reg_commun_characterize_decision
+			    	if( data.select_id == "reg_commun_institution_size") {
+			    		selectStatus1();	
+			    		$("#dropdown2").attr("tabindex", 23).focus();
+			    	}
+			    	if( data.select_id == "reg_commun_employee_number") {
+			    		selectStatus2();	
+			    		$("#dropdown3").attr("tabindex", 24).focus();
+			    	}
+			    	if( data.select_id == "reg_commun_characterize_decision") {
+			    		selectStatus3();	
+			    		$("#label_characterize_area_1").attr("tabindex", 25).focus();
+			    	}
 			    }
 			});	    
 
 
-
 			$("input[name=recaptcha_response_field]").attr("tabindex","41");
+    		$("input[name=recaptcha_response_field]").keypress(function(e){
+      			if(e.keyCode==13) {
+      				e.preventDefault();
+      				$("#btn_submit").focus();
+      			}
+    		});				
+
 
 			// $('#btn_submit').on('click', function( event ) {
 				// event.preventDefault();
@@ -2696,15 +3243,15 @@
 				// // return false;
 			// });
 
-			$(document).ready(function(){
-				$('#reportform').on('ajax:success',function(data, status, xhr){
-			    	// $('#reportalert').text('Done.');
-			    	alert('done');
-			    }).on('ajax:error',function(xhr, status, error){
-			    	alert('error');
-			      	// $('#reportalert').text('Failed.');
-			    });
-			});
+			// $(document).ready(function(){
+				// $('#reportform').on('ajax:success',function(data, status, xhr){
+			    	// // $('#reportalert').text('Done.');
+			    	// alert('done');
+			    // }).on('ajax:error',function(xhr, status, error){
+			    	// alert('error');
+			      	// // $('#reportalert').text('Failed.');
+			    // });
+			// });
 
 			// $("#btn_submit").on('click', function( event ) {
 				// event.preventDefault();

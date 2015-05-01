@@ -1,149 +1,11 @@
 <% provide(:title, 'Event Photos') %>
 
 	
-	<script type="text/javascript" src="/assets/jquery.min.js"></script>
-    <!-- <script src="../scripts/dot.js"></script>    
-    <script src="../scripts/jquery-dropdown-dot.js"></script> -->
-
-	<!-- <link rel="stylesheet" type="text/css" href="../styles/dropdown.css"/> -->
-
+	<!-- <script type="text/javascript" src="/assets/jquery.min.js"></script> -->
 	<!-- <link rel="stylesheet" href="/gallery/styles/elegant-press.css" type="text/css" />
-	<script src="/gallery/scripts/elegant-press.js" type="text/javascript"></script> -->
-
-				
-	<style type="text/css">
-	
-		@font-face {
-			font-family: KlavikaExtraLight;
-			src: url('/assets/KlavikaWebDisplayExtraLight.eot');
-			src: url('/assets/KlavikaWebDisplayExtraLight.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebDisplayExtraLight.woff') format('woff');
-		}
-		@font-face {
-			font-family: KlavikaLight;
-			src: url('/assets/KlavikaWebBasicLight.eot');
-			src: url('/assets/KlavikaWebBasicLight.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicLight.woff') format('woff');
-		}
-		@font-face {
-			font-family: KlavikaRegular;
-			src: url('/assets/KlavikaWebBasicRegular.eot');
-			src: url('/assets/KlavikaWebBasicRegular.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicRegular.woff') format('woff');
-		}		
-		@font-face {
-			font-family: KlavikaMedium;
-			src: url('/assets/KlavikaWebBasicMedium.eot');
-			src: url('/assets/KlavikaWebBasicMedium.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicMedium.woff') format('woff');
-		}
-		@font-face {
-			font-family: KlavikaBold;
-			src: url('/assets/KlavikaWebBasicBold.eot');
-			src: url('/assets/KlavikaWebBasicBold.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebBasicBold.woff') format('woff');
-		}
-		@font-face {
-			font-family: KlavikaBlack;
-			src: url('/assets/KlavikaWebDisplayBlack.eot');
-			src: url('/assets/KlavikaWebDisplayBlack.eot?#iefix') format('embedded-opentype'), url('/assets/KlavikaWebDisplayBlack.woff') format('woff');
-		}
-	
-	</style>		
-	
-	<style type="text/css">
-		@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
-	</style>
-
-
-	<style>
-	
-		body {
-			/*margin-top: 30px;
-			font-size: 13px;
-			font-family: Tahoma, Georgia, "Times New Roman", Times, serif;
-			font-family: Century Gothic, sans-serif;
-			color: #000;
-			padding: 0;
-			text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2)*/
-			background: #eee url(/assets/comp025.jpg) repeat;				
-		}
-		/*select {
-		    display:none;
-		}*/			
-		.k-decorate-none {
-			text-decoration: none;
-		}
-		.kbyline-none-caps {
-			/*line-height: 14px;*/
-			white-space: nowrap;
-			/*text-transform: uppercase;*/
-			font-family: KlavikaMedium, Arial, sans-serif;
-			font-size: 12px;
-		}
-		.k-b-headline-gallery {
-			/*font-size: 20px;*/
-			line-height: 14px;
-			color: #000;
-			font-family: KlavikaBlack, Arial, sans-serif;
-			margin-top: 6px;
-			margin-left: 6px;
-			width: 260px;
-			position: relative;
-			height: auto;
-		}
-		.title-gallery {
-			font-size: 26px;
-			line-height: 20px;
-			color: #8A5A0C;
-			font-family: KlavikaBlack, Arial, sans-serif;
-			/*text-shadow: 2px 2px #F5DDB8;*/
-			margin-left: 0px;
-		}
-		.title-galler-table {
-			width: 100%;	
-		}
-		.title-galler-table-col1 {
-			text-align: left;
-			padding-left: 70px;				
-		}
-		.title-galler-table-col2 {
-			text-align: right;
-			padding-right: 70px;												
-		}
-
-		
-		.search-by-tab-btn {
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 12px; 
-			background-color: #8A5A0C;
-			color: #fff;
-		  	width: 400px;
-		  	height: 20px;
-		}
-		.search-by-tab-btn ul li:{
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 12px; 
-			background-color: #8A5A0C;
-			color: #fff;
-		  	width: 400px;
-		  	height: 20px;
-		}
-		
-		
-		
-		.k-cell-divider-none {
-			border-right: 1px solid #fff;
-			width: 1px;
-			display: inline-block;
-		}
-		.ktop-none {
-			border-top: 1px solid #fff;
-		}
-		.kbottom-none {
-			border-top: 1px solid #fff;
-		}
-				
-	</style>
-					
-
+	<script src="/gallery/scripts/elegant-press.js" type="text/javascript"></script>
   	<link rel="stylesheet" href="../chosen/chosen.css">
-  	<script src="../chosen/chosen.jquery.js" type="text/javascript"></script>
+  	<script src="../chosen/chosen.jquery.js" type="text/javascript"></script> -->
 
 
 	<div id="id_default" style="width: 1200px; margin-right: auto; margin-left: auto; background: #fff; min-height: 800px;">
@@ -164,10 +26,10 @@
 			Chicago, IL, April 15
 			Richmond, VA, May 6
 			Los Angeles, CA, May 22 
-			-->
+			
 
 			<div style="margin-left: 70px;">
-          		<select id="event_photos_montage" data-placeholder="Choose a City" class="chosen-select" style="width:400px;" tabindex="2">
+          		<select id="event_photos_montage" data-placeholder="Choose a City" class="chosen-select" style="display: none;" tabindex="2">
             		<option value="0"></option>
             		<option value="1">Columbia, SC, Feb 27, 2014</option>
             		<option value="2">Fresno, CA, April 2, 2014</option>
@@ -177,7 +39,7 @@
             		<option value="6">Los Angeles, CA, May 22, 2014</option>
             		<option value="7">Minneapolis, MN, June 17, 2014</option>
           		</select>
-			</div>
+			</div>-->
 			
 		  	<script type="text/javascript">
 		    	var config = {
@@ -192,11 +54,114 @@
 		    	}
 		  	</script>
 
+		  	<!-- event main image links -->
+		  	<div id="event-news-main">
+		  		<h1 class="title-h1-main"><img width="100" src="/repository/bubble3.jpeg">Digital Curriculum Strategy Discussion 
+		  			<span>Gallery Index</span></h1>
+				
+				<ul class="event-news-list">
+		  		<h2><span style="font-size: 28px; color: #f8b242; padding-left: 0px;">National Gathering</span><br/>
+		  			New Orleans, LA, November 2-3, 2014 <span>Click an image to see full gallery</span></h2>
+		<li><a href="/Event-Photos-New-Orleans"><img width="270" height="180" alt="" src="../event_news_images_14/web-new-orleans-27.jpg"></a></li>
+		<li><a href="/Event-Photos-New-Orleans"><img width="270" height="180" alt="" src="../event_news_images_14/web-new-orleans-38.jpg"></a></li>
+		<li><a href="/Event-Photos-New-Orleans"><img width="270" height="180" alt="" src="../event_news_images_14/web-new-orleans-41.jpg"></a></li>
+				</ul>
 
-		<div id="render"></div>
+		  		<ul class="event-news-list">
+		  		<h2>Boston, MA, October 28, 2014 <span>Click an image to see full gallery</span></h2>
+		<li><a href="/Event-Photos-Boston"><img width="270" height="180" alt="" src="../event_news_images_13/web-boston-04.jpg"></a></li>
+		<li><a href="/Event-Photos-Boston"><img width="270" height="180" alt="" src="../event_news_images_13/web-boston-26.jpg"></a></li>
+		<li><a href="/Event-Photos-Boston"><img width="270" height="180" alt="" src="../event_news_images_13/web-boston-03.jpg"></a></li>
+				</ul>
+				
+				<ul class="event-news-list">
+		  		<h2>Tampa, FL, October 16, 2014 <span>Click an image to see full gallery</span></h2>
+		<li><a href="/Event-Photos-Tampa"><img width="270" height="180" alt="" src="../event_news_images_12/web-tampa-07.jpg"></a></li>
+		<li><a href="/Event-Photos-Tampa"><img width="270" height="180" alt="" src="../event_news_images_12/web-tampa-28.jpg"></a></li>
+		<li><a href="/Event-Photos-Tampa"><img width="270" height="180" alt="" src="../event_news_images_12/web-tampa-33.jpg"></a></li>
+				</ul>
+				
+				<ul class="event-news-list">
+		  		<h2>Santa Clara, CA, September 30, 2014 <span>Click an image to see full gallery</span></h2>
+		<li><a href="/Event-Photos-Santa-Clara"><img width="270" height="180" alt="" src="../event_news_images_11/logo_santaclara-14-web.jpg"></a></li>
+		<li><a href="/Event-Photos-Santa-Clara"><img width="270" height="180" alt="" src="../event_news_images_11/logo_santaclara-52-web.jpg"></a></li>
+		<li><a href="/Event-Photos-Santa-Clara"><img width="270" height="180" alt="" src="../event_news_images_11/logo_santaclara-36-web.jpg"></a></li>
+				</ul>
+				
+		  		<ul class="event-news-list">
+		  		<h2>Newark, NJ, September 25, 2014 <span>Click an image to see full gallery</span></h2>
+		<li><a href="/Event-Photos-Newark"><img width="270" height="164" alt="" src="../event_news_images_10/logo_newark-53web.jpg"></a></li>
+		<li><a href="/Event-Photos-Newark"><img width="270" height="164" alt="" src="../event_news_images_10/logo_newark-28web.jpg"></a></li>
+		<li><a href="/Event-Photos-Newark"><img width="270" height="164" alt="" src="../event_news_images_10/logo_newark-30web.jpg"></a></li>
+				</ul>
 
+		  		<ul class="event-news-list">
+		  		<h2>Dallas, TX, September 18, 2014 <span>Click an image to see full gallery</span></h2>
+		<li><a href="/Event-Photos-Dallas"><img width="270" height="180" alt="" src="../event_news_images_9/logo_dallas-17web.jpg"></a></li>
+		<li><a href="/Event-Photos-Dallas"><img width="270" height="180" alt="" src="../event_news_images_9/logo_dallas-42web.jpg"></a></li>
+		<li><a href="/Event-Photos-Dallas"><img width="270" height="180" alt="" src="../event_news_images_9/logo_dallas-20web.jpg"></a></li>
+				</ul>
+
+		  		<ul class="event-news-list">
+		  		<h2>Denver, CO, September 9, 2014 <span>Click an image to see full gallery</span></h2>
+		<li><a href="/Event-Photos-Denver"><img width="270" height="180" alt="" src="../event_news_images_8/logo_denver-3web.jpeg"></a></li>
+		<li><a href="/Event-Photos-Denver"><img width="270" height="180" alt="" src="../event_news_images_8/logo_denver-49web.jpeg"></a></li>
+		<li><a href="/Event-Photos-Denver"><img width="270" height="180" alt="" src="../event_news_images_8/logo_denver-11web.jpeg"></a></li>
+				</ul>
+
+		  		<ul class="event-news-list">
+		  		<h2>Minneapolis, MN, June 17, 2014 <span>Click an image to see full gallery</span></h2>
+		<li><a href="/Event-Photos-Minneapolis"><img width="270" height="180" alt="Minneapolis" src="../event_news_images_7/logo_IMG_1.JPG"></a></li>
+		<li><a href="/Event-Photos-Minneapolis"><img width="270" height="180" alt="Minneapolis" src="../event_news_images_7/logo_IMG_2.JPG"></a></li>
+		<li><a href="/Event-Photos-Minneapolis"><img width="270" height="180" alt="Minneapolis" src="../event_news_images_7/logo_IMG_57.JPG"></a></li>
+				</ul>
+
+		  		<ul class="event-news-list">
+		  		<h2>Los Angeles, CA, May 22, 2014 <span>Click an image to see full gallery</span></h2>
+		<li><a href="/Event-Photos-LA"><img width="270" alt="LA" src="../event_news_images_6/logo_LA_7.JPG"></a></li>
+		<li><a href="/Event-Photos-LA"><img width="270" alt="LA" src="../event_news_images_6/logo_LA_6.JPG"></a></li>
+		<li><a href="/Event-Photos-LA"><img width="270" alt="LA" src="../event_news_images_6/logo_LA_5.JPG"></a></li>
+				</ul>
+
+		  		<ul class="event-news-list">
+		  		<h2>Richmond, VA, May 6, 2014 <span>Click an image to see full gallery</span></h2>
+		<li><a href="/Event-Photos-Richmond"><img width="270" height="152" alt="Richmond" src="../event_news_images_5/logo_Richmond_10.jpg"></a></li>
+		<li><a href="/Event-Photos-Richmond"><img width="270" height="152" alt="Richmond" src="../event_news_images_5/logo_Richmond_11.jpg"></a></li>
+		<li><a href="/Event-Photos-Richmond"><img width="270" height="152" alt="Richmond" src="../event_news_images_5/logo_Richmond_7.jpg"></a></li>
+				</ul>
+
+		  		<ul class="event-news-list">
+		  		<h2>Chicago, IL, April 15, 2014 <span>Click an image to see full gallery</span></h2>
+		<li><a href="/Event-Photos-Chicago"><img width="270" height="152" alt="Chicago" src="../event_news_images_4/logo_chicago_03.jpg"></a></li>
+		<li><a href="/Event-Photos-Chicago"><img width="270" height="152" alt="Chicago" src="../event_news_images_4/logo_chicago_05.jpg"></a></li>
+		<li><a href="/Event-Photos-Chicago"><img width="270" height="152" alt="Chicago" src="../event_news_images_4/logo_chicago_07.jpg"></a></li>
+				</ul>
+
+		  		<ul class="event-news-list">
+		  		<h2>Houston, TX, April 10, 2014 <span>Click an image to see full gallery</span></h2>
+		<li><a href="/Event-Photos-Houston"><img width="270" height="180" alt="Houston" src="../event_news_images_3/logo_houston_004.JPG"></a></li>
+		<li><a href="/Event-Photos-Houston"><img width="270" height="180" alt="Houston" src="../event_news_images_3/logo_houston_021.JPG"></a></li>
+		<li><a href="/Event-Photos-Houston"><img width="270" height="180" alt="Houston" src="../event_news_images_3/logo_houston_006.JPG"></a></li>
+				</ul>
+
+		  		<ul class="event-news-list">
+		  		<h2>Fresno, CA, April 2, 2014 <span>Click an image to see full gallery</span></h2>
+		<li><a href="/Event-Photos-Fresno"><img height="180" alt="Fresno" src="../event_news_images_2/Fresno-pic11-h180.png"></a></li>
+		<li><a href="/Event-Photos-Fresno"><img height="180" alt="Fresno" src="../event_news_images_2/Fresno-pic09-h180.png"></a></li>
+		<li><a href="/Event-Photos-Fresno"><img height="180" alt="Fresno" src="../event_news_images_2/Fresno-pic19-h180.png"></a></li>
+				</ul>
+
+		  		<ul class="event-news-list">
+		  		<h2>Columbia, SC, Feb 27, 2014 <span>Click an image to see full gallery</span></h2>
+		<li><a href="/Event-Photos-Columbia"><img height="180" alt="Columbia" src="../event_news_images/SCpic2-h180.png"></a></li>
+		<li><a href="/Event-Photos-Columbia"><img height="180" alt="Columbia" src="../event_news_images/SCpic6-h180.png"></a></li>
+		<li><a href="/Event-Photos-Columbia"><img height="180" alt="Columbia" src="../event_news_images/SCpic12-h180.png"></a></li>
+				</ul>
 		
-			
+			</div>
+			<!-- End of event main image links -->
+
+
 		<div style="height: 50px;"></div>
 			
 	</div>
@@ -310,4 +275,5 @@
 		});
 	
 	</script>
+
 

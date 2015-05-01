@@ -20,15 +20,18 @@ Weblearn::Application.configure do
   # config.action_dispatch.rack_cache = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
-  config.serve_static_assets = false
+  # config.serve_static_assets = false
+  # config.serve_static_assets = true
+  config.serve_static_files = true  
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
-  # config.assets.css_compressor = :sass
+  config.assets.css_compressor = :sass
+  # config.assets.css_compressor = true
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  #config.assets.compile = false
-  config.assets.compile = true
+  config.assets.compile = false
+  # config.assets.compile = true
 
   # Generate digests for assets URLs.
   config.assets.digest = true
@@ -36,6 +39,11 @@ Weblearn::Application.configure do
   # Version of your assets, change this if you want to expire all your assets.
   #config.assets.version = '1.0'
   config.assets.version = '1.1'
+
+
+  # config.action_controller.asset_host = 'http://mycdn'
+  # config.assets.prefix = '/assets'
+
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
@@ -62,6 +70,7 @@ Weblearn::Application.configure do
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
   # config.assets.precompile += %w( search.js )
+  # config.assets.precompile += %w[jquery.validate.js]
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
@@ -83,17 +92,15 @@ Weblearn::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
   
   ActionMailer::Base.delivery_method = :smtp
-  
-config.action_mailer.smtp_settings = {
-  :address              => "smtp.live.com",
-  :port                 => 587,
-  :domain               => 'mail.live.com',
-  :user_name            => 'forresttales@hotmail.com',
-  :password             => 'wolftalk666',
-  :authentication       => 'plain',
-  :enable_starttls_auto => true  }
-
-
-config.action_mailer.default_url_options = { :host => 'localhost:8000' }  
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.live.com",
+    :port                 => 587,
+    :domain               => 'mail.live.com',
+    :user_name            => 'forresttales@hotmail.com',
+    :password             => 'wolftalk666',
+    :authentication       => 'plain',
+    :enable_starttls_auto => true  
+  }
+  config.action_mailer.default_url_options = { :host => 'localhost:8000' }  
   
 end

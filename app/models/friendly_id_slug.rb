@@ -13,7 +13,10 @@
 
 class FriendlyIdSlug < ActiveRecord::Base
   
-  attr_accessible :id, :slug, :sluggable_id, :sluggable_type, :scope, :created_at, :updated_at
+  attr_accessible :slug, 
+                  :sluggable_id, 
+                  :sluggable_type, 
+                  :scope 
     
     
 end

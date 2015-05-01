@@ -1,34 +1,170 @@
 
-<div class="tabs" id="eventstabs" style="text-align: center;">
+<style>
+	
+		@import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans);
+
+        body {
+          	margin: 0;
+          	padding: 0;
+        }
+     
+		#tab-container  {
+		  	margin-left: auto;
+		  	margin-right: auto;
+		  	width: 800px;
+		}
+		.fixed-back-to {
+		  	display: none;
+		}
+		.tabs {
+			position: relative;
+			top: 0px;
+		  	width: 230px;
+		  /*	height: 318px;*/
+			border-radius: 8px;
+		   	border: 2px solid #dadada !important;
+		   	box-shadow: 0 1px 2px #6f6f6f;
+		   	z-index: 1;
+  background: -webkit-linear-gradient(#fff, #b5e1b4); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#fff, #b5e1b4); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#fff, #b5e1b4); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#fff, #b5e1b4); /* Standard syntax */
+		}
+
+        .tabs, .tabs ul, .tabs ul li, .tabs ul li span, .tabs ul li a, .tabs ul li a div {
+          	margin: 0;
+          	padding: 0;
+          	line-height: 1;
+        }
+		.tabs ul.short {
+			height: 15px;
+			/*background-color: #3D3D3D;*/		
+			/*background-color: #f7f7f7;	*/
+		}
+		.tabs ul.tall {
+			height: 34px;
+		}		
+        .tabs ul {
+	  		font-family: 'Quattrocento Sans', sans-serif;
+	        font-size: 1.2em;
+	        width: 230px;
+	        list-style-type: none;
+	        /*background-color: #3D3D3D;*/
+	     /*   background-color: #f7f7f7;*/
+	    	color: #222222;
+	    	font-weight: bold;
+        }
+		.tabs ul li a:hover {
+		    color: #214025;
+		    text-shadow: 1px 1px #34922C;		    
+		}
+		.tabs ul li.active {
+			border: 2px solid #37633a;
+		   background-color: #214025; /*34922C;*/
+		}
+		.tabs ul li.active:hover a {
+		    color: #214025;
+		    text-shadow: 1px 1px #34922C;
+		}
+		.tabs ul li:hover {
+		    /*background-color: #ccc;*/
+		   /* background-color: #ffffff;*/
+		}
+		.tabs ul li:hover a {
+		    color: #214025;		    
+		}
+		.tabs ul li a:hover {
+    		color: #41b737;
+    		text-shadow: none;
+		    /*text-decoration: none;*/
+		}
+		.tabs ul li.active a {
+			color: #fff;
+		}
+        .tabs li.disabled, .tabs li.disabled a, .tabs li.disabled a:visited, .tabs li.disabled a:hover {
+          	color: #888;
+        }
+        .tabs ul li a {
+        	color: #214025; /*#34922C;*/
+        }
+        .tabs ul.tall li a {
+        	margin-left: 35px;
+        }
+		.tabs ul li {
+			padding-top: 12px;
+		    /*background-color: #FFFFFF;*/	
+		 /*   background-color: #f7f7f7;		*/
+			width: 230px;
+			/*height: 34px;*/
+		}
+		
+			
+</style>
+
+
+
+<div class="tabs" id="eventstabs" style="text-align: left;">
 	<ul class="tall">
 	</ul>
   	<ul class="tall">
-	    <li id="tab1">
-	    	<a href="/Events" class="tab" onclick="make_active(1);">Events</a>
+	    <li id="tab1" style="list-style-type: none; text-align: center; padding-top: 5px;">
+	    	<a style="margin: 0; font-size: 30px;" href="/Events" class="tab" onclick="make_active(1);">Events</a>
 	    </li>
 	</ul>
 	<ul class="short"></ul>
 	<ul class="tall"> 	   
-	    <li id="tab2" >
-	    	<a href="/Schedule" class="tab" onclick="make_active(2);">Schedule</a>
+	    <li id="tab2" style="list-style-type: none;">
+	    	<a href="/Schedule" class="tab" onclick="make_active(2);">Master Schedule</a>
 	    </li>
 	</ul>
 	<ul class="short"></ul>
+	<ul class="tall"> 	   
+	    <li id="tab6" style="list-style-type: none;">
+	    	<a href="/Digital-Curriculum-Strategy-Discussions" class="tab" onclick="make_active(6);">Digital Curriculum 
+	    		<br/><div style="margin-left: 45px; line-height: 1.5em;">Strategy Discussions</div></a>
+	    </li>
+	</ul>
+	<ul class="short"></ul>
+	<ul class="tall" style="margin-top: 10px;"> 	   	    
+	    <li id="tab7" style="list-style-type: none;">
+	    	<a href="/Flipped-Conferences" class="tab" onclick="make_active(7);">Flipped Conferences</a>
+	    </li>
+	</ul>
+	
+	<!--<ul class="short">
+		<li style="text-align: center; margin-left: 23px; list-style-type: none;">
+			<a href="/CBOL-Main"> &#9632; Colorado</a>
+		</li>
+	</ul> -->
+	
+	<ul class="short"></ul>		
 	<ul class="tall"> 	   	    
-	    <li id="tab3">
-	    	<a href="/SpecialGathering" class="tab" onclick="make_active(3);">Special Gathering</a>
+	    <li id="tab3" style="list-style-type: none;">
+	    	<a href="/SpecialGathering" class="tab" onclick="make_active(3);">National Gathering</a>
 	    </li>
 	</ul>
 	<ul class="short"></ul>	
 	<ul class="tall"> 	   
-	    <li id="tab4">
+	    <li id="tab4" style="list-style-type: none;">
 	    	<a href="/EventRegistration" class="tab" onclick="make_active(4);">Register</a>
 	    </li>
 	</ul>
 	<ul class="short"></ul>	
 	<ul class="tall"> 	   	    
-	    <li id="tab5">
+	    <li id="tab5" style="list-style-type: none;">
 	    	<a href="/InternetSeminars" class="tab" onclick="make_active(5);">Internet Seminars</a>	    	
+	    </li>
+	</ul>
+	<ul class="short"></ul>	
+	<ul class="tall"> 	   	    
+	    <li id="tab5" style="list-style-type: none;">
+	    	<a href="/Event-News" class="tab">Past Events Photos</a><br/>	    	
+	    </li>
+	</ul>
+	<ul class="short"></ul>	
+	<ul class="tall"> 	   	    
+	    <li id="tab5" style="list-style-type: none;">
+	    	<a href="/Event-Articles" class="tab">Past Event Articles</a>	    	
 	    </li>
 	</ul>
 	<ul class="tall">
@@ -45,7 +181,8 @@
 		  		$("#tab3").removeClass("active");
 		  		$("#tab4").removeClass("active");
 		  		$("#tab5").removeClass("active");
-		  		//$("#tab6").removeClass("active");			  		
+		  		$("#tab6").removeClass("active");
+		  		$("#tab7").removeClass("active");				  		
 		  	break;
 		  case 2:
 		  		$("#tab1").removeClass("active");
@@ -53,7 +190,8 @@
 		  		$("#tab3").removeClass("active");
 		  		$("#tab4").removeClass("active");
 		  		$("#tab5").removeClass("active");
-		  		//$("#tab6").removeClass("active");			  					  
+		  		$("#tab6").removeClass("active");
+		  		$("#tab7").removeClass("active");			  					  
 		  	break;
 		  case 3:
 		  		$("#tab1").removeClass("active");
@@ -61,7 +199,8 @@
 		  		$("#tab3").addClass("active");
 		  		$("#tab4").removeClass("active");
 		  		$("#tab5").removeClass("active");
-		  		//$("#tab6").removeClass("active");
+		  		$("#tab6").removeClass("active");
+		  		$("#tab7").removeClass("active");
 		  	break;			  		
 		  case 4:
 		  		$("#tab1").removeClass("active");
@@ -69,7 +208,8 @@
 		  		$("#tab3").removeClass("active");
 		  		$("#tab4").addClass("active");
 		  		$("#tab5").removeClass("active");
-		  		//$("#tab6").removeClass("active");
+		  		$("#tab6").removeClass("active");
+		  		$("#tab7").removeClass("active");
 		  	break;			  		
 		  case 5:
 		  		$("#tab1").removeClass("active");
@@ -77,7 +217,8 @@
 		  		$("#tab3").removeClass("active");
 		  		$("#tab4").removeClass("active");
 		  		$("#tab5").addClass("active");
-		  		//$("#tab6").removeClass("active");
+		  		$("#tab6").removeClass("active");
+		  		$("#tab7").removeClass("active");
 		  	break;			  		
 		  case 6:
 		  		$("#tab1").removeClass("active");
@@ -85,7 +226,16 @@
 		  		$("#tab3").removeClass("active");
 		  		$("#tab4").removeClass("active");
 		  		$("#tab5").removeClass("active");
-		  		///$("#tab6").addClass("active");			  		
+		  		$("#tab6").addClass("active");			  		
+		  	break;
+		  case 7:
+		  		$("#tab1").removeClass("active");
+		  		$("#tab2").removeClass("active");
+		  		$("#tab3").removeClass("active");
+		  		$("#tab4").removeClass("active");
+		  		$("#tab5").removeClass("active");
+		  		$("#tab6").removeClass("active");
+		  		$("#tab7").addClass("active");		  		
 		  	break;
 
 		  default:

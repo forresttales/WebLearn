@@ -1,0 +1,38 @@
+  #nav {
+    clear: both;
+    margin-bottom: 18px;
+    margin-top: -7px
+  }
+  #nav.navNormal #top-black-bar {
+      font-family: 'Quattrocento', Arial, Helvetica, sans-serif;
+  }
+  #nav.navNormal #top-black-bar {
+    width: 100%;
+    height: 55px;
+      font-family: 'Quattrocento', Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    color: #fff;
+    margin-top: 7px;
+    z-index: 999;
+    overflow: hidden;
+    -webkit-transform: translate3d(0, 0, 0)
+  }
+  .nav-bar-black {  
+    position: fixed;
+    top: -7px;
+  }
+  .top-black-bar-marker {
+    height: 60px;
+  }
+  #nav.navNormal .outer {
+    width: 1150px;
+    margin: 0 auto
+  }
+  #nav.navNormal .inner {
+    width: 970px;
+    position: relative;
+    margin: 0 auto
+  }
+  #nav.navNormal .social {
+    float: right
+  }

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    
+    <style>
+    	
+    	.main {
+    		font-family:Arial, Helvetica, sans-serif;
+    		font-size: 20px;
+    		color: black;
+    	}
+
+    	p {
+    		font-family:Arial, Helvetica, sans-serif;
+    		font-size: 16px;
+    		color: black;
+    	}
+    	
+    	.links {
+    		font-family:Arial, Helvetica, sans-serif;
+    		font-size: 13px;
+    		color: brown;    		
+    	}
+
+		div.table-info {
+			padding-left: 30px;
+		}    	
+		
+    	table#tbl-main {
+    	}
+    	table#tbl-main td.left {
+    		width: 220px;
+    		vertical-align: top;
+    	}
+    	table#tbl-main td.right {
+    		width: 400px;
+    		vertical-align: top;    		
+    	}
+    	    	
+    	table#workshop {
+    		/*width:*/ 
+    	}
+    	table#workshop td.left {
+    		width: 220px;
+    		vertical-align: top;
+    	}    	
+    	table#workshop td.right-workshop {
+    		width: 250px;
+    		vertical-align: top;    		
+    	}
+    	table#workshop td.right-workshop-2 {
+    		width: 100px;
+    		vertical-align: top;    	
+    		color: red;	
+    	}
+
+    	.right-workshop-2 {
+    		width: 100px;
+    		vertical-align: top;    	
+    		color: red;	
+    	}
+    	
+    	span.workshop-1 {
+			display: inline-block;
+			width: 100px;
+    		font-family:Arial, Helvetica, sans-serif;			
+			font-size: 16px;    		
+    	}
+    	span.workshop-2 {
+			display: inline-block;
+			width: 300px;
+    		font-family:Arial, Helvetica, sans-serif;			
+			font-size: 16px;    		
+    	}
+    	span.workshop-3 {
+			display: inline-block;
+    		font-family:Arial, Helvetica, sans-serif;			
+			font-size: 16px;    		
+    	}
+    	
+    </style>
+    
+  </head>
+  <body>
+  	<br>
+  	<br>
+  	<%= image_tag attachments['logo-icon-come-together.png'].url, :alt => '' %>
+  	<br>
+  	<br>
+    <span class="main">
+		THANK YOU for registering to attend a Learning Counsel event!
+		<br>
+		You will receive another email confirming the details of the event venue
+		<br>
+		you’ve signed up for, agenda for the day, and map link.     	
+    	
+		<!-- THANK YOU for registering to attend a Learning Counsel event!  
+		<br>
+		You will receive another email confirming the details of the event venue 
+		<br>
+		you’ve signed up for, agenda, and what to expect.      	
+    	<br>
+    	We’re so excited you’re attending!  See you there! -->
+    </span>
+  	<br>
+  	<br>
+  	<p>To update the information you gave us, please first use our 'Cancel Attendance' link below and then resubmit our Events form.</p>
+  	<br>
+  	<br>
+  	<p>The information you provided:</p>
+  	<br>  	
+	<div class="table-info">
+	  	<table id="tbl-main">
+	  		<tr>
+	  			<td class="left">
+	    			<p>First Name:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event_conference.name_first %></p>
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="left">
+	    			<p>Last Name:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event_conference.name_last %></p>
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="left">
+	    			<p>Surname Title:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event_conference.name_title %></p>
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="left">
+	    			<p>Position Title:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event_conference.position_title %></p>
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="left">
+	    			<p>Institution or Company:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event_conference.type_affiliation %></p>
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="left">
+	    			<p>Institution or Company Name:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event_conference.name_affiliation %></p>
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="left">
+	    			<p>Address:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event_conference.address %></p>
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="left">
+	    			<p>City:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event_conference.city %></p>
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="left">
+	    			<p>State:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event_conference.state %></p>
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="left">
+	    			<p>Zip:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event_conference.zip %></p>
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="left">
+	    			<p>Phone:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event_conference.phone %></p>
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="left">
+	    			<p>Mobile Phone:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event_conference.phone_mobile %></p>
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="left">
+	    			<p>Email:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event_conference.email %></p>
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="left">
+	    			<p>Topic:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event_conference.topic %></p>
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="left">
+	    			<p>Description:</p>
+	  			</td>
+	  			<td class="right">
+	    			<p><%= @reg_event_conference.description %></p>
+	  			</td>
+	  		</tr>	  		
+		</table>
+			
+	</div>
+    <br>
+    <br>
+    <p>If we have not posted a venue for the event for which you have pre-registered, 
+    	please note that we will be sending you updates via email as we draw closer 
+    	to the event.</p>   
+    <p>Please also feel free to call David Kafitz at (888) 611-7709 ext. 11.</p>
+    <br>
+    <br>
+    <a href="mailto:cancelattendance@learningcounsel.com?Subject=Cancel Event Attendance" target="_top"><span class="links">To Cancel Attendance</span></a>
+   	<br>
+   	<br>
+    <a href="thelearningcounsel.com/privacy"><span class="links">Privacy Policy</span></a>
+
+  </body>
+</html>

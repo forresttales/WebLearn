@@ -3,12 +3,13 @@
 	/* start - dropdown1 */
 
 	div .dropdown1 {
+	background: #f5f5f5;
   		font:18px/2.0 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 		width: 300px;
 		height: 40px;
 		border-style:solid;
-		border-radius: 6px;
-		border-color: #005C9E;
+		/*border-radius: 6px;*/
+		border-color: #41b737;
 		color: #838383;				
     	position: relative;
 		border-width: 2px;
@@ -72,7 +73,7 @@
     	bottom: 0;
     	width: 40px;
     	line-height: 40px;
-    	border-left: 2px solid #005C9E;
+    	border-left: 2px solid #41b737;
     	text-align: center;
     	color: #005C9E;
 	}
@@ -135,12 +136,13 @@
 	/* start - dropdown2 */
 
 	div .dropdown2 {
+	background: #f5f5f5;
   		font:18px/2.0 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 		width: 300px;
 		height: 40px;
 		border-style:solid;
-		border-radius: 6px;
-		border-color: #005C9E;
+		/*border-radius: 6px;*/
+		border-color: #41b737;/*#005C9E;*/
 		color: #838383;				
     	position: relative;
 		border-width: 2px;
@@ -204,7 +206,7 @@
     	bottom: 0;
     	width: 40px;
     	line-height: 40px;
-    	border-left: 2px solid #005C9E;
+    	border-left: 2px solid #41b737;
     	text-align: center;
     	color: #005C9E;
 	}
@@ -267,12 +269,13 @@
 	/* start - dropdown3 */
 
 	div .dropdown3 {
+	background: #f5f5f5;
   		font:18px/2.0 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 		width: 300px;
 		height: 40px;
 		border-style:solid;
-		border-radius: 6px;
-		border-color: #005C9E;
+		/*border-radius: 6px;*/
+		border-color: #41b737;/*#005C9E;*/
 		color: #838383;				
     	position: relative;
 		border-width: 2px;
@@ -336,7 +339,7 @@
     	bottom: 0;
     	width: 40px;
     	line-height: 40px;
-    	border-left: 2px solid #005C9E;
+    	border-left: 2px solid #41b737;
     	text-align: center;
     	color: #005C9E;
 	}

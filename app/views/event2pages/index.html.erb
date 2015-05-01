@@ -2,6 +2,12 @@
 
 <style>
 	
+	.note {
+		clear: both;
+    margin-bottom: 100px;
+    position: relative;
+    top: 200px;
+	}
 	
 	#lc-landing {
 		
@@ -241,17 +247,22 @@
 	.city-color {
 		color: #1B237A;	
 	}
+
+
 	
 </style>	
 	
 
 <%= render 'share/backtotop_2' %>
 
-<ul class="lc-inline">
-<li>
-<%= render 'share/eventpages_tabs' %>
+<ul class="lc-inline" style="width: 1200px; margin: 0 auto; padding-right: 20px; vertical-align: top;">
+<li style="margin: 0 auto; padding-right: 20px; vertical-align: top; display: inline-block;">
+	<%= render 'share/eventpages_tabs' %>
 </li>
-<li>
+<li style="margin: 0 auto; padding-right: 20px; vertical-align: top; display: inline-block;">
+
+
+
 <div id="tab-container">
 
 
@@ -265,102 +276,120 @@
 <div id="page">
     <div class="head">
     <!-- <#%= image_tag('gather-banner.jpg', alt: "Special Gathering Banner") %#> -->
-    <img src="../event_pages/gather-banner.jpg" alt="gathering.png">
+    <img src="../event_pages/gather-banner.jpeg" alt="gathering.png">
     
 	<div class="spacer"></div>
 	    
-    <h1>Invitation Only</h2>
-      <!-- <h3>The Learning Counsel would like to specially invite you to the upcoming Gathering 2014. This event is for digital curriculum and District leadership from across the U.S.</h3> -->
-      <h3>The Learning Counsel would like to specially invite you to the upcoming Gathering 2014. A special gathering of digital curriculum and district leadership from across the U.S.</h3>
+    <h1>An "Un-Conference" for Digital Curriculum & Tech District All-Stars</h1>
+      <h3><span class="lgreen">Gather</span> with other education executives to discuss meaningful strategy in a time when digital curriculum of
+all types is raining down disruption on School operations. Step out to New Orleans to gain needful perspective
+with other senior executives from across the U.S. also addressing leadership issues, tech and curriculum
+complexities while the nation shifts to digital content and testing.</h3>
 
-      <h2><span class="dgreen">the Gathering</span><br/>
-          Nov 2-3, 2014, Sunday & Monday<br/>
-          Hosting Hotel: Hotel Monteleone &squarf; 214 Royal Street<br/>
-          New Orleans, Louisiana</h2>
-    </div>
+		<table><tr>
+			<td class="green-square" style="padding-left: 10px;">The average classroom has:
+				<ul class="display-list">
+<li><span>5-50+Apps</span></li>
+<li><span>2-20+ Membership Sites
+(including District systems)</span></li>
+<li><span>5-100+ Non-Member Sites</span></li>
+</ul></td>
+			<td>&nbsp;&nbsp;&nbsp;</td>
+			<td><p>Networking – <span class="lgreen">Join peers also concerned with the transition to digital curriculum now that 50% of U.S. students are using digital devices in class.</span></p><br/>
+			<p>Educational – <span style="color: #d4233c;">Special briefings and discussions led by other educators on key technology and digital curriculum topics.</span></p><br/>
+			<p>Spark creativity and innovation – <span style="color: #febd30;">Learn from other education executives what the issues are and solutions they are trying.</span></p><br/>
+			<p>Celebrate – <span style="color: #2ad9fc;">Digital Curriculum Strategy Survey honored districts in an Awards Ceremony for their strategy and tactics with digital curriculum and technology.</span></p></td>
+		</tr>
+		</table>
 
-    <div class="main">
-      <br>
-      <h3 class="gray">A Retreat-Style Event<br/>
-        with Excursion & Discussion Day</h3>
-
-          <img src="../event_pages/gather-building.jpg" class="building-img">
-          <img src="../event_pages/plantation.jpeg" class="orleans-img">
-          <h3 class="theme">2014 Theme: "Past & Future"</h3>
-    </div>
-    <div class="info">
-
-<!-- <div style="width: 100%; height: 460px;"> -->
-
-
-          <div class="left" style="float: left;">
-            <h3>Join us to meet peer leaders and
-participate in discussions about
-transitioning to digital curriculum.</h3>
-              <p>This national retreat-style event is a one of a kind
-meeting that is truly a discussion amongst peers where
-you can hear what other districts are dealing with and
-participate with questions and comments. Education
-executives from Texas, New Jersey, California,
-Massachusetts, Tennessee, Illinois, Minnesota and
-Michigan are already registered to attend. Invited
-executives include:</p>
-
-<ul class="invite-list">
+		<table style="margin-top: 40px;"><tr>
+		<td><h3 class="lgreen" style="text-align: center;">Meet Peer Leaders and Participate in Discussions<br/> About Transitioning to Digital Curriculum.</h3>
+			<p>This national retreat-style event is a one of a kind meeting
+that is truly a discussion amongst peers where you can hear
+what other districts are dealing with and participate with
+questions and comments. Education executives from Texas,
+New Jersey, California, Massachusetts, Tennessee, Illinois,
+Minnesota and Michigan are already registered to attend.
+Invited executives include:</p>
+			
+			<ul style="margin-left: 25px;">
 <li><span>Superintendents</span></li>
 <li><span>District Curriculum Directors</span></li>
 <li><span>Chief Academic Officers</span></li>
-<li><span>District & School Curriculum & Instructional Designers</span></li>
+<li><span>District & School Curriculum &
+Instructional Designers</span></li>
 <li><span>CIOs, CTOs, Directors of Technology</span></li>
-<li><span>Instructional Technologists & Tech Administration Specialists</span></li>
+<li><span>Instructional Technologists &
+Tech Administration Specialists</span></li>
 <li><span>Professional Development Staff</span></li>
 <li><span>Library and Media Specialists</span></li>
 <li><span>Principals</span></li>
 <li><span>State Department of Education Executives</span></li>
 <li><span>School Board Members</span></li>
-</ul>
-          </div>
-
-          <div class="right" style="float: right;">
-            <h3>About the Event</h3>
-            <p>The first day will be a historic and educational group
-excursion and then a group dinner. Over dinner, we
-will discuss how the excursion into the past at historic
-New Orleans area plantations affected us, and how the
-past practices in schools have been shaping current
-practices with digital curriculum—and what needs to
-change.</p>
-            <p>Day two will feature discussions shaping the future.
-Topics hour-by-hour will be about new file standards,
-transitioning to digital curriculum and the by-orbuild
-issue, professional development changes, policy
-issues, and the impacts of tech choices on curriculum
-flexibility. Innovative and award-winning leaders from
-Houston, Los Angeles, Chicago, and Memphis will be
-on hand to lead these key discussions.</p>
-
-            <p>We’ve also invited two special guest speakers to-beannounced
+			</ul>
+		</td>
+		<td>&nbsp;&nbsp;&nbsp;</td>
+		<td style="vertical-align: top;"><h3 class="lgreen" style="text-align: center;">About the Event</h3>
+			<p>The first day will be a historic and educational group
+excursion and then a group dinner. Over dinner, we will
+discuss how the excursion into the past at historic New
+Orleans area plantations affected us, and how the past
+practices in schools have been shaping current practices
+with digital curriculum—and what needs to change.</p>
+			<p>Day two will feature discussions shaping the future. Topics
+hour-by-hour will be about new file standards, transitioning
+to digital curriculum and the buy-or-build issue, professional
+development changes, policy issues, and the impacts of tech
+choices on curriculum flexibility. Innovative and awardwinning
+leaders from Houston, Los Angeles, Chicago, and
+Memphis will be on hand to lead these key discussions.</p>
+			<p>We’ve also invited two special guest speakers, to be announced,
 on topics that are very timely nationally.</p>
-            <p>The day ends with an Awards Reception for the winners
-of the annual Digital Curriculum Strategy Award.</p>
+			<p>The day ends with an Awards Reception for the winners of
+the annual Digital Curriculum Strategy Award.</p>
+		</td>
+		</tr></table>
 
-          </div>
+      <h2 style="margin-top:20px; position: relative; top: 50px; text-align: right; float: left;">
+	  <span class="dgreen" style="font-size: 30px;">the Gathering</span><br/><br/>
+          Date to Be Announced Soon<br/>
+          Sunday & Monday<br/> Hosting Hotel: TBD<br/>
+          Albuquerque, New Mexico</h2>
+    </div>
+
+    <div class="main">
+      <br>
+      
+
+          <img src="../event_pages/alb-2.jpeg" class="alb-2">
+          <img src="../event_pages/alb-1.jpeg" class="alb-1">
+          <img src="../event_pages/balloons.jpeg" class="balloons">
+          <h3 class="gray">A Retreat-Style Event<br/>
+        with Excursion <br/>& Discussion Day</h3>
+        	<br/>
+          <!--<h3 class="theme">2014 Theme: "Past & Future"</h3>-->
+    </div>
+    <div class="info">
+
+<!-- <div style="width: 100%; height: 460px;"> -->
+
           
 <!-- </div> -->          
           
     </div>
     <div class="agenda">
-      <h2>Agenda - Day 1</h2>
+      	<h2 style="text-align: center;">AGENDA (Based on 2014 Gathering in New Orleans)</h2>
+      <h2 stlye="padding: 3px 0;">Agenda - Day 1</h2>
       <table>
         <tr>
           <td>12:00—6:30 p.m.</td>
-          <td>Excursion:The Old River Plantation Adventure &squarf; St. Joseph & Oak Alley Plantation Tour &squarf; Tales of Old River Road (tentative – exact time subject to change) See <a target="_blank" href="http://www.plantationadventure.com/tour_details.php?tid=4">http://www.plantationadventure.com/tour_details.php?tid=4</a></td>
+          <td>Excursion</td>
         <tr>
           <td>6:30—9:00 p.m.</td>
           <td>Group Dinner & Discussion with special “Challenge”</td>
         </tr>
       </table>
-      <h2>Agenda - Day 1</h2>
+      <h2 stlye="padding: 3px 0;">Agenda - Day 2</h2>
       <table>
         <tr>
           <td>7:30—8:30 a.m.</td>
@@ -372,9 +401,7 @@ of the annual Digital Curriculum Strategy Award.</p>
         </tr>
         <tr>
           <td>9:00—9:50</td>
-          <td>Open Discussion - Transition & Standards
-(Discussion Leader: Beatriz Arnillas, MFA, SPHR,
-Senior Manager IT- Instructional Technology Houston ISD)</td>
+          <td>Open Discussion - Transition & Standards</td>
         </tr>
         <tr>
           <td>9:50—10:00</td>
@@ -382,15 +409,11 @@ Senior Manager IT- Instructional Technology Houston ISD)</td>
         </tr>
         <tr>
           <td>10:00—11:00</td>
-          <td>Open Discussion - Curriculum Selection & Policies
-(Discussion Leader: Cleon Franklin, Executive Principal, Virtual Learning Program,
-Shelby County Schools)</td>
+          <td>Open Discussion - Curriculum Selection & Policies</td>
         </tr>
         <tr>
           <td>11:00—12:00</td>
-          <td>Open Discussion - Strategy & Professional Development
-(Invited Discussion Leader: Keith Bockwoldt, Director of Technology Services,
-Township High School District 214, Chicago)</td>
+          <td>Open Discussion - Strategy & Professional Development</td>
         </tr>
         <tr>
           <td>12:00—1:00</td>
@@ -398,9 +421,7 @@ Township High School District 214, Chicago)</td>
         </tr>
         <tr>
           <td>1:30—2:30</td>
-          <td>Open Discussion on Tech Choice & Storage/Access
-(Invited Discussion Leader: Themistocles Sparangis, Chief Technology Director, IT
-Customer Services, Los Angeles Unified School District)</td>
+          <td>Open Discussion on Tech Choice & Storage/Access</td>
         </tr>
         <tr>
           <td>2:30</td>
@@ -415,8 +436,55 @@ Customer Services, Los Angeles Unified School District)</td>
           <td>Adjourn</td>
         </tr>
       </table>
+      <!--<h2 stlye="padding: 3px 0;">Invited Discussion Leaders Include:</h2>
+      <table>
+        <tr>
+        	<td style="width: 240px;"><span style="color: #000;">Beatriz Arnillas, MFA, SPHR</span></td>
+        	<td>Senior Manager IT- Instructional Technology Houston ISD</td>
+        </tr><tr>
+        	<td><span style="color: #000;">Cleon Franklin</span></td>
+        	<td>Executive Principal, Virtual Learning Program, Shelby County Schools</td>
+        </tr><tr>
+        	<td><span style="color: #000;">Keith Bockwoldt</span></td>
+        	<td>Director of Technology Services, Township High School District 214, Chicago</td>
+        </tr><tr>
+        	<td><span style="color: #000;">Dr. Mary Ellis</span></td>
+        	<td>Superintendent, Union County Public Schools, NC</td>
+        </tr>
+      </table>-->
 
     </div>
+
+    <!--<div class="note">
+    	<p style="width: 800px;">Note: The block of rooms for the Hotel Monteleone are only for the 2nd and 3rd at a rate of $179. There are a few attendees
+arriving on November 1st and were inquiring about rooms. The Hotel Monteleone is charging $399+ for the Saturday night.
+The options below are less costly alternatives. Any reservation for Nov 1st is made by the attendees themselves.</p>
+		<table style="width: 800px;"></tr>
+		<td style="width: 400px;">Hilton New Orleans Airport $149<br/>
+901 Airline Drive, Kenner, LA 70062<br/>
+(504) 469-5000<br/>
+Free Airport Shuttle</td>
+		<td>La Quinta Inn & Suites New Orleans Airport $109<br/>
+2610 Williams Blvd, Kenner, LA 70062<br/>
+(504) 466-1401<br/>
+Free Airport Shuttle, Free Breakfast</td>
+		</tr>
+		<tr>
+			<td>
+<br/>Hotel Monteleone<br/>
+214 Royal Street<br/>
+New Orleans, LA 70130-2201<br/>
+504-523-3341<br/>
+The Room Block has been closed for this event<br/>
+but the Learning Counsel is holding additional rooms.<br/>
+Please contact:<br/>
+Patty Schreiter, Operations Manager<br/>
+888.611.7709  Ext 14<br/>
+<a href="mailto:patty@learningcounsel.com">Patty@learningcounsel.com</a>
+			</td>
+		</tr>
+		</table>
+    </div>-->
 
 </div>
 

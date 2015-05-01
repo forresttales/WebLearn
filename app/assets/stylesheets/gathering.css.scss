@@ -5,6 +5,7 @@
 	$lcgray: #A6A6A6; // gray
 	$dgreen: #376340;//11520b; //dark green
 	$ksgreen: #49853F; // knowstory green
+	$lgreen: #41b737; // light green
 
 // page rules
 #page {
@@ -12,21 +13,21 @@
 }
 
 .head {
+	h1 {color: $lcgray; font-size: 27px; text-align: center;}
 img {width:800px; margin:0 auto;}
-h1, h2 {color: $ksgreen;}
-h3, .dgreen {color: $dgreen; }
-h1, h3 {margin-left: 50px;}
-h2 {margin-left: 100px;}
+.dgreen {color: $dgreen; }
+h1, h3 {margin: 15px auto;}
+h2 {margin: auto;}
 }
-
+.lgreen {color: $lgreen;}
 .main {
-	.gray {color: $lcgray; margin-left: 50px;}
+	.gray {color: $lcgray; float:right; text-align: right;}
 	position:relative;
 }
 .building-img {
 	float: right;
   position: relative;
-  top: -60px;
+  top: 60px;
   width: 440px;
   border:3px solid $lcgray;
   z-index:1;
@@ -35,7 +36,8 @@ h2 {margin-left: 100px;}
 .orleans-img {
 	position:absolute;
 	border:3px solid $lcgray;
-	top: 100px;
+	top: 200px;
+	left: 0;
 }
 
 .theme {float: right; clear:both; color: $dgreen;}
@@ -73,11 +75,44 @@ h2 {margin-left: 100px;}
     border: 3px solid $dgreen;
     clear: both;
     position: relative;
-    top: 200px;
-    width: 790px;
-    h2 {color:$ksgreen;}
+    top: 100px;
+    width: 750px;
+    padding: 18px;
+    h2 {color:$ksgreen; font-size: 20px; margin: 5px 0;}
     td {
-    	padding-top:2px;
+    	padding-top:6px;
+		padding-bottom: 6px;
+		min-width: 160px;
+		vertical-align: top;
+		color: #000;
     }
 
+}
+.green-square {
+		border: 1px solid $lgreen;
+		color: $lcgray;
+		font-size: 25px;
+		
+	}
+
+	.display-list {list-style-type: square;
+		margin-left: 45px;
+			color: $lgreen;
+			span { color: $lcgray; font-size: 25px;}
+		}
+
+.alb-2 {
+	float: right;
+    width: 500px;
+}
+
+.alb-1 {
+	float: left;
+    height: 230px;
+    margin-top: 20px;
+}
+
+.balloons {
+	 float: right;
+    margin-top: 20px;
 }

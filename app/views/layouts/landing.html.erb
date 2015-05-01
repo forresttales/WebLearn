@@ -5,26 +5,19 @@
 								    	
   		<title><%= full_title(yield(:title)) %></title> 
 
-    	 <!-- stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true  -->
-    	 
-    	<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+
+    		<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
 		
-		<link rel="icon" type="image/png" href="/assets/logo-lc-round-fav.png" />
+		<!-- <link rel="icon" type="image/png" href="/assets/logo-lc-round-fav.png" /> -->
+		<link rel="icon" type="image/png" href="/assets/fav-lc-2-w16-h14.png" />
   		
    		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 
-
-
-   		 <!-- javascript_include_tag "entrepeneurs_jquery", "data-turbolinks-track" => true 
-   		 javascript_include_tag "entrepeneurs_jquery-1", "data-turbolinks-track" => true   -->   		 
-   		     	
-  		<%= include_gon %>    	
+    	
+  		<!-- = include_gon  -->    	
     	
 	  	<%= csrf_meta_tags %>
 	  	<%= render 'layouts/shim' %>  
-
-
-		<!-- <link rel="stylesheet" href="../styles/landing-style.css" type="text/css" media="screen" /> -->		
 		
 		                		
     </head>
@@ -37,16 +30,17 @@
 		 end  -->
 		 		
 		<!-- <div style="width: 1200px; margin-right: auto; margin-left: auto; background: #fff;"> -->
-
 									
 			<%= yield %> 
 
-			<%= render 'layouts/footer_landings' %>
+			<%= render 'layouts/footer' %>
 			
 		<!-- </div> -->
 		
 		
-		 <%= debug(params) if Rails.env.development? %>		
+		
+		<%= debug(params) if Rails.env.development? %>
+		
 	</body>
 	
 </html>

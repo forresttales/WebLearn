@@ -1,0 +1,2489 @@
+<% provide(:title, 'Events Registration') %>
+
+	<!-- <script src="/assets/jquery.validate.js"></script>
+    <script src="/assets/dot.js"></script>    
+    <script src="/assets/jquery-dropdown-dot.js"></script> -->
+
+	<!-- <link rel="stylesheet" type="text/css" href="../styles/dropdown.css"/> -->
+					
+	<style>
+		
+    .reg-events-new .form-reg-commun {
+      width: 970px;
+      height: auto;
+      position: relative;
+      text-align: center;     
+      padding-top: 20px;              
+      padding-bottom: 20px; 
+    }
+    .reg-events-new .form-reg-commun:focus {
+      outline: none;
+    }
+    .reg-events-new #joinClose {
+      right: 6px;
+      top: 6px;
+      position: absolute;
+      display: block
+    }
+    .reg-events-new #loading {
+      background: asset-url("icon_loading.gif") no-repeat center center;
+      height: 100px; width: 100px;
+      position: fixed; left: 47%; top: 50%; z-index: 1000;
+      margin: -25px 0 0 -25px;
+    }       
+    .reg-events-new .input-form {
+      font-family: 'msyh';
+      font-size: 16px;
+      width: 300px;
+      height: 24px;
+      border-style:solid;
+      border-color: #41b737;
+      border-width: 2px;
+      padding-left: 6px;
+    }
+    .reg-events-new .input-form:focus {
+      color: #000;
+      background: asset-url("submit_form_empty.png") no-repeat 278px 7px;           
+    }
+    .reg-events-new .input-form-dropdown {
+      font-family: 'msyh';
+      font-size: 16px;
+      width: 310px;
+      height: 30px;
+      border-style:solid;
+      border-radius: 6px;
+      border-color: #41b737; 
+      border-width: 2px;
+      padding-left: 6px;
+      text-decoration: none;
+    }
+    .reg-events-new .input-form-dropdown:focus {
+      color: #fff;
+      background: asset-url("submit_form_empty.png") no-repeat 278px 7px;           
+      -webkit-box-shadow: 0 0 25px #ccc;
+      -moz-box-shadow: 0 0 25px #ccc;
+      box-shadow: 0 0 25px #ccc;
+      -webkit-transform: scale(1.05);
+      -moz-transform: scale(1.05);
+      -webkit-transform: scale(1.05);
+      -moz-transform: scale(1.05);
+      -o-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      -webkit-transform: scale(1.05);
+      -moz-transform: scale(1.05);
+      -o-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      -webkit-transform: scale(1.05);
+      -moz-transform: scale(1.05);
+      -o-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      transform: scale(1.05);
+      text-decoration: none;    
+      outline: 0;
+    }
+    .reg-events-new .error_label {
+        display: none;
+      font-family: 'msyh';
+      font-size: 12px;
+      color: #851717;       
+    }
+    .reg-events-new .errors {
+      font-family: 'msyh';
+      font-size: 16px;
+      color: #FC7777;   
+    }
+    .reg-events-new .errors p {
+      font-family: 'msyh';
+      font-size: 16px;
+      color: #FC7777;   
+    }   
+    .reg-events-new .select-errors {
+      color: #FC7777;
+    }
+    .reg-events-new .input-label {
+      font-family: 'msyh';
+      font-size: 16px;
+      width: 220px;
+      height: 18px;
+    }
+    .reg-events-new .success {
+      color: #41b737;
+      background-color: #fff;   
+    }   
+    .reg-events-new .error {
+      color: #FC7777;
+      border-color: #851717;      
+      background-color: #fff;         
+    }
+    .reg-events-new .required {
+      background: #f5f5f5;  
+    }
+    .reg-events-new .focus {
+      color: #fff;
+      border-color: #41b737;            
+    }
+    .reg-events-new .unrequired {
+    }
+    .reg-events-new .error-label {
+      color: #FC7777;
+    }
+    .reg-events-new .required-label {
+      color: #376340; 
+    }
+    .reg-events-new .input-form-spacer {
+      height: 16px;
+    }
+    .reg-events-new .input-search-1 {
+      background-color: white;
+      color: black;
+      font-family: Arial, Helvetica, sans-serif;
+      width: 200px;
+    }
+    .reg-events-new #join-image {
+      height: 2023px;
+      border: 2px solid #376340;
+        width: 1010px;
+    }
+    .reg-events-new .cell-right-reg-commun {
+      display: table-cell;
+      width: 330px;
+      text-align: left;
+      align: top;   
+    }
+    .reg-events-new .cell-left-reg-commun {
+      display: table-cell;
+      width: 280px; 
+      align: top;
+      text-align: right;    
+      padding-right: 20px;
+    }
+    .reg-events-new .cell-submit-reg-commun {
+      display: table-cell;
+      width: 330px;
+      text-align: left;
+      align: top;   
+    }
+    .reg-events-new .cell-error-reg-commun {
+      display: inline-block;
+      width: 300px;
+      height: 18px;
+      vertical-align: bottom;
+      text-align: left;
+    }
+    .reg-events-new .cell-right-reg-commun-cb {
+      display: table-cell;
+      width: 430px;
+      text-align: left;
+      align: top;   
+    }
+    .reg-events-new .cell-error-reg-commun-cb {
+      display: inline-block;
+      width: 200px;
+      height: 18px;
+      vertical-align: bottom;
+      text-align: left;
+    }
+    .reg-events-new .message {
+      height: 120px;
+    }
+    .reg-events-new .button-border {
+      background: #f5f5f5;
+      width: 480px; 
+      border-style: solid; 
+      border-width: 2px; 
+      border-color: #41b737; 
+      padding-right: 6px; 
+      padding-top: 6px; 
+      padding-bottom: 6px;
+    }
+    .reg-events-new #label_cb {
+      text-decoration: none;
+    }   
+    .reg-events-new #label_cb:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+    .reg-events-new .label-cb {
+      text-decoration: none;
+    }   
+    .reg-events-new .label-cb:focus {
+      text-decoration: underline;
+      outline: none;
+    }           
+    .reg-events-new .label-cb:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }           
+    .reg-events-new .label-cb-expired:focus {
+      outline: none
+    }   
+    .reg-events-new .radio-errors {
+      color: #FC7777;
+    }
+    .reg-events-new .cb-errors {
+      color: #FC7777;
+      font-family: 'msyh';
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .reg-events-new .cell-error-reg-commun {
+      display: inline-block;
+      width: 300px;
+      height: 18px;
+      vertical-align: bottom;
+      text-align: left;
+    }
+    .reg-events-new input[type=checkbox] {
+        display:none;
+    }     
+    .reg-events-new input[type=radio] {
+        display:none;
+    }     
+    .reg-events-new .rd-button {
+      width: 20px;
+      height: 20px; 
+      border-style: solid; 
+      border-width: 2px; 
+      border-color: #41b737; 
+      margin-bottom: -4px;
+      display: inline-block;
+      margin-right: 6px;
+    }
+    .reg-events-new .rd-button:hover {
+      cursor: pointer;
+    } 
+    .reg-events-new .cb-button {
+      width: 20px;
+      height: 21px; 
+      border-style: solid; 
+      border-width: 2px; 
+      border-color: #41b737; 
+      margin-bottom: -4px;
+      display: inline-block;
+      margin-right: 6px;
+    }
+    .reg-events-new .cb-button {
+      cursor: pointer;
+    }
+    .reg-events-new .cb-button-test {
+      width: 20px;
+      height: 21px; 
+      border-style: solid; 
+      border-width: 2px; 
+      border-color: #41b737; 
+      margin-bottom: -4px;
+      margin-right: 6px;
+    }
+    .reg-events-new .cb-button-test:hover {
+      cursor: pointer;
+    }
+    .reg-events-new .cb-button-test-expired {
+      width: 20px;
+      height: 21px; 
+      border-style: solid; 
+      border-width: 2px; 
+      border-color: #f5f5f5; 
+      margin-bottom: -4px;
+      margin-right: 6px;
+    }
+    .reg-events-new .cb-button-test-expired:hover {
+    }
+    .reg-events-new .rd-button-test {
+      width: 20px;
+      height: 21px; 
+      border-style: solid; 
+      border-width: 2px; 
+      border-color: #41b737; 
+      border-radius: 12px;  
+      margin-bottom: -4px;
+      margin-right: 6px;
+    }
+    .reg-events-new .rd-button-test:hover {
+      cursor: pointer;
+    }
+    .reg-events-new .rd-background {
+      background-color: #5BED4E;
+    } 
+    .reg-events-new .cb-background {
+      background-color: #5BED4E;
+    } 
+    .reg-events-new .cb-spacer {
+      height: 20px;
+    }
+    .reg-events-new .cb-align {
+      vertical-align: top;
+    }   
+    .reg-events-new .cb-pad {
+      padding-top: 5px;   
+    }
+    .reg-events-new .commun-inside {
+      border:2px solid #376340;
+      padding: 5px 20px;
+    }
+    .reg-events-new .commun p {
+      font-family: 'Quatrocento', sans; 
+      font-size: 20px;
+      color: #376340;"
+    }
+    .reg-events-new .alert {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #8C0303;
+      font-size: 16px;
+    }
+    .reg-events-new .seperator-commun {
+      font-family: 'Quattrocento', sans;
+      text-align: right;
+      vertical-align: middle;
+      padding-right: 15px;
+      padding-top:5px;
+      font-size: 35px;
+      width: 1000px; 
+      margin: 5px auto;
+      height:40px;
+      color: #FFF;
+      background: -webkit-linear-gradient(left, #ffffff 25%, #cacaca 55% , #47b64a 90%);
+      background: -o-linear-gradient(right, #ffffff 25%, #cacaca 55% , #47b64a 90%);
+      background: -moz-linear-gradient(right, #ffffff 25%, #cacaca 55% , #47b64a 90%);
+      background: linear-gradient(to right, #ffffff 25%, #cacaca 55% , #47b64a 90%);
+    }
+    .reg-events-new .seperator-commun img { float:left; position: relative; top: -5px; height: 100px;
+      border-left: 2px solid #376340; background: #FFF;
+    }
+    .reg-events-new .bottom-commun-squares {
+      background-image: url(/repository/lc-boxes.jpg);
+      background-color: #FFF;
+      background-repeat: no-repeat;
+      background-position: right;
+      float: right;
+      height: 39px;
+      position: relative;
+      top: -14px;
+      right: -24px;
+      width: 210px;
+    }
+    .reg-events-new .top-commun-squares {
+      background-image: url(/repository/lc-boxes.jpg);
+      background-color: #FFF;
+      background-repeat: no-repeat;
+      background-position: right;
+      float: left;
+      height: 39px;
+      position: relative;
+      top: -17px;
+      left: 0px;
+      width: 210px;
+    }
+    .reg-events-new .submit-button-commun {
+      width: 300px;
+      float:right;
+      position: relative;
+      background: #ffffff;
+      top: -70px;
+      left: 45px;
+      padding: 20px 0 0 20px;
+    }
+
+    .reg-events-new .dropdown1 {
+      background: #f5f5f5;
+      font-family: Arial, Helvetica, sans-serif;
+      font: 18px;
+      width: 300px;
+      height: 40px;
+      border-style:solid;
+      border-color: #41b737;
+      color: #ddd;        
+      position: relative;
+      border-width: 2px;
+      padding-left: 6px;
+      text-decoration: none;
+      outline: none;
+    }
+    .reg-events-new .dropdown1 > .selected {
+      font-family: Arial, Helvetica, sans-serif;
+      font: 18px;
+      width: 310px;
+      height: 40px;
+      border-style:solid;
+      border-radius: 6px;
+      border-color: #005C9E;
+      position: relative;
+      outline: none;  
+    }
+    .reg-events-new .dropdown1:focus {
+      color: #ACDDE3;
+      -webkit-box-shadow: 0 0 25px #ccc;
+      -moz-box-shadow: 0 0 25px #ccc;
+      box-shadow: 0 0 25px #ccc;
+      outline: none;
+    }
+    .reg-events-new .dropdown1:focus > .selected {
+        outline: none;
+    }
+    .reg-events-new .dropdown1 > .selected:hover,
+    .reg-events-new .dropdown1 > .selected:focus {
+    }
+    .reg-events-new .dropdown1 > .selected i {
+        position: absolute;
+        top: -2px;
+        right: 8px;
+        bottom: 0;
+        width: 40px;
+        line-height: 40px;
+        border-left: 2px solid #41b737;
+        text-align: center;
+        color: #41b737;       
+    }
+    .reg-events-new .dropdown1.open > .selected {
+        -webkit-border-radius: 4px 4px 0px 0px;
+        border-radius: 4px 4px 0px 0px;
+    }
+    .reg-events-new .dropdown1 ul {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        background: #2B333B;
+        border: 1px solid #333;
+        border-top: none;
+        -webkit-border-radius: 0px 0px 4px 4px;
+        border-radius: 0px 0px 4px 4px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        line-height: 1;
+        -webkit-box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.2);
+        height: auto;    
+        overflow: auto;
+        margin: 0;
+        padding-left: 6px;
+    }
+    .reg-events-new .dropdown1 ul li.selected {
+        color: #ACDDE3;
+        background: #005C9E;
+    }
+    .reg-events-new .dropdown1 ul li:last-child.selected {
+        -webkit-border-radius: 0px 0px 4px 4px;
+        border-radius: 0px 0px 4px 4px;
+    }
+    .reg-events-new .dropdown1 ul li {
+        position: relative;
+        display: block;
+        text-decoration: none;    
+        color: #ACDDE3;
+        padding-left: 4px;
+    }
+    .reg-events-new .dropdown1 ul li:first-child {
+        color: #838383;
+    }
+    .reg-events-new .dropdown1 ul li:first-child.selected {
+        color: #838383;
+    }
+    .reg-events-new .dropdown1 ul li.hover {
+        background: #fff;
+        color: #000;
+    }
+    .reg-events-new .dropdown1:hover {
+      cursor: pointer;
+    }
+    .reg-events-new .cb-background {
+      background-color: #5BED4E;      
+    } 
+    .reg-events-new .cb-col-1 {
+      width: 0px;
+    }
+    .reg-events-new .cb-col-2 {
+      width: 200px;
+      color: orange;    
+    }
+    .reg-events-new .cb-col-3 {
+      width: 80px;
+    }
+    .reg-events-new .cb-col-4 {
+      width: 200px;
+      color: orange;        
+    }
+    .reg-events-new .cell-error-reg-event {
+      display: inline-block;
+      width: 230px;
+      height: 18px;
+      vertical-align: bottom;
+      text-align: left;
+    }
+    .reg-events-new .cb-valign {
+      margin-bottom: 2px;
+    }
+    .reg-events-new .cb-spacer {
+      height: 20px;
+    }
+    .event-reg-ad img {
+    	margin: 30px 0 0 0; 
+    	width: 235px;
+    }
+    .reg-events-new .label-hover:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    } 
+    .reg-events-new .label-hover:focus {
+      text-decoration: underline;
+      outline: none;
+    } 
+    .reg-events-new .cell-type-affiliation {
+      display: table-cell;
+    }   
+    .reg-events-new .error-radio {
+      position: relative;
+    }
+    .reg-events-new .error-radio span {
+      position: absolute;
+      top: -2px;
+      left: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 36px;
+      color: #FC7777;   
+    }
+    .reg-events-new .hidden {
+      display: none !important;
+      visibility: hidden !important     
+    }
+    .reg-events-new .visibility-hidden {
+      visibility: hidden;
+    }
+    .reg-events-new .cell-radio-1 {
+      display: table-cell; 
+      text-align: center; 
+      padding-right: 0px; 
+      width: 116px;
+    }
+    .reg-events-new .cell-radio-2 {
+      display: table-cell; 
+      text-align: center; 
+      padding-right: 0px; 
+      width: 10px;
+    }
+    .reg-events-new .row-radio-1 {
+      display: table-row;
+    }
+    .reg-events-new .row-radio-2 {
+      display: table-row; 
+      height: 4px;
+    }
+	.reg-events-ul-1 {
+		width: 1200px; 
+		margin: 0 auto; 
+		padding-right: 20px; 
+		vertical-align: top;
+	}	
+	.reg-events-li-1 {
+		margin: 0 auto; 
+		padding-right: 20px; 
+		vertical-align: top; 
+		display: inline-block;
+	}	
+	.reg-events-new .reg-events-wrapper-index-1 {
+		width: 1000px; 
+		margin-right: auto; 
+		margin-left: auto; 
+		background: #fff;
+	}	
+	.reg-events-new .reg-events-line-through {
+		text-decoration: line-through;
+	}
+	.reg-events-new .reg-events-state-1 {
+		display: table-cell; 
+		padding-left: 20px;	
+	}
+	.reg-events-new .reg-events-state-2 {
+		display: table; 
+	}
+	.reg-events-new .reg-events-state-3a {
+		display: table-row; 
+		height: 16px;
+	}
+	.reg-events-new .reg-events-state-3b {
+		display: table-row; 
+	}
+	.reg-events-new .reg-events-state-4 {
+		display: table-cell; 
+	}
+	
+	</style>
+					
+	<!-- <script id="dropdown-data1-selected" type="text/x-dot-template">
+		{{=it.label}}<i>&darr;</i>
+	</script> -->
+	
+	<!-- <script id="dropdown-data1" type="text/x-dot-template">
+		<div class="dropdown1" id="dropdown1" tabindex="6" style="z-index: 90">
+		    <div class="selected">{{=it.selected.label}}<i>&darr;</i></div>
+		    <ul>
+		        {{~it.items :item:index}}
+		        <li data-index="{{=index}}">{{=item.label}}</li>
+		        {{~}}
+		    </ul>
+		</div>
+	</script> -->		
+
+	<%= render 'share/backtotop' %>
+			
+	<ul class="lc-inline reg-events-ul-1">
+		<li class="reg-events-li-1">
+			<%= render 'share/eventpages_tabs' %>
+			<a href="http://www.amplify.com/ela" target="_blank" class="event-reg-ad">
+				<img src="/repository/ads/amplify.png" alt="Amplify"/>
+			</a>
+		</li>
+		<li class="reg-events-li-1">
+			<div id="tab-container" class="reg-events-new">
+				
+				
+				
+				
+				<div class="reg-events-wrapper-index-1">
+					<div class="table-white">
+						<div class="row">
+							<div class="cell-100percent">
+								<div class="commun">
+									<div style="margin-top:50px;" class="seperator-commun"><img src="/repository/logo-icon-come-together.png">LIVE EVENT REGISTRATION</div>
+									<div class="commun-inside">
+										<br><br><br>
+										<p style="clear:both;">
+											<a href="/ContactUs"><img src="../repository/events/events-reg-form-1.png" alt="events-reg-form-1.png" height="150px" align="left" ></a>
+											<strong>WELCOME to REGISTRATION </strong>for Learning Counsel events! School executives and educators are welcome to attend
+											 in any city FREE of charge representing their institution.  
+										</p>
+										<br>
+										<p>
+											Register for upcoming events and we'll keep you posted on any changes, dates and final venues via email. 
+											You must be present at the event to win any drawing. 							
+										</p>
+										<br>
+										<p style="padding-bottom: 20px;">
+											If you are a private sector registrant, please note that there is an attendance fee for you unless your company is already sponsoring. 
+											We will contact you after your registration.  
+										</p>
+										<div class="bottom-commun-squares">&nbsp;</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<a name="anchor1"></a>    		      		     		
+						<div class="row" style="height: 30px;">
+							<div  class="cell-100percent" style="padding-left: 300px;">
+					    		<% unless flash[:captcha].nil? %>
+								<div class="alert"><%= flash[:captcha] %></div>
+					      		<% end %>
+							</div>
+						</div>
+						<div class="row" style="height: 10px;"></div>
+					</div>
+				</div>
+				<div class="reg-events-wrapper-index-1">
+					<div class="top-commun-squares">&nbsp;</div>
+					<section>
+						<div id="join-image" class="">
+							<div id="form_reg_event" class="form-reg-commun" tabindex="1">
+								<%= form_for( @reg_event, :html => {:id => "form_join"}) do |f| %> 
+									<!-- 
+									$("div.errors p").html(message);
+									$("div.errors").show(); 
+									-->
+									<div class="errors" style="height: 30px; text-align: left; padding-left: 300px;">
+										<p></p>
+										<!-- <div class="row">
+											<div class="cell-left-reg-commun"></div>
+											<div class="cell-right-reg-commun"></div>
+											<div class="cell-error-reg-event"></div>										
+										</div> -->
+									</div>			
+									<div class="input-form-spacer"></div>
+									<!--name_first-->
+									<div class="row">
+										<div class="cell-left-reg-commun">
+											<%= f.label(:name_first, "First Name", :class => 'input-label required-label', :id => 'label_reg_event_name_first') %>
+										</div>
+										<div class="cell-right-reg-commun">
+											 <%= f.text_field(:name_first, :class => "input-form required", :placeholder => 'First Name', :tabindex => '2', :autofocus => true) %>					 
+										</div>
+										<div class="cell-error-reg-event" id="state_reg_event_name_first"><p id="error_reg_event_name_first"></p></div>      					   
+									</div>      		
+									<div class="input-form-spacer"></div>
+									<!--name_last-->
+									<div class="row">
+										<div class="cell-left-reg-commun">
+											<%= f.label(:name_last, "Last Name", :class => 'input-label required-label', :id => 'label_reg_event_name_last') %>
+										</div>
+										<div class="cell-right-reg-commun">
+											 <%= f.text_field(:name_last, :class => "input-form required", :placeholder => 'Last Name', :tabindex => '3') %>					 
+										</div>
+										<div class="cell-error-reg-event" id="state_reg_event_name_last"><p id="error_reg_event_name_last"></p></div>      					   
+									</div>      		
+									<div class="input-form-spacer"></div>
+									<!--name_title_sir-->
+									<div class="row">
+										<div class="cell-left-reg-commun">
+											<%= f.label(:name_title_sir, "Mr, Mrs, Ms, Dr", :class => 'input-label required-label', :id => 'label_reg_event_name_title') %>
+										</div>
+										<div class="cell-right-reg-commun">
+											 <%= f.text_field(:name_title_sir, :class => "input-form required", :placeholder => 'Mr, Mrs, Ms, Dr', :tabindex => '4') %>					 
+										</div>
+										<div class="cell-error-reg-event" id="state_reg_event_name_title_sir"><p id="error_reg_event_name_title_sir"></p></div>      					   
+									</div>      		
+									<div class="input-form-spacer"></div>
+									<!--name_title-->
+									<div class="row">
+										<div class="cell-left-reg-commun">
+											<%= f.label(:name_title, "Position Title", :class => 'input-label required-label', :id => 'label_reg_event_name_title') %>
+										</div>
+										<div class="cell-right-reg-commun">
+											 <%= f.text_field(:name_title, :class => "input-form required", :placeholder => 'Title', :tabindex => '5') %>					 
+										</div>
+										<div class="cell-error-reg-event" id="state_reg_event_name_title"><p id="error_reg_event_name_title"></p></div>      					   
+									</div>      		
+									<div class="input-form-spacer"></div>
+									<div class="input-form-spacer"></div>
+									<!--type_affiliation-->			
+									<div style="width: 100%;">
+										<div style="width: 360px; margin-left: 300px;">
+											<div class="" style="display: table; text-align: center;">
+												<div class="row-radio-1">						
+													<div class="cell-radio-1">
+														<label id="label_type_affiliation_school" class="input-label required-label label-hover" for="type_affiliation_school" tabindex="6">School/District</label>
+													</div>
+													<div class="cell-radio-1">
+														<label id="label_type_affiliation_company" class="input-label required-label label-hover" for="type_affiliation_company" tabindex="7">Company</label>
+													</div>
+													<div class="cell-radio-1">
+														<label id="label_type_affiliation_other" class="input-label required-label label-hover" for="type_affiliation_other" tabindex="8">Other</label>
+													</div>
+													<div class="cell-radio-2">
+													</div>
+												</div>							
+												<div class="row-radio-2"></div>
+												<div class="row-radio-1">						
+													<div class="cell-radio-1">
+														<div id="rd_type_affiliation_school" class="rd-button-test" style="margin: 0 auto;"></div>
+														<%= f.radio_button(:type_affiliation, 1) %>
+													</div>
+													<div class="cell-radio-1">
+														<div id="rd_type_affiliation_company" class="rd-button-test" style="margin: 0 auto;"></div>
+														<%= f.radio_button(:type_affiliation, 2) %>
+													</div>
+													<div class="cell-radio-1">
+														<div id="rd_type_affiliation_other" class="rd-button-test" style="margin: 0 auto;"></div>
+														<%= f.radio_button(:type_affiliation, 3) %>
+													</div>							
+													<div id="error_radio" class="cell-radio-2 error-radio">
+														<span id="error_radio_span" class="visibility-hidden">*</span>
+													</div>							
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<% if false %>
+									<div class="row">
+										<div class="cell-left-reg-commun">
+											<%= f.label(:type_affiliation, "School/District or Company?", :class => 'input-label required-label', :id => 'label_reg_event_type_affiliation') %>
+										</div>
+										<div class="cell-right-reg-commun">
+											<select name="reg_event[type_affiliation]" id="reg_event_type_affiliation" class="" style="display: none;" data-template="#dropdown-data1">
+											    <option value="0" selected="selected" id="option-default">-School/District or Company?-</option>	
+											    <option value="1">School/District</option>
+											    <option value="2">Company</option>
+											    <option value="3">OTHER</option>
+											</select>										
+										</div>
+										<div class="cell-error-reg-event" id="state_reg_event_type_affiliation"><p id="error_reg_event_type_affiliation" class="select-errors"></p></div>     
+									</div>      		
+									<% end %>
+									
+									<div class="input-form-spacer"></div>
+									<div class="input-form-spacer"></div>
+									<!--name_affiliation-->
+									<div class="row">
+										<div class="cell-left-reg-commun">
+											<%= f.label(:name_affiliation, "School/District or Company Name", :class => 'input-label required-label', :id => 'label_reg_event_name_affiliation') %>
+										</div>
+										<div class="cell-right-reg-commun">
+											 <%= f.text_field(:name_affiliation, :class => "input-form required", :placeholder => 'School/District or Company Name', :tabindex => '9') %>					 
+										</div>
+										<div class="cell-error-reg-event" id="state_reg_event_name_affiliation"><p id="error_reg_event_name_affiliation"></p></div>      					   
+									</div>      		
+									<div class="input-form-spacer"></div>
+									<!--address-->
+									<div class="row">
+										<div class="cell-left-reg-commun">
+											<%= f.label(:address, "Address", :class => 'input-label required-label', :id => 'label_reg_event_address') %>
+										</div>
+										<div class="cell-right-reg-commun">
+											 <%= f.text_field(:address, :class => "input-form required", :placeholder => 'Address', :tabindex => '10') %>					 
+										</div>
+										<div class="cell-error-reg-event" id="state_reg_event_address"><p id="error_reg_event_address"></p></div>      					   
+									</div>      		
+									<div class="input-form-spacer"></div>
+									<!--city-->
+									<div class="row">
+										<div class="cell-left-reg-commun">
+											<%= f.label(:city, "City", :class => 'input-label required-label', :id => 'label_reg_event_city') %>
+										</div>
+										<div class="cell-right-reg-commun">
+											 <%= f.text_field(:city, :class => "input-form required", :placeholder => 'City', :tabindex => '11') %>					 
+										</div>
+										<div class="cell-error-reg-event" id="state_reg_event_city"><p id="error_reg_event_city"></p></div>      					   
+									</div>      		
+									<div class="input-form-spacer"></div>
+									<!--state-->
+									<div class="row">
+										<div class="cell-left-reg-commun">
+											<%= f.label(:state, "State", :class => 'input-label required-label', :id => 'label_reg_event_state') %>
+										</div>
+										<div class="cell-right-reg-commun">
+											 <%= f.text_field(:state, :class => "input-form required", :placeholder => 'State', :tabindex => '12') %>					 
+										</div>
+										<div class="cell-error-reg-event" id="state_reg_event_state"><p id="error_reg_event_state"></p></div>      					   
+									</div>      		
+									<div class="input-form-spacer"></div>
+									<!--zip-->
+									<div class="row">
+										<div class="cell-left-reg-commun">
+											<%= f.label(:zip, "Zip", :class => 'input-label required-label', :id => 'label_reg_event_zip') %>
+										</div>
+										<div class="cell-right-reg-commun">
+											 <%= f.text_field(:zip, :class => "input-form required", :placeholder => 'Zip', :tabindex => '13') %>					 
+										</div>
+										<div class="cell-error-reg-event" id="state_reg_event_zip"><p id="error_reg_event_zip"></p></div>      					   
+									</div>      		
+									<div class="input-form-spacer"></div>
+									<!--phone-->
+									<div class="row">
+										<div class="cell-left-reg-commun">
+											<%= f.label(:phone, "Phone", :class => 'input-label required-label', :id => 'label_reg_event_phone') %>
+										</div>
+										<div class="cell-right-reg-commun">
+											 <%= f.text_field(:phone, :class => "input-form required", :placeholder => 'Phone', :tabindex => '14') %>					 
+										</div>
+										<div class="cell-error-reg-event" id="state_reg_event_phone"><p id="error_reg_event_phone"></p></div>      					   
+									</div>      		
+									<div class="input-form-spacer"></div>
+									<!--phone_mobile-->
+									<div class="row">
+										<div class="cell-left-reg-commun">
+											<%= f.label(:phone_mobile, "(*optional) Mobile Phone<br>for a text reminder<br>before the Event".html_safe, :class => 'input-label required-label', :id => 'label_reg_event_phone_mobile') %>
+										</div>
+										<div class="cell-right-reg-commun">
+											 <%= f.text_field(:phone_mobile, :class => "input-form required", :placeholder => 'Mobile Phone', :tabindex => '15') %>					 
+										</div>
+										<div class="cell-error-reg-event" id="state_reg_event_phone_mobile"><p id="error_reg_event_phone_mobile"></p></div>      					   
+									</div>      		
+									<div class="input-form-spacer"></div>
+									<!--email-->
+									<div class="row">
+										<div class="cell-left-reg-commun">
+											<%= f.label(:email, "Email", :class => 'input-label required-label', :id => 'label_reg_event_email') %>
+										</div>
+										<div class="cell-right-reg-commun">
+											<%= f.text_field(:email, :class => "input-form required", :placeholder => 'email@example.com', :tabindex => '16' ) %>
+										</div>
+										<div class="cell-error-reg-event" id="state_reg_event_email"><p id="error_reg_event_email"></p></div>      	
+									</div>      		
+									<div class="input-form-spacer"></div>
+									<!--email_cc_1 -->
+									<div class="row">
+										<div class="cell-left-reg-commun">
+											<%= f.label(:email_cc_1, "(*optional) cc Email", :class => 'input-label required-label', :id => 'label_reg_event_email_cc_1') %>
+										</div>
+										<div class="cell-right-reg-commun">
+											<%= f.text_field(:email_cc_1, :class => "input-form required", :placeholder => 'email@example.com', :tabindex => '17' ) %>
+										</div>
+										<div class="cell-error-reg-event" id="state_reg_event_email_cc_1"><p id="error_reg_event_email_cc_1"></p></div>      	
+									</div>      		
+									<div class="input-form-spacer"></div>
+									<!--email_cc_2-->
+									<div class="row">
+										<div class="cell-left-reg-commun">
+											<%= f.label(:email_cc_2, "(*optional) cc Email", :class => 'input-label required-label', :id => 'label_reg_event_email_cc_2') %>
+										</div>
+										<div class="cell-right-reg-commun">
+											<%= f.text_field(:email_cc_2, :class => "input-form required", :placeholder => 'email@example.com', :tabindex => '18' ) %>
+										</div>
+										<div class="cell-error-reg-event" id="state_reg_event_email_cc_2"><p id="error_reg_event_email_cc_2"></p></div>      	
+									</div>      		
+									<div class="input-form-spacer"></div>
+									<div class="input-form-spacer"></div>
+									<div class="row">
+										<div class="cell-left-reg-commun">
+											<!-- <label class="input-label required-label"><br><br>Workshops</label> -->
+											<div>
+												<label class="input-label-wide required-label">
+													Workshops
+												</label>
+											</div>
+											<div>
+												<label class="input-label-wide required-label">
+													<em>Select all that apply</em>
+												</label>								
+											</div>								
+										</div>
+										<div id="border_level" class="button-border" style="width: 416px;">
+											<div class="cell-right-reg-commun-cb">
+												<div style="height: 2px;"></div>
+												<div style="margin-left: 20px;">
+													<table id="table1" class="cb-table">
+														<tr class="cb-spacer"><td></td><td></td><td></td><td></td></tr>
+														<tr>
+															<td class="cb-col-1">
+															</td>
+															<td class="cb-col-2">
+																<label class="input-label required-label label-cb"></label>
+															</td>
+															<td class="cb-col-3"></td>
+															<td class="cb-col-4">
+																<span>2015</span>
+															</td>									
+														</tr>
+						
+														<!-- 
+														1  Phoenix, AZ			Jan 14 
+														2  Seattle, WA			Jan 28
+														3  Atlanta, GA			Feb 10
+														4  Denver, CO			Feb 19
+														5  Fresno, CA			Mar 4
+														6  Minneapolis, MN		Mar 12
+														7  Los Angeles, CA		Mar 24
+														8  Charlotte, NC		Apr 16
+														9  Chicago, IL			Apr 23
+														10 Houston, TX			Apr 29
+														11 Richmond, VA			May 14
+														12 Memphis, TN			May TBD
+														13 Tampa, FL			Sep 17
+														14 Dallas, TX			Sep 19
+														15 Newark, NJ			Sep 23
+														16 San Jose, CA			Sep 30
+														17 Kansas City, MO		Oct 7
+														18 Boston, MA			Oct 15
+														19 Santa Fe, NM			Oct 26-27
+														-->								
+						
+														<tr class="cb-spacer"></tr>
+														<tr>
+															<td class="cb-col-1">
+																<div id="cb_workshop_2" class="cb-button-test-expired cb-valign"></div>
+																 <%= f.check_box :city_workshop_2 %> 
+															</td>
+															<td class="cb-col-2">
+																<span id="label_city_workshop_2" class="input-label required-label label-cb-expired reg-events-line-through" for="city_workshop_2" tabindex="">Seattle, WA</span>
+																<!-- <span id="label_city_workshop_2" class="input-label required-label label-cb" for="city_workshop_2" onclick="cb_city_workshop('2');" tabindex="17" >Seattle, WA</span> -->
+															</td>
+															<td class="cb-col-3"></td>
+															<td class="cb-col-4">
+																<span>Jan 27</span>
+															</td>
+														</tr>
+														<tr class="cb-spacer"></tr>								
+														<tr>
+															<td class="cb-col-1">
+																<!-- <div id="cb_workshop_1_legacy" class="cb-button cb-valign"></div> -->
+																<div id="cb_workshop_1" class="cb-button-test-expired cb-valign"></div>
+																 <!-- <#%= f.check_box :city_workshop_1 %#> --> 
+																 <%= f.check_box :city_workshop_1 %> 
+															</td>
+															<td class="cb-col-2">
+																<span id="label_city_workshop_1" class="input-label required-label label-cb-expired reg-events-line-through" for="city_workshop_1" tabindex="">Phoenix, AZ</span>
+																<!-- <span id="label_city_workshop_1" class="input-label required-label label-cb" for="city_workshop_1" onclick="cb_city_workshop('1');" tabindex="18" >Phoenix, AZ</span> -->
+															</td>
+															<td class="cb-col-3"></td>
+															<td class="cb-col-4">
+																<span>Jan 29</span>
+															</td>
+														</tr>
+														<tr class="cb-spacer"></tr>
+														<tr>
+															<td class="cb-col-1">
+																<div id="cb_workshop_3" class="cb-button-test-expired cb-valign"></div>
+																 <%= f.check_box :city_workshop_3 %> 
+															</td>
+															<td class="cb-col-2">
+																<span id="label_city_workshop_3" class="input-label required-label label-cb-expired reg-events-line-through" for="city_workshop_3" tabindex="">Atlanta, GA</span>
+																<!-- <span id="label_city_workshop_3" class="input-label required-label label-cb" for="city_workshop_3" onclick="cb_city_workshop('3');" tabindex="19" >Atlanta, GA</span> -->
+															</td>
+															<td class="cb-col-3"></td>
+															<td class="cb-col-4">
+																<span>Feb 10</span>
+															</td>
+														</tr>
+														<tr class="cb-spacer"></tr>
+														<tr>
+															<td class="cb-col-1">
+																<div id="cb_workshop_4" class="cb-button-test-expired cb-valign"></div>
+																 <%= f.check_box :city_workshop_4 %> 
+															</td>
+															<td class="cb-col-2">
+																<span id="label_city_workshop_4" class="input-label required-label label-cb-expired reg-events-line-through" for="city_workshop_4" tabindex="">Denver, CO</span>
+																<!-- <span id="label_city_workshop_4" class="input-label required-label label-cb" for="city_workshop_4" onclick="cb_city_workshop('4');" tabindex="20" >Denver, CO</span> -->
+																<img src="/repository/schedule/co-final-logo.jpeg" style="width: 50px; vertical-align: middle;">
+															</td>
+															<td class="cb-col-3"></td>
+															<td class="cb-col-4">
+																<span>Feb 19</span>
+															</td>
+														</tr>
+														<tr class="cb-spacer"></tr>
+														<tr>
+															<td class="cb-col-1">
+																<div id="cb_workshop_5" class="cb-button-test-expired cb-valign"></div>
+																 <%= f.check_box :city_workshop_5 %> 
+															</td>
+															<td class="cb-col-2">
+																<span id="label_city_workshop_5" class="input-label required-label label-cb-expired reg-events-line-through" for="city_workshop_5" tabindex="">Fresno, CA</span>
+																<!-- <span id="label_city_workshop_5" class="input-label required-label label-cb" for="city_workshop_5" onclick="cb_city_workshop('5');" tabindex="21" >Fresno, CA</span> -->
+															</td>
+															<td class="cb-col-3"></td>
+															<td class="cb-col-4">
+																<span>Mar 4</span>
+															</td>
+														</tr>
+														<tr class="cb-spacer"></tr>
+														<tr>
+															<td class="cb-col-1">
+																<div id="cb_workshop_6" class="cb-button-test-expired cb-valign"></div>
+																 <%= f.check_box :city_workshop_6 %> 
+															</td>
+															<td class="cb-col-2">
+																<span id="label_city_workshop_6" class="input-label required-label label-cb-expired reg-events-line-through" for="city_workshop_6">Minneapolis, MN</span>
+																<!-- <span id="label_city_workshop_6" class="input-label required-label label-cb" for="city_workshop_6" onclick="cb_city_workshop('6');" tabindex="22" >Minneapolis, MN</span> -->
+															</td>
+															<td class="cb-col-3"></td>
+															<td class="cb-col-4">
+																<span>Mar 11</span>
+															</td>
+														</tr>
+														<tr class="cb-spacer"></tr>
+														<tr>
+															<td class="cb-col-1">
+																<div id="cb_workshop_7" class="cb-button-test-expired cb-valign"></div>
+																 <%= f.check_box :city_workshop_7 %> 
+															</td>
+															<td class="cb-col-2">
+																<span id="label_city_workshop_7" class="input-label required-label label-cb reg-events-line-through" for="city_workshop_7" tabindex="23">Los Angeles, CA</span>
+																<!-- <span id="label_city_workshop_7" class="input-label required-label label-cb" for="city_workshop_7" onclick="cb_city_workshop('7');" tabindex="23">Los Angeles, CA</span> -->
+															</td>
+															<td class="cb-col-3"></td>
+															<td class="cb-col-4">
+																<span>Mar 25</span>
+															</td>
+														</tr>
+														<tr class="cb-spacer"></tr>
+														<tr>
+															<td class="cb-col-1">
+																<div id="cb_workshop_8" class="cb-button-test-expired cb-valign"></div>
+																 <%= f.check_box :city_workshop_8 %> 
+															</td>
+															<td class="cb-col-2">
+																<!-- <span id="label_city_workshop_8" class="input-label required-label label-cb" for="city_workshop_8" onclick="cb_city_workshop('8');" tabindex="24">Charlotte, NC</span> -->
+																<span id="label_city_workshop_8" class="input-label required-label label-cb reg-events-line-through" for="city_workshop_8" tabindex="24">Charlotte, NC</span>
+															</td>
+															<td class="cb-col-3"></td>
+															<td class="cb-col-4">
+																<span>Apr 16</span>
+															</td>
+														</tr>
+														<tr class="cb-spacer"></tr>
+														<tr>
+															<td class="cb-col-1">
+																<div id="cb_workshop_9" class="cb-button-test cb-valign"></div>
+																 <%= f.check_box :city_workshop_9 %> 
+															</td>
+															<td class="cb-col-2">
+																<span id="label_city_workshop_9" class="input-label required-label label-cb" for="city_workshop_9" onclick="cb_city_workshop('9');" tabindex="25">Chicago, IL</span>
+															</td>
+															<td class="cb-col-3"></td>
+															<td class="cb-col-4">
+																<span>Apr 23</span>
+															</td>
+														</tr>
+														<tr class="cb-spacer"></tr>
+														<tr>
+															<td class="cb-col-1">
+																<div id="cb_workshop_10" class="cb-button-test cb-valign"></div>
+																 <%= f.check_box :city_workshop_10 %> 
+															</td>
+															<td class="cb-col-2">
+																<span id="label_city_workshop_10" class="input-label required-label label-cb" for="city_workshop_10" onclick="cb_city_workshop('10');" tabindex="26">Houston, TX</span>
+															</td>
+															<td class="cb-col-3"></td>
+															<td class="cb-col-4">
+																<span>Apr 29</span>
+															</td>
+														</tr>
+														<tr class="cb-spacer"></tr>
+														<tr>
+															<td class="cb-col-1">
+																<div id="cb_workshop_11" class="cb-button-test cb-valign"></div>
+																 <%= f.check_box :city_workshop_11 %> 
+															</td>
+															<td class="cb-col-2">
+																<span id="label_city_workshop_11" class="input-label required-label label-cb" for="city_workshop_11" onclick="cb_city_workshop('11');" tabindex="27">Richmond, VA</span>
+															</td>
+															<td class="cb-col-3"></td>
+															<td class="cb-col-4">
+																<span>May 14</span>
+															</td>
+														</tr>
+														<tr class="cb-spacer"></tr>
+														<tr>
+															<td class="cb-col-1">
+																<div id="cb_workshop_12" class="cb-button-test cb-valign"></div>
+																 <%= f.check_box :city_workshop_12 %> 
+															</td>
+															<td class="cb-col-2">
+																<span id="label_city_workshop_12" class="input-label required-label label-cb" for="city_workshop_12" onclick="cb_city_workshop('12');" tabindex="28">Memphis, TN</span>
+															</td>
+															<td class="cb-col-3"></td>
+															<td class="cb-col-4">
+																<span>May 27</span>
+															</td>
+														</tr>
+														<tr class="cb-spacer"></tr>
+														<tr>
+															<td class="cb-col-1">
+																<div id="cb_workshop_14" class="cb-button-test cb-valign"></div>
+																 <%= f.check_box :city_workshop_14 %> 
+															</td>
+															<td class="cb-col-2">
+																<span id="label_city_workshop_14" class="input-label required-label label-cb" for="city_workshop_14" onclick="cb_city_workshop('14');" tabindex="29">Dallas, TX</span>
+															</td>
+															<td class="cb-col-3"></td>
+															<td class="cb-col-4">
+																<span>Sept 10</span>
+															</td>
+														</tr>
+														<tr class="cb-spacer"></tr>
+														<tr>
+															<td class="cb-col-1">
+																<div id="cb_workshop_13" class="cb-button-test cb-valign"></div>
+																 <%= f.check_box :city_workshop_13 %> 
+															</td>
+															<td class="cb-col-2">
+																<span id="label_city_workshop_13" class="input-label required-label label-cb" for="city_workshop_13" onclick="cb_city_workshop('13');" tabindex="30">Tampa, FL</span>
+															</td>
+															<td class="cb-col-3"></td>
+															<td class="cb-col-4">
+																<span>Sept 17</span>
+															</td>
+														</tr>
+														<tr class="cb-spacer"></tr>
+														<tr>
+															<td class="cb-col-1">
+																<div id="cb_workshop_15" class="cb-button-test cb-valign"></div>
+																 <%= f.check_box :city_workshop_15 %> 
+															</td>
+															<td class="cb-col-2">
+																<span id="label_city_workshop_15" class="input-label required-label label-cb" for="city_workshop_15" onclick="cb_city_workshop('15');" tabindex="31">Newark, NJ</span>
+															</td>
+															<td class="cb-col-3"></td>
+															<td class="cb-col-4">
+																<span>Sept 23</span>
+															</td>
+														</tr>
+														<tr class="cb-spacer"></tr>
+														<tr>
+															<td class="cb-col-1">
+																<div id="cb_workshop_16" class="cb-button-test cb-valign"></div>
+																 <%= f.check_box :city_workshop_16 %> 
+															</td>
+															<td class="cb-col-2">
+																<span id="label_city_workshop_16" class="input-label required-label label-cb" for="city_workshop_16" onclick="cb_city_workshop('16');" tabindex="32">San Jose, CA</span>
+															</td>
+															<td class="cb-col-3"></td>
+															<td class="cb-col-4">
+																<span>Sept 30</span>
+															</td>
+														</tr>
+														<tr class="cb-spacer"></tr>
+														<tr>
+															<td class="cb-col-1">
+																<div id="cb_workshop_17" class="cb-button-test cb-valign"></div>
+																 <%= f.check_box :city_workshop_17 %> 
+															</td>
+															<td class="cb-col-2">
+																<span id="label_city_workshop_17" class="input-label required-label label-cb" for="city_workshop_17" onclick="cb_city_workshop('17');" tabindex="33">Kansas City, MO (IA, NE, KS)</span>
+															</td>
+															<td class="cb-col-3"></td>
+															<td class="cb-col-4">
+																<span>Oct 7</span>
+															</td>
+														</tr>
+														<tr class="cb-spacer"></tr>
+														<tr>
+															<td class="cb-col-1">
+																<div id="cb_workshop_20" class="cb-button-test cb-valign"></div>
+																 <%= f.check_box :city_workshop_20 %> 
+															</td>
+															<td class="cb-col-2">
+																<span id="label_city_workshop_20" class="input-label required-label label-cb" for="city_workshop_20" onclick="cb_city_workshop('20');" tabindex="34">Baltimore, MD</span>
+															</td>
+															<td class="cb-col-3"></td>
+															<td class="cb-col-4">
+																<span>Oct 13</span>
+															</td>
+														</tr>
+														<tr class="cb-spacer"></tr>
+														<tr>
+															<td class="cb-col-1">
+																<div id="cb_workshop_18" class="cb-button-test cb-valign"></div>
+																 <%= f.check_box :city_workshop_18 %> 
+															</td>
+															<td class="cb-col-2">
+																<span id="label_city_workshop_18" class="input-label required-label label-cb" for="city_workshop_18" onclick="cb_city_workshop('18');" tabindex="35">Boston, MA</span>
+															</td>
+															<td class="cb-col-3"></td>
+															<td class="cb-col-4">
+																<span>Oct 15</span>
+															</td>
+														</tr>
+														<tr class="cb-spacer"></tr>
+														<tr>
+															<td class="cb-col-1">
+																<div id="cb_workshop_19" class="cb-button-test cb-valign"></div>
+																 <%= f.check_box :city_workshop_19 %> 
+															</td>
+															<td class="cb-col-2">
+																<span id="label_city_workshop_19" class="input-label required-label label-cb" for="city_workshop_19" onclick="cb_city_workshop('19');" tabindex="36">Albuquerque, NM</span>
+															</td>
+															<td class="cb-col-3"></td>
+															<td class="cb-col-4">
+																<span>Oct 26-27</span>
+															</td>
+														</tr>
+														<tr class="cb-spacer"></tr>
+														<tr>
+															<td class="cb-col-1">
+																<div id="cb_workshop_21" class="cb-button-test cb-valign"></div>
+																 <%= f.check_box :city_workshop_21 %> 
+															</td>
+															<td class="cb-col-2">
+																<span id="label_city_workshop_21" class="input-label required-label label-cb" for="city_workshop_21" onclick="cb_city_workshop('21');" tabindex="37">Sacramento, CA</span>
+															</td>
+															<td class="cb-col-3"></td>
+															<td class="cb-col-4">
+																<span>Oct 29</span>
+															</td>
+														</tr>
+														<tr class="cb-spacer"></tr>
+														<tr>
+															<td class="cb-col-1">
+																<div id="cb_workshop_22" class="cb-button-test cb-valign"></div>
+																 <%= f.check_box :city_workshop_22 %> 
+															</td>
+															<td class="cb-col-2">
+																<span id="label_city_workshop_22" class="input-label required-label label-cb" for="city_workshop_22" onclick="cb_city_workshop('22');" tabindex="38">San Diego, CA</span>
+															</td>
+															<td class="cb-col-3"></td>
+															<td class="cb-col-4">
+																<span>Nov 5</span>
+															</td>
+														</tr>
+													</table>
+												</div>
+											</div>
+										</div>
+										<div class="reg-events-state-1">
+											<div class="reg-events-state-2">
+												<div class="reg-events-state-3a"></div>
+												<div class="reg-events-state-3b">
+													<div class="reg-events-state-4">
+														<div class="cell-error-reg-commun-cb" id="state_reg_event_city_workshop">
+															<p id="error_reg_event_city_workshop" class="cb-errors"></p>
+														</div>      
+													</div>							
+												</div>
+											</div>
+										</div>
+									</div>      		
+									<div class="input-form-spacer"></div>
+									<div class="input-form-spacer"></div>
+									<div class="input-form-spacer"></div>
+									<div class="input-form-spacer"></div>
+									<div class="input-form-spacer"></div>
+									<div class="input-form-spacer"></div>
+									<div class="submit-button-commun">
+											<%= f.submit "Submit and Download", :id => 'btn_submit', :class => 'btn submitregcommun', :tabindex => '39' %>
+									</div>   		
+								<% end %>
+							</div>		
+						</div>
+					</section>
+				</div>
+				<div style="height: 300px;"></div>
+			</div>
+		</li>
+	</ul>
+
+	<script>
+
+		function scrollToAnchor(aid) {
+			var a = $("a[name='" + aid + "']");
+			$('html, body').animate({ scrollTop: a.offset().top }, 1000);
+		}
+
+		var validatorCalled = false;
+		var val = null;
+		
+		function formValidate() {
+
+			var selectValid1;
+			var validCityWorkshop;
+			var validRadio1;
+			
+			$("#form_join").validate({
+			
+				submitHandler: function(form) {
+
+					validatorCalled = true;					
+
+					selectValid1 = validateSelect1();
+					// selectValid2 = validateSelect2();
+					validCityWorkshop = validateCityWorkshop();
+					validRadio1 = validateRadio1();
+					
+					if ( selectValid1 && validCityWorkshop && validRadio1) {						
+						form.submit();
+					}
+					else
+					{
+						var errors = 0;
+						if (!selectValid1) {
+							errors += 1;
+						}
+						// if (!selectValid2) {
+							// errors += 1;
+						// }			
+						if ( !validCityWorkshop ) {
+							errors += 1;
+						}
+						if ( !validRadio1 ) {
+							errors += 1;
+						}																
+						if (errors) {
+							var message = errors == 1
+							// ? '1 required field missed'
+							// : errors + ' required fields missed';
+							? '* Required field(s) missed'
+							: '* Required field(s) missed';						
+							$("div.errors p").html(message);
+							// $("div.errors").show();
+							$("#btn_submit").blur();
+							$("#form_reg_event").focus();		
+							scrollToAnchor('anchor1');											
+						} else {
+							// $("div.errors").hide();
+							$("div.errors p").html("");
+						}
+					}
+				},
+			
+				debug: true,
+				onkeyup: false,
+				focusCleanup: true,
+				focusInvalid: false,
+				// invalidClass: "error",
+				// validClass: "success",
+				rules: {
+					'reg_event[name_first]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 100						
+					},
+					'reg_event[name_last]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 100						
+					},
+					'reg_event[name_title_sir]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 200						
+					},
+					'reg_event[name_title]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 200						
+					},
+					'reg_event[type_affiliation]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 200						
+					},
+					'reg_event[name_affiliation]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 100						
+					},
+					'reg_event[address]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 100						
+					},
+					'reg_event[city]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 100						
+					},
+					'reg_event[state]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 50						
+					},
+					'reg_event[zip]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 50						
+					},
+					'reg_event[phone]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 50						
+					},
+					'reg_event[phone_mobile]': {
+						required: false,
+						minlength: 1,						
+						maxlength: 100						
+					},					
+					'reg_event[email]': {
+						required: true,
+						maxlength: 100,
+						email: true
+					},
+					'reg_event[email_cc_1]': {
+						required: false,
+						maxlength: 100,
+						email: true
+					},
+					'reg_event[email_cc_2]': {
+						required: false,
+						maxlength: 100,
+						email: true
+					}
+				},
+				invalidHandler: function(event, validator) {
+					val = validator;
+					var errors = validator.numberOfInvalids();
+					validatorCalled = true;					
+					
+					if (!validateSelect1()) {
+						errors += 1;
+					}		
+					if ( !validateCityWorkshop() ) {
+						errors += 1;
+					}
+					if ( !validateRadio1() ) {
+						errors += 1;
+					}																															
+					if (errors) {
+						var message = errors == 1
+						// ? '1 required field missed'
+						// : errors + ' required fields missed';
+						? '* Required field(s) missed'
+						: '* Required field(s) missed';						
+						$("div.errors p").html(message);
+						$("div.errors").show();
+						$("#btn_submit").blur();
+						$("#form_reg_event").focus();		
+						scrollToAnchor('anchor1');										
+					} else {
+						$("div.errors").hide();
+					}
+				},			
+				messages: {
+					'reg_event[name_first]': {
+						required: "*",
+						maxlength: "Exceeds 100 characters"							
+					},
+					'reg_event[name_last]': {
+						required: "*",
+						maxlength: "Exceeds 100 characters"							
+					},
+					'reg_event[name_title_sir]': {
+						required: "*",
+						maxlength: "Exceeds 20 characters"							
+					},
+					'reg_event[name_title]': {
+						required: "*",
+						maxlength: "Exceeds 200 characters"							
+					},
+					'reg_event[type_affiliation]': {
+						required: "*",
+						maxlength: "Exceeds 200 characters"							
+					},
+					'reg_event[name_affiliation]': {
+						required: "*",
+						maxlength: "Exceeds 100 characters"							
+					},
+					'reg_event[address]': {
+						required: "*",
+						maxlength: "Exceeds 100 characters"							
+					},
+					'reg_event[city]': {
+						required: "*",
+						maxlength: "Exceeds 100 characters"							
+					},
+					'reg_event[state]': {
+						required: "*",
+						maxlength: "Exceeds 50 characters"							
+					},
+					'reg_event[zip]': {
+						required: "*",
+						maxlength: "Exceeds 50 characters"							
+					},
+					'reg_event[phone]': {
+						required: "*",
+						maxlength: "Exceeds 100 characters"							
+					},
+					'reg_event[phone]': {
+						required: "*",
+						maxlength: "Exceeds 100 characters"							
+					},					
+					'reg_event[email]': {
+						required: "*",
+						maxlength: "Exceeds 100 characters",
+						email: "Invalid form on email address"
+					},
+					'reg_event[email_cc_1]': {
+						required: "*",
+						maxlength: "Exceeds 100 characters",
+						email: "Invalid form on email address"
+					},					
+					'reg_event[email_cc_2]': {
+						required: "*",
+						maxlength: "Exceeds 100 characters",
+						email: "Invalid form on email address"
+					}					
+				},
+				errorContainer: $("div .error_label"),				
+				errorPlacement: function(error, element) {
+					error.insertAfter('#error_' + element.attr('id'));
+					$('#' + element.attr('id')).removeClass('required').removeClass('success').addClass('error');
+				},
+				// invalid: function(element) {
+				// },
+				// highlight: function(element) {
+					// $('#' + element.attr('id')).removeClass('required').removeClass('success').addClass('error');
+					// //$('#label_' + element.attr('id')).removeClass('required-label').addClass('error-label');
+				// },
+				// unhighlight: function(element) {
+					// //$('#' + element.attr('id')).removeClass('required').removeClass('success').addClass('error');
+					// //$('#label_' + element.attr('id')).removeClass('required-label').addClass('error-label');
+				// },
+				error: function(label) {
+					$('#' + label.attr('for')).removeClass('required').removeClass('success').addClass('error');
+					$('#label_' + label.attr('for')).removeClass('required-label').addClass('error-label');
+					// $('#state_' + label.attr('for')).css ({			
+						// background: 'url("/assets/submit_form_empty.png") no-repeat 0px 0px'
+					// });					
+				},
+				success: function(label) {
+					$('#' + label.attr('for')).removeClass('required').removeClass('error').addClass('success');
+					$('#label_' + label.attr('for')).removeClass('error-label').addClass('required-label');
+					$('#state_' + label.attr('for')).css ({			
+						background: 'url("/assets/submit_form_tick.png") no-repeat 0px 0px'
+					});
+					$('#error_' + label.attr('for')).html("");
+				},				
+				focus: function(element) {
+				 	//$('#' + element.attr('id')).removeClass('required').removeClass('error').removeClass('success').addClass('focus');
+				}
+			});
+			// $.validator.setDefaults({
+				// submitHandler: function() {
+					// form.submit();
+				// }
+			// });
+		}
+
+		// function updateErrorCount_CityWorkshop(isChecked) {
+			// //val = formval.validator;
+			// if ((val !== undefined) && (val !== null)) {
+				// var errors = val.numberOfInvalids();
+				// if (!validateSelect1()) {
+					// errors += 1;
+				// }
+				// if ( !isChecked ) {
+					// errors += 1;
+				// }					
+				// if (errors) {
+					// var message = errors == 1
+					// ? '1 required field missed'
+					// : errors + ' required fields missed';
+					// $("div.errors p").html(message);
+					// // $("div.errors").show();
+				// } else {
+					// // $("div.errors").hide();
+					// $("div.errors p").html("");
+				// }
+				// val.reset();
+			// }					
+		// }
+
+		function updateErrorCount() {
+			//val = formval.validator;
+			if ((val !== undefined) && (val !== null)) {
+				var errors = val.numberOfInvalids();
+				if (!validateSelect1()) {
+					errors += 1;
+				}
+				if ( !validateCityWorkshop() ) {
+					errors += 1;
+				}					
+				if (errors) {
+					var message = errors == 1
+					// ? '1 required field missed'
+					// : errors + ' required fields missed';
+					? '* Required field(s) missed'
+					: '* Required field(s) missed';
+					$("div.errors p").html(message);
+					// $("div.errors").show();
+				} else {
+					// $("div.errors").hide();
+					$("div.errors p").html("");
+				}
+				val.reset();
+			}					
+		}
+		
+		function errorMessageUpdate( element ) {
+			updateErrorCount();
+			if ($('#' + element).hasClass('error')) {
+				if ($('#' + element).val().length > 0) {
+					$('#' + element).removeClass('required').removeClass('success').addClass('error');
+					$('#label_' + element).removeClass('required-label').addClass('error-label');
+				}
+				else {
+					$('#' + element).removeClass('success').removeClass('error').addClass('required');
+					$('#label_' + element).removeClass('success-label').removeClass('error-label').addClass('required-label');				
+					$('#' + element).css ({			
+						'border-color' : '#851717'
+					});
+					$('#state_' + element).css ({			
+						background: 'url("/assets/submit_form_empty.png") no-repeat 0px 1px'
+					});					
+				}
+			}
+			else {			
+				if ($('#' + element).val().length > 0) {
+					$('#' + element).removeClass('required').removeClass('error').addClass('success');
+					$('#label_' + element).removeClass('error-label').addClass('required-label');
+					$('#' + element).css ({			
+						// 'border-color' : '#005C9E'
+						'border-color' : '#41b737'
+					});					
+				}
+				else {
+					$('#' + element).removeClass('success').removeClass('error').addClass('required');
+					$('#label_' + element).removeClass('success-label').removeClass('error-label').addClass('required-label');		
+					$('#state_' + element).css ({			
+						background: 'url("/assets/submit_form_empty.png") no-repeat 0px 1px'
+					});
+				}
+			}
+		}
+
+		$("#reg_event_name_first").on("blur", function () {
+			errorMessageUpdate('reg_event_name_first');
+		});
+
+		$("#reg_event_name_last").on("blur", function () {
+			errorMessageUpdate('reg_event_name_last');
+		});
+
+		$("#reg_event_name_title_sir").on("blur", function () {
+			errorMessageUpdate('reg_event_name_title_sir');
+		});
+
+		$("#reg_event_name_title").on("blur", function () {
+			errorMessageUpdate('reg_event_name_title');
+		});
+
+		$("#reg_event_type_affiliation").on("blur", function () {
+			errorMessageUpdate('reg_event_type_affiliation');
+		});
+
+		$("#reg_event_name_affiliation").on("blur", function () {
+			errorMessageUpdate('reg_event_name_affiliation');
+		});
+
+		$("#reg_event_address").on("blur", function () {
+			errorMessageUpdate('reg_event_address');
+		});
+
+		$("#reg_event_city").on("blur", function () {
+			errorMessageUpdate('reg_event_city');
+		});
+
+		$("#reg_event_state").on("blur", function () {
+			errorMessageUpdate('reg_event_state');
+		});
+
+		$("#reg_event_zip").on("blur", function () {
+			errorMessageUpdate('reg_event_zip');
+		});
+
+		$("#reg_event_phone").on("blur", function () {
+			errorMessageUpdate('reg_event_phone');
+		});
+
+		$("#reg_event_phone_mobile").on("blur", function () {
+			errorMessageUpdate('reg_event_phone_mobile');
+		});
+
+		$("#reg_event_email").on("blur", function () {
+			errorMessageUpdate('reg_event_email');
+		});
+
+		$("#reg_event_email_cc_1").on("blur", function () {
+			errorMessageUpdate('reg_event_email_cc_1');
+		});
+
+		$("#reg_event_email_cc_2").on("blur", function () {
+			errorMessageUpdate('reg_event_email_cc_2');
+		});
+
+		// $("#reg_event_city_workshop").on("blur", function () {
+			// updateErrorCount();
+		// });
+		// $("#reg_event_type_affiliation").on("focusout", function () {
+			// alert('focusout');
+			// updateErrorCount();
+		// });
+		// $(".dropdown2").on("focusout", function () {
+			// alert('focusout');
+			// updateErrorCount();
+		// });
+		// $(".dropdown2").on("blur", function () {
+			// alert('blur');
+			// updateErrorCount();
+		// });
+
+
+		// #41b737;/* #005C9E blue */
+		var selectValid1 = false;
+		function selectStatus1() {
+			if ($("#reg_event_type_affiliation option:selected").val() == '0') {
+				$('#state_reg_event_type_affiliation').css ({			
+					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 0px'
+				});
+				$('.dropdown1').css ({			
+					// color: '#838383'
+					color: '#ddd'
+				});
+				selectValid1 = false;						
+			}
+			else {
+				$('#state_reg_event_type_affiliation').css ({			
+					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 0px'
+				});
+				$('.dropdown1').css ({			
+					// color: '#ACDDE3'
+					color: '#41b737'
+				});			
+				if( !selectValid1 ) {
+					$('.dropdown1').css ({			
+						// 'border-color' : '#005C9E'
+						'border-color' : '#41b737'
+					});
+					$('.dropdown1 > .selected i').css ({			
+						// 'color' : '#005C9E',
+						'color' : '#41b737',
+						// 'border-left-color' : '#005C9E'
+						'border-left-color' : '#41b737' 
+					});
+					$('#error_reg_event_type_affiliation').html("");					
+				}
+				selectValid1 = true;		
+			}
+			updateErrorCount();			
+		}
+
+		function validateSelect1() {
+			
+			if ($("#reg_event_type_affiliation option:selected").val() == '0') {
+				// $('#state_reg_event_city_workshop').css ({			
+					// background: 'url("/assets/submit_form_empty.png") no-repeat 0px 0px'
+				// });
+				// $('.dropdown').css ({			
+					// color: '#838383'
+				// });
+				$('.dropdown1').css ({			
+					'border-color' : '#851717'
+				});
+				$('.dropdown1 > .selected i').css ({			
+					'color' : '#851717',
+					'border-left-color' : '#851717' 
+				});
+				$('#error_reg_event_type_affiliation').html("*");
+				selectValid1 = false;		
+			}
+			else {
+				$('.dropdown1').css ({			
+					// 'border-color' : '#005C9E'
+					'border-color' : '#41b737'
+				});
+				$('.dropdown1 > .selected i').css ({			
+					// 'color' : '#005C9E',
+					// 'border-left-color' : '#005C9E'
+					'color' : '#41b737',
+					'border-left-color' : '#41b737' 
+				});
+				$('#error_reg_event_type_affiliation').html("");
+				selectValid1 = true;		
+			}
+			return selectValid1;
+		}
+
+		function cb_city_workshop(caller) {
+			var rd = "#opt_city_workshop_" + caller + "_session";
+			var cb = "#reg_event_city_workshop_" + caller;
+			var sb = "#cb_workshop_" + caller;
+			if($(cb).is(':checked')) {
+				$(cb).prop('checked', false);
+				$(sb).removeClass("cb-background");
+				$(rd).css ({			
+					visibility: 'hidden'
+				});							
+			}
+			else {
+				$(cb).prop('checked', true);
+				$(sb).addClass("cb-background");
+				$(rd).css ({			
+					visibility: 'visible'
+				});
+			}
+			validateCityWorkshop();			
+			updateErrorCount();
+		}
+		function validateCityWorkshop() {
+			var isChecked = false;
+			var cb;
+			for (var i = 1; i < 23; i++ ) {
+				cb = "#reg_event_city_workshop_" + i;
+				if($(cb).is(':checked')) {
+					isChecked = true;
+				}
+			}
+			if ( !isChecked ) {
+				if (validatorCalled ) {
+					$("#border_city_workshop").css ({
+						'border-color' : '#851717'
+					});
+					$('#error_reg_event_city_workshop').html("*<br>Please select a Workshop");
+				}
+				$("#state_reg_event_city_workshop").css ({			
+					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 0px'
+				});				
+			}
+			else {					
+				$("#border_city_workshop").css ({
+					'border-color' : '#005C9E'
+				});
+				$('#error_reg_event_city_workshop').html("");
+				$("#state_reg_event_city_workshop").css ({			
+					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 0px'
+				});
+			}
+			// if ( validatorCalled ) {
+				// updateErrorCount_CityWorkshop(isChecked);
+			// }
+			return isChecked;
+		}
+
+
+
+		var rd_type_affiliation_clicked = false;
+		$("#reg_event_type_affiliation_1").on("change", function () {
+			if (rd_type_affiliation_clicked == false) {
+				validateRadio1();
+				rd_type_affiliation_clicked = true;
+			}
+		});
+		$("#reg_event_type_affiliation_2").on("change", function () {
+			if (rd_type_affiliation_clicked == false) {
+				validateRadio1();
+				rd_type_affiliation_clicked = true;
+			}
+		});
+		$("#reg_event_type_affiliation_3").on("change", function () {
+			if (rd_type_affiliation_clicked == false) {
+				validateRadio1();
+				rd_type_affiliation_clicked = true;
+			}
+		});
+
+		function validateRadio1() {
+			var isChecked = false;
+			if($("#reg_event_type_affiliation_1").is(':checked')) {
+				isChecked = true;
+			}
+			if($("#reg_event_type_affiliation_2").is(':checked')) {
+				isChecked = true;
+			}
+			if($("#reg_event_type_affiliation_3").is(':checked')) {
+				isChecked = true;
+			}
+			if ( !isChecked ) {
+				if(validatorCalled) {
+					$("#error_radio_span").removeClass("visibility-hidden");
+				}
+				// $("#rd_type_affiliation_school").addClass("rd-button-error");
+				// $("#rd_type_affiliation_company").addClass("rd-button-error");
+				// $("#rd_type_affiliation_other").addClass("rd-button-error");
+			}
+			else {
+				if(validatorCalled) {
+					$("#error_radio_span").addClass("visibility-hidden");
+				}
+				
+				// $("#rd_type_affiliation_school").removeClass("rd-button-error");
+				// $("#rd_type_affiliation_company").removeClass("rd-button-error");
+				// $("#rd_type_affiliation_other").removeClass("rd-button-error");					
+				
+				// if ($("#rd_type_affiliation_school").hasClass("rd-button-error")) {
+					// $("#rd_type_affiliation_school").removeClass("rd-button-error");
+					// $("#rd_type_affiliation_company").removeClass("rd-button-error");
+					// $("#rd_type_affiliation_other").removeClass("rd-button-error");					
+				// }
+				// if ($("#rd_type_affiliation_company").hasClass("rd-button-error")) {
+					// $("#rd_type_affiliation_school").removeClass("rd-button-error");
+					// $("#rd_type_affiliation_company").removeClass("rd-button-error");
+					// $("#rd_type_affiliation_other").removeClass("rd-button-error");					
+				// }
+				// if ($("#rd_type_affiliation_other").hasClass("rd-button-error")) {
+					// $("#rd_type_affiliation_other").removeClass("rd-button-error");					
+					// $("#rd_type_affiliation_school").removeClass("rd-button-error");
+					// $("#rd_type_affiliation_company").removeClass("rd-button-error");
+				// }
+			}
+			
+			return isChecked;
+		}
+
+		function set_rd_1() {
+			var rd ="#reg_event_type_affiliation_1";
+			var sd = "#rd_type_affiliation_school";
+			$(rd).prop('checked',true);
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_1() {
+			var sd = "#rd_type_affiliation_school";
+			$(sd).removeClass("rd-background");			
+		}
+		function set_rd_2() {
+			var rd ="#reg_event_type_affiliation_2";
+			var sd = "#rd_type_affiliation_company";
+			$(rd).prop('checked',true);
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_2() {
+			var sd = "#rd_type_affiliation_company";
+			$(sd).removeClass("rd-background");			
+		}
+		function set_rd_3() {
+			var rd ="#reg_event_type_affiliation_3";
+			var sd = "#rd_type_affiliation_other";
+			$(rd).prop('checked',true);
+			$(sd).addClass("rd-background");			
+		}
+		function unset_rd_3() {
+			var sd = "#rd_type_affiliation_other";
+			$(sd).removeClass("rd-background");			
+		}
+
+		function rd_type_affiliation(caller) {
+
+			switch (caller)
+			{
+			  case 'school':
+			  		set_rd_1();
+			  		unset_rd_2();
+			  		unset_rd_3();			  		
+			  	break;
+			  case 'company':
+			  		set_rd_2();
+			  		unset_rd_1();
+			  		unset_rd_3();
+			  	break;
+			  case 'other':
+			  		set_rd_3();
+			  		unset_rd_1();
+			  		unset_rd_2();			  		
+			  	break;
+
+			  default:
+			  //
+			}
+			
+			if (rd_type_affiliation_clicked == false) {
+				validateRadio1();
+				rd_type_affiliation_clicked = true;
+			}
+		}
+
+		b_validateRadio1 = false;
+
+
+		$(window).load( function() {
+		//$(document).ready(function(){
+			
+			$('#reg_event_type_affiliation_1').prop('checked', false);				
+			$('#reg_event_type_affiliation_2').prop('checked', false);
+			$('#reg_event_type_affiliation_3').prop('checked', false);				
+
+			$('#rd_type_affiliation_school').on('click', function() {
+				rd_type_affiliation('school');
+				b_validateRadio1 = validateRadio1();				
+			});
+			$('#rd_type_affiliation_company').on('click', function() {
+				rd_type_affiliation('company');
+				b_validateRadio1 = validateRadio1();				
+			});
+			$('#rd_type_affiliation_other').on('click', function() {
+				rd_type_affiliation('other');
+				b_validateRadio1 = validateRadio1();				
+			});
+
+			$('#label_type_affiliation_school').on('click', function() {
+				rd_type_affiliation('school');
+				b_validateRadio1 = validateRadio1();				
+			});
+			$('#label_type_affiliation_company').on('click', function() {
+				rd_type_affiliation('company');
+				b_validateRadio1 = validateRadio1();				
+			});
+			$('#label_type_affiliation_other').on('click', function() {
+				rd_type_affiliation('other');
+				b_validateRadio1 = validateRadio1();				
+			});
+
+
+    		$('#type_affiliation_school').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_type_affiliation_school').click();
+    		});							
+    		$('#type_affiliation_company').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_type_affiliation_company').click();
+    		});				
+    		$('#type_affiliation_other').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_type_affiliation_other').click();
+    		});				
+
+    		$('#label_type_affiliation_school').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_type_affiliation_school').click();
+    		});							
+    		$('#label_type_affiliation_company').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_type_affiliation_company').click();
+    		});				
+    		$('#label_type_affiliation_other').keypress(function(e){
+      			if(e.keyCode==13)
+      			$('#rd_type_affiliation_other').click();
+    		});				
+			
+			// var image = '../backgrounds/comp025.jpg';
+			// img = $('<img />');
+			// img.bind('load', function() {
+			    // $('#loading').fadeOut(1000);
+				// setTimeout( function(){
+					// centerSignin();
+					// showSignin();
+					// formValidate();
+				// }, 500);
+			// });
+			// img.attr('src', image);
+			// $('#join-image').css({
+				// //background: '#F1F2E1 url(' + image + ') no-repeat right top'
+				// background: '#F1F2E1 url(' + image + ') repeat right top'
+			// })
+				
+			formValidate();
+
+							
+			$('select').dropdown({
+			    'changed': function(data) {
+			        // selectStatus1();
+			        selectStatus1();
+			        // if(validatorCalled) {	
+			       		// validateSelect1();
+			       	// }
+			    }
+			});	    
+
+			$(document).on('keypress', '#dropdown1', function(e) {
+				if(e.keyCode == 0) {
+					var e13 = jQuery.Event("keydown");
+					e13.which = 13;
+					e13.keyCode = 13;
+					$("#dropdown1").trigger(e13);
+				}
+			});			
+
+				
+			  // :name_first, 
+              // :name_last, 
+              // :name_title_sir,
+              // :name_title, 
+              // :type_affiliation, 
+              // :name_affiliation, 
+              // :address, 
+              // :city, 
+              // :state, 
+              // :zip, 
+              // :phone, 
+              // :phone_mobile,
+              // :email, 
+              // :email_cc_1, 
+              // :email_cc_2, 
+
+    		$("#reg_event_name_first").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#reg_event_name_last").focus();
+      			}
+    		});				
+    		$("#reg_event_name_last").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#reg_event_name_title_sir").focus();
+      			}
+    		});				
+    		$("#reg_event_name_title_sir").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#reg_event_name_title").focus();
+      			}
+    		});				
+    		$("#reg_event_name_title").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#dropdown1").attr("tabindex", 6).focus();			    	
+      			}
+    		});				
+    		$("#reg_event_name_affiliation").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#reg_event_address").focus();			    	
+      			}
+    		});				
+    		$("#reg_event_address").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#reg_event_city").focus();
+      			}
+    		});				
+    		$("#reg_event_city").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#reg_event_state").focus();
+      			}
+    		});				
+    		$("#reg_event_state").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#reg_event_zip").focus();
+      			}
+    		});				
+    		$("#reg_event_zip").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#reg_event_phone").focus();
+      			}
+    		});				
+    		$("#reg_event_phone").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#reg_event_phone_mobile").focus();
+      			}
+    		});				
+    		$("#reg_event_phone_mobile").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#reg_event_email").focus();
+      			}
+    		});				
+    		$("#reg_event_email").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#reg_event_email_cc_1").focus();
+      			}
+    		});				
+    		$("#reg_event_email_cc_1").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#reg_event_email_cc_2").focus();
+      			}
+    		});				
+    		$("#reg_event_email_cc_2").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+			    	$('#label_city_workshop_1').focus();
+      			}
+    		});				
+
+
+			// $("input[name=recaptcha_response_field]").attr("tabindex","41");
+    		// $("input[name=recaptcha_response_field]").keypress(function(e){
+      			// if(e.keyCode==13) {
+      				// e.preventDefault();
+      				// $("#btn_submit").focus();
+      			// }
+    		// });				
+
+    		// $('#label_survey_preferences_4').keypress(function(e){
+      			// if(e.keyCode==13) {
+	      			// $('#label_survey_preferences_4').click();
+	      			// $('#label_survey_preferences_5').focus();
+      			// }      			      			      			
+    		// });				
+    		// $('#label_survey_preferences_5').keypress(function(e){
+      			// if(e.keyCode==13) {
+	      			// $('#label_survey_preferences_5').click();
+	      			// // $("input[name=recaptcha_response_field]").attr("tabindex","41").focus();
+	      			// $("#recaptcha_response_field").attr("tabindex","41").focus();
+      			// }      			      			      			
+    		// });				
+
+
+
+
+				
+			// $('#cb_workshop_1').on('click', function() {
+				// cb_city_workshop(1);
+			// });
+			// $('#cb_workshop_2').on('click', function() {
+				// cb_city_workshop(2);
+			// });
+			// $('#cb_workshop_3').on('click', function() {
+				// cb_city_workshop(3);
+			// });
+			// $('#cb_workshop_4').on('click', function() {
+				// cb_city_workshop(4);
+			// });
+			// $('#cb_workshop_5').on('click', function() {
+				// cb_city_workshop(5);
+			// });
+			// $('#cb_workshop_6').on('click', function() {
+				// cb_city_workshop(6);
+			// });
+			// $('#cb_workshop_7').on('click', function() {
+				// cb_city_workshop(7);
+			// });
+			// $('#cb_workshop_8').on('click', function() {
+				// cb_city_workshop(8);
+			// });
+			$('#cb_workshop_9').on('click', function() {
+				cb_city_workshop(9);
+			});
+			$('#cb_workshop_10').on('click', function() {
+				cb_city_workshop(10);
+			});
+			$('#cb_workshop_11').on('click', function() {
+				cb_city_workshop(11);
+			});
+			$('#cb_workshop_12').on('click', function() {
+				cb_city_workshop(12);
+			});
+			$('#cb_workshop_13').on('click', function() {
+				cb_city_workshop(13);
+			});
+			$('#cb_workshop_14').on('click', function() {
+				cb_city_workshop(14);
+			});
+			$('#cb_workshop_15').on('click', function() {
+				cb_city_workshop(15);
+			});
+			$('#cb_workshop_16').on('click', function() {
+				cb_city_workshop(16);
+			});
+			$('#cb_workshop_17').on('click', function() {
+				cb_city_workshop(17);
+			});
+			$('#cb_workshop_18').on('click', function() {
+				cb_city_workshop(18);
+			});
+			$('#cb_workshop_19').on('click', function() {
+				cb_city_workshop(19);
+			});
+			$('#cb_workshop_20').on('click', function() {
+				cb_city_workshop(20);
+			});
+			$('#cb_workshop_21').on('click', function() {
+				cb_city_workshop(21);
+			});
+			$('#cb_workshop_22').on('click', function() {
+				cb_city_workshop(22);
+			});
+				
+				
+			// var lb;
+			// for (var i = 1; i < 14; i++ ) {
+				// lb = "#label_city_workshop_" + i;
+	    		// $(lb).keypress(function(e){
+	      			// if(e.keyCode==13)
+	      			// $(lb).click();
+	    		// });				
+			// }
+				
+				
+    		// $('#label_city_workshop_2').keypress(function(e){
+      			// if(e.keyCode==13) {
+	      			// $('#label_city_workshop_2').click();
+	      			// $('#label_city_workshop_1').focus();
+      			// }      			
+    		// });				
+    		// $('#label_city_workshop_1').keypress(function(e){
+      			// if(e.keyCode==13) {
+	      			// $('#label_city_workshop_1').click();
+	      			// $('#label_city_workshop_3').focus();
+      			// }      			
+    		// });				
+    		// $('#label_city_workshop_3').keypress(function(e){
+      			// if(e.keyCode==13) {
+	      			// $('#label_city_workshop_3').click();
+	      			// $('#label_city_workshop_4').focus();
+      			// }      			
+    		// });				
+    		// $('#label_city_workshop_4').keypress(function(e){
+      			// if(e.keyCode==13) {
+	      			// $('#label_city_workshop_4').click();
+	      			// $('#label_city_workshop_5').focus();
+      			// }      			
+    		// });				
+    		// $('#label_city_workshop_5').keypress(function(e){
+      			// if(e.keyCode==13) {
+	      			// $('#label_city_workshop_5').click();
+	      			// $('#label_city_workshop_6').focus();
+      			// }      			
+    		// });				
+    		// $('#label_city_workshop_6').keypress(function(e){
+      			// if(e.keyCode==13) {
+	      			// $('#label_city_workshop_6').click();
+	      			// $('#label_city_workshop_7').focus();
+      			// }      			
+    		// });				
+    		// $('#label_city_workshop_7').keypress(function(e){
+      			// if(e.keyCode==13) {
+	      			// $('#label_city_workshop_7').click();
+	      			// $('#label_city_workshop_8').focus();
+      			// }      			
+    		// });				
+    		// $('#label_city_workshop_8').keypress(function(e){
+      			// if(e.keyCode==13) {
+	      			// $('#label_city_workshop_8').click();
+	      			// $('#label_city_workshop_9').focus();
+      			// }      			
+    		// });				
+    		$('#label_city_workshop_9').keypress(function(e){
+      			if(e.keyCode==13) {
+	      			$('#label_city_workshop_9').click();
+	      			$('#label_city_workshop_10').focus();
+      			}      			
+    		});				
+    		$('#label_city_workshop_10').keypress(function(e){
+      			if(e.keyCode==13) {
+	      			$('#label_city_workshop_10').click();
+	      			$('#label_city_workshop_11').focus();
+      			}      			
+    		});				
+    		$('#label_city_workshop_11').keypress(function(e){
+      			if(e.keyCode==13) {
+	      			$('#label_city_workshop_11').click();
+	      			$('#label_city_workshop_12').focus();
+      			}      			
+    		});				
+    		$('#label_city_workshop_12').keypress(function(e){
+      			if(e.keyCode==13) {
+	      			$('#label_city_workshop_12').click();
+	      			$('#label_city_workshop_14').focus();
+      			}      			
+    		});				
+    		$('#label_city_workshop_14').keypress(function(e){
+      			if(e.keyCode==13) {
+	      			$('#label_city_workshop_14').click();
+	      			$('#label_city_workshop_13').focus();
+      			}      			
+    		});				
+    		$('#label_city_workshop_13').keypress(function(e){
+      			if(e.keyCode==13) {
+	      			$('#label_city_workshop_13').click();
+	      			$('#label_city_workshop_15').focus();
+      			}      			
+    		});				
+    		$('#label_city_workshop_15').keypress(function(e){
+      			if(e.keyCode==13) {
+	      			$('#label_city_workshop_15').click();
+	      			$('#label_city_workshop_16').focus();
+      			}      			
+    		});				
+    		$('#label_city_workshop_16').keypress(function(e){
+      			if(e.keyCode==13) {
+	      			$('#label_city_workshop_16').click();
+	      			$('#label_city_workshop_17').focus();
+      			}      			
+    		});				
+    		$('#label_city_workshop_17').keypress(function(e){
+      			if(e.keyCode==13) {
+	      			$('#label_city_workshop_17').click();
+	      			$('#label_city_workshop_20').focus();
+      			}      			
+    		});				
+    		$('#label_city_workshop_20').keypress(function(e){
+      			if(e.keyCode==13) {
+	      			$('#label_city_workshop_20').click();
+	      			$('#label_city_workshop_18').focus();
+      			}      			
+    		});				
+    		$('#label_city_workshop_18').keypress(function(e){
+      			if(e.keyCode==13) {
+	      			$('#label_city_workshop_18').click();
+	      			$('#label_city_workshop_19').focus();
+      			}      			
+    		});				
+    		$('#label_city_workshop_19').keypress(function(e){
+      			if(e.keyCode==13) {
+	      			$('#label_city_workshop_19').click();
+	      			$('#label_city_workshop_21').focus();
+      			}      			
+    		});				
+    		$('#label_city_workshop_21').keypress(function(e){
+      			if(e.keyCode==13) {
+	      			$('#label_city_workshop_21').click();
+	      			$('#label_city_workshop_22').focus();
+      			}      			
+    		});				
+    		$('#label_city_workshop_22').keypress(function(e){
+      			if(e.keyCode==13) {
+	      			$('#label_city_workshop_22').click();
+      				$("#btn_submit").focus();
+      			}
+    		});				
+
+			$('input:checkbox').on('change', function() {
+				alert("change");
+				if ( validatorCalled ) {
+					updateErrorCount();
+				}
+				else {
+					validateCityWorkshop();	
+				}
+			});
+				
+
+			$("#tab4").addClass("active");
+			
+		});
+	
+
+	</script>
+	
+

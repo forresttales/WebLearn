@@ -6,28 +6,29 @@
   		<title><%= full_title(yield(:title)) %></title> 
 
     	<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => false %>
-		
-		<link rel="icon" type="image/png" href="/assets/logo-lc-round-fav.png" />
-						  		
-   		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>    		   		
-    	
+  		<%= javascript_include_tag "application", "data-turbolinks-track" => false %>
+		<%= favicon_link_tag source='fav-lc-2-w16-h14.png' %>
   		<%= include_gon %>
-    	
 	  	<%= csrf_meta_tags %>
 	  	<%= render 'layouts/shim' %>  
-		                		
+		   
+
+		<!-- <#%= javascript_include_tag "reg_events" %#> -->
+		<!-- <script src="../scripts/jquery.validate.js"></script> -->
+		<!-- <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script> -->
+		<!-- <script src="../scripts/reg_events.js"></script> -->
     </head>
     
 	<body>
-		
 		<%= render 'layouts/nav_main' %>
-
 		<%= yield %> 
-
 		<%= render 'layouts/footer' %>
+
+		<%= javascript_include_tag "jquery.validate" %>
+		<%= javascript_include_tag "reg_events" %>
 			
 		<%= debug(params) if Rails.env.development? %>
-		
 	</body>
 	
 </html>
+

@@ -1,0 +1,461 @@
+<% provide(:title, 'Colorado Blended & Online Learning Agenda') %>
+
+<style>
+	
+	.note {
+		clear: both;
+    margin-bottom: 100px;
+    position: relative;
+    top: 200px;
+	}
+	
+	#lc-landing {
+		
+	}	
+		
+	#lc-landing #page {
+	  width: 800px;
+	  /*margin-left: 235px;*/
+	 	  
+	  margin-left: auto;
+	  margin-right: auto;
+	  
+	  
+	  /*margin-right: auto;*/  
+	  
+	}
+	
+	#lc-landing #subscribe-box  {
+	float: right; 
+	margin-left: 20px;
+	}
+	
+	#lc-landing #subscribe-box .form {   
+		width: 255px;
+		height: 289px;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		border-radius: 4px; /* border radius */
+		-moz-background-clip: padding;
+		-webkit-background-clip: padding-box;
+		background-clip: padding-box; /* prevents bg color from leaking outside the border */
+		background-color: #eaeaea; /* layer fill content */
+		-moz-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+		-webkit-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+		box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+	}
+	
+	#lc-landing #subscribe-box .label { 
+		height: 35px;
+	    width: 240px;
+		background-color: #414141; /* layer fill content */
+		-moz-border-radius: 4px 4px 0 0;
+		-webkit-border-radius: 4px 4px 0 0;
+		border-radius: 4px 4px 0 0; /* border radius */
+		-moz-background-clip: padding;
+		-webkit-background-clip: padding-box;
+		background-clip: padding-box; /* prevents bg color from leaking outside the border */
+		-moz-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+		-webkit-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+		box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+		}
+	
+	#lc-landing #subscribe-box h3 {  
+		color: #ebeff1; /* text color */
+		/*KlavikaMedium*/
+		font-family: KlavikaMedium;
+		/*font-family: "Quattrocento Sans", sans-serif;*/
+		font-size: 15px;
+		margin:0;
+		padding-left: 15px;
+	    padding-top: 15px;
+		}
+	#lc-landing #subscribe-box img {
+	  float:left;
+	  position: relative;
+	  left: 116px;
+	}
+
+	#lc-landing .services-ov {
+	    background-clip: padding-box;
+		
+		
+	  width: 232px;
+		height: 22px;
+		border: 1px solid #999;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
+		-moz-background-clip: padding;
+		-webkit-background-clip: padding-box;
+		background-clip: padding-box;
+		background-color: #999;
+		margin-left: auto;
+	    margin-right: auto;
+	    margin-top: 30px;
+	}
+	
+	#lc-landing .services-ov a:link {
+ 	
+		color: #f2f2f2;
+		font-family: "Quattrocento Sans", sans-serif;
+		font-size: 13px;
+		text-decoration: none;
+		padding: 2px 2px 3px;	
+		position: abolute;
+		margin-left: 8px;
+	}
+	
+	
+	
+	
+	.services-ov a:hover {color: #f2f2f2; text-decoration: none; background-color: #6a6a6a;}
+	.services-ov a:active {color: #f2f2f2; text-decoration: none; background-color: #535353; /* layer fill content */
+		-moz-box-shadow: inset 1px 2px 0 rgba(3,4,4,.4); /* inner shadow */
+		-webkit-box-shadow: inset 1px 2px 0 rgba(3,4,4,.4); /* inner shadow */
+		box-shadow: inset 1px 2px 0 rgba(3,4,4,.4); /* inner shadow */}
+	.services-ov a:visited {color: #f2f2f2; text-decoration: none;}
+	
+	#lc-landing p {
+		color: #333;
+		/*font-family: "Quattrocento";*/
+		font-family: KlavikaLight;
+		font-size: 13px;
+		width: 800px;
+		line-height: 1.2em;	
+	  	font-size: 1.15em;
+		
+		}
+	
+	#lc-landing a {
+		color: #C4740C;
+		}
+	
+	#lc-landing .table p {
+		color: #333;
+		/*font-family: "Quattrocento";*/
+		font-family: KlavikaLight;
+		font-size: 13px;
+		/*width: 400px;*/
+		line-height: 1.2em;	
+	  	font-size: 1.15em;
+		}
+	
+	#lc-landing ul li {
+		color: #000;
+		
+		font-family: msyhb;
+		
+		/*font-family: KlavikaMedium;*/		
+		/*font-family: "Quattrocento";*/	
+		font-size: 20px;
+		margin-left: 30px;
+		font-weight: 200;
+		line-height: 1.2em;		
+		}
+		
+	#lc-landing .page-title {
+	  font-size: 35px;
+	  color: #808080;
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 580px;
+	}
+	
+	#lc-landing .page-title-centered {
+	  font-size: 40px;
+	  color: #808080;
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 580px;
+	}
+	
+	#lc-landing .center {
+		text-align: center;
+		margin-right: 17%;
+	}
+	
+	#lc-landing .sub-title {
+	  font-size: 30px;
+	  color: #34633A;
+	  margin-left: auto;
+	  margin-right: auto;
+	  /*width: 500px;*/  
+	  width: 470px;
+	  
+	}
+	
+	#lc-landing .green-this {
+	    color: #41b737;
+		font-style: bold;
+		}
+		
+	#lc-landing .bold-close {	
+		color: #34633a;
+		size: 22px;
+		font-weight: bold;
+		}
+	
+	
+	#lc-landing #bottom-graphic img {
+	  bottom: 220px;
+	  position: relative;
+	  float:left;
+	}
+	
+	/*#lc-landing .box-row {*/	
+	.lc-landing-box-row {
+	  background: url(../repository/lc-boxes.png) white repeat-x;
+	  height: 59px;
+	  margin-left: 440px;
+	  margin-top: 30px;
+	}
+	
+	.spacer {
+		height: 20px;
+	}
+			
+	#lc-landing table tr td {
+		vertical-align: top;
+	}			
+	
+	.city-color {
+		color: #1B237A;	
+	}
+
+	#produced-by {width: 220px; margin-top: 30px; padding-right: 10px; border-right: 1px solid gray;}
+	#produced-by h2 {font-size: 24px;}
+	#produced-by img {width: 220px;}
+	#produced-by p {text-align: justify; font-size: 14px;}
+	
+</style>	
+	
+
+<%= render 'share/backtotop_2' %>
+
+<ul class="lc-inline" style="width: 1200px; margin: 0 auto; padding-right: 20px; vertical-align: top;">
+<li style="margin: 0 auto; padding-right: 20px; vertical-align: top; display: inline-block;">
+	<%= render 'share/eventpages_tabs' %>
+
+</li>
+<li style="margin: 0 auto; padding-right: 20px; vertical-align: top; display: inline-block;">
+
+
+
+<div id="tab-container">
+
+
+<style>
+h1, h2, h3, h4, p, li, a {font-family: Arial;}
+.tall li a {font-family:"Quattrocento Sans",sans-serif;}
+	#page {width: 900px;}
+  .head .banner {margin: 0; width: 900px;}
+  .flip-img-row {width: 900px; position: relative;}
+  .flip-img-row img {width:260px; margin:5px 18px;}
+  #blue-goal {border-left: 2px solid #227c82; padding-left: 20px;
+  		width: 400px; float: right; margin: 75px 0 0 20px;}
+  #blue-goal p {color:gray; text-align: right; font-size: 23px;} #blue-goal h2 {color: #227c82; text-align: right; font-size: 28px;}
+  .blue-quote {color: #227c82; font-size: 24px; text-align: center; margin-top: 40px; text-decoration: underline;}
+  .blue-it {color: #227c82;} .green-it {color: #41b737;}
+  p {color: #000;}
+  .register-link {color: #227c82; font-size: 24px; text-decoration: underline;}
+  .mini-arrows {width:70px; float:left;}
+
+  .track-table {border:2.5px solid #41b737;}
+  .track-table h3 {color: #000; text-align: center; font-size: 15px;} 
+  .track-table td {color: #000; padding: 7px; width: 250px; vertical-align: top;}
+  .track1 {background: #c9c9c9;} .track2 {background: #78afb3;}
+  .track3 {background: #fcbd60;} .track4 {background: #8bd385;}
+  .track-table ul {color: #000; margin-left:15px;}
+  	#susan-row img { height: 220px; margin-top: 50px;}
+	#susan-row {text-align: justify; margin-top: 50px; vertical-align: top;}
+	#susan-row td {text-align: justify; vertical-align: top;}
+	#top-links {width: 615px; margin:0 auto; font-weight: bold;}
+	.agenda-link {color: #fff; background: #41b737; padding: 5px 60px; border-radius: 15px;}
+	.reg-link {color: #fff; background: #227c82; padding: 5px 60px; border-radius: 15px;
+		margin:0 30px 0 30px;}
+	.speaker-link {color: #fff; background: #fbb040; padding: 5px 60px; border-radius: 15px;}
+</style>
+
+
+<div id="page">
+    <div class="head">
+		<div id="blue-goal">
+			<h2>Event Goal</h2>
+			<p>Experience <span class="blue-it">flipped sessions</span>; discuss <span class="green-it">new leadership issues</span>; create <span class="blue-it">curriculum and IT
+			synergies</span>; get PD for <span class="green-it">blended</span> and <span class="blue-it">online learning</span>; inspect <span class="green-it">up-and-coming</span> industry dynamics like <span class="blue-it">gamification.</span></p>
+		</div>
+
+		<img src="/repository/schedule/colorado/co-final-logo-lg.jpg" style="width: 300px;">
+ 
+    </div>
+
+    	
+	<div class="spacer"></div>
+	   
+	   <h2 style="color: gray; font-size: 52px; margin: 20px 0;">
+	   Agenda
+		</h2>
+	
+		<p style="margin-top: 30px">
+			CBOL was born out of a partnership with the Colorado eLearning Collaborative and the Aurora Public Schools. The “Flippeds” are events custom designed to give all attendees an experience similar to that of the flipped-classroom ideal. Each Flipped Conference has a Goal and each track has a Learning Objective. For many of the sessions there will be “Prework,” a little like homework, but really a sneak preview of the topic an education leader will be presenting so that there is way more time for open discussion and projects live at the event. In addition, this new Flipped model lets us fit a whole lot more into a single day. Yayy!</p><br/>
+
+		<p>All attendees will be expected to be engaged learners – just like the ideal for students today. So come on and sign-up today.</p><br/>
+<h2 style="color: #227c82; margin:10px 0; font-size: 28px;">Venue: Aurora Public Schools<br/>
+Educational Services Center 1<br/>
+15701 E. 1st Ave.<br/>
+Aurora, CO 80011</h2>
+
+		<p style="font-size: 22px; margin: 40px 0 20px 0;">
+      			Agenda: <a style="color: #fb8440;" href="/CBOL-Materials">Details & Materials >>>></a></p>
+
+				
+      	<style>
+  .breakout-table {width: 900px;}
+
+</style>
+      		   
+   			<img class="breakout-table" alt="breakout-table" src="../repository/schedule/colorado/colorado-tracks.png">
+
+			<div style="color:#227c82; font-size: 22px; clear: both; margin-top: 35px;">
+			4:00pm - 6:00 pm Off Campus Reception & Networking at:<br/> 
+			BJ's Restaurant & Brewhouse<br/> 
+			14442 E. Cedar Avenue<br/> 
+			Aurora, CO 80012<br/>
+			</div>
+			
+			<div style="text-align: center; clear: both; margin-top: 35px;">
+			<a class="register-link" href="/EventRegistration">Register to attend CBOL | Flipped</a></div>
+
+		<p style="font-size: 22px; margin: 20px 0;">Track Objectives:</p>
+
+		<img class="mini-arrows" src="../repository/schedule/flipped-arrows.jpg" alt="flipped-arrows">
+
+			<table class="track-table"><tr>
+			<td class="track1">
+				<h3>TRACK 1 – LEADERSHIP<br/><br/></h3>
+				<strong>Objective:</strong><br/>
+				Learn leadership best practices and gain issue awareness for today.
+				<br/><br/><br/><br/>
+				<strong>Who should attend:</strong>
+				District or school executives with responsibility for thought leadership
+				<ul>
+					<li>Budget & Finance</li>
+					<li>Policy</li>
+					<li>Interested professional educators</li>
+				</ul>
+				
+			</td>
+
+			<td class="track2">
+				<h3 style="font-size: 14px;">TRACK 2 – IT,<br/>CURRICULUM & INSTRUCTION</h3>
+				<strong>Objective:</strong><br/>
+				Bring together curriculum and IT leaders to create teaching and learning environments that work.
+				<br/><br/>
+				<strong>Who should attend:</strong>
+				<ul>
+					<li>Curriculum Staff</li>
+					<li>Technology Managers & staff</li>
+					<li>Interested professional educators</li>
+				</ul>
+			</td>
+
+			<td class="track3">
+				<h3>TRACK 3 –PROFESSIONAL<br/>DEVELOPMENT</h3>
+				<strong>Objective:</strong><br/>
+				Provide a discussion forum for issues and practical methods of blended and/or online instruction.
+				<br/><br/>
+				<strong>Who should attend:</strong>
+				<ul>
+					<li>Teachers</li>
+					<li>School and District Leaders</li>
+					<li>Instructional Coaches</li>
+				</ul>
+
+			</td>
+
+			<td class="track4">
+				<h3>TRACK 4 – INDUSTRY<br/>DYNAMICS</h3>
+				<strong>Objective:</strong><br/>
+				Introduce the concepts and impacts of cutting edge technologies on leadership, teaching and learning.
+				<br/><br/>
+				<strong>Who should attend:</strong>
+				<ul>
+					<li>Teachers</li>
+					<li>District and School Leaders</li>
+					<li>Instructional Coaches</li>
+					<li>Any interested professional educators</li>
+				</ul>
+			</td>
+
+			</tr></table>
+
+			<table id="susan-row"><tr>
+			<td width="15%"><img src="/repository/schedule/colorado/co-final-logo-lg.jpg" alt="CBOL"></td>
+
+			<td width="70%" style="padding: 0 15px;"><h2 style="text-align: right; font-size: 23px">Susan Patrick, Keynote Speaker</h2><br/>
+				<p>
+				Susan Patrick is the President and Chief Executive Officer of the
+				International Association for K-12 Online Learning (iNACOL). iNACOL
+				is a nonprofit association providing policy advocacy, research on best
+				practices, next generation learning models professional development and
+				networking, publishing national quality standards, driving the emerging
+				field of competency-based, online and blended learning forward. iNACOL
+				is the leading voice for the emerging field of online and blended learning.
+				Susan is committed to leading systems change, drawing from practice to
+				inform policy, toward high-quality, personalized, student-centered learning.
+				She is the former Director of the Office of Educational Technology at the
+				U.S. Department of Education. Prior, Patrick worked for Governor Hull in
+				Arizona as legislative liaison on technology policy issues. She was a Site
+				Director for Old Dominion University’s TELETECHNET distance learning
+				program.</p>
+			</td>
+
+			<td width="15%"><img src="/repository/schedule/colorado/SusanPatrick.jpeg" alt="Susan Patrick"></td>
+		</tr>
+		</table>
+
+			
+
+			
+
+
+</div>
+
+
+
+
+<!-- </div> -->
+
+</div>
+
+</li>
+
+</ul>
+
+<div style="height: 200px;"></div>
+	
+<div id="bottom-graphic">
+<img src="../repository/lc-box-cloud.png"/>
+<div class="lc-landing-box-row"></div>
+</div>
+
+<div style="clear: both;"></div>
+
+
+
+<script>
+		
+		var offset_top = 0;
+		jQuery(window).scroll(function() {
+			offset_top = $(window).scrollTop()
+			$('#eventstabs').css('top', offset_top);
+		});
+	
+		$(window).load( function() {
+		//$(document).ready(function(){
+			$("#tab7").addClass("active");
+		});
+	
+</script>
+

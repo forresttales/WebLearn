@@ -1,0 +1,27 @@
+// CSS for the letter registration and contact forms
+
+$ksgreen: #49853F;
+$lgreen: #41b737;
+$lcgray: #A6A6A6;
+$ksblue: #1f7c82; //know story blue - as from the products page
+$kso: #F69010; // know story orange
+$fadegreen: #8eb388; // Faded green for background colors
+$dgreen: #376340;
+$midgreen: #8eb388;
+
+#kfooter {clear:both;}
+
+//Page styles
+
+.top-section {
+	h2 {color: #376340; font-size: 26px; position: relative; top: 140px; left: 280px;}
+	background: asset-url('lc-contact-logo.jpeg') no-repeat;
+	width: 750px;
+	margin: -40px auto 0;
+	height: 220px;
+
+}
+
+#join-image {
+			height: 575px;
+		}

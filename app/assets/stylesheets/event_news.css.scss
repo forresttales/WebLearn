@@ -1,0 +1,154 @@
+// CSS for the schedule page on the learning counsel
+
+$ksgreen: #49853F;
+$lgreen: #41b737;
+$lcgray: #A6A6A6;
+$ksblue: #1f7c82; //know story blue - as from the products page
+$kso: #F69010; // know story orange
+$fadegreen: #8eb388; // Faded green for background colors
+$dgreen: #376340;
+$midgreen: #8eb388;
+
+#kfooter {clear:both;}
+
+// Page rules
+
+/*#nav {margin-top: -30px;}*/ //Fixes the gap on nav bar that gets casued when you scroll down page
+
+.head-banner {width:960px; margin-bottom: 20px;}
+
+ .kontainer {
+ 	margin-bottom: 100px;
+ }
+body {background: #fff;}
+
+.kbyline-none-caps {
+  display: none;
+}
+		
+		.k-decorate-none {
+			text-decoration: none;
+		}
+		.kbyline-none-caps {
+			/*line-height: 14px;*/
+			white-space: nowrap;
+			/*text-transform: uppercase;*/
+			font-family: 'KlavikaMedium', Arial, Helvetica, sans-serif;
+			font-size: 12px;
+		}
+		.k-b-headline-gallery {
+			/*font-size: 20px;*/
+			line-height: 14px;
+			color: #000;
+			font-family: 'KlavikaBlack', Arial, Helvetica, sans-serif;
+			margin-top: 6px;
+			margin-left: 6px;
+			width: 260px;
+			position: relative;
+			height: auto;
+		}
+		.title-gallery {
+			font-size: 26px;
+			line-height: 20px;
+			color: #8A5A0C;
+			font-family: 'KlavikaBlack', Arial, Helvetica, sans-serif;
+			/*text-shadow: 2px 2px #F5DDB8;*/
+			margin-left: 0px;
+		}
+		.title-galler-table {
+			width: 100%;	
+		}
+		.title-galler-table-col1 {
+			text-align: left;
+			padding-left: 70px;				
+		}
+		.title-galler-table-col2 {
+			text-align: right;
+			padding-right: 70px;												
+		}
+
+		
+		.search-by-tab-btn {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 12px; 
+			background-color: #8A5A0C;
+			color: #fff;
+		  	width: 400px;
+		  	height: 20px;
+		}
+		.search-by-tab-btn ul li{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 12px; 
+			background-color: #8A5A0C;
+			color: #fff;
+		  	width: 400px;
+		  	height: 20px;
+		}
+		
+		
+		
+		.k-cell-divider-none {
+			border-right: 1px solid #fff;
+			width: 1px;
+			display: inline-block;
+		}
+		.ktop-none {
+			border-top: 1px solid #fff;
+		}
+		.kbottom-none {
+			border-top: 1px solid #fff;
+		}
+
+.title-h1-main {
+	color: $lcgray;
+	text-align: left;
+	font-size: 33px;
+	margin-bottom: 75px;
+	span {
+		color: $lgreen;
+		padding-left:20px;
+	}
+
+}				
+
+.title-h1-city {
+	color: $lcgray;
+	text-align: center;
+	font-size: 26px;
+	margin-bottom: 20px;
+	span {
+		color: $lgreen;
+		padding-left:175px;
+	}
+
+}
+
+.link-div-top {
+	width: 970px;
+	margin: -30px auto 20px;
+}
+.back-to-photos-link {
+	font-size: 19px;
+	color: gray;
+	text-decoration: none;
+	background: #f4f4f4;
+	border: 1px solid gray;
+	border-radius: 6px;
+	padding: 3px 8px;
+	&:active, &:visited {
+		color: gray;
+		text-decoration: none;
+	}
+	&:hover {text-decoration: none; color: $lgreen; background: #FFF;}
+}
+
+#event-news-main {
+	width: 970px;
+	margin: -30px auto 10px;
+}
+
+.event-news-list {
+	margin: 15px 0;
+	h2 {color: $lgreen; span {color: gray; font-size: 13px; padding-left: 25px;}}
+	li {display: inline-block; list-style-type: none; margin: 5px 20px;}
+}

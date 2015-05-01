@@ -1,0 +1,1719 @@
+<% provide(:title, 'Events Registration') %>
+
+	<script src="/assets/jquery.validate.js"></script>
+    <script src="/assets/dot.js"></script>    
+    <script src="/assets/jquery-dropdown-dot.js"></script>
+
+	<!-- <link rel="stylesheet" type="text/css" href="../styles/dropdown.css"/> -->
+					
+	<style>
+	
+		.form-reg-commun {
+			width: 970px;
+			height: auto;
+			/*isplay: none;*/
+			/*background-color: rgba(180, 180, 180, 0.94);*/
+			/*background-color: rgba(0, 0, 0, 0.8);*/
+			/*-moz-box-shadow:5px 5px 40px #fff;
+			-webkit-box-shadow:5px 40px 5px #fff;
+			box-shadow:5px 5px 40px #CCAE37;*/
+		    /*transition: box-shadow 3s ease-in-out;	*/			
+			/*border-top-left-radius: 10px;
+	   		border-top-right-radius: 10px;		
+			border-bottom-left-radius: 10px;
+	   		border-bottom-right-radius: 10px;*/
+			position: relative;
+			text-align: center;			
+			padding-top: 20px;	   			   	
+			padding-bottom: 20px;	
+		}
+		#joinClose {
+			right: 6px;
+			top: 6px;
+			position: absolute;
+			display: block
+		}
+		/**:focus {
+			outline: none
+		}*/
+		#loading {
+			background:url("/assets/icon_loading.gif") no-repeat center center;
+			height: 100px; width: 100px;
+			position: fixed; left: 47%; top: 50%; z-index: 1000;
+			margin: -25px 0 0 -25px;
+		}				
+		.input-form {
+			font-family: msyh;
+			/*font-family: Arial, Helvetica, sans-serif;*/
+			font-size: 16px;
+			width: 300px;
+			height: 24px;
+			border-style:solid;
+			/*border-radius: 6px;*/
+			/*border-color: #13571F; green*/		
+			border-color: #41b737;/* #005C9E blue */
+			border-width: 2px;
+			padding-left: 6px;
+			/*-webkit-transition: all 0.5s ease-in-out;
+			-moz-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
+			-ms-transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease-in-out;*/
+		}
+		.input-form:focus {
+			/*border-color: #97FF47;*/
+			color: #000;
+			background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;						
+			/*-webkit-box-shadow: 0 0 25px #ccc;
+			-moz-box-shadow: 0 0 25px #ccc;
+			box-shadow: 0 0 25px #ccc;
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);*/
+			/*-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);*/
+		/*	-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);*/
+			/*-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);*/		
+		/*	transform: scale(1.05);*/
+		}
+		.input-form-dropdown {
+			font-family: msyh;
+			/*font-family: Arial, Helvetica, sans-serif;*/
+			font-size: 16px;
+			width: 310px;
+			height: 30px;
+			border-style:solid;
+			border-radius: 6px;
+			/*border-color: #13571F; green*/		
+			border-color: #41b737;/*#005C9E*/ 
+			border-width: 2px;
+			padding-left: 6px;
+			/*-webkit-transition: all 0.5s ease-in-out;
+			-moz-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
+			-ms-transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease-in-out;*/
+			text-decoration: none;
+		}
+		.input-form-dropdown:focus {
+			/*border-color: #97FF47;*/
+			color: #fff;
+			background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;						
+			-webkit-box-shadow: 0 0 25px #ccc;
+			-moz-box-shadow: 0 0 25px #ccc;
+			box-shadow: 0 0 25px #ccc;
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			transform: scale(1.05);
+			text-decoration: none;		
+			outline: 0;
+		}
+		div .error_label {
+		    display: none;
+			font-family: msyh;
+			/*font-family: Arial, Helvetica, sans-serif;*/
+			font-size: 12px;
+			color: #851717;		    
+		}
+		div .errors {
+			/*font-family: Arial, Helvetica, sans-serif;*/
+			font-family: msyh;
+			font-size: 16px;
+			color: #FC7777;		
+		}
+		div .errors p {
+			font-family: msyh;
+			/*font-family: Arial, Helvetica, sans-serif;*/
+			font-size: 16px;
+			color: #FC7777;		
+		}		
+		.select-errors {
+			color: #FC7777;
+		}
+		.input-label {
+			font-family: msyh;
+			/*font-family: Arial, Helvetica, sans-serif;*/
+			font-size: 16px;
+			width: 220px;
+			height: 18px;
+		}
+		.success {
+			color: #41b737; /*#ACDDE3;*/
+			background-color: #fff;		
+			/*background: url("/assets/submit_form_empty.png") no-repeat 278px 1px;*/		
+		}		
+		.error {
+			color: #FC7777;
+			border-color: #851717; 			
+			background-color: #fff;					
+			/*background: url("/assets/submit_form_empty.png") no-repeat 278px 1px;*/		
+		}
+		.required {
+			background: #f5f5f5; /*url("/assets/submit_form_empty.png") no-repeat 278px 1px;	*/	
+		}
+		.focus {
+			color: #fff;
+			border-color: #41b737;						
+			/*background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;*/								
+		}
+		.unrequired {
+			/*background: url("/assets/submit_form_empty.png") no-repeat 278px 1px;*/		
+		}
+		.error-label {
+			/*color: #851717;*/		
+			color: #FC7777;
+		}
+		.required-label {
+			/*color: orange;*/	
+			color: #376340;	
+		}
+		.input-form-spacer {
+			height: 16px;
+		}
+		.input-search-1 {
+			background-color: white;
+			color: black;
+			font-family: Arial;
+			width: 200px;
+		}
+		#join-image {
+			height: 1156px;
+			border: 2px solid #376340;
+	    	width: 1010px;
+		}
+		div .cell-right-reg-commun {
+			display: table-cell;
+			width: 330px;
+			text-align: left;
+			align: top;		
+		}
+		div .cell-left-reg-commun {
+			display: table-cell;
+			width: 280px;	
+			align: top;
+			text-align: right;		
+			padding-right: 20px;
+		}
+		div .cell-submit-reg-commun {
+			display: table-cell;
+			width: 330px;
+			text-align: left;
+			align: top;		
+		}
+		div .cell-error-reg-commun {
+			display: inline-block;
+			width: 300px;
+			height: 18px;
+			vertical-align: bottom;
+			text-align: left;
+		}
+		div .cell-right-reg-commun-cb {
+			display: table-cell;
+			width: 430px;
+			text-align: left;
+			align: top;		
+		}
+		div .cell-error-reg-commun-cb {
+			display: inline-block;
+			width: 200px;
+			height: 18px;
+			vertical-align: bottom;
+			text-align: left;
+		}
+		.message {
+			height: 120px;
+		}
+		.button-border {
+			background: #f5f5f5;
+			width: 480px; 
+			border-style: solid; 
+			border-width: 2px; 
+			border-color: #41b737;/*#005C9E*/ 
+			/*border-radius: 6px; */
+			padding-right: 6px; 
+			padding-top: 6px; 
+			padding-bottom: 6px;
+		}
+		#label_cb {
+			text-decoration: none;
+		}		
+		#label_cb:focus {
+			text-decoration: underline;
+			/*color:#FF9900;*/		
+			color: #FFF480;		
+			outline: none;
+		}		
+		.radio-errors {
+			color: #FC7777;
+		}
+		.cb-errors {
+			color: #FC7777;
+			font-family: msyh;
+			/*font-family: Arial, Helvetica, sans-serif;*/
+			font-size: 14px;
+			font-weight: 400;
+		}
+		div .cell-error-reg-commun {
+			display: inline-block;
+			width: 300px;
+			height: 18px;
+			vertical-align: bottom;
+			text-align: left;
+		}
+		input[type=checkbox] {
+		    display:none;
+		}			
+		input[type=radio] {
+		    display:none;
+		}			
+		.rd-button {
+			width: 20px;
+			height: 20px; 
+			border-style: solid; 
+			border-width: 2px; 
+			border-color: #41b737; 
+			/*border-radius: 20px;	*/	
+			margin-bottom: -4px;
+			display: inline-block;
+			margin-right: 6px;
+		}
+		.rd-button:hover {
+			cursor: pointer;
+		}	
+		.cb-button {
+			width: 20px;
+			height: 21px; 
+			border-style: solid; 
+			border-width: 2px; 
+			border-color: #41b737; 
+			/*border-radius: 6px;	*/	
+			margin-bottom: -4px;
+			display: inline-block;
+			margin-right: 6px;
+		}
+		.cb-button {
+			cursor: pointer;
+		}
+		.cb-button-test {
+			width: 20px;
+			height: 21px; 
+			border-style: solid; 
+			border-width: 2px; 
+			border-color: #41b737; 
+			/*border-radius: 6px;	*/	
+			margin-bottom: -4px;
+			margin-right: 6px;
+		}
+		.rd-background {
+			/*background-image: url("/assets/radio_tick.png");		
+			background-repeat: no-repeat;
+			background-position: 2px 2px;*/
+			/*background-color: #0FEAFF;*/
+			background-color: #5BED4E;
+		}	
+		.cb-background {
+			/*background-image: url("/assets/checkbox_tick.png");		
+			background-repeat: no-repeat;
+			background-position: 2px 3px;*/
+			/*background-color: #0FEAFF;*/		
+			background-color: #5BED4E;
+		}	
+		.cb-spacer {
+			height: 20px;
+		}
+		.cb-align {
+			vertical-align: top;
+		}		
+		.cb-pad {
+			padding-top: 5px;		
+		}
+
+	</style>					
+					
+	<style type="text/css">
+
+		/*#cb-align-1 {
+			vertical-align: top !important;
+		}*/
+				
+	</style>					
+					
+	<style>
+
+		.commun-inside {
+			border:2px solid #376340;
+			padding: 5px 20px;
+		}
+		.commun p {
+			font-family: Quatrocento, sans; 
+			font-size: 20px;
+			color: #376340;"
+		}
+		
+	</style>
+					
+	<style>
+		
+		.alert {
+			font-family: Arial, Helvetica, sans-serif;
+			color: #8C0303;
+			font-size: 16px;
+		}
+		.seperator-commun {
+			font-family: quattrocento, sans;
+			text-align: right;
+			vertical-align: middle;
+			padding-right: 15px;
+			padding-top:5px;
+			font-size: 35px;
+			width: 1000px; 
+			margin: 5px auto;
+			height:40px;
+			color: #FFF;
+		    background: -webkit-linear-gradient(left, #ffffff 25%, #cacaca 55% , #47b64a 90%); /* For Safari 5.1 to 6.0 */
+		  	background: -o-linear-gradient(right, #ffffff 25%, #cacaca 55% , #47b64a 90%); /* For Opera 11.1 to 12.0 */
+		  	background: -moz-linear-gradient(right, #ffffff 25%, #cacaca 55% , #47b64a 90%); /* For Firefox 3.6 to 15 */
+		 	background: linear-gradient(to right, #ffffff 25%, #cacaca 55% , #47b64a 90%); /* Standard syntax */
+		}
+		.seperator-commun img { float:left; position: relative; top: -5px; height: 100px;
+			border-left: 2px solid #376340; background: #FFF;
+		}
+		.bottom-commun-squares {background: url('/repository/lc-boxes.jpg') #FFF no-repeat right;
+			float: right;
+		    height: 39px;
+		    position: relative;
+		    top: -14px;
+		    right: -24px;
+		    width: 210px;
+		}
+		.top-commun-squares {background: url('/repository/lc-boxes.jpg') #FFF no-repeat left;
+			float: left;
+		    height: 39px;
+		    position: relative;
+		    top: -17px;
+		    left: 0px;
+		    width: 210px;
+		}
+		.submit-button-commun {
+			width: 300px;
+			float:right;
+			position: relative;
+			background: #ffffff;
+			top: -40px;
+			left: 45px;
+			padding: 20px 0 0 20px;
+		}
+
+	</style>		                		
+
+	<style>
+		
+		/* start - dropdown1 */
+		div .dropdown1 {
+		background: #f5f5f5;
+	  		font:18px/2.0 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+			width: 300px;
+			height: 40px;
+			border-style:solid;
+			/*border-radius: 6px;*/
+			border-color: #41b737;
+			color: #838383;				
+	    	position: relative;
+			border-width: 2px;
+			padding-left: 6px;
+			/*-webkit-transition: all 0.5s ease-in-out;
+			-moz-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
+			-ms-transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease-in-out;*/
+			text-decoration: none;
+			outline: none;
+		}
+		div .dropdown1 > .selected {
+	  		font:18px/2.0 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+			width: 310px;
+			height: 40px;
+			border-style:solid;
+			border-radius: 6px;
+			border-color: #005C9E; /*blue*/
+	    	position: relative;
+			/*-webkit-transition: all 0.5s ease-in-out;
+			-moz-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
+			-ms-transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease-in-out;*/
+			outline: none;	
+		}
+		div .dropdown1:focus {
+			color: #ACDDE3;
+			-webkit-box-shadow: 0 0 25px #ccc;
+			-moz-box-shadow: 0 0 25px #ccc;
+			box-shadow: 0 0 25px #ccc;
+			/*-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			transform: scale(1.05);*/
+			outline: none;
+		}
+		/*div .dropdown1.focus > .selected,*/
+		div .dropdown1:focus > .selected {
+	    	outline: none;
+		}
+		div .dropdown1 > .selected:hover,
+		div .dropdown1 > .selected:focus {
+		}
+		div .dropdown1 > .selected i {
+	    	position: absolute;
+	    	top: -2px;
+	    	right: 8px;
+	    	bottom: 0;
+	    	width: 40px;
+	    	line-height: 40px;
+	    	border-left: 2px solid #41b737;
+	    	text-align: center;
+	    	/*color: #005C9E;*/
+	    	color: #41b737;	    	
+		}
+		div .dropdown1.open > .selected {
+		    -webkit-border-radius: 4px 4px 0px 0px;
+		    border-radius: 4px 4px 0px 0px;
+		}
+		div .dropdown1 ul {
+		    display: none;
+		    position: absolute;
+		    left: 0;
+		    top: 100%;
+		    width: 100%;
+		    background: #2B333B;
+		    border: 1px solid #333;
+		    border-top: none;
+		    -webkit-border-radius: 0px 0px 4px 4px;
+		    border-radius: 0px 0px 4px 4px;
+		    box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    line-height: 1;
+		    -webkit-box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.2);
+		    box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.2);
+		    height: auto;    
+		    overflow: auto;
+		    margin: 0;
+		    padding-left: 6px;
+		}
+		div .dropdown1 ul li.selected {
+		    color: #ACDDE3;
+		    background: #005C9E;
+		}
+		div .dropdown1 ul li:last-child.selected {
+		    -webkit-border-radius: 0px 0px 4px 4px;
+		    border-radius: 0px 0px 4px 4px;
+		}
+		div .dropdown1 ul li {
+		    position: relative;
+		    display: block;
+		    text-decoration: none;    
+		    color: #ACDDE3;
+		    padding-left: 4px;
+		}
+		div .dropdown1 ul li:first-child {
+		    color: #838383;
+		}
+		div .dropdown1 ul li:first-child.selected {
+		    color: #838383;
+		}
+		div .dropdown1 ul li.hover {
+		    background: #fff;
+		    color: #000;
+		}
+		/* end - dropdown1 */
+	
+		
+	</style>
+						
+	<style>
+		
+		.dropdown1:hover {
+			cursor: pointer;
+		}
+		
+	</style>					
+					
+	<style>
+		
+		.cb-background {
+			/*background-color: #0FEAFF;*/
+			background-color: #5BED4E;			
+		}	
+		.cb-col-1 {
+			width: 0px;
+		}
+		.cb-col-2 {
+			width: 200px;
+			color: orange;		
+		}
+		.cb-col-3 {
+			width: 80px;
+		}
+		.cb-col-4 {
+			width: 200px;
+			color: orange;				
+		}
+		div .cell-error-reg-event {
+			display: inline-block;
+			/*width: 300px;*/
+			width: 230px;
+			height: 18px;
+			vertical-align: bottom;
+			text-align: left;
+		}
+		.cb-valign {
+			margin-bottom: 2px;
+		}
+		.cb-spacer {
+			height: 20px;
+		}
+		
+		.message {
+			height: 120px;
+		}
+		
+	</style>
+
+					
+	<script id="dropdown-data1-selected" type="text/x-dot-template">
+		{{=it.label}}<i>&darr;</i>
+	</script>
+	
+	<script id="dropdown-data1" type="text/x-dot-template">
+		<div class="dropdown1" id="dropdown1" tabindex="6" style="z-index: 90">
+		    <div class="selected">{{=it.selected.label}}<i>&darr;</i></div>
+		    <ul>
+		        {{~it.items :item:index}}
+		        <li data-index="{{=index}}">{{=item.label}}</li>
+		        {{~}}
+		    </ul>
+		</div>
+	</script>		
+
+					
+<!-- <ul class="lc-inline" style="width: 1200px; margin: 0 auto; padding-right: 20px; vertical-align: top;">
+<li style="margin: 0 auto; padding-right: 20px; vertical-align: top; display: inline-block;">
+	<#%= render 'share/eventpages_tabs' %#>
+</li>
+<li style="margin: 0 auto; padding-right: 20px; vertical-align: top; display: inline-block;"> -->
+
+
+<!-- <li> -->
+<div id="tab-container">
+	
+		
+<div style="width: 1000px; margin-right: auto; margin-left: auto; background: #fff;">
+		
+	<header>					
+    	     	    	     	
+			<%= render 'share/backtotop_2' %>
+
+    	<!-- <div class="shadow" style="position: relative; z-index: +2;"> -->    		
+			
+			<!-- <div style="height: 40px;"> -->
+												
+			<div class="table-white">
+
+				<!-- <div class="row" style="height: 50px;">
+					<div class="cell-100percent">
+						<div id="errorContainer">
+						    
+						</div>		
+					</div>
+				</div>				 -->
+				
+								
+				<!-- <div class="row">
+					<div class="cell-100percent">
+						<div class="commun">
+							<div style="margin-top:50px;" class="seperator-commun"><img src="/repository/logo-icon-come-together.png">LIVE EVENT REGISTRATION</div>
+							<div class="commun-inside">
+								<br><br><br>
+								<p style="clear:both;">
+									<a href="/ContactUs"><img src="../repository/events/events-reg-form-1.png" alt="events-reg-form-1.png" height="150px" align="left" ></a>
+									<strong>WELCOME to REGISTRATION </strong>for Learning Counsel events! School executives and educators are welcome to attend
+									 in any city FREE of charge representing their institution.  
+								</p>
+								<br>
+								<p>
+									Register for upcoming events and we'll keep you posted on any changes, dates and final venues via email. 
+									You must be present at the event to win any drawing. 							
+								</p>
+								<br>
+								<p style="padding-bottom: 20px;">
+									If you are a private sector registrant, please note that there is an attendance fee for you unless your company is already sponsoring. 
+									We will contact you after your registration.  
+								</p>
+								<div class="bottom-commun-squares">&nbsp;</div>
+							</div>
+						</div>
+					</div>
+				</div> -->
+
+				<div class="row" style="height: 20px;"></div>
+				
+
+				<a name="anchor1"></a>    		      		     		
+
+				<div class="row" style="height: 30px;">
+					<div  class="cell-100percent" style="padding-left: 300px;">
+			    		<% unless flash[:captcha].nil? %>
+						<div class="alert"><%= flash[:captcha] %></div>
+			      		<% end %>
+					</div>
+				</div>
+
+				<div class="row" style="height: 10px;"></div>
+				
+			</div>
+			
+			
+		<!-- </div>	 -->
+				
+		
+		<!-- <div id="loading"> </div> -->
+		
+						
+	</header>		
+	
+</div>
+
+
+<div style="width: 1000px; margin-right: auto; margin-left: auto;">
+	<div class="top-commun-squares">&nbsp;</div>
+	
+	<section>
+
+	<div id="join-image" class="">
+
+		<div id="form_reg_event" class="form-reg-commun" tabindex="1">
+			
+			<%= form_for( @reg_event_conference, :html => {:id => "form_join"}) do |f| %> 
+
+			<!-- 
+			$("div.errors p").html(message);
+			$("div.errors").show(); 
+			-->
+			<div class="errors" style="height: 30px; text-align: left; padding-left: 300px;">
+				<p></p>
+				<!-- <div class="row">
+					<div class="cell-left-reg-commun"></div>
+					<div class="cell-right-reg-commun"></div>
+					<div class="cell-error-reg-event"></div>										
+				</div> -->
+			</div>			
+
+			<div class="input-form-spacer"></div>
+			
+			<!--name_first-->
+			<div class="row">
+				<div class="cell-left-reg-commun">
+					<%= f.label(:name_first, "First Name", :class => 'input-label required-label', :id => 'label_reg_event_name_first') %>
+				</div>
+				<div class="cell-right-reg-commun">
+					 <%= f.text_field(:name_first, :class => "input-form required", :placeholder => 'First Name', :tabindex => '2', :autofocus => true) %>					 
+				</div>
+				<div class="cell-error-reg-event" id="state_reg_event_conference_name_first"><p id="error_reg_event_conference_name_first"></p></div>      					   
+			</div>      		
+
+			<div class="input-form-spacer"></div>
+
+			<!--name_last-->
+			<div class="row">
+				<div class="cell-left-reg-commun">
+					<%= f.label(:name_last, "Last Name", :class => 'input-label required-label', :id => 'label_reg_event_name_last') %>
+				</div>
+				<div class="cell-right-reg-commun">
+					 <%= f.text_field(:name_last, :class => "input-form required", :placeholder => 'Last Name', :tabindex => '3') %>					 
+				</div>
+				<div class="cell-error-reg-event" id="state_reg_event_conference_name_last"><p id="error_reg_event_conference_name_last"></p></div>      					   
+			</div>      		
+
+			<div class="input-form-spacer"></div>
+
+			<!--name_title-->
+			<div class="row">
+				<div class="cell-left-reg-commun">
+					<%= f.label(:name_title, "Mr, Mrs, Ms, Dr", :class => 'input-label required-label', :id => 'label_reg_event_name_title') %>
+				</div>
+				<div class="cell-right-reg-commun">
+					 <%= f.text_field(:name_title, :class => "input-form required", :placeholder => 'Mr, Mrs, Ms, Dr', :tabindex => '4') %>					 
+				</div>
+				<div class="cell-error-reg-event" id="state_reg_event_conference_name_title"><p id="error_reg_event_conference_name_title"></p></div>      					   
+			</div>      		
+
+			<div class="input-form-spacer"></div>
+
+			<!--position_title-->
+			<div class="row">
+				<div class="cell-left-reg-commun">
+					<%= f.label(:position_title, "Position Title", :class => 'input-label required-label', :id => 'label_reg_event_position_title') %>
+				</div>
+				<div class="cell-right-reg-commun">
+					 <%= f.text_field(:position_title, :class => "input-form required", :placeholder => 'Position Title', :tabindex => '5') %>					 
+				</div>
+				<div class="cell-error-reg-event" id="state_reg_event_conference_position_title"><p id="error_reg_event_conference_position_title"></p></div>      					   
+			</div>      		
+
+			<div class="input-form-spacer"></div>
+			<div class="input-form-spacer"></div>
+
+			<!--type_affiliation-->			
+			<div class="row">
+				<div class="cell-left-reg-commun">
+					<%= f.label(:type_affiliation, "Institution or Company?", :class => 'input-label required-label', :id => 'label_reg_event_type_affiliation') %>
+				</div>
+				<div class="cell-right-reg-commun">
+					
+					<select name="reg_event_conference[type_affiliation]" id="reg_event_conference_type_affiliation" class="" style="display: none;" data-template="#dropdown-data1">
+					    <option value="0" selected="selected" id="option-default">-Institution or Company?-</option>	
+					    <option value="1">Institution</option>
+					    <option value="2">Company</option>
+					    <option value="3">OTHER</option>
+					</select>										
+					 					 					 
+				</div>
+				<div class="cell-error-reg-event" id="state_reg_event_conference_type_affiliation"><p id="error_reg_event_conference_type_affiliation" class="select-errors"></p></div>     
+			</div>      		
+
+			<div class="input-form-spacer"></div>
+			<div class="input-form-spacer"></div>
+
+
+			<!--name_affiliation-->
+			<div class="row">
+				<div class="cell-left-reg-commun">
+					<%= f.label(:name_affiliation, "Institution or Company Name", :class => 'input-label required-label', :id => 'label_reg_event_name_affiliation') %>
+				</div>
+				<div class="cell-right-reg-commun">
+					 <%= f.text_field(:name_affiliation, :class => "input-form required", :placeholder => 'Institution or Company Name', :tabindex => '7') %>					 
+				</div>
+				<div class="cell-error-reg-event" id="state_reg_event_conference_name_affiliation"><p id="error_reg_event_conference_name_affiliation"></p></div>      					   
+			</div>      		
+
+			<div class="input-form-spacer"></div>
+
+			<!--address-->
+			<div class="row">
+				<div class="cell-left-reg-commun">
+					<%= f.label(:address, "Address", :class => 'input-label required-label', :id => 'label_reg_event_address') %>
+				</div>
+				<div class="cell-right-reg-commun">
+					 <%= f.text_field(:address, :class => "input-form required", :placeholder => 'Address', :tabindex => '8') %>					 
+				</div>
+				<div class="cell-error-reg-event" id="state_reg_event_conference_address"><p id="error_reg_event_conference_address"></p></div>      					   
+			</div>      		
+
+			<div class="input-form-spacer"></div>
+
+			<!--city-->
+			<div class="row">
+				<div class="cell-left-reg-commun">
+					<%= f.label(:city, "City", :class => 'input-label required-label', :id => 'label_reg_event_city') %>
+				</div>
+				<div class="cell-right-reg-commun">
+					 <%= f.text_field(:city, :class => "input-form required", :placeholder => 'City', :tabindex => '9') %>					 
+				</div>
+				<div class="cell-error-reg-event" id="state_reg_event_conference_city"><p id="error_reg_event_conference_city"></p></div>      					   
+			</div>      		
+
+			<div class="input-form-spacer"></div>
+
+			<!--state-->
+			<!-- 
+				   			<#%= select_tag("select_state", options_for_select(
+				   				[['-Select by State-', '0'],
+				   				['Alabama AL','1'],
+				   				['Alaska AK','2'],
+				   				['Ariazona AZ','3'],
+				   				['Arkansas AR','4'],
+				   				['California CA','5'],
+				   				['Colorado CO','6'],
+				   				['Connecticut CT','7'],
+				   				['Delaware DE','8'],
+				   				['DC','9'],
+				   				['Florada FL','10'],
+				   				['Georgia GA','11'],
+				   				['Hawaii HI','12'],
+				   				['Idaho ID','13'],
+				   				['Illinois IL','14'],
+				   				['Indiana IN','15'],
+				   				['Iowa IA','16'],
+				   				['Kansas KS','17'],
+				   				['Kentucky KY','18'],
+				   				['Louisiana LA','19'],
+				   				['Maine ME','20'],
+				   				['Maryland MD','21'],
+				   				['Massachusetts MA','22'],
+				   				['Michigan MI','23'],
+				   				['Minnesota MN','24'],
+				   				['Mississippi MS','25'],
+				   				['Missouri MO','26'],
+				   				['Montana MT','27'],
+				   				['Nebraska NE','28'],
+				   				['Nevada NV','29'],
+				   				['New Hampshire NH','30'],
+				   				['New Jersey NJ','31'],
+				   				['New Mexico NM','32'],
+				   				['New York NY','33'],
+				   				['North Carolina NC','34'],
+				   				['North Dakota ND','35'],
+				   				['Ohio OH','36'],
+				   				['Oklahoma OK','37'],
+				   				['Oregon OR','38'],
+				   				['Pennsylvania PA','39'],
+				   				['Rhode Island RI','40'],
+				   				['South Carolina SC','41'],
+				   				['South Dakota SD','42'],
+				   				['Tennessee TN','43'],
+				   				['Texas TX','44'],
+				   				['Utah UT','45'],
+				   				['Vermont VT','46'],
+				   				['Virginia VA','47'],
+				   				['Washington WA','48'],
+				   				['West Virginia WV','49'],
+				   				['Wisconsin WI','50'],
+				   				['Wyoming WY','51']]), :class => 'search-by-state-btn', :id => 'select_state', :html => {:id => 'select_state'}) %#>
+			 -->
+			 			
+			<!-- <div class="row">
+				<div class="cell-left-reg-commun">
+					<#%= f.label(:type_affiliation, "State", :class => 'input-label required-label', :id => 'label_reg_event_state') %#>
+				</div>
+				<div class="cell-right-reg-commun">
+					<select name="reg_event[state]" id="reg_event_state" class="" style="display: none;" data-template="#dropdown-data2">
+					    <option value="0" selected="selected" id="option-default">-Institution or Company?-</option>	
+					    <option value="1">Institution</option>
+					    <option value="2">Company</option>
+					    <option value="3">OTHER</option>
+					</select>										
+				</div>
+				<div class="cell-error-reg-event" id="state_reg_event_conference_state"><p id="error_reg_event_conference_state" class="select-errors"></p></div>     
+			</div> -->      		
+
+			 			
+			<div class="row">
+				<div class="cell-left-reg-commun">
+					<%= f.label(:state, "State", :class => 'input-label required-label', :id => 'label_reg_event_state') %>
+				</div>
+				<div class="cell-right-reg-commun">
+					 <%= f.text_field(:state, :class => "input-form required", :placeholder => 'State', :tabindex => '10') %>					 
+				</div>
+				<div class="cell-error-reg-event" id="state_reg_event_conference_state"><p id="error_reg_event_conference_state"></p></div>      					   
+			</div>      		
+
+			<div class="input-form-spacer"></div>
+
+			<!--zip-->
+			<div class="row">
+				<div class="cell-left-reg-commun">
+					<%= f.label(:zip, "Zip", :class => 'input-label required-label', :id => 'label_reg_event_zip') %>
+				</div>
+				<div class="cell-right-reg-commun">
+					 <%= f.text_field(:zip, :class => "input-form required", :placeholder => 'Zip', :tabindex => '11') %>					 
+				</div>
+				<div class="cell-error-reg-event" id="state_reg_event_conference_zip"><p id="error_reg_event_conference_zip"></p></div>      					   
+			</div>      		
+
+			<div class="input-form-spacer"></div>
+
+			<!--phone-->
+			<div class="row">
+				<div class="cell-left-reg-commun">
+					<%= f.label(:phone, "Phone", :class => 'input-label required-label', :id => 'label_reg_event_phone') %>
+				</div>
+				<div class="cell-right-reg-commun">
+					 <%= f.text_field(:phone, :class => "input-form required", :placeholder => 'Phone', :tabindex => '12') %>					 
+				</div>
+				<div class="cell-error-reg-event" id="state_reg_event_conference_phone"><p id="error_reg_event_conference_phone"></p></div>      					   
+			</div>      		
+
+			<div class="input-form-spacer"></div>
+
+			<!--phone_mobile-->
+			<div class="row">
+				<div class="cell-left-reg-commun">
+					<%= f.label(:phone_mobile, "(*optional) Mobile Phone<br>for a text reminder<br>before the Event".html_safe, :class => 'input-label required-label', :id => 'label_reg_event_phone_mobile') %>
+				</div>
+				<div class="cell-right-reg-commun">
+					 <%= f.text_field(:phone_mobile, :class => "input-form required", :placeholder => 'Mobile Phone', :tabindex => '13') %>					 
+				</div>
+				<div class="cell-error-reg-event" id="state_reg_event_conference_phone_mobile"><p id="error_reg_event_conference_phone_mobile"></p></div>      					   
+			</div>      		
+
+			<div class="input-form-spacer"></div>
+
+			<!--email-->
+			<div class="row">
+				<div class="cell-left-reg-commun">
+					<%= f.label(:email, "Email", :class => 'input-label required-label', :id => 'label_reg_event_email') %>
+				</div>
+				<div class="cell-right-reg-commun">
+					<%= f.text_field(:email, :class => "input-form required", :placeholder => 'email@example.com', :tabindex => '14' ) %>
+				</div>
+				<div class="cell-error-reg-event" id="state_reg_event_conference_email"><p id="error_reg_event_conference_email"></p></div>      	
+			</div>      		
+
+			<div class="input-form-spacer"></div>
+
+			<!--topic-->
+			<div class="row">
+				<div class="cell-left-reg-commun">
+					<%= f.label(:topic, "Topic", :class => 'input-label required-label', :id => 'label_reg_event_topic') %>
+				</div>
+				<div class="cell-right-reg-commun">
+					 <%= f.text_field(:topic, :class => "input-form required", :placeholder => 'Topic', :tabindex => '15') %>					 
+				</div>
+				<div class="cell-error-reg-event" id="state_reg_event_conference_topic"><p id="error_reg_event_conference_topic"></p></div>      					   
+			</div>      		
+
+			<div class="input-form-spacer"></div>
+
+
+			<!-- <div class="row">
+				<div class="cell-left-contact" style="vertical-align: top; padding-top: 6px;">
+					<#%= f.label(:message, "Message", :class => 'input-label required-label', :id => 'label_contact_message') %#>
+				</div>
+				<div class="cell-right-contact">
+					<#%= f.text_area(:message, :class => "input-form required message", :spellcheck => 'false', :placeholder => 'Message', :tabindex => '6') %#>
+				</div>      
+				<div class="cell-error-contact" style="top: 0px;"><p id="error_contact_message"></p></div>      	
+			</div> -->
+
+
+			<!--description-->
+			<div class="row">
+				<div class="cell-left-reg-commun" style="vertical-align: top; padding-top: 6px;">
+					<%= f.label(:description, "Description", :class => 'input-label required-label', :id => 'label_reg_event_description') %>
+				</div>
+				<div class="cell-right-reg-commun">
+					 <%= f.text_area(:description, :class => "input-form required message", :spellcheck => 'false', :placeholder => 'Description', :tabindex => '16') %>					 
+				</div>
+				<div class="cell-error-reg-event" id="state_reg_event_conference_description"><p id="error_reg_event_conference_description"></p></div>      					   
+			</div>      		
+
+			<div class="input-form-spacer"></div>
+			<div class="input-form-spacer"></div>
+			<div class="input-form-spacer"></div>
+
+			<div class="row">
+				<div class="cell-left-reg-commun">
+				</div>
+				<div class="cell-submit-contact" style="padding: 0 4px 0 0;">
+					<%= recaptcha_tags %>	
+				</div>      	
+			</div>      		
+
+			<div class="input-form-spacer"></div>
+			<div class="input-form-spacer"></div>
+			<div class="input-form-spacer"></div>
+			<div class="input-form-spacer"></div>
+			<div class="input-form-spacer"></div>
+
+			<div class="submit-button-commun">
+					<%= f.submit "Submit", :id => 'btn_submit', :class => 'btn submitregcommun', :tabindex => '18' %>
+			</div>   		
+		
+		<% end %>
+
+		</div>		
+			
+	</div>
+	
+	</section>
+	
+</div>
+
+
+<div style="height: 300px;"></div>
+
+
+
+</div>
+
+<!-- </li>
+</ul> -->
+
+
+    <!-- <script src="../scripts/dot.js"></script>    
+    <script src="../scripts/jquery-dropdown-dot.js"></script> -->
+
+
+	<script>
+
+		var offset_top = 0;
+		jQuery(window).scroll(function() {
+			offset_top = $(window).scrollTop();
+			// $('#eventstabs').css('top', offset_top);
+		});
+
+		function scrollToAnchor(aid) {
+			var a = $("a[name='" + aid + "']");
+			$('html, body').animate({ scrollTop: a.offset().top }, 1000);
+			// jQuery('html, body').animate({scrollTop: 100}, 1000);				
+		}
+
+		var validatorCalled = false;
+		var val = null;
+		//var formval = null;
+		
+		function formValidate() {
+						
+			//formval = $("#form_join").validate({
+
+			var selectValid1;
+			var validCityWorkshop;
+			
+			$("#form_join").validate({
+			
+				submitHandler: function(form) {
+
+					validatorCalled = true;					
+
+					//form.submit();
+					
+					selectValid1 = validateSelect1();
+					// selectValid2 = validateSelect2();
+					
+					//var s = 'selectValid1 = ' + selectValid1 + ' selectValid2 = ' + selectValid2;
+					//alert(s);
+					
+					// if ( selectValid1 && selectValid2 ) {
+					if ( selectValid1 ) {						
+					// if ( validCityWorkshop ) {						
+						form.submit();
+					}
+					else
+					{
+						var errors = 0;
+						if (!selectValid1) {
+							errors += 1;
+						}
+						// if (!selectValid2) {
+							// errors += 1;
+						// }			
+						if (errors) {
+							var message = errors == 1
+							? '1 required field missed'
+							: errors + ' required fields missed';
+							$("div.errors p").html(message);
+							// $("div.errors").show();
+							$("#btn_submit").blur();
+							$("#form_reg_event").focus();		
+							scrollToAnchor('anchor1');											
+						} else {
+							// $("div.errors").hide();
+							$("div.errors p").html("");
+						}
+					}
+				},
+			
+				debug: true,
+				onkeyup: false,
+				focusCleanup: true,
+				focusInvalid: false,
+				// invalidClass: "error",
+				// validClass: "success",
+				rules: {
+					'reg_event_conference[name_first]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 100						
+					},
+					'reg_event_conference[name_last]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 100						
+					},
+					'reg_event_conference[name_title]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 20						
+					},
+					'reg_event_conference[position_title]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 200						
+					},
+					'reg_event_conference[type_affiliation]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 200						
+					},
+					'reg_event_conference[name_affiliation]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 200						
+					},
+					'reg_event_conference[address]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 200						
+					},
+					'reg_event_conference[city]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 200						
+					},
+					'reg_event_conference[state]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 50						
+					},
+					'reg_event_conference[zip]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 50						
+					},
+					'reg_event_conference[phone]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 50						
+					},
+					'reg_event_conference[phone_mobile]': {
+						required: false,
+						minlength: 1,						
+						maxlength: 100						
+					},					
+					'reg_event_conference[email]': {
+						required: true,
+						maxlength: 100,
+						email: true
+					},
+					'reg_event_conference[topic]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 200
+					},
+					'reg_event_conference[description]': {
+						required: true,
+						minlength: 1,												
+						maxlength: 2000
+					}
+				},
+				invalidHandler: function(event, validator) {
+					val = validator;
+					var errors = validator.numberOfInvalids();
+					validatorCalled = true;					
+					
+					if (!validateSelect1()) {
+						errors += 1;
+					}		
+					if (errors) {
+						var message = errors == 1
+						? '1 required field missed'
+						: errors + ' required fields missed';
+						$("div.errors p").html(message);
+						$("div.errors").show();
+						$("#btn_submit").blur();
+						$("#form_reg_event").focus();		
+						scrollToAnchor('anchor1');										
+					} else {
+						$("div.errors").hide();
+					}
+				},			
+				messages: {
+					'reg_event_conference[name_first]': {
+						required: "*",
+						maxlength: "Exceeds 100 characters"							
+					},
+					'reg_event_conference[name_last]': {
+						required: "*",
+						maxlength: "Exceeds 100 characters"							
+					},
+					'reg_event_conference[name_title]': {
+						required: "*",
+						maxlength: "Exceeds 20 characters"							
+					},
+					'reg_event_conference[position_title]': {
+						required: "*",
+						maxlength: "Exceeds 200 characters"							
+					},
+					'reg_event_conference[type_affiliation]': {
+						required: "*",
+						maxlength: "Exceeds 200 characters"							
+					},
+					'reg_event_conference[name_affiliation]': {
+						required: "*",
+						maxlength: "Exceeds 200 characters"							
+					},
+					'reg_event_conference[address]': {
+						required: "*",
+						maxlength: "Exceeds 200 characters"							
+					},
+					'reg_event_conference[city]': {
+						required: "*",
+						maxlength: "Exceeds 200 characters"							
+					},
+					'reg_event_conference[state]': {
+						required: "*",
+						maxlength: "Exceeds 50 characters"							
+					},
+					'reg_event_conference[zip]': {
+						required: "*",
+						maxlength: "Exceeds 50 characters"							
+					},
+					'reg_event_conference[phone]': {
+						required: "*",
+						maxlength: "Exceeds 100 characters"							
+					},
+					'reg_event_conference[phone]': {
+						required: "*",
+						maxlength: "Exceeds 100 characters"							
+					},					
+					'reg_event_conference[email]': {
+						required: "*",
+						maxlength: "Exceeds 100 characters",
+						email: "Invalid form on email address"
+					},
+					'reg_event_conference[topic]': {
+						required: "*",
+						maxlength: "Exceeds 200 characters"							
+					},					
+					'reg_event_conference[description]': {
+						required: "*",
+						maxlength: "Exceeds 2000 characters"							
+					}					
+				},
+				errorContainer: $("div .error_label"),				
+				errorPlacement: function(error, element) {
+					error.insertAfter('#error_' + element.attr('id'));
+					$('#' + element.attr('id')).removeClass('required').removeClass('success').addClass('error');
+					//$('#label_' + element.attr('id')).removeClass('required-label').addClass('error-label');
+				},
+				// invalid: function(element) {
+				// },
+				// highlight: function(element) {
+					// $('#' + element.attr('id')).removeClass('required').removeClass('success').addClass('error');
+					// //$('#label_' + element.attr('id')).removeClass('required-label').addClass('error-label');
+				// },
+				// unhighlight: function(element) {
+					// //$('#' + element.attr('id')).removeClass('required').removeClass('success').addClass('error');
+					// //$('#label_' + element.attr('id')).removeClass('required-label').addClass('error-label');
+				// },
+				error: function(label) {
+					$('#' + label.attr('for')).removeClass('required').removeClass('success').addClass('error');
+					$('#label_' + label.attr('for')).removeClass('required-label').addClass('error-label');
+					// $('#state_' + label.attr('for')).css ({			
+						// background: 'url("/assets/submit_form_empty.png") no-repeat 0px 0px'
+					// });					
+				},
+				success: function(label) {
+					$('#' + label.attr('for')).removeClass('required').removeClass('error').addClass('success');
+					$('#label_' + label.attr('for')).removeClass('error-label').addClass('required-label');
+					$('#state_' + label.attr('for')).css ({			
+						background: 'url("/assets/submit_form_tick.png") no-repeat 0px 0px'
+					});
+					$('#error_' + label.attr('for')).html("");
+				},				
+				focus: function(element) {
+				 	//$('#' + element.attr('id')).removeClass('required').removeClass('error').removeClass('success').addClass('focus');
+				 	
+				 	//$('#' + element.attr('id')).removeClass('required').removeClass('success').addClass('focus');
+				}
+			});
+
+			// $.validator.setDefaults({
+				// submitHandler: function() {
+					// form.submit();
+				// }
+			// });
+		}
+
+		// function updateErrorCount_CityWorkshop(isChecked) {
+			// //val = formval.validator;
+			// if ((val !== undefined) && (val !== null)) {
+				// var errors = val.numberOfInvalids();
+				// if (!validateSelect1()) {
+					// errors += 1;
+				// }
+				// if ( !isChecked ) {
+					// errors += 1;
+				// }					
+				// if (errors) {
+					// var message = errors == 1
+					// ? '1 required field missed'
+					// : errors + ' required fields missed';
+					// $("div.errors p").html(message);
+					// // $("div.errors").show();
+				// } else {
+					// // $("div.errors").hide();
+					// $("div.errors p").html("");
+				// }
+				// val.reset();
+			// }					
+		// }
+
+		function updateErrorCount() {
+			//val = formval.validator;
+			if ((val !== undefined) && (val !== null)) {
+				var errors = val.numberOfInvalids();
+				if (!validateSelect1()) {
+					errors += 1;
+				}
+				// if ( !validateCityWorkshop() ) {
+					// errors += 1;
+				// }					
+				if (errors) {
+					var message = errors == 1
+					? '1 required field missed'
+					: errors + ' required fields missed';
+					$("div.errors p").html(message);
+					// $("div.errors").show();
+				} else {
+					// $("div.errors").hide();
+					$("div.errors p").html("");
+				}
+				val.reset();
+			}					
+		}
+		
+		function errorMessageUpdate( element ) {
+			updateErrorCount();
+			if ($('#' + element).hasClass('error')) {
+				if ($('#' + element).val().length > 0) {
+					$('#' + element).removeClass('required').removeClass('success').addClass('error');
+					$('#label_' + element).removeClass('required-label').addClass('error-label');
+				}
+				else {
+					$('#' + element).removeClass('success').removeClass('error').addClass('required');
+					$('#label_' + element).removeClass('success-label').removeClass('error-label').addClass('required-label');				
+					$('#' + element).css ({			
+						'border-color' : '#851717'
+					});
+					$('#state_' + element).css ({			
+						background: 'url("/assets/submit_form_empty.png") no-repeat 0px 1px'
+					});					
+				}
+			}
+			else {			
+				if ($('#' + element).val().length > 0) {
+					$('#' + element).removeClass('required').removeClass('error').addClass('success');
+					$('#label_' + element).removeClass('error-label').addClass('required-label');
+					$('#' + element).css ({			
+						// 'border-color' : '#005C9E'
+						'border-color' : '#41b737'
+					});					
+				}
+				else {
+					$('#' + element).removeClass('success').removeClass('error').addClass('required');
+					$('#label_' + element).removeClass('success-label').removeClass('error-label').addClass('required-label');		
+					$('#state_' + element).css ({			
+						background: 'url("/assets/submit_form_empty.png") no-repeat 0px 1px'
+					});
+				}
+			}
+		}
+
+		$("#reg_event_conference_name_first").on("blur", function () {
+			errorMessageUpdate('reg_event_conference_name_first');
+		});
+
+		$("#reg_event_conference_name_last").on("blur", function () {
+			errorMessageUpdate('reg_event_conference_name_last');
+		});
+
+		$("#reg_event_conference_name_title").on("blur", function () {
+			errorMessageUpdate('reg_event_conference_name_title');
+		});
+
+		$("#reg_event_conference_position_title").on("blur", function () {
+			errorMessageUpdate('reg_event_conference_position_title');
+		});
+
+		$("#reg_event_conference_type_affiliation").on("blur", function () {
+			errorMessageUpdate('reg_event_conference_type_affiliation');
+		});
+
+		$("#reg_event_conference_name_affiliation").on("blur", function () {
+			errorMessageUpdate('reg_event_conference_name_affiliation');
+		});
+
+		$("#reg_event_conference_address").on("blur", function () {
+			errorMessageUpdate('reg_event_conference_address');
+		});
+
+		$("#reg_event_conference_city").on("blur", function () {
+			errorMessageUpdate('reg_event_conference_city');
+		});
+
+		$("#reg_event_conference_state").on("blur", function () {
+			errorMessageUpdate('reg_event_conference_state');
+		});
+
+		$("#reg_event_conference_zip").on("blur", function () {
+			errorMessageUpdate('reg_event_conference_zip');
+		});
+
+		$("#reg_event_conference_phone").on("blur", function () {
+			errorMessageUpdate('reg_event_conference_phone');
+		});
+
+		$("#reg_event_conference_phone_mobile").on("blur", function () {
+			errorMessageUpdate('reg_event_conference_phone_mobile');
+		});
+
+		$("#reg_event_conference_email").on("blur", function () {
+			errorMessageUpdate('reg_event_conference_email');
+		});
+
+		$("#reg_event_conference_topic").on("blur", function () {
+			errorMessageUpdate('reg_event_conference_topic');
+		});
+
+		$("#reg_event_conference_description").on("blur", function () {
+			errorMessageUpdate('reg_event_conference_description');
+		});
+
+
+
+		// #41b737;/* #005C9E blue */
+		var selectValid1 = false;
+		function selectStatus1() {
+			if ($("#reg_event_conference_type_affiliation option:selected").val() == '0') {
+				$('#state_reg_event_conference_type_affiliation').css ({			
+					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 0px'
+				});
+				$('.dropdown1').css ({			
+					color: '#838383'
+				});
+				selectValid1 = false;						
+			}
+			else {
+				$('#state_reg_event_conference_type_affiliation').css ({			
+					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 0px'
+				});
+				$('.dropdown1').css ({			
+					color: '#ACDDE3'
+				});			
+				if( !selectValid1 ) {
+					$('.dropdown1').css ({			
+						// 'border-color' : '#005C9E'
+						'border-color' : '#41b737'
+					});
+					$('.dropdown1 > .selected i').css ({			
+						// 'color' : '#005C9E',
+						'color' : '#41b737',
+						// 'border-left-color' : '#005C9E'
+						'border-left-color' : '#41b737' 
+					});
+					$('#error_reg_event_conference_type_affiliation').html("");					
+				}
+				selectValid1 = true;		
+			}
+			updateErrorCount();			
+		}
+
+		function validateSelect1() {
+			
+			if ($("#reg_event_conference_type_affiliation option:selected").val() == '0') {
+				
+				$('.dropdown1').css ({			
+					'border-color' : '#851717'
+				});
+				
+				$('.dropdown1 > .selected i').css ({			
+					'color' : '#851717',
+					'border-left-color' : '#851717' 
+				});
+		
+				$('#error_reg_event_conference_type_affiliation').html("*");
+		
+				selectValid1 = false;		
+			}
+			else {
+				$('.dropdown1').css ({			
+					// 'border-color' : '#005C9E'
+					'border-color' : '#41b737'
+				});
+				
+				$('.dropdown1 > .selected i').css ({			
+					// 'color' : '#005C9E',
+					// 'border-left-color' : '#005C9E'
+					'color' : '#41b737',
+					'border-left-color' : '#41b737' 
+				});
+
+				$('#error_reg_event_conference_type_affiliation').html("");
+				
+				selectValid1 = true;		
+			}
+			
+			return selectValid1;
+		}
+
+
+
+		$(window).load( function() {
+		//$(document).ready(function(){
+				
+			formValidate();
+							
+			$('select').dropdown({
+			    'changed': function(data) {
+			        // selectStatus1();
+			        selectStatus1();
+			        // if(validatorCalled) {	
+			       		// validateSelect1();
+			       	// }
+			    }
+			});	    
+				
+			  // :name_first, 
+              // :name_last, 
+              // :name_title,
+              // :position_title, 
+              // :type_affiliation, 
+              // :name_affiliation, 
+              // :address, 
+              // :city, 
+              // :state, 
+              // :zip, 
+              // :phone, 
+              // :phone_mobile,
+              // :email, 
+              // :topic, 
+              // :description 
+
+    		$("#reg_event_conference_name_first").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#reg_event_conference_name_last").focus();
+      			}
+    		});				
+    		$("#reg_event_conference_name_last").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#reg_event_conference_name_title").focus();
+      			}
+    		});				
+    		$("#reg_event_conference_name_title").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#reg_event_conference_position_title").focus();
+      			}
+    		});				
+    		$("#reg_event_conference_position_title").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#dropdown1").attr("tabindex", 6).focus();			    	
+      			}
+    		});				
+    		// $("#reg_event_conference_name_title").keypress(function(e){
+      			// if(e.keyCode==13) {
+			    	// e.preventDefault();
+					// $("#dropdown1").attr("tabindex", 6).focus();			    	
+      			// }
+    		// });				
+    		$("#reg_event_conference_name_affiliation").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#reg_event_conference_address").focus();			    	
+      			}
+    		});				
+    		$("#reg_event_conference_address").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#reg_event_conference_city").focus();
+      			}
+    		});				
+    		$("#reg_event_conference_city").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#reg_event_conference_state").focus();
+      			}
+    		});				
+    		$("#reg_event_conference_state").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#reg_event_conference_zip").focus();
+      			}
+    		});				
+    		$("#reg_event_conference_zip").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#reg_event_conference_phone").focus();
+      			}
+    		});				
+    		$("#reg_event_conference_phone").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#reg_event_conference_phone_mobile").focus();
+      			}
+    		});				
+    		$("#reg_event_conference_phone_mobile").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#reg_event_conference_email").focus();
+      			}
+    		});				
+    		$("#reg_event_conference_email").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#reg_event_conference_topic").focus();
+      			}
+    		});				
+    		$("#reg_event_conference_topic").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+					$("#reg_event_conference_description").focus();
+      			}
+    		});				
+    		$("#reg_event_conference_description").keypress(function(e){
+      			if(e.keyCode==13) {
+			    	e.preventDefault();
+	      			$("#recaptcha_response_field").attr("tabindex","17").focus();
+      				// $("#btn_submit").focus();
+					// $("#reg_event_conference_description").focus();
+      			}
+    		});				
+
+			$("input[name=recaptcha_response_field]").attr("tabindex","17");
+    		$("input[name=recaptcha_response_field]").keypress(function(e){
+      			if(e.keyCode==13) {
+      				e.preventDefault();
+      				$("#btn_submit").focus();
+      			}
+    		});				
+
+			// $("#tab4").addClass("active");
+		});
+	
+	
+
+	</script>
+	

@@ -2,7 +2,7 @@
 
 
 	
-<style>
+<!-- <style>
 	
 	#lc-landing {
 	}	
@@ -238,160 +238,280 @@
 	.city-color {
 		color: #1B237A;	
 	}
+.leader-title {
+    color: gray;
+    font-size: 52px;
+    font-family: Arial;
+}
+	#page p {font-family: Arial; color: #000; font-size: 17px;}
+
+	#lc-landing ul li  {color: #41b737; font-family: Arial; font-size: 17px; padding-bottom: 10px;}
+	#lc-landing ul li span {color: #000; font-weight: normal;}
 	
+	.scroll-link {position:fixed; text-align: center; color: #000;
+		 padding:20px 20px; font-size: 22px;
+		border-radius: 6px; margin-top: 20px; font-family: "Quattrocento Sans",sans-serif; font-weight: bold;
+  background: -webkit-linear-gradient(#fbb040, #fe742b); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#fbb040, #fe742b); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#fbb040, #fe742b); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#fbb040, #fe742b); /* Standard syntax */
+	}
+	a.scroll-link:hover {color: #fff;
+  background: -webkit-linear-gradient(#fe742b, #fbb040); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#fe742b, #fbb040); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#fe742b, #fbb040); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#fe742b, #fbb040); /* Standard syntax */
+	}
 	
-</style>
+</style> -->
+
+	<!-- <style>
+		#event-bottom-table h2 {color:#41b737; text-align: center; font-family: Arial; margin-top: 25px;}
+		#event-bottom-table p {width: 250px; text-align: justify; padding: 10px; font-size: 14px;}
+		#event-bottom-table td {border:1px solid gray;}
+		#event-bottom-table img {width: 260px; margin: 2px 5px;}
+		#event-bottom-table ul li {font-size: 15px; padding-bottom: 0;}
+		.eventpages .ul-1 {
+			width: 1200px; 
+			margin: 0 auto; 
+			padding-right: 20px; 
+			vertical-align: top;
+		}
+		.eventpages-li-1 {
+			margin: 0 auto; 
+			padding-right: 20px; 
+			vertical-align: top; 
+			display: inline-block;
+		}
+		.eventpages-img-1 {
+			border: 2px solid gray;
+		}
+		.eventpages-img-2 {
+			width: 300px; 
+			border: 1px solid gray; 
+			margin-left: 20px;
+		}
+	</style> -->
 
 
-<!-- <script type="text/javascript" src="../scripts/jquery.tmpl.js"></script> -->
+	<%= render 'share/backtotop' %>
 
-<!-- <div class="tabs">
-  <ul>
-    <li class="active">
-    	<a href="/Events" class="tab" >Events</a>
-    </li>
-    <li>
-    	<a href="/event1pages" class="tab" >Discussions</a>
-    </li>
-    <li>
-    	<a href="/event2pages" class="tab" >Gathering</a>
-    </li>
-    <li>
-    	<a href="/EventRegistration" class="tab" >Register</a>
-    </li>
-  </ul>
-</div> -->
 
-<%= render 'share/backtotop_2' %>
+	<ul class="lc-inline eventpages-ul-1">
+		<li class="eventpages-li-1">
+			<%= render 'share/eventpages_tabs' %>
+			<!--<a class="scroll-link" href="/CBOL-Materials">Colorado<br/> Flipped Conference<br/> Details &amp; Materials</a>-->
+		</li>
+		<li class="eventpages-li-1">
+		<div id="tab-container">
+			<div id="lc-landing">
+				<div id="page" class="eventpages">
+					<!-- <img src="../repository/events/dallas-group.jpeg" alt="Conference" width="800px"> -->
+					<%= image_tag("dallas-group.jpeg", alt: "Conference", width: "800px", class: "img-1") %>
+					<div class="spacer"></div>
+					<div class="spacer"></div>
+					<h1 class="leader-title">Welcome! We want YOU.</h1>
+					<div class="spacer"></div>
+					<p>
+						The Learning Counsel events are often held in partnership with education industry associations and local school districts from city to city. Both Minnesota and Colorado honored the events produced in their States with Continuing Education Units in 2014.
+					</p>
+					<p>
+						<!-- <img style="width: 300px; border: 1px solid gray; margin-left: 20px;" src="../repository/events/lani-tan.jpeg" alt="Leilani Cauthen" align="right"> -->
+						<%= image_tag("lani-tan.jpeg", alt: "LeiLani Cauthen", width: "300px", align: "right", class: "img-2") %>
+				        The Learning Counsel is a media and events organization that is mission based
+						and funded by sponsorships from multiple publishers and technology companies. We’re focused on providing research and context on the shift in education to digital curriculum.<br/><br/>
+						In 2015, we will be producing events in 19 cities.
+						<br/><br/>
+						If you’re involved with going digital with teaching and learning, IT or school leadership, you’re invited to join us for one exceptional day.
+						<br/><br/>
+						<strong>The only “Living Tour” for Education</strong>
+						<br/><br/>
+					</p>
+					<ul class="">
+						<li><span>Real Discussion, not just “sit-and-get.” Education is going somewhere with its transition to digital devices and curriculum – and school leaders need to talk about it with each other.</span></li>
+						<li><span>A special sauce of leadership conversation with a dash of future-leaning and a helping of back-to-basics.</span></li>
+						<li><span>The only “living tour” for the education industry, seeing what’s happening city-by-city and bringing lessons learned from each one forward in a continuous “leveling-up” of the conversation to reflect what’s now happening nationally.</span></li>
+						<li><span>At the end of the each year the Digital Curriculum Strategy Survey and its Awards ceremony during the national Gathering event sets the tone for the following year from the winning innovative schools and districts.</span></li>
+					</ul>
+					<div class="spacer"></div>
+					<p>
+						<strong>How will you contribute?</strong>
+						<br/><br/>
+						When you attend these one-day events, just be you. Represent for your school and your interests. Bring your curiosity and fellow executives. A lot is changing with schools as they are transitioning to digital devices and implementing digital curriculum, so everyone has lots of questions and comments. There is more sophistication needed beyond what device to select. The world of digital content and curriculum is enormously complex now. Therefore, it’s important to bring the curriculum and IT worlds together with district leadership to learn about, and discuss, a complete strategy.
+						<br/><br/>
+						You’ll be surprised at how much you gain from an old-fashioned day of peer discussion and seeing some interesting new developments from the industry.
+						<br/><br/>
+						See you there!
+					</p>
+					<div class="spacer"></div>
+					<p>
+						<!-- <img src="../repository/events/image-lani-signature-1.png" alt="image-lani-signature-1.png"> -->	
+						<%= image_tag("image-lani-signature-1.png", alt: "image-lani-signature-1.png") %>
+					</p>
+					<div class="spacer"></div>
+					<div class="spacer"></div>
+					<table id="event-bottom-table">
+						<tr>
+							<td>
+								<h2>The Digital Curriculum<br/>
+								Strategy Discussion Meetings<br/>
+								2015</h2>
+								<p style="text-align: left;">This multi-city tour of small events
+								for education executives have a
+								unique goal-setting workshop, group
+								discussion, and show and discuss
+								interludes by digital curriculum
+								providers. They are free to attend for
+								schools, useful and educational, and
+								sponsored by multiple publishers and
+								technology companies.</p>
+								<!-- <img src="/repository/events/santa-clara-group.jpeg"> -->
+								<%= image_tag("santa-clara-group.jpeg", alt: "santa-clara-group.jpeg") %>
+								<p>In many cities, our events are oneroom
+								meeting-style with 30-60
+								executives joining from the area,
+								including many driving four or more
+								hours to attend their closest city.
+								We serve continental breakfasts
+								and hearty lunches for the day and
+								typically end around 4:00 pm.
+								<br/><br/>
+								Who Attends:</p>
+								<ul>
+									<li><span>Superintendents</span></li>
+									<li><span>Assistant/Associate<br/>
+									Superintendents</span></li>
+									<li><span>District Administrators</span></li>
+									<li><span>Board Members</span></li>
+									<li><span>Curriculum Directors</span></li>
+									<li><span>Chief Technology Officers</span></li>
+									<li><span>Chief Innovation Officers</span></li>
+									<li><span>Media and Library Specialists</span></li>
+									<li><span>Curriculum Specialists</span></li>
+									<li><span>Tech Specialists</span></li>
+									<li><span>Principals</span></li>
+								</ul>
+							</td>
+							<td>
+								<h2>The Digital Education<br/>
+								Transition | Flipped<br/>
+								Conferences 2015</h2>
+								<p>NEW in 2015, we are partnering
+								with incredible local associations
+								and districts in a few places for
+								larger one-day events that can host
+								hundreds of folks. These people are
+								really inspiring and the “Flippeds” are
+								their production as well as ours.</p>
+								<p style="text-align: left;">These new “Flipped” conferences are
+								designed events on a whole new level
+								above other conferences. They’re
+								actually “flipped” just like teachers
+								are flipping classroom learning. In
+								this way, these conferences will fit a
+								whole lot of learning into just one day
+								across multiple tracks. The Flipped
+								conferences have Goals, each
+								track has a Learning Objective, and
+								each session will have a Learning
+								Outcome.</p>
+								<!-- <img src="/repository/events/boston-group-1.jpeg"> -->
+								<%= image_tag("boston-group-1.jpeg", alt: "boston-group-1.jpeg") %>
+								<p>All attendees will be expected to
+								be engaged learners – just like the
+								ideal for students today. We hope
+								that even the Speakers take on one
+								of the suggested topics to immerse
+								themselves in and teach others
+								about.</p>
+								<p>
+								Like all Learning Counsel events,
+								these are free to attend with just one
+								request:</p>
+								<p>
+								Learn and contribute.
+								<br/><br/>
+								Who Attends:</p>
+								<ul>
+									<li><span>Superintendents</span></li>
+									<li><span>Assistant/Associate<br/>
+									Superintendents</span></li>
+									<li><span>District Administrators</span></li>
+									<li><span>Board Members</span></li>
+									<li><span>Curriculum Directors</span></li>
+									<li><span>Chief Technology Officers</span></li>
+									<li><span>Chief Innovation Officers</span></li>
+									<li><span>Media and Library Specialists</span></li>
+									<li><span>Curriculum Specialists</span></li>
+									<li><span>Tech Specialists</span></li>
+									<li><span>Principals</span></li>
+									<li><span>Teachers</span></li>
+								</ul>
+							</td>
+							<td>
+								<h2>National Gathering 2015<br/><br/><br/></h2>
+								<p>The Gathering is our annual invitationonly
+								event for executives to be together,
+								hear from each other, plan for their new
+								year, and hear who is announced as
+								winners of the annual Digital Curriculum
+								Strategy Awards.</p>
+								<p>The successful New Orleans Gathering
+								in 2014 included a first-of-its-kind
+								mega-block challenge with participants
+								building and labeling their digital
+								curriculum strategies on toy blocks and
+								sharing their vision with all. Amazing
+								winners of the national Survey were on
+								hand to share their district stories.</p>
+								<!-- <img src="/repository/events/megablock-challenge.jpeg"> -->
+								<%= image_tag("megablock-challenge.jpeg", alt: "megablock-challenge.jpeg") %>
+								<p>The Gathering will be in Albuquerque,
+								NM in October 2015.
+								<br/><br/>
+								Who Attends:</p>
+								<ul>
+									<li><span>Superintendents</span></li>
+									<li><span>Assistant/Associate<br/>
+									Superintendents</span></li>
+									<li><span>District Administrators</span></li>
+									<li><span>Board Members</span></li>
+									<li><span>Curriculum Directors</span></li>
+									<li><span>Chief Technology Officers</span></li>
+									<li><span>Chief Innovation Officers</span></li>
+									<li><span>Media and Library Specialists</span></li>
+									<li><span>Curriculum Specialists</span></li>
+									<li><span>Tech Specialists</span></li>
+									<li><span>Principals</span></li>
+								</ul>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div style="height: 100px;"></div>
+		</div>
+		</li>
+	</ul>
+	<div id="bottom-graphic">
+		<!-- <img src="../repository/lc-box-cloud.png"/> -->
+		<%= image_tag("lc-box-cloud.png", alt: "lc-box-cloud.png") %>
+		<div class="lc-landing-box-row"></div>
+	</div>
+	<div style="clear: both;"></div>
 
-<ul class="lc-inline">
-<li>
-<%= render 'share/eventpages_tabs' %>
-</li>
-<li>
-	
-<div id="tab-container">
 
-<div id="lc-landing">
+	<script>
+			
+			var offset_top = 0;
+			jQuery(window).scroll(function() {
+				offset_top = $(window).scrollTop()
+				$('#eventstabs').css('top', offset_top);
+			});
 		
-<!-- <div class="spacer"></div>
-<div class="spacer"></div>
-<div class="spacer"></div> -->
-
-	
-<div id="page">
-	
-<img src="../repository/events/conference.jpg" alt="conference.jpg" width="800px">
-
-<div class="spacer"></div>
-<div class="spacer"></div>
-
-<p style="color: #96328E; font-size: 30px; font-weight: 800;">WELCOME!</p>
-
-
-<div class="spacer"></div>
-
-<p>
-	<img src="../repository/events/lani-blue-1.png" alt="lani-blue-1.png" align="right">
-    <strong>
-        <em>Are you ready?</em> Join us to get a national perspective on what other districts are doing with digital curriculum from our exclusive research.
-    </strong>
-	<br>
-	<br>
-    If you’re involved with going digital with teaching and learning, IT or school leadership, we’ll look for you when we’re in a city near you.
-	<br>
-	<br>
-	As a research institute and media hub, we’re interested in what works. Our multi-city tour of small events called the    <strong>Digital Curriculum Strategy Discussions</strong> for education executives have a unique goal-setting workshop, group discussion, and show and
-    discuss by digital curriculum providers. They are <strong>free to attend</strong> for schools, useful and educational, and sponsored by multiple publishers
-    and technology companies.
-	<br>
-	<br>
-    In addition, we create on annual invitation-only event called “the Gathering” for executives to hear what’s on the horizon nationally, discuss and plan.
-</p>
-
-<div class="spacer"></div>
-<p>
-    <strong>How will you contribute? </strong>
-</p>
-<p>
-    When you attend these one-day events, just be you. Represent for your school and your interests. Bring your curiosity and fellow executives. A lot is
-    changing with schools as they are implementing digital curriculum, so everyone has lots of questions and comments. There is more sophistication needed
-    beyond what device to select. The world of digital content and curriculum is enormously complex now. Therefore, it’s important to bring the curriculum and
-    IT worlds together with district leadership to learn about, and discuss, a complete strategy.
-</p>
-
-<div class="spacer"></div>
-
-<p>
-    You’ll be surprised at how much you gain from an old-fashioned day of peer discussion and some interesting new developments from the industry.
-</p>
-
-<div class="spacer"></div>
-
-<p>
-    See you there!
-</p>
-
-<div class="spacer"></div>
-
-<p>
-	<img src="../repository/events/image-lani-signature-1.png" alt="image-lani-signature-1.png">	
-</p>
-
-<div class="spacer"></div>
-<div class="spacer"></div>
-<p>
-	<a href="/EventRegistration" class="k-link"><strong>ATTEND REPRESENTING A SCHOOL</strong></a>	
-</p>
-
-<div class="spacer"></div>
-
-<p>
-	<a href="/EventRegistration" class="k-link"><strong>ATTEND REPRESENTING A VENDOR</strong></a>	
-</p>
-
-<div class="spacer"></div>
-
-<p>
-	<a href="/ContactUs" class="k-link"><strong>SPONSOR</strong></a>	
-</p>
-
-
-</div>
-
-
-</div>
-
-<div style="height: 100px;"></div>
-
-
-</div>
-
-</li>
-
-</ul>
-
-	
-<div id="bottom-graphic">
-<img src="../repository/lc-box-cloud.png"/>
-<div class="lc-landing-box-row"></div>
-</div>
-
-<div style="clear: both;"></div>
-
-
-<script>
+			$(window).load( function() {
+			//$(document).ready(function(){
+				$("#tab1").addClass("active");
+			});
 		
-		var offset_top = 0;
-		jQuery(window).scroll(function() {
-			offset_top = $(window).scrollTop()
-			$('#eventstabs').css('top', offset_top);
-		});
-	
-		$(window).load( function() {
-		//$(document).ready(function(){
-			$("#tab1").addClass("active");
-		});
-		
-	
-</script>
+	</script>

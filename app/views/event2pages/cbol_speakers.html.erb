@@ -1,0 +1,570 @@
+<% provide(:title, 'Colorado Blended & Online Learning Speakers') %>
+
+<style>
+	
+	.note {
+		clear: both;
+    margin-bottom: 100px;
+    position: relative;
+    top: 200px;
+	}
+	
+	#lc-landing {
+		
+	}	
+		
+	#lc-landing #page {
+	  width: 800px;
+	  /*margin-left: 235px;*/
+	 	  
+	  margin-left: auto;
+	  margin-right: auto;
+	  
+	  
+	  /*margin-right: auto;*/  
+	  
+	}
+	
+	#lc-landing #subscribe-box  {
+	float: right; 
+	margin-left: 20px;
+	}
+	
+	#lc-landing #subscribe-box .form {   
+		width: 255px;
+		height: 289px;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		border-radius: 4px; /* border radius */
+		-moz-background-clip: padding;
+		-webkit-background-clip: padding-box;
+		background-clip: padding-box; /* prevents bg color from leaking outside the border */
+		background-color: #eaeaea; /* layer fill content */
+		-moz-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+		-webkit-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+		box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+	}
+	
+	#lc-landing #subscribe-box .label { 
+		height: 35px;
+	    width: 240px;
+		background-color: #414141; /* layer fill content */
+		-moz-border-radius: 4px 4px 0 0;
+		-webkit-border-radius: 4px 4px 0 0;
+		border-radius: 4px 4px 0 0; /* border radius */
+		-moz-background-clip: padding;
+		-webkit-background-clip: padding-box;
+		background-clip: padding-box; /* prevents bg color from leaking outside the border */
+		-moz-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+		-webkit-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+		box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
+		}
+	
+	#lc-landing #subscribe-box h3 {  
+		color: #ebeff1; /* text color */
+		/*KlavikaMedium*/
+		font-family: KlavikaMedium;
+		/*font-family: "Quattrocento Sans", sans-serif;*/
+		font-size: 15px;
+		margin:0;
+		padding-left: 15px;
+	    padding-top: 15px;
+		}
+	#lc-landing #subscribe-box img {
+	  float:left;
+	  position: relative;
+	  left: 116px;
+	}
+
+	#lc-landing .services-ov {
+	    background-clip: padding-box;
+		
+		
+	  width: 232px;
+		height: 22px;
+		border: 1px solid #999;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
+		-moz-background-clip: padding;
+		-webkit-background-clip: padding-box;
+		background-clip: padding-box;
+		background-color: #999;
+		margin-left: auto;
+	    margin-right: auto;
+	    margin-top: 30px;
+	}
+	
+	#lc-landing .services-ov a:link {
+ 	
+		color: #f2f2f2;
+		font-family: "Quattrocento Sans", sans-serif;
+		font-size: 13px;
+		text-decoration: none;
+		padding: 2px 2px 3px;	
+		position: abolute;
+		margin-left: 8px;
+	}
+	
+	
+	
+	
+	.services-ov a:hover {color: #f2f2f2; text-decoration: none; background-color: #6a6a6a;}
+	.services-ov a:active {color: #f2f2f2; text-decoration: none; background-color: #535353; /* layer fill content */
+		-moz-box-shadow: inset 1px 2px 0 rgba(3,4,4,.4); /* inner shadow */
+		-webkit-box-shadow: inset 1px 2px 0 rgba(3,4,4,.4); /* inner shadow */
+		box-shadow: inset 1px 2px 0 rgba(3,4,4,.4); /* inner shadow */}
+	.services-ov a:visited {color: #f2f2f2; text-decoration: none;}
+	
+	#lc-landing p {
+		color: #333;
+		/*font-family: "Quattrocento";*/
+		font-family: KlavikaLight;
+		font-size: 13px;
+		width: 800px;
+		line-height: 1.2em;	
+	  	font-size: 1.15em;
+		
+		}
+	
+	#lc-landing a {
+		color: #C4740C;
+		}
+	
+	#lc-landing .table p {
+		color: #333;
+		/*font-family: "Quattrocento";*/
+		font-family: KlavikaLight;
+		font-size: 13px;
+		/*width: 400px;*/
+		line-height: 1.2em;	
+	  	font-size: 1.15em;
+		}
+	
+	#lc-landing ul li {
+		color: #000;
+		
+		font-family: msyhb;
+		
+		/*font-family: KlavikaMedium;*/		
+		/*font-family: "Quattrocento";*/	
+		font-size: 20px;
+		margin-left: 30px;
+		font-weight: 200;
+		line-height: 1.2em;		
+		}
+		
+	#lc-landing .page-title {
+	  font-size: 35px;
+	  color: #808080;
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 580px;
+	}
+	
+	#lc-landing .page-title-centered {
+	  font-size: 40px;
+	  color: #808080;
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 580px;
+	}
+	
+	#lc-landing .center {
+		text-align: center;
+		margin-right: 17%;
+	}
+	
+	#lc-landing .sub-title {
+	  font-size: 30px;
+	  color: #34633A;
+	  margin-left: auto;
+	  margin-right: auto;
+	  /*width: 500px;*/  
+	  width: 470px;
+	  
+	}
+	
+	#lc-landing .green-this {
+	    color: #41b737;
+		font-style: bold;
+		}
+		
+	#lc-landing .bold-close {	
+		color: #34633a;
+		size: 22px;
+		font-weight: bold;
+		}
+	
+	
+	#lc-landing #bottom-graphic img {
+	  bottom: 220px;
+	  position: relative;
+	  float:left;
+	}
+	
+	/*#lc-landing .box-row {*/	
+	.lc-landing-box-row {
+	  background: url(../repository/lc-boxes.png) white repeat-x;
+	  height: 59px;
+	  margin-left: 440px;
+	  margin-top: 30px;
+	}
+	
+	.spacer {
+		height: 20px;
+	}
+			
+	#lc-landing table tr td {
+		vertical-align: top;
+	}			
+	
+	.city-color {
+		color: #1B237A;	
+	}
+
+	#produced-by {width: 220px; margin-top: 30px; padding-right: 10px; border-right: 1px solid gray;}
+	#produced-by h2 {font-size: 24px;}
+	#produced-by img {width: 220px;}
+	#produced-by p {text-align: justify; font-size: 14px;}
+	
+</style>	
+	
+
+<%= render 'share/backtotop_2' %>
+
+<ul class="lc-inline" style="width: 1200px; margin: 0 auto; padding-right: 20px; vertical-align: top;">
+<li style="margin: 0 auto; padding-right: 20px; vertical-align: top; display: inline-block;">
+	<%= render 'share/eventpages_tabs' %>
+
+</li>
+<li style="margin: 0 auto; padding-right: 20px; vertical-align: top; display: inline-block;">
+
+
+
+<div id="tab-container">
+
+
+<style>
+h1, h2, h3, h4, p, li, a {font-family: Arial;}
+.tall li a {font-family:"Quattrocento Sans",sans-serif;}
+	#page {width: 900px;}
+  .head .banner {margin: 0; width: 900px;}
+  .flip-img-row {width: 900px; position: relative;}
+  .flip-img-row img {width:260px; margin:5px 18px;}
+  #blue-goal {border-left: 2px solid #227c82; padding-left: 20px;
+  		width: 400px; float: right; margin: 75px 0 0 20px;}
+  #blue-goal p {color:gray; text-align: right; font-size: 23px;} #blue-goal h2 {color: #227c82; text-align: right; font-size: 28px;}
+  .blue-quote {color: #227c82; font-size: 24px; text-align: center; margin-top: 40px; text-decoration: underline;}
+  .blue-it {color: #227c82;} .green-it {color: #41b737;}
+  p {color: #000;}
+  .register-link {color: #227c82; font-size: 24px; text-decoration: underline;}
+  .mini-arrows {width:70px; float:left;}
+
+  .track-table {border:2.5px solid #41b737;}
+  .track-table h3 {color: #000; text-align: center; font-size: 15px;} 
+  .track-table td {color: #000; padding: 7px; width: 250px; vertical-align: top;}
+  .track1 {background: #c9c9c9;} .track2 {background: #78afb3;}
+  .track3 {background: #fcbd60;} .track4 {background: #8bd385;}
+  .track-table ul {color: #000; margin-left:15px;}
+  	#susan-row img { height: 220px; margin-top: 50px;}
+	#susan-row {text-align: justify; margin-top: 50px; vertical-align: top;}
+	#susan-row td {text-align: justify; vertical-align: top;}
+	#top-links {width: 615px; margin:0 auto; font-weight: bold;}
+	.agenda-link {color: #fff; background: #41b737; padding: 5px 60px; border-radius: 15px;}
+	.reg-link {color: #fff; background: #227c82; padding: 5px 60px; border-radius: 15px;
+		margin:0 30px 0 30px;}
+	.speaker-link {color: #fff; background: #fbb040; padding: 5px 60px; border-radius: 15px;}
+	.david-conf {float:right; margin: 0 0 5px 20px; width: 300px;}
+
+	#track-details h1 {font-size: 26px; color: #41b737; margin:10px 0;}
+	.sq1 {height:20px; width: 20px; background: gray; float: left; margin-right: 5px;}
+	.sq2 {height:20px; width: 20px; background: #227c82; float: left; margin-right: 5px;}
+	.sq3 {height:20px; width: 20px; background: #fbb040; float: left; margin-right: 5px;}
+	.sq4 {height:20px; width: 20px; background: #41b737; float: left; margin-right: 5px;}
+	.black-it {color:#000;} .gray-it {color: gray;}
+</style>
+
+
+<div id="page">
+    <div class="head">
+		<div id="blue-goal">
+			<h2>Event Goal</h2>
+			<p>Experience <span class="blue-it">flipped sessions</span>; discuss <span class="green-it">new leadership issues</span>; create <span class="blue-it">curriculum and IT
+			synergies</span>; get PD for <span class="green-it">blended</span> and <span class="blue-it">online learning</span>; inspect <span class="green-it">up-and-coming</span> industry dynamics like <span class="blue-it">gamification.</span></p>
+		</div>
+
+		<img src="/repository/schedule/colorado/co-final-logo-lg.jpg" style="width: 300px;">
+ 
+    </div>
+
+    	
+	<div class="spacer"></div>
+	   
+	   <h2 style="color: gray; font-size: 52px; margin: 20px 0 30px 0;">
+	   Call for Speakers &mdash; <span style="color:red;">Closed for 2015</span>
+		</h2>
+	
+			<img class="david-conf" src="/repository/schedule/colorado/david-conf.jpg" alt="David at Conference">
+
+			<p>The Colorado Blended & Online Learning | Flipped Conference is a unique new designed event. It fits whole lot of learning into just one day. CBOL Flipped has a Goal and each track has a Learning Objective.</p><br/>
+
+			<p>All attendees will be expected to be engaged learners – just like the ideal for students today.</p><br/>
+
+			<p style="margin-bottom: 35px;">Be adventurous and learn yourself by diving in and taking on one of the sessions. Just sign up. We have written a short description for each session – you can choose a track, review recommended topics, and submit a proposal for it. Don’t see a topic you like? Feel free to submit a proposal on a topic within your preferred track. Next, submit any materials you would like conference participants to review before arrival. </p>
+
+
+		<img class="mini-arrows" src="../repository/schedule/flipped-arrows.jpg" alt="flipped-arrows">
+
+			<table class="track-table"><tr>
+			<td class="track1">
+				<h3>TRACK 1 – LEADERSHIP<br/><br/></h3>
+				<strong>Objective:</strong><br/>
+				Learn leadership best practices and gain issue awareness for today.
+				<br/><br/><br/><br/>
+				<strong>Who should attend:</strong>
+				District or school executives with responsibility for thought leadership
+				<ul>
+					<li>Budget & Finance</li>
+					<li>Policy</li>
+					<li>Interested professional educators</li>
+				</ul>
+				
+			</td>
+
+			<td class="track2">
+				<h3 style="font-size: 14px;">TRACK 2 – IT,<br/>CURRICULUM & INSTRUCTION</h3>
+				<strong>Objective:</strong><br/>
+				Bring together curriculum and IT leaders to create teaching and learning environments that work.
+				<br/><br/>
+				<strong>Who should attend:</strong>
+				<ul>
+					<li>Curriculum Staff</li>
+					<li>Technology Managers & staff</li>
+					<li>Interested professional educators</li>
+				</ul>
+			</td>
+
+			<td class="track3">
+				<h3>TRACK 3 –PROFESSIONAL<br/>DEVELOPMENT</h3>
+				<strong>Objective:</strong><br/>
+				Provide a discussion forum for issues and practical methods of blended and/or online instruction.
+				<br/><br/>
+				<strong>Who should attend:</strong>
+				<ul>
+					<li>Teachers</li>
+					<li>School and District Leaders</li>
+					<li>Instructional Coaches</li>
+				</ul>
+
+			</td>
+
+			<td class="track4">
+				<h3>TRACK 4 – INDUSTRY<br/>DYNAMICS</h3>
+				<strong>Objective:</strong><br/>
+				Introduce the concepts and impacts of cutting edge technologies on leadership, teaching and learning.
+				<br/><br/>
+				<strong>Who should attend:</strong>
+				<ul>
+					<li>Teachers</li>
+					<li>District and School Leaders</li>
+					<li>Instructional Coaches</li>
+					<li>Any interested professional educators</li>
+				</ul>
+			</td>
+
+			</tr></table>
+
+			<p style="margin: 20px 0 20px 70px;">
+				Each Track will have at least five Sessions. We intend to make many of these be “Flipped” with materials for attendees to review in advance called “PreWork,” sort of like the homework given for flipped classrooms. In some instances, speakers can skip that and simply offer short summaries. Live at the actual event, speakers lead their sessions with that session’s project or discussion. This way every attendee is also a contributor, just like the ideal of the flipped classroom. We invite audience engagement and participation so panel discussions, round table discussions, or other platforms are encouraged.
+			</p>
+
+			<img src="/repository/schedule/colorado/before-attend.jpg" style="width: 830px; margin-left: 70px;">
+
+
+			<div id="track-details" style="margin-top: 40px;">
+			<h1><div class="sq1"></div>TRACK 1 - Leadership SUGGESTED TOPICS</h1>
+			<ul style="margin: 10px 0 70px 70px;">
+<li><span class="black-it">Beyond Goal Setting - Making it Happen</span><br/>
+<span class="gray-it">Moving from a goal to action requires some learned leadership tricks. Learn how an administrative scale works to deliver real leadership.</span></li>
+<li><span class="black-it">Procuring Digital Curriculum - How To</span><br/>
+<span class="gray-it">Current funding mechanisms were built for purchasing textbooks – what’s different moving to digital.</span></li>
+<li><span class="black-it">Sustainability...for Real</span><br/>
+<span class="gray-it">Discuss the issues in funding patterns and/or human resource in order to sustain the implementation of blended learning. Sample topics include
+acquisition and use of classroom devices, digital curriculum, broadband, etc.</span></li>
+<li><span class="black-it">Broken Policy Landscape</span><br/>
+<span class="gray-it">Technology is evolving faster than government policies. Seat-time, old requirements and more are getting in the way – what are innovators doing
+anyway. An understanding of what’s broken and a dose of enthusiasm.</span></li>
+<li><span class="black-it">District or School Wide Blended Learning: Planning, Implementation, Sustainability</span><br/>
+<span class="gray-it">Blended learning is proving to be an effective instructional model leading to student academic success when implemented with fidelity. Discuss new
+legislation and regulations, share experience, celebrations and lessons learned.</span></li>
+<li><span class="black-it">Equity or Liability in Resources Moving to Digital</span><br/>
+<span class="gray-it">How your district or school serves all students ensuring access to digital instructional resources, and how you structure your digital curriculum and
+content “architecture” are important.</span></li>
+<li><span class="black-it">Organizational Redesign</span><br/>
+<span class="gray-it">Share your suggestions for reorganizing the people and processes in your district to help promote communication, collaboration and innovation.</span></li>
+<li><span class="black-it">My Top 10</span><br/>
+<span class="gray-it">Name a compendium of current issues and trendy goals for leaders to be aware of today – and discuss which matter.</span></li>
+<li><span class="black-it">ADD A TOPIC</span><br/>
+<span class="gray-it">Don’t see a topic that fits with your session idea? Propose a topic that supports this track.</span></li>
+			</ul>
+
+			<h1><div class="sq2"></div>TRACK 2 - Curriculum, Instruction & Information Technology SUGGESTED TOPICS</h1>
+			<ul style="margin: 10px 0 70px 70px;">
+<li><span class="black-it">Digital Curriculum Strategy Model Architecture</span><br/>
+<span class="gray-it">Moving from a goal to action requires some learned leadership tricks. Learn how an administrative scale works to deliver real leadership.</span></li>
+<li><span class="black-it">Consumerization Influence in Education</span><br/>
+<span class="gray-it">All things digital that are converging on the classroom (devices, content, platforms) and are available for sale straight to the student. Help others
+understand the impact of learning for sale straight to the students.</span></li>
+<li><span class="black-it">Analyzing Digital Curriculum by Character, Type & Standard</span><br/>
+<span class="gray-it">Digital curriculum and content has different characteristics to it – what are those differences from the paper word by type and now by how it may meet
+the Standards.</span></li>
+<li><span class="black-it">The New Procurement & Renewals Management</span><br/>
+<span class="gray-it">Acquiring digital curriculum and content is a more sophisticated undertaking than the purchase of a textbook.</span></li>
+<li><span class="black-it">Overwhelmed? Taking Inventory</span><br/>
+<span class="gray-it">Taking inventory is the practice of knowing what you have at your disposal in order to deliver instruction.</span></li>
+<li><span class="black-it">Mapping to the Verb of the Standard</span><br/>
+<span class="gray-it">Ensuring curriculum provides students the opportunity to demonstrate the “doing” of the standard is essential.</span></li>
+<li><span class="black-it">Practical Leadership Skills</span><br/>
+<span class="gray-it">Getting educators to agree on pedagogy and also bring along the IT folks so everything is in sync can be a monumental challenge. Strategies for
+communication, collaboration, and innovation in and among different disciplines of work in the school district.</span></li>
+<li><span class="black-it">Digital Curriculum & Buy v. Build</span><br/>
+<span class="gray-it">Can you buy all the digital curriculum and content you need? Or, do you allow teachers to build their own? Each is an investment of time and resources,
+but what is the right mix? Determine what materials you have on hand, and create a framework for deciding when to purchase and when to build.</span></li>
+<li><span class="black-it">Content Management System (CMS) Issues</span><br/>
+<span class="gray-it">Content Management Systems are intended in theory to be “THE” repository of curriculum objects from which teachers can draw upon for instructional
+and assessment purposes. However, not all publishers want their content to be plugged into a generic system that Files Standards such as Open
+Cartridge or Thin Cartridge enable. Understand the issues surrounding the need to centralize content storage and combat the issue of implementin g a
+CMS and supporting or not file standards that allow consolidation.</span></li>
+<li><span class="black-it">Security</span><br/>
+<span class="gray-it">The use of cloud-based systems places student information outside the onsite storage of the school district. Changing vendors can leave behind data on
+individuals. Guide the work your district does to protect individual data before, during, and after its use by your school district.</span></li>
+<li><span class="black-it">Beating the Parental Resistance</span><br/>
+<span class="gray-it">Parents can be skeptical about new initiatives, especially those that are technology-related. Develop a strategy to successfully promote digital
+initiatives through policy, programs, and outreach to engage parents.</span></li>
+<li><span class="black-it">Broadband</span><br/>
+<span class="gray-it">Digital information must travel point to point in some method, whether through cellular, wireless, or wired connections. Planning for capacity and
+mobility are essential as access becomes a necessity to access learning systems.</span></li>
+<li><span class="black-it">ADD A TOPIC</span><br/>
+<span class="gray-it">Don’t see a topic that fits with your session idea? Propose a topic that supports this track.</span></li>
+			</ul>
+
+			<h1><div class="sq3"></div>TRACK 3 - Professional Development SUGGESTED TOPICS</h1>
+			<ul style="margin: 10px 0 70px 70px;">
+<li><span class="black-it">Journey from “Source” to “Cause”</span><br/>
+<span class="gray-it">Teachers are used to being the source of knowledge and direction for students. Transitioning to digital moves them to more of the cause of learning
+than source. How to empower teachers in this new reality.</span></li>
+<li><span class="black-it">New Definitions of Professional Development</span><br/>
+<span class="gray-it">Unleash the development of school district employees in all roles using the same tools being implemented in the classroom.</span></li>
+<li><span class="black-it">Collaboration Dynamics</span><br/>
+<span class="gray-it">Collaboration between educators is more powerful than ever. Learn ways to leverage working together with these digital tools by sharing what has
+worked for your team.</span></li>
+<li><span class="black-it">Sharing or Hording – Which One Are You? Storage Issues</span><br/>
+<span class="gray-it">Where we put our information makes a difference between keeping it to ourselves and sharing it with everyone. Combat information hoarding and
+infor mation loss through the use of centralized or cloud-based storage.</span></li>
+<li><span class="black-it">Blended Learning Models- Sharing Best Practices</span><br/>
+<span class="gray-it">How are you seeing success in your blended classrooms? Evidence supporting student success shared by practitioners and students.</span></li>
+<li><span class="black-it">Grade Differentiation – Digital Curriculum Avenues</span><br/>
+<span class="gray-it">Digital curriculum learning platforms have the ability to gate students backwards and forwards as appropriate based on their ability. This means
+artificial classification such as grade levels can become meaningless in the face of personalized learning with the new generation of learning platforms
+coming online.</span></li>
+<li><span class="black-it">Human Change Timelines</span><br/>
+<span class="gray-it">What’s your learning style? What’s a real timeline for your own digital transition? Plan PD that meets the needs of employees to cause change over a
+timeline that works for them.</span></li>
+<li><span class="black-it">ADD A TOPIC</span><br/>
+<span class="gray-it">Don’t see a topic that fits with your session idea? Propose a topic that supports this track.</span></li>
+			</ul>
+
+			<h1><div class="sq4"></div>TRACK 4 - Industry Dynamics SUGGESTED TOPICS</h1>
+			<ul style="margin: 10px 0 70px 70px;">
+<li><span class="black-it">Gamification</span><br/>
+<span class="gray-it">Games have always been known for their instruction potential. Today’s gaming technologies are making this potentiality a reality across all subject
+areas.</span></li>
+<li><span class="black-it">Piloting Digital Curriculum – Best Practices</span><br/>
+<span class="gray-it">Piloting new curriculum in the fast-moving new digital publishing arena is tricky. The year-long consideration of textbooks looks infinite compared to
+the shorter trials now. Share how your district utilized a pilot program method and the best tips for making the process a successful curriculum vetting
+program.</span></li>
+<li><span class="black-it">Mixing Types of Digital Curriculum Holistically</span><br/>
+<span class="gray-it">Teachers have always cherry-picked the best instructional objects to use in their teaching. Using digital curriculum is no different, but what you select
+for curriculum and the platforms on which they are mixed can make all the difference.</span></li>
+<li><span class="black-it">Tool Apps</span><br/>
+<span class="gray-it">Tool apps are the place where teachers can have students communicate and collaborate in the learning process. Discuss strategies for encouraging the
+use of the tool apps your district.</span></li>
+<li><span class="black-it">Mobilization & Digitization</span><br/>
+<span class="gray-it">Mobile device utilization for information access and manipulation is outpacing the use of more place-based computing (think desktop and laptop
+devices). Tips for leveraging the growing ubiquity of mobile devices amongst students and teachers for greater learning.</span></li>
+<li><span class="black-it">Wearables</span><br/>
+<span class="gray-it">What’s the future hold with wearable devices? Will these help or hinder schools and learning?</span></li>
+<li><span class="black-it">Digital Testing</span><br/>
+<span class="gray-it">Are you ready for digital testing, whether state-mandated or locally considered assessments? Discuss best practices and tips to prepare for the need to
+test large groups of students simultaneously and how you are addressing determined barriers to success.</span></li>
+<li><span class="black-it">Hardware Shifts – Surviving BYOD or 1-to-1</span><br/>
+<span class="gray-it">Everyone has their own device of some form (tablet, laptop, mobile or wearable). How is your district overcoming the variety of devices, operating
+systems, and tool preference? Gain understanding of the strategy for allowing personal choice or uniformity to allow for the utilization of
+digital curriculum and content.</span></li>
+<li><span class="black-it">ADD A TOPIC</span><br/>
+<span class="gray-it">Don’t see a topic that fits with your session idea? Propose a topic that supports this track.</span></li>
+			</ul>
+
+			<h2 style="color: gray; font-size: 35px; margin: 20px 0 30px 0;">
+	  		Speaker Expectations
+			</h2>
+
+			<p><span class="green-it">First</span> – sign up! <span style="color: red;">Note: Acceptance of new speakers is now closed for 2015</span></p><br/>
+
+			<p><span class="green-it">Second</span> – pick your topic. We hope it’s an adventure you’re taking, but something you are already an expert in is also okay – especially if you have an example or real-life experience to share. Include a description in your application.</p><br/>
+
+			<p><span class="green-it">Third</span> – write a short description of your sessions and provide content if you would like. You can submit an article, a document or video-lecture link as an option for attendees to review in advance. It could be a simple word doc with a bunch of links to articles, or a bullet list of ideas or some statement you want the educator-students to investigate on their own in their own environment to later enrich the session discussion. If you plan to submit any content, please send in MS Word or equivalent so that we can adapt it with your name, the final session time, and post in HTML online or as a PDF for download. This is the PREWORK attendees can do before the conference. We’ll be in contact with you once you’ve been selected as a speaker.</p><br/>
+
+			<p><span class="green-it">Fourth</span> - Each education speaker will have a total of 40 minutes in which to lead a learning session. Each session should follow the standard format of:<br/><br/>
+				<p style="margin-left: 70px;"><span class="blue-it">Speaker Leadership</span> - Speak about the topic and lead the group for part of the session.</p><br/>
+				<p style="margin-left: 70px;"><span class="blue-it">Project and/or Discussion</span> - Use the rest of the session to facilitate discussion on the topic amongst participants. Pose questions, encourage sharing, ask for what the counter view might be, or have the participants break into small groups to do exercises. Discussion will facilitate deeper learning and provide opportunity to network. As the session speaker, you can summarize at the end.</p><br/>
+
+			<p><span class="green-it">Fifth</span> – Stay around for the day so that you can be part of the Panel of leaders of that Track happening just before the Reception.</p><br/>
+
+			
+
+			</div>
+
+			
+
+
+</div>
+
+
+
+
+<!-- </div> -->
+
+</div>
+
+</li>
+
+</ul>
+
+<div style="height: 200px;"></div>
+	
+<div id="bottom-graphic">
+<img src="../repository/lc-box-cloud.png"/>
+<div class="lc-landing-box-row"></div>
+</div>
+
+<div style="clear: both;"></div>
+
+
+
+<script>
+		
+		var offset_top = 0;
+		jQuery(window).scroll(function() {
+			offset_top = $(window).scrollTop()
+			$('#eventstabs').css('top', offset_top);
+		});
+	
+		$(window).load( function() {
+		//$(document).ready(function(){
+			$("#tab7").addClass("active");
+		});
+	
+</script>
+

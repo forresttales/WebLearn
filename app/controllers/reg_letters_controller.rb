@@ -70,7 +70,21 @@ class RegLettersController < ApplicationController
   private
 
     def reg_letter_params
-      params.require(:reg_letter).permit(:email, :name_title, :name_affiliation)
+      params.require(:reg_letter).permit(
+                                          :email, 
+                                          :name_title, 
+                                          :name_affiliation,
+                                          :prof_title,
+                                          :name_first,
+                                          :name_last,
+                                          :pub_priv,
+                                          :address,
+                                          :city,
+                                          :state,
+                                          :zip,
+                                          :country,
+                                          :phone
+                                        )
     end
   
 end
