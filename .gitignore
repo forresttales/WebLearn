@@ -15,6 +15,6 @@
 /log/*.log 
 /tmp
 /test
-/config/database.yml
-/config/environments/development.rb
-/config/environments/production.rb
+# /config/database.yml
+# /config/environments/development.rb
+# /config/environments/production.rb
