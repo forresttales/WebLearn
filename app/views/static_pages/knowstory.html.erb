@@ -25,7 +25,7 @@
 			color: #666;			
 		}
 		p#k-deck {
-			font-family: KlavikaLight;
+			font-family: 'KlavikaLight';
 			font-size: 18pt;
 			font-weight: 400;
 			line-height: 1.2em;
@@ -41,59 +41,65 @@
 			color: #C4740C;
 						
 		}
+		.static-pages-knowstory .padding-left-8 {
+			padding-left: 8px;
+		}
+		.static-pages-knowstory {
+			width: 1200px; 
+			margin-right: auto; 
+			margin-left: auto; 
+			background: #fff; 
+			min-height: 800px;
+		}
+
+
 		
 	</style>
 
+	<%= render 'share/backtotop' %>
 
-	<div style="width: 1200px; margin-right: auto; margin-left: auto; background: #fff; min-height: 800px;">
-	    
-		<header>		
-								
-			<%= render 'share/backtotop' %>
-			
-			<div class="table-main">			
-				<div class="row">
-					<div class="cell-100">
+	<div class="static-pages-knowstory">
+		<div class="table-main">			
+			<div class="row">
+				<div class="cell-100"></div>
+				<div class="cell-800 padding-left-8">
+					<div class="table-main">
+						<div class="row">
+							<div class="cell-650">
+								<img src="../assets_knowstory/logo-knowstory-1-w300-h102.png" alt="logo-knowstory-1-w300-h102.png">
+							</div>			
+						</div>
+						<div class="row">
+							<div class="cell-650" style="padding-left: 8px;">
+								<strong class="sub">Student, Teacher & School Social Hub for Digital Learning Content</strong>
+							</div>			
+						</div>							
 					</div>
-					<div class="cell-800" style="padding-left: 8px;">
-						<div class="table-main">
-							<div class="row">
-								<div class="cell-650">
-									<img src="../assets_knowstory/logo-knowstory-1-w300-h102.png" alt="logo-knowstory-1-w300-h102.png">
-								</div>			
-							</div>
-							<div class="row">
-								<div class="cell-650" style="padding-left: 8px;">
-									<strong class="sub">Student, Teacher & School Social Hub for Digital Learning Content</strong>
-								</div>			
-							</div>							
+				</div>
+				<div class="cell-100%">
+					<div class="table-main">
+						<div class="row">
+							<div class="cell-100percent">
+			 						<!-- link_to image_tag(“/assets/EdMatchUp_logo.png”, :class=>’′), :url =>{:controller=> ‘’,:action=>’’} -->															
+								<div id="edmatchuplogo">
+									
+									<!-- link_to image_tag("../repository/EdMatchUp_logo.png", :alt => 'EdMatchUp_logo.png'), edmatchups_path  -->										
+									<!-- <img src="../repository/EdMatchUp_logo.png" alt="EdMatchUp_logo.png"> -->																									
+								</div>							
+					  		</div>
+						</div>
+						<div class="row">
+							<div class="cell-100percent">
+								<div align="center">
+									<!-- <img src="../repository/image_coming_soon_8k.png" alt="image_coming_soon_8k.png"> -->
+								</div>							
+					  		</div>							
 						</div>
 					</div>
-					<div class="cell-100%">
-						<div class="table-main">
-							<div class="row">
-								<div class="cell-100percent">
-				 						<!-- link_to image_tag(“/assets/EdMatchUp_logo.png”, :class=>’′), :url =>{:controller=> ‘’,:action=>’’} -->															
-									<div id="edmatchuplogo">
-										
-										<!-- link_to image_tag("../repository/EdMatchUp_logo.png", :alt => 'EdMatchUp_logo.png'), edmatchups_path  -->										
-										<!-- <img src="../repository/EdMatchUp_logo.png" alt="EdMatchUp_logo.png"> -->																									
-									</div>							
-						  		</div>
-							</div>
-							<div class="row">
-								<div class="cell-100percent">
-									<div align="center">
-										<!-- <img src="../repository/image_coming_soon_8k.png" alt="image_coming_soon_8k.png"> -->
-									</div>							
-						  		</div>							
-							</div>
-						</div>
-					</div>
-				</div>					
-			</div>	
+				</div>
+			</div>					
+		</div>	
 		 					
-		</header>		
 
 
 
@@ -199,15 +205,5 @@
 		</section>
 	</div>
 	
-	<div style="height: 30px;"></div>
-	<div style="height: 30px;"></div>
-
-
-
-
-
-
-
-
-	
+	<div style="height: 60px;"></div>
 

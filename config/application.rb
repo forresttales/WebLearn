@@ -70,7 +70,7 @@ module Weblearn
     
     #config.assets.initialize_on_precompile = false    
     config.assets.enabled = true
-    config.assets.precompile += ['jquery.validate.js', 'reg_events.js', 'jqModal.js', 'jquery-dropdown-dot.js']
+    config.assets.precompile += ['jquery.validate.js', 'reg_events_new.js', 'jqModal.js', 'jquery-dropdown-dot.js']
 
     #config.assets.paths << "#{Rails.root}/vendor/assets/javascripts"
     
