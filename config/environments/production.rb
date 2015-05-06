@@ -96,8 +96,8 @@ Weblearn::Application.configure do
     :address              => "smtp.live.com",
     :port                 => 587,
     :domain               => 'mail.live.com',
-    :user_name            => 'forresttales@hotmail.com',
-    :password             => 'wolftalk666',
+    :user_name            => '',
+    :password             => '',
     :authentication       => 'plain',
     :enable_starttls_auto => true  
   }
