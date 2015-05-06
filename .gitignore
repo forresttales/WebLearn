@@ -15,25 +15,4 @@
 /log/*.log 
 /tmp
 /test
-/public
-app/assets 
-db
-lib
-# /public/repository
-# /public/journal
-# /public/fonts
-# /public/altgraphic
-# /public/assets
-# /public/journalscripts
-# /public/pdfs
 /config/database.yml
-/config/environments/production.rb
-
-
-
-
-
-
-
-
-
