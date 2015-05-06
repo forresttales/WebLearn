@@ -8,16 +8,14 @@ class Event1pagesController < ApplicationController
   
   def index
     
-    #@reg_event_itins = RegEventItin.all
-    @reg_event_itins = RegEventItin.find(:all, :order => "order_display ASC")
-    
-    gon.cnt = @reg_event_itins.count
-
-    respond_to do |format|
-      format.html
-      format.js
-    end
-
+    # #@reg_event_itins = RegEventItin.all
+    # # @reg_event_itins = RegEventItin.find(:all, :order => "order_display ASC")
+    # @reg_event_itins = RegEventItin.order("order_display ASC")
+    # gon.cnt = @reg_event_itins.count
+    # respond_to do |format|
+      # format.html
+      # format.js
+    # end
         
   end
 

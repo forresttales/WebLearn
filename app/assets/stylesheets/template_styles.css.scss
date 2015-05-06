@@ -1,7 +1,89 @@
+
+    .tmpl-container-1-column {
+    }
+    .tmpl-container-2-column {
+      margin-bottom: 0px;
+      margin-top: 0px;
+      position: relative;
+      width: 643px;
+    }
+    .tmpl-container-3-column {
+      margin-bottom: 0px;
+      margin-top: 0px;
+      position: relative;
+      width: 970px;
+    }
+    .tmpl-display-inline-block {
+      display: inline-block;
+    }
+    .tmpl-border-top {
+      border-top: 1px solid #e5e5e5;
+    }
+    .tmpl-border-bottom {
+      border-bottom: 1px solid #e5e5e5;
+    }
+    .tmpl-margin-left {
+      margin-left: 100px;
+    }
+    .tmpl-margin-left-2 {
+      margin-left: 50px;
+    }
+    .tmpl-text-decoration-none {
+      text-decoration: none;
+    }
     .tmpl-link:hover {
       text-decoration: none;
+      underline: none;
       opacity: .6;
     }
+    .tmpl-hidden {
+      display: none !important;
+      visibility: hidden !important           
+    }
+    .tmpl-carousel-header {
+      float: right;
+      position: relative;
+      width: 600px;
+      border-left: none;
+      text-align: right;
+      top: -3px;
+    }
+    .tmpl-carousel-header a {
+      position: relative;
+      top: -23px;
+      z-index: 2;
+      right: 40px;
+    }
+    .tmpl-carousel-header a:hover {
+      text-decoration: none;
+      underline: none;
+      color: #fff;
+    }
+    .tmpl-carousel-header span {
+      font-family: 'KlavikaMedium',Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 16px;
+      color: #fff;
+      right: 0;
+      top: 2px;
+      padding: 0;
+    }
+    .tmpl-carousel-header span:hover {
+      color: #fff;
+    }
+    .tmpl-carousel-headlines {
+      float: right;
+      left: 0;
+      margin-bottom: 25px;
+      padding-top: 30px;
+      position: absolute;
+      width: 600px;
+    }    
+    .tmpl-carousel-headlines a:hover {
+      text-decoration: none;      
+      underline: none;
+    }    
+    
     .tmpl-div-1 {
       padding-top: 0px;
       position: relative;
@@ -10,9 +92,9 @@
     }
     .tmpl-div-2a {
       position: relative;
-      padding-left: 4px;  
+      padding-left: 8px;  
       padding-top: 4px;
-      height: 184px;
+      // height: 184px;
     }
     .tmpl-div-2a-1a {
       position: absolute;
@@ -28,46 +110,28 @@
       border-left: none;
       width: 300px;
       text-align: center;
+      
     }
     .tmpl-div-2a-1b-1 span {
-      font-family: 'Quattrocento', Arial, Helvetica, sans-serif;
-      // text-transform: uppercase;
-      font-size: 16px;  
+      font-family: 'KlavikaMedium',Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 16px;
       color: #fff;
       padding-left: 20px;
       padding-right: 20px;
       position: relative;
-      top: -24px; 
+      top: -22px; 
     }
     .tmpl-div-2a-1b-1 span:hover {
       text-decoration: underline;
       color: #fff;
     }
     .tmpl-div-2b {
-      font-size: 20px;
-      line-height: 20px;
-      color: #000;
-      font-family: 'Quattrocento',Arial, Helvetica, sans-serif;
+      width: 300px;
       margin-top: 0px;
-      margin-left: 0px;
-      width: 290px;
+      margin-left: 8px;
       position: relative;
-      height: auto;
     }
-    .tmpl-div-2b:hover {
-      text-decoration: none;
-    }
-    .tmpl-div-2b-1 {
-      line-height: 16px;
-      white-space: nowrap;
-      text-transform: uppercase;
-      font-family: 'KlavikaMedium', Arial, Helvetica, sans-serif;
-      font-size: 12px;
-    }
-    .tmpl-div-2b-1:hover {
-      text-decoration: underline;
-    }
-    
     .tmpl-kol1 {
       width: 955px;
       position: relative;
@@ -86,13 +150,72 @@
       display: inline-block;
       vertical-align: top;
     }
-    
-    
+    .tmpl-subtitle-1 {
+      font-family: 'KlavikaBlack',Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      line-height: 18px;
+      color: #333;
+    }
+    .tmpl-subtitle-2 {
+      font-family: 'KlavikaLight',Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 16px;
+      color: #444;
+      // font-family: 'KlavikaMedium',Arial, Helvetica, sans-serif;
+      // font-size: 14px;
+      // line-height: 14px;
+      // color: #888;
+    }
+    .tmpl-author {
+      font-family: "KlavikaMedium",Arial,Helvetica,sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+      color: #000;
+      text-transform: uppercase;
+      // white-space: nowrap;      
+    }
+    .tmpl-vdivider-1 {
+      height: 0px;
+    }    
+    .tmpl-vdivider-2 {
+      height: 0px;
+    }    
+    .tmpl-vdivider-3 {
+      height: 0px;
+    }    
+
+    .tmpl-subtitle-1-carousel {
+      font-family: 'KlavikaBlack',Arial, Helvetica, sans-serif;
+      font-size: 30px;
+      // font-weight: 700;
+      line-height: 28px;
+      color: #333;
+    }
+    .tmpl-subtitle-2-carousel {
+      font-family: 'KlavikaLight',Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      line-height: 20px;
+      color: #444;
+    }
+    .tmpl-author-carousel {
+      font-family: "KlavikaMedium",Arial,Helvetica,sans-serif;
+      font-size: 14px;
+      line-height: 14px;
+      color: #000;
+      text-transform: uppercase;
+    }
+    .tmpl-vdivider-1-carousel {
+      height: 0px;
+    }    
+    .tmpl-vdivider-2-carousel {
+      height: 0px;
+    }    
+
     .tmpl-design {
       border-top: 30px solid #5E085D;
     }
-    .tmpl-spotlight {
-      border-top: 30px solid #9DC786;      
+    .tmpl-event-news {
+      border-top: 30px solid #37633a;
     }
     .tmpl-ideas {
       border-top: 30px solid #A6A6A6;
@@ -100,35 +223,58 @@
     .tmpl-innovation {
       border-top: 30px solid #568E96;     
     }
-    .tmpl-event-news {
-      border-top: 30px solid #37633a;
-    }
-  .tmpl-tactics {
-      border-top: 30px solid #214325;
-    }
-  .tmpl-perspective {
+    .tmpl-people {
+      border-top: 30px solid #3AAB48;
+    }    
+    .tmpl-perspective {
       border-top: 30px solid #1f7c82;
     }
-    
+    .tmpl-research {
+      border-top: 30px solid #808080;
+    }    
+    .tmpl-spotlight {
+      border-top: 30px solid #9DC786;      
+    }
+    .tmpl-strategy {
+        border-top: 30px solid #214325;
+    }
+    .tmpl-tactics {
+      border-top: 30px solid #214325;
+    }
+    .tmpl-thoughts {
+      border-top: 30px solid #37633A;
+    }    
+
+    .tmpl-design-carousel {
+      border-top: 30px solid #5E085D;
+    }    
     .tmpl-event-news-carousel {
       border-top: 30px solid #41b737;
     }
-    .tmpl-thoughts-carousel {
-      border-top: 30px solid #37633A;
-    }
-    .tmpl-research-carousel {
-      border-top: 30px solid #568E96;
-    }
-    .tmpl-strategy-carousel {
-        border-top: 30px solid #214325;
-    }
-    .tmpl-tactic-carousel {
-        border-top: 30px solid #214325;
+    .tmpl-ideas-carousel {
+      border-top: 30px solid #A6A6A6;
     }
     .tmpl-innovation-carousel {
       border-top: 30px solid #41b737;     
     }
-    .tmpl-idea-carousel {
-      border-top: 30px solid #A6A6A6;
+    .tmpl-people-carousel {
+      border-top: 30px solid #3AAB48;
+    }    
+    .tmpl-perspective-carousel {
+      border-top: 30px solid #1f7c82;
     }
-
+    .tmpl-research-carousel {
+      border-top: 30px solid #568E96;
+    }
+    .tmpl-spotlight-carousel {
+      border-top: 30px solid #9DC786;      
+    }
+    .tmpl-strategy-carousel {
+        border-top: 30px solid #214325;
+    }
+    .tmpl-tactics-carousel {
+        border-top: 30px solid #214325;
+    }
+    .tmpl-thoughts-carousel {
+      border-top: 30px solid #37633A;
+    }

@@ -1,516 +1,233 @@
 
 
-<style>
-	
-	.note {
-		clear: both;
-    margin-bottom: 100px;
-    position: relative;
-    top: 200px;
-	}
-	
-	#lc-landing {
-		
-	}	
-		
-	#lc-landing #page {
-	  width: 800px;
-	  /*margin-left: 235px;*/
-	 	  
-	  margin-left: auto;
-	  margin-right: auto;
-	  
-	  
-	  /*margin-right: auto;*/  
-	  
-	}
-	
-	#lc-landing #subscribe-box  {
-	float: right; 
-	margin-left: 20px;
-	}
-	
-	#lc-landing #subscribe-box .form {   
-		width: 255px;
-		height: 289px;
-		-moz-border-radius: 4px;
-		-webkit-border-radius: 4px;
-		border-radius: 4px; /* border radius */
-		-moz-background-clip: padding;
-		-webkit-background-clip: padding-box;
-		background-clip: padding-box; /* prevents bg color from leaking outside the border */
-		background-color: #eaeaea; /* layer fill content */
-		-moz-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
-		-webkit-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
-		box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
-	}
-	
-	#lc-landing #subscribe-box .label { 
-		height: 35px;
-	    width: 240px;
-		background-color: #414141; /* layer fill content */
-		-moz-border-radius: 4px 4px 0 0;
-		-webkit-border-radius: 4px 4px 0 0;
-		border-radius: 4px 4px 0 0; /* border radius */
-		-moz-background-clip: padding;
-		-webkit-background-clip: padding-box;
-		background-clip: padding-box; /* prevents bg color from leaking outside the border */
-		-moz-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
-		-webkit-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
-		box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
-		}
-	
-	#lc-landing #subscribe-box h3 {  
-		color: #ebeff1; /* text color */
-		/*KlavikaMedium*/
-		font-family: KlavikaMedium;
-		/*font-family: "Quattrocento Sans", sans-serif;*/
-		font-size: 15px;
-		margin:0;
-		padding-left: 15px;
-	    padding-top: 15px;
-		}
-	#lc-landing #subscribe-box img {
-	  float:left;
-	  position: relative;
-	  left: 116px;
-	}
-	
-	
-	
-	/*#lc-landing .services-ov {
-	    background-clip: padding-box;
-	    background-color: #999999;
-	    border: 1px solid #999999;
-	    border-radius: 4px 4px 4px 4px;
-	    height: 22px;
-	    margin-left: auto;
-	    margin-right: auto;
-	    margin-top: 30px;
-	    width: 200px;
-	}
-	
-	#lc-landing .services-ov a:link {
-	    color: #F2F2F2;
-	    font-family: "Quattrocento Sans",sans-serif;
-	    font-size: 13px;
-	    padding: 0 8px 8px 7px;
-	    text-decoration: none;
-	}*/
-	
-	
-	
-	#lc-landing .services-ov {
-	    background-clip: padding-box;
-		
-		
-	  width: 232px;
-		height: 22px;
-		border: 1px solid #999;
-		-moz-border-radius: 4px;
-		-webkit-border-radius: 4px;
-		border-radius: 4px;
-		-moz-background-clip: padding;
-		-webkit-background-clip: padding-box;
-		background-clip: padding-box;
-		background-color: #999;
-		margin-left: auto;
-	    margin-right: auto;
-	    margin-top: 30px;
-	}
-	
-	#lc-landing .services-ov a:link {
-	    /*padding: 0 8px 8px 7px;*/
-	   	
-		color: #f2f2f2;
-		font-family: "Quattrocento Sans", sans-serif;
-		font-size: 13px;
-		text-decoration: none;
-		padding: 2px 2px 3px;	
-		position: abolute;
-		margin-left: 8px;
-	}
-	
-	
-	
-	
-	.services-ov a:hover {color: #f2f2f2; text-decoration: none; background-color: #6a6a6a;}
-	.services-ov a:active {color: #f2f2f2; text-decoration: none; background-color: #535353; /* layer fill content */
-		-moz-box-shadow: inset 1px 2px 0 rgba(3,4,4,.4); /* inner shadow */
-		-webkit-box-shadow: inset 1px 2px 0 rgba(3,4,4,.4); /* inner shadow */
-		box-shadow: inset 1px 2px 0 rgba(3,4,4,.4); /* inner shadow */}
-	.services-ov a:visited {color: #f2f2f2; text-decoration: none;}
-	
-	#lc-landing p {
-		color: #333;
-		/*font-family: "Quattrocento";*/
-		font-family: KlavikaLight;
-		font-size: 13px;
-		width: 800px;
-		line-height: 1.2em;	
-	  	font-size: 1.15em;
-		
-		}
-	
-	#lc-landing a {
-		color: #C4740C;
-		}
-	
-	#lc-landing .table p {
-		color: #333;
-		/*font-family: "Quattrocento";*/
-		font-family: KlavikaLight;
-		font-size: 13px;
-		/*width: 400px;*/
-		line-height: 1.2em;	
-	  	font-size: 1.15em;
-		}
-	
-	#lc-landing ul li {
-		color: #000;
-		
-		font-family: msyhb;
-		
-		/*font-family: KlavikaMedium;*/		
-		/*font-family: "Quattrocento";*/	
-		font-size: 20px;
-		margin-left: 30px;
-		font-weight: 200;
-		line-height: 1.2em;		
-		}
-		
-	#lc-landing .page-title {
-	  font-size: 35px;
-	  color: #808080;
-	  margin-left: auto;
-	  margin-right: auto;
-	  width: 580px;
-	}
-	
-	#lc-landing .page-title-centered {
-	  font-size: 40px;
-	  color: #808080;
-	  margin-left: auto;
-	  margin-right: auto;
-	  width: 580px;
-	}
-	
-	#lc-landing .center {
-		text-align: center;
-		margin-right: 17%;
-	}
-	
-	#lc-landing .sub-title {
-	  font-size: 30px;
-	  color: #34633A;
-	  margin-left: auto;
-	  margin-right: auto;
-	  /*width: 500px;*/  
-	  width: 470px;
-	  
-	}
-	
-	#lc-landing .green-this {
-	    color: #41b737;
-		font-style: bold;
-		}
-		
-	#lc-landing .bold-close {	
-		color: #34633a;
-		size: 22px;
-		font-weight: bold;
-		}
-	
-	
-	#lc-landing #bottom-graphic img {
-	  bottom: 220px;
-	  position: relative;
-	  float:left;
-	}
-	
-	/*#lc-landing .box-row {*/	
-	.lc-landing-box-row {
-	  background: url(../repository/lc-boxes.png) white repeat-x;
-	  height: 59px;
-	  margin-left: 440px;
-	  margin-top: 30px;
-	}
-	
-	.spacer {
-		height: 20px;
-	}
-			
-	#lc-landing table tr td {
-		vertical-align: top;
-	}			
-	
-	.city-color {
-		color: #1B237A;	
-	}
+	<%= render 'share/backtotop_2' %>
 
+	<ul class="lc-inline" style="width: 1200px; margin: 0 auto; padding-right: 20px; vertical-align: top;">
+		<li style="margin: 0 auto; padding-right: 20px; vertical-align: top; display: inline-block;">
+			<%= render 'share/eventpages_tabs' %>
+		</li>
+		<li style="margin: 0 auto; padding-right: 20px; vertical-align: top; display: inline-block;">
+			<div id="tab-container">
+				<div id="page">
+					<div class="head">
+    					<img src="../event_pages/gather-banner.jpg" alt="gathering.png">
+						<div style="height: 20px;"></div>
+						<h1 style="color:#603913;">The Annual "Un-Conference" for K12 District Leaders</h1>
+      					<h3 style="color:#3C2415; font-family: KlavikaRegular;">
+							Join us in Albuquerque, New Mexico for the 2nd Annual Gathering and National Awards Event. 
+							This 1 ½-day event is like no other conference you’ll attend—real networking with other education executives. 
+							Hear important thought leaders and authors. Listen as districts compete with short innovations talks and be part of choosing the winners. 
+							Gain needful perspective on solving tech and curriculum complexities while transitioning to digital content and testing.
+						</h3>
+						<table>
+							<tr>
+								<td class="rust-square" style="padding-left: 10px;">
+									The average classroom has:
+									<ul class="display-list">
+										<li><span>5-50+Apps</span></li>
+										<li><span>2-20+ Membership Sites (including District systems)</span></li>
+										<li><span>5-100+ Non-Member Sites</span></li>
+									</ul>
+								</td>
+								<td>&nbsp;&nbsp;&nbsp;</td>
+								<td>
+									<p style="color:#000;">Networking – <span style="color:#B45231;">Join peers also concerned with the transition to digital curriculum now that 50% of U.S. students are using digital devices in class.</span></p>
+									<br/>
+									<p style="color:#000;">Educational – <span style="color:#603913;">Special briefings and discussions led by other educators on key technology and digital curriculum topics.</span></p>
+									<br/>
+									<p style="color:#000;">Spark creativity and innovation – <span style="color: #febd30;">Learn from other education executives what the issues are and solutions they are trying.</span></p>
+									<br/>
+									<p style="color:#000;">Celebrate – <span style="color: #603913;">Digital Curriculum Strategy Survey honored districts in an Awards Ceremony for their strategy and tactics with digital curriculum and technology.</span></p>
+								</td>
+							</tr>
+						</table>
+						<table style="margin-top: 40px;">
+							<tr>
+								<td>
+									<h3 style="text-align: center; color:#B45231;">Meet Peer Leaders and<br/> Participate in Discussions<br/> About Transitioning to Digital Curriculum.</h3>
+									<p style="color: #000;">
+										This national retreat-style event is a one of a kind meeting that is truly a discussion amongst peers where you can hear what other districts are 
+										dealing with and participate with questions and comments. Education executives from North Carolina, California, Texas, New Jersey, Massachusetts, 
+										Illinois, Colorado, Minnesota and Michigan are already registered to attend. Invited executives include:
+									</p>
+									<ul style="margin-left: 25px; color:#B45231;">
+										<li><span style="color: #000;">Superintendents</span></li>
+										<li><span style="color: #000;">District Curriculum Directors</span></li>
+										<li><span style="color: #000;">Chief Academic Officers</span></li>
+										<li><span style="color: #000;">District & School Curriculum &
+										Instructional Designers</span></li>
+										<li><span style="color: #000;">CIOs, CTOs, Directors of Technology</span></li>
+										<li><span style="color: #000;">Instructional Technologists &
+										Tech Administration Specialists</span></li>
+										<li><span style="color: #000;">Professional Development Staff</span></li>
+										<li><span style="color: #000;">Library and Media Specialists</span></li>
+										<li><span style="color: #000;">Principals</span></li>
+										<li><span style="color: #000;">State Department of Education Executives</span></li>
+										<li><span style="color: #000;">School Board Members</span></li>
+									</ul>
+								</td>
+								<td>&nbsp;&nbsp;&nbsp;</td>
+								<td style="vertical-align: top;">
+									<h3 style="text-align: center; color:#B45231;">About the Event</h3>
+									<p style="color: #000;">The first day will be a historic and educational excursion and then a group dinner. Over dessert around campfires, there will be storytelling about the old west from a Native American Indian and we will discuss how the past in the native old west affected us, and how the past practices in schools have been shaping current practices with digital curriculum—and what needs to change.
+										<br/><br/>
+										Day two will feature discussions shaping the future. Topics hour-by-hour will be about new file standards, transitioning to digital curriculum and the buy-or-build issue, professional development changes, policy issues, and the impacts of tech choices on curriculum flexibility. There will also be Innovation Presentations from leading schools from across the nation. Award winning and transformative education leaders will be on hand to lead these key discussions.<br/><br/>
+										We’ve also invited two special guest speakers, to be announced, on topics that are very timely nationally.
+										<br/><br/>
+										The day ends with an Awards Reception for the winners of the annual Digital Curriculum Strategy Award.
+									</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div style="height: 8px;"></div>
+					<div style="width: 100%;">
+		   				<div style="width: 410px; text-align: right; float: right;">
+							<span style="font-size: 28px; color:#603913;">Gathering &amp; National Awards Event</span>
+						</div>
+						<div style="clear: both;"></div>
+						<div style="height: 20px;"></div>
+						<div style="text-align: right; float: right;">
+			    			<span style="font-size: 24px; color:#B45231;">26-27 October: Sunday &amp; Monday</span>
+			    			<div style="height: 8px;"></div>
+							<span style="font-size: 24px; color:#B45231;"><em>Hosting Hotel: </em></span>&nbsp;<span style="font-size: 24px; color:#8A2A0A;">Hyatt Regency Tamaya</span>
+							<br/>
+							<span style="font-size: 24px; color:#8A2A0A;">1300 Tuyuna Trail</span>
+							<br/>
+							<span style="font-size: 24px; color:#8A2A0A;">Santa Ana Pueblo, NM 87004</span>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+					<div style="height: 4px;"></div>
+	    			<div class="main">
+	      				<img src="../event_pages/albu-balloon.jpg" class="alb-2">
+				      	<img src="../event_pages/albu-house.jpg" style="float: left; margin-top: 80px; width: 421px;">
+				      	<img src="../event_pages/albu-arches.jpg" style="width:421px; margin-top: 19px; float:left;">
+				      	<img src="../event_pages/albu-camp.jpg" style="float:right; width:320px; margin:-55px 0 0">
+				      	<img src="../event_pages/albu-mtns.jpg" style="width:320px; margin:25px 0; float:right;">
+				  	</div>
+				    <div class="info"></div>
+		    		<div class="agenda">
+		      			<h2 style="text-align: center;">AGENDA</h2>
+		      			<h2 stlye="padding: 3px 0;">Agenda - Day 1</h2>
+		      			<table>
+		        			<tr>
+		          				<td>3:00—5:00 p.m.</td>
+		          				<td>Kickoff Welcome at Resort Stables</td>
+		        			<tr>
+		          				<td>5:00—7:00</td>
+		          				<td>Chuck Wagon Dinner & Rodeo</td>
+		        			</tr>
+		        			<tr>
+		          				<td>8:00—</td>
+		          				<td>Native American Storytelling Around Campfires with Smores & Desserts</td>
+		        			</tr>
+		      			</table>
+		      			<h2 stlye="padding: 3px 0;">Agenda - Day 2</h2>
+		      			<table>
+		        			<tr>
+		          				<td>7:30 a.m.</td>
+		          				<td>Breakfast</td>
+		        			</tr>
+		        			<tr>
+		          				<td>8:00—8:30</td>
+		          				<td>Welcome, Overview & Introductions</td>
+		        			</tr>
+		        			<tr>
+		          				<td>8:30—9:30</td>
+		          				<td>Guest Speaker & Questions</td>
+		        			</tr>
+		        			<tr>
+		          				<td>9:30-9:45</td>
+		          				<td>Industry Guest</td>
+		        			</tr>
+		        			<tr>
+		          				<td>9:45—10:00</td>
+		          				<td>Guest Presentation & Discussion #1</td>
+		        			</tr>
+		        			<tr>
+		          				<td>10:00—10:15</td>
+		          				<td>Guest Presentation & Discussion #2</td>
+		        			</tr>
+		        			<tr>
+		          				<td>10:15—10:30</td>
+		          				<td>BREAK</td>
+		        			</tr>
+		        			<tr>
+		          				<td>10:30—10:45</td>
+		          				<td>Guest Presentation & Discussion #3</td>
+		        			</tr>
+		        			<tr>
+		          				<td>10:45-11:00</td>
+		          				<td>Guest Presentation & Discussion #4</td>
+		        			</tr>
+		        			<tr>
+		          				<td>11:00—11:15</td>
+		          				<td>Industry Guest</td>
+		        			</tr>
+		        			<tr>
+		          				<td>11:15-11:30</td>
+		          				<td>Guest Presentation & Discussion #5</td>
+		        			</tr>
+		        			<tr>
+		          				<td>11:30-11:45</td>
+		          				<td>Guest Presentation & Discussion #6</td>
+		        			</tr>
+		        			<tr>
+		          				<td>11:45-12:00</td>
+		          				<td>Industry Guest</td>
+		        			</tr>
+		        			<tr>
+		          				<td>12:00-12:45 p.m.</td>
+		          				<td>LUNCH</td>
+					        </tr>
+					        <tr>
+					          	<td>12:45-1:00</td>
+					          	<td>Industry Guest</td>
+					        </tr>
+					        <tr>
+					          	<td>1:00-1:45</td>
+					          	<td>Student Data Privacy Panel</td>
+					        </tr>
+					        <tr>
+					          	<td>1:45-2:30</td>
+					          	<td>Student Privacy Bill of Rights Exercise</td>
+					        </tr>
+					        <tr>
+					          	<td>2:30-3:00</td>
+					          	<td>Concluding Remarks - KnowStory Overview</td>
+					        </tr>
+					        <tr>
+					          	<td>3:00-3:30</td>
+					          	<td>National Awards Ceremony</td>
+					        </tr>
+					        <tr>
+					          	<td>3:30-4:00</td>
+					          	<td>Award Recipient Reception</td>
+					        </tr>
+					        <tr>
+					          	<td>4:00 p.m.</td>
+					          	<td>Conclusion of Event</td>
+					        </tr>
+					 	</table>
+		    		</div>
+				</div>
+			</div>
+		</li>
+	</ul>
 
+	<div style="height: 200px;"></div>
 	
-</style>	
+	<div id="bottom-graphic">
+		<img src="../repository/lc-box-cloud.png"/>
+		<div class="lc-landing-box-row"></div>
+	</div>
 	
-
-<%= render 'share/backtotop_2' %>
-
-<ul class="lc-inline" style="width: 1200px; margin: 0 auto; padding-right: 20px; vertical-align: top;">
-<li style="margin: 0 auto; padding-right: 20px; vertical-align: top; display: inline-block;">
-	<%= render 'share/eventpages_tabs' %>
-</li>
-<li style="margin: 0 auto; padding-right: 20px; vertical-align: top; display: inline-block;">
+	<div style="clear: both;"></div>
 
 
 
-<div id="tab-container">
-
-
-<!-- <div id="lc-landing"> -->
-		
-
-<!-- <div class="spacer"></div>
-<div class="spacer"></div> -->
-
-
-<div id="page">
-    <div class="head">
-    <!-- <#%= image_tag('gather-banner.jpg', alt: "Special Gathering Banner") %#> -->
-    <img src="../event_pages/gather-banner.jpeg" alt="gathering.png">
-    
-	<div class="spacer"></div>
-	    
-    <h1>An "Un-Conference" for Digital Curriculum & Tech District All-Stars</h1>
-      <h3><span class="lgreen">Gather</span> with other education executives to discuss meaningful strategy in a time when digital curriculum of
-all types is raining down disruption on School operations. Step out to New Orleans to gain needful perspective
-with other senior executives from across the U.S. also addressing leadership issues, tech and curriculum
-complexities while the nation shifts to digital content and testing.</h3>
-
-		<table><tr>
-			<td class="green-square" style="padding-left: 10px;">The average classroom has:
-				<ul class="display-list">
-<li><span>5-50+Apps</span></li>
-<li><span>2-20+ Membership Sites
-(including District systems)</span></li>
-<li><span>5-100+ Non-Member Sites</span></li>
-</ul></td>
-			<td>&nbsp;&nbsp;&nbsp;</td>
-			<td><p>Networking – <span class="lgreen">Join peers also concerned with the transition to digital curriculum now that 50% of U.S. students are using digital devices in class.</span></p><br/>
-			<p>Educational – <span style="color: #d4233c;">Special briefings and discussions led by other educators on key technology and digital curriculum topics.</span></p><br/>
-			<p>Spark creativity and innovation – <span style="color: #febd30;">Learn from other education executives what the issues are and solutions they are trying.</span></p><br/>
-			<p>Celebrate – <span style="color: #2ad9fc;">Digital Curriculum Strategy Survey honored districts in an Awards Ceremony for their strategy and tactics with digital curriculum and technology.</span></p></td>
-		</tr>
-		</table>
-
-		<table style="margin-top: 40px;"><tr>
-		<td><h3 class="lgreen" style="text-align: center;">Meet Peer Leaders and Participate in Discussions<br/> About Transitioning to Digital Curriculum.</h3>
-			<p>This national retreat-style event is a one of a kind meeting
-that is truly a discussion amongst peers where you can hear
-what other districts are dealing with and participate with
-questions and comments. Education executives from Texas,
-New Jersey, California, Massachusetts, Tennessee, Illinois,
-Minnesota and Michigan are already registered to attend.
-Invited executives include:</p>
-			
-			<ul style="margin-left: 25px;">
-<li><span>Superintendents</span></li>
-<li><span>District Curriculum Directors</span></li>
-<li><span>Chief Academic Officers</span></li>
-<li><span>District & School Curriculum &
-Instructional Designers</span></li>
-<li><span>CIOs, CTOs, Directors of Technology</span></li>
-<li><span>Instructional Technologists &
-Tech Administration Specialists</span></li>
-<li><span>Professional Development Staff</span></li>
-<li><span>Library and Media Specialists</span></li>
-<li><span>Principals</span></li>
-<li><span>State Department of Education Executives</span></li>
-<li><span>School Board Members</span></li>
-			</ul>
-		</td>
-		<td>&nbsp;&nbsp;&nbsp;</td>
-		<td style="vertical-align: top;"><h3 class="lgreen" style="text-align: center;">About the Event</h3>
-			<p>The first day will be a historic and educational group
-excursion and then a group dinner. Over dinner, we will
-discuss how the excursion into the past at historic New
-Orleans area plantations affected us, and how the past
-practices in schools have been shaping current practices
-with digital curriculum—and what needs to change.</p>
-			<p>Day two will feature discussions shaping the future. Topics
-hour-by-hour will be about new file standards, transitioning
-to digital curriculum and the buy-or-build issue, professional
-development changes, policy issues, and the impacts of tech
-choices on curriculum flexibility. Innovative and awardwinning
-leaders from Houston, Los Angeles, Chicago, and
-Memphis will be on hand to lead these key discussions.</p>
-			<p>We’ve also invited two special guest speakers, to be announced,
-on topics that are very timely nationally.</p>
-			<p>The day ends with an Awards Reception for the winners of
-the annual Digital Curriculum Strategy Award.</p>
-		</td>
-		</tr></table>
-
-      <h2 style="margin-top:20px; position: relative; top: 50px; text-align: right; float: left;">
-	  <span class="dgreen" style="font-size: 30px;">the Gathering</span><br/><br/>
-          Date to Be Announced Soon<br/>
-          Sunday & Monday<br/> Hosting Hotel: TBD<br/>
-          Albuquerque, New Mexico</h2>
-    </div>
-
-    <div class="main">
-      <br>
-      
-
-          <img src="../event_pages/alb-2.jpeg" class="alb-2">
-          <img src="../event_pages/alb-1.jpeg" class="alb-1">
-          <img src="../event_pages/balloons.jpeg" class="balloons">
-          <h3 class="gray">A Retreat-Style Event<br/>
-        with Excursion <br/>& Discussion Day</h3>
-        	<br/>
-          <!--<h3 class="theme">2014 Theme: "Past & Future"</h3>-->
-    </div>
-    <div class="info">
-
-<!-- <div style="width: 100%; height: 460px;"> -->
-
-          
-<!-- </div> -->          
-          
-    </div>
-    <div class="agenda">
-      	<h2 style="text-align: center;">AGENDA (Based on 2014 Gathering in New Orleans)</h2>
-      <h2 stlye="padding: 3px 0;">Agenda - Day 1</h2>
-      <table>
-        <tr>
-          <td>12:00—6:30 p.m.</td>
-          <td>Excursion</td>
-        <tr>
-          <td>6:30—9:00 p.m.</td>
-          <td>Group Dinner & Discussion with special “Challenge”</td>
-        </tr>
-      </table>
-      <h2 stlye="padding: 3px 0;">Agenda - Day 2</h2>
-      <table>
-        <tr>
-          <td>7:30—8:30 a.m.</td>
-          <td>Breakfast</td>
-        </tr>
-        <tr>
-          <td>8:30—9:00</td>
-          <td>Welcome Keynote</td>
-        </tr>
-        <tr>
-          <td>9:00—9:50</td>
-          <td>Open Discussion - Transition & Standards</td>
-        </tr>
-        <tr>
-          <td>9:50—10:00</td>
-          <td>Break</td>
-        </tr>
-        <tr>
-          <td>10:00—11:00</td>
-          <td>Open Discussion - Curriculum Selection & Policies</td>
-        </tr>
-        <tr>
-          <td>11:00—12:00</td>
-          <td>Open Discussion - Strategy & Professional Development</td>
-        </tr>
-        <tr>
-          <td>12:00—1:00</td>
-          <td>Lunch & Special Guest Speaker</td>
-        </tr>
-        <tr>
-          <td>1:30—2:30</td>
-          <td>Open Discussion on Tech Choice & Storage/Access</td>
-        </tr>
-        <tr>
-          <td>2:30</td>
-          <td>Networking Break</td>
-        </tr>
-        <tr>
-          <td>3:00—4:30</td>
-          <td>Digital Curriculum Strategy Survey Awards</td>
-        </tr>
-        <tr>
-          <td>4:30 p.m.</td>
-          <td>Adjourn</td>
-        </tr>
-      </table>
-      <!--<h2 stlye="padding: 3px 0;">Invited Discussion Leaders Include:</h2>
-      <table>
-        <tr>
-        	<td style="width: 240px;"><span style="color: #000;">Beatriz Arnillas, MFA, SPHR</span></td>
-        	<td>Senior Manager IT- Instructional Technology Houston ISD</td>
-        </tr><tr>
-        	<td><span style="color: #000;">Cleon Franklin</span></td>
-        	<td>Executive Principal, Virtual Learning Program, Shelby County Schools</td>
-        </tr><tr>
-        	<td><span style="color: #000;">Keith Bockwoldt</span></td>
-        	<td>Director of Technology Services, Township High School District 214, Chicago</td>
-        </tr><tr>
-        	<td><span style="color: #000;">Dr. Mary Ellis</span></td>
-        	<td>Superintendent, Union County Public Schools, NC</td>
-        </tr>
-      </table>-->
-
-    </div>
-
-    <!--<div class="note">
-    	<p style="width: 800px;">Note: The block of rooms for the Hotel Monteleone are only for the 2nd and 3rd at a rate of $179. There are a few attendees
-arriving on November 1st and were inquiring about rooms. The Hotel Monteleone is charging $399+ for the Saturday night.
-The options below are less costly alternatives. Any reservation for Nov 1st is made by the attendees themselves.</p>
-		<table style="width: 800px;"></tr>
-		<td style="width: 400px;">Hilton New Orleans Airport $149<br/>
-901 Airline Drive, Kenner, LA 70062<br/>
-(504) 469-5000<br/>
-Free Airport Shuttle</td>
-		<td>La Quinta Inn & Suites New Orleans Airport $109<br/>
-2610 Williams Blvd, Kenner, LA 70062<br/>
-(504) 466-1401<br/>
-Free Airport Shuttle, Free Breakfast</td>
-		</tr>
-		<tr>
-			<td>
-<br/>Hotel Monteleone<br/>
-214 Royal Street<br/>
-New Orleans, LA 70130-2201<br/>
-504-523-3341<br/>
-The Room Block has been closed for this event<br/>
-but the Learning Counsel is holding additional rooms.<br/>
-Please contact:<br/>
-Patty Schreiter, Operations Manager<br/>
-888.611.7709  Ext 14<br/>
-<a href="mailto:patty@learningcounsel.com">Patty@learningcounsel.com</a>
-			</td>
-		</tr>
-		</table>
-    </div>-->
-
-</div>
-
-
-
-
-<!-- </div> -->
-
-</div>
-
-</li>
-
-</ul>
-
-<div style="height: 200px;"></div>
-	
-<div id="bottom-graphic">
-<img src="../repository/lc-box-cloud.png"/>
-<div class="lc-landing-box-row"></div>
-</div>
-
-<div style="clear: both;"></div>
-
-
-
-<script>
+	<script>
 		
 		var offset_top = 0;
 		jQuery(window).scroll(function() {
@@ -523,5 +240,5 @@ Patty Schreiter, Operations Manager<br/>
 			$("#tab3").addClass("active");
 		});
 	
-</script>
+	</script>
 

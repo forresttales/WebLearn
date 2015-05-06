@@ -23,5 +23,4 @@
 //= require jquery-2.1.2
 //= require jquery-tmpl
 //= require jquery.easing.1.3
-//= require static_pages
 //= require_directory ./templates
