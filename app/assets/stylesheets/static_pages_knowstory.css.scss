@@ -9,3 +9,53 @@
     .static-pages-knowstory .padding-left-8 {
       padding-left: 8px;
     }
+    .static-pages-knowstory .sub {
+      font-family: msyh;
+      font-size: 18px;
+      font-weight: bold;
+      color: #666;      
+    }
+    .static-pages-knowstory .knowstory-strong {
+      font-size: 22px;
+    }
+    .static-pages-knowstory .bodykopy p {
+      margin-top: 0px;
+      margin-bottom: 0.9em;
+      font-family: QuattrocentoSans-Regular;
+      font-size: 16px;
+      color: #000000;
+      line-height: 1.5em;
+      letter-spacing: -0.01em
+    }
+    .static-pages-knowstory .bodykopy a{
+      color: #C4740C;
+    }
+    .static-pages-knowstory .space-height-60 {
+      height: 60px;
+    }
+    .static-pages-knowstory .kontainer {
+      position: relative;
+      margin: 0 auto;
+      clear: both;
+      width: 970px;
+      padding-left: 20px;
+    } 
+    .static-pages-knowstory .kontainer-space-1 {
+      height: 30px;
+    }
+    .static-pages-knowstory .kontainer-space-2 {
+      height: 30px;
+    }
+    .static-pages-knowstory #mainkolumn {
+      float: left;
+      width: 100%
+    }
+
+    .static-pages-knowstory #mainkolumn.withsidebar {
+      width: 639px
+    }
+    .static-pages-knowstory #k-sidebar {
+      width: 300px;
+      float: left;
+      margin-left: 29px
+    }

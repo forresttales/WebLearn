@@ -660,10 +660,12 @@ function rd_type_affiliation(caller) {
 b_validateRadio1 = false;
 
 
-$(window).load( function() {
+// $(window).load( function() {
 //$(document).ready(function(){
-  
-  formValidate();
+// jQuery(document).ready(function($){
+jQuery(window).load(function($){
+	  
+  	formValidate();
   
   // $(document).on("submit", "#form_join", function(e) {
   	// alert("submit");
@@ -731,18 +733,6 @@ $(window).load( function() {
 	  errorMessageUpdate('reg_event_email_cc_2');
 	});
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
   $('#reg_event_type_affiliation_1').prop('checked', false);        
   $('#reg_event_type_affiliation_2').prop('checked', false);
