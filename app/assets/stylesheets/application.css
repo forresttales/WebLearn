@@ -19,6 +19,7 @@
  *= require 'papers'
  *= require 'reg_contact'
  *= require 'reg_events'
+ *= require 'reg_letters_new'
  *= require 'schedule'
  *= require 'slideshow'
  *= require 'static_pages_index'
