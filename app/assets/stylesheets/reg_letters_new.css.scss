@@ -142,6 +142,15 @@
 		-ms-transform: scale(1.05);
 		transform: scale(1.05);
 	}
+	.form-reg-letter .success {
+     	color: #41b737;
+     	background-color: #fff;   
+    }
+    .form-reg-letter .error {
+      	color: #FC7777;
+      	border-color: #851717;      
+      	background-color: #fff;         
+    } 
 	.form-reg-letter .required {
 		color: orange;		
 		background:  #fef6ea no-repeat 278px 7px;

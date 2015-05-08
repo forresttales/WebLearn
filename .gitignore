@@ -12,9 +12,11 @@
 /db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
-/log/*.log 
+/db
+/log
 /tmp
 /test
-# /config/database.yml
+!/config/application.rb
+/public
 # /config/environments/development.rb
 # /config/environments/production.rb
