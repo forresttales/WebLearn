@@ -19,10 +19,10 @@ development:
   encoding: unicode
   database: dbWebLearn
   pool: 5
-  username: postgres
+  username: root
   password: sa
   host: localhost
-  port: 5432
+  port: 5434
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -40,8 +40,8 @@ production:
   encoding: unicode
   database: dbWebLearn
   pool: 5
-  username: postgres
+  username: root
   password: sa
   host: localhost
-  port: 5432
+  port: 5434
   
