@@ -115,6 +115,7 @@
 						<!-- <input type="text" id="name_first" name="reg_letter_name_first" placeholder="first name" class="input-form" /> -->
 						<%= f.text_field(:name_title, :class => "input-form required", :placeholder => 'Title', :tabindex => '4') %>
 					</div>
+<<<<<<< HEAD
 					<div class="cell-error-contact"><p id="error_reg_letter_name_title"></p></div>  
 				</div> 
 				<div class="input-form-spacer"></div>
@@ -137,6 +138,8 @@
 					</div>
 					<div class="cell-error-contact"><p id="error_reg_letter_pub_priv"></p></div>  
 =======
+=======
+>>>>>>> c4f3352f882caaf44c7e29c1e269e6799405ac72
 				<!--/div-->
 			</div>
 			<div class="input-form-spacer"></div>
@@ -291,6 +294,9 @@
 			focusInvalid: false,
 			// invalidClass: "error",
 			// validClass: "success",
+<<<<<<< HEAD
+>>>>>>> c4f3352f882caaf44c7e29c1e269e6799405ac72
+=======
 >>>>>>> c4f3352f882caaf44c7e29c1e269e6799405ac72
 			
 			rules: {
@@ -324,6 +330,7 @@
 					minlength: 1,						
 					maxlength: 400						
 				},
+<<<<<<< HEAD
 <<<<<<< HEAD
 				success: function(label) {
 					$('#' + label.attr('for')).removeClass('required').removeClass('error').addClass('success');
@@ -386,17 +393,53 @@
 					maxlength: 100,
 					email: true
 				}
+=======
+				'reg_letter[city]': {
+					required: true,
+					minlength: 1,						
+					maxlength: 200						
+				},
+				'reg_letter[state]': {
+					required: true,
+					minlength: 1,						
+					maxlength: 100						
+				},
+				'reg_letter[zip]': {
+					required: true,
+					minlength: 1,						
+					maxlength: 100						
+				},
+				'reg_letter[country]': {
+					required: true,
+					minlength: 1,						
+					maxlength: 200						
+				},
+				'reg_letter[phone]': {
+					required: true,
+					minlength: 1,						
+					maxlength: 300						
+				},
+				'reg_letter[email]': {
+					required: true,
+					maxlength: 100,
+					email: true
+				}
+>>>>>>> c4f3352f882caaf44c7e29c1e269e6799405ac72
 			},
 			invalidHandler: function(event, validator) {
 				// val = validator;
 				var errors = validator.numberOfInvalids();
 				if (errors) {
+<<<<<<< HEAD
+>>>>>>> c4f3352f882caaf44c7e29c1e269e6799405ac72
+=======
 >>>>>>> c4f3352f882caaf44c7e29c1e269e6799405ac72
 					// var message = errors == 1
 					// ? 'You missed 1 field'
 					// : 'You missed ' + errors + ' fields';
 					// $("div.errors p").html(message);
 					// $("div.errors").show();
+<<<<<<< HEAD
 <<<<<<< HEAD
 				// } else {
 					// $("div.errors").hide();
@@ -416,10 +459,15 @@
 					$('#' + element).removeClass('success').removeClass('error').addClass('required');
 					$('#label_' + element).removeClass('success-label').removeClass('error-label').addClass('required-label');						
 =======
+=======
+>>>>>>> c4f3352f882caaf44c7e29c1e269e6799405ac72
 					$("#btn_submit").blur();
 					$("#form_reg_letter").focus();						
 				} else {
 					$("div.errors").hide();
+<<<<<<< HEAD
+>>>>>>> c4f3352f882caaf44c7e29c1e269e6799405ac72
+=======
 >>>>>>> c4f3352f882caaf44c7e29c1e269e6799405ac72
 				}
 				
@@ -510,6 +558,7 @@
 		$.validator.setDefaults({
 			submitHandler: function() {
 				form.submit();
+<<<<<<< HEAD
 			}
 		});
 	}*/
@@ -621,6 +670,60 @@
 		}
 	}
 
+=======
+			}
+		});
+	}*/
+
+	// by field error message update
+
+	/*var error_email = null;
+	var error_name_title = null;
+	var error_name_affiliation = null;
+
+	function errorMessageUpdate( element ) {
+		// if ((val !== undefined) && (val !== null)) {
+	// 				
+			// var errors = val.numberOfInvalids();
+	// 				
+			// if (errors) {
+				// var message = errors == 1
+				// ? 'You missed 1 field'
+				// : 'You missed ' + errors + ' fields';
+				// $("div.errors p").html(message);
+				// $("div.errors").show();
+			// } else {
+				// $("div.errors").hide();
+			// }
+	// 				
+			// val.reset();
+	// 				
+		// }			
+		
+		
+		if ($('#' + element).hasClass('error')) {
+			if ($('#' + element).val().length > 0) {
+				$('#' + element).removeClass('required').removeClass('success').addClass('error');
+				$('#label_' + element).removeClass('required-label').addClass('error-label');
+			}
+			else {
+				$('#' + element).removeClass('success').removeClass('error').addClass('required');
+				$('#label_' + element).removeClass('success-label').removeClass('error-label').addClass('required-label');						
+			}
+		}
+		else {			
+			if ($('#' + element).val().length > 0) {
+				$('#' + element).removeClass('required').removeClass('error').addClass('success');
+				$('#label_' + element).removeClass('error-label').addClass('required-label');
+			}
+			else {
+				$('#' + element).removeClass('success').removeClass('error').addClass('required');
+				$('#label_' + element).removeClass('success-label').removeClass('error-label').addClass('required-label');						
+			}
+		}
+	}
+
+>>>>>>> c4f3352f882caaf44c7e29c1e269e6799405ac72
 	$("#reg_letter_name_first").on("blur", function () {
 		errorMessageUpdate('reg_letter_name_first');
 	});
@@ -677,6 +780,9 @@
 		$("input[name=recaptcha_response_field]").attr("tabindex","14");
 			
 	});*/
+<<<<<<< HEAD
+>>>>>>> c4f3352f882caaf44c7e29c1e269e6799405ac72
+=======
 >>>>>>> c4f3352f882caaf44c7e29c1e269e6799405ac72
 
 	</script>
