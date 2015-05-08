@@ -10,29 +10,20 @@
 
 # Ignore bundler config.
 /.bundle
-
-<<<<<<< HEAD
-=======
 # Ignore the default SQLite database.
 # /db/*.sqlite3
 # /db/*.sqlite3-journal
 
->>>>>>> 4f18ff17bf23f887ee095ecccf42284ad9963bca
 # Ignore all logfiles and tempfiles.
 /log
 /tmp
 /test
 /config
 !/config/application.rb
-<<<<<<< HEAD
 !/config/routes.rb
 /public
-*.directory
-.gitignore
-=======
-!/config/routs.rb
+/*.directory
+/.gitignore
 /public
-.gitignore
 # /config/environments/development.rb
 # /config/environments/production.rb
->>>>>>> 4f18ff17bf23f887ee095ecccf42284ad9963bca
