@@ -42,19 +42,19 @@
 	<div class="reg-letters-new-container">		
 		<div class="form-reg-letter" id="form_reg_letter"  tabindex="1">
 			<%= form_for( @reg_letter, :html => {:id => "form_letter"}) do |f| %>
-			<!-- <div class="input-form-spacer"></div> -->
-			<div class="errors">
-				<div class="input-form-spacer"></div>
-				<div class="input-form-spacer"></div>
+			<div class="row">				
 				<div class="cell-left-contact"></div>
 				<div class="cell-right-contact">
-					<p></p>
-				</div>
-			</div>
-			<!-- <div class="input-form-spacer"><div class="cell-left-contact"></div><div class="cell-right-contact"></div> -->
+					<div class="errors">
+						<p></p>
+					</div>
+				</div>				
+			</div>			
 			<% unless flash[:captcha].nil? %>
-				<div class="alert"><%= flash[:captcha] %></div>
-				<div class="input-form-spacer"></div>
+				<div class="row">
+					<div class="alert"><%= flash[:captcha] %></div>
+					<div class="input-form-spacer"></div>
+				</div>
       		<% end %>
 	      	<div class="row">
 				<div class="cell-left-contact"></div>
@@ -62,149 +62,146 @@
 					<p class="required-label">NOTE: All fields are required</p>
 				</div>
 			</div>
-			
-			<div style="display: table;">
-				<div class="row">
-					<div class="cell-left-contact">
-						<%= f.label(:name_first, "First Name", :class => 'input-label required-label', :id => 'label_reg_letter_name_first') %>
-					</div>
-					<div class="cell-right-contact">
-						<!-- <input type="email" id="email" name="email" placeholder="email@example.com" class="input-form" required /> -->					
-						<%= f.text_field(:name_first, :class => "input-form required", :placeholder => 'First Name', :tabindex => '2' ) %>
-					</div>
-					<div class="cell-error-contact"><p id="error_reg_letter_name_first"></p></div>      	
-				</div> 
-				<div class="input-form-spacer"></div>
-				<div class="row">
-					<div class="cell-left-contact">
-						<%= f.label(:name_last, "Last Name", :class => 'input-label required-label', :id => 'label_reg_letter_name_last') %>
-					</div>
-					<div class="cell-right-contact">
-						<!-- <input type="email" id="email" name="email" placeholder="email@example.com" class="input-form" required /> -->					
-						<%= f.text_field(:name_last, :class => "input-form required", :placeholder => 'Last Name', :tabindex => '3' ) %>
-					</div>
-					<div class="cell-error-contact"><p id="error_reg_letter_name_last"></p></div>      	
-				</div> 
-				<div class="input-form-spacer"></div>
-				<div class="row">
-					<div class="cell-left-contact">
-						<%= f.label(:name_title, "Title", :class => 'input-label required-label', :id => 'label_reg_letter_name_title') %>
-					</div>
-					<div class="cell-right-contact">
-						<!-- <input type="text" id="name_first" name="reg_letter_name_first" placeholder="first name" class="input-form" /> -->
-						<%= f.text_field(:name_title, :class => "input-form required", :placeholder => 'Title', :tabindex => '4') %>
-					</div>
-					<div class="cell-error-contact"><p id="error_reg_letter_name_title"></p></div>  
-				</div> 
-				<div class="input-form-spacer"></div>
-				<div class="row">
-					<div class="cell-left-contact">
-						<%= f.label(:name_affiliation, "School or Company", :class => 'input-label required-label', :id => 'label_reg_letter_name_affiliation') %>
-					</div>
-					<div class="cell-right-contact">
-						<%= f.text_field(:name_affiliation, :class => "input-form required", :placeholder => 'School or Company Name', :tabindex => '5') %>
-					</div>      
-					<div class="cell-error-contact"><p id="error_reg_letter_name_affiliation"></p></div>      	
+			<div class="row">
+				<div class="cell-left-contact">
+					<%= f.label(:name_first, "First Name", :class => 'input-label required-label', :id => 'label_reg_letter_name_first') %>
 				</div>
-				<div class="input-form-spacer"></div>
-				<div class="row">
-					<div class="cell-left-contact">
-						<%= f.label(:pub_priv, "Public or Private", :class => 'input-label required-label', :id => 'label_reg_letter_pub_priv') %>
-					</div>
-					<div class="cell-right-contact">
-						 <%= f.text_field(:pub_priv, :class => "input-form required", :placeholder => 'Public/Private', :tabindex => '6') %>
-					</div>
-					<div class="cell-error-contact"><p id="error_reg_letter_pub_priv"></p></div>  
+				<div class="cell-right-contact">
+					<!-- <input type="email" id="email" name="email" placeholder="email@example.com" class="input-form" required /> -->					
+					<%= f.text_field(:name_first, :class => "input-form required", :placeholder => 'First Name', :tabindex => '2' ) %>
 				</div>
-				<div class="input-form-spacer"></div>
-				<div class="row">
-					<div class="cell-left-contact">
-						<%= f.label(:address, "Address", :class => 'input-label required-label', :id => 'label_reg_letter_address') %>
-					</div>
-					<div class="cell-right-contact">
-						 <%= f.text_field(:address, :class => "input-form required", :placeholder => 'Address', :tabindex => '7') %>
-					</div>
-					<div class="cell-error-contact"><p id="error_reg_letter_address"></p></div> 
+				<div class="cell-error-contact"><p id="error_reg_letter_name_first"></p></div>      	
+			</div> 
+			<div class="input-form-spacer"></div>
+			<div class="row">
+				<div class="cell-left-contact">
+					<%= f.label(:name_last, "Last Name", :class => 'input-label required-label', :id => 'label_reg_letter_name_last') %>
 				</div>
-				<div class="input-form-spacer"></div>
-				<div class="row">
-					<div class="cell-left-contact">
-						<%= f.label(:city, "City", :class => 'input-label required-label', :id => 'label_reg_letter_city') %>
-					</div>
-					<div class="cell-right-contact">
-						 <%= f.text_field(:city, :class => "input-form required", :placeholder => 'City', :tabindex => '8') %>
-					</div>
-					<div class="cell-error-contact"><p id="error_reg_letter_city"></p></div> 
-				</div>    
-				<div class="input-form-spacer"></div>
-				<div class="row">
-					<div class="cell-left-contact">
-						<%= f.label(:state, "State", :class => 'input-label required-label', :id => 'label_reg_letter_state') %>
-					</div>
-					<div class="cell-right-contact">
-						 <%= f.text_field(:state, :class => "input-form required", :placeholder => 'State', :tabindex => '9') %>
-					</div>
-					<div class="cell-error-contact"><p id="error_reg_letter_state"></p></div> 
+				<div class="cell-right-contact">
+					<!-- <input type="email" id="email" name="email" placeholder="email@example.com" class="input-form" required /> -->					
+					<%= f.text_field(:name_last, :class => "input-form required", :placeholder => 'Last Name', :tabindex => '3' ) %>
 				</div>
-				<div class="input-form-spacer"></div>
-				<div class="row">
-					<div class="cell-left-contact">
-						<%= f.label(:zip, "Zip", :class => 'input-label required-label', :id => 'label_reg_letter_zip') %>
-					</div>
-					<div class="cell-right-contact">
-						 <%= f.text_field(:zip, :class => "input-form required", :placeholder => 'Zip', :tabindex => '10') %>
-					</div>
-					<div class="cell-error-contact"><p id="error_reg_letter_zip"></p></div> 
+				<div class="cell-error-contact"><p id="error_reg_letter_name_last"></p></div>      	
+			</div> 
+			<div class="input-form-spacer"></div>
+			<div class="row">
+				<div class="cell-left-contact">
+					<%= f.label(:name_title, "Title", :class => 'input-label required-label', :id => 'label_reg_letter_name_title') %>
 				</div>
-				<div class="input-form-spacer"></div>
-				<div class="row">
-					<div class="cell-left-contact">
-						<%= f.label(:country, "Country", :class => 'input-label required-label', :id => 'label_reg_letter_country') %>
-					</div>
-					<div class="cell-right-contact">
-						 <%= f.text_field(:country, :class => "input-form required", :placeholder => 'Country', :tabindex => '11') %>
-					</div>
-					<div class="cell-error-contact"><p id="error_reg_letter_country"></p></div>      					   
-				</div>  
-				<div class="input-form-spacer"></div>
-				<div class="row">
-					<div class="cell-left-contact">
-						<%= f.label(:phone, "Phone", :class => 'input-label required-label', :id => 'label_reg_letter_phone') %>
-					</div>
-					<div class="cell-right-contact">
-						 <%= f.text_field(:phone, :class => "input-form required", :placeholder => 'Phone', :tabindex => '12') %>
-					</div>
-					<div class="cell-error-contact"><p id="error_reg_letter_phone"></p></div> 
-				</div> 
-				<div class="input-form-spacer"></div>
-				<div class="row">
-					<div class="cell-left-contact">
-						<%= f.label(:email, "Email", :class => 'input-label required-label', :id => 'label_reg_letter_email') %>
-					</div>
-					<div class="cell-right-contact">
-						<!-- <input type="email" id="email" name="email" placeholder="email@example.com" class="input-form" required /> -->					
-						<%= f.text_field(:email, :class => "input-form required", :placeholder => 'email@example.com', :tabindex => '13' ) %>
-					</div>
-					<div class="cell-error-contact"><p id="error_reg_letter_email"></p></div>  
-				</div>  
-				<div class="input-form-spacer"></div>
-				<div class="input-form-spacer"></div>
-				<div class="row">
-					<div class="cell-left-contact"></div>
-					<div class="cell-submit-contact">
-						<%= recaptcha_tags %>	
-					</div>      	
+				<div class="cell-right-contact">
+					<!-- <input type="text" id="name_first" name="reg_letter_name_first" placeholder="first name" class="input-form" /> -->
+					<%= f.text_field(:name_title, :class => "input-form required", :placeholder => 'Title', :tabindex => '4') %>
+				</div>
+				<div class="cell-error-contact"><p id="error_reg_letter_name_title"></p></div>  
+			</div> 
+			<div class="input-form-spacer"></div>
+			<div class="row">
+				<div class="cell-left-contact">
+					<%= f.label(:name_affiliation, "School or Company", :class => 'input-label required-label', :id => 'label_reg_letter_name_affiliation') %>
+				</div>
+				<div class="cell-right-contact">
+					<%= f.text_field(:name_affiliation, :class => "input-form required", :placeholder => 'School or Company Name', :tabindex => '5') %>
 				</div>      
-				<div class="input-form-spacer"></div>
-				<div class="input-form-spacer"></div>
-				<div class="row">
-					<div class="cell-left-contact">
-					</div>
-					<div class="cell-submit-contact">
-						<%= f.submit "Submit", :id => 'btn_submit', :class => 'btn submitreg', :tabindex => '15' %>
-					</div>      	
-				</div>  
+				<div class="cell-error-contact"><p id="error_reg_letter_name_affiliation"></p></div>      	
 			</div>
+			<div class="input-form-spacer"></div>
+			<div class="row">
+				<div class="cell-left-contact">
+					<%= f.label(:pub_priv, "Public or Private", :class => 'input-label required-label', :id => 'label_reg_letter_pub_priv') %>
+				</div>
+				<div class="cell-right-contact">
+					 <%= f.text_field(:pub_priv, :class => "input-form required", :placeholder => 'Public/Private', :tabindex => '6') %>
+				</div>
+				<div class="cell-error-contact"><p id="error_reg_letter_pub_priv"></p></div>  
+			</div>
+			<div class="input-form-spacer"></div>
+			<div class="row">
+				<div class="cell-left-contact">
+					<%= f.label(:address, "Address", :class => 'input-label required-label', :id => 'label_reg_letter_address') %>
+				</div>
+				<div class="cell-right-contact">
+					 <%= f.text_field(:address, :class => "input-form required", :placeholder => 'Address', :tabindex => '7') %>
+				</div>
+				<div class="cell-error-contact"><p id="error_reg_letter_address"></p></div> 
+			</div>
+			<div class="input-form-spacer"></div>
+			<div class="row">
+				<div class="cell-left-contact">
+					<%= f.label(:city, "City", :class => 'input-label required-label', :id => 'label_reg_letter_city') %>
+				</div>
+				<div class="cell-right-contact">
+					 <%= f.text_field(:city, :class => "input-form required", :placeholder => 'City', :tabindex => '8') %>
+				</div>
+				<div class="cell-error-contact"><p id="error_reg_letter_city"></p></div> 
+			</div>    
+			<div class="input-form-spacer"></div>
+			<div class="row">
+				<div class="cell-left-contact">
+					<%= f.label(:state, "State", :class => 'input-label required-label', :id => 'label_reg_letter_state') %>
+				</div>
+				<div class="cell-right-contact">
+					 <%= f.text_field(:state, :class => "input-form required", :placeholder => 'State', :tabindex => '9') %>
+				</div>
+				<div class="cell-error-contact"><p id="error_reg_letter_state"></p></div> 
+			</div>
+			<div class="input-form-spacer"></div>
+			<div class="row">
+				<div class="cell-left-contact">
+					<%= f.label(:zip, "Zip", :class => 'input-label required-label', :id => 'label_reg_letter_zip') %>
+				</div>
+				<div class="cell-right-contact">
+					 <%= f.text_field(:zip, :class => "input-form required", :placeholder => 'Zip', :tabindex => '10') %>
+				</div>
+				<div class="cell-error-contact"><p id="error_reg_letter_zip"></p></div> 
+			</div>
+			<div class="input-form-spacer"></div>
+			<div class="row">
+				<div class="cell-left-contact">
+					<%= f.label(:country, "Country", :class => 'input-label required-label', :id => 'label_reg_letter_country') %>
+				</div>
+				<div class="cell-right-contact">
+					 <%= f.text_field(:country, :class => "input-form required", :placeholder => 'Country', :tabindex => '11') %>
+				</div>
+				<div class="cell-error-contact"><p id="error_reg_letter_country"></p></div>      					   
+			</div>  
+			<div class="input-form-spacer"></div>
+			<div class="row">
+				<div class="cell-left-contact">
+					<%= f.label(:phone, "Phone", :class => 'input-label required-label', :id => 'label_reg_letter_phone') %>
+				</div>
+				<div class="cell-right-contact">
+					 <%= f.text_field(:phone, :class => "input-form required", :placeholder => 'Phone', :tabindex => '12') %>
+				</div>
+				<div class="cell-error-contact"><p id="error_reg_letter_phone"></p></div> 
+			</div> 
+			<div class="input-form-spacer"></div>
+			<div class="row">
+				<div class="cell-left-contact">
+					<%= f.label(:email, "Email", :class => 'input-label required-label', :id => 'label_reg_letter_email') %>
+				</div>
+				<div class="cell-right-contact">
+					<!-- <input type="email" id="email" name="email" placeholder="email@example.com" class="input-form" required /> -->					
+					<%= f.text_field(:email, :class => "input-form required", :placeholder => 'email@example.com', :tabindex => '13' ) %>
+				</div>
+				<div class="cell-error-contact"><p id="error_reg_letter_email"></p></div>  
+			</div>  
+			<div class="input-form-spacer"></div>
+			<div class="input-form-spacer"></div>
+			<div class="row">
+				<div class="cell-left-contact"></div>
+				<div class="cell-submit-contact">
+					<%= recaptcha_tags %>	
+				</div>      	
+			</div>      
+			<div class="input-form-spacer"></div>
+			<div class="input-form-spacer"></div>
+			<div class="row">
+				<div class="cell-left-contact">
+				</div>
+				<div class="cell-submit-contact">
+					<%= f.submit "Submit", :id => 'btn_submit', :class => 'btn submitreg', :tabindex => '15' %>
+				</div>      	
+			</div>  
 			<% end %>
 		</div>	
 	</div>

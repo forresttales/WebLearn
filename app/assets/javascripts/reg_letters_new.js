@@ -1,6 +1,6 @@
 function scrollToAnchor(aid) {
-  var a = $("a[name='" + aid + "']");
-  $('html, body').animate({ scrollTop: a.offset().top }, 1000);
+	//var a = $("a[name='" + aid + "']");
+	$('html, body').animate({ scrollTop: /*a.offset().top*/ $("#form_reg_letter").offset().top - 100 }, 1000);
 }
 
 //var validatorCalled = false;
