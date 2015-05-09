@@ -150,10 +150,11 @@
     .form-reg-letter .error {
       	color: #FC7777;
       	border-color: #851717;      
-      	background-color: #fff;         
+      	background-color: #fff;
+      	//background-color: #fef6ea;         
     } 
 	.form-reg-letter .required {
-		color: orange;		
+		/*color: orange;*/		
 		background:  #fef6ea no-repeat 278px 7px;
 	}
 	.form-reg-letter .input-label {
@@ -165,6 +166,20 @@
 	.form-reg-letter .required-label {
 		color: #49853F;		
 	}
+	.form-reg-letter .error-label {
+		background-color: #fff;
+		color: #FC7777;
+    }
+	.form-reg-letter .state-background-tick {
+		background: asset-url("submit_form_tick.png");
+		background-repeat: no-repeat;
+		backgroung-position: initial;
+    }
+    .form-reg-letter .state-background-empty {
+		background: asset-url("submit_form_empty.png");
+		background-repeat: no-repeat;
+		backgroung-position: initial;
+    }
 	.reg-letter-bottom-spacer {
 		height: 300px;
 	}

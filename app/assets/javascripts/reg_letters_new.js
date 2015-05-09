@@ -1,16 +1,12 @@
 function scrollToAnchor(aid) {
 	//var a = $("a[name='" + aid + "']");
-	$('html, body').animate({ scrollTop: /*a.offset().top*/ $("#form_reg_letter").offset().top - 100 }, 1000);
+	$('html, body').animate({ scrollTop: /*a.offset().top*/ $("#form_reg_letter").offset().top - 100 }, 500);
 }
-
-//var validatorCalled = false;
-//var val = null;
 
 function formValidate() {
 	$("#form_letter").validate({
 
 		submitHandler: function(form) {
-			//validatorCalled = true;
 			form.submit();
 		},
 		debug: true,
@@ -80,9 +76,7 @@ function formValidate() {
 	      }
     	},
     	invalidHandler: function(event, validator) {
-    		//val = validator;
     		var errors = validator.numberOfInvalids();
-    		//validatorCalled = true;
 
     		if (errors) {
     			var message = errors == 1
@@ -146,16 +140,13 @@ function formValidate() {
 	      },        
 	      'reg_letter[email]': {
 	        	required: "*",
-        		maxlength: "Exceeds 100 characters"
+        		maxlength: "Exceeds 100 characters",
+        		email: "Invalid form on email address"
 	      }
     	},
-    	//errorContainer: $("div .error_label"),
     	errorPlacement: function(error, element) {
     		error.insertAfter('#error_' + element.attr('id'));
-      		$('#' + element.attr('id')).removeClass('required').removeClass('success').addClass('error');     
-    	},
-    	error: function(label) {
-    		$('#' + label.attr('for')).removeClass('required').removeClass('success').addClass('error');
+      		//$('#' + element.attr('id'))/*.removeClass('required')*/.removeClass('success').addClass('error'); 
     	},
     	success: function(label) {
     		$('#' + label.attr('for')).removeClass('required').removeClass('error').addClass('success');
@@ -165,49 +156,11 @@ function formValidate() {
 	});	
 }
 
-function updateErrorCount() {
-	
-}
-
 function errorMessageUpdate( element ) {
-	//updateErrorCount();
-	if ($('#' + element).hasClass('error')) {
-		if ($('#' + element).val().length > 0) {
-		  $('#' + element).removeClass('required').removeClass('success').addClass('error');
-		  $('#label_' + element).removeClass('required-label').addClass('error-label');
-		}
-		else {
-		  $('#' + element).removeClass('success').removeClass('error').addClass('required');
-		  $('#label_' + element).removeClass('success-label').removeClass('error-label').addClass('required-label');        
-		  $('#' + element).css ({     
-		    'border-color' : '#851717'
-		  });
-		  $('#state_' + element).removeClass("state-background-tick").addClass("state-background-empty");     
-		  // $('#state_' + element).css ({      
-		    // // background: 'url("/assets/submit_form_empty.png") no-repeat 0px 1px'
-		    // background: '<#%= image_path("submit_form_empty.png") %#> no-repeat 0px 1px'
-		  // });          
-		}
-		}
-		else {      
-		if ($('#' + element).val().length > 0) {
-		  $('#' + element).removeClass('required').removeClass('error').addClass('success');
-		  $('#label_' + element).removeClass('error-label').addClass('required-label');
-		  $('#' + element).css ({     
-		    // 'border-color' : '#005C9E'
-		    'border-color' : '#41b737'
-		  });
-		  $('#state_' + element).removeClass("state-background-empty").addClass("state-background-tick");         
-		}
-		else {
-		  $('#' + element).removeClass('success').removeClass('error').addClass('required');
-		  $('#label_' + element).removeClass('success-label').removeClass('error-label').addClass('required-label');
-		  $('#state_' + element).removeClass("state-background-tick").addClass("state-background-empty");   
-		  // $('#state_' + element).css ({      
-		    // // background: 'url("/assets/submit_form_empty.png") no-repeat 0px 1px'
-		    // background: '<#%= image_path("submit_form_empty.png") %#> no-repeat 0px 1px'
-		  // });
-		}
+	if($('#' + element).valid()) {
+		$('#state_' + element).removeClass("state-background-empty").addClass("state-background-tick");
+	} else {
+		$('#state_' + element).removeClass("state-background-tick").addClass("state-background-empty");
 	}
 }
 
@@ -215,6 +168,44 @@ $(window).load( function() {
 	$("input[name=recaptcha_response_field]").attr("tabindex","14");
 
 	formValidate();
+
+	//Live validation
+	$("#reg_letter_name_first").on("blur", function () {
+	  errorMessageUpdate('reg_letter_name_first');
+	});
+	$("#reg_letter_name_last").on("blur", function () {
+	  errorMessageUpdate('reg_letter_name_last');
+	});
+	$("#reg_letter_name_title").on("blur", function () {
+	  errorMessageUpdate('reg_letter_name_title');
+	});
+	$("#reg_letter_name_affiliation").on("blur", function () {
+	  errorMessageUpdate('reg_letter_name_affiliation');
+	});
+	$("#reg_letter_pub_priv").on("blur", function () {
+	  errorMessageUpdate('reg_letter_pub_priv');
+	});
+	$("#reg_letter_address").on("blur", function () {
+	  errorMessageUpdate('reg_letter_address');
+	});
+	$("#reg_letter_city").on("blur", function () {
+	  errorMessageUpdate('reg_letter_city');
+	});
+	$("#reg_letter_state").on("blur", function () {
+	  errorMessageUpdate('reg_letter_state');
+	});
+	$("#reg_letter_zip").on("blur", function () {
+	  errorMessageUpdate('reg_letter_zip');
+	});
+	$("#reg_letter_country").on("blur", function () {
+	  errorMessageUpdate('reg_letter_country');
+	});
+	$("#reg_letter_phone").on("blur", function () {
+	  errorMessageUpdate('reg_letter_phone');
+	});
+	$("#reg_letter_email").on("blur", function () {
+	  errorMessageUpdate('reg_letter_email');
+	});
 
 	// 'Enter' key events
 	$("#reg_letter_name_first").keypress(function(e){

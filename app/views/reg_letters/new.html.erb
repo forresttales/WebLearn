@@ -70,7 +70,7 @@
 					<!-- <input type="email" id="email" name="email" placeholder="email@example.com" class="input-form" required /> -->					
 					<%= f.text_field(:name_first, :class => "input-form required", :placeholder => 'First Name', :tabindex => '2' ) %>
 				</div>
-				<div class="cell-error-contact"><p id="error_reg_letter_name_first"></p></div>      	
+				<div class="cell-error-contact" id="state_reg_letter_name_first"><p id="error_reg_letter_name_first"></p></div>      	
 			</div> 
 			<div class="input-form-spacer"></div>
 			<div class="row">
@@ -81,7 +81,7 @@
 					<!-- <input type="email" id="email" name="email" placeholder="email@example.com" class="input-form" required /> -->					
 					<%= f.text_field(:name_last, :class => "input-form required", :placeholder => 'Last Name', :tabindex => '3' ) %>
 				</div>
-				<div class="cell-error-contact"><p id="error_reg_letter_name_last"></p></div>      	
+				<div class="cell-error-contact" id="state_reg_letter_name_last"><p id="error_reg_letter_name_last"></p></div>      	
 			</div> 
 			<div class="input-form-spacer"></div>
 			<div class="row">
@@ -92,7 +92,7 @@
 					<!-- <input type="text" id="name_first" name="reg_letter_name_first" placeholder="first name" class="input-form" /> -->
 					<%= f.text_field(:name_title, :class => "input-form required", :placeholder => 'Title', :tabindex => '4') %>
 				</div>
-				<div class="cell-error-contact"><p id="error_reg_letter_name_title"></p></div>  
+				<div class="cell-error-contact" id="state_reg_letter_name_title"><p id="error_reg_letter_name_title"></p></div>  
 			</div> 
 			<div class="input-form-spacer"></div>
 			<div class="row">
@@ -102,7 +102,7 @@
 				<div class="cell-right-contact">
 					<%= f.text_field(:name_affiliation, :class => "input-form required", :placeholder => 'School or Company Name', :tabindex => '5') %>
 				</div>      
-				<div class="cell-error-contact"><p id="error_reg_letter_name_affiliation"></p></div>      	
+				<div class="cell-error-contact" id="state_reg_letter_name_affiliation"><p id="error_reg_letter_name_affiliation"></p></div> 
 			</div>
 			<div class="input-form-spacer"></div>
 			<div class="row">
@@ -112,7 +112,7 @@
 				<div class="cell-right-contact">
 					 <%= f.text_field(:pub_priv, :class => "input-form required", :placeholder => 'Public/Private', :tabindex => '6') %>
 				</div>
-				<div class="cell-error-contact"><p id="error_reg_letter_pub_priv"></p></div>  
+				<div class="cell-error-contact" id="state_reg_letter_pub_priv"><p id="error_reg_letter_pub_priv"></p></div>  
 			</div>
 			<div class="input-form-spacer"></div>
 			<div class="row">
@@ -122,7 +122,7 @@
 				<div class="cell-right-contact">
 					 <%= f.text_field(:address, :class => "input-form required", :placeholder => 'Address', :tabindex => '7') %>
 				</div>
-				<div class="cell-error-contact"><p id="error_reg_letter_address"></p></div> 
+				<div class="cell-error-contact" id="state_reg_letter_address"><p id="error_reg_letter_address"></p></div> 
 			</div>
 			<div class="input-form-spacer"></div>
 			<div class="row">
@@ -132,7 +132,7 @@
 				<div class="cell-right-contact">
 					 <%= f.text_field(:city, :class => "input-form required", :placeholder => 'City', :tabindex => '8') %>
 				</div>
-				<div class="cell-error-contact"><p id="error_reg_letter_city"></p></div> 
+				<div class="cell-error-contact" id="state_reg_letter_city"><p id="error_reg_letter_city"></p></div> 
 			</div>    
 			<div class="input-form-spacer"></div>
 			<div class="row">
@@ -142,7 +142,7 @@
 				<div class="cell-right-contact">
 					 <%= f.text_field(:state, :class => "input-form required", :placeholder => 'State', :tabindex => '9') %>
 				</div>
-				<div class="cell-error-contact"><p id="error_reg_letter_state"></p></div> 
+				<div class="cell-error-contact" id="state_reg_letter_state"><p id="error_reg_letter_state"></p></div> 
 			</div>
 			<div class="input-form-spacer"></div>
 			<div class="row">
@@ -152,7 +152,7 @@
 				<div class="cell-right-contact">
 					 <%= f.text_field(:zip, :class => "input-form required", :placeholder => 'Zip', :tabindex => '10') %>
 				</div>
-				<div class="cell-error-contact"><p id="error_reg_letter_zip"></p></div> 
+				<div class="cell-error-contact" id="state_reg_letter_zip"><p id="error_reg_letter_zip"></p></div> 
 			</div>
 			<div class="input-form-spacer"></div>
 			<div class="row">
@@ -162,7 +162,7 @@
 				<div class="cell-right-contact">
 					 <%= f.text_field(:country, :class => "input-form required", :placeholder => 'Country', :tabindex => '11') %>
 				</div>
-				<div class="cell-error-contact"><p id="error_reg_letter_country"></p></div>      					   
+				<div class="cell-error-contact" id="state_reg_letter_country"><p id="error_reg_letter_country"></p></div>      					   
 			</div>  
 			<div class="input-form-spacer"></div>
 			<div class="row">
@@ -172,7 +172,7 @@
 				<div class="cell-right-contact">
 					 <%= f.text_field(:phone, :class => "input-form required", :placeholder => 'Phone', :tabindex => '12') %>
 				</div>
-				<div class="cell-error-contact"><p id="error_reg_letter_phone"></p></div> 
+				<div class="cell-error-contact" id="state_reg_letter_phone"><p id="error_reg_letter_phone"></p></div> 
 			</div> 
 			<div class="input-form-spacer"></div>
 			<div class="row">
@@ -183,7 +183,7 @@
 					<!-- <input type="email" id="email" name="email" placeholder="email@example.com" class="input-form" required /> -->					
 					<%= f.text_field(:email, :class => "input-form required", :placeholder => 'email@example.com', :tabindex => '13' ) %>
 				</div>
-				<div class="cell-error-contact"><p id="error_reg_letter_email"></p></div>  
+				<div class="cell-error-contact" id="state_reg_letter_email"><p id="error_reg_letter_email"></p></div>  
 			</div>  
 			<div class="input-form-spacer"></div>
 			<div class="input-form-spacer"></div>
@@ -208,294 +208,3 @@
 	<div class="bottom-letter-squares">&nbsp;</div>
 </div>
 <div class="reg-letter-bottom-spacer"></div>
-
-	<script>
-	/*function formValidate() {
-					
-		$("#form_join").validate({
-		
-			submitHandler: function(form) {
-				form.submit();
-			},
-		
-			debug: true,
-			onkeyup: false,
-			focusCleanup: true,
-			focusInvalid: false,
-			// invalidClass: "error",
-			// validClass: "success",
-			
-			rules: {
-				'reg_letter[name_first]': {
-					required: true,
-					minlength: 1,						
-					maxlength: 100						
-				},
-				'reg_letter[name_last]': {
-					required: true,
-					minlength: 1,						
-					maxlength: 100						
-				},
-				'reg_letter[name_title]': {
-					required: true,
-					minlength: 1,						
-					maxlength: 200						
-				},
-				'reg_letter[name_affiliation]': {
-					required: true,
-					minlength: 1,						
-					maxlength: 200						
-				},															
-				'reg_letter[pub_priv]': {
-					required: true,
-					minlength: 1,						
-					maxlength: 100						
-				},
-				'reg_letter[address]': {
-					required: true,
-					minlength: 1,						
-					maxlength: 400						
-				},
-				'reg_letter[city]': {
-					required: true,
-					minlength: 1,						
-					maxlength: 200						
-				},
-				'reg_letter[state]': {
-					required: true,
-					minlength: 1,						
-					maxlength: 100						
-				},
-				'reg_letter[zip]': {
-					required: true,
-					minlength: 1,						
-					maxlength: 100						
-				},
-				'reg_letter[country]': {
-					required: true,
-					minlength: 1,						
-					maxlength: 200						
-				},
-				'reg_letter[phone]': {
-					required: true,
-					minlength: 1,						
-					maxlength: 300						
-				},
-				'reg_letter[email]': {
-					required: true,
-					maxlength: 100,
-					email: true
-				}
-			},
-			invalidHandler: function(event, validator) {
-				// val = validator;
-				var errors = validator.numberOfInvalids();
-				if (errors) {
-					// var message = errors == 1
-					// ? 'You missed 1 field'
-					// : 'You missed ' + errors + ' fields';
-					// $("div.errors p").html(message);
-					// $("div.errors").show();
-					$("#btn_submit").blur();
-					$("#form_reg_letter").focus();						
-				} else {
-					$("div.errors").hide();
-				}
-				
-			},				
-			messages: {
-				'reg_letter[name_first]': {
-					required: "*",
-					maxlength: "Exceeds 100 characters"							
-				},
-				'reg_letter[name_last]': {
-					required: "*",
-					maxlength: "Exceeds 100 characters"							
-				},
-				'reg_letter[name_title]': {
-					required: "*",
-					maxlength: "Exceeds 200 characters"							
-				},
-				'reg_letter[name_affiliation]': {
-					required: "*",
-					maxlength: "Exceeds 200 characters"							
-				},
-				'reg_letter[pub_priv]': {
-					required: "*",
-					maxlength: "Exceeds 100 characters"							
-				},
-				'reg_letter[address]': {
-					required: "*",
-					maxlength: "Exceeds 400 characters"							
-				},
-				'reg_letter[city]': {
-					required: "*",
-					maxlength: "Exceeds 200 characters"							
-				},
-				'reg_letter[state]': {
-					required: "*",
-					maxlength: "Exceeds 100 characters"							
-				},
-				'reg_letter[zip]': {
-					required: "*",
-					maxlength: "Exceeds 100 characters"							
-				},
-				'reg_letter[country]': {
-					required: "*",
-					maxlength: "Exceeds 200 characters"							
-				},
-				'reg_letter[phone]': {
-					required: "*",
-					maxlength: "Exceeds 300 characters"							
-				},
-				'reg_letter[email]': {
-					required: "*",
-					maxlength: "Exceeds 100 characters",
-					email: "Invalid email address"
-				},																				
-			},
-			errorContainer: $("div .error_label"),				
-			errorPlacement: function(error, element) {
-				error.insertAfter('#error_' + element.attr('id'));
-				$('#' + element.attr('id')).removeClass('required').removeClass('success').addClass('error');
-				//$('#label_' + element.attr('id')).removeClass('required-label').addClass('error-label');
-			},
-			// invalid: function(element) {
-			// },
-			// highlight: function(element) {
-				// $('#' + element.attr('id')).removeClass('required').removeClass('success').addClass('error');
-				// //$('#label_' + element.attr('id')).removeClass('required-label').addClass('error-label');
-			// },
-			// unhighlight: function(element) {
-				// //$('#' + element.attr('id')).removeClass('required').removeClass('success').addClass('error');
-				// //$('#label_' + element.attr('id')).removeClass('required-label').addClass('error-label');
-			// },
-			error: function(label) {
-				$('#' + label.attr('for')).removeClass('required').removeClass('success').addClass('error');
-				$('#label_' + label.attr('for')).removeClass('required-label').addClass('error-label');
-				
-			},
-			success: function(label) {
-				$('#' + label.attr('for')).removeClass('required').removeClass('error').addClass('success');
-				$('#label_' + label.attr('for')).removeClass('error-label').addClass('required-label');
-			},				
-			focus: function(element) {
-			 	//$('#' + element.attr('id')).removeClass('required').removeClass('error').removeClass('success').addClass('focus');
-			 	
-			 	$('#' + element.attr('id')).removeClass('required').removeClass('success').addClass('focus');
-			}
-		});
-
-		$.validator.setDefaults({
-			submitHandler: function() {
-				form.submit();
-			}
-		});
-	}*/
-
-	// by field error message update
-
-	/*var error_email = null;
-	var error_name_title = null;
-	var error_name_affiliation = null;
-
-	function errorMessageUpdate( element ) {
-		// if ((val !== undefined) && (val !== null)) {
-	// 				
-			// var errors = val.numberOfInvalids();
-	// 				
-			// if (errors) {
-				// var message = errors == 1
-				// ? 'You missed 1 field'
-				// : 'You missed ' + errors + ' fields';
-				// $("div.errors p").html(message);
-				// $("div.errors").show();
-			// } else {
-				// $("div.errors").hide();
-			// }
-	// 				
-			// val.reset();
-	// 				
-		// }			
-		
-		
-		if ($('#' + element).hasClass('error')) {
-			if ($('#' + element).val().length > 0) {
-				$('#' + element).removeClass('required').removeClass('success').addClass('error');
-				$('#label_' + element).removeClass('required-label').addClass('error-label');
-			}
-			else {
-				$('#' + element).removeClass('success').removeClass('error').addClass('required');
-				$('#label_' + element).removeClass('success-label').removeClass('error-label').addClass('required-label');						
-			}
-		}
-		else {			
-			if ($('#' + element).val().length > 0) {
-				$('#' + element).removeClass('required').removeClass('error').addClass('success');
-				$('#label_' + element).removeClass('error-label').addClass('required-label');
-			}
-			else {
-				$('#' + element).removeClass('success').removeClass('error').addClass('required');
-				$('#label_' + element).removeClass('success-label').removeClass('error-label').addClass('required-label');						
-			}
-		}
-	}
-
-	$("#reg_letter_name_first").on("blur", function () {
-		errorMessageUpdate('reg_letter_name_first');
-	});
-
-	$("#reg_letter_name_last").on("blur", function () {
-		errorMessageUpdate('reg_letter_name_last');
-	});
-
-	$("#reg_letter_name_title").on("blur", function () {
-		errorMessageUpdate('reg_letter_name_title');
-	});
-
-	$("#reg_letter_name_affiliation").on("blur", function () {
-		errorMessageUpdate('reg_letter_name_affiliation');
-	});
-
-	$("#reg_letter_pub_priv").on("blur", function () {
-		errorMessageUpdate('reg_letter_pub_priv');
-	});
-
-	$("#reg_letter_address").on("blur", function () {
-		errorMessageUpdate('reg_letter_address');
-	});
-
-	$("#reg_letter_city").on("blur", function () {
-		errorMessageUpdate('reg_letter_city');
-	});
-
-	$("#reg_letter_state").on("blur", function () {
-		errorMessageUpdate('reg_letter_state');
-	});
-
-	$("#reg_letter_zip").on("blur", function () {
-		errorMessageUpdate('reg_letter_zip');
-	});
-
-	$("#reg_letter_country").on("blur", function () {
-		errorMessageUpdate('reg_letter_country');
-	});
-
-	$("#reg_letter_phone").on("blur", function () {
-		errorMessageUpdate('reg_letter_phone');
-	});
-
-	$("#reg_letter_email").on("blur", function () {
-		errorMessageUpdate('reg_letter_email');
-	});*/
-
-
-
-	/*$(window).load( function() {
-	//$(document).ready(function(){
-
-		$("input[name=recaptcha_response_field]").attr("tabindex","14");
-			
-	});*/
-
-	</script>
