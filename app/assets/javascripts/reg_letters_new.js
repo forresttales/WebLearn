@@ -3,10 +3,12 @@ function scrollToAnchor(aid) {
 	$('html, body').animate({ scrollTop: /*a.offset().top*/ $("#form_reg_letter").offset().top - 100 }, 500);
 }
 
+var submitButtonPressed = false;
 function formValidate() {
 	$("#form_letter").validate({
 
 		submitHandler: function(form) {
+			submitButtonPressed = true;
 			form.submit();
 		},
 		debug: true,
@@ -76,6 +78,8 @@ function formValidate() {
 	      }
     	},
     	invalidHandler: function(event, validator) {
+    		submitButtonPressed = true;
+
     		var errors = validator.numberOfInvalids();
 
     		if (errors) {
@@ -144,30 +148,63 @@ function formValidate() {
         		email: "Invalid form on email address"
 	      }
     	},
+    	validClass: "success",
     	errorPlacement: function(error, element) {
     		error.insertAfter('#error_' + element.attr('id'));
-      		//$('#' + element.attr('id'))/*.removeClass('required')*/.removeClass('success').addClass('error'); 
-    	},
-    	success: function(label) {
-    		$('#' + label.attr('for')).removeClass('required').removeClass('error').addClass('success');
-      		$('#label_' + label.attr('for')).removeClass('error-label').addClass('required-label');
-      		$('#error_' + label.attr('for')).html("");
-      	}
+      		//$('#' + element.attr('id')).removeClass('required').removeClass('success').addClass('error'); 
+    	}, 
+		success: function(label) {
+			$('#' + label.attr('for')).removeClass('required').removeClass('error').addClass('success');
+			$('#label_' + label.attr('for')).removeClass('error-label').addClass('required-label');
+			$('#error_' + label.attr('for')).html("");
+			$('#state_' + label.attr('for')).removeClass("state-background-empty").addClass("state-background-tick");
+		}
 	});	
 }
 
 function errorMessageUpdate( element ) {
-	if($('#' + element).valid()) {
-		$('#state_' + element).removeClass("state-background-empty").addClass("state-background-tick");
+	if (submitButtonPressed) {
+		if($("#" + element).valid()) {
+			$('#state_' + element).removeClass("state-background-empty").addClass("state-background-tick");
+		} else {
+			$("#" + element).addClass('required');
+			$('#state_' + element).removeClass("state-background-tick").addClass("state-background-empty");
+		}
 	} else {
-		$('#state_' + element).removeClass("state-background-tick").addClass("state-background-empty");
+		if (!$("#" + element).val().length > 0) {
+			$("#" + element).removeClass('success').removeClass('error').addClass('required');
+			$('#state_' + element).removeClass("state-background-tick").addClass("state-background-empty");
+			// Specially for email input
+			$("#" + element + "-error").remove();			
+		}
 	}
 }
 
+// Validation after reCaptcha failed and all fields are filled
+function onFilledFormValidation() {
+	var ifFieldsEmpty = false;
+	$(".input-form").each(function() {
+		if($(this).val() === "")
+			ifFieldsEmpty = true;
+	});
+
+	if(!ifFieldsEmpty)
+		$("div #form_letter").valid();
+}
+
 $(window).load( function() {	
-	$("input[name=recaptcha_response_field]").attr("tabindex","14");
+
+	// $("input[name=recaptcha_response_field]").attr("tabindex","14");
+	// var recaptcha = $(document).find("div.rc-anchor-checkbox-holder span#recaptcha-anchor");
+	// alert($(".recaptcha-anchor .recaptcha-anchor-content .rc-anchor-item .rc-anchor-checkbox-holder #recaptcha-anchor").attr("role"));
+	// alert($("span#recaptcha-anchor").attr("role"));
+
+	// alert($(recaptcha).attr("tabindex"));
+	// $(recaptcha).attr("tabindex","14");
 
 	formValidate();
+	
+	onFilledFormValidation();
 
 	//Live validation
 	$("#reg_letter_name_first").on("blur", function () {
@@ -279,5 +316,5 @@ $(window).load( function() {
         	e.preventDefault();
       		$("#g-recaptcha-response").focus();
         }
-    });     		
+    });     		    
 });

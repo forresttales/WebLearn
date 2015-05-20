@@ -1,0 +1,234 @@
+  @font-face {
+    font-family: 'ChunkFive Regular';
+    src: asset-url('Chunkfive.eot');
+    src: local('ChunkFive Regular'), local('ChunkFive'), asset-url('Chunkfive.woff') format('woff'), asset-url('Chunkfive.otf') format('opentype');
+  }
+  @font-face {
+    font-family: 'Artifika';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Artifika Medium'), local('Artifika-Medium'), asset-url('Artifika-Regular.woff') format('woff'), asset-url('Artifika-Regular.ttf') format('truetype');
+  }
+  // @font-face {
+      // font-family: 'msyh';
+      // src: asset-url('msyh.eot') format('embedded-opentype'), asset-url('msyh.ttf') format('truetype');
+  // }
+  // @font-face {
+      // font-family: 'msyhb';
+      // src: asset-url('msyhb.eot') format('embedded-opentype'), asset-url('msyhb.ttf') format('truetype');
+  // }
+  @font-face {
+    font-family: 'quattrocento';
+    font-style: normal;
+    font-weight: 400;
+    src: asset-url('QuattrocentoSans.woff') format('woff');
+  }   
+  @font-face {
+    font-family: 'Quattrocento';
+    font-style: normal;
+    font-weight: 400;
+    src: asset-url('QuattrocentoSans.woff') format('woff');
+  }   
+  @font-face {
+    font-family: 'Quattrocento Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: asset-url('QuattrocentoSans.woff') format('woff');
+  }   
+  @font-face {
+      font-family: 'QuattrocentoSans-Regular';
+      src: asset-url('QuattrocentoSans-Regular.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'QuattrocentoSans-Italic';
+      src: asset-url('QuattrocentoSans-Italic.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'QuattrocentoSans-Bold';
+      src: asset-url('QuattrocentoSans-Bold.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'QuattrocentoSans-BoldItalic';
+      src: asset-url('QuattrocentoSans-BoldItalic.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'KlavikaExtraLight';
+    src: asset-url('KlavikaWebDisplayExtraLight.eot');
+    src: asset-url('KlavikaWebDisplayExtraLight.eot?#iefix') format('embedded-opentype'), asset-url('KlavikaWebDisplayExtraLight.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'KlavikaLight';
+    src: asset-url('KlavikaWebBasicLight.eot');
+    src: asset-url('KlavikaWebBasicLight.eot?#iefix') format('embedded-opentype'), asset-url('KlavikaWebBasicLight.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'KlavikaRegular';
+    src: asset-url('KlavikaWebBasicRegular.eot');
+    src: asset-url('KlavikaWebBasicRegular.eot?#iefix') format('embedded-opentype'), asset-url('KlavikaWebBasicRegular.woff') format('woff');
+  }   
+  @font-face {
+    font-family: 'KlavikaMedium';
+    src: asset-url('KlavikaWebBasicMedium.eot');
+    src: asset-url('KlavikaWebBasicMedium.eot?#iefix') format('embedded-opentype'), asset-url('KlavikaWebBasicMedium.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'KlavikaBold';
+    src: asset-url('KlavikaWebBasicBold.eot');
+    src: asset-url('KlavikaWebBasicBold.eot?#iefix') format('embedded-opentype'), asset-url('KlavikaWebBasicBold.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'KlavikaBlack';
+    src: asset-url('KlavikaWebDisplayBlack.eot');
+    src: asset-url('KlavikaWebDisplayBlack.eot?#iefix') format('embedded-opentype'), asset-url('KlavikaWebDisplayBlack.woff') format('woff');
+  }
+  @font-face {
+      font-family: 'AsSeenOnTV';
+      src: asset-url('AsSeenOnTV.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'AsseenonTVSkew';
+      src: asset-url('AsseenonTVSkew.ttf') format('truetype');
+  }
+
+  @font-face {
+      font-family: 'Actor';
+      font-style: normal;
+      font-weight: 400;
+      // src: local('Actor Regular'), local('Actor-Regular'), url(http://fonts.gstatic.com/s/actor/v6/OxqeYhb8dn7VMNU4gi8OwA.woff2) format('woff2'), url(http://fonts.gstatic.com/s/actor/v6/gZ8EM_Gzaq4WRjCimioyzQ.woff) format('woff');
+      src: local('Actor Regular'), local('Actor-Regular'), asset-url('Actor_Regular.woff2') format('woff2'), asset-url('Actor_Regular.woff') format('woff');
+  }
+  @font-face {
+      font-family: 'Quicksand';
+      font-style: normal;
+      font-weight: 400;
+      // src: local('Quicksand Regular'), local('Quicksand-Regular'), url(http://fonts.gstatic.com/s/quicksand/v5/sKd0EMYPAh5PYCRKSryvW1tXRa8TVwTICgirnJhmVJw.woff2) format('woff2'), url(http://fonts.gstatic.com/s/quicksand/v5/sKd0EMYPAh5PYCRKSryvWz8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+      src: local('Quicksand Regular'), local('Quicksand-Regular'), asset-url('Quicksand_Regular.woff2') format('woff2'), asset-url('Quicksand_Regular.woff') format('woff');
+  }
+
+
+  /*@font-face {
+    font-family: 'NotethisRegular';
+    src: asset-url('Note_this.eot');
+    src: local('Note this Regular'), local('Notethis'), asset-url('Note_this.ttf') format('truetype');
+    
+  }
+  @font-face {
+      font-family: 'bytes';
+      src: asset-url('bytes.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'BNEfG';
+      src: asset-url('BNEfG98.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'BNEG';
+      src: asset-url('BNEG98.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'BNEnG';
+      src: asset-url('BNEnG98.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'BNEoG';
+      src: asset-url('BNEoG98.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'copyviol';
+      src: asset-url('Copyviol.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'copyvlN';
+      src: asset-url('CopyvlN.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'crackdr2';
+      src: asset-url('crackdr2.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'crkdownr';
+      src: asset-url('crkdownr.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'crkdwno1';
+      src: asset-url('crkdwno1.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'crkdwno2';
+      src: asset-url('BNEfG98.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'forgotbi';
+      src: asset-url('Forgotbi.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'forgottb';
+      src: asset-url('Forgottb.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'forgotte';
+      src: asset-url('Forgotte.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'forgotti';
+      src: asset-url('Forgotti.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'forgotts';
+      src: asset-url('Forgotts.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'ffs';
+      src: asset-url('ForgottenFuturistShadow.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'excelsiorcomics';
+      src: asset-url('excelsiorcomics.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'exelsiorcomics3d';
+      src: asset-url('exelsiorcomics3d.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'exelsiorcomics3dital';
+      src: asset-url('exelsiorcomics3dital.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'exelsiorcomicscond';
+      src: asset-url('exelsiorcomicscond.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'exelsiorcomicscondital';
+      src: asset-url('exelsiorcomicscondital.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'excelsiorcomicsexpand';
+      src: asset-url('excelsiorcomicsexpand.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'excelsiorcomicsexpandital';
+      src: asset-url('excelsiorcomicsexpandital.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'excelsiorcomicsital';
+      src: asset-url('excelsiorcomicsital.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'excelsiorcomicsleft';
+      src: asset-url('excelsiorcomicsleft.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'JuneBug';
+      src: asset-url('JuneBug.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'Vollkorn-Italic';
+      src: asset-url('Vollkorn-Italic.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'JandaCheerfulScript';
+      src: asset-url('JandaCheerfulScript.ttf') format('truetype');
+  }
+  @font-face {
+      font-family: 'second-breakfast';
+      src: asset-url('second-breakfast.ttf') format('truetype');
+  }*/

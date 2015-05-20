@@ -1,0 +1,225 @@
+<% provide(:title, 'Special Report') %>
+
+<%= javascript_include_tag "jqModal" %>
+<%= javascript_include_tag "jquery.validate" %>
+
+<%= render 'share/backtotop' %>
+
+<div class="special-reports">
+	
+	<div class="jqmWindow-special-reports-1" id="dialog_special_reports_1">
+		<div class="seperator-special-reports" style="margin-top:0px;">
+		<%= image_tag("logo-icon-come-together.png", alt: "X") %>
+		DOWNLOAD
+		</div>
+   		<div class="table-dl-form">
+   			<div class="row">
+   				<div class="cell-100percent">
+   					<div id="close_form1" class="form-edit-close jqmClose" tabindex="1">
+   						<%= image_tag("x_close_w20_h20.png", alt: "X", height: "20px") %>
+   					</div>
+   					<div style="clear: both;"></div>
+   				</div>
+			</div>
+		</div>				   				
+		<hr class="dl-form-divider-line">
+		<div style="height: 10px;"></div>
+   		<div class="table-dl-form">
+   			<div class="row">
+   				<div class="cell-100percent" style="text-align: center;">
+   					<span class="form-pdf-title">
+   						<em>For free viewing and download,</em>
+   						<br>
+   						please enter the email tied with your Community Registration.
+   					</span>
+   				</div>
+			</div>
+		</div>				   				
+		<div style="height: 20px;"></div>
+		<form id="form_pdf" class="form-pdf">
+			<div class="table-dl-form-background">
+		   		<div class="table-dl-form">
+		   			<div class="row">
+		   				<div class="cell-200"></div>
+		   				<div class="cell-300">
+							<input class="input-gen" id="dl_email" name="dl[email]" placeholder="Email" tabindex="2" type="" autofocus />
+		   				</div>
+		   				<div class="cell-200">
+		   					<div id="error_dl_email" class="form-dl-error error-div"><span></span></div>
+		   				</div>
+   					</div>
+   				</div>
+			</div>
+			<div style="height: 10px;"></div>
+	   		<!-- <div class="table-dl-form">
+	   			<div class="row">
+	   				<div class="cell-100">
+	   				</div>
+	   				<div class="cell-600">
+	   					<span class="form-pdf-title-2">
+	   						Open PDF: 
+	   					</span>
+	   				</div>
+				</div>
+	   			<div class="row">
+	   				<div class="cell-100">
+	   				</div>
+	   				<div class="cell-600">
+						<div style="display: inline-block; width: 20px;"></div>
+						<div id="div_rd_win_same" class="rd-button"></div>
+						<input id="rd_win_same" type="radio" value="1" name="rd_win">
+						<label id="label_rd_win_same" class="label-rd" tabindex="3" onclick="rd_win('same');" for="rd_win">
+		   					<span class="form-pdf-title-2">
+		   						on this page <em> - the browser's back arrow may be used to return to the Learning Counsel</em>
+		   					</span>
+						</label>
+	   				</div>
+				</div>
+				<div class="row" style="height: 4px;"></div>
+	   			<div class="row">
+	   				<div class="cell-100">
+	   				</div>
+	   				<div class="cell-600">
+						<div style="display: inline-block; width: 20px;"></div>
+						<div id="div_rd_win_new" class="rd-button"></div>
+						<input id="rd_win_new" type="radio" value="2" name="rd_win">
+						<label id="label_rd_win_new" class="label-rd" tabindex="4" onclick="rd_win('new');" for="rd_win">
+		   					<span class="form-pdf-title-2">
+		   						in a new window / tab <em> - the new tab opens to the left of this page</em>
+		   					</span>
+						</label>
+	   				</div>
+				</div>
+			</div> -->				   				
+			<!-- <div style="height: 16px;"></div> -->
+			<div class="table-dl-form">
+	   			<div class="row">
+	   				<div class="cell-100percent" style="text-align: center;">
+						<input id="submit_dl_contact" class="btn-submit" type="submit" value="Submit" tabindex="4">
+	   				</div>
+				</div>
+			</div>														   				
+		</form>
+		<div style="height: 20px;"></div>
+   		<div class="table-dl-form">
+   			<div class="row">
+   				<div class="cell-100percent" style="text-align: center;">
+   					<span class="form-pdf-title">
+   						<em>Not registered in our Community?</em>
+   						<br>
+   						<a href="/CommunityRegistration">&laquo; Community Registration &raquo;</a>
+   					</span>
+   				</div>
+			</div>
+		</div>				   								
+	</div>
+
+	<div class="main">
+		<div class="seperator">
+			<!-- <img height="20px" src="/repository/logo-boxes-alone.png" alt="X"> -->
+			<%= image_tag("logo-boxes-alone-w80-h80.png", alt: "logo-boxes-alone-w80-h80.png", height: "80px") %>
+			SPECIAL REPORT
+		</div>
+		<div class="height-30"></div>
+		<div id="render_download_msg" class="render-download-msg blink-me"></div>
+		<div class="table">
+			<div class="row">
+				<div id="main-report-cell" class="table-cell width-550">
+					<h2>SPRING/SUMMER SPECIAL REPORT</h2>
+					<br/>
+					<p class="p-1">What is a "Model Architecture" for transitioning to digital curriculum? What are other schools doing? This Special Report brings together our past year's work, plus showcases some of the more advanced schools in the U.S. working on bringing some order to the mass of potential learning objects and tactics.</p>
+					<!-- <a class="" href="/pdfs/spec_report/spec-report-web.pdf"> -->
+					<div class="jqModal jqModal-test hover-pointer" id="pdf_1">
+						<!-- <img class="cover" src="/repository/spec_report/cover.jpg"> -->
+						<%= image_tag("special_reports/cover-w350-h453.jpg", alt: "cover-w350-h453.jpg", height: "453px", class: "cover") %>
+						<br/><br/>
+						<span class="cover-download">DOWNLOAD</span>
+					</div>
+				</div>
+				<div class="table-cell width-75"></div>
+				<div id="main-report-cell" class="table-cell width-470">
+					<!-- <a target="_blank" href="https://business.t-mobile.com/schools-libraries-e-rate"> -->
+					<!-- <div class="jqModal hover-pointer" id="pdf_2"> -->
+					<div>
+						<!-- <img class="left-img margin-left-minus-25" alt="T-Mobile" src="/repository/spec_report/t-mobile-square-ad.jpg"> -->
+						<a href="https://business.t-mobile.com/schools-libraries-e-rate"><%= image_tag("special_reports/t-mobile-square-ad-w220-h220.jpg", alt: "t-mobile-square-ad-w220-h220.jpg", height: "220px", class: "left-img margin-left-minus-25") %></a>
+					</div>
+					<!-- <a target="_blank" href="http://www.hmhco.com/educators/digital-and-mobile-learning/by-platform/hmh-player?dm=136826a"> -->
+					<!-- <div class="jqModal hover-pointer" id="pdf_3"> -->
+					<div>
+						<!-- <img class="left-img margin-left-16" alt="HMH" src="/repository/spec_report/hmh-ad.jpg"> -->
+						<a href="http://www.hmhco.com/educators/digital-and-mobile-learning/by-platform/hmh-player?dm=136826a"><%= image_tag("special_reports/hmh-ad-w220-h220.jpg", alt: "hmh-ad-w220-h220.jpg", height: "220px", class: "left-img margin-left-16") %></a>
+					</div>
+					<div class="height-38 clear-both"></div>
+					<a class="" href="/Self-Assessment">
+						<!-- <img class="survey-ad" src="/repository/spec_report/survey-ad.jpg"> -->
+						<%= image_tag("special_reports/survey-ad-w455-h387.jpg", alt: "survey-ad-w455-h387.jpg", height: "387px", class: "survey-ad") %>
+					</a>
+				</div>
+			</div>
+		</div>
+			<div class="spec-divider">
+				<h2>FEATURE VIDEO INTERVIEWS</h2>
+			</div>
+
+			<div id="main-report-fold">
+				<iframe class="tscplayer_inline embeddedObject" name="tsc_player" scrolling="no" frameborder="0" type="text/html" style="overflow:hidden;" src="http://www.screencast.com/users/LearningCounsel/folders/Special Report_Strategy/media/cb5edcf0-ca79-448d-b340-42ee430396f1/embed" height="240" width="355" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+				<iframe class="tscplayer_inline embeddedObject" name="tsc_player" scrolling="no" frameborder="0" type="text/html" style="overflow:hidden;" src="http://www.screencast.com/users/LearningCounsel/folders/Special Report_Strategy/media/af8bce33-79db-4738-9f84-a1ec4a7c568d/embed" height="240" width="355" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				<iframe class="tscplayer_inline embeddedObject" name="tsc_player" scrolling="no" frameborder="0" type="text/html" style="overflow:hidden;" src="http://www.screencast.com/users/LearningCounsel/folders/Special Report_Strategy/media/dbbfe0f2-461b-4f13-aa1f-258abd3a0c05/embed" height="240" width="355" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+				<iframe class="tscplayer_inline embeddedObject" name="tsc_player" scrolling="no" frameborder="0" type="text/html" style="overflow:hidden;" src="http://www.screencast.com/users/LearningCounsel/folders/Special Report_Strategy/media/28513394-50a1-4eab-861c-0d44ceec2965/embed" height="240" width="355" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+				<iframe class="tscplayer_inline embeddedObject" name="tsc_player" scrolling="no" frameborder="0" type="text/html" style="overflow:hidden;" src="http://www.screencast.com/users/LearningCounsel/folders/Special Report_Strategy/media/b4986cce-799a-488b-b1a1-f16a32f73f49/embed" height="240" width="356" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+				<div class="spec-divider">
+					<h2>SPECIAL REPORT SPOTLIGHT ARTICLES</h2>
+				</div>
+				<!-- Article Box-->
+				<!-- <a class="article-box fl" href="/pdfs/spec_report/chicago-web.pdf"> -->
+				<div class="jqModal hover-pointer article-box fl" id="pdf_4">
+					<!-- <img src="/repository/spec_report/chicago-article.jpg"> -->
+					<%= image_tag("special_reports/chicago-article-w260-h336.jpg", alt: "chicago-article-w260-h336.jpg", height: "336px") %>
+				</div>
+				<!-- <a class="article-box fl" href="/pdfs/spec_report/reconstructing-web.pdf"> -->
+				<div class="jqModal hover-pointer article-box fl" id="pdf_5">
+					<!-- <img src="/repository/spec_report/restructure.jpg"> -->
+					<%= image_tag("special_reports/restructure-w260-h336.jpg", alt: "restructure-w260-h336.jpg", height: "336px") %>
+				</div>
+				<!-- <a class="article-box fl" href="/pdfs/spec_report/fresno-web.pdf"> -->
+				<div class="jqModal hover-pointer article-box fl" id="pdf_6">
+					<!-- <img src="/repository/spec_report/fresno-article.jpg"> -->
+					<%= image_tag("special_reports/fresno-article-w260-h336.jpg", alt: "fresno-article-w260-h336.jpg", height: "336px") %>
+				</div>
+				<!-- <a class="article-box fl" href="/pdfs/spec_report/houston-web.pdf"> -->
+				<div class="jqModal hover-pointer article-box fl" id="pdf_7">
+					<!-- <img src="/repository/spec_report/houston-article.jpg"> -->
+					<%= image_tag("special_reports/houston-article-w260-h336.jpg", alt: "houston-article-w260-h336.jpg", height: "336px") %>
+				</div>
+				<!-- <a class="article-box fl" href="/pdfs/spec_report/model-arch-web.pdf"> -->
+				<div class="jqModal hover-pointer article-box fl" id="pdf_8">
+					<!-- <img src="/repository/spec_report/model-arch.jpg"> -->
+					<%= image_tag("special_reports/model-arch-w260-h336.jpg", alt: "model-arch-w260-h336.jpg", height: "336px") %>
+				</div>
+				<!-- <a class="article-box fl" href="/pdfs/spec_report/new-jersey-web.pdf"> -->
+				<div class="jqModal hover-pointer article-box fl" id="pdf_9">
+					<!-- <img src="/repository/spec_report/nj-article.jpg"> -->
+					<%= image_tag("special_reports/nj-article-w260-h336.jpg", alt: "nj-article-w260-h336.jpg", height: "336px") %>					
+				</div>
+				<!-- <a class="article-box fl" href="/pdfs/spec_report/north-carolina-web.pdf"> -->
+				<div class="jqModal hover-pointer article-box fl" id="pdf_10">
+					<!-- <img src="/repository/spec_report/northcarolina-article.jpg"> -->
+					<%= image_tag("special_reports/northcarolina-article-w260-h336.jpg", alt: "northcarolina-article-w260-h336.jpg", height: "336px") %>					
+				</div>
+				<!-- <a class="article-box fl" href="/pdfs/spec_report/point-of-view-web.pdf"> -->
+				<div class="jqModal hover-pointer article-box fl" id="pdf_11">
+					<!-- <img src="/repository/spec_report/point-of-view-web.jpg"> -->
+					<%= image_tag("special_reports/point-of-view-web-w260-h336.jpg", alt: "point-of-view-web-w260-h336.jpg", height: "336px") %>
+				</div>
+				<div class="clear-both height-10 margin-top-15"></div>
+			</div>
+	</div>
+</div>
+
+<div style="height: 100px;"></div>
+	
+<script>
+	
+	
+</script>

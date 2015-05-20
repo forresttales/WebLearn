@@ -1,138 +1,270 @@
 <% provide(:title, 'Talk Here') %>
 
-	<!-- <script type="text/javascript" src="/assets/entrepeneurs_jquery-1.js"></script> -->
 	
-	<script type="text/javascript" src="../scripts/jquery-1.4.1.min.js"></script>
-
-	<style type="text/css">
+<style type="text/css">
 										
-		@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
+		/*@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);*/
+.static-pages-talk-here .static-pages-talk-here {
+	width: 1200px; 
+	height: 1670px; 
+	margin-right: auto; 
+	margin-left: auto; 
+	background: #fff;
+}
+.static-pages-talk-here .promote {
+	font-family: 'Quattrocento', Arial, Helvetica, sans-serif; 
+	font-size: 25px; 
+	color: #41b737;
+}
+.static-pages-talk-here .author-column {
+	width: 350px;
+}								
+.static-pages-talk-here .author-column {
+	float:right;
+}
+.static-pages-talk-here .author-column p {
+	font-family: 'Quattrocento', Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 1; 	
+}
+.static-pages-talk-here p a:link {
+	font-family: 'Quattrocento', Arial, Helvetica, sans-serif;
+	color:#41b737;
+}
+.static-pages-talk-here p a:visited {
+	font-family: 'Quattrocento', Arial, Helvetica, sans-serif;
+	color:#41b737;
+}
+.static-pages-talk-here .authors-featured p.title-header {
+	font-family: 'QuattrocentoSans-Regular', Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	/*font-weight: 700;*/
+	line-height: 1; 
+	color:#376340;
+}
+.static-pages-talk-here .authors-featured .author-main p {
+	font-family: 'QuattrocentoSans-Regular', Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	/*font-weight: 700;*/
+	line-height: 1; 
+	color:#376340;
+}
 
-		/*.kontainer { border:2px solid #f7f7f7;
-   		 box-shadow: 4px 4px 4px #CCC;
-   			width: 950px;
-   			 padding-left:20px;}*/
+/*bodykopy p {
+	margin-top: 0px;
+	margin-bottom: 0.9em;
+	font-family: Vollkorn, "Times New Roman";
+	font-size: 16px;
+	color: #000000;
+	line-height: 1.5em;
+	letter-spacing: -0.01em
+}
+bodykopy ol, #bodykopy ul {
+	font-family: Vollkorn, "Times New Roman";
+	font-size: inherit
+}
+#bodykopy strong, #bodykopy b {
+	font-family: KlavikaBlack;
+	font-size: 18px;
+	margin-top: 0px;
+	margin-bottom: 0.8em;
+	font-weight: normal;
+	letter-spacing: 0
+}*/
 
-   		.promote {font-family:Quattrocento sans; font-size: 25px; color: #41b737;}
-		.author-column {width: 350px;}								
-	</style>
+
+
+
+
+.static-pages-talk-here .talk-here-photo {
+	float: left; 
+	margin-bottom: 55px;
+    margin-right: 30px;
+    width: 350px;
+}
+.static-pages-talk-here .talk-here-links {
+	margin-top:200px;
+}
+.static-pages-talk-here .talk-here-links a {
+	border: 1px solid transparent; 
+	border-radius: 10px; 
+	margin: 20px 0px 10px 25px;
+}
+.static-pages-talk-here .arti-link{
+	background: #41b737; 
+	color: #fff; 
+	padding: 5px 10px;
+}
+.static-pages-talk-here .comm-link{
+	background: #376340; 
+	color: #fff; 
+	padding: 5px 10px;
+}
+.static-pages-talk-here .cont-link{
+	background: #a6a6a6; 
+	color: #fff; 
+	padding: 5px 10px;
+}
+.static-pages-talk-here .spon-link{
+	background: #808080; 
+	color: #fff; 
+	padding: 5px 10px;
+}
+.static-pages-talk-here #render_ad .k-img{
+	height: 400px !important; 
+	position: absolute; 
+	top: 0px; 
+	right: 0px;
+}
+.static-pages-talk-here .author-main {
+	width: 578px; 
+	margin-top: 50px;
+}
+.static-pages-talk-here .author-main img.auth-pic {
+	float: left;
+    height: 130px;
+    padding: 10px 15px 10px 10px;
+}
+.static-pages-talk-here .author-main h3 {
+    color: #41b737;
+    margin: 0 0 35px;
+    padding: 7px 15px 0 0;
+    text-align: right;
+}
+
+.static-pages-talk-here .author-main .a-column-box {
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    padding-bottom: 50px;
+    width: 575px;
+}
+.static-pages-talk-here .author-main .a-column-box p {
+    font-family: KlavikaRegular, sans;
+    font-size: 18px !important;
+    margin: 5px 0;
+    padding: 0 10px;
+    line-height: 1.1em;
+}
+.static-pages-talk-here .author-main .author-header {
+	background: none repeat scroll 0 0 #818181;
+    color: #fff;
+    font-size: 20px;
+    padding: 7px 0;
+    text-align: center;
+    margin-bottom:7px;
+}
+/*.kontainer {
+	margin-bottom: 0;
+}*/
+.static-pages-talk-here .kontainer {
+    clear: both;
+    margin: 0 auto;
+    padding-left: 20px;
+    position: relative;
+    width: 970px;
+}
+.static-pages-talk-here .kontainer-space-1 {
+    height: 30px;
+}
+.static-pages-talk-here .kontainer-space-2 {
+    height: 30px;
+}
+
+</style>
+
+<%= render 'share/backtotop' %>
 							
-	<div style="width: 1200px; height: 1670px; margin-right: auto; margin-left: auto; background: #fff;">
-
-		<header>				
-				
-			<%= render 'share/backtotop' %>
-			
-		</header>		
-		<div class="seperator-3"><img src="/repository/logo-boxes-alone.png">Talk Here
+<div class="static-pages-talk-here">
+	<div class="seperator-3">
+		<img src="/repository/logo-boxes-alone.png">
+		Talk Here
+	</div>
+	<div class="kontainer">
+		<div class="kontainer-space-1"></div>
+		<div>
+			<div>
+				<div class="author-column">
+					<h2 class="author-header">FEATURED AUTHORS</h2>
+					<div class="a-column-box" style="margin-top: 3px; border-top: 1px solid gray;">
+						<img class="auth-pic" style="width:170px;" src="/repository/events/lani-small.jpg" alt="Leilani Cauthen">
+						<h3>LEILANI CAUTHEN</h3>
+						<p>Well versed in digital content and curriculum
+							change, the adoption process,
+							successful strategies, and helping
+							schools understand what’s available
+							and what will work.
+							Leilani is a consulting, media, research,
+							marketing and sales professional with 26 years of experience
+							in the high tech, government and education sectors.</p>
+						<div class="social-links-author">
+							<a href="https://www.facebook.com/leilani.cauthen" target="_blank"><img src="/repository/facebook.png" alt="Facebook"></a>
+							<a href="https://twitter.com/leilanicauthen" target="_blank"><img src="/repository/twitter.png" alt="Twitter"></a>
+							<a href="https://www.linkedin.com/profile/view?id=101158241" target="_blank"><img src="/repository/linkedin.png" alt="LinkedIn"></a>
+						</div>
+					</div>
+					<div class="a-column-box">
+						<img class="auth-pic" style="width:170px;" src="/repository/events/david.png" alt="David Kafitz">
+						<h3>DAVID KAFITZ, Ed.D.</h3>
+						<p>Expert and charismatic change-agent
+							helping schools move forward with
+							a well-reasoned strategy for digital
+							content and curriculum, professional
+							development and IT strategy.
+							Former Superintendent, Director of
+							Technology Services, Principal, and Teacher in North Carolina
+							Public Schools.</p>
+							<div class="social-links-author">
+							<a href="https://www.facebook.com/dkafitz" target="_blank"><img src="/repository/facebook.png" alt="Facebook"></a>
+							<a href="https://twitter.com/david_kafitz" target="_blank"><img src="/repository/twitter.png" alt="Twitter"></a>
+							<a href="https://www.linkedin.com/profile/view?id=78484533" target="_blank"><img src="/repository/linkedin.png" alt="LinkedIn"></a>
+						</div>
+					</div>
+					<div class="a-column-box">
+						<img class="auth-pic" style="width:170px;" src="/repository/events/joe-du.jpg" alt="Joe Due Fore">
+						<h3>JOE DU FORE</h3>
+						<p>Founder of the Exceptional Language
+							& Innovation Academy and
+							owner of both Newline Education
+							and Digital Publishing House LLC,
+							Joe Du Fore started his educational
+							career as a Biology and mathematics teacher. He then
+							moved on to be a Professor of Education and Executive
+							Director of the Instructional Design Center at
+							Wisconsin Lutheran College. He now devotes all of
+							his time to writing and traveling the world, promoting
+							digital citizenship, literacy, immersion and creativity
+							through digital infusion and understanding. As
+							a TEDx presenter, self-inflicted techno-twerp, educational
+							entrepreneur, and poor unicyclist, Joe spends
+							his time consulting, motivational speaking, and helping
+							teachers, schools and communities identify ways
+							to best incorporate technology.</p>
+					</div>
+					<div class="a-column-box" style="margin-bottom: 50px;">
+						<img class="auth-pic" style="width:170px;" src="/repository/dr-marion.jpg" alt="Dr. Marion Blank">
+						<h3>DR. MARION BLANK</h3>
+						<p>Director of Education for ReadingKingdom, a revolutionary online reading & writing program. She is a world-renowned literacy and language expert on the faculty of Columbia University where she created and directed the Light on Literacy Program. She has lectured extensively around the world, authored dozens of peer-reviewed articles and books and developed numerous award winning teaching programs. She is also a recipient of the Upton Sinclair Award which honors individuals who have made a significant contribution to Education.</p>
+					</div>
+				</div>
+				<div class="authors-featured">
+					<%= render 'share/talk_here' %>
+				</div>
+				<!-- <bodycopy id="bodykopy"></bodycopy> -->
+			</div>
+			<br clear="all">
+		</div>
+		<div id="k-sidebar">
+			<div id="k-sidebar_inner">
+				<!--<div style="">
+				    <img src="../repository/logo-icon-lc.png" alt="logo-icon-lc.png" >
+				</div> -->
+			</div>
+		</div>
+		<br clear="all">
+		<div class="kontainer-space-2"></div>
+	</div>
 </div>
-		<section>
-			
-			<div class="kontainer">
-				
-				<div class="kontainer-space-1"></div>
-				
-				
-					<div>
-						<div>
-		    				<!-- Start author column -->
-	<div class="author-column">
-		<h2 class="author-header">FEATURED AUTHORS</h2>
-		<div class="a-column-box" style="margin-top: 3px; border-top: 1px solid gray;">
-			<img class="auth-pic" src="/repository/events/lani-small.jpg" alt="Leilani Cauthen">
-			<h3>LEILANI CAUTHEN</h3>
-			<p>Well versed in digital content and curriculum
-				change, the adoption process,
-				successful strategies, and helping
-				schools understand what’s available
-				and what will work.
-				Leilani is a consulting, media, research,
-				marketing and sales professional with 26 years of experience
-				in the high tech, government and education sectors.</p>
-			<div class="social-links-author">
-				<a href="https://www.facebook.com/leilani.cauthen" target="_blank"><img src="/repository/facebook.png" alt="Facebook"></a>
-				<a href="https://twitter.com/leilanicauthen" target="_blank"><img src="/repository/twitter.png" alt="Twitter"></a>
-				<a href="https://www.linkedin.com/profile/view?id=101158241" target="_blank"><img src="/repository/linkedin.png" alt="LinkedIn"></a>
-			</div>
-		</div>
 
-		<div class="a-column-box">
-			<img class="auth-pic" src="/repository/events/david.png" alt="David Kafitz">
-			<h3>DAVID KAFITZ, Ed.D.</h3>
-			<p>Expert and charismatic change-agent
-				helping schools move forward with
-				a well-reasoned strategy for digital
-				content and curriculum, professional
-				development and IT strategy.
-				Former Superintendent, Director of
-				Technology Services, Principal, and Teacher in North Carolina
-				Public Schools.</p>
-				<div class="social-links-author">
-				<a href="https://www.facebook.com/dkafitz" target="_blank"><img src="/repository/facebook.png" alt="Facebook"></a>
-				<a href="https://twitter.com/david_kafitz" target="_blank"><img src="/repository/twitter.png" alt="Twitter"></a>
-				<a href="https://www.linkedin.com/profile/view?id=78484533" target="_blank"><img src="/repository/linkedin.png" alt="LinkedIn"></a>
-			</div>
-		</div>
-
-		<div class="a-column-box">
-			<img class="auth-pic" src="/repository/events/joe-du.jpg" alt="Joe Due Fore">
-			<h3>JOE DU FORE</h3>
-			<p>Founder of the Exceptional Language
-				& Innovation Academy and
-				owner of both Newline Education
-				and Digital Publishing House LLC,
-				Joe Du Fore started his educational
-				career as a Biology and mathematics teacher. He then
-				moved on to be a Professor of Education and Executive
-				Director of the Instructional Design Center at
-				Wisconsin Lutheran College. He now devotes all of
-				his time to writing and traveling the world, promoting
-				digital citizenship, literacy, immersion and creativity
-				through digital infusion and understanding. As
-				a TEDx presenter, self-inflicted techno-twerp, educational
-				entrepreneur, and poor unicyclist, Joe spends
-				his time consulting, motivational speaking, and helping
-				teachers, schools and communities identify ways
-				to best incorporate technology.</p>
-		</div>
-		<div class="a-column-box" style="margin-bottom: 50px;">
-			<img class="auth-pic" src="/repository/dr-marion.jpg" alt="Dr. Marion Blank">
-			<h3>DR. MARION BLANK</h3>
-			<p>Director of Education for ReadingKingdom, a revolutionary online reading & writing program. She is a world-renowned literacy and language expert on the faculty of Columbia University where she created and directed the Light on Literacy Program. She has lectured extensively around the world, authored dozens of peer-reviewed articles and books and developed numerous award winning teaching programs. She is also a recipient of the Upton Sinclair Award which honors individuals who have made a significant contribution to Education.</p>
-		</div>
-	</div>
-<!-- End author column -->
-								
-							<bodycopy id="bodykopy">
-								
-			 					<%= render 'share/talk_here' %>
-			 						
-							</bodycopy>
-	
-						</div>
-	
-						<br clear="all">
-						
-					</div>
-	
-					<div id="k-sidebar">
-						<div id="k-sidebar_inner">
-
-							<!--<div style="">
-							    <img src="../repository/logo-icon-lc.png" alt="logo-icon-lc.png" >
-							</div> -->
-								
-						</div>
-					</div>
-
-					<br clear="all">
-			
-					<div class="kontainer-space-2"></div>
-					
-			</div>
-			
-		</section>
-
-	</div>
 <script type="text/javascript" src="../journalscripts/runningad.js"></script> 
 

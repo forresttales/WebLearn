@@ -1,0 +1,29 @@
+<div id="download_msg_free" class="download-msg-free">
+	<span>&laquo; &laquo; &laquo; View/Download PDF's &raquo; &raquo; &raquo;</span>
+</div>
+
+<script>
+
+	function hoverBlinker() {
+		$("#download_msg_free").removeClass("blink-me").addClass("download-msg-blinker");
+	}
+
+	function blinker() {
+		$(".blink-me").each( function() {
+			for(var i = 0; i < 3; i++) {
+				$(this).fadeIn(100).delay(500).fadeOut(500);
+			}
+		});
+		$(".blink-me").fadeIn(400);
+		hoverBlinker();
+	}
+
+	// $(window).load( function() {
+	$(document).ready(function(){
+
+		$("#download_msg_free").addClass("blink-me");		
+		blinker();
+				
+	});
+	
+</script>

@@ -28,7 +28,7 @@ class RegCommunsController < ApplicationController
 
   def create
     
-      if verify_recaptcha(:message => "reCAPTCHA erro")
+      # if verify_recaptcha(:message => "reCAPTCHA erro")
     
           @reg_commun = RegCommun.new(reg_commun_params)
           reg_commun = @reg_commun
@@ -275,10 +275,10 @@ class RegCommunsController < ApplicationController
       
           end
     
-      else
-        flash[:captcha] = '* reCAPTCHA entry failed. Nothing was saved. Please try, again.'
-        redirect_to :action => 'new'
-      end
+      # else
+        # flash[:captcha] = '* reCAPTCHA entry failed. Nothing was saved. Please try, again.'
+        # redirect_to :action => 'new'
+      # end
 
     
   end

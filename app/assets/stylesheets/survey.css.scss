@@ -6,7 +6,7 @@ $green: #41b737;
 $midgreen: #34633a;
 $dgreen: #214025;
 $grey: #808080;
-
+$sorange: #e07230;
 
 
 // End Variables
@@ -20,30 +20,31 @@ $grey: #808080;
 
 	h1 {color: $dgreen;
     float: right;
-    font-family: 'Quattrocento';
+    font-family: "Trebuchet MS";
     font-size: 30px;
     margin-bottom: 100px;
     margin-right: 50px;
 }
   p.survey-title {color: $dgreen;
     float: right;
-    font-family: 'Quattrocento';
-    font-size: 30px;
-    margin-bottom: 100px;
-	text-align: center;
-    /*margin-right: 50px;*/
+    font-family: "Trebuchet MS";
+    font-size: 28px;
+    margin-right: 30px;
+    width:495px;
+    font-weight: 600;
 }
 
-	a {margin-right: 50px; float:right; color:$green; text-decoration: underline; font-size: 23px; text-align: center;
-		font-family: 'Quattrocento';
+	.surv-read {color:$sorange; text-decoration: underline; font-size: 20px;
+		font-family: "Trebuchet MS"; text-align:center;
 		&:hover {color:$midgreen; text-decoration: none;}
-		&:visited, &:active {color: $green; text-decoration: underline;}
+		&:visited, &:active {color: $sorange; text-decoration: underline;}
 	}
 
 	img {
-	width: 370px;
-	border: 2px solid $midgreen;
+	width: 550px;
 	float:left;
+	margin-left:-150px;
+	margin-bottom:10px;
 	}
 
 }
@@ -51,10 +52,10 @@ $grey: #808080;
 
 .mid-bar {
     background: none repeat scroll 0 0 #a8a8a8;
-    border: 2px solid #000;
+    border: 2px solid $sorange;
     clear: both;
     color: #fff;
-    font-family: 'Quattrocento';
+    font-family: "Trebuchet MS";
     font-size: 25px;
     font-weight: bold;
     height: 40px;
@@ -66,19 +67,20 @@ $grey: #808080;
 }
 
 .content { width: 960px; margin: 0 auto;
-	h1 {color: $midgreen; font-size: 22px; text-align: center; margin: 10px;}
+	h1 {color: $midgreen; font-size: 25px; text-align: center; margin: 10px;}
 	a{color:$green; text-decoration: underline; font-size: 20px;
-		font-family: 'Quattrocento';
+		font-family: "Trebuchet MS";
 		&:hover {color:$midgreen; text-decoration: none;}
 		&:visited, &:active {color: $green; text-decoration: underline;}
 	}
-	p {font-size:20px; font-family: 'Quattrocento';}
+	p {font-size:20px; font-family: "Trebuchet MS";}
 .left {width: 520px;}
 .right {width: 390px;
-	background: #e0eade;
+	background: #fae7dc;
 	border: 1px solid $dgreen;
 	text-align: center;
 	padding: 0 10px;
+	p {text-align: justify; padding: 0 20px;}
 	}
 
 	ul {margin: 15px 0;
@@ -103,12 +105,12 @@ $grey: #808080;
 .content { width: 960px; margin: 0 auto;
 	h1 {color: $midgreen; font-size: 25px; text-align: center; margin: 10px;}
 	a{color:$green; text-decoration: underline; font-size: 20px;
-		font-family: 'Quattrocento';
+		font-family: "Trebuchet MS";
 		&:hover {color:$midgreen; text-decoration: none;}
 		&:visited, &:active {color: $green; text-decoration: underline;}
 	}
 	
-.left2 {width: 670px; float: left; p {font-size:20px; font-family: 'Quattrocento';}
+.left2 {width: 670px; float: left; p {font-size:20px; font-family: "Trebuchet MS";}
 	h1 {color: $green;} h2 {font-size:20px; margin: 10px 0;}
 	.indent {width: 600px; margin-left: 50px;}
 }
@@ -116,7 +118,7 @@ $grey: #808080;
 .right2 {width: 190px; float: left; margin: 125px 0 0 50px;
 	h2.midgreen {font-size: 20px; margin: 10px 0;}
 	h2.green {font-size:20px; text-align: right;}
-	p {font-size:15px; font-family: 'Quattrocento'; margin: 5px;}
+	p {font-size:15px; font-family: "Trebuchet MS"; margin: 5px;}
 	border: 1px solid $green;
 	text-align: left;
 	
@@ -126,11 +128,25 @@ $grey: #808080;
 	}
 
 	ul {margin: 15px 0;
-		li {list-style: square; color: $green; font-size: 20px; padding: 5px 0;
+		li {list-style: square; color: $sorange; font-size: 20px; padding: 5px 0;
 			span {color: #000}
 		}
 	}
 }
 
+.survey-top-list { width:500px; float:right;
+			li {list-style: square; color: $sorange; font-size: 28px; padding: 5px 0;
+			span {color: #376340;}
+		}
+	}
+
 .green {color: $green;}
 .midgreen {color: $midgreen;}
+
+.take-surv-button {background:$sorange; float:right; color:#fff; 
+	border: 2px solid #4b4b4b; padding:10px 25px; margin:15px 15px 0 0; font-size: 22px;
+font-weight:600;}
+
+.sprint-box {img { width:400px; float:left;}
+width:945px; border:4px solid #808080; border-radius:6px;
+p {font-size:18px; padding:10px;}}

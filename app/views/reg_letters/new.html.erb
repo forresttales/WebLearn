@@ -1,27 +1,6 @@
 <% provide(:title, 'NewsLetter Registration') %>
 					
-	<!-- script src="/assets/jquery.validate.js"></script -->
-					
-	<style>	
-		div .error_label {
-		    display: none;
-			font-family: 'Quattrocento Sans',sans-serif;
-			font-size: 12px;
-			color: #851717;		    
-		}		
-		/*.success {
-			color: #376340;	
-			background: url("/assets/submit_form_tick.png") no-repeat 278px 5px;		
-		}		
-		.error {
-			color: #FC7777;
-			background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;		
-			border-color: #851717; 						
-		}*/
-		.error-label {
-			color: #FC7777;
-		}
-	</style>	                		                		
+<!-- script src="/assets/jquery.validate.js"></script -->	                		                		
 
 <%= render 'share/backtotop_2' %>
 
@@ -41,25 +20,29 @@
 	<div class="top-letter-squares">&nbsp;</div>
 	<div class="reg-letters-new-container">		
 		<div class="form-reg-letter" id="form_reg_letter"  tabindex="1">
-			<%= form_for( @reg_letter, :html => {:id => "form_letter"}) do |f| %>
+			<%= form_for( @reg_letter, url: '/LetterRegistration', :html => {:id => "form_letter"}) do |f| %>
 			<div class="row">				
 				<div class="cell-left-contact"></div>
 				<div class="cell-right-contact">
 					<div class="errors">
-						<p></p>
+						<p><%= @reg_letter_flash_error if defined?@reg_letter_flash_error %></p>
 					</div>
 				</div>				
 			</div>			
 			<% unless flash[:captcha].nil? %>
 				<div class="row">
-					<div class="alert"><%= flash[:captcha] %></div>
-					<div class="input-form-spacer"></div>
+					<div class="cell-left-contact"></div>
+					<div class="cell-right-contact">
+						<div class="alert"><%= flash[:captcha] %></div>
+					</div>
 				</div>
+				<div class="input-form-spacer"></div>
       		<% end %>
 	      	<div class="row">
 				<div class="cell-left-contact"></div>
 				<div class="cell-right-contact">
-					<p class="required-label">NOTE: All fields are required</p>
+					<p class="required-label">Please enter all fields</p>
+					<br>
 				</div>
 			</div>
 			<div class="row">
@@ -68,7 +51,7 @@
 				</div>
 				<div class="cell-right-contact">
 					<!-- <input type="email" id="email" name="email" placeholder="email@example.com" class="input-form" required /> -->					
-					<%= f.text_field(:name_first, :class => "input-form required", :placeholder => 'First Name', :tabindex => '2' ) %>
+					<%= f.text_field(:name_first, :class => "input-form required", :placeholder => 'First Name', :tabindex => '2', :autofocus => true ) %>
 				</div>
 				<div class="cell-error-contact" id="state_reg_letter_name_first"><p id="error_reg_letter_name_first"></p></div>      	
 			</div> 

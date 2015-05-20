@@ -1,11 +1,27 @@
 <% provide(:title, 'Community Registration') %>
 
+	<script src="/assets/jquery.validate.js"></script>
+    <script src="/assets/dot.js"></script>    
+    <script src="/assets/jquery-dropdown-dot.js"></script>
+
+	<!-- <link rel="stylesheet" type="text/css" href="../styles/dropdown.css"/> -->
 					
 	<style>
 	
 		.form-reg-commun {
 			width: 970px;
 			height: auto;
+			/*isplay: none;*/
+			/*background-color: rgba(180, 180, 180, 0.94);*/
+			/*background-color: rgba(0, 0, 0, 0.8);*/
+			/*-moz-box-shadow:5px 5px 40px #fff;
+			-webkit-box-shadow:5px 40px 5px #fff;
+			box-shadow:5px 5px 40px #CCAE37;*/
+		    /*transition: box-shadow 3s ease-in-out;	*/			
+			/*border-top-left-radius: 10px;
+	   		border-top-right-radius: 10px;		
+			border-bottom-left-radius: 10px;
+	   		border-bottom-right-radius: 10px;*/
 			position: relative;
 			text-align: center;			
 			padding-top: 20px;	   			   	
@@ -17,6 +33,9 @@
 			position: absolute;
 			display: block
 		}
+		/**:focus {
+			outline: none
+		}*/
 		#loading {
 			background:url("/assets/icon_loading.gif") no-repeat center center;
 			height: 100px; width: 100px;
@@ -29,13 +48,39 @@
 			width: 300px;
 			height: 24px;
 			border-style:solid;
-			border-color: #41b737;
+			/*border-radius: 6px;*/
+			/*border-color: #13571F; green*/		
+			border-color: #41b737;/* #005C9E blue */
 			border-width: 2px;
 			padding-left: 6px;
+			/*-webkit-transition: all 0.5s ease-in-out;
+			-moz-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
+			-ms-transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease-in-out;*/
 		}
 		.input-form:focus {
+			/*border-color: #97FF47;*/
 			color: #000;
-			background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;						
+			background: url("/repository/submit_form_empty.png") no-repeat 278px 7px;						
+			/*-webkit-box-shadow: 0 0 25px #ccc;
+			-moz-box-shadow: 0 0 25px #ccc;
+			box-shadow: 0 0 25px #ccc;
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);*/
+			/*-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);*/
+		/*	-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);*/
+			/*-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);*/		
+		/*	transform: scale(1.05);*/
 		}
 		.input-form-dropdown {
 			font-family: msyh;
@@ -44,14 +89,21 @@
 			height: 30px;
 			border-style:solid;
 			border-radius: 6px;
-			border-color: #41b737; 
+			/*border-color: #13571F; green*/		
+			border-color: #41b737;/*#005C9E*/ 
 			border-width: 2px;
 			padding-left: 6px;
+			/*-webkit-transition: all 0.5s ease-in-out;
+			-moz-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
+			-ms-transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease-in-out;*/
 			text-decoration: none;
 		}
 		.input-form-dropdown:focus {
+			/*border-color: #97FF47;*/
 			color: #fff;
-			background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;						
+			background: url("/repository/submit_form_empty.png") no-repeat 278px 7px;						
 			-webkit-box-shadow: 0 0 25px #ccc;
 			-moz-box-shadow: 0 0 25px #ccc;
 			box-shadow: 0 0 25px #ccc;
@@ -82,10 +134,12 @@
 		div .errors {
 			font-family: msyh;
 			font-size: 16px;
+			/*color: #851717;*/
 			color: #FC7777;		
 		}
 		div .errors p {
 			font-family: msyh;
+			/*font-family: Arial, Helvetica, sans-serif;*/
 			font-size: 16px;
 			color: #FC7777;		
 		}				
@@ -99,28 +153,34 @@
 			height: 18px;
 		}
 		.success {
-			color: #41b737;		
+			color: #41b737; /*#ACDDE3;*/		
+			/*background: url("/repository/submit_form_empty.png") no-repeat 278px 1px;*/		
 			background-color: #fff;		
 		}		
 		.error {
 			color: #FC7777;
 			border-color: #851717; 			
 			background-color: #fff;					
+			/*background: url("/repository/submit_form_empty.png") no-repeat 278px 1px;*/		
 		}
 		.required {
-			background: #f5f5f5;	
+			background: #f5f5f5; /*url("/repository/submit_form_empty.png") no-repeat 278px 1px;	*/	
 		}
 		.focus {
 			color: #fff;
 			border-color: #41b737;						
+			/*background: url("/repository/submit_form_empty.png") no-repeat 278px 7px;*/								
 		}
 		.unrequired {
 			background: #f5f5f5;
+			/*background: url("/repository/submit_form_empty.png") no-repeat 278px 1px;*/		
 		}
 		.error-label {
+			/*color: #851717;*/		
 			color: #FC7777;
 		}
 		.required-label {
+			/*color: orange;*/	
 			color: #376340;	
 		}
 		.input-form-spacer {
@@ -184,7 +244,8 @@
 			width: 480px; 
 			border-style: solid; 
 			border-width: 2px; 
-			border-color: #41b737; 
+			border-color: #41b737;/*#005C9E*/ 
+			/*border-radius: 6px; */
 			padding-right: 6px; 
 			padding-top: 6px; 
 			padding-bottom: 6px;
@@ -194,6 +255,7 @@
 		}		
 		#label_cb:focus {
 			text-decoration: underline;
+			/*color:#FF9900;*/		
 			color: #FFF480;		
 			outline: none;
 		}		
@@ -225,6 +287,7 @@
 			border-style: solid; 
 			border-width: 2px; 
 			border-color: #41b737; 
+			/*border-radius: 20px;	*/	
 			margin-bottom: -4px;
 			display: inline-block;
 			margin-right: 6px;
@@ -238,6 +301,7 @@
 			border-style: solid; 
 			border-width: 2px; 
 			border-color: #41b737; 
+			/*border-radius: 6px;	*/	
 			margin-bottom: -4px;
 			display: inline-block;
 			margin-right: 6px;
@@ -251,13 +315,22 @@
 			border-style: solid; 
 			border-width: 2px; 
 			border-color: #41b737; 
+			/*border-radius: 6px;	*/	
 			margin-bottom: -4px;
 			margin-right: 6px;
 		}
 		.rd-background {
+			/*background-image: url("/assets/radio_tick.png");		
+			background-repeat: no-repeat;
+			background-position: 2px 2px;*/
+			/*background-color: #0FEAFF;*/		
 			background-color: #5BED4E;			
 		}	
 		.cb-background {
+			/*background-image: url("/assets/checkbox_tick.png");		
+			background-repeat: no-repeat;
+			background-position: 2px 3px;*/
+			/*background-color: #0FEAFF;*/		
 			background-color: #5BED4E;			
 		}	
 		.cb-spacer {
@@ -269,6 +342,19 @@
 		.cb-pad {
 			padding-top: 5px;		
 		}
+
+	</style>					
+					
+	<style type="text/css">
+
+		/*#cb-align-1 {
+			vertical-align: top !important;
+		}*/
+				
+	</style>					
+					
+	<style>
+
 		.commun-inside {
 			border:2px solid #376340;
 			padding: 5px 20px;
@@ -278,6 +364,11 @@
 			font-size: 20px;
 			color: #376340;"
 		}
+		
+	</style>
+					
+	<style>
+		
 		.alert {
 			font-family: Arial, Helvetica, sans-serif;
 			color: #8C0303;
@@ -294,10 +385,10 @@
 			margin: 5px auto;
 			height:40px;
 			color: #FFF;
-		    background: -webkit-linear-gradient(left, #ffffff 25%, #cacaca 55% , #47b64a 90%);
-		  	background: -o-linear-gradient(right, #ffffff 25%, #cacaca 55% , #47b64a 90%);
-		  	background: -moz-linear-gradient(right, #ffffff 25%, #cacaca 55% , #47b64a 90%);
-		 	background: linear-gradient(to right, #ffffff 25%, #cacaca 55% , #47b64a 90%);
+		    background: -webkit-linear-gradient(left, #ffffff 25%, #cacaca 55% , #47b64a 90%); /* For Safari 5.1 to 6.0 */
+		  	background: -o-linear-gradient(right, #ffffff 25%, #cacaca 55% , #47b64a 90%); /* For Opera 11.1 to 12.0 */
+		  	background: -moz-linear-gradient(right, #ffffff 25%, #cacaca 55% , #47b64a 90%); /* For Firefox 3.6 to 15 */
+		 	background: linear-gradient(to right, #ffffff 25%, #cacaca 55% , #47b64a 90%); /* Standard syntax */
 		}
 		.seperator-commun img { float:left; position: relative; top: -5px; height: 100px;
 			border-left: 2px solid #376340; background: #FFF;
@@ -327,17 +418,29 @@
 			left: 45px;
 			padding: 20px 0 0 20px;
 		}
+
+	</style>		                		
+
+	<style>
+		
+		/* start - dropdown1 */
 		div .dropdown1 {
 		background: #f5f5f5;
 	  		font:18px/2.0 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 			width: 300px;
 			height: 40px;
 			border-style:solid;
+			/*border-radius: 6px;*/
 			border-color: #41b737;
 			color: #838383;				
 	    	position: relative;
 			border-width: 2px;
 			padding-left: 6px;
+			/*-webkit-transition: all 0.5s ease-in-out;
+			-moz-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
+			-ms-transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease-in-out;*/
 			text-decoration: none;
 			outline: none;
 		}
@@ -347,8 +450,13 @@
 			height: 40px;
 			border-style:solid;
 			border-radius: 6px;
-			border-color: #005C9E;
+			border-color: #005C9E; /*blue*/
 	    	position: relative;
+			/*-webkit-transition: all 0.5s ease-in-out;
+			-moz-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
+			-ms-transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease-in-out;*/
 			outline: none;	
 		}
 		div .dropdown1:focus {
@@ -356,8 +464,24 @@
 			-webkit-box-shadow: 0 0 25px #ccc;
 			-moz-box-shadow: 0 0 25px #ccc;
 			box-shadow: 0 0 25px #ccc;
+			/*-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			transform: scale(1.05);*/
 			outline: none;
 		}
+		/*div .dropdown1.focus > .selected,*/
 		div .dropdown1:focus > .selected {
 	    	outline: none;
 		}
@@ -425,17 +549,26 @@
 		    background: #fff;
 		    color: #000;
 		}
+		/* end - dropdown1 */
+	
+		/* start - dropdown2 */
 		div .dropdown2 {
 		background: #f5f5f5;
 	  		font:18px/2.0 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 			width: 300px;
 			height: 40px;
 			border-style:solid;
-			border-color: #41b737;
+			/*border-radius: 6px;*/
+			border-color: #41b737;/*#005C9E;*/
 			color: #838383;				
 	    	position: relative;
 			border-width: 2px;
 			padding-left: 6px;
+			/*-webkit-transition: all 0.5s ease-in-out;
+			-moz-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
+			-ms-transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease-in-out;*/
 			text-decoration: none;
 			outline: none;
 		}
@@ -445,8 +578,13 @@
 			height: 40px;
 			border-style:solid;
 			border-radius: 6px;
-			border-color: #005C9E;
+			border-color: #005C9E; /*blue*/
 	    	position: relative;
+			/*-webkit-transition: all 0.5s ease-in-out;
+			-moz-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
+			-ms-transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease-in-out;*/
 			outline: none;	
 		}
 		div .dropdown2:focus {
@@ -454,8 +592,24 @@
 			-webkit-box-shadow: 0 0 25px #ccc;
 			-moz-box-shadow: 0 0 25px #ccc;
 			box-shadow: 0 0 25px #ccc;
+			/*-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			transform: scale(1.05);*/
 			outline: none;
 		}
+		/*div .dropdown2.focus > .selected,*/
 		div .dropdown2:focus > .selected {
 	    	outline: none;
 		}
@@ -523,17 +677,26 @@
 		    background: #fff;
 		    color: #000;
 		}
+		/* end - dropdown2 */
+	
+		/* start - dropdown3 */
 		div .dropdown3 {
 		background: #f5f5f5;
 	  		font:18px/2.0 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 			width: 300px;
 			height: 40px;
 			border-style:solid;
-			border-color: #41b737;
+			/*border-radius: 6px;*/
+			border-color: #41b737;/*#005C9E;*/
 			color: #838383;				
 	    	position: relative;
 			border-width: 2px;
 			padding-left: 6px;
+			/*-webkit-transition: all 0.5s ease-in-out;
+			-moz-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
+			-ms-transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease-in-out;*/
 			text-decoration: none;
 			outline: none;
 		}
@@ -543,8 +706,13 @@
 			height: 40px;
 			border-style:solid;
 			border-radius: 6px;
-			border-color: #005C9E;
+			border-color: #005C9E; /*blue*/
 	    	position: relative;
+			/*-webkit-transition: all 0.5s ease-in-out;
+			-moz-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
+			-ms-transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease-in-out;*/
 			outline: none;	
 		}
 		div .dropdown3:focus {
@@ -552,8 +720,24 @@
 			-webkit-box-shadow: 0 0 25px #ccc;
 			-moz-box-shadow: 0 0 25px #ccc;
 			box-shadow: 0 0 25px #ccc;
+			/*-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			transform: scale(1.05);*/
 			outline: none;
 		}
+		/*div .dropdown3.focus > .selected,*/
 		div .dropdown3:focus > .selected {
 	    	outline: none;
 		}
@@ -621,6 +805,12 @@
 		    background: #fff;
 		    color: #000;
 		}
+		/* end - dropdown3 */
+		
+	</style>
+						
+	<style>
+		
 		.dropdown1:hover {
 			cursor: pointer;
 		}
@@ -679,55 +869,148 @@
 		</div>
 	</script>		
 					
-	<%= render 'share/backtotop_2' %>
+	<!-- <style>
+	
+		body {
+			font-family: tahoma, ariel, sans-serif;
+			letter-spacing: 0.1em;
+			color: #444;
+		}
 		
-	<div style="width: 1000px; margin-right: auto; margin-left: auto; background: #fff;">
-		<div class="table-white">
-			<div class="row">
-				<div class="cell-100percent">
-					<div class="commun">
-						<div style="margin-top:50px;" class="seperator-commun"><img src="/repository/logo-icon-come-together.png">COMMUNITY</div>
-						<div class="commun-inside">
-						<p style="clear:both;">
-							HELLO!<br/><br/>
-							  You are at this page to opt-in to be a part of making all things about digital curriculum better.  
-							By opting in you agree that we can send you our Journal (magazine) and special emails to periodically survey you about things happening 
-							in the education industry, your opinions on best approaches, and more.  We'll share a cut of the data back with you in a 
-							report via email.  That way you also know what hundreds of your peers are thinking about the same things.  
-						</p>
-						<br>
-						<!--img src="../repository/form-welcome.png" alt="form-welcome.png" height="164px" style="float: left;" -->
-						<p>
-							The LC Community membership is restricted to 18 years and older. All personally 
-							identifiable information that you provide will be kept strictly confidential and used only for legitimate 
-							research purposes. 
-						</p>
-						<br>
-						<p style="padding-bottom: 20px;">
-							Occasionally there may be a Survey that offers some sort of give-away.  You can tell us your options on how 
-							you would like that or opt out.  You'll also be our special invite to our annual Gathering event, our invitation-only 
-							premier national get-together for members of this community where you can see each other face to face!
-						</p>
-						<div class="bottom-commun-squares">&nbsp;</div>
+						
+		.styledRadio, .styledCheckbox {
+			display: inline-block;
+		}
+		
+		.example {
+			padding: 50px 0 0 20px;
+		}
+		
+		label {
+			line-height: 43px;
+			font-size: 20px;
+			vertical-align: 14px;
+			padding-right: 20px;
+		}
+		
+		button{
+			display: block;
+		}
+	
+	</style> -->					
+	
+	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="/assets/jquery.screwdefaultbuttonsV2.js"></script>
+						
+	<script type="text/javascript">
+		
+		$(function(){
+		
+			$('input:radio').screwDefaultButtons({
+				image: 'url("/assets/radioSmall.png")',
+				width: 43,
+				height: 43
+			});
+			
+			$('input:checkbox').screwDefaultButtons({
+				image: 'url("/assets/checkboxSmall.jpg")',
+				width: 43,
+				height: 43
+			});
+			
+		});
+		
+	</script> -->
+	
+		
+<div style="width: 1000px; margin-right: auto; margin-left: auto; background: #fff;">
+		
+	<header>					
+    	     	    	     	
+			<%= render 'share/backtotop_2' %>
+
+    	<!-- <div class="shadow" style="position: relative; z-index: +2;"> -->    		
+			
+			<!-- <div style="height: 40px;"> -->
+												
+			<div class="table-white">
+
+				<!-- <div class="row" style="height: 50px;">
+					<div class="cell-100percent">
+						<div id="errorContainer">
+						    
+						</div>		
 					</div>
+				</div>				 -->
+				
+								
+				<div class="row">
+					
+					<div class="cell-100percent">
+						<div class="commun">
+							<div style="margin-top:50px;" class="seperator-commun"><img src="/repository/logo-icon-come-together.png">COMMUNITY</div>
+							<div class="commun-inside">
+							<p style="clear:both;">
+								HELLO!<br/><br/>
+								  You are at this page to opt-in to be a part of making all things about digital curriculum better.  
+								By opting in you agree that we can send you our Journal (magazine) and special emails to periodically survey you about things happening 
+								in the education industry, your opinions on best approaches, and more.  We'll share a cut of the data back with you in a 
+								report via email.  That way you also know what hundreds of your peers are thinking about the same things.  
+							</p>
+							<br>
+							<!--img src="../repository/form-welcome.png" alt="form-welcome.png" height="164px" style="float: left;" -->
+							<p>
+								The LC Community membership is restricted to 18 years and older. All personally 
+								identifiable information that you provide will be kept strictly confidential and used only for legitimate 
+								research purposes. 
+							</p>
+							<br>
+							<p style="padding-bottom: 20px;">
+								Occasionally there may be a Survey that offers some sort of give-away.  You can tell us your options on how 
+								you would like that or opt out.  You'll also be our special invite to our annual Gathering event, our invitation-only 
+								premier national get-together for members of this community where you can see each other face to face!
+							</p>
+							<div class="bottom-commun-squares">&nbsp;</div>
+						</div><!--End commun-inside-->
+						</div>
+					</div>
+					<!-- <p>
+						<button class="btn blue small">Join</button>
+					</p>
+					<p>
+						<button class="btn blue small">Cancel</button>
+					</p> -->											
+				</div>
+
+				<a name="anchor1"></a>    		      		     		
+
+				<div class="row" style="height: 30px;">
+					<div  class="cell-100percent" style="padding-left: 300px;">
+			    		<% unless flash[:captcha].nil? %>
+						<div class="alert"><%= flash[:captcha] %></div>
+			      		<% end %>
 					</div>
 				</div>
+
+				<div class="row" style="height: 10px;"></div>
+				
 			</div>
-			<a name="anchor1"></a>    		      		     		
-			<div class="row" style="height: 30px;">
-				<div  class="cell-100percent" style="padding-left: 300px;">
-		    		<% unless flash[:captcha].nil? %>
-					<div class="alert"><%= flash[:captcha] %></div>
-		      		<% end %>
-				</div>
-			</div>
-			<div class="row" style="height: 10px;"></div>
-		</div>
-	</div>
+			
+			
+		<!-- </div>	 -->
+				
+		
+		<!-- <div id="loading"> </div> -->
+		
+						
+	</header>		
+	
+</div>
 
 
-	<div style="width: 1000px; margin-right: auto; margin-left: auto;">
+<div style="width: 1000px; margin-right: auto; margin-left: auto;">
 	<div class="top-commun-squares">&nbsp;</div>
+	<section>
 
 
 	<div id="join-image" class="">
@@ -1446,27 +1729,19 @@
 
 			<!-- survey preferences end -->
 
+			<!-- <div class="input-form-spacer"></div>
 			<div class="input-form-spacer"></div>
 			<div class="input-form-spacer"></div>
-
-
-
 			<div class="input-form-spacer"></div>
-			<div class="input-form-spacer"></div>
-
 			<div class="row">
 				<div class="cell-left-reg-commun">
 				</div>
 				<div class="cell-submit-contact" style="padding-left: 0px;">
-					<%= recaptcha_tags %>	
+					<#%= recaptcha_tags %#>	
 				</div>      	
-			</div>      		
+			</div> -->      		
 
-
-			<div class="input-form-spacer"></div>
-			<div class="input-form-spacer"></div>
-			<div class="input-form-spacer"></div>
-			<div class="input-form-spacer"></div>
+			<div style="height: 100px;"></div>
 	
 			<!-- Old Way: <div class="row">
 				<div class="cell-left-reg-commun">
@@ -1489,7 +1764,9 @@
 			
 	</div>
 	
-	</div>
+	</section>
+	
+</div>
 
 
 <div style="height: 300px;"></div>
@@ -1823,7 +2100,7 @@
 					$('#label_' + label.attr('for')).removeClass('error-label').addClass('required-label');
 					
 					$('#state_' + label.attr('for')).css ({			
-						background: 'url("/assets/submit_form_tick.png") no-repeat 0px 0px'
+						background: 'url("/repository/submit_form_tick.png") no-repeat 0px 0px'
 					});
 
 					$('#error_' + label.attr('for')).html("");
@@ -1907,7 +2184,7 @@
 					});
 					
 					$('#state_' + element).css ({			
-						background: 'url("/assets/submit_form_empty.png") no-repeat 0px 1px'
+						background: 'url("/repository/submit_form_empty.png") no-repeat 0px 1px'
 					});					
 				}
 			}
@@ -1925,7 +2202,7 @@
 					$('#label_' + element).removeClass('success-label').removeClass('error-label').addClass('required-label');		
 					
 					$('#state_' + element).css ({			
-						background: 'url("/assets/submit_form_empty.png") no-repeat 0px 1px'
+						background: 'url("/repository/submit_form_empty.png") no-repeat 0px 1px'
 					});
 									
 				}
@@ -2030,7 +2307,7 @@
 				$('#error_reg_commun_public_private').html("*");
 				
 				$("#state_reg_commun_public_private").css ({			
-					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 0px'
+					background: 'url("/repository/submit_form_empty.png") no-repeat 0px 0px'
 				});				
 				
 				
@@ -2043,7 +2320,7 @@
 				$('#error_reg_commun_public_private').html("");
 				
 				$("#state_reg_commun_public_private").css ({			
-					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 0px'
+					background: 'url("/repository/submit_form_tick.png") no-repeat 0px 0px'
 				});																
 			}
 			
@@ -2186,7 +2463,7 @@
 				}
 	
 				$("#state_reg_commun_level").css ({			
-					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 0px'
+					background: 'url("/repository/submit_form_empty.png") no-repeat 0px 0px'
 				});				
 			}
 			else {
@@ -2197,7 +2474,7 @@
 				$('#error_reg_commun_level').html("");
 				
 				$("#state_reg_commun_level").css ({			
-					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 0px'
+					background: 'url("/repository/submit_form_tick.png") no-repeat 0px 0px'
 				});
 			}
 
@@ -2236,7 +2513,7 @@
 				}
 	
 				$("#state_reg_commun_characterize_area").css ({			
-					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 0px'
+					background: 'url("/repository/submit_form_empty.png") no-repeat 0px 0px'
 				});				
 			}
 			else {
@@ -2247,7 +2524,7 @@
 				$('#error_reg_commun_characterize_area').html("");
 				
 				$("#state_reg_commun_characterize_area").css ({			
-					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 0px'
+					background: 'url("/repository/submit_form_tick.png") no-repeat 0px 0px'
 				});
 			}
 
@@ -2281,7 +2558,7 @@
 				}
 	
 				$("#state_reg_commun_survey_preferences").css ({			
-					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 0px'
+					background: 'url("/repository/submit_form_empty.png") no-repeat 0px 0px'
 				});				
 			}
 			else {
@@ -2292,7 +2569,7 @@
 				$('#error_reg_commun_survey_preferences').html("");
 				
 				$("#state_reg_commun_survey_preferences").css ({			
-					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 0px'
+					background: 'url("/repository/submit_form_tick.png") no-repeat 0px 0px'
 				});
 			}
 
@@ -2311,7 +2588,7 @@
 			
 			if ($("#reg_commun_institution_size option:selected").val() == '0') {
 				$('#state_reg_commun_institution_size').css ({			
-					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 0px'
+					background: 'url("/repository/submit_form_empty.png") no-repeat 0px 0px'
 				});
 				
 				$('.dropdown1').css ({			
@@ -2322,7 +2599,7 @@
 			}
 			else {
 				$('#state_reg_commun_institution_size').css ({			
-					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 0px'
+					background: 'url("/repository/submit_form_tick.png") no-repeat 0px 0px'
 				});
 				
 				$('.dropdown1').css ({			
@@ -2394,7 +2671,7 @@
 			
 			if ($("#reg_commun_employee_number option:selected").val() == '0') {
 				$('#state_reg_commun_employee_number').css ({			
-					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 0px'
+					background: 'url("/repository/submit_form_empty.png") no-repeat 0px 0px'
 				});
 				
 				$('.dropdown2').css ({			
@@ -2405,7 +2682,7 @@
 			}
 			else {
 				$('#state_reg_commun_employee_number').css ({			
-					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 0px'
+					background: 'url("/repository/submit_form_tick.png") no-repeat 0px 0px'
 				});
 				
 				$('.dropdown2').css ({			
@@ -2439,7 +2716,7 @@
 			
 			if ($("#reg_commun_employee_number option:selected").val() == '0') {
 				// $('#state_reg_event_city_workshop').css ({			
-					// background: 'url("/assets/submit_form_empty.png") no-repeat 0px 0px'
+					// background: 'url("/repository/submit_form_empty.png") no-repeat 0px 0px'
 				// });
 // 				
 				// $('.dropdown').css ({			
@@ -2485,7 +2762,7 @@
 			
 			if ($("#reg_commun_characterize_decision option:selected").val() == '0') {
 				$('#state_reg_commun_characterize_decision').css ({			
-					background: 'url("/assets/submit_form_empty.png") no-repeat 0px 0px'
+					background: 'url("/repository/submit_form_empty.png") no-repeat 0px 0px'
 				});
 				
 				$('.dropdown3').css ({			
@@ -2496,7 +2773,7 @@
 			}
 			else {
 				$('#state_reg_commun_characterize_decision').css ({			
-					background: 'url("/assets/submit_form_tick.png") no-repeat 0px 0px'
+					background: 'url("/repository/submit_form_tick.png") no-repeat 0px 0px'
 				});
 				
 				$('.dropdown3').css ({			
@@ -2530,7 +2807,7 @@
 			
 			if ($("#reg_commun_characterize_decision option:selected").val() == '0') {
 				// $('#state_reg_event_city_workshop').css ({			
-					// background: 'url("/assets/submit_form_empty.png") no-repeat 0px 0px'
+					// background: 'url("/repository/submit_form_empty.png") no-repeat 0px 0px'
 				// });
 // 				
 				// $('.dropdown').css ({			
@@ -3013,3 +3290,4 @@
 	</script>
 	
 	
+

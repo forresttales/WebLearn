@@ -1,0 +1,36 @@
+
+	<div id="nav" class="navNormal">
+	    <div id="top-black-bar-marker" class="top-black-bar-marker"></div>
+    	<div id="top-black-bar" class="outer nav-bar-black">
+            <div class="inner">
+                <a href="/"><%= image_tag("logo-icon-come-together.png", alt: "", class: "logo") %></a>
+                <div id="s-links" class="social">
+                	<a href="/Events">Events</a>
+					<a href="/Talk-Here">Talk Here</a>						
+                	<a href="/Papers">Papers</a> 	                	 
+                	<a href="/KnowStory">KnowStory</a>  
+                	<a href="/Survey">Survey</a>  
+                </div>	          
+            </div>
+    	</div>
+    </div>	
+
+	<script>
+		
+		$(window).scroll(function(e){ 
+		  $el = $('#top-black-bar'); 
+		  $topmark = $('#top-black-bar-marker');
+		  if ($(this).scrollTop() > $topmark.position().top+14 && $el.css('position') != 'fixed'){ 
+		     $topmark.css({'height':'60px'});
+		     $el.css({'position': 'fixed', 'top': '-7px','background-color': 'rgba(0,0,0,0.9);'}); 
+		     $('#login').fadeOut();
+		  } else if ($(this).scrollTop() < $topmark.position().top+14 && $el.css('position') == 'fixed'){
+		  	$topmark.css({'height':'0px'});
+		  	$el.css({'position': 'static', 'top': 'auto','background-color': 'black;'});
+		  	if($el.height()<100) {
+		  		$el.css({'height': '55px'});
+		  	}
+		  }
+		});
+		
+	</script>

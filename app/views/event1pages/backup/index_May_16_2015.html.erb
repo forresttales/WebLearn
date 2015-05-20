@@ -1,0 +1,543 @@
+<% provide(:title, 'Master Schedule') %>
+
+					
+		<style type="text/css">
+		
+			/*@font-face {
+			  	font-family: 'Vollkorn';
+			  	font-style: italic;
+			  	font-weight: 400;				
+			  	font-family: 'Vollkorn-Italic';
+			  	src: url('/assets/Vollkorn-Italic.ttf') format('truetype');
+			  	src: url('/assets/Vollkorn-BoldItalic.ttf') format('truetype');			  	
+			  	src: local('Vollkorn Italic'), local('Vollkorn-Italic'), url('/assets/vollkorn-italic.woff') format('woff');			  
+			}*/
+											
+			@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
+												
+		</style>
+							
+	
+	<!-- <#%= stylesheet_link_tag "schedule", media: "all", "data-turbolinks-track" => false %#> -->
+	<!-- <script type="text/javascript" src="../scripts/jquery-1.4.1.min.js"></script> -->
+
+
+<style>
+	
+	
+    /*ul.lc-inline {
+    	width: 1280px;
+    }
+	ul.lc-inline, 
+	ul.lc-inline li {
+		margin: 0 auto;
+		padding-right: 20px;
+    	vertical-align: top;			
+	}
+	ul.lc-inline li {
+		display: inline-block;
+	}
+	#tab-container  {
+	  	margin-left: auto;
+	  	margin-right: auto;
+	  	width: 800px;
+	}*/
+	
+	
+	#lc-landing #bottom-graphic-2 img {
+	  bottom: 180px;
+	  position: relative;
+	  float:left;
+	}
+	
+	.lc-landing-box-row-2 {
+	  background: url(../repository/lc-boxes.png) white repeat-x;
+	  height: 59px;
+	  margin-left: 440px;
+	  margin-top: -208px;
+	  margin-bottom: 160px;
+	}
+
+	
+	
+</style>
+
+<style>
+        /*ul.lc-inline {
+        }
+		ul.lc-inline, 
+		ul.lc-inline li {
+			margin: 0 auto; padding-right: 20px; vertical-align: top; display: inline-block;			
+		}
+		ul.lc-inline li {
+			display: inline-block;
+		}*/
+		
+		.green-box table.table-2 td {
+		  font-family: Arial;
+		  font-size: 16px;
+		}
+		
+		.event-title-header {
+		  font-family: Arial;
+		  font-size: 48px;
+		}
+		
+		.side-bar-right h2 {
+		  font-family: Arial;
+		  font-size: 18px;
+		}
+		
+		.david td, .lani td {
+		  font-family: Arial;
+		}
+		
+</style>
+
+<%= render 'share/backtotop' %>
+<ul class="lc-inline" style="width: 1260px; margin: 0 auto; padding-right: 20px; vertical-align: top;">
+<li style="margin: 0 auto; padding-right: 20px; vertical-align: top; display: inline-block;">
+	<%= render 'share/eventpages_tabs' %>
+</li>
+<li style="margin: 0 auto; padding-right: 20px; vertical-align: top; display: inline-block;">
+	
+<div id="tab-container">
+			
+			<div class="kontainer">
+				
+			<img class="head-img" src="/repository/schedule/david-boston.jpeg" alt="Schedule Image">
+			<h1 class="event-title-header">Schedule of Events</h1>
+
+			<div class="event-sep-bar"></div>
+
+
+				<!-- Main content on left here -->
+				<div class="main-left">
+					<a href="/EventRegistration" class="kso"><h2>ATTEND IN ONE OF THE CITIES</h2></a>
+
+					<div class="green-box">
+						<h2>DIGITAL CURRICULUM STRATEGY DISCUSSIONS</h2>
+						
+
+						<h3 style="margin-top: 35px; font-size: 24px;">2015 Events</h3>
+
+					<table class="table-2"> <tr>
+
+<td>Jan. 27th</td><td>Seattle, WA</td><td>Digital Curriculum Strategy Discussion<br/>
+T-Mobile Corporate Headquarters<br/>
+Newport 2 Building, Conf Rm 1C (first floor)<br/>
+3625 132nd Avenue SE<br/>
+Bellevue, WA 98006</td>
+</tr><tr>
+<td>Jan. 29th</td><td>Phoenix, AZ</td><td>Digital Curriculum Strategy Discussion<br/>
+University of Phoenix - Main Campus<br/>
+1625 West Fountainhead Parkway, Rm 401 (4th Floor)<br/>
+Tempe, AZ 85282</td>
+</tr><tr>
+<td>Feb. 10th</td><td>Atlanta, GA</td><td>Digital Curriculum Strategy Discussion<br/>
+Gwinnett Online Campus<br/>
+713 Hi Hope Road<br/>
+Lawrenceville, GA 30043</td>
+</tr><tr>
+<td>Feb. 19th</td><td>Denver, CO</td><td><img style="margin-bottom: 15px;" class="flipped-small" src="/repository/schedule/co-final-logo.jpeg"> Colorado Blended & Online Learning| | Flipped Conference<br/>
+Aurora Public Schools<br/>
+Educational Services Center 1<br/>
+15701 E. 1st Ave.<br/>
+Aurora, CO 80011</td>
+</tr><tr>
+<td>Mar. 4th</td><td>Fresno, CA</td><td>Digital Curriculum Strategy Discussion<br/>
+Fresno County Office of Education<br/>
+1111 Van Ness Avenue<br/>
+Fresno, CA 93721</td>
+</tr><tr>
+<td>Mar. 11th</td><td>Minneapolis, MN</td><td>Digital Curriculum Strategy Discussion<br/> within MASA/MASE Spring Conf.<br/>
+Minneapolis Marriott Northwest<br/>
+7025 Northland Drive<br/>
+North Brooklyn Park, MN 55428</td>
+</tr><tr>
+<td>Mar. 25th</td><td>Los Angeles, CA</td><td>Digital Curriculum Strategy Discussion<br/>
+Los Angeles County Office of Education<br/>
+9300 Imperial Highway, Room EC281<br/>
+Downey, CA 90242
+</td>
+</tr><tr>
+<td>Apr. 16th</td><td>Charlotte, NC</td><td>Digital Curriculum Strategy Discussion<br/>
+Union County Public Schools<br/>
+Professional Development Center<br/>
+721 Brewer Drive<br/>
+Monroe, NC 28112 
+</td>
+</tr><tr>
+<td>Apr. 23rd</td><td>Chicago, IL</td><td>Digital Curriculum Strategy Discussion<br/>
+Forest View Educational Center<br/>
+2121 S. Goebbert Road<br/>
+Arlington Heights, IL 60005
+</td>
+</tr><tr>
+<td>Apr. 29th</td><td>Houston, TX</td><td>Digital Curriculum Strategy Discussion<br/>
+The Kingdom Builders' Center<br/>
+Promenade Room<br/>
+6011 W. Orem<br/>
+Houston, TX 77085
+</td>
+</tr><tr>
+<td>May 14th</td><td>Richmond, VA</td><td>Digital Curriculum Strategy Discussion<br/>
+University of Phoenix<br/>
+9750 West Broad<br/>
+Glen Allen, VA 23060
+</td>
+</tr><tr>
+<td>May 27th</td><td>Memphis, TN</td><td>Digital Curriculum Strategy Discussion<br/>
+FedEx Institute of Technology<br/>
+at the University of Memphis<br/>
+365 Innovation Drive<br/>
+Memphis, TN 38152<br/>
+2nd Floor - The Fishbowl Room
+</td>
+</tr>
+<tr>
+<td>Sept. 10th</td><td>Dallas, TX</td><td>Digital Curriculum Strategy Discussion</td>
+</tr><tr>
+<td>Sept. 17th</td><td>Tampa, FL</td><td>Digital Curriculum Strategy Discussion</td>
+</tr><tr>
+<td>Sept. 23rd</td><td>Newark, NJ</td><td>Digital Curriculum Strategy Discussion</td>
+</tr><tr>
+<td>Sept. 30th</td><td>San Jose, CA</td><td>Digital Curriculum Strategy Discussion</td>
+</tr><tr>
+<td>Oct. 7th</td><td>Kansas City, MO<br/> (IA, NE, KS)</td><td>Digital Curriculum Strategy Discussion</td>
+</tr><tr>
+<td>Oct. 13th</td><td>Baltimore, MD</td><td>Digital Curriculum Strategy Discussion</td>
+</tr><tr>
+<td>Oct. 15th</td><td>Boston, MA</td><td>Digital Curriculum Strategy Discussion</td>
+</tr><tr>
+<td>Oct. 26th-27th</td><td>Albuquerque, NM</td><td>National Gathering<br/>
+Hyatt Regency<br/> Tamaya Resort &amp; Spa<br/>
+1300 Tuyuna Trail,<br/>
+Santa Ana Pueblo, NM 87004
+</td>
+</tr><tr>
+<td>Oct. 29th</td><td>Sacramento, CA</td><td>Digital Curriculum Strategy Discussion</td>
+</tr><tr>
+<td>Nov. 5th</td><td>San Diego, CA</td><td>Digital Curriculum Strategy Discussion</td>
+</tr>
+						
+					</table>
+						<div style="height: 54px;"></div>
+					</div>
+					<!-- WHOS INVITED SECTION					
+					<table>
+						<tr>
+							<td>
+								<img class="event-photo-2" src="/event_news_images/event-vert-w180-h211.png" alt="Event Photo">
+							</td>
+							<td>
+								<h3>Who’s Invited</h3>
+								<div style="width: 390px; padding-left: 40px;">
+									<ul>
+										<li><span>School Board Members</span></li>
+										<li><span>Superintendents</span></li>
+										<li><span>Principals</span></li>
+										<li><span>Chief Academic Officers</span></li>
+										<li><span>District Curriculum Directors</span></li>
+										<li><span>District & School Curriculum & Instructional Designers</span></li>
+										<li><span>Professional Development Directors</span></li>
+										<li><span>CIOs, CTOs, Directors of Technology</span></li>
+										<li><span>Instructional Technologists</span></li>
+										<li><span>Library and Media Specialists</span></li>
+									</ul>
+								</div>
+							</td>
+						</tr>
+					</table>
+					<h3 class="center-h3 lightgreen">Attendance is <span class="normal">Free</span> to educators.</h3>
+
+					<h3>Why Attend?</h3>
+					<div style="width: 610px; padding-left: 40px;">
+						<ul>
+							<li><span>Network with peers.<br/>
+							Join local peers to discuss digital curriculum tactics.</span></li>
+							<li><span>Hone your strategy.<br/>
+							Get a research-based perspective on strategy elements and national trends.</span></li>
+							<li><span>See what's next.<br/>
+							Instructional design meets digital- see and discuss what's new and what the different tactics mean for education.</span></li>
+						</ul>
+					</div>
+					
+					<div class="quote-box">
+						<p class="lightgreen">"A very meaningful day."<br/>
+						<span class="gray">—Chief Technology Officer, Houston, TX</span></p><br>
+						<p class="lightgreen">"Very helpful to hear the market briefing and from the vendors directly about ways the products and services are shifting."<br/> <span class="gray">—Instructional Technology Director, Chicago, IL</span></p><br>
+						<p class="lightgreen">"We should have cancelled our afternoon meeting, stayed the whole day and brought our Superintendent!"<br/> <span class="gray">—Chief Information Officer, Columbia, SC</span></p><br>
+						<p class="lightgreen">"All the curriculum leaders should have been here for the planning part."<br/> <span class="gray">—A Resources Coordinator, Fresno, California</span></p><br>
+						<p class="lightgreen">"People were interested and excited about the information."<br/> <span class="gray">—Information Technology Manager, Houston TX</span></p>
+					</div>
+					<div class="para">
+					<p>You may already know that schools are in the eye of a
+					"perfect storm" of transitioning to digital curriculum. This is why strategy, not mere tactics, is so important.</p>
+					<p>In every State equity in education is an important
+					consideration. What's happening right now is schools are
+					moving off use of paper textbooks and into all sorts of digital materials on a massive scale.</p>
+					<p>This very real storm of change includes the fact that the traditional mode of curriculum acquisition has fractured as the industry has built up from a handful of major publishers to thousands in a few short years. By survey teachers are spending upwards of five hours a week just trying to find content to fit the additional changes in standards and testing. In the meantime, the actual technology and digital collections are advancing at a rapid rate.</p>
+					<p>The expectation by society is digital. This event brings
+					together regional interested district executives to discuss real strategy points.</p>
+					<p>In every city this one-day event has proven very useful for attendees to network, see what is new about digital curriculum, and discuss the issues.</p>
+					<p>In both Minnesota and Colorado, attendees gain continuing education units for the event.</p>
+					<br>
+					<p>Highlights of a Digital Curriculum Strategy Discussion meeting:</p>
+					</div>
+
+					<div style="width: 570px; padding-left: 40px;">
+						<ul>
+							<li><span>Local education executives lead some of the sessions and participate on a panel.</span></li>
+							<li><span>Special presentation by The Learning Counsel on the state-of-developments in curriculum trends nationally.</span></li>
+							<li><span>A professional "provocateur" to lead attendees in discussions with each other and through half-hour presentations by several digital curriculum publishers on topics related to digital curriculum, tablets and mobility, educational games, analytics and more. These presentations get the "wheels turning" for what's industry current.</span></li>
+							<li><span>Discussion time on building a comprehensive digital curriculum strategy.</span></li>
+							<li><span>Complimentary Continental Breakfast, Snack Breaks, Lunch, and Reception.</span></li>
+						</ul>
+					</div> -->
+					<!-- AGENDA: 
+					<div class="agenda-box">
+						<h3 class="center-h3">Agenda</h3>
+
+					<table>
+						<tr>
+							<td style="vertical-align: top;">7:30—8:15</td>
+							
+							<td style="vertical-align: top;">Breakfast & Welcome Introductions</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: top;">8:15—9:15</td>
+							
+							<td style="vertical-align: top;">Digital Curriculum Transition Strategy—Learning Counsel Led Discussion</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: top;">9:15—9:55</td>
+							
+							<td style="vertical-align: top;">Show & Discuss Presentations</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: top;">9:55—10:10</td>
+							
+							<td style="vertical-align: top;">Break</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: top;">10:10—10:40</td>
+							
+							<td style="vertical-align: top;">Workshop I: Goals & Policies (Local Education Executive Leader)</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: top;">10:40—11:10</td>
+							
+							<td style="vertical-align: top;">Workshop II: Standards & Inventory (Local Education Executive Leader)</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: top;">11:10—11:50</td>
+							
+							<td style="vertical-align: top;">Show & Discuss Presentations</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: top;">11:50—12:30</td>
+							
+							<td style="vertical-align: top;">Lunch with Special Guest Speaker</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: top;">12:30—1:30</td>
+							
+							<td style="vertical-align: top;">Workshop III: Whole Group Discussion—The "New" PD, Analyzing & Piloting, Acquisition, Leading the Change</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: top;">1:30—1:45</td>
+							
+							<td style="vertical-align: top;">Break</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: top;">1:45—2:00</td>
+							
+							<td style="vertical-align: top;">Learning Counsel State-of-the-National-Market Briefing</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: top;">2:00—3:00</td>
+							
+							<td style="vertical-align: top;">Local Executive Panel Guests</td>
+						</tr>
+						<tr>
+							<td style="vertical-align: top;">3:00—4:00</td>
+							
+							<td style="vertical-align: top;">Networking Reception</td>
+						</tr>
+						<tr>
+						<td></td><td></td></tr>
+					</table>
+
+					</div>  END AGENDA-->
+
+					<table class="david">
+						<tr>
+							<td><img width="222" src="/repository/events/david-2.png" atl="David" style="margin-right: 8px;"></td>
+							<td>Host: <span class="lightgreen">Dr. David Kafitz, Ed. D.</span><br/><br/>
+								Expert and charismatic change-agent helping schools move forward with a well-reasoned strategy for digital content and curriculum, professional development and IT strategy.<br/><br/> 
+								Former Superintendent, Director of Technology Services, Principal, and Teacher in North Carolina Public Schools.
+							</td>
+						</tr>
+					</table>
+
+					<table class="lani">
+						<tr>
+							<td>Digital Curriculum Trends Speaker: <span class="lightgreen">LeiLani Cauthen<br/></span><br/>
+								A Research Publisher and Media personality for 10 years, LeiLani will share the trends in schools for digital curriculum, insight into the future, and best practices.</td>
+							<td>
+								<!-- <img width="222" src="/repository/events/lani-brown.png" atl="Leilani" style="margin-left: 8px;"> -->
+								<img src="../repository/events/lani-brown-2.png" alt="LeiLani" style="margin-left: 8px;">
+							</td>	
+						</tr>
+					</table>
+
+					<a href="/EventRegistration" class="kso"><h2>ATTEND IN ONE OF THE CITIES</h2></a>
+					<a href="/ContactUs" class="kso"><h2 style="margin-bottom: 50px;">INVITE US TO CREATE AN EVENT</h2></a>
+
+				</div>
+
+
+				<!-- Side bare here -->
+				<div class="side-bar-right" style="margin-bottom: -2px;">
+					<h2>Sponsors of the Digital Curriculum<br/>
+						Strategy Events 2015 for some<br/>
+						or all of the cities presented</h2>
+
+					<img src="/repository/schedule/t-Mobile-sized.png" alt="T-Mobile">
+					<img src="/repository/schedule/reading-kingdom-sized.png" alt="Read Kingdom">
+					<img src="/repository/schedule/HMH-logo.jpg" alt="Houghton Mifflin Harcourt">
+					<img src="/repository/schedule/samsung-sized.png" alt="Samsung">
+					<img src="/repository/schedule/FLVS-sized.png" alt="Florida Visual">
+					<img src="/repository/schedule/IXL-sized.png" alt="IXL Learning">
+					<img src="/repository/schedule/compass-sized.png" alt="Compass Learning">
+					<img src="/repository/schedule/myon-sized.png" alt="MyOn">
+					<img src="/repository/schedule/promethean-sized.png" alt="Promethean">
+					<img src="/repository/schedule/amplify-sized.png" alt="Amplify" style="margin-bottom: 0px;">
+
+					
+					<div style=""></div>
+				</div>
+				<div class="bottom-logo-section">
+					<img src="/repository/schedule/mcgrawhill-sized.png" alt="McGraw Hill">
+					<img src="/repository/schedule/edmentum-sized.png" alt="Edmentum">
+					<img src="/repository/schedule/atomic-sized.png" alt="Atomic Learning">
+					<img src="/repository/schedule/edgenuity-sized.png" alt="Edgenuity">
+					<img src="/repository/schedule/gale-sized.png" alt="GALE">
+					<img src="/repository/schedule/achieve3000-sized.png" alt="Achieve 3000">
+					<img src="/repository/schedule/aldebaran-sized.png" alt="Aldebaran">
+					<img src="/repository/schedule/knovation-sized.png" alt="Knovation">
+					<img src="/repository/schedule/pearson-sized.png" alt="Pearson">
+					<img src="/repository/schedule/triumph-sized.png" alt="Triumph Learning">
+					<img src="/repository/schedule/classworks-sized.png" alt="Classworks">
+					<img src="/repository/schedule/apex-sized.png" alt="Apex Learning">
+					<img src="/repository/schedule/dreambox-sized.png" alt="Dream Box">
+					<img src="/repository/schedule/lenovo-sized.png" alt="Lenovo">
+					<img src="/repository/schedule/insight-sized.png" alt="Insight">
+				</div>
+
+			</div>
+			
+		<!-- </section> -->
+		
+	<!-- </div> -->
+		
+
+<div style="height: 50px;"></div>
+
+</div>
+
+</li>
+
+</ul>
+
+	
+<div id="bottom-graphic-2">
+<img src="../repository/lc-box-cloud.png"/>
+<div class="lc-landing-box-row-2"></div>
+</div>
+
+<div style="clear: both;"></div>
+
+
+
+<script>
+
+		var offset_top = 0;
+		jQuery(window).scroll(function() {
+			offset_top = $(window).scrollTop()
+			$('#eventstabs').css('top', offset_top);
+		});
+
+		function resizeArea(){
+
+			var txtarea_id = "";
+			var lines = 0;
+			var txtarea;
+			var hght = 0;
+			for( i=1; i<= gon.cnt; i++) {
+				txtarea_id = "#txtarea_" + i;
+				if ( !($.isEmptyObject($(txtarea_id).val().match(/\n/g))) ) {
+					lines = $(txtarea_id).val().match(/\n/g).length + 1;
+				}
+				else {
+					lines = 1;
+				}
+				
+				switch(lines)
+				{
+				case 1:
+					hght = 26;	  
+				  break;
+				case 2:
+					hght = 54;	  
+				  break;
+				case 3:
+					hght = 82;	  
+				  break;
+				case 4:
+					hght = 110;	  
+				  break;
+				case 5:
+					hght = 138;	  
+				  break;
+
+				default:
+					hght = 166;
+				}				
+
+				$(txtarea_id).css({
+					height : hght
+				})			
+				
+				//alert("hght = " + hght);
+			}
+		}
+	
+	
+		$(window).load( function() {
+		//$(document).ready(function(){
+
+			$("#tab2").addClass("active");
+
+			
+			// var s = "txtarea_<#%= i %#>"
+			// <#% i = 0 %#>
+			// <#% @reg_event_itins.each do |reg_event_itin| %#>
+				// <#% i = i + 1 %#>
+				// s = "#txtarea_<#%= i %#>";
+				// $(s).elastic();			
+			// <#% end %#>
+			
+			
+			resizeArea();
+			// alert(gon.cnt);
+			
+			// $("#txtarea_5").val().match(/\n/g).length
+			// alert($("#txtarea_5").val().match(/\n/g).length + 1);			
+			
+		});
+	
+</script>
+		
+

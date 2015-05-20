@@ -1,0 +1,25 @@
+<div id="commun_reg_confirm" class="download-msg-register">
+	<span class="span-1">&raquo; &raquo; &raquo; To view/download PDF's on this page &laquo; &laquo; &laquo;</span><br>
+	<span class="span-2">please click here to confirm/register in our Community</span>
+</div>			
+
+<script>
+
+	function blinker() {
+		$(".blink-me").each( function() {
+			for(var i = 0; i < 3; i++) {
+				$(this).fadeIn(100).delay(500).fadeOut(500);
+			}
+		});
+		$(".blink-me").fadeIn(400);
+	}
+
+	// $(window).load( function() {
+	$(document).ready(function(){
+
+		$("#commun_reg_confirm").addClass("blink-me");		
+		blinker();
+				
+	});
+	
+</script>

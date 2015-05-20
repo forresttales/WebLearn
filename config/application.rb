@@ -70,8 +70,26 @@ module Weblearn
     
     #config.assets.initialize_on_precompile = false    
     config.assets.enabled = true
-    config.assets.precompile += ['jquery.validate.js', 'reg_events_new.js', 'jqModal.js', 'jquery-dropdown-dot.js']
-    config.assets.precompile += ['reg_letters_new.js']
+    # config.assets.precompile += ['jquery.validate.js', 'reg_events.js', 'jqModal.js', 'jquery-dropdown-dot.js']
+    config.assets.precompile += [
+                                  'jqModal.js', 
+                                  'jquery.validate.js', 
+                                  'jquery-dropdown-dot.js',
+                                  'reg_events_new.js', 
+                                  'reg_letters_new.js',
+                                  'special_reports.js',                                  
+                                  'dot.js',
+                                  'jquery.colorbox.js',
+                                  'jquery.elastic.source.js',
+                                  'jquery.galleryview.2.1.1.min.js',
+                                  'jquery.tabbable.min.js',
+                                  'jquery-prettyPhoto.js',
+                                  'jquery-002.js',
+                                  'jquery-2.1.2.js',
+                                  'jquery.easing.1.3.js'
+                                  # 'global.js'                                  
+                                ]
+
 
     #config.assets.paths << "#{Rails.root}/vendor/assets/javascripts"
     
@@ -79,6 +97,15 @@ module Weblearn
     #config.assets.load_paths << File.expand_path('../../vendor/assets-libs/')    
     
     #config.action_view.JavaScript_expansions[:defaults] = %w(jquery rails application)     
+
+    # http://fonts.googleapis.com/css?family=Quicksand|Actor
+    # config.action_dispatch.default_headers.merge!({
+      # 'Access-Control-Allow-Origin' => '*',
+      # 'Access-Control-Request-Method' => '*'
+    # })
+    
+    config.action_dispatch.default_headers.clear
+    
     
   end
 end

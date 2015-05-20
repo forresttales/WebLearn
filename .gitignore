@@ -24,6 +24,3 @@
 /public
 /*.directory
 /.gitignore
-/public
-# /config/environments/development.rb
-# /config/environments/production.rb

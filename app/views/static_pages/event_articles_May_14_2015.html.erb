@@ -1,0 +1,541 @@
+<% provide(:title, 'Past Event Articles') %>
+
+				
+			
+		<!-- <link href="/assets/entrepeneurs_screen.css" media="screen, projection" rel="stylesheet" type="text/css"> -->
+		
+		<style type="text/css">
+			@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
+		</style>
+			
+				
+		<script type="text/javascript" src="../scripts/jquery-1.4.1.min.js"></script>
+							
+		<!-- <script type="text/javascript" src="/assets/entrepeneurs_jquery-1.js"></script> 
+		<script type="text/javascript" src="/assets/entrepeneurs_jquery.js"></script> -->
+
+
+    	<script type="text/javascript" src="../scripts/jquery.tmpl.js"></script>
+    	<link rel="stylesheet" href="../styles/slideshow.css">
+
+		<style>
+			
+			.k-decorate-none {
+				text-decoration: none;
+			}
+			
+		</style>
+
+		<style>
+		.cycle-overlay.custom { text-align: right; }
+		button { margin-top: 40px }
+		</style>
+	
+		<style>
+			
+			.kontainer-top {
+				position: relative;
+				/*margin: 0 auto;*/
+				margin-left: 10%;
+				clear: both;
+				width: 1200px;
+				background-color: #fff;
+			}
+			.kontainer {width:1100px;}
+			.title-gallery {
+				font-size: 16px;
+				line-height: 16px;
+				color: #8A5A0C;
+				font-family: KlavikaBlack, Arial, sans-serif;
+				/*text-shadow: 2px 2px #F5DDB8;*/
+				margin-left: 0px;
+			}
+			.title-galler-table {
+				width: 100%;	
+			}
+			.title-galler-table-col1 {
+				text-align: center;
+				padding-left: 0px;				
+			}
+			.title-galler-table-col2 {
+				text-align: right;
+				padding-right: 0px;												
+			}
+			
+			
+			.slider-border-1 {
+				 width: 270px; 
+				 height: 180px; 
+				 border: 6px solid #000;
+			}
+			.slider-border-1:hover {
+				 border: 6px solid orange;
+			}
+			.slider-border-2 {
+				 width: 270px; 
+				 height: 152px; 
+				 border: 6px solid #000;
+			}
+			.slider-border-2:hover {
+				 border: 6px solid orange;
+			}
+			.video-bytes {
+				font-family: bytes;
+				font-size: 40px;
+			}
+			.video-tv {
+				font-family: AsSeenOnTV;
+				font-size: 16px;
+			}
+			.video-msyh {
+				font-family: msyh;
+				font-size: 16px;
+			}
+			
+			a.video-text {
+				color: #333;
+				text-decoration: none;
+			}
+			a.video-text:hover {
+				color: #41b737;
+				text-shadow: 2px 2px #ccc;
+			}
+			
+			.line-video {
+				border-top: #181873 5px solid !important;
+				width: 300px;
+			}
+			.line-empty {
+				border-top: #fff 5px solid !important;
+			}
+			.visibility-hidden {
+				visibility: hidden;	
+			}
+			.display-none {
+				display: none;	
+			}
+			
+			.past-event-phots-h {
+				height:27px;
+				background:#214025;
+				color: #FFF;
+				text-align:center;
+				width: 300px;
+				text-transform: uppercase;
+			}
+
+			a.past-event-a:hover {
+				opacity: .6;
+				text-decoration:none;
+				color:#FFF;
+			}
+			.past-event-a .k-inner-cell {
+				border:2px solid #34633a;
+				box-shadow: 0 3px 3px #6f6f6f;
+				width:300px;
+			}
+
+			.search-function {
+				background: none repeat scroll 0 0 #f7f7f7;
+   				 border: 1px solid #41b737;
+    			color: #9e9e9e;
+    			font-size: 18px;
+    			height: 25px;
+    			text-align: left;
+   				 width: 270px;
+			}
+
+			
+
+		</style>
+
+		<div style="margin-top:50px;" class="seperator-2"><img src="/repository/logo-boxes-alone.png">PAST EVENT ARTICLES</div>
+
+		<div style="width: 1200px; margin-right: auto; margin-left: auto; background: #fff;">
+	   	
+
+
+		 								
+			<%= render 'share/backtotop' %>
+
+									
+		
+<div style="width: 1200px; margin-right: auto; margin-left: auto; background: #fff;">
+				
+<section>			
+				<div class="kontainer">
+					
+					<div style="height: 20px;"></div>
+					
+				
+<div style="height: 20px;"></div>
+
+<a name="anchor2"></a>    		      		     		
+
+<!-- Start author column -->
+	<div class="author-column">
+		<h2 class="author-header">FEATURED AUTHORS</h2>
+		<div class="a-column-box" style="margin-top: 3px; border-top: 1px solid gray;">
+			<img class="auth-pic" src="/repository/events/lani-small.jpg" alt="Leilani Cauthen">
+			<h3>LEILANI CAUTHEN</h3>
+			<p>Well versed in digital content and curriculum
+				change, the adoption process,
+				successful strategies, and helping
+				schools understand what’s available
+				and what will work.
+				Leilani is a consulting, media, research,
+				marketing and sales professional with 26 years of experience
+				in the high tech, government and education sectors.</p>
+			<div class="social-links-author">
+				<a href="https://www.facebook.com/leilani.cauthen" target="_blank"><img src="/repository/facebook.png" alt="Facebook"></a>
+				<a href="https://twitter.com/leilanicauthen" target="_blank"><img src="/repository/twitter.png" alt="Twitter"></a>
+				<a href="https://www.linkedin.com/profile/view?id=101158241" target="_blank"><img src="/repository/linkedin.png" alt="LinkedIn"></a>
+			</div>
+		</div>
+
+		<div class="a-column-box">
+			<img class="auth-pic" src="/repository/events/david.png" alt="David Kafitz">
+			<h3>DAVID KAFITZ, Ed.D.</h3>
+			<p>Expert and charismatic change-agent
+				helping schools move forward with
+				a well-reasoned strategy for digital
+				content and curriculum, professional
+				development and IT strategy.
+				Former Superintendent, Director of
+				Technology Services, Principal, and Teacher in North Carolina
+				Public Schools.</p>
+				<div class="social-links-author">
+				<a href="https://www.facebook.com/dkafitz" target="_blank"><img src="/repository/facebook.png" alt="Facebook"></a>
+				<a href="https://twitter.com/david_kafitz" target="_blank"><img src="/repository/twitter.png" alt="Twitter"></a>
+				<a href="https://www.linkedin.com/profile/view?id=78484533" target="_blank"><img src="/repository/linkedin.png" alt="LinkedIn"></a>
+			</div>
+		</div>
+
+		
+	</div>
+<!-- End author column -->
+
+<!-- start template single row -->
+				
+<div class="k-governcell ktop kbottom" style="width: 640px;">	
+		
+	<div class="k-outercell kol3">
+		
+		<div id="68"></div>
+		
+	</div>
+		
+	<div class="k-cell-divider"></div>
+	
+	
+	<div class="k-outercell kol3">
+
+		<div id="67"></div>
+    	
+						
+	</div>
+
+	<!--<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol3">
+		
+		<div id="39"></div>		
+		
+	</div>-->
+	
+</div>
+
+<!-- end template single row -->				
+
+<!-- start template single row -->
+				
+<div class="k-governcell ktop kbottom" style="width: 640px;">	
+		
+	<div class="k-outercell kol3">
+		
+		<div id="65"></div>
+		
+	</div>
+		
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol3">
+		
+		<div id="37"></div>
+						
+	</div>
+	
+</div>
+
+<!-- end template single row -->			
+
+<!-- start template single row -->
+				
+<div class="k-governcell ktop kbottom" style="width: 640px;">	
+		
+	<div class="k-outercell kol3">
+		
+		<div id="33"></div>
+		
+	</div>
+		
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol3">
+		
+		<div id="32"></div>
+						
+	</div>
+	
+</div>
+
+<!-- end template single row -->	
+
+<!-- start template single row
+				
+<div class="k-governcell ktop kbottom" style="width: 640px;">	
+		
+	<div class="k-outercell kol3">
+		
+		<div id="25"></div>
+		
+	</div>
+		
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol3">
+		
+		
+						
+	</div>
+	
+</div>
+
+<!-- end template single row -->		
+	
+<!-- start template single row 
+				
+<div class="k-governcell ktop kbottom" style="width: 640px;">	
+		
+	<div class="k-outercell kol3">
+		
+		<div id="10"></div>
+		
+	</div>
+		
+	<div class="k-cell-divider"></div>
+	
+	<div class="k-outercell kol3">
+		
+		<div id="10"></div>
+						
+	</div>
+	
+</div>
+
+<!-- end template single row -->	
+
+
+
+
+
+
+	
+</div>
+			
+
+
+<div style="height: 50px;"></div>
+
+
+			
+ <%= render 'archives/article' %>
+			
+			
+		</section>
+		</div></div>
+		
+		<div style="height: 10px;"></div>
+		
+    <script>
+                
+		function scrollToAnchor(aid) {
+			var a = $("a[name='" + aid + "']");
+			$('html, body').animate({ scrollTop: a.offset().top }, 1000);
+			// jQuery('html, body').animate({scrollTop: 100}, 1000);				
+		}
+                
+		$(window).load( function() {
+						
+			var j;
+			var k;
+			var l;
+			var m;
+			var n;
+			var p;
+			var t;
+			var jj;
+			var kk;
+			var ll;
+			var mm;
+			var nn;
+
+			var upperCell;			
+
+			$('.k-governcell').each( function() {
+				
+				j = 0;
+				k = 0;
+				l = 0;
+				m = 0;
+				n = 0;
+				p = 0;
+				s = 0;
+				t = 0;
+				jj = 0;
+				kk = 0;	
+				ll = 0;	
+				mm = 0;
+				dj = 0;
+				djj = 0;
+				$(this).children().each( function() {
+					
+					if ($(this).hasClass('k-outercell')) {
+						if (!(jj = $(this).find("img").attr("height"))) {
+							jj = 0;
+						}
+						// console.log('jj = ' + jj);
+						j = j >= jj ? j : jj;
+						n = parseInt(j);																		
+					}
+					if ($(this).hasClass('k-outercell-double')) {
+						if (!(djj = $(this).find("img").attr("height"))) {
+							djj = 0;
+						}
+						// console.log('djj = ' + djj);
+						dj = dj >= djj ? dj : djj;
+						dn = parseInt(dj);																		
+					}
+					
+				});
+
+				n += 6;
+				upperCell = $(this).find('.k-b-container');
+				upperCell.height(n);
+				
+				// console.log('n = ' + $(this).find('.k-b-container').height());
+
+				$(this).children().each( function() {
+					
+					if ($(this).hasClass('k-outercell')) {
+						kk = $(this).height();
+						if (!(kk = $(this).height())) {
+							kk = 0;
+						}
+						k = k >= kk ? k : kk;
+						t = k;
+					}
+					if ($(this).hasClass('k-outercell-double')) {
+						kk = $(this).height();
+						if (!(kk = $(this).height())) {
+							kk = 0;
+						}
+						k = k >= kk ? k : kk;
+						s = k;
+					}
+				});
+				
+				m = s >= t ? s : t;
+
+				m += 2;
+				m = m <= 1000 ? m : 1000;
+
+				// console.log('m = ' + m);
+				
+				$(this).height(m);
+				$(this).children($('.k-cell-divider')).height(m);
+			});
+			
+			
+			$("#alter-k-governcell-1").height(342);
+			$("#alter-k-cell-divider-1").height(342);
+			$("#alter-k-cell-divider-2").height(342);
+			$("#10").css({ 'padding-top' : 20 });
+			$("#25").css({ 'padding-top' : 20 });
+			
+			
+			
+			
+			
+			$('a[href*=#]:not([href=#])').click(function() {
+			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+			        || location.hostname == this.hostname) {
+			        var target = $(this.hash);
+			        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		           	if (target.length) {
+		             	$('html,body').animate({
+		                	scrollTop: target.offset().top
+		            	}, 750);
+		            	// return false;
+		        	}
+			    }
+			});
+			
+			
+			
+		});
+
+
+		$(window).bind('load', function() {
+			// $("#small-slider-top").removeClass("display-none");
+			setTimeout( function(){
+				$("#small-slider-top").removeClass("display-none");
+			}, 1000);
+		});
+
+		$("#div-top-right").removeClass("visibility-hidden");
+		// $("#small-slider-top").removeClass("display-none");
+
+
+		// var image = '../backgrounds/comp025.jpg';
+		// img = $('<img />');
+		// img.bind('load', function() {
+		    // $('#loading').fadeOut(1000);
+			// setTimeout( function(){
+				// centerSignin();
+				// showSignin();
+				// formValidate();
+			// }, 500);
+		// });
+		// img.attr('src', image);
+		// $('#join-image').css({
+			// background: '#F1F2E1 url(' + image + ') repeat right top'
+		// })
+
+
+
+	// var get_file = "../archives/article.htm";
+// 
+	// $.get( get_file, function( data ) {
+		// $( "#render" ).html( data );
+	// });
+
+		
+	</script>
+
+
+<!-- <script>
+  
+	// var get_file = "../archives/article.htm";
+// 
+	// $(document).ready(function() {
+	// //$(window).load( function() {
+// 
+			// $.get( get_file, function( data ) {
+				// $( "#render" ).html( data );
+			// });
+// 		
+	// });
+  
+</script>		 -->
+
