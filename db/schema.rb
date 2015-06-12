@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150427082115) do
+ActiveRecord::Schema.define(version: 20150608051459) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,23 +73,27 @@ ActiveRecord::Schema.define(version: 20150427082115) do
 
   create_table "archives", force: :cascade do |t|
     t.integer  "article_id"
-    t.string   "name_url",     limit: 255
-    t.string   "name_file",    limit: 255
-    t.string   "name_author",  limit: 255
-    t.string   "name_admin",   limit: 255
+    t.string   "name_url",            limit: 255, default: "journal"
+    t.string   "name_file",           limit: 255
+    t.string   "name_author",         limit: 255
+    t.string   "name_admin",          limit: 255
     t.text     "key_words"
     t.date     "date_article"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "article_type", limit: 255
-    t.string   "description",  limit: 255
-    t.string   "linkimg",      limit: 255
-    t.string   "linkimg_url",  limit: 255
-    t.string   "linktitle",    limit: 255
-    t.string   "slug",         limit: 255
-    t.string   "subtitle_1",   limit: 255
-    t.string   "subtitle_2",   limit: 255
-    t.integer  "img_height",               default: 300
+    t.string   "article_type",        limit: 255
+    t.string   "description",         limit: 255
+    t.string   "linkimg",             limit: 255
+    t.string   "linkimg_url",         limit: 255
+    t.string   "linktitle",           limit: 255
+    t.string   "slug",                limit: 255
+    t.string   "subtitle_1",          limit: 255
+    t.string   "subtitle_2",          limit: 255
+    t.integer  "img_height",                      default: 200
+    t.string   "linkimg_carousel"
+    t.integer  "img_height_carousel",             default: 300
+    t.string   "subtitle_1_carousel"
+    t.string   "subtitle_2_carousel"
   end
 
   add_index "archives", ["article_id"], name: "index_archives_on_article_id", using: :btree
@@ -131,6 +135,15 @@ ActiveRecord::Schema.define(version: 20150427082115) do
   add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
+
+  create_table "hit_counts", force: :cascade do |t|
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.integer  "item_register_id", default: 0
+    t.string   "user_email",       default: ""
+  end
+
+  add_index "hit_counts", ["item_register_id"], name: "index_hit_counts_on_item_register_id", using: :btree
 
   create_table "institute_images", force: :cascade do |t|
     t.integer  "institute_id"
@@ -209,6 +222,13 @@ ActiveRecord::Schema.define(version: 20150427082115) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+  end
+
+  create_table "item_registers", force: :cascade do |t|
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.string   "item_description", default: ""
+    t.integer  "item_type",        default: 0
   end
 
   create_table "landings", force: :cascade do |t|

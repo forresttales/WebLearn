@@ -1,844 +1,521 @@
-<% provide(:title, 'Reports') %>
+<% provide(:title, 'Papers') %>
 
-	<!-- <script type="text/javascript" src="../scripts/slidedeck.jquery.js"></script> -->
-	<!-- <script src="/assets/jquery.colorbox.js"></script> -->
-	<!-- <link rel="stylesheet" href="/assets/colorbox.css" /> -->
-	<!-- <link rel="stylesheet" type="text/css" href="../styles/slidedeck.skin.css" media="screen,handheld" /> -->
-	<!-- <script src="/assets/jqModal.js"></script> -->
-	<!-- <script src="/assets/jquery.easing.1.3.js"></script> -->
-	<!-- <link rel="stylesheet" href="/assets/jqModal.css" /> -->
-	<!-- <script src="/assets/jquery.validate.js"></script> -->
-
-	<%= javascript_include_tag "jqModal" %>
-	<%= javascript_include_tag "jquery.validate" %>
-
-	<!-- <style type="text/css">
-		@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
-	</style> -->
-
+<%= render 'share/backtotop' %>
 
 <div class="papers">
 
-			<div class="jqmWindow-papers-1" id="dialog_papers_1">
-				<div class="seperator-papers" style="margin-top:0px;">
-				<!-- <img src="/repository/logo-icon-come-together.png"> -->
-				<%= image_tag("logo-icon-come-together.png", alt: "X") %>
-				DOWNLOAD PAPERS
-				</div>
-		   		<div class="table-dl-form">
-		   			<div class="row">
-		   				<div class="cell-100percent">
-		   					<div id="close_form1" class="form-edit-close jqmClose" tabindex="1">
-		   						<%= image_tag("x_close_w20_h20.png", alt: "X", height: "20px") %>
-		   					</div>
-		   					<div style="clear: both;"></div>
-		   				</div>
+	<div class="jqmWindow-papers-1" id="dialog_papers_1">
+		<div class="seperator-papers" style="margin-top:0px;">
+		<%= image_tag("logo-icon-come-together.png", alt: "X") %>
+		DOWNLOAD
+		</div>
+   		<div class="table-dl-form">
+   			<div class="row">
+   				<div class="cell-100percent">
+   					<div id="close_form1" class="form-edit-close jqmClose" tabindex="1">
+   						<%= image_tag("x_close_w20_h20.png", alt: "X", height: "20px") %>
    					</div>
-				</div>				   				
-				<hr class="dl-form-divider-line">
-				<div style="height: 10px;"></div>
-		   		<div class="table-dl-form">
-		   			<div class="row">
-		   				<div class="cell-100percent" style="text-align: center;">
-		   					<span class="form-pdf-title">
-		   						<em>For free viewing and download,</em>
-		   						<br>
-		   						please enter the email tied with your Community Registration.
-		   					</span>
-		   				</div>
-   					</div>
-				</div>				   				
-				<div style="height: 20px;"></div>
-				<form id="form_pdf" class="form-pdf">
-					<div class="table-dl-form-background">
-				   		<div class="table-dl-form">
-				   			<div class="row">
-				   				<div class="cell-200"></div>
-				   				<div class="cell-300">
-									<input class="input-gen" id="dl_email" name="dl[email]" placeholder="Email" tabindex="2" type="" autofocus />
-				   				</div>
-				   				<div class="cell-200">
-				   					<div id="error_dl_email" class="form-dl-error error-div"><span></span></div>
-				   				</div>
-		   					</div>
-		   				</div>
-	   				</div>
-	   				<div style="height: 10px;"></div>
-			   		<div class="table-dl-form">
-			   			<div class="row">
-			   				<div class="cell-100">
-			   				</div>
-			   				<div class="cell-600">
-			   					<span class="form-pdf-title-2">
-			   						Open PDF: 
-			   					</span>
-			   				</div>
-	   					</div>
-			   			<div class="row">
-			   				<div class="cell-100">
-			   				</div>
-			   				<div class="cell-600">
-								<div style="display: inline-block; width: 20px;"></div>
-								<div id="div_rd_win_same" class="rd-button"></div>
-								<input id="rd_win_same" type="radio" value="1" name="rd_win">
-								<label id="label_rd_win_same" class="label-rd" tabindex="3" onclick="rd_win('same');" for="rd_win">
-				   					<span class="form-pdf-title-2">
-				   						on this page <em> - the browser's back arrow may be used to return to the Learning Counsel</em>
-				   					</span>
-								</label>
-			   				</div>
-	   					</div>
-			   			<div class="row">
-			   				<div class="cell-100">
-			   				</div>
-			   				<div class="cell-600">
-								<div style="display: inline-block; width: 20px;"></div>
-								<div id="div_rd_win_new" class="rd-button"></div>
-								<input id="rd_win_new" type="radio" value="2" name="rd_win">
-								<label id="label_rd_win_new" class="label-rd" tabindex="4" onclick="rd_win('new');" for="rd_win">
-				   					<span class="form-pdf-title-2">
-				   						in a new window / tab <em> - the new tab opens to the left of this page</em>
-				   					</span>
-								</label>
-			   				</div>
-	   					</div>
-					</div>				   				
-	   				<div style="height: 16px;"></div>
-	   				<div class="table-dl-form">
-			   			<div class="row">
-			   				<div class="cell-100percent" style="text-align: center;">
-								<input id="submit_dl_contact" class="btn-submit" type="submit" value="Submit" tabindex="4">
-			   				</div>
-	   					</div>
-					</div>														   				
-				</form>
-				<div style="height: 20px;"></div>
-		   		<div class="table-dl-form">
-		   			<div class="row">
-		   				<div class="cell-100percent" style="text-align: center;">
-		   					<span class="form-pdf-title">
-		   						<em>Not registered in our Community?</em>
-		   						<br>
-		   						<a href="/CommunityRegistration">&laquo; Community Registration &raquo;</a>
-		   					</span>
-		   				</div>
-   					</div>
-				</div>				   								
+   					<div style="clear: both;"></div>
+   				</div>
 			</div>
-
-
-	<%= render 'share/backtotop' %>
+		</div>				   				
+		<hr class="dl-form-divider-line">
+		<div style="height: 10px;"></div>
+   		<div class="table-dl-form">
+   			<div class="row">
+   				<div class="cell-100percent" style="text-align: center;">
+   					<span class="form-pdf-title">
+   						<em>For free viewing and download,</em>
+   						<br>
+   						please enter the email tied with your Community Registration.
+   					</span>
+   				</div>
+			</div>
+		</div>				   				
+		<div style="height: 20px;"></div>
+		<form id="form_pdf" class="form-pdf">
+			<div class="table-dl-form-background">
+		   		<div class="table-dl-form">
+		   			<div class="row">
+		   				<div class="cell-200"></div>
+		   				<div class="cell-300">
+							<input class="input-gen" id="dl_email" name="dl[email]" placeholder="Email" tabindex="2" type="" autofocus />
+		   				</div>
+		   				<div class="cell-200">
+		   					<div id="error_dl_email" class="form-dl-error error-div"><span></span></div>
+		   				</div>
+   					</div>
+   				</div>
+			</div>
+			<div style="height: 10px;"></div>
+			<div class="table-dl-form">
+	   			<div class="row">
+	   				<div class="cell-100percent" style="text-align: center;">
+						<input id="submit_dl_contact" class="btn-submit" type="submit" value="Submit" tabindex="4">
+	   				</div>
+				</div>
+			</div>														   				
+		</form>
+		<div style="height: 20px;"></div>
+   		<div class="table-dl-form">
+   			<div class="row">
+   				<div class="cell-100percent" style="text-align: center;">
+   					<span class="form-pdf-title">
+   						<em>Not registered in our Community?</em>
+   						<br>
+   						<a href="/CommunityRegistration">&laquo; Community Registration &raquo;</a>
+   					</span>
+   				</div>
+			</div>
+		</div>				   								
+	</div>
 
 	<div class="wrapper">
-
 		<div class="seperator-2">
-			<!-- <img src="/repository/logo-boxes-alone.png"> -->
-			<%= image_tag("logo-boxes-alone.png", alt: "X", height: "20px") %>
+			<%= image_tag("logo-boxes-alone-w80-h80.png", alt: "", width: "80px", height: "80px") %>
 				PAPERS
 		</div>
 
-		<section>
-			<div class="kontainer">
-				<div class="kontainer-space-1"></div>
-					<div id="mainkolumn" class="withsidebar">
-						<div id="k-articlecontent">
-							<p class="papers-top-info">
-								The Learning Counsel presents papers and briefs on critical topics in Digital Education.
-								Click on the papers below to access and download.
-							</p>
-							<div class="kontainer-space-1"></div>
-							<div style="height: 30px; position: relative;"></div>
-							<div class="k-governcell ktop kbottom">	
-								<div class="k-outercell kol-619">
-									<a href="#" class="jqModal" id="pdf_12">
-										<div class="k-inner-cell vertical-align-top padding-top-1">
-											<div class="text_container b_container text-container-1">
-												<div class="pdf-image-border border-height-258">
-												    <!-- <img src="../repository/paper-thumb-netop.jpg" alt="paper-thumb-digital-curriculum-2.png" width="200px"> -->
-												    <%= image_tag("paper-thumb-netop.jpg", alt: "", width: "200px") %>
-												</div>
-											</div>
-											<div class="kpaper-text-wrapper">
-												<div class="kpaper-text">
-													<h2 style="color: #9f1218;">App Planning for Instant Classroom<br/>
-													Teaching &amp; Learning</h2>
-													<p>
-														This brief discusses a bold idea for apps in the classroom now that 50% of students nationally have access to computing devices for part or all of the day. This brief also showcases research and provides highlights on several key classroom app-planning points.
-													</p>
-													<img class="papers-logo" src="/repository/logo-icon-come-together-tag.png">
-													<span class="papers-download-btn">DOWNLOAD</span>
-												</div>														
-											</div>
-										</div>
-									</a>	
-								</div>
-							</div>
-							<div style="height: 30px; position: relative;"></div>
-							<div class="k-governcell ktop kbottom">	
-								<div class="k-outercell kol-619">
-									<a href="#" class="jqModal" id="pdf_1">
-										<div class="k-inner-cell vertical-align-top padding-top-1">
-											<div class="text_container b_container text-container-1">
-												<div class="pdf-image-border border-height-258">
-												    <!-- <img src="../repository/paper-thumb-digital-curriculum-2.png" alt="paper-thumb-digital-curriculum-2.png" width="200px"> -->
-												    <%= image_tag("paper-thumb-digital-curriculum-2.png", alt: "", width: "200px") %>
-												</div>
-											</div>
-											<div class="kpaper-text-wrapper">
-												<div class="kpaper-text">
-													<h2 style="color: #41b737;">2013-2014<br/>
-													Digital Curriculum Strategy for K12 Schools</h2>
-													<p>
-														This brief addresses digital curriculum strategy from the
-														viewpoint of innovation in K12 districts. It first defines a
-														Digital Curriculum Strategy and then covers processes for
-														developing a workable Digital Curriculum Strategy in your
-														area.
-													</p>
-													<!-- <img class="papers-logo" src="/repository/logo-icon-come-together-tag.png"> -->
-													<%= image_tag("logo-icon-come-together-tag.png", alt: "", class: "papers-logo") %>
-													<span class="papers-download-btn">DOWNLOAD</span>
-												</div>														
-											</div>
-										</div>
-									</a>	
-								</div>
-							</div>
-							<div style="height: 30px; position: relative;"></div>
-							<div class="k-governcell ktop kbottom">	
-								<div class="k-outercell kol-619">
-									<a href="http://education.i2i.org/wp-content/uploads/2014/07/IP_2_2014_web_b.pdf" class="jqModal" id="pdf_2">
-										<div class="k-inner-cell vertical-align-top padding-top-1">
-											<div class="text_container b_container text-container-1">
-												<!-- <div style="border-style: solid; border-width: 1px; border-color: orange; padding: 3px;"> -->
-												<div class="pdf-image-border border-height-258">
-												    <!-- <img src="../repository/paper-colorado-w200-h235.png" alt="paper-colorado-w200-h235.png" width="200px"> -->
-												    <%= image_tag("paper-colorado-w200-h235.png", alt: "", width: "200px") %>
-												</div>
-											</div>
-											<div class="kpaper-text-wrapper">
-												<div class="kpaper-text">
-													<h2 style="color: #1049BC;">
-														School District Partnerships Help Colorado<br/>
-														K12	Blended Learning Take Flight</h2>
-													<p>
-														Blended learning is a versatile teaching method that combines
-														in-person instruction with online learning in the classroom,
-														lab, or other work space including home. This paper focuses
-														on syste m-wide efforts in three Front Range school districts
-														and a group of rural districts in the San Luis Val- ley. The report
-														also provides a list of state and national resources for
-														schools and districts looking to implement blended learning
-														techniques on a limited or system-wide basis and questions to
-														consider prior to starting.
-													</p>
-													<!-- <img style="margin-left: 250px;" class="papers-logo" src="/repository/independence-institute.jpg"> -->
-													<%= image_tag("independence-institute.jpg", alt: "", class: "papers-logo img-margin-left-250") %>
-													<span class="papers-download-btn">DOWNLOAD</span>
-												</div>														
-											</div>
-										</div>
-									</a>	
-								</div>
-							</div>
-							<div style="height: 30px; position: relative;"></div>
-							<div class="k-governcell ktop kbottom">	
-								<div class="k-outercell kol-619">
-									<a href="https://s3.amazonaws.com/MHE_Social_Media/Whitepapers/District_Digital_Conversion_whitepaper_WEB_06162014.pdf" id="pdf_3">
-										<div class="k-inner-cell vertical-align-top padding-top-1">
-											<div class="text_container b_container text-container-1">
-												<div class="pdf-image-border border-height-258">
-												    <!-- <img src="../repository/paper-McGraw-Hill-DDC.jpg" alt="paper-McGraw-Hill-DDC.jpg" width="200px"> -->
-													<%= image_tag("paper-McGraw-Hill-DDC.jpg", alt: "", width: "200px") %>												    					    
-												</div>
-											</div>
-											<div class="kpaper-text-wrapper">
-												<div class="kpaper-text">
-													<h2 style="color: #e51b24;">
-														District Digital Conversion<br/>
-														Empowering Personalized Learning</h2>
-													<p>
-														How do we go from a status quo, paper driven organization,
-														to a more progressive and engaging digital school system?
-														This is a question many school district leadership teams
-														are wrestling with today. It is very important to address this
-														question because the mechanics of going digital can sometimes
-														be daunting. However, additional and even more important
-														questions to ask are: What defines success and how
-														will a district know it’s attaining success?
-													</p>
-													<!-- <img style="margin-left: 0px;" class="papers-logo" src="/repository/mcgraw-hill-sized.png"> -->
-													<%= image_tag("mcgraw-hill-sized.png", alt: "", class: "papers-logo") %>
-													<span class="papers-download-btn">DOWNLOAD</span>
-												</div>														
-											</div>
-										</div>
-									</a>	
-								</div>
-							</div>
+		<!-- <div class="height-30"></div>
+		<div id="render_download_msg" class="render-download-msg blink-me"></div> -->
+
+		<div class="kontainer">
+			<div class="kontainer-space-1"></div>
+				<div id="mainkolumn" class="withsidebar">
+					<div id="k-articlecontent">
+						<p class="papers-top-info">
+							The Learning Counsel presents papers and briefs on critical topics in Digital Education.
+							Click on the papers below to access and download.
+						</p>
+						<div class="kontainer-space-1"></div>
+						<!-- Dream Box Paper added 21 Apr 15-->
 						<div style="height: 30px; position: relative;"></div>
 						<div class="k-governcell ktop kbottom">	
 							<div class="k-outercell kol-619">
-								<a href="../pdfs/Case-Study-Burbank-2013.pdf" id="pdf_4">
+								<!-- <a href="http://www2.dreambox.com/l/14872/2015-04-06/58gslh" class="record-hit" data-record-hit-id="3"> -->
+								<div class="record-hit" data-href="http://www2.dreambox.com/l/14872/2015-04-06/58gslh" class="record-hit" data-record-hit-id="3">
 									<div class="k-inner-cell vertical-align-top padding-top-1">
 										<div class="text_container b_container text-container-1">
-											<div class="pdf-image-border border-height-258 margin-bottom-1">
-											    <!-- <img src="../repository/paper-thumb-1.jpg" alt="paper-thumb-1.jpg" width="200px"> -->
-											    <%= image_tag("paper-thumb-1.jpg", alt: "", width: "200px") %>
+											<div class="pdf-image-border">
+											    <%= image_tag("papers/paper-dreambox-w200-h258.jpg", alt: "Dreambox Learning", width: "200px", height: "258px") %>
 											</div>
 										</div>
 										<div class="kpaper-text-wrapper">
 											<div class="kpaper-text">
-												<h2><span style="color: #dc995c;">CASE STUDY:</span><br/>
-												Burbank Elementary School</h2>
-												<div style="height: 16px;"></div>
+												<h2 style="color: #0088b0;">
+													Best Practices for<br/> Evaluating Digital Curricula</h2>
 												<p>
-													Burbank Elementary School provides an educational
-													environment where students are safe and secure, fully
-													motivated and able to achieve their fullest potential.
+													Whether a school is building a blended learning program 
+													or simply wants to enhance learning with technology, it is 
+													critical to evaluate the quality of digital learning programs.
+													In this white paper, you’ll learn:<br/><br/>
+													&bull; Some of the unique considerations involved in selecting digital resources<br/>
+													&bull; Evidence-based learning principles to support student-centered environments<br/>
+													&bull; An evaluation checklist
 												</p>
-												<br><br><br><br><br><br>
-												<!-- <img style="margin-left: 0px;" class="papers-logo" src="/repository/bte-sized.png"> -->
-												<!-- <#%= image_tag("bte-sized.png", alt: "", class: "img-margin-left-0 papers-logo") %#> -->
+												<%= image_tag("papers/dreambox-w150-h71.png", alt: "", width: "150px", height: "70px", class: "papers-logo img-margin-left-250") %>
 												<span class="papers-download-btn">DOWNLOAD</span>
 											</div>														
 										</div>
 									</div>
-								</a>	
+								</div>	
 							</div>
 						</div>
+						
 						<div style="height: 30px; position: relative;"></div>
 						<div class="k-governcell ktop kbottom">	
 							<div class="k-outercell kol-619">
-								<a href="../pdfs/Case-Study-Marquez-2013.pdf" id="pdf_5">
+								<!-- <a href="../pdfs/Netop-Brief-R4.pdf" class="record-hit gated" data-record-hit-id="1"> -->
+								<div class="record-hit gated" data-href="../pdfs/Netop-Brief-R4.pdf" data-record-hit-id="1">
 									<div class="k-inner-cell vertical-align-top padding-top-1">
 										<div class="text_container b_container text-container-1">
-											<div class="pdf-image-border border-height-258 margin-bottom-1">												
-											    <!-- <img src="../repository/paper-thumb-2.jpg" alt="paper-thumb-2.jpg" width="200px"> -->
-											    <%= image_tag("paper-thumb-2.jpg", alt: "", width: "200px") %>
+											<div class="pdf-image-border">
+											    <%= image_tag("papers/paper-thumb-netop-w200-h256.jpg", alt: "", width: "200px", height: "256px") %>
 											</div>
 										</div>
 										<div class="kpaper-text-wrapper">
 											<div class="kpaper-text">
-												<h2><span style="color: #dc995c;">CASE STUDY:</span><br/>
-												Marquez Elementary Charter School</h2>
-												<div style="height: 16px;"></div>
+												<h2 style="color: #9f1218;">App Planning for Instant Classroom<br/>
+												Teaching &amp; Learning</h2>
 												<p>
-													Marquez’ Digital Edge program is an exciting, high-tech
-													initiative that puts laptop computers directly in students’
-													hands.
+													This brief discusses a bold idea for apps in the classroom now that 50% of students nationally have access to computing devices for part or all of the day. This brief also showcases research and provides highlights on several key classroom app-planning points.
 												</p>
-												<br><br><br><br><br><br><br>
-												<!-- <img style="margin-left: 0px;" class="papers-logo" src="/repository/bte-sized.png"> -->
-												<!-- <#%= image_tag("bte-sized.png", alt: "", class: "img-margin-left-0 papers-logo") %#> -->
+												<%= image_tag("papers/logo-icon-come-together-tag-w150-h79.png", alt: "", width: "150px", height: "79px", class: "papers-logo") %>
 												<span class="papers-download-btn">DOWNLOAD</span>
 											</div>														
 										</div>
 									</div>
-								</a>	
+								</div>	
 							</div>
 						</div>
 						<div style="height: 30px; position: relative;"></div>
 						<div class="k-governcell ktop kbottom">	
 							<div class="k-outercell kol-619">
-								<a href="../pdfs/Model-Innovation-City-Case-Study-Final.pdf" id="pdf_6">
+								<!-- <a href="../pdfs/Digital-Curriculum-Strategy-Brief.pdf" class="record-hit gated" data-record-hit-id="2"> -->
+								<div class="record-hit gated" data-href="../pdfs/Digital-Curriculum-Strategy-Brief.pdf" data-record-hit-id="2">
 									<div class="k-inner-cell vertical-align-top padding-top-1">
 										<div class="text_container b_container text-container-1">
-											<div class="pdf-image-border border-height-258 margin-bottom-1">
-											    <!-- <img src="../repository/paper-thumb-mooresville.png" alt="paper-thumb-mooresville.png" width="200px"> -->
-											    <%= image_tag("paper-thumb-mooresville.png", alt: "", width: "200px") %>					    
+											<div class="pdf-image-border">
+											    <%= image_tag("papers/paper-thumb-digital-curriculum-2-w200-h249.jpg", alt: "", width: "200px", height: "249px") %>
 											</div>
 										</div>
 										<div class="kpaper-text-wrapper">
 											<div class="kpaper-text">
-												<h2><span style="color: #dc995c;">CASE STUDY:</span><br/>
-												Moorefield, NC; Napa, CA; Revere, MA</h2>
-												<div style="height: 16px;"></div>
+												<h2 style="color: #41b737;">2013-2014<br/>
+												Digital Curriculum Strategy for K12 Schools</h2>
 												<p>
-													Why innovative superintendents are creating Model
-													Innovation Cities &#8482; to solve the third grade reading dilemma.
+													This brief addresses digital curriculum strategy from the
+													viewpoint of innovation in K12 districts. It first defines a
+													Digital Curriculum Strategy and then covers processes for
+													developing a workable Digital Curriculum Strategy in your
+													area.
 												</p>
-												<!-- <img style="margin-left: 0px;" class="papers-logo" src="/repository/footsteps2brilliance.jpg"> -->
-												<%= image_tag("footsteps2brilliance.jpg", alt: "", class: "img-margin-left-0 papers-logo") %>
-												<br><br>
+												<%= image_tag("papers/logo-icon-come-together-tag-w150-h79.png", alt: "", width: "150px", height: "79px", class: "papers-logo") %>
 												<span class="papers-download-btn">DOWNLOAD</span>
 											</div>														
 										</div>
 									</div>
-								</a>	
+								</div>	
 							</div>
 						</div>
 						<div style="height: 30px; position: relative;"></div>
 						<div class="k-governcell ktop kbottom">	
 							<div class="k-outercell kol-619">
-								<a href="../pdfs/Touro-University-FINAL.pdf" id="pdf_7">
+								<!-- <a href="http://education.i2i.org/wp-content/uploads/2014/07/IP_2_2014_web_b.pdf" class="record-hit" data-record-hit-id="4"> -->
+								<div class="record-hit" data-href="http://education.i2i.org/wp-content/uploads/2014/07/IP_2_2014_web_b.pdf" data-record-hit-id="4">
 									<div class="k-inner-cell vertical-align-top padding-top-1">
 										<div class="text_container b_container text-container-1">
-											<div class="pdf-image-border border-height-263 margin-bottom-2">
-											    <!-- <img src="../repository/paper-thumb-touro.png" alt="paper-thumb-touro.png" width="200px"> -->
-											    <%= image_tag("paper-thumb-touro.png", alt: "", width: "200px") %>					    
+											<div class="pdf-image-border">
+											    <%= image_tag("papers/paper-colorado-w200-h235.jpg", alt: "", width: "200px", height: "235px") %>
 											</div>
 										</div>
 										<div class="kpaper-text-wrapper">
 											<div class="kpaper-text">
-												<h2><span style="color: #dc995c;">EVALUATION STUDY:</span><br/>
-												Touro Univeristy on Napa County Schools, CA</h2>
-												<div style="height: 16px;"></div>
+												<h2 style="color: #1049BC;">
+													School District Partnerships Help Colorado<br/>
+													K12	Blended Learning Take Flight</h2>
 												<p>
-													A 3rd party evaluation on using mobile technology and the
-													Footsteps2Brilliance&copy; Academic Language Program to accelerate
-													vocabulary and comprehension for early learners.
+													Blended learning is a versatile teaching method that combines
+													in-person instruction with online learning in the classroom,
+													lab, or other work space including home. This paper focuses
+													on syste m-wide efforts in three Front Range school districts
+													and a group of rural districts in the San Luis Val- ley. The report
+													also provides a list of state and national resources for
+													schools and districts looking to implement blended learning
+													techniques on a limited or system-wide basis and questions to
+													consider prior to starting.
 												</p>
-												<!-- <img style="margin-left: 0px;" class="papers-logo" src="/repository/tuorouniversity-logo.png"> -->
-												<!-- <img style="margin-left: 15px;" class="papers-logo" src="/repository/napa-learns-logo.png"> -->
-												<%= image_tag("tuorouniversity-logo.png", alt: "", class: "img-margin-left-0 papers-logo") %>
-												<%= image_tag("napa-learns-logo.png", alt: "", class: "img-margin-left-15 papers-logo") %>
-												<span style="bottom: -26px;" class="papers-download-btn">DOWNLOAD</span>
-											</div>														
-										</div>
-									</div>
-								</a>	
-							</div>
-						</div>
-						<div style="height: 30px; position: relative;"></div>
-						<div class="k-governcell ktop kbottom">	
-							<div class="k-outercell kol-619">
-								<a href="../pdfs/ConceptuaMath-case-study_Mequon.pdf" id="pdf_8">
-									<div class="k-inner-cell vertical-align-top padding-top-1">
-										<div class="text_container b_container text-container-1">
-											<div class="pdf-image-border border-height-258 margin-bottom-1">
-											    <!-- <img src="../repository/paper-conceptual-math-mequon.png" alt="paper-conceptual-math-mequon.png" width="200px"> -->
-											    <%= image_tag("paper-conceptual-math-mequon.png", alt: "", width: "200px") %>					    
-											</div>
-										</div>
-										<div class="kpaper-text-wrapper">
-											<div class="kpaper-text">
-												<h2><span style="color: #dc995c;">CASE STUDY:</span><br/>
-												Conceptua&reg; Math at Mequon-Thiensville<br/>
-												School District</h2>
-												<div style="height: 16px;"></div>
-												<p>
-													Conceptua&reg; Fractions is used to address Common Core
-													at the Mequon-Thiensville School District.
-												</p>
-												<!-- <img style="margin-left: 0px; margin-top: 70px;" class="papers-logo" src="/repository/conceptua-logo.png"> -->
-												<%= image_tag("conceptua-logo.png", alt: "", class: "img-margin-top-70 papers-logo") %>
+												<%= image_tag("papers/independence-institute-w150-h66.jpg", alt: "", width: "150px", height: "66px", class: "papers-logo img-margin-left-250") %>
 												<span class="papers-download-btn">DOWNLOAD</span>
 											</div>														
 										</div>
 									</div>
-								</a>	
+								</div>	
 							</div>
 						</div>
 						<div style="height: 30px; position: relative;"></div>
 						<div class="k-governcell ktop kbottom">	
 							<div class="k-outercell kol-619">
-								<a href="../pdfs/ConceptuaMath-case-study-SunnysideUSD.pdf" id="pdf_9">
+								<!-- <a href="https://s3.amazonaws.com/MHE_Social_Media/Whitepapers/District_Digital_Conversion_whitepaper_WEB_06162014.pdf" class="record-hit" data-record-hit-id="5"> -->
+								<div class="record-hit" data-href="https://s3.amazonaws.com/MHE_Social_Media/Whitepapers/District_Digital_Conversion_whitepaper_WEB_06162014.pdf" data-record-hit-id="5">
 									<div class="k-inner-cell vertical-align-top padding-top-1">
 										<div class="text_container b_container text-container-1">
-											<div class="pdf-image-border border-height-258 margin-bottom-1">
-											    <!-- <img src="../repository/paper-conceptual-math-sunnyside.png" alt="paper-conceptual-math-sunnyside.png" width="200px"> -->
-											    <%= image_tag("paper-conceptual-math-sunnyside.png", alt: "", width: "200px") %>					    
+											<div class="pdf-image-border">
+												<%= image_tag("papers/paper-McGraw-Hill-DDC-w200-h259.jpg", alt: "", width: "200px", height: "259px") %>												    					    
 											</div>
 										</div>
 										<div class="kpaper-text-wrapper">
 											<div class="kpaper-text">
-												<h2><span style="color: #dc995c;">CASE STUDY:</span><br/>
-												Conceptua&reg; Math at<br/>
-												Sunnyside Union School District</h2>
-												<div style="height: 16px;"></div>
+												<h2 style="color: #e51b24;">
+													District Digital Conversion<br/>
+													Empowering Personalized Learning</h2>
 												<p>
-													Sunnyside Unified School District & Conceptua&reg; Math succeed
-													with fracions in an at- risk district.
+													How do we go from a status quo, paper driven organization,
+													to a more progressive and engaging digital school system?
+													This is a question many school district leadership teams
+													are wrestling with today. It is very important to address this
+													question because the mechanics of going digital can sometimes
+													be daunting. However, additional and even more important
+													questions to ask are: What defines success and how
+													will a district know it’s attaining success?
 												</p>
-												<!-- <img style="margin-left: 0px; margin-top: 70px;" class="papers-logo" src="/repository/conceptua-logo.png"> -->
-												<%= image_tag("conceptua-logo.png", alt: "", class: "img-margin-top-70 papers-logo") %>
-												<span class="papers-download-btn">DOWNLOAD</span>
-											</div>														
-										</div>
-									</div>
-								</a>	
-							</div>
-						</div>
-						<div style="height: 30px; position: relative;"></div>
-						<div class="k-governcell ktop kbottom">	
-							<div class="k-outercell kol-619">
-								<a href="../pdfs/STEM-U.pdf" id="pdf_10">
-									<div class="k-inner-cell vertical-align-top padding-top-1">
-										<div class="text_container b_container text-container-1">
-											<div class="pdf-image-border border-height-258">
-											    <!-- <img src="../repository/paper-stem-u.png" alt="paper-stem-u.png" width="200px"> -->
-											    <%= image_tag("paper-stem-u.png", alt: "", width: "200px") %>					    
-											</div>
-										</div>
-										<div class="kpaper-text-wrapper">
-											<div class="kpaper-text">
-												<h2><span style="color: #dc995c;">CASE STUDY:</span><br/>
-												STEM U</h2>
-												<div style="height: 16px;"></div>
-												<p>
-													Robotics is the fastest-growing and most advanced
-													technology used in education, research and industry.
-													<br/><br/>
-													The STEM-U program utilizes robtos in classes as they
-													are the ideal partner for teaching Science, Technology,
-													Engineering and Math's core concepts at all levels.
-												</p>
-												<!-- <img style="margin-left: 0px;" class="papers-logo" src="/repository/robotslab-logo.png"> -->
-												<%= image_tag("robotslab-logo.png", alt: "", class: "img-margin-left-0 papers-logo") %>
-												<span class="papers-download-btn">DOWNLOAD</span>
-											</div>														
-										</div>
-									</div>
-								</a>	
-							</div>
-						</div>
-						<div style="height: 30px; position: relative;"></div>
-						<div class="k-governcell ktop kbottom">	
-							<div class="k-outercell kol-619">
-								<!-- <a href="#" class="jqModal-1" id="pdf_11"> -->
-								<a href="../pdfs/cengage.pdf" id="pdf_11">
-									<div class="k-inner-cell vertical-align-top padding-top-1">
-										<div class="text_container b_container text-container-1">
-											<div class="pdf-image-border border-height-258">
-											    <!-- <img src="../repository/paper-cengage.png" alt="paper-cengage.png" width="200px"> -->
-											    <%= image_tag("paper-cengage.png", alt: "", width: "200px") %>					    
-											</div>
-										</div>
-										<div class="kpaper-text-wrapper">
-											<div class="kpaper-text">
-												<h2><span style="color: #dc995c;">CASE STUDY:</span><br/>
-												Gale-Cengage Learning at McKinley<br/>
-												High School</h2>
 												<br>
-												<p>
-													This paper highlights the results of the McKinley/Gale Study
-													Project conducted by Project Tomorrow for Cengage Learning
-													at McKinley Technology High School in Washington, D.C. The
-													purpose of this efficacy study is to evaluate and document how
-													teachers can use high-quality, digitally rich Gale resources to
-													develop students' 21st century skills and what effects the use of
-													technology in the classroom has on student engagement and
-													performance.
-												</p>
-												<!-- <img style="margin-left: 220px;" class="papers-logo" src="/repository/gale-sized.png"> -->
-												<%= image_tag("gale-sized.png", alt: "", class: "img-margin-left-220 papers-logo") %>
+												<%= image_tag("papers/mcgraw-hill-w72-h71.jpg", alt: "", width: "72px", height: "71px") %>
 												<span class="papers-download-btn">DOWNLOAD</span>
 											</div>														
 										</div>
 									</div>
-								</a>	
+								</div>	
 							</div>
+						</div>
+					<div style="height: 30px; position: relative;"></div>
+					<div class="k-governcell ktop kbottom">	
+						<div class="k-outercell kol-619">
+							<!-- <a href="../pdfs/Case-Study-Burbank-2013.pdf" class="record-hit" data-record-hit-id="6"> -->
+							<div class="record-hit" data-href="../pdfs/Case-Study-Burbank-2013.pdf" data-record-hit-id="6">
+								<div class="k-inner-cell vertical-align-top padding-top-1">
+									<div class="text_container b_container text-container-1">
+										<div class="pdf-image-border margin-bottom-1">
+										    <%= image_tag("papers/paper-thumb-1-w200-h260.jpg", alt: "", width: "200px", height: "260px") %>
+										</div>
+									</div>
+									<div class="kpaper-text-wrapper">
+										<div class="kpaper-text">
+											<h2><span style="color: #dc995c;">CASE STUDY:</span><br/>
+											Burbank Elementary School</h2>
+											<div style="height: 16px;"></div>
+											<p>
+												Burbank Elementary School provides an educational
+												environment where students are safe and secure, fully
+												motivated and able to achieve their fullest potential.
+											</p>
+											<br><br><br><br><br><br>
+											<span class="papers-download-btn">DOWNLOAD</span>
+										</div>														
+									</div>
+								</div>
+							</div>	
 						</div>
 					</div>
-					<br clear="all">
-				</div>
-				<div id="k-sidebar">
-					<div id="k-sidebar_inner">
-						<div class="sub">
-							<div class="suba">
-								<a href="/LetterRegistration">Subscribe to Newsletter</a>
-							</div>
+					<div style="height: 30px; position: relative;"></div>
+					<div class="k-governcell ktop kbottom">	
+						<div class="k-outercell kol-619">
+							<!-- <a href="../pdfs/Case-Study-Marquez-2013.pdf" class="record-hit" data-record-hit-id="7"> -->
+							<div class="record-hit" data-href="../pdfs/Case-Study-Marquez-2013.pdf" data-record-hit-id="7">
+								<div class="k-inner-cell vertical-align-top padding-top-1">
+									<div class="text_container b_container text-container-1">
+										<div class="pdf-image-border margin-bottom-1">												
+										    <%= image_tag("papers/paper-thumb-2-w200-h255.jpg", alt: "", width: "200px", height: "255px") %>
+										</div>
+									</div>
+									<div class="kpaper-text-wrapper">
+										<div class="kpaper-text">
+											<h2><span style="color: #dc995c;">CASE STUDY:</span><br/>
+											Marquez Elementary Charter School</h2>
+											<div style="height: 16px;"></div>
+											<p>
+												Marquez’ Digital Edge program is an exciting, high-tech
+												initiative that puts laptop computers directly in students’
+												hands.
+											</p>
+											<br><br><br><br><br><br><br>
+											<span class="papers-download-btn">DOWNLOAD</span>
+										</div>														
+									</div>
+								</div>
+							</div>	
 						</div>
-						<a href="http://thelearningcounsel.com/ContactUs">
-							<!-- <img src="../repository/banner-2.png" class="k-img" height="686px" onerror="this.src='/assets/error-300-700-blue.png'"> -->
-							<%= image_tag("banner-2.png", alt: "", height: "686px", class: "k-img") %>
-						</a>
-						<br/><br/>
-						<a href="http://triumphlearning.com" target="blank">
-							<!-- <img src="../repository/waggle-ad.jpg" class="k-img" height="" onerror="this.src='/assets/error-300-700-blue.png'"> -->
-							<%= image_tag("waggle-ad.jpg", alt: "", class: "k-img") %>
-						</a>
-						<div id="select_services">
-							<dl id="Services">
-							</dl>
-						</div>				
+					</div>
+					<div style="height: 30px; position: relative;"></div>
+					<div class="k-governcell ktop kbottom">	
+						<div class="k-outercell kol-619">
+							<!-- <a href="../pdfs/Model-Innovation-City-Case-Study-Final.pdf" class="record-hit" data-record-hit-id="8"> -->
+							<div class="record-hit" data-href="../pdfs/Model-Innovation-City-Case-Study-Final.pdf" data-record-hit-id="8">
+								<div class="k-inner-cell vertical-align-top padding-top-1">
+									<div class="text_container b_container text-container-1">
+										<div class="pdf-image-border margin-bottom-1">
+										    <%= image_tag("papers/paper-thumb-mooresville-w200-h260.jpg", alt: "", width: "200px", height: "260px") %>					    
+										</div>
+									</div>
+									<div class="kpaper-text-wrapper">
+										<div class="kpaper-text">
+											<h2><span style="color: #dc995c;">CASE STUDY:</span><br/>
+											Moorefield, NC; Napa, CA; Revere, MA</h2>
+											<div style="height: 16px;"></div>
+											<p>
+												Why innovative superintendents are creating Model
+												Innovation Cities &#8482; to solve the third grade reading dilemma.
+											</p>
+											<%= image_tag("papers/footsteps2brilliance-w150-h96.jpg", alt: "", width: "150px", height: "96px", class: "img-margin-left-0 papers-logo") %>
+											<br><br>
+											<span class="papers-download-btn">DOWNLOAD</span>
+										</div>														
+									</div>
+								</div>
+							</div>	
+						</div>
+					</div>
+					<div style="height: 30px; position: relative;"></div>
+					<div class="k-governcell ktop kbottom">	
+						<div class="k-outercell kol-619">
+							<!-- <a href="../pdfs/Touro-University-FINAL.pdf" class="record-hit" data-record-hit-id="9"> -->
+							<div class="record-hit" data-href="../pdfs/Touro-University-FINAL.pdf" data-record-hit-id="9">
+								<div class="k-inner-cell vertical-align-top padding-top-1">
+									<div class="text_container b_container text-container-1">
+										<div class="pdf-image-border margin-bottom-2">
+										    <%= image_tag("papers/paper-thumb-touro-w200-h262.jpg", alt: "", width: "200px", height: "262px") %>					    
+										</div>
+									</div>
+									<div class="kpaper-text-wrapper">
+										<div class="kpaper-text">
+											<h2><span style="color: #dc995c;">EVALUATION STUDY:</span><br/>
+											Touro Univeristy on Napa County Schools, CA</h2>
+											<div style="height: 16px;"></div>
+											<p>
+												A 3rd party evaluation on using mobile technology and the
+												Footsteps2Brilliance&copy; Academic Language Program to accelerate
+												vocabulary and comprehension for early learners.
+											</p>
+											<%= image_tag("papers/tuorouniversity-logo-w150-h72.jpg", alt: "", width: "150px", height: "72px", class: "img-margin-left-0 papers-logo") %>
+											<%= image_tag("papers/napa-learns-logo-w150-h47.jpg", alt: "", width: "150px", height: "47px", class: "img-margin-left-15 papers-logo") %>
+											<span style="bottom: -26px;" class="papers-download-btn">DOWNLOAD</span>
+										</div>														
+									</div>
+								</div>
+							</div>	
+						</div>
+					</div>
+					<div style="height: 30px; position: relative;"></div>
+					<div class="k-governcell ktop kbottom">	
+						<div class="k-outercell kol-619">
+							<!-- <a href="../pdfs/ConceptuaMath-case-study_Mequon.pdf" class="record-hit" data-record-hit-id="10"> -->
+							<div class="record-hit" data-href="../pdfs/ConceptuaMath-case-study_Mequon.pdf" data-record-hit-id="10">
+								<div class="k-inner-cell vertical-align-top padding-top-1">
+									<div class="text_container b_container text-container-1">
+										<div class="pdf-image-border margin-bottom-1">
+										    <%= image_tag("papers/paper-conceptual-math-mequon-w200-h259.jpg", alt: "", width: "200px", height: "259px") %>					    
+										</div>
+									</div>
+									<div class="kpaper-text-wrapper">
+										<div class="kpaper-text">
+											<h2><span style="color: #dc995c;">CASE STUDY:</span><br/>
+											Conceptua&reg; Math at Mequon-Thiensville<br/>
+											School District</h2>
+											<div style="height: 16px;"></div>
+											<p>
+												Conceptua&reg; Fractions is used to address Common Core
+												at the Mequon-Thiensville School District.
+											</p>
+											<%= image_tag("papers/conceptua-logo-w150-h43.jpg", alt: "", width: "150px", height: "43px", class: "img-margin-top-70 papers-logo") %>
+											<span class="papers-download-btn">DOWNLOAD</span>
+										</div>														
+									</div>
+								</div>
+							</div>	
+						</div>
+					</div>
+					<div style="height: 30px; position: relative;"></div>
+					<div class="k-governcell ktop kbottom">	
+						<div class="k-outercell kol-619">
+							<!-- <a href="../pdfs/ConceptuaMath-case-study-SunnysideUSD.pdf" class="record-hit" data-record-hit-id="11"> -->
+							<div class="record-hit" data-href="../pdfs/ConceptuaMath-case-study-SunnysideUSD.pdf" data-record-hit-id="11">
+								<div class="k-inner-cell vertical-align-top padding-top-1">
+									<div class="text_container b_container text-container-1">
+										<div class="pdf-image-border margin-bottom-1">
+										    <%= image_tag("papers/paper-conceptual-math-sunnyside-w200-h259.jpg", alt: "", width: "200px", height: "259px") %>					    
+										</div>
+									</div>
+									<div class="kpaper-text-wrapper">
+										<div class="kpaper-text">
+											<h2><span style="color: #dc995c;">CASE STUDY:</span><br/>
+											Conceptua&reg; Math at<br/>
+											Sunnyside Union School District</h2>
+											<div style="height: 16px;"></div>
+											<p>
+												Sunnyside Unified School District & Conceptua&reg; Math succeed
+												with fracions in an at- risk district.
+											</p>
+											<%= image_tag("papers/conceptua-logo-w150-h43.jpg", alt: "", width: "150px", height: "43px", class: "img-margin-top-70 papers-logo") %>
+											<span class="papers-download-btn">DOWNLOAD</span>
+										</div>														
+									</div>
+								</div>
+							</div>	
+						</div>
+					</div>
+					<div style="height: 30px; position: relative;"></div>
+					<div class="k-governcell ktop kbottom">	
+						<div class="k-outercell kol-619">
+							<!-- <a href="../pdfs/STEM-U.pdf" class="record-hit" data-record-hit-id="12"> -->
+							<div class="record-hit" data-href="../pdfs/STEM-U.pdf" data-record-hit-id="12">
+								<div class="k-inner-cell vertical-align-top padding-top-1">
+									<div class="text_container b_container text-container-1">
+										<div class="pdf-image-border">
+										    <%= image_tag("papers/paper-stem-u-w200-h259.jpg", alt: "", width: "200px", height: "259px") %>					    
+										</div>
+									</div>
+									<div class="kpaper-text-wrapper">
+										<div class="kpaper-text">
+											<h2><span style="color: #dc995c;">CASE STUDY:</span><br/>
+											STEM U</h2>
+											<div style="height: 16px;"></div>
+											<p>
+												Robotics is the fastest-growing and most advanced
+												technology used in education, research and industry.
+												<br/><br/>
+												The STEM-U program utilizes robtos in classes as they
+												are the ideal partner for teaching Science, Technology,
+												Engineering and Math's core concepts at all levels.
+											</p>
+											<%= image_tag("papers/robotslab-logo-w150-h49.png", alt: "", width: "150px", height: "49px", class: "img-margin-left-0 papers-logo") %>
+											<span class="papers-download-btn">DOWNLOAD</span>
+										</div>														
+									</div>
+								</div>
+							</div>	
+						</div>
+					</div>
+					<div style="height: 30px; position: relative;"></div>
+					<div class="k-governcell ktop kbottom">	
+						<div class="k-outercell kol-619">
+							<!-- <a href="../pdfs/cengage.pdf" class="record-hit" data-record-hit-id="13"> -->
+							<div class="record-hit" data-href="../pdfs/cengage.pdf" data-record-hit-id="13">
+								<div class="k-inner-cell vertical-align-top padding-top-1">
+									<div class="text_container b_container text-container-1">
+										<div class="pdf-image-border">
+										    <%= image_tag("papers/paper-cengage-w200-h259.jpg", alt: "", width: "200px", height: "259px") %>					    
+										</div>
+									</div>
+									<div class="kpaper-text-wrapper">
+										<div class="kpaper-text">
+											<h2><span style="color: #dc995c;">CASE STUDY:</span><br/>
+											Gale-Cengage Learning at McKinley<br/>
+											High School</h2>
+											<br>
+											<p>
+												This paper highlights the results of the McKinley/Gale Study
+												Project conducted by Project Tomorrow for Cengage Learning
+												at McKinley Technology High School in Washington, D.C. The
+												purpose of this efficacy study is to evaluate and document how
+												teachers can use high-quality, digitally rich Gale resources to
+												develop students' 21st century skills and what effects the use of
+												technology in the classroom has on student engagement and
+												performance.
+											</p>
+											<%= image_tag("papers/gale-w150-h44.jpg", alt: "", width: "150px", height: "44px", class: "img-margin-left-220 papers-logo") %>
+											<span class="papers-download-btn">DOWNLOAD</span>
+										</div>														
+									</div>
+								</div>
+							</div>	
+						</div>
 					</div>
 				</div>
 				<br clear="all">
-				<div class="kontainer-space-2"></div>
 			</div>
-		</section>
+			<div id="k-sidebar">
+				<div id="k-sidebar_inner">
+					<div class="sub">
+						<div class="suba">
+							<a href="/LetterRegistration">Subscribe to Newsletter</a>
+						</div>
+					</div>
+					<a href="http://thelearningcounsel.com/ContactUs">
+						<%= image_tag("banner-2.jpg", alt: "", width: "367px", height: "656px", class: "k-img") %>
+					</a>
+					<br/><br/>
+					<a href="http://triumphlearning.com" target="blank">
+						<%= image_tag("papers/waggle-ad-w215-h215.jpg", alt: "", width: "215px", height: "215px", class: "k-img") %>
+					</a>
+					<div id="select_services">
+						<dl id="Services">
+						</dl>
+					</div>				
+				</div>
+			</div>
+			<br clear="all">
+			<div class="kontainer-space-2"></div>
+		</div>
 	</div>
-
 </div>
 	
-	<script>
-		
-
-		function formValidate() {
-			
-			$("#form_pdf").validate({
-			
-				submitHandler: function(form) {
-					submit_dl_pdf();
-				},
-				debug: true,
-				onkeyup: false,
-				focusCleanup: true,
-				focusInvalid: false,
-				rules: {
-					'dl[email]': {
-						required: true,
-						maxlength: 100,
-						email: true
-					}					
-				},
-				invalidHandler: function(validator) {
-				},				
-				messages: {
-					'dl[email]': {
-						required: "Required",
-						maxlength: "Exceeds 100 characters",
-						email: "Invalid email"
-					}					
-				},
-				errorContainer: $("div .error-div"),				
-				errorPlacement: function(error, element) {
-					error.insertAfter('#error_' + element.attr('id') + " span");
-				},
-				error: function(label) {
-					$('#error_' + label.attr('for')).addClass('check-required');
-				},
-				success: function(label) {
-					$('#error_' + label.attr('for')).removeClass('check-required').html("<span></span>");
-				},				
-				focus: function(element) {
-				}
-			});
-		}
-
-		
-		var id_pdf = "";
-		
-		function pdf_href(id) {
-			
-			var href = "";
-			switch (id)
-			{
-			  case '1':
-			  	href = "../pdfs/Digital-Curriculum-Strategy-Brief.pdf";
-			  	break;
-			  case '2':
-			  	href = "http://education.i2i.org/wp-content/uploads/2014/07/IP_2_2014_web_b.pdf";
-			  	break;
-			  case '3':
-			  	href = "https://s3.amazonaws.com/MHE_Social_Media/Whitepapers/District_Digital_Conversion_whitepaper_WEB_06162014.pdf";
-			  	break;
-			  case '4':
-			  	href = "../pdfs/Case-Study-Burbank-2013.pdf";
-			  	break;
-			  case '5':
-			  	href = "../pdfs/Case-Study-Marquez-2013.pdf";
-			  	break;
-			  case '6':
-			  	href = "../pdfs/Model-Innovation-City-Case-Study-Final.pdf";
-			  	break;
-			  case '7':
-			  	href = "../pdfs/Touro-University-FINAL.pdf";
-			  	break;
-			  case '8':
-			  	href = "../pdfs/ConceptuaMath-case-study_Mequon.pdf";
-			  	break;
-			  case '9':
-			  	href = "../pdfs/ConceptuaMath-case-study-SunnysideUSD.pdf";
-			  	break;
-			  case '10':
-			  	href = "../pdfs/STEM-U.pdf";
-			  	break;
-			  case '11':
-			  	href = "../pdfs/cengage.pdf";
-			  	break;
-			  case '12':
-			  	href = "../pdfs/Digital-Curriculum-Strategy-Brief-2.pdf";
-			  	break;
-			  default:
-			  //
-			}
-			return href;
-		}
-		
-		function openHREF(href) {
-			// window.open(href);
-	        window.location.href = href;			
-		}		
-		function openHREF_new_win(href) {
-			// var win = window.open(href, '_blank');
-			// win.focus();
-			// var win_lc = window.open("http://localhost:3000/Papers", '_blank');
-			var win_lc = window.open("http://thelearningcounsel.com/Papers", '_blank');			
-			var win = window.location.href = href;
-			// win.focus();
-		}		
-		function form_pdf_close() {
-			$("#close_form1").trigger('click');
-		}
-		
-		function submit_dl_pdf() {
-			
-			$("#close_form1").blur();
-			$("#dialog_papers_1").focus();			
-			
-			var int_pdf = id_pdf.substring(4, id_pdf.length);
-			var href = pdf_href(int_pdf);
-			var input_dl_email = $("#dl_email").val();
-			var input_rd_win = $("input:radio[name=rd_win]:checked").val();	
-			var obj_list = '{' + 
-							'"email":"' + input_dl_email +
-							'", "int_pdf":' + parseInt(int_pdf) +
-							', "rd_win":' + input_rd_win + 								 
-						   '}';      
-		  	var obj = '{ "dl_contact": [' +  obj_list + '] }';                  
-		  	$.ajax({
-		    	type: 'POST',
-		    	data : obj,
-		    	url: 'papers/search_contact',			    	
-		    	dataType: "json",
-		    	contentType: "application/json",
-		    	processData: false,
-		    	beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
-            	statusCode: {
-                	// 200:function() { alert("200"); },
-            	},
-            	success: function(data) {
-            		if( data.b_reg_commun_record) {
-	            		form_pdf_close();
-            			if( data.rd_win == 1 ) {
-	            			openHREF(href);						            			            				
-            			}
-            			else {
-            				openHREF_new_win(href);
-            			}
-            		}
-            		else {
-            			var msg = "We are sorry.\n" + data.email + "\nwas not found in our Community Registration.";
-            			alert(msg);
-            		}
-            	},
-            	error: function(xhr){  alert("error: " + xhr.statusText); }        
-		  	});
-		  			  	
-	  		return false;
-		}
-		
-		function form_init() {
-			$("#dl_email").val('');
-			$("#error_dl_email").html("<span></span>");			
-			set_rd_1();
-			unset_rd_2();
-		}
-		function set_rd_1() {
-			var rd ="#rd_win_same";
-			var sd = "#div_rd_win_same";
-			$(rd).prop('checked',true);
-			$(sd).addClass("rd-background");			
-		}
-		function unset_rd_1() {
-			var sd = "#div_rd_win_same";
-			$(sd).removeClass("rd-background");			
-		}
-		function set_rd_2() {
-			var rd ="#rd_win_new";
-			var sd = "#div_rd_win_new";
-			$(rd).prop('checked',true);
-			$(sd).addClass("rd-background");			
-		}
-		function unset_rd_2() {
-			var sd = "#div_rd_win_new";
-			$(sd).removeClass("rd-background");			
-		}
-		function set_rd(caller) {
-			switch (caller)
-			{
-			  case 'same':
-			  		set_rd_1();
-			  		unset_rd_2();
-			  	break;
-			  case 'new':
-			  		set_rd_2();
-			  		unset_rd_1();
-			  	break;
-			  default:
-			  //
-			}
-		}
-
-		$(window).load( function() {
-		//$(document).ready(function(){
-		
-			formValidate();		
-		
-    		$("#div_rd_win_same").keypress(function(e){
-      			if(e.keyCode==13)
-      			$("#div_rd_win_same").click();
-    		});							
-    		$("#div_rd_win_new").keypress(function(e){
-      			if(e.keyCode==13)
-      			$("#div_rd_win_new").click();
-    		});							
-    		$("#label_rd_win_same").keypress(function(e){
-      			if(e.keyCode==13)
-      			$("#label_rd_win_same").click();
-    		});							
-    		$("#label_rd_win_new").keypress(function(e){
-      			if(e.keyCode==13)
-      			$("#label_rd_win_new").click();
-    		});									
-			$('#div_rd_win_same').on('click', function() {
-				set_rd('same');
-			});
-			$('#div_rd_win_new').on('click', function() {
-				set_rd('new');
-			});
-			$('#label_rd_win_same').on('click', function() {
-				set_rd('same');
-			});
-			$('#label_rd_win_new').on('click', function() {
-				set_rd('new');
-			});
-		
-			// $(document).on("click", ".jqModal-1", function() {
-				// alert('jqModal-1');
-				// var idpdf = $(this).attr('id');
-				// var int_pdf = idpdf.substring(4, idpdf.length);
-				// alert(int_pdf);
-				// var href = pdf_href(int_pdf);
-				// alert(href);
-				// // pdf_href(id);
-				// openHREF(href);
-			// });
-
-			$(".jqModal").on('click', function() {
-				id_pdf = $(this).attr('id');
-			});
-		
-			$('#dialog_papers_1').jqm({
-				onShow: function(hash) {
-					form_init();
-					hash.o.prependTo('body');
-					hash.w.css('top', '-360px');
-					hash.w.css('opacity', 1.0).fadeIn(200);
-					// hash.w.show();
-					$('#dialog_papers_1').animate(
-						{bottom:'-=400', top:'+=400'}, 
-						500, 
-						'easeInOutCirc', 
-						function() {
-							$('#dialog_papers_1').animate(
-								{bottom:'+=4', top:'-=4'}, 
-								100, 
-								'easeInBounce', 
-								function() {
-								}
-							);
-							$('#dl_email').focus();
-						}
-					);
-				}
-			}); 		
-		
-		
-		});
-
-		
-	</script>

@@ -17,8 +17,9 @@ Weblearn::Application.routes.draw do
   match '/Reports', to: 'static_pages#reports', via: 'get'  
   match '/Sponsor', to: 'static_pages#sponsor', via: 'get'
   match '/Advertise', to: 'static_pages#advertise', via: 'get'
-  match '/Self-Assessment', to: 'static_pages#survey', via: 'get'
-  match '/Survey', to: 'static_pages#survey', via: 'get'
+  # match '/Self-Assessment', to: 'static_pages#survey', via: 'get'
+  # match '/Survey', to: 'static_pages#survey', via: 'get'
+  match '/Self-Assessment', to: 'static_pages#self_assessment', via: 'get'
   match '/Articles', to: 'static_pages#articles', via: 'get'
   match '/Event-Articles', to: 'static_pages#event_articles', via: 'get'
   match '/Talk-Here', to: 'static_pages#talk_here', via: 'get'
@@ -41,6 +42,13 @@ Weblearn::Application.routes.draw do
   match '/about', to: 'static_pages#about', via: 'get'
   match '/reports', to: 'static_pages#reports', via: 'get'  
 
+  # resources :hit_counts
+  resources :hit_counts do
+    collection do
+      post :create_hit
+    end
+  end
+  
   
   resources :eventpages
   

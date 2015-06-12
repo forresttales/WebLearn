@@ -61,9 +61,9 @@ class HomesController < ApplicationController
               complete = true
           end          
           
-          if(type.downcase == "event news")
-              type = "event_news"
-          end
+          # if(type.downcase == "event news")
+          #     type = "event_news"
+          # end
           
           # a_archive = [complete, img_path, type.downcase, slug, subtitle_1, subtitle_2, author, img_height]
           # a_archive = [

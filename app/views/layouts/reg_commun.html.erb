@@ -20,11 +20,9 @@
 		<%= render 'layouts/footer' %>
 
 		<%= javascript_include_tag "jquery.validate" %>
-
-		<% if false %>
 		<%= javascript_include_tag "jquery-dropdown-dot" %>
-		<% end %>
-		<!-- <#%= javascript_include_tag "reg_communs" %#> -->
+		<%= javascript_include_tag "dot" %>
+		<%= javascript_include_tag "reg_communs_new" %>
 			
 		<%= debug(params) if Rails.env.development? %>
 	</body>

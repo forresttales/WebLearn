@@ -1,517 +1,305 @@
 <% provide(:title, 'Events') %>
 
+<%= javascript_include_tag "jqModal" %>
 
-	
-<!-- <style>
-	
-	#lc-landing {
-	}	
-		
-	#lc-landing #page {
-	  width: 800px;
-	  /*margin-left: 235px;*/
-	 	  
-	  margin-left: auto;
-	  margin-right: auto;
-	  
-	  
-	  /*margin-right: auto;*/  
-	  
-	}
-	
-	#lc-landing #subscribe-box  {
-	float: right; 
-	margin-left: 20px;
-	}
-	
-	#lc-landing #subscribe-box .form {   
-		width: 255px;
-		height: 289px;
-		-moz-border-radius: 4px;
-		-webkit-border-radius: 4px;
-		border-radius: 4px; /* border radius */
-		-moz-background-clip: padding;
-		-webkit-background-clip: padding-box;
-		background-clip: padding-box; /* prevents bg color from leaking outside the border */
-		background-color: #eaeaea; /* layer fill content */
-		-moz-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
-		-webkit-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
-		box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
-	}
-	
-	#lc-landing #subscribe-box .label { 
-		height: 35px;
-	    width: 240px;
-		background-color: #414141; /* layer fill content */
-		-moz-border-radius: 4px 4px 0 0;
-		-webkit-border-radius: 4px 4px 0 0;
-		border-radius: 4px 4px 0 0; /* border radius */
-		-moz-background-clip: padding;
-		-webkit-background-clip: padding-box;
-		background-clip: padding-box; /* prevents bg color from leaking outside the border */
-		-moz-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
-		-webkit-box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
-		box-shadow: 0 0 10px rgba(3,4,4,.35); /* drop shadow */
-		}
-	
-	#lc-landing #subscribe-box h3 {  
-		color: #ebeff1; /* text color */
-		/*KlavikaMedium*/
-		font-family: KlavikaMedium;
-		/*font-family: "Quattrocento Sans", sans-serif;*/
-		font-size: 15px;
-		margin:0;
-		padding-left: 15px;
-	    padding-top: 15px;
-		}
-	#lc-landing #subscribe-box img {
-	  float:left;
-	  position: relative;
-	  left: 116px;
-	}
-	
-	
-	
-	/*#lc-landing .services-ov {
-	    background-clip: padding-box;
-	    background-color: #999999;
-	    border: 1px solid #999999;
-	    border-radius: 4px 4px 4px 4px;
-	    height: 22px;
-	    margin-left: auto;
-	    margin-right: auto;
-	    margin-top: 30px;
-	    width: 200px;
-	}
-	
-	#lc-landing .services-ov a:link {
-	    color: #F2F2F2;
-	    font-family: "Quattrocento Sans",sans-serif;
-	    font-size: 13px;
-	    padding: 0 8px 8px 7px;
-	    text-decoration: none;
-	}*/
-	
-	
-	
-	#lc-landing .services-ov {
-	    background-clip: padding-box;
-		
-		
-	  width: 232px;
-		height: 22px;
-		border: 1px solid #999;
-		-moz-border-radius: 4px;
-		-webkit-border-radius: 4px;
-		border-radius: 4px;
-		-moz-background-clip: padding;
-		-webkit-background-clip: padding-box;
-		background-clip: padding-box;
-		background-color: #999;
-		margin-left: auto;
-	    margin-right: auto;
-	    margin-top: 30px;
-	}
-	
-	#lc-landing .services-ov a:link {
-	    /*padding: 0 8px 8px 7px;*/
-	   	
-		color: #f2f2f2;
-		font-family: "Quattrocento Sans", sans-serif;
-		font-size: 13px;
-		text-decoration: none;
-		padding: 2px 2px 3px;	
-		position: abolute;
-		margin-left: 8px;
-	}
-	
-	
-	
-	
-	.services-ov a:hover {color: #f2f2f2; text-decoration: none; background-color: #6a6a6a;}
-	.services-ov a:active {color: #f2f2f2; text-decoration: none; background-color: #535353; /* layer fill content */
-		-moz-box-shadow: inset 1px 2px 0 rgba(3,4,4,.4); /* inner shadow */
-		-webkit-box-shadow: inset 1px 2px 0 rgba(3,4,4,.4); /* inner shadow */
-		box-shadow: inset 1px 2px 0 rgba(3,4,4,.4); /* inner shadow */}
-	.services-ov a:visited {color: #f2f2f2; text-decoration: none;}
-	
-	#lc-landing p {
-		color: #333;
-		/*font-family: "Quattrocento";*/
-		font-family: KlavikaLight;
-		font-size: 13px;
-		width: 800px;
-		line-height: 1.2em;	
-	  	font-size: 1.15em;
-		
-		}
-	
-	#lc-landing a {
-		color: #C4740C;
-		}
-	
-	#lc-landing .table p {
-		color: #333;
-		/*font-family: "Quattrocento";*/
-		font-family: KlavikaLight;
-		font-size: 13px;
-		/*width: 400px;*/
-		line-height: 1.2em;	
-	  	font-size: 1.15em;
-		}
-	
-	#lc-landing ul li {
-		color: #000;
-		font-family: KlavikaMedium;
-		/*font-family: "Quattrocento";*/	
-		font-size: 16px;
-		margin-left: 30px;
-		font-weight: 600;
-		line-height: 1.2em;		
-		}
-		
-	#lc-landing .page-title {
-	  font-size: 35px;
-	  color: #808080;
-	  margin-left: auto;
-	  margin-right: auto;
-	  width: 580px;
-	}
-	
-	#lc-landing .page-title-centered {
-	  font-size: 40px;
-	  color: #808080;
-	  margin-left: auto;
-	  margin-right: auto;
-	  width: 580px;
-	}
-	
-	#lc-landing .center {
-		text-align: center;
-		margin-right: 17%;
-	}
-	
-	#lc-landing .sub-title {
-	  font-size: 30px;
-	  color: #34633A;
-	  margin-left: auto;
-	  margin-right: auto;
-	  /*width: 500px;*/  
-	  width: 470px;
-	  
-	}
-	
-	#lc-landing .green-this {
-	    color: #41b737;
-		font-style: bold;
-		}
-		
-	#lc-landing .bold-close {	
-		color: #34633a;
-		size: 22px;
-		font-weight: bold;
-		}
-	
-	
-	#lc-landing #bottom-graphic img {
-	  bottom: 220px;
-	  position: relative;
-	  float:left;
-	}
-	
-	/*#lc-landing .box-row {*/	
-	.lc-landing-box-row {
-	  background: url(../repository/lc-boxes.png) white repeat-x;
-	  height: 59px;
-	  margin-left: 440px;
-	  margin-top: 30px;
-	}
-	
-	.spacer {
-		height: 20px;
-	}
-			
-	#lc-landing table tr td {
-		vertical-align: top;
-	}			
-	
-	.city-color {
-		color: #1B237A;	
-	}
-.leader-title {
-    color: gray;
-    font-size: 52px;
-    font-family: Arial;
-}
-	#page p {font-family: Arial; color: #000; font-size: 17px;}
+<div class="jqmWindow jqmWindow-overlay" id="dialog_overlay">
+	<!-- <div style="width: 100%;"> -->
+		<div id="overlay_loading" class="overlay-loading display-none"></div>
+	<!-- </div> -->
+</div>
 
-	#lc-landing ul li  {color: #41b737; font-family: Arial; font-size: 17px; padding-bottom: 10px;}
-	#lc-landing ul li span {color: #000; font-weight: normal;}
-	
-	.scroll-link {position:fixed; text-align: center; color: #000;
-		 padding:20px 20px; font-size: 22px;
-		border-radius: 6px; margin-top: 20px; font-family: "Quattrocento Sans",sans-serif; font-weight: bold;
-  background: -webkit-linear-gradient(#fbb040, #fe742b); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#fbb040, #fe742b); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#fbb040, #fe742b); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#fbb040, #fe742b); /* Standard syntax */
-	}
-	a.scroll-link:hover {color: #fff;
-  background: -webkit-linear-gradient(#fe742b, #fbb040); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#fe742b, #fbb040); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#fe742b, #fbb040); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#fe742b, #fbb040); /* Standard syntax */
-	}
-	
-</style> -->
-
-	<!-- <style>
-		#event-bottom-table h2 {color:#41b737; text-align: center; font-family: Arial; margin-top: 25px;}
-		#event-bottom-table p {width: 250px; text-align: justify; padding: 10px; font-size: 14px;}
-		#event-bottom-table td {border:1px solid gray;}
-		#event-bottom-table img {width: 260px; margin: 2px 5px;}
-		#event-bottom-table ul li {font-size: 15px; padding-bottom: 0;}
-		.eventpages .ul-1 {
-			width: 1200px; 
-			margin: 0 auto; 
-			padding-right: 20px; 
-			vertical-align: top;
-		}
-		.eventpages-li-1 {
-			margin: 0 auto; 
-			padding-right: 20px; 
-			vertical-align: top; 
-			display: inline-block;
-		}
-		.eventpages-img-1 {
-			border: 2px solid gray;
-		}
-		.eventpages-img-2 {
-			width: 300px; 
-			border: 1px solid gray; 
-			margin-left: 20px;
-		}
-	</style> -->
-
-
-	<%= render 'share/backtotop' %>
-
-
-	<ul class="lc-inline eventpages-ul-1">
-		<li class="eventpages-li-1">
-			<%= render 'share/eventpages_tabs' %>
-			<!--<a class="scroll-link" href="/CBOL-Materials">Colorado<br/> Flipped Conference<br/> Details &amp; Materials</a>-->
-		</li>
-		<li class="eventpages-li-1">
-		<div id="tab-container">
-			<div id="lc-landing">
-				<div id="page" class="eventpages">
-					<!-- <img src="../repository/events/dallas-group.jpeg" alt="Conference" width="800px"> -->
-					<%= image_tag("dallas-group-w800-h278.jpg", alt: "Conference", width: "800px", class: "img-1") %>
-					<div class="spacer"></div>
-					<div class="spacer"></div>
-					<h1 class="leader-title">Welcome! We want YOU.</h1>
-					<div class="spacer"></div>
-					<p>
-						The Learning Counsel events are often held in partnership with education industry associations and local school districts from city to city. Both Minnesota and Colorado honored the events produced in their States with Continuing Education Units in 2014.
-					</p>
-					<p>
-						<!-- <img style="width: 300px; border: 1px solid gray; margin-left: 20px;" src="../repository/events/lani-tan.jpeg" alt="Leilani Cauthen" align="right"> -->
-						<%= image_tag("lani-tan.jpeg", alt: "LeiLani Cauthen", width: "300px", align: "right", class: "img-2") %>
-				        The Learning Counsel is a media and events organization that is mission based
-						and funded by sponsorships from multiple publishers and technology companies. We’re focused on providing research and context on the shift in education to digital curriculum.<br/><br/>
-						In 2015, we will be producing events in 19 cities.
-						<br/><br/>
-						If you’re involved with going digital with teaching and learning, IT or school leadership, you’re invited to join us for one exceptional day.
-						<br/><br/>
-						<strong>The only “Living Tour” for Education</strong>
-						<br/><br/>
-					</p>
-					<ul class="">
-						<li><span>Real Discussion, not just “sit-and-get.” Education is going somewhere with its transition to digital devices and curriculum – and school leaders need to talk about it with each other.</span></li>
-						<li><span>A special sauce of leadership conversation with a dash of future-leaning and a helping of back-to-basics.</span></li>
-						<li><span>The only “living tour” for the education industry, seeing what’s happening city-by-city and bringing lessons learned from each one forward in a continuous “leveling-up” of the conversation to reflect what’s now happening nationally.</span></li>
-						<li><span>At the end of the each year the Digital Curriculum Strategy Survey and its Awards ceremony during the national Gathering event sets the tone for the following year from the winning innovative schools and districts.</span></li>
-					</ul>
-					<div class="spacer"></div>
-					<p>
-						<strong>How will you contribute?</strong>
-						<br/><br/>
-						When you attend these one-day events, just be you. Represent for your school and your interests. Bring your curiosity and fellow executives. A lot is changing with schools as they are transitioning to digital devices and implementing digital curriculum, so everyone has lots of questions and comments. There is more sophistication needed beyond what device to select. The world of digital content and curriculum is enormously complex now. Therefore, it’s important to bring the curriculum and IT worlds together with district leadership to learn about, and discuss, a complete strategy.
-						<br/><br/>
-						You’ll be surprised at how much you gain from an old-fashioned day of peer discussion and seeing some interesting new developments from the industry.
-						<br/><br/>
-						See you there!
-					</p>
-					<div class="spacer"></div>
-					<p>
-						<!-- <img src="../repository/events/image-lani-signature-1.png" alt="image-lani-signature-1.png"> -->	
-						<%= image_tag("image-lani-signature-1.png", alt: "image-lani-signature-1.png") %>
-					</p>
-					<div class="spacer"></div>
-					<div class="spacer"></div>
-					<table id="event-bottom-table">
-						<tr>
-							<td>
-								<h2>The Digital Curriculum<br/>
-								Strategy Discussion Meetings<br/>
-								2015</h2>
-								<p style="text-align: left;">This multi-city tour of small events
-								for education executives have a
-								unique goal-setting workshop, group
-								discussion, and show and discuss
-								interludes by digital curriculum
-								providers. They are free to attend for
-								schools, useful and educational, and
-								sponsored by multiple publishers and
-								technology companies.</p>
-								<!-- <img src="/repository/events/santa-clara-group.jpeg"> -->
-								<%= image_tag("santa-clara-group.jpeg", alt: "santa-clara-group.jpeg") %>
-								<p>In many cities, our events are oneroom
-								meeting-style with 30-60
-								executives joining from the area,
-								including many driving four or more
-								hours to attend their closest city.
-								We serve continental breakfasts
-								and hearty lunches for the day and
-								typically end around 4:00 pm.
-								<br/><br/>
-								Who Attends:</p>
-								<ul>
-									<li><span>Superintendents</span></li>
-									<li><span>Assistant/Associate<br/>
-									Superintendents</span></li>
-									<li><span>District Administrators</span></li>
-									<li><span>Board Members</span></li>
-									<li><span>Curriculum Directors</span></li>
-									<li><span>Chief Technology Officers</span></li>
-									<li><span>Chief Innovation Officers</span></li>
-									<li><span>Media and Library Specialists</span></li>
-									<li><span>Curriculum Specialists</span></li>
-									<li><span>Tech Specialists</span></li>
-									<li><span>Principals</span></li>
-								</ul>
-							</td>
-							<td>
-								<h2>The Digital Education<br/>
-								Transition | Flipped<br/>
-								Conferences 2015</h2>
-								<p>NEW in 2015, we are partnering
-								with incredible local associations
-								and districts in a few places for
-								larger one-day events that can host
-								hundreds of folks. These people are
-								really inspiring and the “Flippeds” are
-								their production as well as ours.</p>
-								<p style="text-align: left;">These new “Flipped” conferences are
-								designed events on a whole new level
-								above other conferences. They’re
-								actually “flipped” just like teachers
-								are flipping classroom learning. In
-								this way, these conferences will fit a
-								whole lot of learning into just one day
-								across multiple tracks. The Flipped
-								conferences have Goals, each
-								track has a Learning Objective, and
-								each session will have a Learning
-								Outcome.</p>
-								<!-- <img src="/repository/events/boston-group-1.jpeg"> -->
-								<%= image_tag("boston-group-1.jpeg", alt: "boston-group-1.jpeg") %>
-								<p>All attendees will be expected to
-								be engaged learners – just like the
-								ideal for students today. We hope
-								that even the Speakers take on one
-								of the suggested topics to immerse
-								themselves in and teach others
-								about.</p>
-								<p>
-								Like all Learning Counsel events,
-								these are free to attend with just one
-								request:</p>
-								<p>
-								Learn and contribute.
-								<br/><br/>
-								Who Attends:</p>
-								<ul>
-									<li><span>Superintendents</span></li>
-									<li><span>Assistant/Associate<br/>
-									Superintendents</span></li>
-									<li><span>District Administrators</span></li>
-									<li><span>Board Members</span></li>
-									<li><span>Curriculum Directors</span></li>
-									<li><span>Chief Technology Officers</span></li>
-									<li><span>Chief Innovation Officers</span></li>
-									<li><span>Media and Library Specialists</span></li>
-									<li><span>Curriculum Specialists</span></li>
-									<li><span>Tech Specialists</span></li>
-									<li><span>Principals</span></li>
-									<li><span>Teachers</span></li>
-								</ul>
-							</td>
-							<td>
-								<h2>National Gathering 2015<br/><br/><br/></h2>
-								<p>The Gathering is our annual invitationonly
-								event for executives to be together,
-								hear from each other, plan for their new
-								year, and hear who is announced as
-								winners of the annual Digital Curriculum
-								Strategy Awards.</p>
-								<p>The successful New Orleans Gathering
-								in 2014 included a first-of-its-kind
-								mega-block challenge with participants
-								building and labeling their digital
-								curriculum strategies on toy blocks and
-								sharing their vision with all. Amazing
-								winners of the national Survey were on
-								hand to share their district stories.</p>
-								<!-- <img src="/repository/events/megablock-challenge.jpeg"> -->
-								<%= image_tag("megablock-challenge.jpeg", alt: "megablock-challenge.jpeg") %>
-								<p>The Gathering will be in Albuquerque,
-								NM in October 2015.
-								<br/><br/>
-								Who Attends:</p>
-								<ul>
-									<li><span>Superintendents</span></li>
-									<li><span>Assistant/Associate<br/>
-									Superintendents</span></li>
-									<li><span>District Administrators</span></li>
-									<li><span>Board Members</span></li>
-									<li><span>Curriculum Directors</span></li>
-									<li><span>Chief Technology Officers</span></li>
-									<li><span>Chief Innovation Officers</span></li>
-									<li><span>Media and Library Specialists</span></li>
-									<li><span>Curriculum Specialists</span></li>
-									<li><span>Tech Specialists</span></li>
-									<li><span>Principals</span></li>
-								</ul>
-							</td>
-						</tr>
-					</table>
-				</div>
-			</div>
-			<div style="height: 100px;"></div>
+<div class="jqmWindow jqmWindow-11" id="dialog_11">
+	<div class="jqmClose ks-tip-container close-container">
+		<div class="ks-tip-target">
+			<%= image_tag('close_btn_round_white_w60_h60.png', alt: 'X', class: 'x-close-60-60' ) %>
 		</div>
-		</li>
-	</ul>
-	<div id="bottom-graphic">
-		<!-- <img src="../repository/lc-box-cloud.png"/> -->
-		<%= image_tag("lc-box-cloud.png", alt: "lc-box-cloud.png") %>
-		<div class="lc-landing-box-row"></div>
+	    <div class="ks-tip ks-tip-pos-left-1 ks-tip-text-1">
+			Close
+	    </div>				
 	</div>
 	<div style="clear: both;"></div>
+	<div class="figure-container">
+		<figure id="figure_dialog_11" class="dialog-user-image-2"></figure>
+	</div>
+</div>
 
 
-	<script>
+<%= render 'share/backtotop' %>
+<ul class="lc-inline eventpages-ul-1">
+	<li class="eventpages-li-1">
+		<%= render 'share/eventpages_tabs' %>
+		<!--<a class="scroll-link" href="/CBOL-Materials">Colorado<br/> Flipped Conference<br/> Details &amp; Materials</a>-->
+	</li>
+	<li class="eventpages-li-1">
+	<div id="tab-container">
+		<div id="lc-landing">
+			<div id="page" class="eventpages">
+				<%= image_tag("eventpages/dallas-group-w800-h278.jpg", alt: "Conference", width: "800px", height: "278px", class: "img-1 dialog-11-figure cursor-pointer", :data => { :width => "1156", :height => "401", :src => "/repository/eventpages/dallas-group.jpeg" }) %>
+				<div class="spacer title-line"></div>
+				<div class="spacer"></div>
+				<div class="video-container-1">
+					<iframe class="tscplayer_inline embeddedObject" name="tsc_player" scrolling="no" frameborder="0" type="text/html" src="http://www.screencast.com/users/LearningCounsel/folders/LC MARKETING VIDEOS/media/8ad19528-50a5-4728-a40d-c3b12b812a68/embed" height="253" width="450" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+					<h5>Education senior executives in Phoenix, AZ, discussing Digital Curriculum Implementation Strategy</h5>
+				</div>
+				<h1 class="welcome">Welcome!<br/> We want YOU.</h1>
+				<div class="spacer"></div>
+				<p>
+					The Learning Counsel events are often held in partnership with education industry associations and local school districts from city to city. Both Minnesota and Colorado honored the events produced in their States with Continuing Education Units in 2014.
+				</p>
+				<p>
+					<!-- <#%= image_tag("lani-tan.jpeg", alt: "LeiLani Cauthen", width: "300px", align: "right", class: "img-2") %#> -->
+			        <br/>The Learning Counsel is a media and events organization that is mission based
+					and funded by sponsorships from multiple publishers and technology companies. We’re focused on providing research and context on the shift in education to digital curriculum.<br/><br/>
+					In 2015, we will be producing events in 19 cities.
+					<br/><br/><br/>
+					If you’re involved with going digital with teaching and learning, IT or school leadership, you’re invited to join us for one exceptional day.
+					<br/><br/>
+					<strong>The only “Living Tour” for Education</strong>
+					<br/><br/>
+				</p>
+				<ul class="">
+					<li><span>Real Discussion, not just “sit-and-get.” Education is going somewhere with its transition to digital devices and curriculum – and school leaders need to talk about it with each other.</span></li>
+					<li><span>A special sauce of leadership conversation with a dash of future-leaning and a helping of back-to-basics.</span></li>
+					<li><span>The only “living tour” for the education industry, seeing what’s happening city-by-city and bringing lessons learned from each one forward in a continuous “leveling-up” of the conversation to reflect what’s now happening nationally.</span></li>
+					<li><span>At the end of the each year the Digital Curriculum Strategy Survey and its Awards ceremony during the national Gathering event sets the tone for the following year from the winning innovative schools and districts.</span></li>
+				</ul>
+				<div class="spacer"></div>
+				<p>
+					<strong>How will you contribute?</strong>
+					<br/><br/>
+					When you attend these one-day events, just be you. Represent for your school and your interests. Bring your curiosity and fellow executives. A lot is changing with schools as they are transitioning to digital devices and implementing digital curriculum, so everyone has lots of questions and comments. There is more sophistication needed beyond what device to select. The world of digital content and curriculum is enormously complex now. Therefore, it’s important to bring the curriculum and IT worlds together with district leadership to learn about, and discuss, a complete strategy.
+					<br/><br/>
+					You’ll be surprised at how much you gain from an old-fashioned day of peer discussion and seeing some interesting new developments from the industry.
+					<br/><br/>
+					See you there!
+				</p>
+				<div class="spacer"></div>
+				<p>
+					<%= image_tag("eventpages/image-lani-signature-1-w234-h65.png", alt: "image-lani-signature-1.png", width: "234px", height: "65px") %>
+				</p>
+				<div class="spacer"></div>
+				<div class="spacer"></div>
+				<table id="event-bottom-table">
+					<tr>
+						<td>
+							<h2>The Digital Curriculum<br/>
+							Strategy Discussion Meetings<br/>
+							2015</h2>
+							<p style="text-align: left;">This multi-city tour of small events
+							for education executives have a
+							unique goal-setting workshop, group
+							discussion, and show and discuss
+							interludes by digital curriculum
+							providers. They are free to attend for
+							schools, useful and educational, and
+							sponsored by multiple publishers and
+							technology companies.</p>
+							<%= image_tag("eventpages/santa-clara-group-w260-h126.jpg", alt: "santa-clara-group.jpeg", width: "260px", height: "126px", class: "dialog-11-figure cursor-pointer", :data => { :width => "1183", :height => "574", :src => "/repository/eventpages/santa-clara-group.jpeg" }) %>
+							<p>In many cities, our events are oneroom
+							meeting-style with 30-60
+							executives joining from the area,
+							including many driving four or more
+							hours to attend their closest city.
+							We serve continental breakfasts
+							and hearty lunches for the day and
+							typically end around 4:00 pm.
+							<br/><br/>
+							Who Attends:</p>
+							<ul>
+								<li><span>Superintendents</span></li>
+								<li><span>Assistant/Associate<br/>
+								Superintendents</span></li>
+								<li><span>District Administrators</span></li>
+								<li><span>Board Members</span></li>
+								<li><span>Curriculum Directors</span></li>
+								<li><span>Chief Technology Officers</span></li>
+								<li><span>Chief Innovation Officers</span></li>
+								<li><span>Media and Library Specialists</span></li>
+								<li><span>Curriculum Specialists</span></li>
+								<li><span>Tech Specialists</span></li>
+								<li><span>Principals</span></li>
+							</ul>
+						</td>
+						<td>
+							<h2>The Digital Education<br/>
+							Transition | Flipped<br/>
+							Conferences 2015</h2>
+							<p>NEW in 2015, we are partnering
+							with incredible local associations
+							and districts in a few places for
+							larger one-day events that can host
+							hundreds of folks. These people are
+							really inspiring and the “Flippeds” are
+							their production as well as ours.</p>
+							<p style="text-align: left;">These new “Flipped” conferences are
+							designed events on a whole new level
+							above other conferences. They’re
+							actually “flipped” just like teachers
+							are flipping classroom learning. In
+							this way, these conferences will fit a
+							whole lot of learning into just one day
+							across multiple tracks. The Flipped
+							conferences have Goals, each
+							track has a Learning Objective, and
+							each session will have a Learning
+							Outcome.</p>
+							<!-- <img src="/repository/events/boston-group-1.jpeg"> -->
+							<!-- <div class="display-none img-3-expand" data-width="1183", data-height="768"></div> -->
+							<%= image_tag("eventpages/boston-group-1-w260-h169.jpg", alt: "boston-group-1.jpeg", width: "260px", height: "169px", class: "dialog-11-figure cursor-pointer", :data => { :width => "1183", :height => "768", :src => "/repository/eventpages/boston-group-1.jpeg" }) %>
+							<p>All attendees will be expected to
+							be engaged learners – just like the
+							ideal for students today. We hope
+							that even the Speakers take on one
+							of the suggested topics to immerse
+							themselves in and teach others
+							about.</p>
+							<p>
+							Like all Learning Counsel events,
+							these are free to attend with just one
+							request:</p>
+							<p>
+							Learn and contribute.
+							<br/><br/>
+							Who Attends:</p>
+							<ul>
+								<li><span>Superintendents</span></li>
+								<li><span>Assistant/Associate<br/>
+								Superintendents</span></li>
+								<li><span>District Administrators</span></li>
+								<li><span>Board Members</span></li>
+								<li><span>Curriculum Directors</span></li>
+								<li><span>Chief Technology Officers</span></li>
+								<li><span>Chief Innovation Officers</span></li>
+								<li><span>Media and Library Specialists</span></li>
+								<li><span>Curriculum Specialists</span></li>
+								<li><span>Tech Specialists</span></li>
+								<li><span>Principals</span></li>
+								<li><span>Teachers</span></li>
+							</ul>
+						</td>
+						<td>
+							<h2>National Gathering 2015<br/><br/><br/></h2>
+							<p>The Gathering is our annual invitationonly
+							event for executives to be together,
+							hear from each other, plan for their new
+							year, and hear who is announced as
+							winners of the annual Digital Curriculum
+							Strategy Awards.</p>
+							<p>The successful New Orleans Gathering
+							in 2014 included a first-of-its-kind
+							mega-block challenge with participants
+							building and labeling their digital
+							curriculum strategies on toy blocks and
+							sharing their vision with all. Amazing
+							winners of the national Survey were on
+							hand to share their district stories.</p>
+							<%= image_tag("eventpages/megablock-challenge-w260-h237.jpg", alt: "megablock-challenge.jpeg", width: "260px", height: "237px", class: "dialog-11-figure cursor-pointer", :data => { :width => "757", :height => "689", :src => "/repository/eventpages/megablock-challenge.jpeg" }) %>
+							<p>The Gathering will be in Albuquerque,
+							NM in October 2015.
+							<br/><br/>
+							Who Attends:</p>
+							<ul>
+								<li><span>Superintendents</span></li>
+								<li><span>Assistant/Associate<br/>
+								Superintendents</span></li>
+								<li><span>District Administrators</span></li>
+								<li><span>Board Members</span></li>
+								<li><span>Curriculum Directors</span></li>
+								<li><span>Chief Technology Officers</span></li>
+								<li><span>Chief Innovation Officers</span></li>
+								<li><span>Media and Library Specialists</span></li>
+								<li><span>Curriculum Specialists</span></li>
+								<li><span>Tech Specialists</span></li>
+								<li><span>Principals</span></li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div style="height: 100px;"></div>
+	</div>
+	</li>
+</ul>
+<div id="bottom-graphic">
+	<%= image_tag("lc-box-cloud.png", alt: "lc-box-cloud.png") %>
+	<div class="lc-landing-box-row"></div>
+</div>
+<div style="clear: both;"></div>
+
+
+<script>
+		
+		var offset_top = 0;
+		jQuery(window).scroll(function() {
+			offset_top = $(window).scrollTop()
+			$('#eventstabs').css('top', offset_top);
+		});
+	
+		
+		$(window).load( function() {
+		//$(document).ready(function(){
 			
-			var offset_top = 0;
-			jQuery(window).scroll(function() {
-				offset_top = $(window).scrollTop()
-				$('#eventstabs').css('top', offset_top);
+			$("#tab1").addClass("active");
+			
+			// $(".jqmClose").on("click", function() {
+				// alert("close");
+			// });
+
+			var this_img;			
+			$(".dialog-11-figure").on('click', function(e) {
+				if ( e.target.nodeName == "IMG" ) {
+
+					$("#dialog_overlay").jqmShow();
+					$("#overlay_loading").removeClass("display-none");
+
+					var w = $(this).data("width");
+					w += 120;
+					var w2 = -(w/2);
+					var src_img = $(this).data("src");
+					$('<img src="'+ src_img +'">').load(function(){
+						$("#figure_dialog_11").append($(this));
+						$(".jqmWindow-11").css({
+							'margin-left' : w2,
+							'width' : w  
+						});
+						$("#overlay_loading").addClass("display-none");
+						$("#dialog_overlay").jqmHide();
+						$("#dialog_11").jqmShow();	
+					}).error(function(){
+						alert('error loading image');
+					});
+				}
 			});
-		
-			$(window).load( function() {
-			//$(document).ready(function(){
-				$("#tab1").addClass("active");
-			});
-		
-	</script>
+			$('#dialog_11').jqm({
+				overlay: 84,
+				onShow: function(hash) {
+					hash.w.css('opacity', 1.0).fadeIn(10);
+					hash.o.prependTo('body');
+					hash.w.css('top', '0px');
+				},
+				onHide: function(hash) {
+					hash.o.remove();
+					hash.w.css('top', '-8000px');
+					$("#figure_dialog_11").html("");
+					// hash.w.fadeOut('10',function(){ 
+						// hash.o.remove(); 
+					// });
+				}
+			}); 		
+			$('#dialog_overlay').jqm({
+				overlay: 84,
+				onShow: function(hash) {
+					hash.w.css('opacity', 1.0).fadeIn(10);
+					hash.o.prependTo('body');
+					// hash.w.css('top', '0px');
+				},
+				onHide: function(hash) {
+					hash.o.remove();
+					hash.w.css('top', '-8000px');
+				}
+			}); 		
+			
+		});
+	
+</script>

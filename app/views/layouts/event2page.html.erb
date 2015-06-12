@@ -2,36 +2,20 @@
 <html>
     <head>
 		<meta charset="utf-8">
-								    	
   		<title><%= full_title(yield(:title)) %></title> 
 
-    	<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
-  		
-		<!-- <link rel="icon" type="image/png" href="/assets/logo-lc-round-fav.png" /> -->
-		<link rel="icon" type="image/png" href="/assets/fav-lc-2-w16-h14.png" />
-  		
-   		 <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-   		 
-  		 <!-- include_gon  -->    	
-    	
+    	<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => false %>
+  		<%= javascript_include_tag "application", "data-turbolinks-track" => false %>
+		<%= favicon_link_tag source='fav-lc-2-w16-h14.png' %>
+  		<%= include_gon %>
 	  	<%= csrf_meta_tags %>
 	  	<%= render 'layouts/shim' %>  
 
     </head>
 	<body>
-		
 
 		<%= render 'layouts/nav_main' %>
-			
-		<!-- <div style="width: 1200px; margin-right: auto; margin-left: auto; background: #fff;">						
-			<div style="height: 70px;"></div> -->
-			
-			
-			<%= yield %>
-			 
-		<!-- </div> -->
-				
-		
+		<%= yield %>
 		<%= render 'layouts/footer' %>
 
 		<%= debug(params) if Rails.env.development? %>

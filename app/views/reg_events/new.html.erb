@@ -1,15 +1,11 @@
 <% provide(:title, 'Event Registration') %>
 
-	<!-- <#%= javascript_include_tag "jquery.validate.min" %#> -->
-	<!-- <script src="/assets/jquery.validate.min.js"></script> -->	
-
 	<%= render 'share/backtotop' %>
 
 	<ul class="lc-inline eventpages-ul-1">
 		<li class="eventpages-li-1">
 			<%= render 'share/eventpages_tabs' %>
 			<a href="http://www.amplify.com/ela" target="_blank" class="event-reg-ad">
-				<!-- <img src="/repository/ads/amplify.png" alt="Amplify"/> -->
 				<%= image_tag("amplify.png", alt: "amplify.png") %>
 			</a>
 		</li>
@@ -19,17 +15,15 @@
 					<div class="table-white">
 						<div class="row">
 							<div class="cell-100percent">
-								<div class="commun">
-									<div style="margin-top:50px;" class="seperator-commun">
-										<!-- <img src="/repository/logo-icon-come-together.png"> -->
+								<div class="event">
+									<div style="margin-top:50px;" class="seperator-event">
 										<%= image_tag("logo-icon-come-together.png", alt: "logo-icon-come-together.png") %>
 										LIVE EVENT REGISTRATION
 									</div>
-									<div class="commun-inside">
+									<div class="event-inside">
 										<br><br><br>
 										<p style="clear:both;">
 											<a href="/ContactUs">
-												<!-- <img src="../repository/events/events-reg-form-1.png" alt="events-reg-form-1.png" height="150px" align="left" > -->
 												<%= image_tag("events-reg-form-1.png", alt: "events-reg-form-1.png", height: "150px", align: "left") %>
 											</a>
 											<strong>WELCOME to REGISTRATION </strong>for Learning Counsel events! School executives and educators are welcome to attend
@@ -45,7 +39,7 @@
 											If you are a private sector registrant, please note that there is an attendance fee for you unless your company is already sponsoring. 
 											We will contact you after your registration.  
 										</p>
-										<div class="bottom-commun-squares">&nbsp;</div>
+										<div class="bottom-event-squares">&nbsp;</div>
 									</div>
 								</div>
 							</div>
@@ -62,10 +56,10 @@
 					</div>
 				</div>
 				<div class="reg-events-wrapper-index-1">
-					<div class="top-commun-squares">&nbsp;</div>
+					<div class="top-event-squares">&nbsp;</div>
 					<section>
 						<div id="join-image" class="">
-							<div id="form_reg_event" class="form-reg-commun" tabindex="1">
+							<div id="form_reg_event" class="form-reg-event" tabindex="1">
 								<%= form_for( @reg_event, :html => {:id => "form_join"}) do |f| %> 
 									<!-- 
 									$("div.errors p").html(message);
@@ -74,18 +68,19 @@
 									<div class="errors" style="height: 30px; text-align: left; padding-left: 300px;">
 										<p></p>
 										<!-- <div class="row">
-											<div class="cell-left-reg-commun"></div>
-											<div class="cell-right-reg-commun"></div>
+											<div class="cell-left-reg-event padding-top-1"></div>
+											<div class="cell-right-reg-event"></div>
 											<div class="cell-error-reg-event"></div>										
 										</div> -->
 									</div>			
 									<div class="input-form-spacer"></div>
+								<div class="table">
 									<!--name_first-->
 									<div class="row">
-										<div class="cell-left-reg-commun">
+										<div class="cell-left-reg-event padding-top-1">
 											<%= f.label(:name_first, "First Name", :class => 'input-label required-label', :id => 'label_reg_event_name_first') %>
 										</div>
-										<div class="cell-right-reg-commun">
+										<div class="cell-right-reg-event">
 											 <%= f.text_field(:name_first, :class => "input-form required", :placeholder => 'First Name', :tabindex => '2', :autofocus => true) %>					 
 										</div>
 										<div class="cell-error-reg-event" id="state_reg_event_name_first"><p id="error_reg_event_name_first"></p></div>      					   
@@ -93,10 +88,10 @@
 									<div class="input-form-spacer"></div>
 									<!--name_last-->
 									<div class="row">
-										<div class="cell-left-reg-commun">
+										<div class="cell-left-reg-event padding-top-1">
 											<%= f.label(:name_last, "Last Name", :class => 'input-label required-label', :id => 'label_reg_event_name_last') %>
 										</div>
-										<div class="cell-right-reg-commun">
+										<div class="cell-right-reg-event">
 											 <%= f.text_field(:name_last, :class => "input-form required", :placeholder => 'Last Name', :tabindex => '3') %>					 
 										</div>
 										<div class="cell-error-reg-event" id="state_reg_event_name_last"><p id="error_reg_event_name_last"></p></div>      					   
@@ -104,10 +99,10 @@
 									<div class="input-form-spacer"></div>
 									<!--name_title_sir-->
 									<div class="row">
-										<div class="cell-left-reg-commun">
+										<div class="cell-left-reg-event padding-top-1">
 											<%= f.label(:name_title_sir, "Mr, Mrs, Ms, Dr", :class => 'input-label required-label', :id => 'label_reg_event_name_title') %>
 										</div>
-										<div class="cell-right-reg-commun">
+										<div class="cell-right-reg-event">
 											 <%= f.text_field(:name_title_sir, :class => "input-form required", :placeholder => 'Mr, Mrs, Ms, Dr', :tabindex => '4') %>					 
 										</div>
 										<div class="cell-error-reg-event" id="state_reg_event_name_title_sir"><p id="error_reg_event_name_title_sir"></p></div>      					   
@@ -115,16 +110,18 @@
 									<div class="input-form-spacer"></div>
 									<!--name_title-->
 									<div class="row">
-										<div class="cell-left-reg-commun">
+										<div class="cell-left-reg-event padding-top-1">
 											<%= f.label(:name_title, "Position Title", :class => 'input-label required-label', :id => 'label_reg_event_name_title') %>
 										</div>
-										<div class="cell-right-reg-commun">
+										<div class="cell-right-reg-event">
 											 <%= f.text_field(:name_title, :class => "input-form required", :placeholder => 'Title', :tabindex => '5') %>					 
 										</div>
 										<div class="cell-error-reg-event" id="state_reg_event_name_title"><p id="error_reg_event_name_title"></p></div>      					   
 									</div>      		
 									<div class="input-form-spacer"></div>
 									<div class="input-form-spacer"></div>
+								</div>
+									
 									<!--type_affiliation-->			
 									<div style="width: 100%;">
 										<div style="width: 360px; margin-left: 300px;">
@@ -163,13 +160,13 @@
 											</div>
 										</div>
 									</div>
-									
+																		
 									<% if false %>
 									<div class="row">
-										<div class="cell-left-reg-commun">
+										<div class="cell-left-reg-event padding-top-1">
 											<%= f.label(:type_affiliation, "School/District or Company?", :class => 'input-label required-label', :id => 'label_reg_event_type_affiliation') %>
 										</div>
-										<div class="cell-right-reg-commun">
+										<div class="cell-right-reg-event">
 											<select name="reg_event[type_affiliation]" id="reg_event_type_affiliation" class="" style="display: none;" data-template="#dropdown-data1">
 											    <option value="0" selected="selected" id="option-default">-School/District or Company?-</option>	
 											    <option value="1">School/District</option>
@@ -183,12 +180,14 @@
 									
 									<div class="input-form-spacer"></div>
 									<div class="input-form-spacer"></div>
+									
+								<div class="table">
 									<!--name_affiliation-->
 									<div class="row">
-										<div class="cell-left-reg-commun">
+										<div class="cell-left-reg-event padding-top-1">
 											<%= f.label(:name_affiliation, "School/District or Company Name", :class => 'input-label required-label', :id => 'label_reg_event_name_affiliation') %>
 										</div>
-										<div class="cell-right-reg-commun">
+										<div class="cell-right-reg-event">
 											 <%= f.text_field(:name_affiliation, :class => "input-form required", :placeholder => 'School/District or Company Name', :tabindex => '9') %>					 
 										</div>
 										<div class="cell-error-reg-event" id="state_reg_event_name_affiliation"><p id="error_reg_event_name_affiliation"></p></div>      					   
@@ -196,10 +195,10 @@
 									<div class="input-form-spacer"></div>
 									<!--address-->
 									<div class="row">
-										<div class="cell-left-reg-commun">
+										<div class="cell-left-reg-event padding-top-1">
 											<%= f.label(:address, "Address", :class => 'input-label required-label', :id => 'label_reg_event_address') %>
 										</div>
-										<div class="cell-right-reg-commun">
+										<div class="cell-right-reg-event">
 											 <%= f.text_field(:address, :class => "input-form required", :placeholder => 'Address', :tabindex => '10') %>					 
 										</div>
 										<div class="cell-error-reg-event" id="state_reg_event_address"><p id="error_reg_event_address"></p></div>      					   
@@ -207,10 +206,10 @@
 									<div class="input-form-spacer"></div>
 									<!--city-->
 									<div class="row">
-										<div class="cell-left-reg-commun">
+										<div class="cell-left-reg-event padding-top-1">
 											<%= f.label(:city, "City", :class => 'input-label required-label', :id => 'label_reg_event_city') %>
 										</div>
-										<div class="cell-right-reg-commun">
+										<div class="cell-right-reg-event">
 											 <%= f.text_field(:city, :class => "input-form required", :placeholder => 'City', :tabindex => '11') %>					 
 										</div>
 										<div class="cell-error-reg-event" id="state_reg_event_city"><p id="error_reg_event_city"></p></div>      					   
@@ -218,10 +217,10 @@
 									<div class="input-form-spacer"></div>
 									<!--state-->
 									<div class="row">
-										<div class="cell-left-reg-commun">
+										<div class="cell-left-reg-event padding-top-1">
 											<%= f.label(:state, "State", :class => 'input-label required-label', :id => 'label_reg_event_state') %>
 										</div>
-										<div class="cell-right-reg-commun">
+										<div class="cell-right-reg-event">
 											 <%= f.text_field(:state, :class => "input-form required", :placeholder => 'State', :tabindex => '12') %>					 
 										</div>
 										<div class="cell-error-reg-event" id="state_reg_event_state"><p id="error_reg_event_state"></p></div>      					   
@@ -229,10 +228,10 @@
 									<div class="input-form-spacer"></div>
 									<!--zip-->
 									<div class="row">
-										<div class="cell-left-reg-commun">
+										<div class="cell-left-reg-event padding-top-1">
 											<%= f.label(:zip, "Zip", :class => 'input-label required-label', :id => 'label_reg_event_zip') %>
 										</div>
-										<div class="cell-right-reg-commun">
+										<div class="cell-right-reg-event">
 											 <%= f.text_field(:zip, :class => "input-form required", :placeholder => 'Zip', :tabindex => '13') %>					 
 										</div>
 										<div class="cell-error-reg-event" id="state_reg_event_zip"><p id="error_reg_event_zip"></p></div>      					   
@@ -240,10 +239,10 @@
 									<div class="input-form-spacer"></div>
 									<!--phone-->
 									<div class="row">
-										<div class="cell-left-reg-commun">
+										<div class="cell-left-reg-event padding-top-1">
 											<%= f.label(:phone, "Phone", :class => 'input-label required-label', :id => 'label_reg_event_phone') %>
 										</div>
-										<div class="cell-right-reg-commun">
+										<div class="cell-right-reg-event">
 											 <%= f.text_field(:phone, :class => "input-form required", :placeholder => 'Phone', :tabindex => '14') %>					 
 										</div>
 										<div class="cell-error-reg-event" id="state_reg_event_phone"><p id="error_reg_event_phone"></p></div>      					   
@@ -251,10 +250,10 @@
 									<div class="input-form-spacer"></div>
 									<!--phone_mobile-->
 									<div class="row">
-										<div class="cell-left-reg-commun">
+										<div class="cell-left-reg-event padding-top-1">
 											<%= f.label(:phone_mobile, "(*optional) Mobile Phone<br>for a text reminder<br>before the Event".html_safe, :class => 'input-label required-label', :id => 'label_reg_event_phone_mobile') %>
 										</div>
-										<div class="cell-right-reg-commun">
+										<div class="cell-right-reg-event">
 											 <%= f.text_field(:phone_mobile, :class => "input-form required", :placeholder => 'Mobile Phone', :tabindex => '15') %>					 
 										</div>
 										<div class="cell-error-reg-event" id="state_reg_event_phone_mobile"><p id="error_reg_event_phone_mobile"></p></div>      					   
@@ -262,10 +261,10 @@
 									<div class="input-form-spacer"></div>
 									<!--email-->
 									<div class="row">
-										<div class="cell-left-reg-commun">
+										<div class="cell-left-reg-event padding-top-1">
 											<%= f.label(:email, "Email", :class => 'input-label required-label', :id => 'label_reg_event_email') %>
 										</div>
-										<div class="cell-right-reg-commun">
+										<div class="cell-right-reg-event">
 											<%= f.text_field(:email, :class => "input-form required", :placeholder => 'email@example.com', :tabindex => '16' ) %>
 										</div>
 										<div class="cell-error-reg-event" id="state_reg_event_email"><p id="error_reg_event_email"></p></div>      	
@@ -273,10 +272,10 @@
 									<div class="input-form-spacer"></div>
 									<!--email_cc_1 -->
 									<div class="row">
-										<div class="cell-left-reg-commun">
+										<div class="cell-left-reg-event padding-top-1">
 											<%= f.label(:email_cc_1, "(*optional) cc Email", :class => 'input-label required-label', :id => 'label_reg_event_email_cc_1') %>
 										</div>
-										<div class="cell-right-reg-commun">
+										<div class="cell-right-reg-event">
 											<%= f.text_field(:email_cc_1, :class => "input-form required", :placeholder => 'email@example.com', :tabindex => '17' ) %>
 										</div>
 										<div class="cell-error-reg-event" id="state_reg_event_email_cc_1"><p id="error_reg_event_email_cc_1"></p></div>      	
@@ -284,10 +283,10 @@
 									<div class="input-form-spacer"></div>
 									<!--email_cc_2-->
 									<div class="row">
-										<div class="cell-left-reg-commun">
+										<div class="cell-left-reg-event padding-top-1">
 											<%= f.label(:email_cc_2, "(*optional) cc Email", :class => 'input-label required-label', :id => 'label_reg_event_email_cc_2') %>
 										</div>
-										<div class="cell-right-reg-commun">
+										<div class="cell-right-reg-event">
 											<%= f.text_field(:email_cc_2, :class => "input-form required", :placeholder => 'email@example.com', :tabindex => '18' ) %>
 										</div>
 										<div class="cell-error-reg-event" id="state_reg_event_email_cc_2"><p id="error_reg_event_email_cc_2"></p></div>      	
@@ -295,21 +294,21 @@
 									<div class="input-form-spacer"></div>
 									<div class="input-form-spacer"></div>
 									<div class="row">
-										<div class="cell-left-reg-commun">
+										<div class="cell-left-reg-event padding-top-1">
 											<!-- <label class="input-label required-label"><br><br>Workshops</label> -->
 											<div>
-												<label class="input-label-wide required-label">
+												<label class="input-label required-label">
 													Workshops
 												</label>
 											</div>
 											<div>
-												<label class="input-label-wide required-label">
+												<label class="input-label required-label">
 													<em>Select all that apply</em>
 												</label>								
 											</div>								
 										</div>
 										<div id="border_level" class="button-border" style="width: 416px;">
-											<div class="cell-right-reg-commun-cb">
+											<div class="cell-right-reg-event-cb">
 												<div style="height: 2px;"></div>
 												<div style="margin-left: 20px;">
 													<table id="table1" class="cb-table">
@@ -448,7 +447,7 @@
 																 <%= f.check_box :city_workshop_7 %> 
 															</td>
 															<td class="cb-col-2">
-																<span id="label_city_workshop_7" class="input-label required-label label-cb reg-events-line-through" for="city_workshop_7" tabindex="23">Los Angeles, CA</span>
+																<span id="label_city_workshop_7" class="input-label required-label label-cb-expired reg-events-line-through" for="city_workshop_7">Los Angeles, CA</span>
 																<!-- <span id="label_city_workshop_7" class="input-label required-label label-cb" for="city_workshop_7" onclick="cb_city_workshop('7');" tabindex="23">Los Angeles, CA</span> -->
 															</td>
 															<td class="cb-col-3"></td>
@@ -464,7 +463,7 @@
 															</td>
 															<td class="cb-col-2">
 																<!-- <span id="label_city_workshop_8" class="input-label required-label label-cb" for="city_workshop_8" onclick="cb_city_workshop('8');" tabindex="24">Charlotte, NC</span> -->
-																<span id="label_city_workshop_8" class="input-label required-label label-cb reg-events-line-through" for="city_workshop_8" tabindex="24">Charlotte, NC</span>
+																<span id="label_city_workshop_8" class="input-label required-label label-cb-expired reg-events-line-through" for="city_workshop_8">Charlotte, NC</span>
 															</td>
 															<td class="cb-col-3"></td>
 															<td class="cb-col-4">
@@ -474,11 +473,12 @@
 														<tr class="cb-spacer"></tr>
 														<tr>
 															<td class="cb-col-1">
-																<div id="cb_workshop_9" class="cb-button-test cb-valign"></div>
+																<div id="cb_workshop_9" class="cb-button-test-expired cb-valign"></div>
 																 <%= f.check_box :city_workshop_9 %> 
 															</td>
 															<td class="cb-col-2">
-																<span id="label_city_workshop_9" class="input-label required-label label-cb" for="city_workshop_9" onclick="cb_city_workshop('9');" tabindex="25">Chicago, IL</span>
+																<!-- <span id="label_city_workshop_9" class="input-label required-label label-cb" for="city_workshop_9" onclick="cb_city_workshop('9');" tabindex="25">Chicago, IL</span> -->
+																<span id="label_city_workshop_9" class="input-label required-label label-cb-expired reg-events-line-through" for="city_workshop_9">Chicago, IL</span>
 															</td>
 															<td class="cb-col-3"></td>
 															<td class="cb-col-4">
@@ -488,11 +488,12 @@
 														<tr class="cb-spacer"></tr>
 														<tr>
 															<td class="cb-col-1">
-																<div id="cb_workshop_10" class="cb-button-test cb-valign"></div>
+																<div id="cb_workshop_10" class="cb-button-test-expired cb-valign"></div>
 																 <%= f.check_box :city_workshop_10 %> 
 															</td>
 															<td class="cb-col-2">
-																<span id="label_city_workshop_10" class="input-label required-label label-cb" for="city_workshop_10" onclick="cb_city_workshop('10');" tabindex="26">Houston, TX</span>
+																<!-- <span id="label_city_workshop_10" class="input-label required-label label-cb" for="city_workshop_10" onclick="cb_city_workshop('10');" tabindex="26">Houston, TX</span> -->
+																<span id="label_city_workshop_10" class="input-label required-label label-cb-expired reg-events-line-through" for="city_workshop_10">Houston, TX</span>
 															</td>
 															<td class="cb-col-3"></td>
 															<td class="cb-col-4">
@@ -502,11 +503,12 @@
 														<tr class="cb-spacer"></tr>
 														<tr>
 															<td class="cb-col-1">
-																<div id="cb_workshop_11" class="cb-button-test cb-valign"></div>
+																<div id="cb_workshop_11" class="cb-button-test-expired cb-valign"></div>
 																 <%= f.check_box :city_workshop_11 %> 
 															</td>
 															<td class="cb-col-2">
-																<span id="label_city_workshop_11" class="input-label required-label label-cb" for="city_workshop_11" onclick="cb_city_workshop('11');" tabindex="27">Richmond, VA</span>
+																<!-- <span id="label_city_workshop_11" class="input-label required-label label-cb" for="city_workshop_11" onclick="cb_city_workshop('11');" tabindex="27">Richmond, VA</span> -->
+																<span id="label_city_workshop_11" class="input-label required-label label-cb-expired reg-events-line-through" for="city_workshop_11">Richmond, VA</span>
 															</td>
 															<td class="cb-col-3"></td>
 															<td class="cb-col-4">
@@ -516,11 +518,12 @@
 														<tr class="cb-spacer"></tr>
 														<tr>
 															<td class="cb-col-1">
-																<div id="cb_workshop_12" class="cb-button-test cb-valign"></div>
+																<div id="cb_workshop_12" class="cb-button-test-expired cb-valign"></div>
 																 <%= f.check_box :city_workshop_12 %> 
 															</td>
 															<td class="cb-col-2">
-																<span id="label_city_workshop_12" class="input-label required-label label-cb" for="city_workshop_12" onclick="cb_city_workshop('12');" tabindex="28">Memphis, TN</span>
+																<!-- <span id="label_city_workshop_12" class="input-label required-label label-cb" for="city_workshop_12" onclick="cb_city_workshop('12');" tabindex="28">Memphis, TN</span> -->
+																<span id="label_city_workshop_12" class="input-label required-label label-cb-expired reg-events-line-through" for="city_workshop_12">Memphis, TN</span>
 															</td>
 															<td class="cb-col-3"></td>
 															<td class="cb-col-4">
@@ -632,13 +635,20 @@
 																 <%= f.check_box :city_workshop_19 %> 
 															</td>
 															<td class="cb-col-2">
-																<span id="label_city_workshop_19" class="input-label required-label label-cb" for="city_workshop_19" onclick="cb_city_workshop('19');" tabindex="36">Albuquerque, NM</span>
+																<div class="reg-events-position-relative">
+																	<div class="reg-events-position-top-1" onclick="cb_city_workshop('19');" tabindex="36">
+																		<span id="label_city_workshop_19" class="input-label required-label label-cb" for="city_workshop_19"><strong>Albuquerque, NM</strong></span>
+																		<div class="reg-events-spacer-inner-1"></div>
+																		<span class="input-label required-label label-cb"><strong><em>National Gathering</em></strong></span>
+																	</div>
+																</div>
 															</td>
 															<td class="cb-col-3"></td>
 															<td class="cb-col-4">
-																<span>Oct 26-27</span>
+																<span><strong>Oct 26-27</strong></span>
 															</td>
 														</tr>
+														<tr class="cb-spacer"></tr>
 														<tr class="cb-spacer"></tr>
 														<tr>
 															<td class="cb-col-1">
@@ -676,22 +686,23 @@
 												<div class="reg-events-state-3a"></div>
 												<div class="reg-events-state-3b">
 													<div class="reg-events-state-4">
-														<div class="cell-error-reg-commun-cb" id="state_reg_event_city_workshop">
+														<div class="cell-error-reg-event-cb" id="state_reg_event_city_workshop">
 															<p id="error_reg_event_city_workshop" class="cb-errors"></p>
 														</div>      
 													</div>							
 												</div>
 											</div>
 										</div>
-									</div>      		
+									</div>      	
+								</div>	
+									<!-- <div class="input-form-spacer"></div> -->
+									<!-- <div class="input-form-spacer"></div> -->
+									<!-- <div class="input-form-spacer"></div> -->
 									<div class="input-form-spacer"></div>
 									<div class="input-form-spacer"></div>
 									<div class="input-form-spacer"></div>
-									<div class="input-form-spacer"></div>
-									<div class="input-form-spacer"></div>
-									<div class="input-form-spacer"></div>
-									<div class="submit-button-commun">
-										<%= f.submit "Submit and Download", :id => 'btn_submit', :class => 'btn submitregcommun', :tabindex => '39' %>
+									<div class="submit-button-event">
+										<%= f.submit "Submit and Download", :id => 'btn_submit', :class => 'btn submitregevent', :tabindex => '39' %>
 									</div>   		
 								<% end %>
 							</div>		
@@ -701,9 +712,11 @@
 			</div>
 		</li>
 	</ul>
+	<div style="height: 100px;"></div>
 	<div id="bottom-graphic">
 		<%= image_tag("lc-box-cloud.png", alt: "lc-box-cloud.png") %>
 		<div class="lc-landing-box-row"></div>
 	</div>
+	
 	<div style="clear: both;"></div>
 	

@@ -269,7 +269,7 @@
   padding: 0px;
 }
 .jqmOverlay { 
-  background-color: #000; 
+  background-color: #000;
 }
 * html .jqmWindow {
   position: absolute;
@@ -432,10 +432,39 @@
   width:1200px; 
   margin:0 auto 0;
 }
+
+.cover-container {
+  width: 350px; 
+  height: 506px;
+  text-align: center; 
+  margin: 50px 0 0 100px;
+}
+.cover-container-sub {
+  width: 154px; 
+  height: 38px;
+  margin-top: 8px;
+  margin-left: 100px;
+}
+a:hover, a:active, a:focus {
+  outline: 0; 
+  text-decoration: none;
+}
 .special-reports .cover {
+  position: relative;
   width:350px; 
-  margin: 55px 0 0 100px; 
   box-shadow: 0 3px 6px #6f6f6f;
+}
+.special-reports .cover-download {
+  position: relative;
+  padding-top: 8px; 
+  border: 2px solid #df722f;
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: 20px; 
+  font-weight: 600;
+  color:#fff; 
+  background: #3453ae; 
+  width: 150px;
+  height: 27px;
 }
 .special-reports .tscplayer_inline {
   margin: 25px 0 0 25px; 
@@ -462,15 +491,6 @@
 .special-reports .survey-ad {
   width: 455px; 
   margin-left: -25px;
-}
-.special-reports .cover-download {
-  margin-left: 200px; 
-  padding: 5px 20px; 
-  border: 2px solid #df722f; 
-  color:#fff; 
-  background: #3453ae; 
-  font-size: 20px; 
-  font-weight: 600;
 }
 .special-reports .spec-divider {
   border-top: 2px solid #818181; 
@@ -583,6 +603,11 @@
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
+.special-reports .record-hit:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
 @-moz-keyframes blinker {  
   0% { opacity: 1.0; }
   50% { opacity: 0.0; }
