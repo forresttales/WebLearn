@@ -1,6 +1,5 @@
 class RegLettersController < ApplicationController
   
-
   layout 'reg_letter'
   
     
@@ -62,6 +61,7 @@ class RegLettersController < ApplicationController
     end
   
 end
+
 
 
 

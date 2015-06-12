@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: mtab8lets
+# Table name: mtab1lets
 #
 #  id         :integer          not null, primary key
 #  col_1      :string(300)
@@ -46,12 +46,12 @@
 #  created_at :datetime
 #  updated_at :datetime
 #  col_41     :integer          default(0)
-#  col_42     :integer          default(1)
-#  col_43     :integer          default(1)
-#  col_44     :integer          default(1)
-#  col_45     :integer          default(1)
-#  col_46     :integer          default(1)
-#  col_47     :integer          default(1)
+#  col_42     :integer          default(0)
+#  col_43     :integer          default(0)
+#  col_44     :integer          default(0)
+#  col_45     :integer          default(0)
+#  col_46     :integer          default(0)
+#  col_47     :integer          default(0)
 #  col_48     :integer          default(0)
 #  col_49     :integer          default(0)
 #  col_50     :integer          default(0)

@@ -65,7 +65,6 @@ class PapersController < ApplicationController
       return b_reg_commun_record
   end  
 
-
   def search_contact
     
     ar = params[:dl_contact]
@@ -91,7 +90,7 @@ class PapersController < ApplicationController
       format.json { render :json => { :b_reg_commun_record => b_reg_commun_record,
                                       :email => email } }
     end
-    
+
     # respond_to do |format|
       # format.html {}
       # format.json { render :json => { :b_reg_commun_record => b_reg_commun_record,
@@ -105,3 +104,4 @@ class PapersController < ApplicationController
   
       
 end
+

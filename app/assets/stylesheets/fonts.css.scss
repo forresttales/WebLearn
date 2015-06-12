@@ -90,22 +90,6 @@
       src: asset-url('AsseenonTVSkew.ttf') format('truetype');
   }
 
-  @font-face {
-      font-family: 'Actor';
-      font-style: normal;
-      font-weight: 400;
-      // src: local('Actor Regular'), local('Actor-Regular'), url(http://fonts.gstatic.com/s/actor/v6/OxqeYhb8dn7VMNU4gi8OwA.woff2) format('woff2'), url(http://fonts.gstatic.com/s/actor/v6/gZ8EM_Gzaq4WRjCimioyzQ.woff) format('woff');
-      src: local('Actor Regular'), local('Actor-Regular'), asset-url('Actor_Regular.woff2') format('woff2'), asset-url('Actor_Regular.woff') format('woff');
-  }
-  @font-face {
-      font-family: 'Quicksand';
-      font-style: normal;
-      font-weight: 400;
-      // src: local('Quicksand Regular'), local('Quicksand-Regular'), url(http://fonts.gstatic.com/s/quicksand/v5/sKd0EMYPAh5PYCRKSryvW1tXRa8TVwTICgirnJhmVJw.woff2) format('woff2'), url(http://fonts.gstatic.com/s/quicksand/v5/sKd0EMYPAh5PYCRKSryvWz8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
-      src: local('Quicksand Regular'), local('Quicksand-Regular'), asset-url('Quicksand_Regular.woff2') format('woff2'), asset-url('Quicksand_Regular.woff') format('woff');
-  }
-
-
   /*@font-face {
     font-family: 'NotethisRegular';
     src: asset-url('Note_this.eot');

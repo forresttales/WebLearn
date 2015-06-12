@@ -14,21 +14,9 @@ class RegCommunsController < ApplicationController
 
 
 
-  # def verify_recaptcha
-    # b_verify_recaptcha = false
-    # # if verify_recaptcha(:message => "reCAPTCHA erro")
-      # # b_verify_recaptcha = true
-    # # end
-    # respond_to do |format|
-      # format.html {}
-      # format.json { render :json => { :b_verify_recaptcha => b_verify_recaptcha } }
-    # end
-  # end
-
-
   def create
     
-      # if verify_recaptcha(:message => "reCAPTCHA erro")
+      if verify_recaptcha(:message => "reCAPTCHA erro")
     
           @reg_commun = RegCommun.new(reg_commun_params)
           reg_commun = @reg_commun
@@ -275,10 +263,11 @@ class RegCommunsController < ApplicationController
       
           end
     
-      # else
-        # flash[:captcha] = '* reCAPTCHA entry failed. Nothing was saved. Please try, again.'
-        # redirect_to :action => 'new'
-      # end
+      else
+        flash[:captcha] = '* CAPTCHA entry at bottom failed. Please try again.'
+        #flash[:captcha] = '* reCAPTCHA entry failed. Please try, again.'
+        redirect_to :action => 'new'
+      end
 
     
   end
@@ -362,4 +351,5 @@ class RegCommunsController < ApplicationController
     end
   
 end
+
 

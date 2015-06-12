@@ -31,7 +31,8 @@ class ContactsController < ApplicationController
             session[:contact_saved] = nil
           end
       else
-        flash[:captcha] = '* reCAPTCHA entry failed. Please try, again.'
+        flash[:captcha] = '* CAPTCHA entry at bottom failed. Please try again.'
+        #flash[:captcha] = '* reCAPTCHA entry failed. Please try, again.'
         redirect_to :action => 'new'
       end
     
@@ -54,3 +55,4 @@ class ContactsController < ApplicationController
   end
   
 end
+

@@ -34,10 +34,7 @@ class LandingsController < ApplicationController
 
 
     landing = Landing.new(landing_params)
-    
-    #  name_promo :string(50)
-    #  id_promo   :integer
-    
+
     landing.name_promo = "2013 December"
     landing.id_promo = "1"
 

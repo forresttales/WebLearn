@@ -98,3 +98,4 @@ class EventnewsController < ApplicationController
 
 
 end
+

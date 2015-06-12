@@ -142,3 +142,4 @@ class RegCommun < ActiveRecord::Base
                     :updated_at
   
 end
+

@@ -40,3 +40,4 @@ class RegLetter < ActiveRecord::Base
   
 end
 
+

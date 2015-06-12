@@ -1,6 +1,5 @@
 class StaticPagesController < ApplicationController
   
-  
   layout 'application'
 
   
@@ -215,4 +214,5 @@ class StaticPagesController < ApplicationController
     # render :partial => "http://localhost:3000/journal/pearson"
   end
 end
+
 

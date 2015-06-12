@@ -4,19 +4,19 @@
 #
 #  id                            :integer          not null, primary key
 #  name_first                    :string(100)
-#  name_last                     :string(100)
-#  name_title                    :string(200)
-#  type_affiliation              :string(200)
-#  name_affiliation              :string(200)
-#  address                       :string(200)
-#  city                          :string(100)
-#  state                         :string(50)
-#  zip                           :string(50)
-#  phone                         :string(50)
+#  name_last                     :string(50)
+#  name_title                    :string(50)
+#  type_affiliation              :string(50)
+#  name_affiliation              :string(100)
 #  email                         :string(255)      default(""), not null
 #  city_workshop                 :string(50)
 #  created_at                    :datetime
 #  updated_at                    :datetime
+#  address                       :string(50)
+#  city                          :string(50)
+#  state                         :string(50)
+#  zip                           :string(50)
+#  phone                         :string(50)
 #  email_cc_1                    :string(100)
 #  email_cc_2                    :string(100)
 #  city_workshop_1               :boolean          default(FALSE)
@@ -196,6 +196,7 @@ class RegEvent < ActiveRecord::Base
   
   
 end
+
 
 
 

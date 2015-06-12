@@ -238,9 +238,9 @@ class RegEventsController < ApplicationController
     if @reg_event.save
       
       session[:reg_event_saved] = true
+      
       mail = RegEventMailer.welcome_email(@reg_event)
       mail.deliver
-      # redirect_to '/Events'
  
         # format.html { redirect_to(@user, notice: 'User was successfully created.') }
         # format.json { render json: @user, status: :created, location: @user }
@@ -372,4 +372,5 @@ class RegEventsController < ApplicationController
     end
   
 end
+
 

@@ -238,6 +238,8 @@ function recordHit(record_hit_id) {
 $(window).load( function() {
 //$(document).ready(function(){
 
+	// alert(gon.commun_registered);
+
 	b_reg_commun_confirmed = gon.reg_commun_confirmed;
 
 	$("div.record-hit").on('click', function(event) {
@@ -293,6 +295,9 @@ $(window).load( function() {
 		// }
 	// });
 
+
+
+	// if (commun_registered) {
 	if (b_reg_commun_confirmed) {
 		renderDownloadMsgFree();
 	}
@@ -359,6 +364,7 @@ $(window).load( function() {
     });
 
 	$(document).on('click', '#commun_reg_confirm', function() {
+		// id_pdf = "";
 		btn_register = false;
 		$('#dialog_special_reports_1').jqmShow();
 	});
@@ -402,3 +408,4 @@ $(window).load( function() {
 
 
 });
+

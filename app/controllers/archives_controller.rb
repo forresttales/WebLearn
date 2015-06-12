@@ -18,9 +18,9 @@ class ArchivesController < ApplicationController
 
     case id.to_s
       when "2020"
-        id = "Revising-Adoption-of-Curriculum-Materials-and-the-Hidden-Inequity"
+        id = "Revising-Adoption-of-Curriculum-Materials-and-the-Hidden-Inequity"     
       when "35-New-Capabilities-of-Digital-Curriculum-that-put-Textbooks-in-the-Dust"
-        id = "35-New-Capabilities-of-Digital-Curriculum-that-left-Textbooks-in-the-Dust"                          
+        id = "35-New-Capabilities-of-Digital-Curriculum-that-left-Textbooks-in-the-Dust"                              
       else
        # 
     end
@@ -48,3 +48,4 @@ class ArchivesController < ApplicationController
   
   
 end
+

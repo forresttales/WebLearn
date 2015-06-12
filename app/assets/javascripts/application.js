@@ -11,14 +11,17 @@
 // about supported directives.
 //
 //= require jquery
+//= require dot
 //= require global
 //= require jquery.colorbox
 //= require jquery.elastic.source
 //= require jquery.galleryview.2.1.1.min
 //= require jquery.tabbable.min
+//= require jquery-dropdown-dot
 //= require jquery-prettyPhoto
 //= require jquery-002
 //= require jquery-2.1.2
 //= require jquery-tmpl
 //= require jquery.easing.1.3
 //= require_directory ./templates
+

@@ -3,13 +3,13 @@
 # Table name: contacts
 #
 #  id         :integer          not null, primary key
-#  name       :string(255)      default("")
+#  name       :string(50)
 #  email      :string(255)      default(""), not null
-#  subject    :string(255)      default("")
+#  subject    :string(50)
 #  message    :text
 #  created_at :datetime
 #  updated_at :datetime
-#  phone      :string(255)      default("")
+#  phone      :string(100)
 #
 
 class Contact < ActiveRecord::Base
@@ -23,3 +23,4 @@ class Contact < ActiveRecord::Base
     
 
 end
+
