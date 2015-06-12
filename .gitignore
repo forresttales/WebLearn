@@ -18,10 +18,8 @@
 /log
 /tmp
 /test
-/config
-!/config/application.rb
-!/config/routes.rb
-/public
+/config/database.yml
+/public/assets
 /*.directory
 /.gitignore
 /*backup
