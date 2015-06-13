@@ -1,0 +1,705 @@
+<% provide(:title, 'Community Registration') %>
+
+<!-- ACDDE3 -->
+
+<script id="dropdown-data1-selected" type="text/x-dot-template">
+    {{=it.label}}<i>&darr;</i>
+</script>
+
+<script id="dropdown-data1" type="text/x-dot-template">
+	<div class="dropdown1" id="dropdown1" tabindex="22" style="z-index: 90">
+	    <div class="selected">{{=it.selected.label}}<i>&darr;</i></div>
+	    <ul>
+	        {{~it.items :item:index}}
+	        <li data-index="{{=index}}">{{=item.label}}</li>
+	        {{~}}
+	    </ul>
+	</div>
+</script>	
+
+<script id="dropdown-data2-selected" type="text/x-dot-template">
+	{{=it.label}}<i>&darr;</i>
+</script>
+
+<script id="dropdown-data2" type="text/x-dot-template">
+	<div class="dropdown2" id="dropdown2" tabindex="23" style="z-index: 80">
+	    <div class="selected">{{=it.selected.label}}<i>&darr;</i></div>
+	    <ul>
+	        {{~it.items :item:index}}
+	        <li data-index="{{=index}}">{{=item.label}}</li>
+	        {{~}}
+	    </ul>
+	</div>
+</script>		
+
+<script id="dropdown-data3-selected" type="text/x-dot-template">
+	{{=it.label}}<i>&darr;</i>
+</script>
+
+<script id="dropdown-data3" type="text/x-dot-template">
+	<div class="dropdown3" id="dropdown3" tabindex="24" style="z-index: 70">
+	    <div class="selected">{{=it.selected.label}}<i>&darr;</i></div>
+	    <ul>
+	        {{~it.items :item:index}}
+	        <li data-index="{{=index}}">{{=item.label}}</li>
+	        {{~}}
+	    </ul>
+	</div>
+</script>		
+
+
+<div class="reg-communs-new-header">
+    <%= render 'share/backtotop_2' %>
+    <div class="commun">
+        <div class="commun-seperator"><img src="/repository/logo-icon-come-together.png">COMMUNITY</div>
+        <div class="commun-inside">
+            <p id="first-p">
+                HELLO!<br/><br/>
+                You are at this page to opt-in to be a part of making all things about digital curriculum better.  
+                By opting in you agree that we can send you our Journal (magazine) and special emails to periodically survey you about things happening 
+                in the education industry, your opinions on best approaches, and more.  We'll share a cut of the data back with you in a 
+                report via email.  That way you also know what hundreds of your peers are thinking about the same things.  
+            </p>
+            <br>
+            <p>
+                The LC Community membership is restricted to 18 years and older. All personally 
+                identifiable information that you provide will be kept strictly confidential and used only for legitimate 
+                research purposes. 
+            </p>
+            <br>
+            <p id="last-p">
+                Occasionally there may be a Survey that offers some sort of give-away.  You can tell us your options on how 
+                you would like that or opt out.  You'll also be our special invite to our annual Gathering event, our invitation-only 
+                premier national get-together for members of this community where you can see each other face to face!
+            </p>
+            <div class="bottom-commun-squares">&nbsp;</div>
+        </div>
+        <!--End commun-inside-->
+    </div>
+    <a name="anchor1"></a>                           
+    <!-- <div class="row" style="height: 30px;">
+        <div  class="cell-100percent" style="padding-left: 300px;">
+           <% unless flash[:captcha].nil? %>
+           <div class="alert"><%= flash[:captcha] %></div>
+           <% end %>
+        </div>
+        </div> 
+        <div class="row" style="height: 10px;"></div> -->
+    <!-- </div> -->
+</div>
+<div class="reg-communs-new">
+    <div class="top-commun-squares">&nbsp;</div>
+    <div class="reg-communs-new-container">
+        <div id="form_reg_commun" class="form-reg-commun" tabindex="1">
+            <%= form_for( @reg_commun, :html => {:id => "form_join"}) do |f| %>
+            <div class="errors">
+                <p></p>
+            </div>
+            <div class="space-heihgt-16"></div>
+            <!--name_first-->
+            <div class="row">
+                <div class="cell-left-reg-commun padding-top-1">
+                    <%= f.label(:name_first, "First Name", :class => 'input-label required-label', :id => 'label_reg_commun_name_first') %>
+                </div>
+                <div class="cell-right-reg-commun">
+                    <%= f.text_field(:name_first, :class => "input-form required", :placeholder => 'First Name', :tabindex => '2', :autofocus => true) %>                
+                </div>
+                <div class="cell-error-reg-commun" id="state_reg_commun_name_first">
+                    <p id="error_reg_commun_name_first"></p>
+                </div>
+            </div>
+            <div class="space-heihgt-16"></div>
+            <!--name_last-->
+            <div class="row">
+                <div class="cell-left-reg-commun padding-top-1">
+                    <%= f.label(:name_last, "Last Name", :class => 'input-label required-label', :id => 'label_reg_commun_name_last') %>
+                </div>
+                <div class="cell-right-reg-commun">
+                    <%= f.text_field(:name_last, :class => "input-form required", :placeholder => 'Last Name', :tabindex => '3') %>              
+                </div>
+                <div class="cell-error-reg-commun" id="state_reg_commun_name_last">
+                    <p id="error_reg_commun_name_last"></p>
+                </div>
+            </div>
+            <div class="space-heihgt-16"></div>
+            <!--name_title-->
+            <div class="row">
+                <div class="cell-left-reg-commun padding-top-1">
+                    <%= f.label(:name_title, "Title", :class => 'input-label required-label', :id => 'label_reg_commun_name_title') %>
+                </div>
+                <div class="cell-right-reg-commun">
+                    <%= f.text_field(:name_title, :class => "input-form required", :placeholder => 'Title', :tabindex => '4') %>              
+                </div>
+                <div class="cell-error-reg-commun" id="state_reg_commun_name_title">
+                    <p id="error_reg_commun_name_title"></p>
+                </div>
+            </div>
+            <div class="space-heihgt-16"></div>
+            <!--name_affiliation-->
+            <div class="row">
+                <div class="cell-left-reg-commun padding-top-1">
+                    <%= f.label(:name_affiliation, "Affiliation Name", :class => 'input-label required-label', :id => 'label_reg_commun_name_affiliation') %>
+                </div>
+                <div class="cell-right-reg-commun">
+                    <%= f.text_field(:name_affiliation, :class => "input-form required", :placeholder => 'Affiliation Name', :tabindex => '5') %>               
+                </div>
+                <div class="cell-error-reg-commun" id="state_reg_commun_name_affiliation">
+                    <p id="error_reg_commun_name_affiliation"></p>
+                </div>
+            </div>
+            <div class="space-heihgt-16"></div>
+            <div class="space-heihgt-16"></div>
+            <!--public_private-->
+            <div class="row">
+                <div class="cell-left-reg-commun padding-top-2">
+                    <%= f.label(:public_private, "Public or Private", :class => 'input-label required-label', :id => 'label_reg_commun_public_private') %>
+                </div>
+                <div class="button-border" id="border_public_private">
+                    <div class="cell-right-reg-commun">
+                        <div class="button-border-width-40"></div>
+                        <div id="rd_public_private_public" class="rd-button"></div>
+                        <%= f.radio_button(:public_private, 'public') %>
+                        <span id="label_public_private_public" class="input-label required-label" for="public_private_public" onclick="rd_public_private('public');" tabindex="6">Public</span>
+                        <div class="button-border-width-30"></div>
+                        <div id="rd_public_private_private" class="rd-button"></div>
+                        <%= f.radio_button(:public_private, 'private') %>
+                        <span id="label_public_private_private" class="input-label required-label" for="public_private_private" onclick="rd_public_private('private');" tabindex="7">Private</span>
+                    </div>
+                </div>
+                <div class="button-border-error-container">
+                    <div class="cell-error-reg-commun" id="state_reg_commun_public_private">
+                        <p id="error_reg_commun_public_private" class="radio-errors"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="space-heihgt-16"></div>
+            <div class="space-heihgt-16"></div>
+            <!--address-->
+            <div class="row">
+                <div class="cell-left-reg-commun padding-top-1">
+                    <%= f.label(:address, "Address", :class => 'input-label required-label', :id => 'label_reg_commun_address') %>
+                </div>
+                <div class="cell-right-reg-commun">
+                    <%= f.text_field(:address, :class => "input-form required", :placeholder => 'Address', :tabindex => '8') %>               
+                </div>
+                <div class="cell-error-reg-commun" id="state_reg_commun_address">
+                    <p id="error_reg_commun_address"></p>
+                </div>
+            </div>
+            <div class="space-heihgt-16"></div>
+            <!--city-->
+            <div class="row">
+                <div class="cell-left-reg-commun padding-top-1">
+                    <%= f.label(:city, "City", :class => 'input-label required-label', :id => 'label_reg_commun_city') %>
+                </div>
+                <div class="cell-right-reg-commun">
+                    <%= f.text_field(:city, :class => "input-form required", :placeholder => 'City', :tabindex => '9') %>               
+                </div>
+                <div class="cell-error-reg-commun" id="state_reg_commun_city">
+                    <p id="error_reg_commun_city"></p>
+                </div>
+            </div>
+            <div class="space-heihgt-16"></div>
+            <!--state-->
+            <div class="row">
+                <div class="cell-left-reg-commun padding-top-1">
+                    <%= f.label(:state, "State", :class => 'input-label required-label', :id => 'label_reg_commun_state') %>
+                </div>
+                <div class="cell-right-reg-commun">
+                    <%= f.text_field(:state, :class => "input-form required", :placeholder => 'State', :tabindex => '10') %>               
+                </div>
+                <div class="cell-error-reg-commun" id="state_reg_commun_state">
+                    <p id="error_reg_commun_state"></p>
+                </div>
+            </div>
+            <div class="space-heihgt-16"></div>
+            <!--zip-->
+            <div class="row">
+                <div class="cell-left-reg-commun padding-top-1">
+                    <%= f.label(:zip, "Zip", :class => 'input-label required-label', :id => 'label_reg_commun_zip') %>
+                </div>
+                <div class="cell-right-reg-commun">
+                    <%= f.text_field(:zip, :class => "input-form required", :placeholder => 'Zip', :tabindex => '11') %>                
+                </div>
+                <div class="cell-error-reg-commun" id="state_reg_commun_zip">
+                    <p id="error_reg_commun_zip"></p>
+                </div>
+            </div>
+            <div class="space-heihgt-16"></div>
+            <!--phone-->
+            <div class="row">
+                <div class="cell-left-reg-commun padding-top-1">
+                    <%= f.label(:phone, "Phone", :class => 'input-label required-label', :id => 'label_reg_commun_phone') %>
+                </div>
+                <div class="cell-right-reg-commun">
+                    <%= f.text_field(:phone, :class => "input-form required", :placeholder => 'Phone', :tabindex => '12') %>               
+                </div>
+                <div class="cell-error-reg-commun" id="state_reg_commun_phone">
+                    <p id="error_reg_commun_phone"></p>
+                </div>
+            </div>
+            <div class="space-heihgt-16"></div>
+            <!--email-->
+            <div class="row">
+                <div class="cell-left-reg-commun padding-top-1">
+                    <%= f.label(:email, "Email", :class => 'input-label required-label', :id => 'label_reg_commun_email') %>
+                </div>
+                <div class="cell-right-reg-commun">
+                    <%= f.text_field(:email, :class => "input-form required", :placeholder => 'email@example.com', :tabindex => '13' ) %>
+                </div>
+                <div class="cell-error-reg-commun" id="state_reg_commun_email">
+                    <p id="error_reg_commun_email"></p>
+                </div>
+            </div>
+            <!--level
+                Federal- level
+                State- level
+                Regional Authority level
+                District or Campus level senior management
+                Department level within management offices
+                School level senior management
+                Department within school or Classroom level
+                f.text_field(:level, :class => "input-form required", :placeholder => 'Level', :tabindex => '13')  -->               
+            <!-- level start -->
+            <div class="space-heihgt-16"></div>
+            <div class="space-heihgt-16"></div>
+            <div class="row">
+                <div class="cell-left-reg-commun">          
+                    <label class="input-label required-label"><br><br>Level</label>
+                </div>
+                <div id="border_level" class="button-border">
+                    <div class="cell-right-reg-commun-cb">
+                        <div class="cb-space-height-2"></div>
+                        <div class="cb-margin-left-20">
+                            <table id="table1" class="cb-table">
+                                <tr class="cb-spacer"></tr>
+                                <tr>
+                                    <td>
+                                        <div id="cb_level_1" class="cb-button"></div>
+                                        <%= f.check_box :level_1 %>
+                                    </td>
+                                    <td>
+                                        <span id="label_level_1" class="input-label required-label label_cb" for="level_1" onclick="cb_level('1');" tabindex="14">Federal level</span>
+                                    </td>
+                                </tr>
+                                <tr class="cb-spacer"></tr>
+                                <tr>
+                                    <td>
+                                        <div id="cb_level_2" class="cb-button"></div>
+                                        <%= f.check_box :level_2 %>
+                                    </td>
+                                    <td>
+                                        <span id="label_level_2" class="input-label required-label label_cb" for="level_2" onclick="cb_level('2');" tabindex="15">State level</span>
+                                    </td>
+                                </tr>
+                                <tr class="cb-spacer"></tr>
+                                <tr>
+                                    <td>
+                                        <div id="cb_level_3" class="cb-button"></div>
+                                        <%= f.check_box(:level_3) %>
+                                    </td>
+                                    <td>
+                                        <span id="label_level_3" class="input-label required-label label_cb" for="level_3" onclick="cb_level('3');" tabindex="16">Regional Authority level</span>
+                                    </td>
+                                </tr>
+                                <tr class="cb-spacer"></tr>
+                                <tr>
+                                    <td>
+                                        <div id="cb_level_4" class="cb-button"></div>
+                                        <%= f.check_box(:level_4) %>
+                                    </td>
+                                    <td>
+                                        <span id="label_level_4" class="input-label required-label label_cb" for="level_4" onclick="cb_level('4');" tabindex="17">District or Campus level senior management</span>
+                                    </td>
+                                </tr>
+                                <tr class="cb-spacer"></tr>
+                                <tr>
+                                    <td>
+                                        <div id="cb_level_5" class="cb-button"></div>
+                                        <%= f.check_box(:level_5) %>
+                                    </td>
+                                    <td>
+                                        <span id="label_level_5" class="input-label required-label label_cb" for="level_5" onclick="cb_level('5');" tabindex="18">Department level within managment offices</span>
+                                    </td>
+                                </tr>
+                                <tr class="cb-spacer"></tr>
+                                <tr>
+                                    <td>
+                                        <div id="cb_level_6" class="cb-button"></div>
+                                        <%= f.check_box(:level_6) %>
+                                    </td>
+                                    <td>
+                                        <span id="label_level_6" class="input-label required-label label_cb" for="level_6" onclick="cb_level('6');" tabindex="19">School level senior management</span>
+                                    </td>
+                                </tr>
+                                <tr class="cb-spacer"></tr>
+                                <tr>
+                                    <td>
+                                        <div id="cb_level_7" class="cb-button"></div>
+                                        <%= f.check_box(:level_7) %>
+                                    </td>
+                                    <td>
+                                        <span id="label_level_7" class="input-label required-label label_cb" for="level_7" onclick="cb_level('7');" tabindex="20">Department within School or Classroom level</span>
+                                    </td>
+                                </tr>
+                                <tr class="cb-spacer"></tr>
+                            </table>
+                        </div>
+                        <div class="cb-space-height-22"></div>
+                        <div class="cb-margin-left-20">
+                            <label class="input-label required-label">OTHER:</label>
+                            <div class="cb-space-height-6"></div>
+                            <%= f.text_field(:level_other, :class => "input-form unrequired", :placeholder => 'OTHER', :tabindex => '21') %>              
+                        </div>
+                        <div class="space-heihgt-16"></div>
+                    </div>
+                </div>
+                <div class="button-border-error-container">
+                    <div class="button-border-display-table">
+                        <div class="button-border-table-row"></div>
+                        <div class="button-border-table-row space-heihgt-16">
+                            <div class="button-border-table-cell">
+                                <div class="cell-error-reg-commun-cb" id="state_reg_commun_level">
+                                    <p id="error_reg_commun_level" class="cb-errors"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- level end -->
+            <div class="space-heihgt-16"></div>
+            <div class="space-heihgt-16"></div>
+            <!--institution_size-->
+            <div class="row">
+                <div class="cell-left-reg-commun padding-top-3">
+                    <%= f.label(:institution_size, :class => 'input-label required-label', :id => 'label_reg_commun_institution_size') do %>
+                    Please characterize your<br>institution by size:
+                    <% end %>
+                </div>
+                <div class="cell-right-reg-commun">
+                    <select name="reg_commun[institution_size]" id="reg_commun_institution_size" class="" style="display: none;" data-template="#dropdown-data1">
+                        <option value="0" selected="selected" id="option-default">-Size of Institution-</option>
+                        <option value="1">Less than 2,000 students</option>
+                        <option value="2">2,000-3,999 students</option>
+                        <option value="3">4,000-5,999 students</option>
+                        <option value="4">6,000-7,999 students</option>
+                        <option value="5">8,000-10,000 students</option>
+                        <option value="6">Greater than 10,000 students</option>
+                        <option value="7">Don’t know</option>
+                    </select>
+                </div>
+                <div class="cell-error-reg-commun" id="state_reg_commun_institution_size">
+                    <p id="error_reg_commun_institution_size" class="select-errors"></p>
+                </div>
+            </div>
+            <div class="space-heihgt-16"></div>
+            <div class="row">
+                <div class="cell-left-reg-commun padding-top-3">
+                    <%= f.label(:employee_number, :class => 'input-label required-label', :id => 'label_reg_commun_employee_number') do %>
+                    Please characterize the<br>number of employees:
+                    <% end %>
+                </div>
+                <div class="cell-right-reg-commun">
+                    <!-- 
+                        Less than 500 employees
+                        500-999 employees
+                        1,000-2,999 employees
+                        3,000-5,999 employees
+                        6,000-8,999 employees
+                        9,000+ employees
+                        Don’t know 
+                        -->
+                    <select name="reg_commun[employee_number]" id="reg_commun_employee_number" class="" style="display: none;" data-template="#dropdown-data2">
+                        <option value="0" selected="selected" id="option-default">-Number of Employees-</option>
+                        <option value="1">Less than 500 employees</option>
+                        <option value="2">500-999 employees</option>
+                        <option value="3">1,000-2,999 employees</option>
+                        <option value="4">3,000-5,999 employees</option>
+                        <option value="5">6,000-8,999 employees</option>
+                        <option value="6">9,000+ employees</option>
+                    </select>
+                </div>
+                <div class="cell-error-reg-commun" id="state_reg_commun_employee_number">
+                    <p id="error_reg_commun_employee_number" class="select-errors"></p>
+                </div>
+            </div>
+            <div class="space-heihgt-16"></div>
+            <div class="row">
+                <div class="cell-left-reg-commun padding-top-3">
+                    <%= f.label(:characterize_decision, :class => 'input-label required-label', :id => 'label_reg_commun_characterize_decision') do %>
+                    Please characterize decision<br>making status:
+                    <% end %>
+                </div>
+                <div class="cell-right-reg-commun">
+                    <!-- 
+                        Influencer
+                        Recommender
+                        Decision Maker
+                        Budget Officer
+                        None of the above 
+                        -->
+                    <select name="reg_commun[characterize_decision]" id="reg_commun_characterize_decision" class="" style="display: none;" data-template="#dropdown-data3">
+                        <option value="0" selected="selected" id="option-default">-Sphere of Influence-</option>
+                        <option value="1">Influencer</option>
+                        <option value="2">Recommender</option>
+                        <option value="3">Decision Maker</option>
+                        <option value="4">Budget Officer</option>
+                        <option value="5">None of the above</option>
+                    </select>
+                </div>
+                <div class="cell-error-reg-commun" id="state_reg_commun_characterize_decision">
+                    <p id="error_reg_commun_characterize_decision" class="select-errors"></p>
+                </div>
+            </div>
+            <div class="space-heihgt-16"></div>
+            <!-- characterize area start -->
+            <div class="space-heihgt-16"></div>
+            <div class="space-heihgt-16"></div>
+            <div class="row">
+                <div class="cell-left-reg-commun">
+                    <label class="input-label required-label"><br><br>Please characterize your area<br>(select all that apply):</label>
+                </div>
+                <div id="border_characterize_area" class="button-border">
+                    <div class="cell-right-reg-commun-cb">
+                        <div class="cb-space-height-2"></div>
+                        <div class="cb-margin-left-20">
+                            <!-- 
+                                1 Mostly overall administration
+                                2 Some overall administration
+                                3 Mostly curriculum management
+                                4 Some overall curriculum management
+                                5 Mostly technical management (devices, networks, programming, storage, back-end system maintenance, telecom services, etc.)
+                                6 Some technical management
+                                7 Mostly instructional design
+                                8 Some instructional design
+                                9 Mostly procurement
+                                10 Some procurement
+                                11 Other
+                                -->
+                            <table id="table1" class="cb-table">
+                                <tr class="cb-spacer"></tr>
+                                <tr>
+                                    <td>
+                                        <div id="cb_characterize_area_1" class="cb-button"></div>
+                                        <%= f.check_box :characterize_area_1 %>
+                                    </td>
+                                    <td>
+                                        <span id="label_characterize_area_1" class="input-label required-label label_cb" for="characterize_area_1" onclick="cb_characterize_area('1');" tabindex="25">Mostly overall administration</span>
+                                    </td>
+                                </tr>
+                                <tr class="cb-spacer"></tr>
+                                <tr>
+                                    <td>
+                                        <div id="cb_characterize_area_2" class="cb-button"></div>
+                                        <%= f.check_box :characterize_area_2 %>
+                                    </td>
+                                    <td>
+                                        <span id="label_characterize_area_2" class="input-label required-label label_cb" for="characterize_area_2" onclick="cb_characterize_area('2');" tabindex="26">Some overall administration</span>
+                                    </td>
+                                </tr>
+                                <tr class="cb-spacer"></tr>
+                                <tr>
+                                    <td>
+                                        <div id="cb_characterize_area_3" class="cb-button"></div>
+                                        <%= f.check_box :characterize_area_3 %>
+                                    </td>
+                                    <td>
+                                        <span id="label_characterize_area_3" class="input-label required-label label_cb" for="characterize_area_3" onclick="cb_characterize_area('3');" tabindex="27">Mostly curriculum management</span>
+                                    </td>
+                                </tr>
+                                <tr class="cb-spacer"></tr>
+                                <tr>
+                                    <td>
+                                        <div id="cb_characterize_area_4" class="cb-button"></div>
+                                        <%= f.check_box :characterize_area_4 %>
+                                    </td>
+                                    <td>
+                                        <span id="label_characterize_area_4" class="input-label required-label label_cb" for="characterize_area_4" onclick="cb_characterize_area('4');" tabindex="28">Some overall curriculum management</span>
+                                    </td>
+                                </tr>
+                                <tr class="cb-spacer"></tr>
+                                <tr>
+                                    <td class="cb-align">
+                                        <div id="cb_characterize_area_5" class="cb-button"></div>
+                                        <%= f.check_box :characterize_area_5 %>
+                                    </td>
+                                    <td class="cb-pad">
+                                        <span id="label_characterize_area_5" class="input-label required-label label_cb" for="characterize_area_5" onclick="cb_characterize_area('5');" tabindex="29">
+                                        Mostly technical management (devices, networks, programming, storage, back-end system maintenance, telecom services, etc.)
+                                        </span>                            
+                                    </td>
+                                </tr>
+                                <tr class="cb-spacer"></tr>
+                                <tr>
+                                    <td>
+                                        <div id="cb_characterize_area_6" class="cb-button"></div>
+                                        <%= f.check_box :characterize_area_6 %>
+                                    </td>
+                                    <td>
+                                        <span id="label_characterize_area_6" class="input-label required-label label_cb" for="characterize_area_6" onclick="cb_characterize_area('6');" tabindex="30">Some technical management</span>
+                                    </td>
+                                </tr>
+                                <tr class="cb-spacer"></tr>
+                                <tr>
+                                    <td>
+                                        <div id="cb_characterize_area_7" class="cb-button"></div>
+                                        <%= f.check_box :characterize_area_7 %>
+                                    </td>
+                                    <td>
+                                        <span id="label_characterize_area_7" class="input-label required-label label_cb" for="characterize_area_7" onclick="cb_characterize_area('7');" tabindex="31">Mostly instructional design</span>
+                                    </td>
+                                </tr>
+                                <tr class="cb-spacer"></tr>
+                                <tr>
+                                    <td>
+                                        <div id="cb_characterize_area_8" class="cb-button"></div>
+                                        <%= f.check_box :characterize_area_8 %>
+                                    </td>
+                                    <td>
+                                        <span id="label_characterize_area_8" class="input-label required-label label_cb" for="characterize_area_8" onclick="cb_characterize_area('8');" tabindex="32">Some instructional design</span>
+                                    </td>
+                                </tr>
+                                <tr class="cb-spacer"></tr>
+                                <tr>
+                                    <td>
+                                        <div id="cb_characterize_area_9" class="cb-button"></div>
+                                        <%= f.check_box :characterize_area_9 %>
+                                    </td>
+                                    <td>
+                                        <span id="label_characterize_area_9" class="input-label required-label label_cb" for="characterize_area_9" onclick="cb_characterize_area('9');" tabindex="33">Mostly procurement</span>
+                                    </td>
+                                </tr>
+                                <tr class="cb-spacer"></tr>
+                                <tr>
+                                    <td>
+                                        <div id="cb_characterize_area_10" class="cb-button"></div>
+                                        <%= f.check_box :characterize_area_10 %>
+                                    </td>
+                                    <td>
+                                        <span id="label_characterize_area_10" class="input-label required-label label_cb" for="characterize_area_10" onclick="cb_characterize_area('10');" tabindex="34">Some procurement</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="cb-space-height-22"></div>
+                        <div class="cb-margin-left-20">
+                            <label class="input-label required-label">OTHER:</label>
+                            <div class="cb-space-height-6"></div>
+                            <%= f.text_field(:characterize_area_other, :class => "input-form unrequired", :placeholder => 'OTHER', :tabindex => '35') %>              
+                        </div>
+                        <div class="space-heihgt-16"></div>
+                    </div>
+                </div>
+                <div class="button-border-error-container">
+                    <div class="button-border-display-table">
+                        <div class="button-border-table-row space-heihgt-16"></div>
+                        <div class="button-border-table-row">
+                            <div class="button-border-table-cell">
+                                <div class="cell-error-reg-commun-cb" id="state_reg_commun_characterize_area">
+                                    <p id="error_reg_commun_characterize_area" class="cb-errors"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- characterize area end -->
+            <!-- survey preferences start -->
+            <div class="space-heihgt-16"></div>
+            <div class="space-heihgt-16"></div>
+            <div class="row">
+                <div class="cell-left-reg-commun">
+                    <label class="input-label required-label"><br><br>Please let us know your<br>preference for surveys that<br>may make special offers:</label>
+                </div>
+                <div id="border_survey_preferences" class="button-border">
+                    <div class="cell-right-reg-commun-cb">
+                        <div class="cb-space-height-2"></div>
+                        <div class="cb-margin-left-20">
+                            <!-- 
+                                1 Individual Amazon or iTunes gift cards
+                                2 Institutional Amazon or iTunes gift cards
+                                3 Institution named-charity
+                                4 Accrue my give-away for the LC’s scholarship fund for poorer schools or districts to be able to travel and attend the Gathering annual event
+                                5 Opt-out of any contests or give-aways 
+                                -->
+                            <table class="cb-table">
+                                <tr class="cb-spacer"></tr>
+                                <tr>
+                                    <td>
+                                        <div id="cb_survey_preferences_1" class="cb-button"></div>
+                                        <%= f.check_box :survey_preferences_1 %>
+                                    </td>
+                                    <td>
+                                        <span id="label_survey_preferences_1" class="input-label required-label label_cb" for="survey_preferences_1" onclick="cb_survey_preferences('1');" tabindex="36">Individual Amazon or iTunes gift cards</span>
+                                    </td>
+                                </tr>
+                                <tr class="cb-spacer"></tr>
+                                <tr>
+                                    <td>
+                                        <div id="cb_survey_preferences_2" class="cb-button"></div>
+                                        <%= f.check_box :survey_preferences_2 %>
+                                    </td>
+                                    <td>
+                                        <span id="label_survey_preferences_2" class="input-label required-label label_cb" for="survey_preferences_2" onclick="cb_survey_preferences('2');" tabindex="37">Institutional Amazon or iTunes gift cards</span>
+                                    </td>
+                                </tr>
+                                <tr class="cb-spacer"></tr>
+                                <tr>
+                                    <td>
+                                        <div id="cb_survey_preferences_3" class="cb-button"></div>
+                                        <%= f.check_box :survey_preferences_3 %>
+                                    </td>
+                                    <td>
+                                        <span id="label_survey_preferences_3" class="input-label required-label label_cb" for="survey_preferences_3" onclick="cb_survey_preferences('3');" tabindex="38">Institution named-charity</span>
+                                    </td>
+                                </tr>
+                                <tr class="cb-spacer"></tr>
+                                <tr>
+                                    <td class="cb-align">
+                                        <div id="cb_survey_preferences_4" class="cb-button"></div>
+                                        <%= f.check_box :survey_preferences_4 %>
+                                    </td>
+                                    <td class="cb-pad">
+                                        <span id="label_survey_preferences_4" class="input-label required-label label_cb" for="survey_preferences_4" onclick="cb_survey_preferences('4');" tabindex="39">
+                                        Accrue my give-away for the LC's scholarship fund for poorer schools or districts to be able to travel and attend the Gathering annual event
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="cb-spacer"></tr>
+                                <tr>
+                                    <td>
+                                        <div id="cb_survey_preferences_5" class="cb-button"></div>
+                                        <%= f.check_box :survey_preferences_5 %>
+                                    </td>
+                                    <td>
+                                        <span id="label_survey_preferences_5" class="input-label required-label label_cb" for="survey_preferences_5" onclick="cb_survey_preferences('5');" tabindex="40">Opt-out of any contests or give-aways</span>
+                                    </td>
+                                </tr>
+                                <tr class="cb-spacer"></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-border-error-container">
+                    <div class="button-border-display-table">
+                        <div class="button-border-table-row space-heihgt-16"></div>
+                        <div class="button-border-table-row">
+                            <div class="button-border-table-cell">
+                                <div class="cell-error-reg-commun-cb" id="state_reg_commun_survey_preferences">
+                                    <p id="error_reg_commun_survey_preferences" class="cb-errors"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="space-heihgt-100"></div>
+            <div class="submit-button-commun">
+                <%= f.submit "Submit", :id => 'btn_submit', :class => 'btn submitregcommun', :tabindex => '42' %>
+            </div>
+            <% end %>
+        </div>
+    </div>
+</div>
+<div class="reg-communs-bottom-space"></div>

@@ -50,6 +50,19 @@ class SpecialReportsController < ApplicationController
       end
       gon.reg_commun_confirmed = b_reg_commun_record
     
+    
+      # @info = Archive.friendly.find(id)       
+      @info = Archive.find_by_id(139)       
+       
+      # if request.path != archive_path(@info)
+        # redirect_to @info, status: :moved_permanently
+      # end    
+      
+      # @info = Archive.where(["article_id = ?", params[:id]]).first       
+      
+      gon.info = @info
+    
+    
   end
 
 
