@@ -16,7 +16,8 @@ gem 'turbolinks'
 gem 'jquery-turbolinks'
 gem 'jbuilder'
 gem 'json'
-gem 'recaptcha'
+# gem 'recaptcha'
+gem "recaptcha", require: "recaptcha/rails", github: "ambethia/recaptcha"
 gem 'jquery-tmpl-rails'
 # gem 'sprockets-rails', :require => 'sprockets/railtie'
 # gem 'jquery-validation-rails'
@@ -95,7 +96,7 @@ end
 # Using rails_stdout_logging 0.0.3
 # Using rails_12factor 0.0.3
 # Using rdoc 4.2.0
-# Using recaptcha 0.4.0
+# Using recaptcha 0.4.0 from git://github.com/ambethia/recaptcha.git (at master)
 # Using responders 2.1.0
 # Using sass 3.4.13
 # Using tilt 1.4.1

@@ -9,17 +9,17 @@
 		.form-contact {
 			width: 960px;
 			height: auto;
-			/*display: none;*/
+			display: none;
 			/*background-color: rgba(180, 180, 180, 0.94);*/
-			background-color: #FFF;
+			background-color: rgba(0, 0, 0, 0.8);
 			/*-moz-box-shadow:5px 5px 40px #fff;
 			-webkit-box-shadow:5px 40px 5px #fff;
 			box-shadow:5px 5px 40px #CCAE37;*/
-		    transition: box-shadow .5s ease-in-out;				
-			/*border-top-left-radius: 10px;
+		    transition: box-shadow 3s ease-in-out;				
+			border-top-left-radius: 10px;
 	   		border-top-right-radius: 10px;		
 			border-bottom-left-radius: 10px;
-	   		border-bottom-right-radius: 10px;*/
+	   		border-bottom-right-radius: 10px;
 			position: relative;
 			text-align: center;			
 			padding-top: 20px;	   			   	
@@ -27,7 +27,6 @@
 		}
 		#join-image {
 			height: 740px;
-			border: 2px solid #376340;
 		}		
 		#joinClose {
 			right: 6px;
@@ -45,25 +44,25 @@
 			margin: -25px 0 0 -25px;
 		}				
 		.input-form {
-			font-family: Quatrocento, sans;
+			font-family: msyh;
 			font-size: 16px;
 			width: 300px;
 			height: 24px;
 			border-style:solid;
-			/*border-radius: 6px;*/
+			border-radius: 6px;
 			/*border-color: #13571F; green*/		
-			border-color: #41b737; /*blue*/
+			border-color: #005C9E; /*blue*/
 			border-width: 2px;
 			padding-left: 6px;
-			/*-webkit-transition: all 0.5s ease-in-out;
+			-webkit-transition: all 0.5s ease-in-out;
 			-moz-transition: all 0.5s ease-in-out;
 			-o-transition: all 0.5s ease-in-out;
 			-ms-transition: all 0.5s ease-in-out;
-			transition: all 0.5s ease-in-out;*/
+			transition: all 0.5s ease-in-out;
 		}
 		.input-form:focus {
 			/*border-color: #97FF47;*/
-			color: #000; /*#fff;*/
+			color: #fff;
 			background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;						
 			-webkit-box-shadow: 0 0 25px #ccc;
 			-moz-box-shadow: 0 0 25px #ccc;
@@ -109,7 +108,7 @@
 			background: url("/assets/submit_form_asterisk_orange.png") no-repeat 218px 7px;
 		}
 		.input-form:success {
-			color: #376340; /*#ACDDE3;	*/	
+			color: #ACDDE3;		
 			background: url("/assets/submit_form_tick.png") no-repeat 218px 5px;
 		}
 		.input-form:valid {
@@ -135,7 +134,7 @@
 			color: orange;		
 		}*/		
 		.success {
-			color: #376340; /*#ACDDE3;	*/	
+			color: #ACDDE3;		
 			background: url("/assets/submit_form_tick.png") no-repeat 278px 5px;		
 		}		
 		.error {
@@ -145,12 +144,12 @@
 			border-color: #851717; 						
 		}
 		.required {
-			color: #fc7777; /*orange;	*/	
-			background: url("/assets/submit_form_asterisk_orange.png") no-repeat 278px 7px #fef6ea;
+			color: orange;		
+			background: url("/assets/submit_form_asterisk_orange.png") no-repeat 278px 7px;
 		}
 		.not-required {
-			color: #376340; /*#ACDDE3;		*/
-			background: url("/assets/submit_form_empty.png") no-repeat 278px 7px #f7f7f7;
+			color: #ACDDE3;		
+			background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;
 		}
 		/*.focus {
 			color: #fff;
@@ -160,8 +159,7 @@
 			color: #FC7777;
 		}
 		.required-label {
-			/*color: orange;*/	
-		color: #376340;			
+			color: orange;		
 		}
 		.input-form-spacer {
 			height: 16px;
@@ -204,126 +202,66 @@
 		.prep-required {		
 			font-family: msyh;
 			font-size: 12px;
-			/*color: orange;*/	
-		color: #376340;	
+			color: orange;
 		}
 		
-	.commun-inside {
-			border:2px solid #376340;
-			padding: 5px 20px;
-		}
-		
-		.commun p {
-			font-family: Quatrocento, sans; 
-			font-size: 20px;
-			color: #376340;
-			width: 500px;
-		}
-		.commun .contact-info {
-			width:300px;
-			float:right;
-			color: #376340;
-			font-size: 18px;
-			position: relative;
-			top: 40px;
-		}
-		
-	</style>
+	</style>					
 					
 	<style>
 		
 		.alert {
 			font-family: Arial, Helvetica, sans-serif;
 			color: #8C0303;
-			font-size: 16px;
+			font-size: 18px;
 		}
 		
-		.seperator-commun {
-	font-family: quattrocento, sans;
-	text-align: right;
-	vertical-align: middle;
-	padding-right: 15px;
-	padding-top:5px;
-	font-size: 35px;
-	width: 1000px; 
-	margin: 5px auto;
-	height:40px;
-	color: #FFF;
-    background: -webkit-linear-gradient(left, #ffffff 25%, #cacaca 55% , #47b64a 90%); /* For Safari 5.1 to 6.0 */
-  	background: -o-linear-gradient(right, #ffffff 25%, #cacaca 55% , #47b64a 90%); /* For Opera 11.1 to 12.0 */
-  	background: -moz-linear-gradient(right, #ffffff 25%, #cacaca 55% , #47b64a 90%); /* For Firefox 3.6 to 15 */
- 	background: linear-gradient(to right, #ffffff 25%, #cacaca 55% , #47b64a 90%); /* Standard syntax */
-		}
+	</style>		                		
 
-	.seperator-commun img { float:left; position: relative; top: -5px; height: 100px;
-		border-left: 2px solid #376340; background: #FFF;}
-
-	.bottom-commun-squares {background: url('/repository/lc-boxes.jpg') #FFF no-repeat right;
-	float: right;
-    height: 39px;
-    position: relative;
-    top: -14px;
-    right: -24px;
-    width: 210px;
-	}
-
-	.top-commun-squares {background: url('/repository/lc-boxes.jpg') #FFF no-repeat left;
-	float: left;
-    height: 39px;
-    position: relative;
-    top: -17px;
-    left: 0px;
-    width: 210px;
-    z-index: 1;
-	}
-
-	.submit-button-commun {
-		width: 300px;
-		float:right;
-		position: relative;
-		background: #ffffff;
-		top: -40px;
-		left: 45px;
-		padding: 20px 0 0 20px;
-	}		                		
-
-</style>
 
 <div style="width: 1000px; margin-right: auto; margin-left: auto; background: #fff;">
 		
 	<header>					
     	     	
 			<%= render 'share/backtotop_2' %>
-
-			  			<div class="commun">
-							<div style="margin-top:50px;" class="seperator-commun"><img src="/repository/logo-icon-come-together.png">CONTACT US</div>
-							<div class="commun-inside">
-								<div class="contact-info">
-							<strong>CONTACT INFO:</strong>
-							<br/>
-							The Learning Counsel
-							<br/>
-							P.O. Box 1315
-							<br/>
-							Fair Oaks, CA 95628
-							<br/>
-							subscriptions@learningcounsel.com
-							<br/>
-							888-611-7709
-								</div>
-							<p style="clear:both;">
-							Join us for an upcoming Learning Counsel event, get information on Digital 
-Curriculum Strategies, or simply connect with us with any questions or comments.
- 
-							</p>
-							<br>
-
-							<div class="bottom-commun-squares">&nbsp;</div>
-						</div><!--End commun-inside-->
-						</div>
-					</div>
+    	     	
 			<div class="table-white">
-				
+				<!-- <div class="row" style="height: 50px;">
+					<div class="cell-100percent">
+						<div id="errorContainer">
+						    
+						</div>		
+					</div>
+				</div>				 -->
+				<div class="row">
+					
+					<div class="cell-100" style="padding-left: 24px;">
+			  			<img src="../repository/form-welcome.png" alt="form-welcome.png" height="164px" >
+			  		</div>
+					
+					<div class="cell-600">
+						<h2 style="font-family: msyh; color: #005187;">
+							CONTACT US!
+						</h2>
+						<br>
+						<p>
+							The Learning Counsel
+						</p>
+						<p>
+							P.O. Box 1315
+						</p>
+						<p>
+							Fair Oaks, CA 95628
+						</p>
+						<br>
+						<p>
+							subscriptions@learningcounsel.com
+						</p>
+						<br>
+						<p>
+							888-611-7709							
+						</p>
+					</div>
+				</div>
 
 				<div class="row" style="height: 20px;"></div>
 				
@@ -349,12 +287,12 @@ Curriculum Strategies, or simply connect with us with any questions or comments.
 
 
 <div style="width: 1000px; margin-right: auto; margin-left: auto;">
-<div class="top-commun-squares">&nbsp;</div>	
-	<div id="join-image" class="">
+	
+	<div id="join-image" class="shadow-inset">
 		
 		<div id="form_contact" class="form-contact" tabindex="1">
 			
-			<!-- <div style="width: 100%; text-align: right;">
+			<div style="width: 100%; text-align: right;">
 				<div style="display: inline-block">
 					<img src="/assets/submit_form_asterisk_orange.png">
 				</div>
@@ -363,7 +301,7 @@ Curriculum Strategies, or simply connect with us with any questions or comments.
 				</div>
 				<div style="display: inline-block; width: 100px;">
 				</div>				
-			</div> -->
+			</div>
 			
 			<!-- <a id="joinClose" class="btn-joinClose" onclick="hideSignin();"><img src="/assets/submit_form_close.png" width="20" alt="" /></a> --> 			
 			<!-- <a id="joinClose" class="btn-joinClose" onclick=""><img src="/assets/submit_form_close.png" width="20" alt="" /></a> -->
@@ -504,8 +442,7 @@ Curriculum Strategies, or simply connect with us with any questions or comments.
 				<div class="cell-left-contact">
 				</div>
 				<div id="id_recaptcha" class="cell-submit-contact" style="padding-left: 0px;">
-					<%= recaptcha_tags %>
-					<!-- <div class="g-recaptcha" data-sitekey="6LeHUAgTAAAAAFi5ExVqU4E4LsgPJReQ7mFSliwm"></div> -->
+					<%= recaptcha_tags %>	
 				</div>      	
 			</div>      		
 
@@ -853,7 +790,7 @@ Curriculum Strategies, or simply connect with us with any questions or comments.
 		$(window).load( function() {
 		//$(document).ready(function(){
 			
-			//var image = '../backgrounds/';
+			var image = '../backgrounds/comp025.jpg';
 
 			// var image = '../backgrounds/comp020.gif';
 			// var image = '../backgrounds/multi134.jpg';
@@ -873,7 +810,7 @@ Curriculum Strategies, or simply connect with us with any questions or comments.
  			
 			$('#join-image').css({
 				//background: '#F1F2E1 url(' + image + ') no-repeat right top'
-				background: '#FFFFFF url(' + image + ') repeat right top'
+				background: '#F1F2E1 url(' + image + ') repeat right top'
 				
 			})
 
@@ -893,4 +830,3 @@ Curriculum Strategies, or simply connect with us with any questions or comments.
 	</script>
 	
 	
-
