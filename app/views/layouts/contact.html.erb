@@ -13,15 +13,56 @@
 	  	<%= render 'layouts/shim' %>  
 	  	
 		<script src='https://www.google.com/recaptcha/api.js'></script>	  	
+	
+		<style>
+		
+			#debug {
+				background-color: red;
+				font-family:Arial, Helvetica, sans-serif;
+				font-size: 16px;
+				color: #000;
+			}
+
+			* {
+			  margin: 0;
+			}
+			html, body {
+			  height: 100%;
+			}
+			.body-wrap-outer {
+			  min-height: 100%;
+			  margin-bottom: -150px; 
+			}
+			.body-wrap-outer:after {
+			  content: "";
+			  display: block;
+			}
+			.ks-footer, .body-wrap-outer:after {
+			  height: 150px; 
+			}		
+
+			.body-wrap-inner {
+				width: 1200px; 
+				height: 100%; 
+				margin: 0px auto;
+			}
+			
+		</style>
 		
     </head>
     
 	<body>
-		
-		<%= render 'layouts/nav_main' %>
-		<%= yield %> 
-		<%= render 'layouts/footer' %>
-			
+		<div class="body-wrap-outer">
+			<%= render 'layouts/nav_main' %>
+			<div class="body-wrap-inner">
+				<%= yield %>
+			</div>
+		</div>
+		<%= render 'layouts/footer_box_cloud' %>
+
+		<%= javascript_include_tag "jquery.validate" %>
+
+		<% if false %>			
 		<!-- Piwik -->
 		<script type="text/javascript"> 
 		  var _paq = _paq || [];
@@ -38,7 +79,8 @@
 		</script>
 		<noscript><p><img src="http://173.255.208.96:8001/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
 		<!-- End Piwik Code -->
-
+		<% end %>
+		
 		<%= debug(params) if Rails.env.development? %>
 		
 	</body>

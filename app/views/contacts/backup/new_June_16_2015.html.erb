@@ -1,0 +1,896 @@
+<% provide(:title, 'Contact Us') %>
+
+
+	<!-- <script src='js/jquery.min.js' type='text/javascript'></script> -->
+	<script src="/assets/jquery.validate.js"></script>
+					
+	<style>
+	
+		.form-contact {
+			width: 960px;
+			height: auto;
+			/*display: none;*/
+			/*background-color: rgba(180, 180, 180, 0.94);*/
+			background-color: #FFF;
+			/*-moz-box-shadow:5px 5px 40px #fff;
+			-webkit-box-shadow:5px 40px 5px #fff;
+			box-shadow:5px 5px 40px #CCAE37;*/
+		    transition: box-shadow .5s ease-in-out;				
+			/*border-top-left-radius: 10px;
+	   		border-top-right-radius: 10px;		
+			border-bottom-left-radius: 10px;
+	   		border-bottom-right-radius: 10px;*/
+			position: relative;
+			text-align: center;			
+			padding-top: 20px;	   			   	
+			padding-bottom: 20px;	
+		}
+		#join-image {
+			height: 740px;
+			border: 2px solid #376340;
+		}		
+		#joinClose {
+			right: 6px;
+			top: 6px;
+			position: absolute;
+			display: block
+		}
+		/**:focus {
+			outline: none
+		}*/
+		#loading {
+			background:url("/assets/icon_loading.gif") no-repeat center center;
+			height: 100px; width: 100px;
+			position: fixed; left: 47%; top: 50%; z-index: 1000;
+			margin: -25px 0 0 -25px;
+		}				
+		.input-form {
+			font-family: Quatrocento, sans;
+			font-size: 16px;
+			width: 300px;
+			height: 24px;
+			border-style:solid;
+			/*border-radius: 6px;*/
+			/*border-color: #13571F; green*/		
+			border-color: #41b737; /*blue*/
+			border-width: 2px;
+			padding-left: 6px;
+			/*-webkit-transition: all 0.5s ease-in-out;
+			-moz-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
+			-ms-transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease-in-out;*/
+		}
+		.input-form:focus {
+			/*border-color: #97FF47;*/
+			color: #000; /*#fff;*/
+			background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;						
+			-webkit-box-shadow: 0 0 25px #ccc;
+			-moz-box-shadow: 0 0 25px #ccc;
+			box-shadow: 0 0 25px #ccc;
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			transform: scale(1.05);
+		}
+		div .error_label {
+		    display: none;
+			font-family: msyh;
+			font-size: 12px;
+			color: #851717;		    
+		}
+		div .errors {
+			font-family: msyh;
+			font-size: 16px;
+			/*color: #851717;*/
+			color: #FC7777;		
+		}
+		/*.input-form:invalid {
+			color: #851717;
+			background: url("/assets/submit_form_cancel.png") no-repeat 216px 7px;									
+		}
+		.input-form:error {
+			color: #851717;
+			background: url("/assets/submit_form_cancel.png") no-repeat 216px 7px;									
+		}
+		.input-form:required {
+			color: orange;		
+			background: url("/assets/submit_form_asterisk_orange.png") no-repeat 218px 7px;
+		}
+		.input-form:success {
+			color: #376340; /*#ACDDE3;	*/	
+			background: url("/assets/submit_form_tick.png") no-repeat 218px 5px;
+		}
+		.input-form:valid {
+			color: #ACDDE3;		
+			background: url("/assets/submit_form_tick.png") no-repeat 218px 5px;
+		}*/	
+		.input-label {
+			font-family: msyh;
+			font-size: 16px;
+			width: 220px;
+			height: 18px;
+		}
+		/*.input-label:focus {
+			color: #43B557;
+		}
+		.input-label:error {
+			color: #851717;
+		}
+		.input-label:required {
+			color: orange;		
+		}
+		.input-label:success {
+			color: orange;		
+		}*/		
+		.success {
+			color: #376340; /*#ACDDE3;	*/	
+			background: url("/assets/submit_form_tick.png") no-repeat 278px 5px;		
+		}		
+		.error {
+			/*color: #851717;*/		
+			color: #FC7777;
+			background: url("/assets/submit_form_empty.png") no-repeat 278px 7px;		
+			border-color: #851717; 						
+		}
+		.required {
+			color: #fc7777; /*orange;	*/	
+			background: url("/assets/submit_form_asterisk_orange.png") no-repeat 278px 7px #fef6ea;
+		}
+		.not-required {
+			color: #376340; /*#ACDDE3;		*/
+			background: url("/assets/submit_form_empty.png") no-repeat 278px 7px #f7f7f7;
+		}
+		/*.focus {
+			color: #fff;
+		}*/
+		.error-label {
+			/*color: #851717;*/		
+			color: #FC7777;
+		}
+		.required-label {
+			/*color: orange;*/	
+		color: #376340;			
+		}
+		.input-form-spacer {
+			height: 16px;
+		}
+		.input-search-1 {
+			background-color: white;
+			color: black;
+			font-family: Arial;
+			width: 200px;
+		}
+		div .cell-right-contact {
+			display: table-cell;
+			width: 330px;
+			text-align: left;
+			align: top;		
+		}
+		div .cell-left-contact {
+			display: table-cell;
+			width: 280px;	
+			align: top;
+			text-align: right;		
+			padding-right: 20px;
+		}
+		div .cell-submit-contact {
+			display: table-cell;
+			width: 330px;
+			text-align: left;
+			align: top;		
+		}
+		div .cell-error-contact {
+			display: inline-block;
+			width: 300px;
+			height: 18px;
+			vertical-align: bottom;
+			text-align: left;
+		}
+		.message {
+			height: 120px;
+		}
+		.prep-required {		
+			font-family: msyh;
+			font-size: 12px;
+			/*color: orange;*/	
+		color: #376340;	
+		}
+		
+	.commun-inside {
+			border:2px solid #376340;
+			padding: 5px 20px;
+		}
+		
+		.commun p {
+			font-family: Quatrocento, sans; 
+			font-size: 20px;
+			color: #376340;
+			width: 500px;
+		}
+		.commun .contact-info {
+			width:300px;
+			float:right;
+			color: #376340;
+			font-size: 18px;
+			position: relative;
+			top: 40px;
+		}
+		
+	</style>
+					
+	<style>
+		
+		.alert {
+			font-family: Arial, Helvetica, sans-serif;
+			color: #8C0303;
+			font-size: 16px;
+		}
+		
+		.seperator-commun {
+	font-family: quattrocento, sans;
+	text-align: right;
+	vertical-align: middle;
+	padding-right: 15px;
+	padding-top:5px;
+	font-size: 35px;
+	width: 1000px; 
+	margin: 5px auto;
+	height:40px;
+	color: #FFF;
+    background: -webkit-linear-gradient(left, #ffffff 25%, #cacaca 55% , #47b64a 90%); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient(right, #ffffff 25%, #cacaca 55% , #47b64a 90%); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(right, #ffffff 25%, #cacaca 55% , #47b64a 90%); /* For Firefox 3.6 to 15 */
+ 	background: linear-gradient(to right, #ffffff 25%, #cacaca 55% , #47b64a 90%); /* Standard syntax */
+		}
+
+	.seperator-commun img { float:left; position: relative; top: -5px; height: 100px;
+		border-left: 2px solid #376340; background: #FFF;}
+
+	.bottom-commun-squares {background: url('/repository/lc-boxes.jpg') #FFF no-repeat right;
+	float: right;
+    height: 39px;
+    position: relative;
+    top: -14px;
+    right: -24px;
+    width: 210px;
+	}
+
+	.top-commun-squares {background: url('/repository/lc-boxes.jpg') #FFF no-repeat left;
+	float: left;
+    height: 39px;
+    position: relative;
+    top: -17px;
+    left: 0px;
+    width: 210px;
+    z-index: 1;
+	}
+
+	.submit-button-commun {
+		width: 300px;
+		float:right;
+		position: relative;
+		background: #ffffff;
+		top: -40px;
+		left: 45px;
+		padding: 20px 0 0 20px;
+	}		                		
+
+</style>
+
+<div style="width: 1000px; margin-right: auto; margin-left: auto; background: #fff;">
+		
+	<header>					
+    	     	
+			<%= render 'share/backtotop_2' %>
+
+			  			<div class="commun">
+							<div style="margin-top:50px;" class="seperator-commun"><img src="/repository/logo-icon-come-together.png">CONTACT US</div>
+							<div class="commun-inside">
+								<div class="contact-info">
+							<strong>CONTACT INFO:</strong>
+							<br/>
+							The Learning Counsel
+							<br/>
+							P.O. Box 1315
+							<br/>
+							Fair Oaks, CA 95628
+							<br/>
+							subscriptions@learningcounsel.com
+							<br/>
+							888-611-7709
+								</div>
+							<p style="clear:both;">
+							Join us for an upcoming Learning Counsel event, get information on Digital 
+Curriculum Strategies, or simply connect with us with any questions or comments.
+ 
+							</p>
+							<br>
+
+							<div class="bottom-commun-squares">&nbsp;</div>
+						</div><!--End commun-inside-->
+						</div>
+					</div>
+			<div class="table-white">
+				
+
+				<div class="row" style="height: 20px;"></div>
+				
+				<div class="row" style="height: 30px;">
+					<div class="cell-100">
+			  		</div>
+					<div class="cell-600" style="padding-left: 150px;">
+			    		<% unless flash[:captcha].nil? %>
+						<div class="alert"><%= flash[:captcha] %></div>
+			      		<% end %>
+					</div>
+				</div>
+
+				<div class="row" style="height: 20px;"></div>
+				
+			</div>
+		
+		<!-- <div id="loading"> </div> -->
+						
+	</header>		
+	
+</div>
+
+
+<div style="width: 1000px; margin-right: auto; margin-left: auto;">
+<div class="top-commun-squares">&nbsp;</div>	
+	<div id="join-image" class="">
+		
+		<div id="form_contact" class="form-contact" tabindex="1">
+			
+			<!-- <div style="width: 100%; text-align: right;">
+				<div style="display: inline-block">
+					<img src="/assets/submit_form_asterisk_orange.png">
+				</div>
+				<div style="display: inline-block">
+					<span class="prep-required"> required fields</span>
+				</div>
+				<div style="display: inline-block; width: 100px;">
+				</div>				
+			</div> -->
+			
+			<!-- <a id="joinClose" class="btn-joinClose" onclick="hideSignin();"><img src="/assets/submit_form_close.png" width="20" alt="" /></a> --> 			
+			<!-- <a id="joinClose" class="btn-joinClose" onclick=""><img src="/assets/submit_form_close.png" width="20" alt="" /></a> -->
+    		  <!-- form_for(@user, :id => "join_form", :url => {:controller => "users", :action => "create"}) do |f|  -->
+    		      		     		
+			<%= form_for( @contact, :html => {:id => "form_join"}) do |f| %> 
+			  			 
+			<!-- = render 'shared/error_messages', object: f.object -->
+			 <!-- hidden_field_tag :account_type, @account_type  -->
+			 	
+			<div class="errors" style="height: 20px;">
+				<div class="row">
+					<div class="cell-left-contact"></div>
+					<div class="cell-right-contact">
+						<p></p>
+					</div>
+				</div>
+			</div>			
+
+			<div class="input-form-spacer"></div>
+
+			<!-- <div class="error_label">
+				<div class="row">
+					<div class="cell-left-contact" style="width: 190px;"></div>
+					<div class="cell-right-contact" style="width: 300px;">
+						<p id="error_contact_name_title"></p>
+					</div>
+				</div>
+			</div>			 -->
+																					
+			<div class="row">
+				<div class="cell-left-contact">
+					<%= f.label(:name, "Name", :class => 'input-label required-label', :id => 'label_contact_name') %>
+				</div>
+				<div class="cell-right-contact">
+					<!-- <input type="text" id="name_first" name="contact_name_first" placeholder="first name" class="input-form" /> -->
+					<!-- <label for="name" class="error_label" generated="true"></label>				 -->																
+					 <%= f.text_field(:name, :class => "input-form required", :placeholder => 'Name', :tabindex => '2') %>					 
+				</div>
+				<div class="cell-error-contact"><p id="error_contact_name"></p></div>      					   
+			</div>      		
+
+			<div class="input-form-spacer"></div>
+	
+			<!-- <div class="error_label">
+				<div class="row">
+					<div class="cell-left-contact"></div>
+					<div class="cell-right-contact">
+						<p></p>
+					</div>
+				</div>
+			</div> -->
+			
+			<div class="row">
+				<div class="cell-left-contact">
+					<%= f.label(:email, "Email", :class => 'input-label required-label', :id => 'label_contact_email') %>
+				</div>
+				<div class="cell-right-contact">
+					<!-- <input type="email" id="email" name="email" placeholder="email@example.com" class="input-form" required /> -->					
+					<%= f.text_field(:email, :class => "input-form required", :placeholder => 'email@example.com', :tabindex => '3' ) %>
+				</div>
+				<div class="cell-error-contact"><p id="error_contact_email"></p></div>      	
+				
+			</div>      		
+	
+			<div class="input-form-spacer"></div>
+
+			<!-- <div class="error_label">
+				<div class="row">
+					<div class="cell-left-contact" style="width: 190px;"></div>
+					<div class="cell-right-contact" style="width: 300px;">
+						<p id="error_contact_name_title"></p>
+					</div>
+				</div>
+			</div>			 -->
+							
+			<div class="row">
+				<div class="cell-left-contact">
+					<%= f.label(:phone, "Phone", :class => 'input-label required-label', :id => 'label_contact_phone') %>
+				</div>
+				<div class="cell-right-contact">
+					<!-- <input type="text" id="name_first" name="contact_name_first" placeholder="first name" class="input-form" /> -->
+					<!-- <label for="name" class="error_label" generated="true"></label>				 -->																
+					 <%= f.text_field(:phone, :class => "input-form not-required", :placeholder => 'Phone', :tabindex => '4') %>					 
+				</div>
+				<div class="cell-error-contact"><p id="error_contact_phone"></p></div>      					   
+			</div>      		
+
+			<div class="input-form-spacer"></div>
+
+			<!-- <div class="error_label">
+				<div class="row">
+					<div class="cell-left-contact" style="width: 190px;"></div>
+					<div class="cell-right-contact" style="width: 300px;">
+						<p id="error_contact_name_affiliation"></p>
+					</div>
+				</div>
+			</div> -->
+							
+																					
+			<div class="row">
+				<div class="cell-left-contact">
+					<%= f.label(:subject, "Subject", :class => 'input-label required-label', :id => 'label_contact_subject') %>
+				</div>
+				<div class="cell-right-contact">
+					<!-- <input type="text" id="name_first" name="contact_name_first" placeholder="first name" class="input-form" /> -->
+					<!-- <label for="name" class="error_label" generated="true"></label>				 -->																
+					 <%= f.text_field(:subject, :class => "input-form required", :placeholder => 'Subject', :tabindex => '5') %>					 
+				</div>
+				<div class="cell-error-contact"><p id="error_contact_subject"></p></div>      					   
+			</div>      		
+
+			<div class="input-form-spacer"></div>
+
+			<!-- <div class="error_label">
+				<div class="row">
+					<div class="cell-left-contact" style="width: 190px;"></div>
+					<div class="cell-right-contact" style="width: 300px;">
+						<p id="error_contact_name_affiliation"></p>
+					</div>
+				</div>
+			</div> -->
+						
+			<div class="row">
+				<div class="cell-left-contact" style="vertical-align: top; padding-top: 6px;">
+					<%= f.label(:message, "Message", :class => 'input-label required-label', :id => 'label_contact_message') %>
+				</div>
+				<div class="cell-right-contact">
+					<%= f.text_area(:message, :class => "input-form required message", :spellcheck => 'false', :placeholder => 'Message', :tabindex => '6') %>
+				</div>      
+				<div class="cell-error-contact" style="top: 0px;"><p id="error_contact_message"></p></div>      	
+			</div>
+
+			<div class="input-form-spacer"></div>
+			<div class="input-form-spacer"></div>
+
+			<div class="row">
+				<div class="cell-left-contact">
+				</div>
+				<div id="id_recaptcha" class="cell-submit-contact" style="padding-left: 0px;">
+					<%= recaptcha_tags %>
+					<!-- <div class="g-recaptcha" data-sitekey="6LeHUAgTAAAAAFi5ExVqU4E4LsgPJReQ7mFSliwm"></div> -->
+				</div>      	
+			</div>      		
+
+			<div class="input-form-spacer"></div>
+			<div class="input-form-spacer"></div>
+			<div class="input-form-spacer"></div>
+	
+			<div class="row">
+				<div class="cell-left-contact">
+				</div>
+				<div class="cell-submit-contact" style="padding-left: 0px;">
+					<%= f.submit "Submit", :id => 'btn_submit', :class => 'btn submitcontact', :tabindex => '8' %>
+				</div>      	
+			</div>      		
+		
+		<% end %>
+
+		</div>		
+			
+
+
+		<!-- <div id="mainpage" class="shadow" style="background-color: #fff; height: 500px; position: relative; z-index: +1;"></div> -->
+
+		<!-- <div id="mainpage" class="shadow" style="background-color: #fff; height: 50px; position: relative; top: 550px; z-index: +1;"></div> -->
+				
+	
+	
+	</div>
+	
+</div>
+
+
+<div style="height: 300px;"></div>
+
+
+
+
+	<script>
+
+		function showSignin() {
+	
+			$("#form_contact").fadeIn(1000);
+
+			// $("#form_signin").css({
+				// 'visibility': 'visible'
+			// }, function(){ fadeIn("slow"); });
+
+
+			loadSignin();
+			
+		}
+	
+		// function showSignin() {
+// 	
+			// var a = $("#mainpage");
+			// var b = $("#mainfooter");
+// 		
+			// a.animate({
+				// "top": "+=50px"
+			// }, 1000, function(){ loadSignin(); });
+// 		
+			// b.animate({
+				// "top": "+=50px"
+			// }, 1000);
+		// }
+// 		
+		// function hideSignin() {
+// 		
+			// disableSignin();
+// 			
+			// var a = $("#mainpage");
+			// var b = $("#mainfooter");
+// 		
+			// a.animate({
+				// "top": "-=50px"
+			// }, 1000);
+// 			
+			// b.animate({
+				// "top": "-=50px"
+			// }, 1000);
+		// }
+
+		function loadSignin() {
+			glowBoxGold();
+
+			$("#form_contact").fadeIn( "slow", function(){$("#form_contact").css({'boxShadow': '0 0 30px #0800FA'}) } );
+
+			setTimeout( function(){
+				glowBoxBlack();
+			}, 2500);
+			
+			setTimeout( function(){$("#contact_name").focus();}, 1000);
+		}
+		
+		function disableSignin() {
+			$("#form_contact").fadeOut("slow");
+		}
+		
+		function centerSignin() {
+			// var a = document.documentElement.clientWidth;
+			
+			var a = $("#join-image").width();
+			var b = $("#form_contact").width();
+			
+			var l = ((a/2) - (b/2));
+			
+			$("#form_contact").css({
+				left : l
+			})
+
+			var h1 = $("#join-image").height();
+			
+			// var h2 =  (h1 * (0.86));
+			var h2 =  (h1 * (0.89));
+			
+			//var d = $("#form_contact").height();
+			
+			$("#form_contact").css({
+				height : h2
+			})			
+
+			//var e = (c / 2 - d / 2) * (9/10)
+
+			var t = ((h1/2) - (h2/2)) * (0.5)
+
+			$("#form_contact").css({
+				top : t
+			})			
+			
+		}
+
+		function glowBoxGold() {
+			$("#form_contact").css({
+				'boxShadow': '0 0 30px #CCAE37'
+			})
+		}
+
+		function glowBoxBlack() {
+			$("#form_contact").css({
+				'boxShadow': '0 0 30px #000'
+			})
+		}
+
+		function glowBoxBlue() {
+			$("#form_contact").css({				
+				'boxShadow': '0 0 5px #ACDDE3'
+			})
+		}
+		
+
+		// var val = null;
+
+		function formValidate() {
+						
+			$("#form_join").validate({
+			
+				submitHandler: function(form) {
+					form.submit();
+				},
+			
+				debug: true,
+				onkeyup: false,
+				focusCleanup: true,
+				focusInvalid: false,
+				// invalidClass: "error",
+				// validClass: "success",
+				
+				rules: {
+					'contact[name]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 100						
+					},
+					'contact[email]': {
+						required: true,
+						maxlength: 100,
+						email: true
+					},
+					'contact[phone]': {
+						required: false,
+						minlength: 1,						
+						maxlength: 100						
+					},
+					'contact[subject]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 254						
+					},
+					'contact[message]': {
+						required: true,
+						minlength: 1,						
+						maxlength: 4000						
+					}																																			
+				},
+				invalidHandler: function(event, validator) {
+					// val = validator;
+					var errors = validator.numberOfInvalids();
+					if (errors) {
+						// var message = errors == 1
+						// ? 'You missed 1 field'
+						// : 'You missed ' + errors + ' fields';
+						// $("div.errors p").html(message);
+						// $("div.errors").show();
+						$("#btn_submit").blur();
+						$("#form_contact").focus();						
+					} else {
+						// $("div.errors").hide();
+					}
+					
+				},				
+				messages: {
+					'contact[name]': {
+						required: "*",
+						maxlength: "Exceeds 255 characters"							
+					},
+					'contact[email]': {
+						required: "*",
+						maxlength: "Exceeds 255 characters",
+						email: "Please enter a valid email address"
+					},					
+					'contact[phone]': {
+						required: "*",
+						maxlength: "Exceeds 255 characters"							
+					},
+					'contact[subject]': {
+						required: "*",
+						maxlength: "Exceeds 255 characters"							
+					},
+					'contact[message]': {
+						required: "*",
+						maxlength: "Exceeds 4000 characters"							
+					}																																			
+				},
+				errorContainer: $("div .error_label"),				
+				errorPlacement: function(error, element) {
+					error.insertAfter('#error_' + element.attr('id'));
+					$('#' + element.attr('id')).removeClass('required').removeClass('success').addClass('error');
+					//$('#label_' + element.attr('id')).removeClass('required-label').addClass('error-label');
+				},
+				// invalid: function(element) {
+				// },
+				// highlight: function(element) {
+					// $('#' + element.attr('id')).removeClass('required').removeClass('success').addClass('error');
+					// //$('#label_' + element.attr('id')).removeClass('required-label').addClass('error-label');
+				// },
+				// unhighlight: function(element) {
+					// //$('#' + element.attr('id')).removeClass('required').removeClass('success').addClass('error');
+					// //$('#label_' + element.attr('id')).removeClass('required-label').addClass('error-label');
+				// },
+				error: function(label) {
+					$('#' + label.attr('for')).removeClass('required').removeClass('success').addClass('error');
+					$('#label_' + label.attr('for')).removeClass('required-label').addClass('error-label');
+					
+				},
+				success: function(label) {
+					$('#' + label.attr('for')).removeClass('required').removeClass('error').addClass('success');
+					$('#label_' + label.attr('for')).removeClass('error-label').addClass('required-label');
+				},				
+				focus: function(element) {
+				 	//$('#' + element.attr('id')).removeClass('required').removeClass('error').removeClass('success').addClass('focus');
+				 	
+				 	$('#' + element.attr('id')).removeClass('required').removeClass('success').addClass('focus');
+				}
+			});
+
+			$.validator.setDefaults({
+				submitHandler: function() {
+					form.submit();
+				}
+			});
+		}
+
+
+		// by field error message update
+
+		var error_name = null;
+		var error_email = null;
+		var error_phone = null;
+		var error_subject = null;
+		var error_message = null;
+		
+		function errorMessageUpdate( element ) {
+			// if ((val !== undefined) && (val !== null)) {
+// 				
+				// var errors = val.numberOfInvalids();
+// 				
+				// if (errors) {
+					// var message = errors == 1
+					// ? 'You missed 1 field'
+					// : 'You missed ' + errors + ' fields';
+					// $("div.errors p").html(message);
+					// $("div.errors").show();
+				// } else {
+					// $("div.errors").hide();
+				// }
+// 				
+				// val.reset();
+// 				
+			// }			
+			
+			
+			if ($('#' + element).hasClass('error')) {
+				if ($('#' + element).val().length > 0) {
+					$('#' + element).removeClass('required').removeClass('success').addClass('error');
+					$('#label_' + element).removeClass('required-label').addClass('error-label');
+				}
+				else {
+					$('#' + element).removeClass('success').removeClass('error').addClass('required');
+					$('#label_' + element).removeClass('success-label').removeClass('error-label').addClass('required-label');						
+				}
+			}
+			else {			
+				if ($('#' + element).val().length > 0) {
+					$('#' + element).removeClass('required').removeClass('error').addClass('success');
+					$('#label_' + element).removeClass('error-label').addClass('required-label');
+				}
+				else {
+					$('#' + element).removeClass('success').removeClass('error').addClass('required');
+					$('#label_' + element).removeClass('success-label').removeClass('error-label').addClass('required-label');						
+				}
+			}
+		}
+
+		$("#contact_name").on("blur", function () {
+			errorMessageUpdate('contact_name');
+		});
+
+		$("#contact_email").on("blur", function () {
+			errorMessageUpdate('contact_email');
+		});
+
+		$("#contact_phone").on("blur", function () {
+			errorMessageUpdate('contact_phone');
+		});
+
+		$("#contact_subject").on("blur", function () {
+			errorMessageUpdate('contact_subject');
+		});
+
+		$("#contact_message").on("blur", function () {
+			errorMessageUpdate('contact_message');
+		});
+
+
+		$(window).load( function() {
+		//$(document).ready(function(){
+			
+			//var image = '../backgrounds/';
+
+			// var image = '../backgrounds/comp020.gif';
+			// var image = '../backgrounds/multi134.jpg';
+			// var image = '../backgrounds/background-image-proxy.jpeg';
+
+			img = $('<img />');
+			img.bind('load', function() {
+			    // $('#loading').fadeOut(1000);
+				setTimeout( function(){
+					centerSignin();
+					showSignin();
+					formValidate();
+				}, 500);
+			});
+ 			
+			img.attr('src', image);
+ 			
+			$('#join-image').css({
+				//background: '#F1F2E1 url(' + image + ') no-repeat right top'
+				background: '#FFFFFF url(' + image + ') repeat right top'
+				
+			})
+
+			// $('td[name=tcol1]') // matches exactly 'tcol1'
+			// $('td[name^=tcol]') // matches those that begin with 'tcol'
+			
+			$("input[name=recaptcha_response_field]").attr("tabindex","7");
+							
+			// $(window).bind("load", function() {
+			    // $('#loading').fadeOut(2000);
+			// });
+				
+			// $("#form_signin").fadeOut();
+			
+		});
+	
+	</script>
+	
+	
+

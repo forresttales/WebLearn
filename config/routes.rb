@@ -98,13 +98,20 @@ Weblearn::Application.routes.draw do
   match '/Learn-More', to: 'users#learn_more', via: 'get'
   match 'LetterRegistration', to: 'reg_letters#new', via: 'get'
   match 'LetterRegistration', to: 'reg_letters#create', via: 'post'
-  match '/ContactUs', to: 'contacts#new', via: 'get'
+
+  match '/ContactUs', to: 'contacts#new', as: :contacts, via: 'get'
+  match '/ContactUs', to: 'contacts#create', as: :contacts_create, via: 'post'
+  # post 'contacts/create'
+  
+  
+  # get 'exit', to: 'sessions#destroy', as: :logout
+  # get 'ContactUs', to: 'contacts#new', as: :new_contact, via: 'get'
 
   match '/CommunityRegistration', to: 'reg_communs#new', via: 'get'
   match '/SeminarRegistration', to: 'reg_seminars#new', via: ['get']
 
 
-  resources :contacts
+  # resources :contacts
   # resources :reg_letters
   resources :reg_events
   resources :reg_communs
