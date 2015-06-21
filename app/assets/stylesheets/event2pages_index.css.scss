@@ -70,6 +70,20 @@ $lgreen: #41b737; // light green
     color: #603913;
   }
 }
+.special-gathering .event-description-table {
+  margin-top: 40px;
+  h3 {
+    text-align: center;
+    color:#B45231;
+  }
+  span {
+    color: #000;
+  }
+  ul {
+    margin-left: 25px;
+    color:#B45231;
+  }
+}
 .special-gathering .rust-square {
   padding-left: 10px;
   .display-list {
