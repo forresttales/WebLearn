@@ -1,6 +1,6 @@
 Weblearn::Application.routes.draw do
    
-  match '/weblearn', to: 'static_pages#index', via: 'get' #only for local Apache
+  match '/weblearn', to: 'homes#index', via: 'get' #only for local Apache
    
   root to: 'homes#index'
 

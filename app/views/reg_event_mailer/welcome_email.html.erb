@@ -467,6 +467,20 @@
 	  			</td>
 	  		</tr>  		
 	  		<% end %>
+	  		<!-- 23 Indianapolis, IN 	Sep 15 -->
+	  		<% if @reg_event.city_workshop_23 %>
+	  		<tr>
+	  			<td>
+	    			<span class="workshop-1">Workshop:</span>
+	  			</td>
+	  			<td>
+	    			<span class="workshop-2"><%= @reg_event.city_workshop_23_text %></span>
+	  			</td>
+	  			<td class="workshop-3">
+	  				<span>September 15, 2015</span>
+	  			</td>
+	  		</tr>  		
+	  		<% end %>
 	  		<!-- 13 Tampa, FL          Sep 17 -->
 	  		<% if @reg_event.city_workshop_13 %>
 	  		<tr>

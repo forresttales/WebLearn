@@ -140,7 +140,8 @@ class RegEvent < ActiveRecord::Base
                   :city_workshop_19,            
                   :city_workshop_20,
                   :city_workshop_21,
-                  :city_workshop_22,                                                            
+                  :city_workshop_22,              
+                  :city_workshop_23,                                              
                   :city_workshop_1_text,
                   :city_workshop_2_text,
                   :city_workshop_3_text,
@@ -162,7 +163,8 @@ class RegEvent < ActiveRecord::Base
                   :city_workshop_19_text,
                   :city_workshop_20_text,
                   :city_workshop_21_text,
-                  :city_workshop_22_text
+                  :city_workshop_22_text,
+                  :city_workshop_23_text
                   # :city_workshop_1_session,
                   # :city_workshop_2_session,
                   # :city_workshop_3_session,

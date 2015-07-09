@@ -19,6 +19,7 @@
  *= require 'self_assessment'
  *= require 'eventpages'
  *= require 'fonts'
+ *= require 'footer_box_cloud'
  *= require 'gathering'
  *= require 'global'
  *= require 'homes'

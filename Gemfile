@@ -10,7 +10,7 @@ gem 'friendly_id'
 gem 'tabulous'
 gem 'faker'
 gem 'will_paginate'
-gem 'bcrypt-ruby'
+gem 'bcrypt'
 gem 'jquery-rails', "~> 3.1.2"
 gem 'turbolinks'
 gem 'jquery-turbolinks'

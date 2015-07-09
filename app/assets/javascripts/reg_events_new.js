@@ -488,7 +488,7 @@ function cb_city_workshop(caller) {
 function validateCityWorkshop() {
   var isChecked = false;
   var cb;
-  for (var i = 1; i < 23; i++ ) {
+  for (var i = 1; i < 24; i++ ) {
     cb = "#reg_event_city_workshop_" + i;
     if($(cb).is(':checked')) {
       isChecked = true;
@@ -1032,6 +1032,9 @@ $(window).load( function() {
   $('#cb_workshop_22').on('click', function() {
     cb_city_workshop(22);
   });
+  $('#cb_workshop_23').on('click', function() {
+    cb_city_workshop(23);
+  });
     
     
   // var lb;
@@ -1119,6 +1122,12 @@ $(window).load( function() {
     $('#label_city_workshop_14').keypress(function(e){
         if(e.keyCode==13) {
           $('#label_city_workshop_14').click();
+          $('#label_city_workshop_23').focus();
+        }           
+    });       
+    $('#label_city_workshop_23').keypress(function(e){
+        if(e.keyCode==13) {
+          $('#label_city_workshop_23').click();
           $('#label_city_workshop_13').focus();
         }           
     });       
