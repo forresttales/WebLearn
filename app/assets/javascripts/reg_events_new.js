@@ -935,7 +935,7 @@ $(window).load( function() {
     $("#reg_event_email_cc_2").keypress(function(e){
         if(e.keyCode==13) {
         e.preventDefault();
-        $('#label_city_workshop_1').focus();
+        $('#label_city_workshop_14').focus();
         }
     });       
 
